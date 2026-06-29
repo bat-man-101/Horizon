@@ -9,60 +9,72 @@ lang: en
 
 ---
 
-1. [Supreme Court: Geofence Warrants Need Constitutional Protections](#item-1) ⭐️ 9.0/10
-2. [Google's AI Peer-Reviewer Processes ~10K Papers, Cuts Errors 34%](#item-2) ⭐️ 9.0/10
+1. [Supreme Court rules geofence warrants need warrants](#item-1) ⭐️ 9.0/10
+2. [Google's AI Peer-Reviewer Handles ~10K Papers, Catches 34% More Errors](#item-2) ⭐️ 9.0/10
 3. [llama.cpp b9840 Adds DeepSeek V4 Support](#item-3) ⭐️ 8.0/10
-4. [Ornith-1.0: Open-Source Self-Scaffolding LLMs for Coding](#item-4) ⭐️ 8.0/10
-5. [ChatGPT Overturns Chen Lijie's 7-Year Computational Geometry Problem](#item-5) ⭐️ 8.0/10
-6. [Jon Udell: Invite Agents Into the Loop, Don't Be Excluded](#item-6) ⭐️ 7.0/10
-7. [Hack Your Summer: Free 4-Week Sprint for Students](#item-7) ⭐️ 6.0/10
-8. [OpenAI Maps AI Job Shifts Across EU](#item-8) ⭐️ 6.0/10
+4. [Ornith-1.0: Open-Weight LLM for Agentic Coding](#item-4) ⭐️ 8.0/10
+5. [Jon Udell: Flip 'Human in the Loop' to 'Agent in the Loop'](#item-5) ⭐️ 8.0/10
+6. [ChatGPT Disproves Chen Lijie's 7-Year Conjecture](#item-6) ⭐️ 8.0/10
+7. [OpenAI Report Maps AI Impact on EU Jobs](#item-7) ⭐️ 7.0/10
+8. [Hack Your Summer: Free Sprint for Students](#item-8) ⭐️ 6.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Supreme Court: Geofence Warrants Need Constitutional Protections](https://www.theguardian.com/us-news/2026/jun/29/supreme-court-geofence-warrants-case-decision) ⭐️ 9.0/10
+## [Supreme Court rules geofence warrants need warrants](https://www.theguardian.com/us-news/2026/jun/29/supreme-court-geofence-warrants-case-decision) ⭐️ 9.0/10
 
-The US Supreme Court ruled 6-3 that geofence warrants require constitutional protections under the Fourth Amendment, limiting warrantless access to smartphone location data. The decision, written by Justice Elena Kagan, held that users do not forfeit privacy expectations by opting into Google's location history. This landmark ruling significantly curtails law enforcement's ability to use geofence warrants as a dragnet surveillance tool, strengthening digital privacy rights for millions of smartphone users. It sets a precedent that the Fourth Amendment applies to modern location-tracking technologies, impacting future investigations and tech company data-sharing practices. The case, Chatrie v. United States, involved a bank robbery suspect identified through a geofence warrant that obtained location data from Google's Sensorvault. The court distinguished this from the 2018 Carpenter decision, which required a warrant for cell-site location information, by explicitly applying the same protection to geofence warrants.
+The US Supreme Court ruled that geofence warrants require constitutional protections under the Fourth Amendment, limiting warrantless access to location data. The decision was issued on June 29, 2026. This landmark ruling significantly impacts privacy rights and law enforcement practices by requiring probable cause for broad location data searches. It sets a precedent for digital privacy in the era of mass surveillance. The case involved Google providing location data from devices near a bank robbery, with information shared in three tranches. The Court held that geofence warrants are general warrants prohibited by the Fourth Amendment.
 
 hackernews · cdrnsf · Jun 29, 15:54 · [Discussion](https://news.ycombinator.com/item?id=48720924)
 
-**Background**: A geofence warrant is a search warrant that compels a company like Google to identify all devices within a specific geographic area during a certain time period. These warrants have been used by law enforcement to identify unknown suspects by sweeping up location data from many innocent bystanders. The Fourth Amendment protects against unreasonable searches and seizures, and the Supreme Court has previously ruled that long-term location tracking requires a warrant.
+**Background**: A geofence warrant is a search warrant that allows law enforcement to obtain location data of all mobile devices within a specific geographic area during a certain time period. The Fourth Amendment protects against unreasonable searches and seizures, and geofence warrants have been controversial as digital analogs to general warrants.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.theguardian.com/us-news/2026/jun/29/supreme-court-geofence-warrants-case-decision">US supreme court rules geofence warrants require constitutional privacy protections | US supreme court | The Guardian</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Geofence_warrant">Geofence warrant - Wikipedia</a></li>
+<li><a href="https://www.congress.gov/crs-product/LSB11274">Geofence Warrants and the Fourth Amendment | Congress.gov | Library of Congress</a></li>
+<li><a href="https://harvardlawreview.org/blog/2025/02/much-ado-about-geofence-warrants/">Much Ado About Geofence Warrants - Harvard Law Review</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters expressed strong support for the ruling, with some noting historical examples of location tracking without phones (e.g., the Petraeus affair). Others criticized dissenting justices Alito and Thomas for supporting unlimited government power, while a few questioned practical implications, such as whether police now need probable cause for a specific suspect before obtaining a warrant.
+**Discussion**: Commenters noted historical examples like the Paula Broadwell case to illustrate alternative identification methods. Some expressed surprise that Justice Barrett joined the minority, while others asked about practical implications, such as whether police now need probable cause for a specific suspect before obtaining location data.
 
 **Tags**: `#privacy`, `#supreme court`, `#geofence warrants`, `#law enforcement`, `#constitutional law`
 
 ---
 
 <a id="item-2"></a>
-## [Google's AI Peer-Reviewer Processes ~10K Papers, Cuts Errors 34%](https://www.reddit.com/r/MachineLearning/comments/1uio9rb/googles_agentic_peerreviewer_handled_10k_papers/) ⭐️ 9.0/10
+## [Google's AI Peer-Reviewer Handles ~10K Papers, Catches 34% More Errors](https://www.reddit.com/r/MachineLearning/comments/1uio9rb/googles_agentic_peerreviewer_handled_10k_papers/) ⭐️ 9.0/10
 
-Google deployed an agentic AI peer-reviewer at top CS conferences ICML and STOC, reviewing approximately 10,000 papers with a 30-minute turnaround, and a formal research paper shows it catches 34% more mathematical errors than zero-shot prompting. This sets a precedent for AI-automated scientific review at conference scale, potentially accelerating peer review and reducing human reviewer burden, while improving error detection in mathematical content. The agentic AI reviewer achieved a 30-minute turnaround per paper, compared to months for human review, and its formal paper is now available on arXiv (2606.28277). The system uses an agentic workflow rather than simple zero-shot prompting.
+Google deployed an agentic AI peer-reviewer at ICML and STOC, processing approximately 10,000 papers with a 30-minute turnaround, and a formal paper reports it catches 34% more mathematical errors than zero-shot prompting. This sets a precedent for AI-assisted scientific review at conference scale, potentially accelerating the peer-review process and improving error detection in mathematical content, which could transform how top CS conferences handle submissions. The system uses an agentic workflow that goes beyond simple zero-shot prompting, enabling iterative reasoning and verification. The 34% improvement in error detection is specifically for mathematical errors, and the system achieved a 30-minute average review time per paper.
 
 reddit · r/MachineLearning · /u/Justgototheeffinmoon · Jun 29, 10:05
 
-**Background**: Peer review is a process where experts evaluate research papers before publication to ensure quality and correctness. Zero-shot prompting is a technique where an AI model performs a task without any examples, while agentic AI systems use multi-step reasoning and tool use to achieve better results.
+**Background**: Peer review is a critical but time-consuming process in academic publishing, often taking months. Zero-shot prompting asks an AI to perform a task without any examples, which is less effective for complex tasks like mathematical verification. Agentic AI systems use multi-step reasoning and tool use to improve accuracy.
 
-**Tags**: `#AI`, `#peer review`, `#machine learning`, `#Google`, `#automation`
+<details><summary>References</summary>
+<ul>
+<li><a href="https://paperreview.ai/tech-overview">Tech Overview - Stanford Agentic Reviewer</a></li>
+<li><a href="https://medium.com/data-science-in-your-pocket/andrew-ngs-agentic-reviewer-ai-for-research-paper-reviews-1c2d9cda8086">Andrew NG’s Agentic Reviewer : AI for Research Paper Reviews | by Mehul Gupta | Data Science in Your Pocket | Medium</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Reddit comments generally praised the speed and scale, with some noting that even imperfect AI review can accelerate research by providing rapid feedback. Others raised concerns about over-reliance on AI and potential biases, but overall sentiment was positive about the formal documentation of results.
+
+**Tags**: `#AI`, `#peer review`, `#machine learning`, `#conference`, `#automation`
 
 ---
 
 <a id="item-3"></a>
 ## [llama.cpp b9840 Adds DeepSeek V4 Support](https://github.com/ggml-org/llama.cpp/releases/tag/b9840) ⭐️ 8.0/10
 
-llama.cpp release b9840 adds support for the DeepSeek V4 model architecture, including conversion, inference, and optimizations. The release also enables flash attention, graph reuse, and multi-sequence inference. This release enables local, efficient inference of DeepSeek V4, a state-of-the-art Mixture-of-Experts model with up to 1.6 trillion parameters, on consumer hardware. It significantly expands the capabilities of the open-source LLM ecosystem. DeepSeek V4 models use a hybrid attention architecture combining Compressed Sparse Attention (CSA) and Heavily Compressed Attention (HCA). The release includes support for both DeepSeek-V4-Pro (1.6T total, 49B activated) and DeepSeek-V4-Flash (284B total, 13B activated) variants.
+llama.cpp release b9840 adds support for the DeepSeek V4 model architecture, including both Pro and Flash variants, with optimizations such as flash attention, graph reuse, and padding for efficient inference. This release enables local inference of DeepSeek V4, a state-of-the-art Mixture-of-Experts model with up to 1.6 trillion parameters, on consumer hardware via CPU and GPU backends, democratizing access to cutting-edge LLM technology. The release includes contributions from multiple developers, featuring Sinkhorn algorithm adjustments, KV-cache reservation, and support for multi-sequence inference. The DeepSeek V4 model uses a hybrid attention mechanism combining Compressed Sparse Attention and Heavily Compressed Attention.
 
 github · github-actions[bot] · Jun 29, 10:25
 
-**Background**: llama.cpp is an open-source C/C++ library for running large language models locally on CPUs and GPUs. It uses the GGUF format to store quantized models, enabling efficient inference on consumer hardware. DeepSeek V4 is a recent Mixture-of-Experts model series from DeepSeek, featuring a novel hybrid attention mechanism for long-context processing.
+**Background**: llama.cpp is an open-source C++ library for efficient LLM inference on CPUs and GPUs, using the GGUF format for model storage. DeepSeek V4 is a Mixture-of-Experts model series with up to 1.6 trillion total parameters, featuring a hybrid attention architecture for long-context processing up to one million tokens.
 
 <details><summary>References</summary>
 <ul>
@@ -72,90 +84,106 @@ github · github-actions[bot] · Jun 29, 10:25
 </ul>
 </details>
 
-**Tags**: `#llama.cpp`, `#DeepSeek V4`, `#LLM inference`, `#open-source`, `#machine learning`
+**Tags**: `#llama.cpp`, `#DeepSeek V4`, `#LLM inference`, `#open source`
 
 ---
 
 <a id="item-4"></a>
-## [Ornith-1.0: Open-Source Self-Scaffolding LLMs for Coding](https://simonwillison.net/2026/Jun/29/ornith/#atom-everything) ⭐️ 8.0/10
+## [Ornith-1.0: Open-Weight LLM for Agentic Coding](https://simonwillison.net/2026/Jun/29/ornith/#atom-everything) ⭐️ 8.0/10
 
-DeepReinforce released Ornith-1.0, a family of open-weight LLMs (9B to 397B) under the MIT license, achieving state-of-the-art coding benchmark performance via a self-scaffolding training framework. This release brings competitive coding performance to the open-source community with a permissive license, enabling broader access and customization for agentic coding tasks. The model variants include 9B Dense, 31B Dense, 35B MoE, and 397B MoE, built on top of Gemma 4 and Qwen 3.5, both Apache 2.0 licensed. The self-scaffolding approach jointly optimizes solution generation and task-specific harnesses during reinforcement learning.
+DeepReinforce released Ornith-1.0, a family of open-weight LLMs (MIT license) for agentic coding, available in 9B, 31B, 35B MoE, and 397B MoE variants, built on Gemma 4 and Qwen 3.5. It achieves state-of-the-art performance among open-source models of comparable size on coding benchmarks. This release advances open-source agentic coding by providing a permissively licensed, high-performing model that can autonomously plan, write, test, and modify code. It lowers barriers for developers and researchers to build autonomous coding agents without relying on proprietary models. The model uses a self-scaffolding technique where the LLM generates explicit step-by-step decompositions to handle complex coding tasks. Early tests show it can proficiently run an agent harness over many tool calls, and the 35B GGUF quantized version runs locally at 103 tokens/second.
 
 rss · Simon Willison · Jun 29, 16:17
 
-**Background**: Agentic coding refers to AI agents performing multi-step software development tasks autonomously. Traditional LLM-based coding agents use fixed scaffolds (harnesses) to guide the model, but Ornith-1.0 learns to generate its own scaffolds, improving performance over time.
+**Background**: Agentic coding refers to AI-assisted software development where autonomous AI agents plan, write, test, and modify code with minimal human intervention. Self-scaffolding is a technique that exploits LLMs' ability to articulate memorized algorithmic procedures by having them generate explicit step-by-step decompositions. Mixture of Experts (MoE) models use multiple smaller expert networks activated per input, enabling efficient scaling.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://deep-reinforce.com/ornith_1_0.html">Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding | DeepReinforce Blog | Jun. 2026</a></li>
-<li><a href="https://essamamdani.com/blog/ornith-1-0-self-scaffolding-llm-coding-2026">Ornith-1.0: The Self-Scaffolding LLM That Teaches Itself to Code Better | Essa Mamdani | Essa Mamdani</a></li>
-<li><a href="https://ornith.site/">Ornith 1 . 0 — Open-Source Agentic Coding Models</a></li>
+<li><a href="https://news.ycombinator.com/item?id=48709744">Ornith-1.0: Self - Scaffolding LLMs for Agentic Coding | Hacker News</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Agentic_coding">Agentic coding</a></li>
+<li><a href="https://cloud.google.com/discover/what-is-agentic-coding">What is agentic coding? How it works and use cases | Google Cloud</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Initial community feedback is positive, with users reporting good performance in LM Studio and Pi integration. Some discussion focuses on licensing compatibility with the underlying Apache 2.0 models.
-
-**Tags**: `#LLM`, `#open-source`, `#coding`, `#AI`, `#machine learning`
+**Tags**: `#LLM`, `#coding`, `#open-source`, `#agentic`, `#model release`
 
 ---
 
 <a id="item-5"></a>
-## [ChatGPT Overturns Chen Lijie's 7-Year Computational Geometry Problem](https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652709773&idx=2&sn=68bde762eb0070f5bd61518728971232) ⭐️ 8.0/10
+## [Jon Udell: Flip 'Human in the Loop' to 'Agent in the Loop'](https://simonwillison.net/2026/Jun/28/jon-udell/#atom-everything) ⭐️ 8.0/10
 
-ChatGPT reportedly solved a core computational geometry problem that had stumped renowned researcher Chen Lijie for seven years, building on OpenAI's recent resolution of an Erdős conjecture. This demonstrates that large language models can now tackle long-standing open problems in theoretical computer science, potentially accelerating research in computational geometry and related fields. The problem is a core question in computational geometry that Chen Lijie had worked on for seven years without success. The solution leverages the recently proven Erdős conjecture by OpenAI.
-
-rss · 新智元 · Jun 29, 05:01
-
-**Background**: Computational geometry deals with algorithms for geometric problems, often involving points, lines, and shapes. Chen Lijie, a renowned computer scientist from the prestigious Yao Class at Tsinghua University, is known for his work in computational complexity. The Erdős conjecture, recently solved by OpenAI, is a famous problem in arithmetic combinatorics about arithmetic progressions.
-
-**Tags**: `#AI`, `#computational geometry`, `#ChatGPT`, `#breakthrough`, `#OpenAI`
-
----
-
-<a id="item-6"></a>
-## [Jon Udell: Invite Agents Into the Loop, Don't Be Excluded](https://simonwillison.net/2026/Jun/28/jon-udell/#atom-everything) ⭐️ 7.0/10
-
-Jon Udell argues that instead of being a 'human in the loop' ceding authority to machines, software teams should invite AI agents into their existing workflows as team members, keeping humans in control and ensuring all agent contributions are reviewable. This reframing shifts the narrative from human subordination to human agency in agentic software development, addressing concerns about unreviewable PRs and black-box processes. It promotes a collaborative model where AI augments rather than replaces human judgment. Udell specifically criticizes the phrase 'human in the loop' for ceding authority to machines, and advocates for 'agent in the loop' where agents are invited into the team's existing loop. He emphasizes that agent-assisted processes should not be black boxes that take prompts and emit features without review.
+Jon Udell proposes reframing the dominant narrative from 'human in the loop' to 'agent in the loop,' arguing that humans should retain agency and invite AI agents as team members rather than being excluded from the loop. This reframing shifts the power dynamic in AI-assisted software development, emphasizing human oversight and collaboration over black-box automation, which could lead to more trustworthy and reviewable agent-generated code. Udell's argument is part of a blog post titled 'Doctor, it hurts when agents create unreviewable PRs. Don't do that,' which warns against large, opaque pull requests from AI agents and advocates for small, reviewable diffs.
 
 rss · Simon Willison · Jun 28, 21:57
 
-**Background**: Agentic software development uses AI agents to autonomously perform tasks like coding, testing, and deployment. The traditional 'human-in-the-loop' model places a human as a supervisor or fallback, but Udell argues this still centers the machine. His alternative 'invite agents into the loop' keeps the human as the primary decision-maker, with agents as collaborators whose work is always reviewable.
+**Background**: The term 'human in the loop' (HITL) traditionally describes systems where a human must approve or intervene in AI actions. Udell's 'agent in the loop' flips this, positioning humans as the primary decision-makers who recruit AI agents as collaborators. This aligns with best practices in agentic software development, such as keeping diffs small and requiring human review.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Human-in-the-loop">Human - in - the - loop - Wikipedia</a></li>
-<li><a href="https://www.ness.com/blog/what-is-agentic-software-development/">Agentic Software Development : Beyond Metrics and Speed</a></li>
+<li><a href="https://blog.jonudell.net/2026/06/28/doctor-it-hurts-when-agents-create-unreviewable-prs-dont-do-that/">“Doctor, it hurts when agents create unreviewable PRs .” “Don’t do that.”</a></li>
+<li><a href="https://timdeschryver.dev/blog/keep-agentic-ai-simple-a-practical-workflow-for-software-development">Keep Agentic AI Simple: A Practical Workflow for Software Development</a></li>
+<li><a href="https://cloud.google.com/discover/what-is-agentic-coding">What is agentic coding? How it works and use cases | Google Cloud</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#agentic development`, `#human-in-the-loop`, `#software engineering`, `#AI`
+**Tags**: `#AI agents`, `#software development`, `#human-AI collaboration`, `#agentic development`
+
+---
+
+<a id="item-6"></a>
+## [ChatGPT Disproves Chen Lijie's 7-Year Conjecture](https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652709773&idx=2&sn=68bde762eb0070f5bd61518728971232) ⭐️ 8.0/10
+
+ChatGPT, building on OpenAI's solution to the Erdős conjecture, has reportedly disproved a core computational geometry conjecture that Chen Lijie had worked on for seven years. This demonstrates AI's growing capability to tackle long-standing mathematical problems, potentially accelerating research in computational geometry and related fields. The disproof leverages OpenAI's recent solution to the Erdős conjecture, though specific details of the computational geometry conjecture and the disproof method are not yet publicly available.
+
+rss · 新智元 · Jun 29, 05:01
+
+**Background**: Chen Lijie is a renowned Chinese computer scientist known for his work in computational complexity and geometry. The Erdős conjecture is a famous unsolved problem in number theory. OpenAI recently announced a solution to the Erdős conjecture, which provided a foundation for this new result.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Erdős_conjecture">Erdős conjecture</a></li>
+<li><a href="https://chen-lijie.github.io/">Lijie Chen</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI`, `#computational geometry`, `#ChatGPT`, `#OpenAI`, `#research breakthrough`
 
 ---
 
 <a id="item-7"></a>
-## [Hack Your Summer: Free 4-Week Sprint for Students](https://simonwillison.net/2026/Jun/28/hack-your-summer/#atom-everything) ⭐️ 6.0/10
+## [OpenAI Report Maps AI Impact on EU Jobs](https://openai.com/index/mapping-ai-jobs-transition-eu) ⭐️ 7.0/10
 
-Hack Your Summer is a free 4-week production sprint for undergraduate and graduate students to build real projects, launched as an alternative to scarce internships. A second cohort starts July 13, with applications due by July 8. This initiative addresses the internship shortage affecting US college students, offering a structured way to gain practical experience and build portfolio-worthy work. It could help bridge the gap between academic learning and industry expectations. The program is free and open to undergraduate students, graduate students, and recent graduates. It includes mentorship from volunteers and focuses on creating tangible, public-facing work that can be shown to future employers.
+OpenAI released a report analyzing how AI could automate, augment, or transform occupations across the European Union, providing data-driven insights into workforce transitions. This report offers valuable guidance for policymakers and businesses in the EU to prepare for AI-driven labor market changes, potentially influencing workforce planning and retraining initiatives. The report maps which occupations are most exposed to automation, which may see growth, and which will undergo workflow changes, though specific numbers or models are not detailed in the summary.
 
-rss · Simon Willison · Jun 28, 19:26
+rss · OpenAI Blog · Jun 29, 07:00
 
-**Background**: Many US companies have reduced hiring and intern coaching capacity, leading to fewer internship opportunities for students. Hack Your Summer provides an alternative by simulating a real-world production environment with mentor support.
+**Background**: AI technologies like large language models are increasingly capable of performing tasks traditionally done by humans, raising questions about job displacement and skill shifts. The EU has been proactive in AI regulation, making such reports timely for policy discussions.
 
-**Tags**: `#education`, `#internship`, `#student-projects`, `#summer-program`
+**Tags**: `#AI`, `#labor market`, `#EU`, `#automation`, `#policy`
 
 ---
 
 <a id="item-8"></a>
-## [OpenAI Maps AI Job Shifts Across EU](https://openai.com/index/mapping-ai-jobs-transition-eu) ⭐️ 6.0/10
+## [Hack Your Summer: Free Sprint for Students](https://simonwillison.net/2026/Jun/28/hack-your-summer/#atom-everything) ⭐️ 6.0/10
 
-OpenAI released a report mapping how AI could reshape occupations across the EU, identifying jobs at risk of automation, those poised for growth, and roles likely to see workflow changes. This report provides a data-driven overview of AI's potential impact on the European labor market, helping policymakers, businesses, and workers anticipate and prepare for workforce transitions. The report covers a wide range of EU occupations and categorizes them by exposure to AI-driven changes, but lacks specific technical details or granular data on individual job roles.
+Hack Your Summer, a free 4-week production sprint for students affected by the internship shortage, has opened applications for its second cohort starting July 13, 2026, with a deadline of July 8. This initiative provides an alternative pathway for students who missed out on scarce internships, helping them build real projects and professional networks during a tough job market. The program is currently limited to U.S.-based students due to time zone coordination, but organizers hope to expand internationally in the future. It also seeks volunteer mentors.
 
-rss · OpenAI Blog · Jun 29, 07:00
+rss · Simon Willison · Jun 28, 19:26
 
-**Background**: AI technologies like large language models are increasingly capable of automating cognitive tasks, raising concerns about job displacement. This report aims to quantify which sectors and roles in the EU are most vulnerable or likely to benefit.
+**Background**: A production sprint is a short, time-boxed period (typically 1-4 weeks) during which a team works intensively to produce a tangible outcome, inspired by agile software development sprints. The internship crisis refers to a severe shortage of internship positions relative to the number of students seeking them, exacerbated by reduced corporate hiring in 2025-2026.
 
-**Tags**: `#AI`, `#labor market`, `#Europe`, `#automation`, `#OpenAI`
+<details><summary>References</summary>
+<ul>
+<li><a href="https://www.hackyoursummer.org/">Hack Your Summer</a></li>
+<li><a href="https://www.hackyoursummer.org/details">Details — Hack Your Summer</a></li>
+<li><a href="https://www.cnn.com/2026/04/06/business/job-market-internships-squeeze">The job market is so tough, young people are struggling just to land internships | CNN Business</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#education`, `#internships`, `#student-programs`, `#summer-sprint`
 
 ---

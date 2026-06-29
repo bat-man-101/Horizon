@@ -9,60 +9,72 @@ lang: zh
 
 ---
 
-1. [最高法院：地理围栏搜查令需受宪法保护](#item-1) ⭐️ 9.0/10
-2. [谷歌 AI 同行评审处理约 1 万篇论文，错误率降低 34%](#item-2) ⭐️ 9.0/10
+1. [最高法院裁定地理围栏搜查令需受宪法保护](#item-1) ⭐️ 9.0/10
+2. [谷歌 AI 同行评审处理约 1 万篇论文，错误捕获率提升 34%](#item-2) ⭐️ 9.0/10
 3. [llama.cpp b9840 新增 DeepSeek V4 支持](#item-3) ⭐️ 8.0/10
-4. [Ornith-1.0：开源自脚手架编码大模型](#item-4) ⭐️ 8.0/10
-5. [ChatGPT 推翻陈立杰苦思 7 年的计算几何难题](#item-5) ⭐️ 8.0/10
-6. [Jon Udell：邀请智能体加入循环，而非被排除在外](#item-6) ⭐️ 7.0/10
-7. [Hack Your Summer：面向学生的免费四周冲刺项目](#item-7) ⭐️ 6.0/10
-8. [OpenAI 绘制欧盟 AI 就业变化图](#item-8) ⭐️ 6.0/10
+4. [Ornith-1.0：用于智能编码的开源权重大语言模型](#item-4) ⭐️ 8.0/10
+5. [Jon Udell：将“人在回路”翻转为“智能体在回路”](#item-5) ⭐️ 8.0/10
+6. [ChatGPT 推翻陈立杰 7 年猜想](#item-6) ⭐️ 8.0/10
+7. [OpenAI 报告绘制 AI 对欧盟就业影响图](#item-7) ⭐️ 7.0/10
+8. [Hack Your Summer：免费学生暑期冲刺项目](#item-8) ⭐️ 6.0/10
 
 ---
 
 <a id="item-1"></a>
-## [最高法院：地理围栏搜查令需受宪法保护](https://www.theguardian.com/us-news/2026/jun/29/supreme-court-geofence-warrants-case-decision) ⭐️ 9.0/10
+## [最高法院裁定地理围栏搜查令需受宪法保护](https://www.theguardian.com/us-news/2026/jun/29/supreme-court-geofence-warrants-case-decision) ⭐️ 9.0/10
 
-美国最高法院以 6 比 3 裁定，地理围栏搜查令需受第四修正案的宪法保护，限制了无证获取智能手机位置数据的行为。由大法官埃琳娜·卡根撰写的判决认为，用户不会因选择加入谷歌的位置历史记录而丧失隐私预期。 这一里程碑式的裁决显著限制了执法部门将地理围栏搜查令用作大规模监控工具的能力，加强了数百万智能手机用户的数字隐私权。它为第四修正案适用于现代位置追踪技术树立了先例，将影响未来的调查和科技公司的数据共享实践。 该案（Chatrie 诉美国）涉及一名银行抢劫嫌疑人，通过地理围栏搜查令从谷歌的 Sensorvault 获取位置数据而被识别。法院将此案与 2018 年 Carpenter 案（要求对基站位置信息获取搜查令）区分开来，明确将同样的保护适用于地理围栏搜查令。
+美国最高法院裁定，地理围栏搜查令需受第四修正案的宪法保护，限制了无证获取位置数据的行为。该裁决于 2026 年 6 月 29 日作出。 这一里程碑式的裁决要求对大规模位置数据搜索需具备合理根据，从而显著影响隐私权和执法实践，为大规模监控时代的数字隐私树立了先例。 该案涉及谷歌提供银行抢劫案附近设备的位置数据，信息分三批共享。法院认为，地理围栏搜查令属于第四修正案禁止的一般搜查令。
 
 hackernews · cdrnsf · 6月29日 15:54 · [社区讨论](https://news.ycombinator.com/item?id=48720924)
 
-**背景**: 地理围栏搜查令是一种强制谷歌等公司识别特定时间段内特定地理区域内所有设备的搜查令。执法部门利用这些搜查令通过收集大量无辜旁观者的位置数据来识别未知嫌疑人。第四修正案保护公民免受不合理搜查和扣押，最高法院此前已裁定长期位置追踪需要搜查令。
+**背景**: 地理围栏搜查令是一种允许执法机构获取特定地理区域内、特定时间段内所有移动设备位置数据的搜查令。第四修正案保护公民免受不合理搜查和扣押，而地理围栏搜查令作为数字版的一般搜查令一直存在争议。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.theguardian.com/us-news/2026/jun/29/supreme-court-geofence-warrants-case-decision">US supreme court rules geofence warrants require constitutional privacy protections | US supreme court | The Guardian</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Geofence_warrant">Geofence warrant - Wikipedia</a></li>
+<li><a href="https://www.congress.gov/crs-product/LSB11274">Geofence Warrants and the Fourth Amendment | Congress.gov | Library of Congress</a></li>
+<li><a href="https://harvardlawreview.org/blog/2025/02/much-ado-about-geofence-warrants/">Much Ado About Geofence Warrants - Harvard Law Review</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者对该裁决表示强烈支持，有人指出在没有手机的情况下进行位置追踪的历史案例（如彼得雷乌斯丑闻）。其他人批评持异议的大法官阿利托和托马斯支持无限政府权力，而少数人质疑实际影响，例如警方现在是否需要在获得搜查令前对特定嫌疑人具备可能原因。
+**社区讨论**: 评论者提到了如 Paula Broadwell 案等历史案例，以说明替代识别方法。有人对巴雷特大法官加入少数派表示惊讶，也有人询问实际影响，例如警方现在是否需要在获取位置数据前对特定嫌疑人具备合理根据。
 
 **标签**: `#privacy`, `#supreme court`, `#geofence warrants`, `#law enforcement`, `#constitutional law`
 
 ---
 
 <a id="item-2"></a>
-## [谷歌 AI 同行评审处理约 1 万篇论文，错误率降低 34%](https://www.reddit.com/r/MachineLearning/comments/1uio9rb/googles_agentic_peerreviewer_handled_10k_papers/) ⭐️ 9.0/10
+## [谷歌 AI 同行评审处理约 1 万篇论文，错误捕获率提升 34%](https://www.reddit.com/r/MachineLearning/comments/1uio9rb/googles_agentic_peerreviewer_handled_10k_papers/) ⭐️ 9.0/10
 
-谷歌在顶级计算机科学会议 ICML 和 STOC 部署了一个智能体 AI 同行评审系统，以 30 分钟的周转时间处理了约 1 万篇论文，正式研究论文显示，它比零样本提示多捕捉了 34%的数学错误。 这为在会议规模上实现 AI 自动科学评审开创了先例，可能加速同行评审过程并减轻人类评审员的负担，同时提高对数学内容的错误检测能力。 该智能体 AI 评审系统每篇论文的周转时间为 30 分钟，而人类评审需要数月，其正式论文现已发布在 arXiv 上（2606.28277）。该系统采用智能体工作流，而非简单的零样本提示。
+谷歌在 ICML 和 STOC 会议上部署了代理式 AI 同行评审系统，以 30 分钟的处理时间审阅了约 1 万篇论文，正式论文显示其比零样本提示多捕获 34%的数学错误。 这为会议规模的 AI 辅助科学评审开创了先例，可能加速同行评审流程并提高数学内容错误检测能力，从而改变顶级计算机科学会议处理投稿的方式。 该系统采用代理式工作流程，超越了简单的零样本提示，支持迭代推理和验证。错误检测提升 34%特指数学错误，系统平均每篇论文审阅时间为 30 分钟。
 
 reddit · r/MachineLearning · /u/Justgototheeffinmoon · 6月29日 10:05
 
-**背景**: 同行评审是专家在论文发表前评估其质量和正确性的过程。零样本提示是一种让 AI 模型在没有示例的情况下执行任务的技术，而智能体 AI 系统则通过多步推理和工具使用来获得更好的结果。
+**背景**: 同行评审是学术出版中关键但耗时的过程，通常需要数月。零样本提示要求 AI 在没有示例的情况下执行任务，对于数学验证等复杂任务效果较差。代理式 AI 系统通过多步推理和工具使用来提高准确性。
 
-**标签**: `#AI`, `#peer review`, `#machine learning`, `#Google`, `#automation`
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://paperreview.ai/tech-overview">Tech Overview - Stanford Agentic Reviewer</a></li>
+<li><a href="https://medium.com/data-science-in-your-pocket/andrew-ngs-agentic-reviewer-ai-for-research-paper-reviews-1c2d9cda8086">Andrew NG’s Agentic Reviewer : AI for Research Paper Reviews | by Mehul Gupta | Data Science in Your Pocket | Medium</a></li>
+
+</ul>
+</details>
+
+**社区讨论**: Reddit 评论普遍称赞其速度和规模，一些人指出即使不完美的 AI 评审也能通过快速反馈加速研究。其他人则担忧过度依赖 AI 和潜在偏见，但总体对结果的正式文档持积极态度。
+
+**标签**: `#AI`, `#peer review`, `#machine learning`, `#conference`, `#automation`
 
 ---
 
 <a id="item-3"></a>
 ## [llama.cpp b9840 新增 DeepSeek V4 支持](https://github.com/ggml-org/llama.cpp/releases/tag/b9840) ⭐️ 8.0/10
 
-llama.cpp 版本 b9840 新增了对 DeepSeek V4 模型架构的支持，包括转换、推理和优化。该版本还启用了 flash attention、图复用和多序列推理。 此版本使得在消费级硬件上本地高效推理 DeepSeek V4 成为可能，该模型是最先进的混合专家模型，参数高达 1.6 万亿。这极大地扩展了开源大语言模型生态系统的能力。 DeepSeek V4 模型采用混合注意力架构，结合了压缩稀疏注意力（CSA）和重度压缩注意力（HCA）。该版本支持 DeepSeek-V4-Pro（总计 1.6T，激活 49B）和 DeepSeek-V4-Flash（总计 284B，激活 13B）两种变体。
+llama.cpp 版本 b9840 新增了对 DeepSeek V4 模型架构的支持，包括 Pro 和 Flash 两种变体，并引入了闪存注意力、图复用和填充等优化以实现高效推理。 此版本使得在消费级硬件上通过 CPU 和 GPU 后端本地推理 DeepSeek V4 成为可能，该模型是拥有高达 1.6 万亿参数的先进混合专家模型，从而让尖端大语言模型技术更加普及。 该版本包含多位开发者的贡献，涉及 Sinkhorn 算法调整、KV 缓存预留以及多序列推理支持。DeepSeek V4 模型采用结合压缩稀疏注意力和重度压缩注意力的混合注意力机制。
 
 github · github-actions[bot] · 6月29日 10:25
 
-**背景**: llama.cpp 是一个开源的 C/C++ 库，用于在 CPU 和 GPU 上本地运行大型语言模型。它使用 GGUF 格式存储量化模型，从而在消费级硬件上实现高效推理。DeepSeek V4 是 DeepSeek 最新推出的混合专家模型系列，采用新颖的混合注意力机制以支持长上下文处理。
+**背景**: llama.cpp 是一个开源 C++ 库，用于在 CPU 和 GPU 上高效推理大语言模型，使用 GGUF 格式存储模型。DeepSeek V4 是一个混合专家模型系列，总参数量高达 1.6 万亿，采用混合注意力架构，支持长达一百万个 token 的上下文处理。
 
 <details><summary>参考链接</summary>
 <ul>
@@ -72,90 +84,106 @@ github · github-actions[bot] · 6月29日 10:25
 </ul>
 </details>
 
-**标签**: `#llama.cpp`, `#DeepSeek V4`, `#LLM inference`, `#open-source`, `#machine learning`
+**标签**: `#llama.cpp`, `#DeepSeek V4`, `#LLM inference`, `#open source`
 
 ---
 
 <a id="item-4"></a>
-## [Ornith-1.0：开源自脚手架编码大模型](https://simonwillison.net/2026/Jun/29/ornith/#atom-everything) ⭐️ 8.0/10
+## [Ornith-1.0：用于智能编码的开源权重大语言模型](https://simonwillison.net/2026/Jun/29/ornith/#atom-everything) ⭐️ 8.0/10
 
-DeepReinforce 发布了 Ornith-1.0，这是一个采用 MIT 许可证的开源权重大模型系列（9B 到 397B），通过自脚手架训练框架在编码基准上达到了最先进水平。 此次发布以宽松许可证为开源社区带来了具有竞争力的编码性能，使更广泛的用户能够访问和定制用于智能体编码任务。 模型变体包括 9B Dense、31B Dense、35B MoE 和 397B MoE，基于 Gemma 4 和 Qwen 3.5（均为 Apache 2.0 许可证）构建。自脚手架方法在强化学习过程中联合优化解决方案生成和任务特定脚手架。
+DeepReinforce 发布了 Ornith-1.0，这是一个用于智能编码的开源权重大语言模型系列（MIT 许可），提供 9B、31B、35B MoE 和 397B MoE 四种变体，基于 Gemma 4 和 Qwen 3.5 构建。在编码基准测试中，它在同等规模的开源模型中达到了最先进的性能。 此次发布通过提供一个许可宽松、性能卓越的模型，推动了开源智能编码的发展，该模型能够自主规划、编写、测试和修改代码。它降低了开发者和研究人员构建自主编码代理的门槛，无需依赖专有模型。 该模型采用自脚手架技术，即大语言模型生成显式的逐步分解来处理复杂编码任务。早期测试表明，它能够熟练地在多次工具调用中运行代理框架，35B GGUF 量化版本在本地运行速度可达 103 tokens/秒。
 
 rss · Simon Willison · 6月29日 16:17
 
-**背景**: 智能体编码是指 AI 智能体自主执行多步软件开发任务。传统的基于 LLM 的编码智能体使用固定脚手架（harness）来引导模型，而 Ornith-1.0 学习生成自己的脚手架，从而随时间提升性能。
+**背景**: 智能编码是指自主 AI 代理在最少人工干预下规划、编写、测试和修改代码的 AI 辅助软件开发方式。自脚手架技术利用大语言模型阐述记忆算法过程的能力，让其生成显式的逐步分解。混合专家（MoE）模型使用多个较小的专家网络，根据输入激活部分网络，从而实现高效扩展。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://deep-reinforce.com/ornith_1_0.html">Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding | DeepReinforce Blog | Jun. 2026</a></li>
-<li><a href="https://essamamdani.com/blog/ornith-1-0-self-scaffolding-llm-coding-2026">Ornith-1.0: The Self-Scaffolding LLM That Teaches Itself to Code Better | Essa Mamdani | Essa Mamdani</a></li>
-<li><a href="https://ornith.site/">Ornith 1 . 0 — Open-Source Agentic Coding Models</a></li>
+<li><a href="https://news.ycombinator.com/item?id=48709744">Ornith-1.0: Self - Scaffolding LLMs for Agentic Coding | Hacker News</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Agentic_coding">Agentic coding</a></li>
+<li><a href="https://cloud.google.com/discover/what-is-agentic-coding">What is agentic coding? How it works and use cases | Google Cloud</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区初步反馈积极，用户报告在 LM Studio 和 Pi 集成中表现良好。部分讨论关注与底层 Apache 2.0 模型的许可证兼容性。
-
-**标签**: `#LLM`, `#open-source`, `#coding`, `#AI`, `#machine learning`
+**标签**: `#LLM`, `#coding`, `#open-source`, `#agentic`, `#model release`
 
 ---
 
 <a id="item-5"></a>
-## [ChatGPT 推翻陈立杰苦思 7 年的计算几何难题](https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652709773&idx=2&sn=68bde762eb0070f5bd61518728971232) ⭐️ 8.0/10
+## [Jon Udell：将“人在回路”翻转为“智能体在回路”](https://simonwillison.net/2026/Jun/28/jon-udell/#atom-everything) ⭐️ 8.0/10
 
-据报道，ChatGPT 解决了一个困扰著名研究员陈立杰七年的核心计算几何问题，该成果基于 OpenAI 近期解决的一个 Erdős 猜想。 这表明大型语言模型现在能够解决理论计算机科学中长期存在的开放问题，可能加速计算几何及相关领域的研究。 该问题是计算几何中的一个核心问题，陈立杰研究了七年未果。解决方案利用了 OpenAI 最近证明的 Erdős 猜想。
-
-rss · 新智元 · 6月29日 05:01
-
-**背景**: 计算几何研究几何问题的算法，常涉及点、线和形状。陈立杰是清华大学姚班出身的著名计算机科学家，以计算复杂性研究闻名。Erdős 猜想是算术组合学中关于等差数列的著名问题，近期被 OpenAI 解决。
-
-**标签**: `#AI`, `#computational geometry`, `#ChatGPT`, `#breakthrough`, `#OpenAI`
-
----
-
-<a id="item-6"></a>
-## [Jon Udell：邀请智能体加入循环，而非被排除在外](https://simonwillison.net/2026/Jun/28/jon-udell/#atom-everything) ⭐️ 7.0/10
-
-Jon Udell 认为，软件团队不应成为将权力让给机器的“人在回路中”，而应邀请 AI 智能体作为团队成员加入现有工作流，保持人类控制权并确保所有智能体贡献可审查。 这种重新定义将叙事从人类从属转向人类主导，解决了关于不可审查的 PR 和黑箱流程的担忧，推动了一种协作模式，即 AI 增强而非取代人类判断。 Udell 特别批评“人在回路中”这一说法将权力让给机器，并主张“智能体在回路中”，即邀请智能体加入团队现有循环。他强调智能体辅助流程不应是接收提示并输出功能而未经审查的黑箱。
+Jon Udell 提出将主流叙事从“人在回路”翻转为“智能体在回路”，主张人类应保持主导权，邀请 AI 智能体作为团队成员，而非被排除在回路之外。 这一翻转改变了 AI 辅助软件开发中的权力动态，强调人类监督与协作而非黑箱自动化，有望带来更可信、可审查的智能体生成代码。 Udell 的观点出自其博客文章《医生，智能体创建不可审查的 PR 时很痛。别那么做》，该文警告 AI 智能体生成庞大、不透明的拉取请求，并倡导小而可审查的差异提交。
 
 rss · Simon Willison · 6月28日 21:57
 
-**背景**: 智能体软件开发使用 AI 智能体自主执行编码、测试和部署等任务。传统的“人在回路中”模式将人类作为监督者或后备，但 Udell 认为这仍以机器为中心。他提出的“邀请智能体加入循环”将人类作为主要决策者，智能体作为协作者，其工作始终可审查。
+**背景**: “人在回路”（HITL）传统上指需要人类批准或干预 AI 行动的系统。Udell 的“智能体在回路”将其翻转，将人类定位为主要决策者，招募 AI 智能体作为协作者。这与智能体软件开发的最佳实践一致，例如保持差异小并需要人类审查。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Human-in-the-loop">Human - in - the - loop - Wikipedia</a></li>
-<li><a href="https://www.ness.com/blog/what-is-agentic-software-development/">Agentic Software Development : Beyond Metrics and Speed</a></li>
+<li><a href="https://blog.jonudell.net/2026/06/28/doctor-it-hurts-when-agents-create-unreviewable-prs-dont-do-that/">“Doctor, it hurts when agents create unreviewable PRs .” “Don’t do that.”</a></li>
+<li><a href="https://timdeschryver.dev/blog/keep-agentic-ai-simple-a-practical-workflow-for-software-development">Keep Agentic AI Simple: A Practical Workflow for Software Development</a></li>
+<li><a href="https://cloud.google.com/discover/what-is-agentic-coding">What is agentic coding? How it works and use cases | Google Cloud</a></li>
 
 </ul>
 </details>
 
-**标签**: `#agentic development`, `#human-in-the-loop`, `#software engineering`, `#AI`
+**标签**: `#AI agents`, `#software development`, `#human-AI collaboration`, `#agentic development`
+
+---
+
+<a id="item-6"></a>
+## [ChatGPT 推翻陈立杰 7 年猜想](https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652709773&idx=2&sn=68bde762eb0070f5bd61518728971232) ⭐️ 8.0/10
+
+ChatGPT 在 OpenAI 解决 Erdős 猜想的基础上，据称推翻了一个陈立杰研究了七年的计算几何核心猜想。 这展示了 AI 解决长期数学问题的能力日益增强，可能加速计算几何及相关领域的研究。 该反证利用了 OpenAI 最近对 Erdős 猜想的解决方案，但计算几何猜想的具体内容及反证方法尚未公开。
+
+rss · 新智元 · 6月29日 05:01
+
+**背景**: 陈立杰是著名的中国计算机科学家，以计算复杂性和几何学方面的工作闻名。Erdős 猜想是数论中一个著名的未解决问题。OpenAI 最近宣布解决了 Erdős 猜想，为这一新结果提供了基础。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Erdős_conjecture">Erdős conjecture</a></li>
+<li><a href="https://chen-lijie.github.io/">Lijie Chen</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI`, `#computational geometry`, `#ChatGPT`, `#OpenAI`, `#research breakthrough`
 
 ---
 
 <a id="item-7"></a>
-## [Hack Your Summer：面向学生的免费四周冲刺项目](https://simonwillison.net/2026/Jun/28/hack-your-summer/#atom-everything) ⭐️ 6.0/10
+## [OpenAI 报告绘制 AI 对欧盟就业影响图](https://openai.com/index/mapping-ai-jobs-transition-eu) ⭐️ 7.0/10
 
-Hack Your Summer 是一个免费的四周生产冲刺项目，面向本科生和研究生，旨在通过构建真实项目来替代稀缺的实习机会。第二期将于 7 月 13 日开始，申请截止日期为 7 月 8 日。 该计划应对了影响美国大学生的实习短缺问题，提供了一种结构化的方式来获得实践经验并构建可展示的作品。它有助于弥合学术学习与行业期望之间的差距。 该计划免费开放给本科生、研究生和应届毕业生。它包括来自志愿者的指导，并专注于创建可展示给未来雇主的切实可见的公开作品。
+OpenAI 发布了一份报告，分析了 AI 如何自动化、增强或改变欧盟各职业，为劳动力转型提供了数据驱动的见解。 该报告为欧盟政策制定者和企业应对 AI 驱动的劳动力市场变化提供了宝贵指导，可能影响劳动力规划和再培训计划。 该报告绘制了哪些职业最易受自动化影响、哪些可能增长以及哪些将经历工作流程变化，但摘要中未详细说明具体数字或模型。
 
-rss · Simon Willison · 6月28日 19:26
+rss · OpenAI Blog · 6月29日 07:00
 
-**背景**: 许多美国公司减少了招聘和实习生指导能力，导致学生的实习机会减少。Hack Your Summer 通过模拟真实的生产环境并提供导师支持，提供了另一种选择。
+**背景**: 像大语言模型这样的 AI 技术越来越能够执行传统上由人类完成的任务，引发了关于就业替代和技能转变的讨论。欧盟在 AI 监管方面一直很积极，因此这类报告对政策讨论非常及时。
 
-**标签**: `#education`, `#internship`, `#student-projects`, `#summer-program`
+**标签**: `#AI`, `#labor market`, `#EU`, `#automation`, `#policy`
 
 ---
 
 <a id="item-8"></a>
-## [OpenAI 绘制欧盟 AI 就业变化图](https://openai.com/index/mapping-ai-jobs-transition-eu) ⭐️ 6.0/10
+## [Hack Your Summer：免费学生暑期冲刺项目](https://simonwillison.net/2026/Jun/28/hack-your-summer/#atom-everything) ⭐️ 6.0/10
 
-该报告提供了 AI 对欧洲劳动力市场潜在影响的数据驱动概述，有助于政策制定者、企业和工作者预测并准备劳动力转型。 该报告涵盖了广泛的欧盟职业，并根据受 AI 驱动变化的暴露程度对其进行分类，但缺乏具体的技术细节或个别岗位的精细数据。
+Hack Your Summer 是一个为期四周的免费生产冲刺项目，面向受实习短缺影响的学生；第二期将于 2026 年 7 月 13 日开始，申请截止日期为 7 月 8 日。 该计划为未能获得稀缺实习机会的学生提供了替代途径，帮助他们在严峻的就业市场中构建真实项目并拓展职业人脉。 由于时区协调问题，该项目目前仅限美国学生参加，但组织者希望未来扩展到国际范围。同时也在招募志愿导师。
 
-rss · OpenAI Blog · 6月29日 07:00
+rss · Simon Willison · 6月28日 19:26
 
-**背景**: 像大型语言模型这样的 AI 技术越来越能够自动化认知任务，引发了关于岗位替代的担忧。该报告旨在量化欧盟哪些行业和角色最脆弱或可能受益。
+**背景**: 生产冲刺（production sprint）是一个短期的、有时间限制的阶段（通常为 1-4 周），团队在此期间密集工作以产出具体成果，灵感来源于敏捷软件开发中的冲刺概念。实习危机指的是实习岗位数量相对于寻求实习的学生数量严重不足，这一问题在 2025-2026 年因企业招聘减少而加剧。
 
-**标签**: `#AI`, `#labor market`, `#Europe`, `#automation`, `#OpenAI`
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.hackyoursummer.org/">Hack Your Summer</a></li>
+<li><a href="https://www.hackyoursummer.org/details">Details — Hack Your Summer</a></li>
+<li><a href="https://www.cnn.com/2026/04/06/business/job-market-internships-squeeze">The job market is so tough, young people are struggling just to land internships | CNN Business</a></li>
+
+</ul>
+</details>
+
+**标签**: `#education`, `#internships`, `#student-programs`, `#summer-sprint`
 
 ---
