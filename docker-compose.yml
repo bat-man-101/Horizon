@@ -6,8 +6,8 @@ services:
       - ./data:/app/data
       - ./.env:/app/.env:ro
     environment:
-      - TZ=UTC
+      - TZ=Asia/Shanghai
     restart: unless-stopped
-    # Run daily at 8:00 AM UTC (adjust as needed)
-    # For one-time run, use: docker compose run --rm horizon
+    # 每天北京时间 9:00 自动运行
+    # 如需一次性运行: docker compose run --rm horizon --hours 24
     command: ["--hours", "24"]
