@@ -212,19 +212,19 @@
     "time_window_hours": 24,
     "max_items": 12,
     "category_groups": {
-      "ai-hot": {
+      "热点新闻": {
         "limit": 3,
-        "categories": ["ai-news", "news"]
+        "categories": ["news", "hackernews"]
       },
-      "ai-tools": {
-        "limit": 3,
-        "categories": ["ai-tools", "ai-official", "machine-learning", "github-trending"]
-      },
-      "xiaohongshu": {
+      "小红书": {
         "limit": 3,
         "categories": ["xiaohongshu"]
       },
-      "research": {
+      "ai新闻": {
+        "limit": 3,
+        "categories": ["ai-news", "ai-tools", "ai-official", "machine-learning"]
+      },
+      "研究": {
         "limit": 1,
         "categories": ["research", "papers"]
       },
@@ -232,13 +232,13 @@
         "limit": 1,
         "categories": ["crypto"]
       },
-      "semiconductors": {
+      "半导体": {
         "limit": 1,
         "categories": ["semiconductors"]
       }
     },
     "default_group": "other",
-    "default_group_limit": 1
+    "default_group_limit": 0
   },
   "webhook": {
     "enabled": true,
