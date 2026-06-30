@@ -223,7 +223,7 @@
   "webhook": {
     "enabled": true,
     "url_env": "HORIZON_WEBHOOK_URL",
-    "delivery": "summary_and_items",
+    "delivery": "summary",
     "overview_position": "last",
     "platform": "generic",
     "layout": "markdown",
@@ -232,7 +232,7 @@
     "request_body": {
       "msgtype": "markdown",
       "markdown": {
-        "content": "#{summary}"
+        "content": "#  AI资讯推荐 #{date}\n\n**🔥 热门推荐项目**\n\n[TrendRadar(38k⭐)](https://github.com/sansan0/TrendRadar) — AI多平台热点聚合\n\n[Newspaper](https://github.com/Xiaoseymy/newspaper) — AI新闻助手\n\n[Horizon](https://github.com/Thysrael/Horizon) — AI新闻雷达\n\n---\n> 查看更多项目: https://bat-man-101.github.io/Horizon/projects.html"
       }
     },
     "headers": ""
