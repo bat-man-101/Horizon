@@ -5,132 +5,218 @@ date: 2026-06-30
 lang: en
 ---
 
-> From 127 items, 6 important content pieces were selected
+> From 151 items, 10 important content pieces were selected
 
 ---
 
-1. [Supreme Court Rules Geofence Warrants Need Constitutional Protections](#item-1) ⭐️ 9.0/10
-2. [Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding](#item-2) ⭐️ 8.0/10
-3. [Washington Post Tests AI Chatbots for Political Bias](#item-3) ⭐️ 8.0/10
-4. [BNY Mellon Adds USDC Minting and Redemption for Institutions](#item-4) ⭐️ 7.0/10
-5. [Patients Bring AI Tools into Therapy Sessions](#item-5) ⭐️ 7.0/10
-6. [Rethinking AI Governance: Key Questions](#item-6) ⭐️ 7.0/10
+1. [vLLM v0.24.0 Adds MiniMax-M3 and DeepSeek-V4 Optimizations](#item-1) ⭐️ 8.0/10
+2. [OpenAI Fixes 18-Year-Old Bug via Core Dump Analysis](#item-2) ⭐️ 8.0/10
+3. [Tesla Begins Testing Cybercab Without Steering Wheel in Austin](#item-3) ⭐️ 8.0/10
+4. [Amazon launches $1B FDE org for AI agent deployment](#item-4) ⭐️ 8.0/10
+5. [South Korea pledges $550B+ to ease memory chip shortage](#item-5) ⭐️ 8.0/10
+6. [AI deciphers long-range DNA signals in RNA splicing](#item-6) ⭐️ 8.0/10
+7. [New York Life's $800B Asset Manager Launches First Tokenized Fund](#item-7) ⭐️ 7.0/10
+8. [MIT Q&A Explores Agentic AI Today and Future](#item-8) ⭐️ 7.0/10
+9. [Chess grandmaster critiques AI visionaries' blind spots](#item-9) ⭐️ 7.0/10
+10. [OpenAI Reports Global Growth in ChatGPT Adoption](#item-10) ⭐️ 6.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Supreme Court Rules Geofence Warrants Need Constitutional Protections](https://www.theguardian.com/us-news/2026/jun/29/supreme-court-geofence-warrants-case-decision) ⭐️ 9.0/10
+## [vLLM v0.24.0 Adds MiniMax-M3 and DeepSeek-V4 Optimizations](https://github.com/vllm-project/vllm/releases/tag/v0.24.0) ⭐️ 8.0/10
 
-The US Supreme Court ruled that geofence warrants, which compel tech companies to provide location data of all devices within a specified area, must comply with Fourth Amendment protections against unreasonable searches and seizures. This landmark decision significantly limits law enforcement's ability to conduct mass digital surveillance without individualized suspicion, setting a crucial precedent for privacy rights in the digital age. The case involved a bank robbery where Google provided location data from 19 devices within 150 meters of the bank. The Court held that accessing such historical location data constitutes a Fourth Amendment search requiring a warrant based on probable cause.
+vLLM v0.24.0 introduces support for the MiniMax-M3 model and delivers major performance optimizations for DeepSeek-V4, including a FlashInfer sparse index cache and a cluster-cooperative topK kernel. This release significantly boosts inference efficiency for two cutting-edge models, enabling faster and more cost-effective deployment of large language models in production environments. The FlashInfer sparse index cache reduces time-to-first-token (TTFT) by 2–4%, while the cluster-cooperative topK kernel lowers latency for DeepSeek-V4's sparse attention. The release also includes 571 commits from 256 contributors.
 
-hackernews · cdrnsf · Jun 29, 15:54 · [Discussion](https://news.ycombinator.com/item?id=48720924)
+github · khluu · Jun 29, 19:41
 
-**Background**: A geofence warrant, also known as a reverse location warrant, allows law enforcement to search a company's database for all mobile devices within a virtual perimeter (geofence) during a specific time. These warrants have become controversial because they can sweep up data from innocent bystanders. The Fourth Amendment protects against unreasonable searches, and the Supreme Court has previously extended its protections to digital data in cases like Riley v. California and Carpenter v. United States.
+**Background**: vLLM is a high-throughput, memory-efficient inference engine for large language models. DeepSeek-V4 and MiniMax-M3 are advanced models that require optimized kernels for efficient serving. FlashInfer is a kernel library providing high-performance attention implementations, and the cluster-cooperative topK kernel is a custom kernel for sparse attention index selection.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Geofence_warrant">Geofence warrant - Wikipedia</a></li>
-<li><a href="https://www.brennancenter.org/our-work/policy-solutions/fourth-amendment-digital-age">The Fourth Amendment in the Digital Age | Brennan Center for Justice</a></li>
+<li><a href="https://docs.flashinfer.ai/api/sparse.html">flashinfer.sparse - FlashInfer 0.6.13 documentation</a></li>
+<li><a href="https://github.com/flashinfer-ai/flashinfer">GitHub - flashinfer-ai/flashinfer: FlashInfer: Kernel Library ... flashinfer_sparse - vLLM FlashInfer 0.2 - Efficient and Customizable Kernels for LLM ... FlashInfer: Efficient and Customizable Attention Engine for ... flashinfer/flashinfer/sparse.py at main · flashinfer-ai ... Dissecting FlashInfer - A Systems Perspective on High ...</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters largely praised the ruling as a win for privacy, with some noting the Court's use of factual sources in its opinion. Others raised questions about implications for other surveillance technologies like automated license plate readers, while a few criticized dissenting justices for favoring unlimited government power.
-
-**Tags**: `#privacy`, `#supreme court`, `#surveillance`, `#digital rights`, `#law`
+**Tags**: `#vLLM`, `#LLM inference`, `#DeepSeek`, `#MiniMax`, `#performance optimization`
 
 ---
 
 <a id="item-2"></a>
-## [Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding](https://simonwillison.net/2026/Jun/29/ornith/#atom-everything) ⭐️ 8.0/10
+## [OpenAI Fixes 18-Year-Old Bug via Core Dump Analysis](https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug) ⭐️ 8.0/10
 
-DeepReinforce released Ornith-1.0, a family of open-weight (MIT licensed) LLMs for agentic coding, with sizes from 9B to 397B, built on Gemma 4 and Qwen 3.5. It achieves state-of-the-art performance among open-source models of comparable size on coding benchmarks. Ornith-1.0 introduces a self-scaffolding training framework where the model learns to generate both solution rollouts and task-specific harnesses, enabling self-improvement without human-designed scaffolds. This could significantly advance open-source agentic coding capabilities and make powerful coding assistants accessible on local hardware. The model family includes 9B Dense, 31B Dense, 35B MoE, and 397B MoE variants, all under MIT license. Early user reports indicate it produces shorter chain-of-thought, making it up to 3x faster than comparable models like Qwen 3.6 35B, while maintaining high coding performance.
+OpenAI engineers conducted large-scale core dump analysis to debug rare infrastructure crashes, uncovering both a hardware fault and an 18-year-old software bug. This demonstrates a novel, data-driven approach to debugging rare failures in large-scale systems, with implications for reliability engineering across the industry. The bug had persisted for 18 years, and the analysis required collecting and examining core dumps from thousands of machines to identify the root cause.
 
-rss · Simon Willison · Jun 29, 16:17
+rss · OpenAI Blog · Jun 30, 00:00
 
-**Background**: Agentic coding refers to LLMs that can autonomously use tools (e.g., code editors, terminals) to solve programming tasks. Traditional approaches rely on hand-crafted scaffolds (harnesses) to guide the model's tool use. Ornith-1.0's self-scaffolding innovation allows the model to learn its own scaffolding strategy during training, improving both efficiency and effectiveness.
+**Background**: A core dump is a snapshot of a program's memory at the time of a crash, used for post-mortem debugging. Analyzing core dumps at scale involves aggregating and correlating data from many machines to find common patterns.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://deep-reinforce.com/ornith_1_0.html">Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding | DeepReinforce Blog | Jun. 2026</a></li>
-<li><a href="https://essamamdani.com/blog/ornith-1-0-self-scaffolding-llm-coding-2026">Ornith-1.0: The Self-Scaffolding LLM That Teaches Itself to Code Better | Essa Mamdani | Essa Mamdani</a></li>
-<li><a href="https://huggingface.co/deepreinforce-ai">deepreinforce-ai (DeepReinforce)</a></li>
+<li><a href="https://stackoverflow.com/questions/8305866/how-do-i-analyze-a-programs-core-dump-file-with-gdb-when-it-has-command-line-pa">linux - How do I analyze a program's core dump file with GDB ... Code sample</a></li>
+<li><a href="https://dzone.com/articles/debugging-core-dump-files-on-linux-a-detailed-guid">Debugging Linux Core Dump Files: A Detailed Guide - DZone</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community feedback is largely positive: users find Ornith-1.0 more useful than previous local models, with one noting it is the first Qwen fine-tune not immediately rejected. Another user reports it is slightly better than Qwen 3.6 35B and up to 3x faster due to shorter chain-of-thought. Some users question the novelty and ask for more details about the self-improvement mechanism.
-
-**Tags**: `#LLM`, `#open-source`, `#coding`, `#AI agents`, `#model release`
+**Tags**: `#debugging`, `#infrastructure`, `#reliability`, `#core dump`, `#OpenAI`
 
 ---
 
 <a id="item-3"></a>
-## [Washington Post Tests AI Chatbots for Political Bias](https://news.google.com/rss/articles/CBMixwFBVV95cUxNcjNMZk5ZYVBRRHlTbDJrZl85THhCTHJvczVHMzlPcnpUdndRdkV1NGZoNFdvMzNBLVdZaHZpS0tEY1dfWFBYTWtKUXpnQzhFa09vMXBHYmNuOEV3TmJuRWVXeTFvQW1adlNBRDg2R0NBUEhQLXlwdWZHVHNLRUVXYjdRUk9FTjFXSDRGenUyZkZxMkdZelk4OWF5VGI4S2Q4U3lyQUpEWEROTFJLUlM3alNwaEQtV1FveVU4bjV1dW1SM3ZvenFZ?oc=5) ⭐️ 8.0/10
+## [Tesla Begins Testing Cybercab Without Steering Wheel in Austin](https://techcrunch.com/2026/06/30/tesla-starts-testing-cybercab-without-pedals-or-a-steering-wheel-in-austin/) ⭐️ 8.0/10
 
-The Washington Post conducted a systematic test of major AI chatbots, including ChatGPT, to evaluate their political bias and published the findings. This investigation highlights potential political bias in widely used AI systems, raising concerns about fairness and trustworthiness in AI-generated content. The test methodology likely involved presenting politically charged prompts to chatbots and analyzing the responses for partisan leanings.
+Tesla has started testing its Cybercab robotaxi without pedals or a steering wheel on public roads in Austin, Texas, marking a major step toward launching a fully autonomous ride-hailing service. This testing brings Elon Musk's long-promised robotaxi network closer to reality, potentially disrupting the transportation industry and intensifying competition with other autonomous vehicle companies like Waymo and Zoox. The Cybercab is a two-passenger, fully autonomous electric vehicle designed without manual controls; it is expected to have a roughly 50-kWh battery pack and an EPA-estimated range of nearly 280 miles.
 
-google_news · The Washington Post · Jun 30, 01:23
+rss · 36氪 - 科技 · Jun 30, 15:32
 
-**Background**: AI chatbots like ChatGPT are trained on large datasets from the internet, which may contain biased or unbalanced political viewpoints. Evaluating and mitigating such bias is a key challenge in AI ethics and responsible deployment.
+**Background**: Tesla first unveiled the Cybercab concept in October 2024 as part of its robotaxi vision. The company's Full Self-Driving (FSD) software underpins the autonomous capabilities, and a limited Tesla Robotaxi service launched in Austin in June 2025 using vehicles with manual controls. Removing the steering wheel and pedals represents a significant leap toward Level 5 autonomy.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.fluence.network/blog/llm-evaluation-framework/">LLM Evaluation Framework for RAG and AI Agents</a></li>
-<li><a href="https://www.langchain.com/resources/how-to-evaluate-llms">Evaluating LLMs and Agents: Benchmarks, Evals & Guardrails</a></li>
-<li><a href="https://openfabric.ai/blog/llm-evaluation-methodologies-a-deep-dive-into-llm-evals">LLM Evaluation methodologies : A Deep Dive into LLM Evals</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tesla_Cybercab">Tesla Cybercab - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tesla_Robotaxi">Tesla Robotaxi - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI bias`, `#ChatGPT`, `#political bias`, `#AI ethics`, `#LLM evaluation`
+**Tags**: `#autonomous vehicles`, `#Tesla`, `#robotaxi`, `#transportation`, `#AI`
 
 ---
 
 <a id="item-4"></a>
-## [BNY Mellon Adds USDC Minting and Redemption for Institutions](https://www.coindesk.com/business/2026/06/29/wall-street-s-bny-expands-stablecoin-services-for-institutions-starting-with-circle-s-usdc) ⭐️ 7.0/10
+## [Amazon launches $1B FDE org for AI agent deployment](https://techcrunch.com/2026/06/30/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/) ⭐️ 8.0/10
 
-BNY Mellon has expanded its Digital Asset Custody platform to support Circle's USDC, allowing institutional clients to store, transfer, mint, and redeem the stablecoin directly through the bank. This move marks a significant step in mainstream adoption of stablecoins by traditional finance, as a major Wall Street custodian now offers integrated stablecoin services to institutional investors. USDC is the first stablecoin available on BNY Mellon's platform, and the bank already serves as the primary custodian of USDC reserves, deepening its partnership with Circle.
+Amazon Web Services (AWS) announced a new $1 billion internal organization focused on forward-deployed engineers (FDEs) who will embed with customer companies to deploy custom AI agents. The initiative follows similar moves by OpenAI and Anthropic, emphasizing fast deployment and customer self-sufficiency. This investment signals Amazon's commitment to capturing the enterprise AI agent market, which is rapidly growing as companies seek practical deployment solutions. By embedding engineers directly with clients, Amazon aims to accelerate adoption and reduce deployment friction, potentially setting a new standard for enterprise AI services. The FDE model, pioneered by Palantir, involves engineers working on-site with clients to customize and deploy technical solutions. Amazon's new org will focus on purpose-built AI agents, with engineers embedded in companies for fast engagements and to ensure customers can eventually manage the agents independently.
 
-rss · CoinDesk · Jun 29, 14:46
+rss · 36氪 - 科技 · Jun 30, 15:00
 
-**Background**: BNY Mellon, custodian of $46.7 trillion in assets, became the first U.S. bank approved by both the SEC and NY DFS to hold Bitcoin and Ethereum for institutional clients in October 2022. Stablecoins like USDC are digital tokens pegged to fiat currency, enabling efficient on-chain transactions. Minting and redemption refer to the creation and conversion of stablecoins to and from fiat currency.
+**Background**: Forward-deployed engineers (FDEs) are professionals who work closely with client organizations to develop, customize, and deploy technical solutions in operational environments. This model has become increasingly popular for managing AI deployments, as it bridges the gap between product development and real-world application. Amazon, OpenAI, and Anthropic are all investing in this approach to help enterprises adopt AI agents more effectively.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://cointelegraph.com/news/bny-adds-usdc-minting-and-redemption-to-institutional-custody-platform">BNY adds USDC minting and redemption to institutional custody ...</a></li>
-<li><a href="https://tokenmetrics.com/usdc/news/bny-usdc-minting-institutional-custody/">BNY Adds USDC Minting To Institutional Custody Platform</a></li>
-<li><a href="https://cryptobriefing.com/bny-mellon-usdc-digital-asset-custody/">BNY Mellon integrates USDC as first stablecoin on Digital Asset...</a></li>
+<li><a href="https://techcrunch.com/2026/06/30/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/">Amazon launches new $1 billion FDE org, following OpenAI and Anthropic | TechCrunch</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Forward_Deployed_Engineer">Forward Deployed Engineer - Wikipedia</a></li>
+<li><a href="https://oodaloop.com/briefs/technology/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/">Amazon launches new $1 billion FDE org, following OpenAI and Anthropic — OODAloop</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#stablecoins`, `#institutional crypto`, `#BNY Mellon`, `#USDC`, `#fintech`
+**Tags**: `#Amazon`, `#AI agents`, `#enterprise AI`, `#investment`, `#deployment`
 
 ---
 
 <a id="item-5"></a>
-## [Patients Bring AI Tools into Therapy Sessions](https://news.google.com/rss/articles/CBMibEFVX3lxTE1WWnJKR2tRSjN0dk1PajZUX085VmM3aGxKZWRJWGNnTjVvSHZSZWlnd05oM2llajF6YXBDRV8zOTRFRjV6ZTF2SW5FUUh2UU5OLVNMN0tYX2k2cXZvZHFvU2c5UXF6OHNJY3lieQ?oc=5) ⭐️ 7.0/10
+## [South Korea pledges $550B+ to ease memory chip shortage](https://techcrunch.com/2026/06/29/south-korean-tech-giants-commit-over-550b-to-ease-ramageddon/) ⭐️ 8.0/10
 
-Patients are increasingly using AI tools like chatbots and language models during therapy sessions, a trend highlighted by the American Psychological Association. This trend challenges traditional therapeutic boundaries and raises ethical questions about privacy, efficacy, and the therapist's role, potentially reshaping mental health practice. The APA report notes that some patients use AI for self-diagnosis, emotional support, or to prepare for sessions, while therapists grapple with how to integrate these tools responsibly.
+South Korea's top memory chip makers, including Samsung and SK Hynix, have committed over $550 billion to build new fabrication facilities to address the global memory shortage known as 'RAMageddon' and bolster AI capabilities. This massive investment aims to alleviate the severe memory supply shortage that has been impacting consumer and enterprise PC markets since 2025, while also positioning South Korea as a key player in AI infrastructure. The shortage, driven by a structural shift of manufacturing capacity toward high-margin AI data center products, is expected to last until at least 2028, according to industry analysts.
 
-google_news · American Psychological Association (APA) · Jun 30, 07:22
+rss · 36氪 - 科技 · Jun 29, 18:07
 
-**Background**: AI in mental health is growing, with apps offering therapy-like interactions. However, patients bringing their own AI into formal therapy is a newer phenomenon that blurs the line between professional and self-help.
+**Background**: The global memory supply shortage, sometimes called 'RAMageddon' or 'RAMpocalypse', began in 2025 and primarily affects DRAM and NAND flash memory. Unlike the earlier pandemic-era chip shortage, this one is caused by manufacturers prioritizing AI-related chips over consumer memory, leading to scarcity and price hikes.
 
-**Tags**: `#AI in healthcare`, `#mental health`, `#therapy`, `#ethics`, `#AI adoption`
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/RAMmageddon">RAMmageddon</a></li>
+<li><a href="https://en.wikipedia.org/wiki/2024–present_global_memory_supply_shortage">2025–present global memory supply shortage - Wikipedia</a></li>
+<li><a href="https://www.cnet.com/tech/computing/tech-companies-are-freaking-out-about-ramageddon/">Tech Companies Are Freaking Out About RAMageddon - CNET</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#memory chips`, `#AI infrastructure`, `#semiconductor investment`, `#South Korea`, `#hardware`
 
 ---
 
 <a id="item-6"></a>
-## [Rethinking AI Governance: Key Questions](https://news.google.com/rss/articles/CBMiiAFBVV95cUxPaXhGeDlGNzRDMkVFUmlGYmFFamh1SWZoRi1rNl9FeHhSZERYTExoZXNHNHloaTRtbzFEa25WNkRNOG9nN1NoUHdkT2R5T2JpYS1BbGR2bjZBd1B1RmNDSDZqTmk1UzdfWHUyX0IzM1lJWkVlRWlQeTNtNUZHdXg3LWJKMFhudDM1?oc=5) ⭐️ 7.0/10
+## [AI deciphers long-range DNA signals in RNA splicing](https://news.google.com/rss/articles/CBMiXEFVX3lxTFAyeGJFZG9KOURQZzdSLUNuZnZfNl9vblRoeUhDWWVyTS05VHlkVzZFaVRPYlRZYnA5dTQ1YWdlR0Q2MDl0RXpCd3k3UHFhenhRZVdWX0RNU1A1dmJa?oc=5) ⭐️ 8.0/10
 
-MIT Sloan Management Review published an article arguing that the central question for AI governance is not about controlling AI but about how to design systems that align with human values and societal goals. This perspective shifts the debate from fear-based regulation to proactive design, influencing how policymakers and organizations approach AI ethics and governance frameworks. The article emphasizes that governance should focus on the purpose and context of AI use, rather than solely on technical capabilities or risks.
+Researchers have developed an AI model that can decipher long-range DNA signals that regulate RNA splicing, a key process in gene expression. This breakthrough was reported by EurekAlert! and represents a significant advance in understanding how distant DNA elements influence splicing decisions. This work could transform our understanding of gene regulation and disease mechanisms, as aberrant splicing is linked to many genetic disorders and cancers. The AI approach enables analysis of long-range genomic interactions that were previously difficult to study, potentially leading to new therapeutic targets. The AI model specifically focuses on long-range DNA signals, which are regulatory elements located far from the splice sites they influence. The study likely leverages deep learning to predict splicing outcomes based on genomic sequence context over distances of thousands to millions of base pairs.
 
-google_news · MIT Sloan Management Review · Jun 30, 11:00
+google_news · EurekAlert! · Jun 30, 11:17
 
-**Background**: AI governance refers to the policies, laws, and frameworks that guide the development and deployment of artificial intelligence. Current debates often center on risks like bias, privacy, and job displacement.
+**Background**: RNA splicing is a process where introns are removed from pre-mRNA and exons are joined together to form mature mRNA. Alternative splicing allows a single gene to produce multiple protein variants, and its regulation involves both nearby and distant DNA elements. Long-range DNA signals, such as enhancers and silencers, can influence splicing by looping to target sites, but identifying these interactions has been challenging.
 
-**Tags**: `#AI governance`, `#artificial intelligence`, `#policy`, `#ethics`
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/RNA_splicing">RNA splicing - Wikipedia</a></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4360811/">Mechanism of alternative splicing and its regulation - PMC</a></li>
+<li><a href="https://www.nature.com/articles/s41467-025-65077-4">DNALONGBENCH: a benchmark suite for long-range DNA prediction tasks | Nature Communications</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI`, `#genomics`, `#RNA splicing`, `#bioinformatics`, `#machine learning`
+
+---
+
+<a id="item-7"></a>
+## [New York Life's $800B Asset Manager Launches First Tokenized Fund](https://www.coindesk.com/business/2026/06/29/new-york-life-makes-tokenization-debut-with-onchain-high-yield-bond-fund-with-centrifuge) ⭐️ 7.0/10
+
+New York Life's $800 billion asset manager has launched its first tokenized fund via the Centrifuge platform, marking a major milestone in institutional adoption of blockchain-based asset management. This move signals growing institutional confidence in tokenization, potentially paving the way for more traditional financial giants to integrate blockchain technology into asset management, increasing efficiency and liquidity. The fund is a high-yield bond fund tokenized on Centrifuge's infrastructure, which provides automated compliance, multichain reach, and deep DeFi connectivity. Centrifuge is one of the first and largest tokenization platforms, connecting traditional capital markets to onchain rails.
+
+rss · CoinDesk · Jun 30, 11:20
+
+**Background**: Tokenization is the process of representing shares in a traditional investment fund as digital tokens on a blockchain, replacing traditional transfer agents and brokers. This technology can streamline operations, reduce costs, and enable fractional ownership. Centrifuge is a leading platform for tokenizing real-world assets, including funds, private credit, and real estate.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://centrifuge.io/">Centrifuge | Infrastructure for Onchain Asset Management</a></li>
+<li><a href="https://www.gemini.com/cryptopedia/centrifuge-crypto-tinlake-tokenization-real-world-assets">Centrifuge: Tokenization of Real-World Assets | Gemini</a></li>
+<li><a href="https://chain.link/article/fund-tokenization">What Is Fund Tokenization? | Chainlink</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#tokenization`, `#institutional adoption`, `#DeFi`, `#asset management`, `#blockchain`
+
+---
+
+<a id="item-8"></a>
+## [MIT Q&A Explores Agentic AI Today and Future](https://news.google.com/rss/articles/CBMidkFVX3lxTE5RM1ZBZHlsbkR4dlJscXJLMkhFUzN1S280eXBsV1hCXzdCOTBraWZ1cUt1SUhqXzBUbThPSnBQdWpKTTI2aXdxQTdHbk9SM1d2NGluUXZ0cWktNzdWeS1xZHRQcVhDcWs5M2R4YXdUTGVvMThCRXc?oc=5) ⭐️ 7.0/10
+
+MIT News published a Q&A article examining the current state of agentic AI and its desired future direction, featuring expert insights from MIT researchers. This discussion clarifies the evolving definition of agentic AI, which is crucial as AI systems become more autonomous and capable of multi-step tasks, impacting industries from healthcare to finance. The article likely distinguishes agentic AI from generative AI, emphasizing goal-directed behavior, tool use, and limited supervision as key attributes.
+
+google_news · MIT News · Jun 30, 15:30
+
+**Background**: Agentic AI refers to AI systems that can perceive, reason, and act autonomously to achieve specific goals, often using large language models for control. Unlike generative AI, which creates content, agentic AI focuses on task completion with minimal human intervention. The concept has gained prominence as AI agents are deployed in real-world applications like customer service and robotics.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/AI_agent">AI agent - Wikipedia</a></li>
+<li><a href="https://mitsloan.mit.edu/ideas-made-to-matter/agentic-ai-explained">Agentic AI, explained | MIT Sloan</a></li>
+<li><a href="https://www.ibm.com/think/topics/agentic-ai">What is Agentic AI? | IBM</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI`, `#agentic AI`, `#MIT`, `#research`
+
+---
+
+<a id="item-9"></a>
+## [Chess grandmaster critiques AI visionaries' blind spots](https://news.google.com/rss/articles/CBMikwFBVV95cUxNVmdsYmR1c0hxSGxxN2lLV1RmaEJQSUkxOS1jSW96LWF3NHU0RVVydEhGam1fd285Y2R4ajRVWHZDOUc4LWpVcnpzTzM0NldMdFlfZ0ZPNTl2Z3lRVGhuNm1XQ1gyM3J3bVFVMlpVa0ljN2EzU1BfeWFGNE5xcHJCWGkta0N4OFFta0dhQ2JtX2xpUE0?oc=5) ⭐️ 7.0/10
+
+A chess grandmaster published an opinion piece in The Washington Post arguing that AI visionaries misunderstand key aspects of human intelligence and decision-making, such as intuition and creativity. This perspective from a high-level human expert challenges the prevailing narrative that AI will soon surpass human cognition in all domains, highlighting enduring limitations of current AI systems. The grandmaster emphasizes that human decision-making relies on pattern recognition, intuition, and contextual understanding that AI models like large language models cannot replicate. The piece is an opinion, not peer-reviewed research, but carries weight due to the author's expertise.
+
+google_news · The Washington Post · Jun 30, 15:32
+
+**Background**: Chess has long been a benchmark for AI progress, from Deep Blue defeating Garry Kasparov in 1997 to AlphaZero mastering the game through self-play. However, grandmasters argue that chess involves more than brute calculation, including psychological factors and creativity that current AI lacks.
+
+**Tags**: `#AI`, `#chess`, `#opinion`, `#human intelligence`
+
+---
+
+<a id="item-10"></a>
+## [OpenAI Reports Global Growth in ChatGPT Adoption](https://openai.com/index/how-chatgpt-adoption-has-expanded) ⭐️ 6.0/10
+
+OpenAI released new Signals data showing that ChatGPT adoption is growing globally, with users increasing usage frequency and exploring more capabilities across regions and languages. This indicates that ChatGPT is becoming more deeply integrated into users' workflows, which could drive further investment in AI infrastructure and influence how competitors position their own AI assistants. The report highlights growth across multiple regions and languages, but does not provide specific adoption numbers or breakdowns by industry or use case.
+
+rss · OpenAI Blog · Jun 30, 09:00
+
+**Background**: ChatGPT is a large language model-based chatbot developed by OpenAI, launched in November 2022. Adoption metrics like usage frequency and capability exploration help gauge how users are integrating AI into daily tasks.
+
+**Tags**: `#ChatGPT`, `#AI adoption`, `#OpenAI`, `#LLMs`
 
 ---
