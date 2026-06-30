@@ -130,16 +130,10 @@
         "category": "crypto"
       },
       {
-        "name": "小红书 - AI热门",
-        "url": "https://rsshub.app/xiaohongshu/search_result/人工智能",
+        "name": "36氪 - 科技",
+        "url": "https://36kr.com/feed",
         "enabled": true,
-        "category": "xiaohongshu"
-      },
-      {
-        "name": "小红书 - 科技数码",
-        "url": "https://rsshub.app/xiaohongshu/search_result/科技",
-        "enabled": true,
-        "category": "xiaohongshu"
+        "category": "tech-news"
       }
     ],
     "github": [
@@ -216,13 +210,13 @@
         "limit": 3,
         "categories": ["news", "hackernews"]
       },
-      "小红书": {
-        "limit": 3,
-        "categories": ["xiaohongshu"]
-      },
       "ai新闻": {
         "limit": 3,
         "categories": ["ai-news", "ai-tools", "ai-official", "machine-learning"]
+      },
+      "科技动态": {
+        "limit": 3,
+        "categories": ["tech-news", "github-trending"]
       },
       "研究": {
         "limit": 1,
