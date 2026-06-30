@@ -47,6 +47,22 @@
           "time_filter": "day",
           "fetch_limit": 10,
           "min_score": 50
+        },
+        {
+          "subreddit": "Bitcoin",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 10,
+          "min_score": 50
+        },
+        {
+          "subreddit": "CryptoCurrency",
+          "enabled": true,
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 10,
+          "min_score": 50
         }
       ],
       "users": [],
@@ -100,6 +116,18 @@
         "url": "https://newsletter.semianalysis.com/feed",
         "enabled": true,
         "category": "semiconductors"
+      },
+      {
+        "name": "CoinDesk",
+        "url": "https://www.coindesk.com/arc/outboundfeeds/rss/",
+        "enabled": true,
+        "category": "crypto"
+      },
+      {
+        "name": "CoinTelegraph",
+        "url": "https://cointelegraph.com/rss",
+        "enabled": true,
+        "category": "crypto"
       }
     ],
     "github": [
@@ -155,6 +183,16 @@
       "ceid": null,
       "max_results": 50,
       "category": "news"
+    },
+    "gdelt": {
+      "enabled": true,
+      "query": "bitcoin cryptocurrency",
+      "mode": "ArtList",
+      "max_records": 20,
+      "timespan": "24h",
+      "language": null,
+      "country": null,
+      "category": "crypto"
     }
   },
   "filtering": {
@@ -173,6 +211,10 @@
       "github": {
         "limit": 5,
         "categories": ["github-trending"]
+      },
+      "crypto": {
+        "limit": 10,
+        "categories": ["crypto"]
       }
     },
     "default_group": "other",

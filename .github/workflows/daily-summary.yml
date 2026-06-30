@@ -2,7 +2,7 @@ name: Daily Horizon Summary
 
 on:
   schedule:
-    - cron: '0 1 * * *'  # UTC 1:00 = 北京时间 09:00（已换算，不依赖 timezone）
+    - cron: '0 2 * * *'  # UTC 2:00 = 北京时间 10:00
   workflow_dispatch:      # 手动触发
 
 jobs:

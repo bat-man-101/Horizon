@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 信息聚合 · 推荐项目</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+      background: #f5f7fa;
+      color: #1a1a2e;
+      line-height: 1.7;
+    }
+    .container { max-width: 960px; margin: 0 auto; padding: 40px 24px; }
+    h1 { font-size: 2rem; margin-bottom: 8px; color: #0d1117; }
+    .subtitle { color: #57606a; margin-bottom: 32px; font-size: 1rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .card {
+      background: #fff; border-radius: 12px; padding: 24px;
+      box-shadow: 0 1px 3px rgba(0,0,0,.08); transition: all .2s;
+      border: 1px solid #d0d7de;
+    }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,.12); }
+    .stars { color: #d29922; font-size: .9rem; font-weight: 600; }
+    .card h3 { font-size: 1.1rem; margin: 8px 0 6px; }
+    .card h3 a { color: #0969da; text-decoration: none; }
+    .card h3 a:hover { text-decoration: underline; }
+    .card p { font-size: .92rem; color: #57606a; margin-bottom: 12px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tags span {
+      background: #ddf4ff; color: #0969da; font-size: .78rem;
+      padding: 2px 10px; border-radius: 20px; font-weight: 500;
+    }
+    .tag-green { background: #dafbe1 !important; color: #1a7f37 !important; }
+    .tag-yellow { background: #fff8c5 !important; color: #9a6700 !important; }
+    .footer {
+      margin-top: 48px; padding-top: 24px; border-top: 1px solid #d0d7de;
+      text-align: center; color: #8b949e; font-size: .85rem;
+    }
+    .footer a { color: #0969da; }
+    @media (max-width: 600px) {
+      .grid { grid-template-columns: 1fr; }
+      .container { padding: 24px 16px; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>🚀 推荐信息聚合项目</h1>
+  <p class="subtitle">本页面由 Horizon AI 新闻雷达自动部署 · 收录高分开源信息聚合工具</p>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="stars">⭐ 38k+ Stars</div>
+      <h3><a href="https://github.com/sansan0/TrendRadar" target="_blank">TrendRadar</a></h3>
+      <p>AI 驱动的多平台热点聚合与舆情监控。监控 35 个平台（抖音、知乎、B站、微博等），智能筛选 + 自动推送 + AI 对话深度分析。</p>
+      <div class="tags">
+        <span>热点聚合</span><span class="tag-green">AI驱动</span><span>中文生态</span><span class="tag-yellow">多平台</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="stars">⭐ 3k+ Stars</div>
+      <h3><a href="https://github.com/Xiaoseymy/newspaper" target="_blank">Newspaper</a></h3>
+      <p>告别信息过载，AI 助你看懂新闻。聚合 35 个中文平台，支持自然语言深度挖掘：趋势追踪、情感分析、相似检索等 13 种工具。</p>
+      <div class="tags">
+        <span>AI新闻</span><span>情感分析</span><span>趋势追踪</span><span class="tag-green">中文</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="stars">⭐ 4.8k+ Stars</div>
+      <h3><a href="https://github.com/Thysrael/Horizon" target="_blank">Horizon</a></h3>
+      <p>你正在使用的 AI 新闻雷达。多源采集 → AI 评分 → 去重合并 → 生成中英双语日报。支持 HackerNews、Reddit、RSS、GitHub 等源。</p>
+      <div class="tags">
+        <span>当前使用</span><span class="tag-green">中英双语</span><span>GitHub Pages</span><span>Webhook</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="stars">⭐ 较新</div>
+      <h3><a href="https://github.com/jx-177/finance-inform" target="_blank">Finance-Inform</a></h3>
+      <p>财经资讯智能摘要助手。专为券商分析师、基金经理设计。自动聚合主流财经媒体 RSS，调用 DeepSeek 生成智能摘要。</p>
+      <div class="tags">
+        <span>财经</span><span class="tag-green">DeepSeek</span><span>RSS聚合</span><span class="tag-yellow">股市</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="stars">⭐ 较新</div>
+      <h3><a href="https://github.com/ArvinLovegood/go-stock" target="_blank">go-stock</a></h3>
+      <p>AI 赋能股票分析工具。股票行情获取、AI 热点资讯分析、AI 资金/财务分析、涨跌报警推送。支持 A 股、港股、美股。</p>
+      <div class="tags">
+        <span>股票</span><span class="tag-yellow">A股</span><span>港股</span><span>美股</span><span class="tag-green">AI分析</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="stars">⭐ 较新</div>
+      <h3><a href="https://github.com/DGLLD/Global-Financial-News-Access" target="_blank">Global-Financial-News-Access</a></h3>
+      <p>全球实时新闻聚合平台。集多源新闻采集、智能分析与用户交互于一体的综合性新闻服务系统，覆盖全球金融市场。</p>
+      <div class="tags">
+        <span>全球财经</span><span>实时新闻</span><span>智能分析</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    由 <a href="https://github.com/bat-man-101/Horizon" target="_blank">Horizon AI 新闻雷达</a> 驱动 ·
+    每天早上 10:00 自动生成日报 ·
+    <a href="https://github.com/bat-man-101" target="_blank">bat-man-101</a>
+  </div>
+</div>
+</body>
+</html>
