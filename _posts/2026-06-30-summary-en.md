@@ -5,81 +5,61 @@ date: 2026-06-30
 lang: en
 ---
 
-> From 156 items, 11 important content pieces were selected
+> From 170 items, 11 important content pieces were selected
 
 ---
 
-1. [vLLM v0.24.0 Adds MiniMax-M3, Boosts DeepSeek-V4](#item-1) ⭐️ 8.0/10
-2. [shot-scraper video records agent demos](#item-2) ⭐️ 8.0/10
-3. [OpenAI Launches GeneBench-Pro for Genomics AI](#item-3) ⭐️ 8.0/10
-4. [Core dump epidemiology: fixing an 18-year-old bug](#item-4) ⭐️ 8.0/10
-5. [Tesla Begins Testing Cybercab Without Steering Wheel in Austin](#item-5) ⭐️ 8.0/10
-6. [Arcturus' nano-infused copper could halve grid losses](#item-6) ⭐️ 8.0/10
-7. [Amazon Launches $1B FDE Org for AI Agent Deployment](#item-7) ⭐️ 8.0/10
-8. [Nasdaq Expands Market Data Distribution to Blockchain](#item-8) ⭐️ 7.0/10
-9. [AI could transform breast cancer detection and recurrence prediction](#item-9) ⭐️ 7.0/10
-10. [MIT Q&A Explores Agentic AI Today and Future](#item-10) ⭐️ 7.0/10
-11. [Chess Grandmaster Critiques AI Visionaries' Understanding](#item-11) ⭐️ 7.0/10
+1. [Claude Code Steganographically Marks User Requests](#item-1) ⭐️ 8.0/10
+2. [OpenAI Launches GeneBench-Pro for Genomics AI](#item-2) ⭐️ 8.0/10
+3. [OpenAI Fixes 18-Year-Old Bug via Core Dump Epidemiology](#item-3) ⭐️ 8.0/10
+4. [Amazon launches $1B org for custom AI agent deployment](#item-4) ⭐️ 8.0/10
+5. [S. Korea chip giants pledge $550B+ to ease RAMageddon](#item-5) ⭐️ 8.0/10
+6. [Arena AI Leaderboard Reaches $100M Valuation](#item-6) ⭐️ 8.0/10
+7. [Hierarchical AI Maps Long-Range DNA Signals in RNA Splicing](#item-7) ⭐️ 8.0/10
+8. [shot-scraper video: Record agent demos with Playwright](#item-8) ⭐️ 7.0/10
+9. [New York Life Launches First Tokenized Fund with Centrifuge](#item-9) ⭐️ 7.0/10
+10. [MIT Q&A: Defining Agentic AI Today and Its Future](#item-10) ⭐️ 7.0/10
+11. [Chess Grandmaster Critiques AI Visionaries](#item-11) ⭐️ 7.0/10
 
 ---
 
 <a id="item-1"></a>
-## [vLLM v0.24.0 Adds MiniMax-M3, Boosts DeepSeek-V4](https://github.com/vllm-project/vllm/releases/tag/v0.24.0) ⭐️ 8.0/10
+## [Claude Code Steganographically Marks User Requests](https://thereallo.dev/blog/claude-code-prompt-steganography) ⭐️ 8.0/10
 
-vLLM v0.24.0 introduces support for the MiniMax-M3 model and delivers major performance optimizations for DeepSeek-V4, including a FlashInfer sparse index cache and prefill chunk-planning optimization. The release also expands Model Runner V2 to support quantized models by default and adds a new streaming parser engine. This release significantly expands vLLM's model ecosystem by supporting cutting-edge models like MiniMax-M3 and DeepSeek-V4, which are critical for coding, agentic tasks, and long-context reasoning. The performance optimizations lower inference latency and cost, benefiting the entire AI/ML community that relies on vLLM for production deployment. The release includes 571 commits from 256 contributors, with 77 new contributors. Key technical additions include MXFP4 support for MiniMax-M3, a cluster-cooperative topK kernel for DeepSeek-V4, and the integration of DeepEP v2 for expert parallelism.
+Anthropic's Claude Code tool embeds hidden steganographic markers in system prompts sent with user requests, based on the API base URL and timezone. This practice was discovered by a developer inspecting the tool for privacy concerns. This raises significant privacy and transparency concerns, as users are not informed about the hidden markers, which could be used to track or identify requests. It also damages trust in Anthropic and highlights the need for open-source alternatives like Codex CLI. The markers are steganographically hidden in the system prompt, making small variations imperceptible to users and possibly the model, but detectable by Anthropic. The logic is XOR-obfuscated with key 91 to avoid detection in plain strings, and release notes for version 2.1.91 made no mention of this change.
 
-github · khluu · Jun 29, 19:41
+hackernews · kirushik · Jun 30, 15:44 · [Discussion](https://news.ycombinator.com/item?id=48734373)
 
-**Background**: vLLM is an open-source, high-throughput inference engine for large language models (LLMs) that uses PagedAttention for efficient memory management. MiniMax-M3 is a frontier open-weight model with 1M context and native multimodality, while DeepSeek-V4 is a massive MoE model with up to 1.6T parameters. This release continues vLLM's rapid iteration to support the latest and largest models.
+**Background**: Steganography is the practice of hiding data within other data to conceal its existence. In AI tools, system prompts are instructions given to the model to guide its behavior. Anthropic's Claude Code is a command-line tool for coding assistance, and this discovery reveals that it embeds hidden identifiers in those prompts, likely to detect unauthorized resale or distillation attempts.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.minimax.io/models/text/m3">MiniMax M3 - Coding & Agentic Frontier, 1M Context, Multimodal | MiniMax</a></li>
-<li><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro">deepseek-ai/DeepSeek-V4-Pro · Hugging Face</a></li>
+<li><a href="https://thereallo.dev/blog/claude-code-prompt-steganography">Claude Code Is Steganographically Marking Requests</a></li>
+<li><a href="https://www.reddit.com/r/ClaudeCode/">r/ClaudeCode</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#vLLM`, `#LLM inference`, `#DeepSeek-V4`, `#MiniMax-M3`, `#performance optimization`
+**Discussion**: The community is divided: some criticize the sloppy implementation and lack of transparency, while others argue that such security measures are necessary and that steganography is not security by obscurity. Many express distrust toward Anthropic and advocate for open-source alternatives like Codex CLI.
+
+**Tags**: `#AI`, `#privacy`, `#steganography`, `#Anthropic`, `#security`
 
 ---
 
 <a id="item-2"></a>
-## [shot-scraper video records agent demos](https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything) ⭐️ 8.0/10
-
-Simon Willison released shot-scraper 1.10 with a new 'shot-scraper video' command that accepts a storyboard.yml file and uses Playwright to record a video of a web application routine. An example video demonstrates creating new tables in Datasette from pasted CSV/TSV/JSON data. This tool enables coding agents to produce visual proof of their work, addressing a critical need for verifying agent-generated code. It bridges the gap between automated agents and human review by providing concrete video demos. The storyboard.yml file defines the routine, including server setup, URL, viewport, cursor visibility, wait conditions, JavaScript injection, and a sequence of scenes with actions like clicks and pauses. The command supports --auth for authentication cookies and --mp4 output format.
-
-rss · Simon Willison · Jun 30, 16:54
-
-**Background**: shot-scraper is a command-line utility for taking automated screenshots of websites, built on Playwright. Playwright is a Microsoft-developed framework for cross-browser web automation and testing. The new video command extends shot-scraper's capabilities from static screenshots to dynamic video recordings.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://simonwillison.net/2026/Jun/30/shot-scraper-video/">Have your agent record video demos of its work with shot ...</a></li>
-<li><a href="https://github.com/simonw/shot-scraper">GitHub - simonw/shot-scraper: A command-line utility for ... Simon Willison’s Weblog - vuink.com shot-scraper · PyPI shot-scraper - Datasette shot-scraper/docs/installation.md at main · simonw/shot-scraper Simon Willison on shot-scraper</a></li>
-<li><a href="https://playwright.dev/">Fast and reliable end-to-end testing for modern web apps ...</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#developer-tools`, `#testing`, `#AI-agents`, `#playwright`, `#video-recording`
-
----
-
-<a id="item-3"></a>
 ## [OpenAI Launches GeneBench-Pro for Genomics AI](https://openai.com/index/introducing-genebench-pro) ⭐️ 8.0/10
 
-OpenAI has introduced GeneBench-Pro, an expanded benchmark for evaluating AI agents on complex, multi-stage scientific analyses in genomics, quantitative biology, and translational biomedicine. This benchmark addresses the need for realistic evaluation of AI in life sciences, potentially accelerating AI-driven discoveries in genomics and personalized medicine. GeneBench-Pro comprises harder problems across a wider breadth of domains than its predecessor, GeneBench, and is designed to capture the complexity of real-world computational life science problems.
+OpenAI released GeneBench-Pro on Tuesday, a benchmark designed to test AI models' judgment in computational biology research using complex, real-world datasets. This benchmark addresses the need for evaluating AI on multi-stage scientific workflows, potentially accelerating AI-driven discoveries in genomics and personalized medicine. GeneBench-Pro focuses on cascaded problems where upstream decisions affect downstream analyses, mimicking realistic research workflows. The highest score on the earlier GeneBench is 0.332 by GPT-5.5 Pro.
 
 rss · OpenAI Blog · Jun 30, 00:00
 
-**Background**: AI benchmarks are standardized tests that measure the performance of AI models on specific tasks. GeneBench-Pro focuses on multi-stage statistical reasoning in genomics, requiring AI agents to perform realistic analyses similar to those done by computational biologists.
+**Background**: Existing biology benchmarks often measure knowledge retrieval or single-step tasks, but real scientific research involves multi-stage inference. GeneBench-Pro aims to fill this gap by testing AI's ability to make judgment calls across interconnected analysis steps.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://openai.com/index/introducing-genebench-pro/">Introducing GeneBench-Pro - OpenAI</a></li>
-<li><a href="https://www.biorxiv.org/content/10.64898/2026.06.29.735386v1">GeneBench-Pro: Evaluating Multistage Statistical Reasoning ...</a></li>
-<li><a href="https://cdn.openai.com/pdf/21938268-21af-442f-af93-3b2249afb241/genebench-pro.pdf">GeneBench-Pro:EvaluatingMultistageStatisticalReasoning ...</a></li>
+<li><a href="https://www.investing.com/news/stock-market-news/openai-introduces-genebenchpro-to-test-ai-research-judgment-93CH-4768434">OpenAI introduces GeneBench-Pro to test AI research judgment By Investing.com</a></li>
+<li><a href="https://cdn.openai.com/pdf/6dc7175d-d9e7-4b8d-96b8-48fe5798cd5b/oai_genebench_benchmark.pdf">GeneBench: Assessing AI Agents for Multi-Stage Inference ...</a></li>
+<li><a href="https://llm-stats.com/benchmarks/genebench">GeneBench Benchmark Leaderboard</a></li>
 
 </ul>
 </details>
@@ -88,157 +68,168 @@ rss · OpenAI Blog · Jun 30, 00:00
 
 ---
 
-<a id="item-4"></a>
-## [Core dump epidemiology: fixing an 18-year-old bug](https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug) ⭐️ 8.0/10
+<a id="item-3"></a>
+## [OpenAI Fixes 18-Year-Old Bug via Core Dump Epidemiology](https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug) ⭐️ 8.0/10
 
-OpenAI engineers published a white paper detailing their 'core dump epidemiology' methodology, which uses large-scale analysis of core dumps to debug rare infrastructure crashes. This approach uncovered both a hardware fault and an 18-year-old software bug in their AI infrastructure. This novel application of core dump analysis at scale demonstrates a powerful technique for improving reliability in complex distributed systems. The findings highlight how long-standing bugs and hardware faults can persist undetected, and the methodology can be adopted by other organizations to enhance their own infrastructure debugging. The technique is called 'core dump epidemiology' because it treats crash data like disease outbreaks, analyzing patterns across many machines. The 18-year-old bug was in a widely used open-source library, and the hardware fault involved a subtle memory corruption issue.
+OpenAI engineers applied large-scale core dump analysis, termed 'core dump epidemiology,' to diagnose rare infrastructure crashes, uncovering both a hardware fault and an 18-year-old software bug. This demonstrates a powerful methodology for debugging elusive production issues in large-scale systems, potentially improving reliability practices across the industry. The bug had persisted for 18 years, and the analysis involved aggregating and correlating thousands of core dumps to identify common patterns, combining hardware and software debugging.
 
 rss · OpenAI Blog · Jun 30, 00:00
 
-**Background**: A core dump is a file containing a snapshot of a process's memory at the time of a crash, typically generated by the Linux kernel when a program terminates abnormally (e.g., due to a segmentation fault). Analyzing core dumps helps developers understand the root cause of crashes. However, at large scale, manually inspecting individual core dumps is impractical; OpenAI's approach aggregates and correlates crash data across thousands of machines to identify common patterns.
+**Background**: A core dump is a snapshot of a program's memory at the time of a crash, used for post-mortem debugging. 'Core dump epidemiology' refers to analyzing many such dumps statistically to find root causes, akin to how epidemiologists study disease outbreaks.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.siliconreport.com/openai-details-core-dump-epidemiology-for-infrastructure-debugging-8b6d27b1">OpenAI Details 'Core Dump Epidemiology' for Infrastructure ...</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Core_dump">Core dump - Wikipedia</a></li>
+<li><a href="https://sergioprado.blog/linux-core-dump-analysis/">Linux core dump analysis - sergioprado.blog</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#debugging`, `#infrastructure`, `#core dump`, `#reliability`, `#OpenAI`
+**Tags**: `#debugging`, `#infrastructure`, `#reliability`, `#systems`
+
+---
+
+<a id="item-4"></a>
+## [Amazon launches $1B org for custom AI agent deployment](https://techcrunch.com/2026/06/30/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/) ⭐️ 8.0/10
+
+Amazon announced a new $1 billion organization focused on embedding engineers within customer companies to deploy purpose-built AI agents, following similar moves by OpenAI and Anthropic. This signals a major industry trend where leading AI companies invest heavily in hands-on customer support for agent deployment, potentially accelerating enterprise adoption of AI agents and shifting the competitive landscape. The new team will focus on fast deployments and enabling customer self-sufficiency, with engineers embedded directly within companies to deploy purpose-built agents tailored to specific business needs.
+
+rss · 36氪 - 科技 · Jun 30, 15:00
+
+**Background**: Purpose-built agents are AI systems designed for specific tasks, such as phishing detection or SOC triage, unlike general-purpose chatbots. Deploying them in production requires careful architecture, infrastructure, and monitoring. Amazon's move follows similar investments by OpenAI and Anthropic, reflecting a growing emphasis on practical, real-world AI deployment.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://machinelearningmastery.com/deploying-ai-agents-to-production-architecture-infrastructure-and-implementation-roadmap/">Deploying AI Agents to Production: Architecture, Infrastructure, and Implementation Roadmap - MachineLearningMastery.com</a></li>
+<li><a href="https://www.scworld.com/perspective/purpose-built-ai-agents-will-replace-general-purpose-promises">Purpose-built AI agents will replace general-purpose promises | SC Media</a></li>
+<li><a href="https://www.ibm.com/think/topics/ai-agent-deployment">How to Deploy AI Agents Across the Enterprise | IBM</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI`, `#Amazon`, `#enterprise`, `#agents`, `#investment`
 
 ---
 
 <a id="item-5"></a>
-## [Tesla Begins Testing Cybercab Without Steering Wheel in Austin](https://techcrunch.com/2026/06/30/tesla-starts-testing-cybercab-without-pedals-or-a-steering-wheel-in-austin/) ⭐️ 8.0/10
+## [S. Korea chip giants pledge $550B+ to ease RAMageddon](https://techcrunch.com/2026/06/29/south-korean-tech-giants-commit-over-550b-to-ease-ramageddon/) ⭐️ 8.0/10
 
-Tesla has started testing its Cybercab, a fully autonomous two-passenger vehicle without pedals or a steering wheel, on public roads in Austin, Texas. This marks the first real-world deployment of the vehicle since production began in February 2026. This testing is a critical step toward launching Tesla's long-promised robotaxi network, which could disrupt the ride-hailing industry. Success would validate Tesla's full self-driving technology and pave the way for a commercial autonomous fleet. The Cybercab is designed for two passengers and relies solely on Tesla's Full Self-Driving (FSD) software, with no manual controls. Tesla launched its robotaxi service in a limited capacity in Austin in June 2025, and the Cybercab testing aims to expand that service.
+South Korea's top memory chip makers, including Samsung and SK Hynix, have pledged over $550 billion to build new fabrication facilities to address the global memory shortage known as 'RAMageddon' and boost AI infrastructure. This massive investment signals a strategic shift to prioritize AI-driven memory demand, potentially alleviating the severe shortage that has impacted consumer electronics and enterprise PCs since 2025, and solidifying South Korea's role as an AI powerhouse. The shortage, driven by reallocation of manufacturing capacity to high-margin AI data center products, is expected to last until at least 2027 according to Micron's CEO, with supply gradually improving by 2028.
 
-rss · 36氪 - 科技 · Jun 30, 15:32
+rss · 36氪 - 科技 · Jun 29, 18:07
 
-**Background**: The Tesla Cybercab was first unveiled as a concept in October 2024, with 20 prototypes giving short rides at the event. It is a battery-electric vehicle intended to operate as part of the Tesla Robotaxi ride-hailing service. Tesla has faced skepticism over its autonomous driving promises, but this testing represents a tangible step forward.
+**Background**: The 'RAMageddon' refers to a global memory supply shortage that began in 2025, primarily affecting DRAM and NAND flash memory. Unlike the earlier pandemic-era chip shortage, this one stems from a structural shift of fab capacity toward AI infrastructure, leaving consumer and enterprise markets undersupplied.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Cybercab">Cybercab</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Tesla_Robotaxi">Tesla Robotaxi - Wikipedia</a></li>
-<li><a href="https://www.caranddriver.com/news/a71590701/tesla-cybercab-specs-epa-documents-revealed/">We Have New Tesla Cybercab Specs Before You're Supposed to See Them Thanks to EPA Documents</a></li>
+<li><a href="https://en.wikipedia.org/wiki/RAMmageddon">RAMmageddon</a></li>
+<li><a href="https://www.cnet.com/tech/computing/tech-companies-are-freaking-out-about-ramageddon/">Tech Companies Are Freaking Out About RAMageddon - CNET</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#Tesla`, `#autonomous vehicles`, `#robotaxi`, `#self-driving`
+**Tags**: `#semiconductors`, `#memory`, `#AI infrastructure`, `#investment`, `#South Korea`
 
 ---
 
 <a id="item-6"></a>
-## [Arcturus' nano-infused copper could halve grid losses](https://techcrunch.com/2026/06/30/arcturus-could-halve-the-grids-electrical-losses-using-its-nano-infused-copper/) ⭐️ 8.0/10
+## [Arena AI Leaderboard Reaches $100M Valuation](https://techcrunch.com/2026/06/29/arena-the-ai-leaderboard-everyone-uses-is-now-a-100m-business/) ⭐️ 8.0/10
 
-Stealth startup Arcturus has developed a laser-based process to infuse carbon nanomaterials into copper, achieving a dramatic improvement in electrical conductivity that could reduce grid transmission losses by up to 50%. If scaled, this technology could significantly improve energy efficiency across the global electrical grid, reducing wasted electricity and lowering carbon emissions without requiring new power plants. Argonne National Laboratory has measured roughly 30% higher electrical conductivity in nanocarbon-infused copper thin films, and Arcturus claims its process can achieve even greater gains in bulk conductors.
+Arena, the popular crowdsourced AI leaderboard, has reached a $100 million valuation just eight months after launching its commercial service in September 2025. This milestone signals strong market validation for community-driven AI benchmarking and highlights the growing commercial value of model evaluation platforms. Arena's leaderboard is generated from over 10 million user evaluations, and its commercial service reached an annualized run-rate revenue that supports the $100M valuation.
 
-rss · 36氪 - 科技 · Jun 30, 15:01
+rss · 36氪 - 科技 · Jun 29, 17:39
 
-**Background**: Electrical grids lose about 5-10% of transmitted energy as heat due to resistance in copper and aluminum wires. Improving conductor conductivity reduces these losses, but traditional alloying approaches have reached fundamental limits. Nanocarbon infusion, such as adding graphene or carbon nanotubes, offers a path to surpass these limits by creating more efficient electron pathways.
+**Background**: Arena is best known for its crowdsourced AI model performance leaderboard, where users can chat with, compare, and vote for different AI models. The platform has become a widely referenced benchmark in the AI community. Its commercial service offers additional features for businesses.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://techcrunch.com/2026/06/30/arcturus-could-halve-the-grids-electrical-losses-using-its-nano-infused-copper/">Arcturus could halve the grid’s electrical losses using its nano-infused copper | TechCrunch</a></li>
-<li><a href="https://www.anl.gov/amd/nanocarboninfused-metallic-conductors">Nanocarbon-infused Metallic Conductors | Argonne National Laboratory</a></li>
+<li><a href="https://techcrunch.com/2026/06/29/arena-the-ai-leaderboard-everyone-uses-is-now-a-100m-business/">Arena, the AI leaderboard everyone uses, is now a $100M business | TechCrunch</a></li>
+<li><a href="https://arena.ai/leaderboard">Arena Leaderboard | Compare & Benchmark the Best Frontier AI Models</a></li>
+<li><a href="https://huggingface.co/spaces/lmarena-ai/chatbot-arena">Chatbot Arena - a Hugging Face Space by lmarena-ai</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#materials science`, `#energy`, `#nanotechnology`, `#grid infrastructure`
+**Tags**: `#AI`, `#leaderboard`, `#startup`, `#valuation`, `#business`
 
 ---
 
 <a id="item-7"></a>
-## [Amazon Launches $1B FDE Org for AI Agent Deployment](https://techcrunch.com/2026/06/30/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/) ⭐️ 8.0/10
+## [Hierarchical AI Maps Long-Range DNA Signals in RNA Splicing](https://news.google.com/rss/articles/CBMiWEFVX3lxTE55aXEzVDdCTXhTdW5IOGdsUlB0S3gtZ3VSTTdDbE1qeDBJS2I1bW9RejdQYi1OM19pb09GZjY5SGwwRnV0OXZCZXFLOXg4QnBBOTRRZXJnaGM?oc=5) ⭐️ 8.0/10
 
-Amazon Web Services (AWS) announced a new $1 billion internal organization for forward-deployed engineers (FDEs) who will embed with customers to deploy purpose-built AI agents, following similar moves by OpenAI and Anthropic. This investment signals a major industry shift toward specialized, customer-specific AI agent deployment rather than one-size-fits-all models, and it could accelerate enterprise adoption of AI by ensuring faster, more tailored implementations. The FDE model, pioneered by Palantir, involves engineers working on-site with clients to customize and deploy solutions; Amazon's new org will focus on rapid engagements and enabling customer self-sufficiency with purpose-built agents.
+Researchers have developed a hierarchical artificial intelligence model that maps long-range DNA signals controlling RNA splicing, as reported by EurekAlert!. This breakthrough could significantly advance our understanding of gene regulation, potentially leading to new treatments for genetic diseases caused by splicing errors. The hierarchical AI model captures both local and distant genomic interactions, improving prediction of splice sites compared to traditional methods.
 
-rss · 36氪 - 科技 · Jun 30, 15:00
+google_news · EurekAlert! · Jun 30, 13:18
 
-**Background**: Forward-deployed engineers (FDEs) are software engineers who work directly with client organizations to develop, customize, and deploy technical solutions in operational environments. Purpose-built AI agents are specialized autonomous systems designed for specific tasks, contrasting with general-purpose AI models. Amazon's move follows a trend where AI companies like OpenAI and Anthropic have also created FDE teams to help enterprises deploy AI effectively.
+**Background**: RNA splicing is a process where non-coding regions (introns) are removed from pre-mRNA, and coding regions (exons) are joined together. Long-range DNA signals, often located far from the splice site, can influence this process. Traditional models struggle to capture these distant effects due to the complexity of genomic interactions.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://techcrunch.com/2026/06/30/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/">Amazon launches new $1 billion FDE org, following OpenAI and Anthropic | TechCrunch</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Forward_Deployed_Engineer">Forward Deployed Engineer - Wikipedia</a></li>
-<li><a href="https://theriseofthedigitalworkforce.cio.com/drive-ai-value-build-trust-lead-change/why-purpose-built-agents-are-the-future-of-ai-at-work/">Why purpose-built agents are the future of AI at work</a></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11601704/">Leveraging hierarchical structures for genetic block interaction studies using the hierarchical transformer - PMC</a></li>
+<li><a href="https://openreview.net/forum?id=6pN2KNCspk">dnaHNet: A Scalable and Hierarchical Foundation Model for Genomic Sequence Learning</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI`, `#Amazon`, `#AI Agents`, `#Enterprise`, `#Investment`
+**Tags**: `#AI`, `#genomics`, `#RNA splicing`, `#machine learning`, `#bioinformatics`
 
 ---
 
 <a id="item-8"></a>
-## [Nasdaq Expands Market Data Distribution to Blockchain](https://www.coindesk.com/markets/2026/06/30/nasdaq-expands-distribution-of-its-market-data-into-blockchain-infrastructure) ⭐️ 7.0/10
+## [shot-scraper video: Record agent demos with Playwright](https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything) ⭐️ 7.0/10
 
-Nasdaq announced it is expanding distribution of its market data into blockchain infrastructure, integrating traditional financial data feeds with decentralized technology. This move signals growing mainstream adoption of blockchain in core financial infrastructure, potentially increasing transparency, efficiency, and accessibility of market data for a wider range of participants. The initiative leverages Nasdaq's existing market data feeds, such as Nasdaq Basic and Nasdaq Last Sale, and distributes them via blockchain networks, though specific technical details and timelines have not been disclosed.
+shot-scraper 1.10 introduces a new `shot-scraper video` command that accepts a storyboard.yml file and uses Playwright to record a video of a web application routine, enabling coding agents to produce visual proof of their work. This tool addresses the need for AI agents to provide demonstrable proof of their code changes, which is crucial for trust and verification in AI-assisted development workflows. The command supports authentication via a JSON cookie file, custom viewport size, cursor visibility, and JavaScript injection to mock clipboard APIs. The output can be in WebM or MP4 format.
 
-rss · CoinDesk · Jun 30, 13:00
+rss · Simon Willison · Jun 30, 16:54
 
-**Background**: Blockchain technology is increasingly being adopted by financial institutions for its potential to provide immutable, transparent, and real-time data sharing. Nasdaq's move aligns with a broader trend of banks and exchanges exploring blockchain for market data distribution, tokenization, and settlement.
+**Background**: shot-scraper is a tool for taking automated screenshots of web pages using Playwright. The new video command extends this to record full screen recordings of user interactions, making it easier for developers and AI agents to create reproducible demos.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://www.nasdaq.com/solutions/nasdaq-market-data-feeds">Nasdaq Market Data Feeds | Real-time Global Stock Data</a></li>
-<li><a href="https://www.weforum.org/stories/2026/01/new-foundation-global-finance-dialogue-between-banks-and-blockchains/">Global finance’s new foundation: banks and blockchains</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#blockchain`, `#finance`, `#Nasdaq`, `#market data`, `#fintech`
+**Tags**: `#developer-tools`, `#testing`, `#AI-agents`, `#playwright`, `#automation`
 
 ---
 
 <a id="item-9"></a>
-## [AI could transform breast cancer detection and recurrence prediction](https://news.google.com/rss/articles/CBMiXEFVX3lxTFBPbkVuSFFDbFF2YU9rUHhQZ09qZFg0YzdPYllxbXIxWXdkM3diaGZKNllMVEhMdC1ucWlacDNsdmcybzFScThUMXEtMzZWQ29mYmhHRkhjSW9MQU1p?oc=5) ⭐️ 7.0/10
+## [New York Life Launches First Tokenized Fund with Centrifuge](https://www.coindesk.com/business/2026/06/29/new-york-life-makes-tokenization-debut-with-onchain-high-yield-bond-fund-with-centrifuge) ⭐️ 7.0/10
 
-A recent article highlights that artificial intelligence shows promise in improving breast cancer detection and predicting recurrence, potentially transforming clinical workflows. This advancement could lead to earlier and more accurate diagnoses, reducing false positives and improving patient outcomes, while also enabling personalized recurrence monitoring. The article does not specify particular AI models or datasets, but suggests that AI tools are being developed to analyze mammograms and other imaging data for signs of cancer and recurrence risk.
+New York Life's asset management arm, managing $800 billion, has launched its first tokenized fund via Centrifuge, offering on-chain exposure to high-yield bonds. This marks a major institutional validation of blockchain tokenization in asset management, potentially paving the way for other traditional finance giants to adopt similar on-chain strategies. The fund is built on Centrifuge, a DeFi protocol for tokenizing real-world assets, and represents New York Life's first step into on-chain asset management.
 
-google_news · EurekAlert! · Jun 30, 16:33
+rss · CoinDesk · Jun 30, 11:20
 
-**Background**: Breast cancer is one of the most common cancers worldwide, and early detection is critical for successful treatment. Traditional screening methods like mammography have limitations, including false positives and missed cancers. AI, particularly deep learning, has shown potential in medical imaging by identifying patterns that may be invisible to the human eye.
+**Background**: Tokenization converts traditional fund shares into blockchain-based tokens, enabling fractional ownership, faster settlement, and broader accessibility. Centrifuge is a leading protocol that connects real-world assets to decentralized finance (DeFi).
 
-**Tags**: `#AI`, `#healthcare`, `#breast cancer`, `#machine learning`
+<details><summary>References</summary>
+<ul>
+<li><a href="https://grokipedia.com/page/Tokenized_Hedge_Funds">Tokenized Hedge Funds</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#tokenization`, `#blockchain`, `#asset management`, `#institutional adoption`, `#DeFi`
 
 ---
 
 <a id="item-10"></a>
-## [MIT Q&A Explores Agentic AI Today and Future](https://news.google.com/rss/articles/CBMidkFVX3lxTE5RM1ZBZHlsbkR4dlJscXJLMkhFUzN1S280eXBsV1hCXzdCOTBraWZ1cUt1SUhqXzBUbThPSnBQdWpKTTI2aXdxQTdHbk9SM1d2NGluUXZ0cWktNzdWeS1xZHRQcVhDcWs5M2R4YXdUTGVvMThCRXc?oc=5) ⭐️ 7.0/10
+## [MIT Q&A: Defining Agentic AI Today and Its Future](https://news.google.com/rss/articles/CBMidkFVX3lxTE5RM1ZBZHlsbkR4dlJscXJLMkhFUzN1S280eXBsV1hCXzdCOTBraWZ1cUt1SUhqXzBUbThPSnBQdWpKTTI2aXdxQTdHbk9SM1d2NGluUXZ0cWktNzdWeS1xZHRQcVhDcWs5M2R4YXdUTGVvMThCRXc?oc=5) ⭐️ 7.0/10
 
-MIT News published a Q&A article examining the current state of agentic AI and its desired future, featuring expert insights on the topic. This article provides authoritative perspectives on agentic AI, a rapidly evolving field that represents the next step beyond generative AI, with potential to transform industries through autonomous decision-making. Agentic AI systems are semi- or fully autonomous, capable of perceiving, reasoning, and acting on their own, unlike traditional generative AI that only produces content in response to prompts.
+MIT News published a Q&A article exploring the current definition, capabilities, and desired future of agentic AI systems, featuring insights from researchers. This article helps clarify the often ambiguous term 'agentic AI' and sets a vision for its development, which is crucial as AI systems become more autonomous and integrated into daily life. The Q&A format includes perspectives from MIT researchers on what agentic AI means today and what capabilities it should have in the future, such as goal-directed behavior and adaptability.
 
 google_news · MIT News · Jun 30, 15:30
 
-**Background**: Agentic AI, also known as AI agents or compound AI systems, refers to AI that can pursue goals and take actions with varying degrees of autonomy. This contrasts with generative AI, which focuses on creating content like text or images. The MIT Q&A likely discusses definitions, current capabilities, limitations, and aspirations for future development.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/AI_agent">AI agent - Wikipedia</a></li>
-<li><a href="https://mitsloan.mit.edu/ideas-made-to-matter/agentic-ai-explained">Agentic AI, explained - MIT Sloan</a></li>
-<li><a href="https://www.ibm.com/think/topics/agentic-ai-vs-generative-ai">Agentic AI vs. generative AI - IBM</a></li>
-
-</ul>
-</details>
+**Background**: Agentic AI refers to AI systems that can act autonomously to achieve goals, often involving planning, decision-making, and interaction with environments. The term has gained prominence as AI advances beyond simple pattern recognition to more proactive roles.
 
 **Tags**: `#agentic AI`, `#AI research`, `#MIT`, `#future of AI`
 
 ---
 
 <a id="item-11"></a>
-## [Chess Grandmaster Critiques AI Visionaries' Understanding](https://news.google.com/rss/articles/CBMikwFBVV95cUxNVmdsYmR1c0hxSGxxN2lLV1RmaEJQSUkxOS1jSW96LWF3NHU0RVVydEhGam1fd285Y2R4ajRVWHZDOUc4LWpVcnpzTzM0NldMdFlfZ0ZPNTl2Z3lRVGhuNm1XQ1gyM3J3bVFVMlpVa0ljN2EzU1BfeWFGNE5xcHJCWGkta0N4OFFta0dhQ2JtX2xpUE0?oc=5) ⭐️ 7.0/10
+## [Chess Grandmaster Critiques AI Visionaries](https://news.google.com/rss/articles/CBMikwFBVV95cUxNVmdsYmR1c0hxSGxxN2lLV1RmaEJQSUkxOS1jSW96LWF3NHU0RVVydEhGam1fd285Y2R4ajRVWHZDOUc4LWpVcnpzTzM0NldMdFlfZ0ZPNTl2Z3lRVGhuNm1XQ1gyM3J3bVFVMlpVa0ljN2EzU1BfeWFGNE5xcHJCWGkta0N4OFFta0dhQ2JtX2xpUE0?oc=5) ⭐️ 7.0/10
 
-A chess grandmaster published an opinion piece in The Washington Post arguing that AI visionaries misunderstand key aspects of human intelligence and decision-making. This perspective from a top chess player, who has deep experience with both human and AI opponents, challenges the prevailing narrative that AI will soon surpass all human cognitive abilities. The grandmaster likely draws on his own experience playing against AI chess engines to highlight differences in intuition, creativity, and strategic thinking that AI lacks.
+A chess grandmaster published an opinion piece in The Washington Post arguing that AI visionaries misunderstand the nature of intelligence and decision-making, drawing on lessons from chess. This perspective from a domain expert in a complex strategic game challenges the prevailing narrative of AI's capabilities, highlighting limitations that could influence AI research priorities and public understanding. The grandmaster likely contrasts human intuition and pattern recognition in chess with AI's brute-force calculation, suggesting that true intelligence involves more than optimization.
 
 google_news · The Washington Post · Jun 30, 17:02
 
-**Background**: Chess has long been a benchmark for AI progress, with engines like Deep Blue and AlphaZero defeating world champions. However, grandmasters often note that AI plays in a fundamentally different way from humans, focusing on brute-force calculation rather than human-like understanding.
+**Background**: Chess has long been a benchmark for AI, with programs like DeepBlue and AlphaZero surpassing human champions. However, grandmasters often emphasize the role of creativity and intuition in their play, which current AI lacks.
 
-**Tags**: `#AI`, `#chess`, `#opinion`, `#cognition`, `#human vs AI`
+**Tags**: `#AI`, `#chess`, `#opinion`, `#intelligence`
 
 ---

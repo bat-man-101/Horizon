@@ -5,81 +5,61 @@ date: 2026-06-30
 lang: zh
 ---
 
-> 从 156 条内容中筛选出 11 条重要资讯。
+> 从 170 条内容中筛选出 11 条重要资讯。
 
 ---
 
-1. [vLLM v0.24.0 支持 MiniMax-M3，优化 DeepSeek-V4](#item-1) ⭐️ 8.0/10
-2. [shot-scraper video 录制代理演示视频](#item-2) ⭐️ 8.0/10
-3. [OpenAI 推出基因组学 AI 基准 GeneBench-Pro](#item-3) ⭐️ 8.0/10
-4. [核心转储流行病学：修复一个 18 年的旧漏洞](#item-4) ⭐️ 8.0/10
-5. [特斯拉在奥斯汀开始测试无方向盘 Cybercab](#item-5) ⭐️ 8.0/10
-6. [Arcturus 纳米铜有望将电网损耗减半](#item-6) ⭐️ 8.0/10
-7. [亚马逊斥资 10 亿美元成立 FDE 组织，专注 AI 代理部署](#item-7) ⭐️ 8.0/10
-8. [纳斯达克将市场数据分发扩展至区块链](#item-8) ⭐️ 7.0/10
-9. [人工智能可改变乳腺癌检测与复发预测](#item-9) ⭐️ 7.0/10
-10. [MIT 问答探讨当前与未来的智能体 AI](#item-10) ⭐️ 7.0/10
-11. [国际象棋特级大师批评 AI 愿景者的理解](#item-11) ⭐️ 7.0/10
+1. [Claude Code 隐写标记用户请求](#item-1) ⭐️ 8.0/10
+2. [OpenAI 推出 GeneBench-Pro 基因组学 AI 基准](#item-2) ⭐️ 8.0/10
+3. [OpenAI 通过核心转储流行病学修复了 18 年之久的漏洞](#item-3) ⭐️ 8.0/10
+4. [亚马逊斥资 10 亿美元成立定制 AI 代理部署组织](#item-4) ⭐️ 8.0/10
+5. [韩国芯片巨头承诺超 5500 亿美元缓解内存危机](#item-5) ⭐️ 8.0/10
+6. [Arena AI 排行榜估值达 1 亿美元](#item-6) ⭐️ 8.0/10
+7. [分层 AI 绘制 RNA 剪接中的长程 DNA 信号](#item-7) ⭐️ 8.0/10
+8. [shot-scraper video：用 Playwright 录制智能体演示视频](#item-8) ⭐️ 7.0/10
+9. [纽约人寿通过 Centrifuge 推出首个代币化基金](#item-9) ⭐️ 7.0/10
+10. [MIT 问答：定义今天的智能体 AI 及其未来](#item-10) ⭐️ 7.0/10
+11. [国际象棋特级大师批评 AI 愿景家](#item-11) ⭐️ 7.0/10
 
 ---
 
 <a id="item-1"></a>
-## [vLLM v0.24.0 支持 MiniMax-M3，优化 DeepSeek-V4](https://github.com/vllm-project/vllm/releases/tag/v0.24.0) ⭐️ 8.0/10
+## [Claude Code 隐写标记用户请求](https://thereallo.dev/blog/claude-code-prompt-steganography) ⭐️ 8.0/10
 
-vLLM v0.24.0 新增了对 MiniMax-M3 模型的支持，并对 DeepSeek-V4 进行了重大性能优化，包括 FlashInfer 稀疏索引缓存和预填充分块规划优化。该版本还将 Model Runner V2 扩展为默认支持量化模型，并新增了流式解析引擎。 该版本通过支持 MiniMax-M3 和 DeepSeek-V4 等前沿模型，显著扩展了 vLLM 的模型生态系统，这些模型对编程、智能体任务和长上下文推理至关重要。性能优化降低了推理延迟和成本，惠及依赖 vLLM 进行生产部署的整个 AI/ML 社区。 该版本包含来自 256 位贡献者的 571 次提交，其中 77 位是新贡献者。关键技术新增包括 MiniMax-M3 的 MXFP4 支持、DeepSeek-V4 的集群协作 topK 内核，以及 DeepEP v2 的集成以支持专家并行。
+Anthropic 的 Claude Code 工具在随用户请求发送的系统提示中嵌入了隐藏的隐写标记，这些标记基于 API 基础 URL 和时区生成。这一做法是由一位开发者出于隐私考虑检查该工具时发现的。 这引发了重大的隐私和透明度担忧，因为用户未被告知这些隐藏标记的存在，这些标记可能被用于追踪或识别请求。这也损害了对 Anthropic 的信任，并凸显了对 Codex CLI 等开源替代方案的需求。 这些标记以隐写方式隐藏在系统提示中，产生用户甚至模型可能无法察觉的微小变化，但 Anthropic 可以检测到。该逻辑使用密钥 91 进行 XOR 混淆，以避免在纯字符串转储中被发现，且 2.1.91 版本的发布说明中未提及此更改。
 
-github · khluu · 6月29日 19:41
+hackernews · kirushik · 6月30日 15:44 · [社区讨论](https://news.ycombinator.com/item?id=48734373)
 
-**背景**: vLLM 是一个开源的高吞吐量大语言模型推理引擎，使用 PagedAttention 实现高效内存管理。MiniMax-M3 是一个具有 100 万上下文和原生多模态能力的前沿开放权重模型，而 DeepSeek-V4 是一个拥有高达 1.6 万亿参数的巨型 MoE 模型。此版本延续了 vLLM 快速迭代以支持最新最大模型的趋势。
+**背景**: 隐写术是一种将数据隐藏在其他数据中以掩盖其存在的做法。在 AI 工具中，系统提示是用于指导模型行为的指令。Anthropic 的 Claude Code 是一个用于编码辅助的命令行工具，这一发现揭示它会在这些提示中嵌入隐藏标识符，很可能是为了检测未经授权的转售或蒸馏尝试。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.minimax.io/models/text/m3">MiniMax M3 - Coding & Agentic Frontier, 1M Context, Multimodal | MiniMax</a></li>
-<li><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro">deepseek-ai/DeepSeek-V4-Pro · Hugging Face</a></li>
+<li><a href="https://thereallo.dev/blog/claude-code-prompt-steganography">Claude Code Is Steganographically Marking Requests</a></li>
+<li><a href="https://www.reddit.com/r/ClaudeCode/">r/ClaudeCode</a></li>
 
 </ul>
 </details>
 
-**标签**: `#vLLM`, `#LLM inference`, `#DeepSeek-V4`, `#MiniMax-M3`, `#performance optimization`
+**社区讨论**: 社区意见分歧：一些人批评其实现草率且缺乏透明度，而另一些人则认为此类安全措施是必要的，且隐写术并非通过隐匿实现安全。许多人表达了对 Anthropic 的不信任，并倡导使用 Codex CLI 等开源替代方案。
+
+**标签**: `#AI`, `#privacy`, `#steganography`, `#Anthropic`, `#security`
 
 ---
 
 <a id="item-2"></a>
-## [shot-scraper video 录制代理演示视频](https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything) ⭐️ 8.0/10
+## [OpenAI 推出 GeneBench-Pro 基因组学 AI 基准](https://openai.com/index/introducing-genebench-pro) ⭐️ 8.0/10
 
-Simon Willison 发布了 shot-scraper 1.10，新增了 'shot-scraper video' 命令，该命令接受 storyboard.yml 文件并使用 Playwright 录制 Web 应用程序操作的视频。示例视频演示了从粘贴的 CSV/TSV/JSON 数据在 Datasette 中创建新表。 该工具使编码代理能够生成其工作的视觉证据，解决了验证代理生成代码的关键需求。通过提供具体的视频演示，它弥合了自动化代理与人工审查之间的差距。 storyboard.yml 文件定义了操作流程，包括服务器设置、URL、视口、光标可见性、等待条件、JavaScript 注入以及一系列场景（包含点击和暂停等操作）。该命令支持 --auth 用于身份验证 cookie 和 --mp4 输出格式。
-
-rss · Simon Willison · 6月30日 16:54
-
-**背景**: shot-scraper 是一个基于 Playwright 的命令行工具，用于自动截取网站截图。Playwright 是微软开发的跨浏览器 Web 自动化和测试框架。新的 video 命令将 shot-scraper 的能力从静态截图扩展到动态视频录制。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://simonwillison.net/2026/Jun/30/shot-scraper-video/">Have your agent record video demos of its work with shot ...</a></li>
-<li><a href="https://github.com/simonw/shot-scraper">GitHub - simonw/shot-scraper: A command-line utility for ... Simon Willison’s Weblog - vuink.com shot-scraper · PyPI shot-scraper - Datasette shot-scraper/docs/installation.md at main · simonw/shot-scraper Simon Willison on shot-scraper</a></li>
-<li><a href="https://playwright.dev/">Fast and reliable end-to-end testing for modern web apps ...</a></li>
-
-</ul>
-</details>
-
-**标签**: `#developer-tools`, `#testing`, `#AI-agents`, `#playwright`, `#video-recording`
-
----
-
-<a id="item-3"></a>
-## [OpenAI 推出基因组学 AI 基准 GeneBench-Pro](https://openai.com/index/introducing-genebench-pro) ⭐️ 8.0/10
-
-OpenAI 推出了 GeneBench-Pro，这是一个扩展的基准测试，用于评估 AI 智能体在基因组学、定量生物学和转化生物医学中复杂多阶段科学分析的表现。 该基准测试满足了生命科学领域对 AI 进行真实评估的需求，可能加速基因组学和个性化医疗中由 AI 驱动的发现。 GeneBench-Pro 包含比其前身 GeneBench 更广泛领域中的更难问题，旨在捕捉真实世界计算生命科学问题的复杂性。
+OpenAI 于周二发布了 GeneBench-Pro，这是一个旨在使用复杂真实世界数据集测试 AI 模型在计算生物学研究中判断能力的基准。 该基准解决了在多阶段科学工作流中评估 AI 的需求，可能加速基因组学和个性化医疗中 AI 驱动的发现。 GeneBench-Pro 专注于级联问题，其中上游决策影响下游分析，模拟真实研究流程。早期 GeneBench 的最高得分为 GPT-5.5 Pro 的 0.332。
 
 rss · OpenAI Blog · 6月30日 00:00
 
-**背景**: AI 基准测试是衡量 AI 模型在特定任务上表现的标准测试。GeneBench-Pro 专注于基因组学中的多阶段统计推理，要求 AI 智能体执行类似于计算生物学家所做的真实分析。
+**背景**: 现有的生物学基准通常衡量知识检索或单步任务，但真实科学研究涉及多阶段推理。GeneBench-Pro 旨在通过测试 AI 在相互关联的分析步骤中做出判断的能力来填补这一空白。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://openai.com/index/introducing-genebench-pro/">Introducing GeneBench-Pro - OpenAI</a></li>
-<li><a href="https://www.biorxiv.org/content/10.64898/2026.06.29.735386v1">GeneBench-Pro: Evaluating Multistage Statistical Reasoning ...</a></li>
-<li><a href="https://cdn.openai.com/pdf/21938268-21af-442f-af93-3b2249afb241/genebench-pro.pdf">GeneBench-Pro:EvaluatingMultistageStatisticalReasoning ...</a></li>
+<li><a href="https://www.investing.com/news/stock-market-news/openai-introduces-genebenchpro-to-test-ai-research-judgment-93CH-4768434">OpenAI introduces GeneBench-Pro to test AI research judgment By Investing.com</a></li>
+<li><a href="https://cdn.openai.com/pdf/6dc7175d-d9e7-4b8d-96b8-48fe5798cd5b/oai_genebench_benchmark.pdf">GeneBench: Assessing AI Agents for Multi-Stage Inference ...</a></li>
+<li><a href="https://llm-stats.com/benchmarks/genebench">GeneBench Benchmark Leaderboard</a></li>
 
 </ul>
 </details>
@@ -88,157 +68,168 @@ rss · OpenAI Blog · 6月30日 00:00
 
 ---
 
-<a id="item-4"></a>
-## [核心转储流行病学：修复一个 18 年的旧漏洞](https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug) ⭐️ 8.0/10
+<a id="item-3"></a>
+## [OpenAI 通过核心转储流行病学修复了 18 年之久的漏洞](https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug) ⭐️ 8.0/10
 
-OpenAI 工程师发布了一份白皮书，详细介绍了他们的“核心转储流行病学”方法，该方法通过大规模分析核心转储来调试罕见的基础设施崩溃。这种方法在他们的 AI 基础设施中发现了一个硬件故障和一个存在 18 年的软件漏洞。 这种大规模核心转储分析的新颖应用展示了一种提高复杂分布式系统可靠性的强大技术。这些发现突显了长期存在的漏洞和硬件故障如何未被发现，该方法可被其他组织采用以增强其基础设施调试能力。 该技术被称为“核心转储流行病学”，因为它将崩溃数据视为疾病爆发，分析跨多台机器的模式。这个存在 18 年的漏洞位于一个广泛使用的开源库中，而硬件故障涉及一个微妙的内存损坏问题。
+OpenAI 工程师应用大规模核心转储分析（称为“核心转储流行病学”）来诊断罕见的基础设施崩溃，发现了一个硬件故障和一个存在 18 年之久的软件漏洞。 这展示了一种强大的方法论，用于调试大规模系统中难以捉摸的生产问题，有可能改善整个行业的可靠性实践。 该漏洞持续了 18 年，分析涉及聚合和关联数千个核心转储以识别常见模式，结合了硬件和软件调试。
 
 rss · OpenAI Blog · 6月30日 00:00
 
-**背景**: 核心转储是一个文件，包含进程崩溃时内存的快照，通常由 Linux 内核在程序异常终止（例如由于段错误）时生成。分析核心转储有助于开发人员了解崩溃的根本原因。然而，在大规模系统中，手动检查单个核心转储是不切实际的；OpenAI 的方法聚合和关联数千台机器上的崩溃数据，以识别常见模式。
+**背景**: 核心转储是程序崩溃时内存的快照，用于事后调试。“核心转储流行病学”指的是统计性地分析大量此类转储以找到根本原因，类似于流行病学家研究疾病爆发的方式。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.siliconreport.com/openai-details-core-dump-epidemiology-for-infrastructure-debugging-8b6d27b1">OpenAI Details 'Core Dump Epidemiology' for Infrastructure ...</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Core_dump">Core dump - Wikipedia</a></li>
+<li><a href="https://sergioprado.blog/linux-core-dump-analysis/">Linux core dump analysis - sergioprado.blog</a></li>
 
 </ul>
 </details>
 
-**标签**: `#debugging`, `#infrastructure`, `#core dump`, `#reliability`, `#OpenAI`
+**标签**: `#debugging`, `#infrastructure`, `#reliability`, `#systems`
+
+---
+
+<a id="item-4"></a>
+## [亚马逊斥资 10 亿美元成立定制 AI 代理部署组织](https://techcrunch.com/2026/06/30/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/) ⭐️ 8.0/10
+
+亚马逊宣布成立一个耗资 10 亿美元的新组织，专注于将工程师嵌入客户公司，以部署定制 AI 代理，此举紧随 OpenAI 和 Anthropic 之后。 这标志着领先 AI 公司大力投资于代理部署的现场客户支持，可能加速企业采用 AI 代理，并改变竞争格局。 新团队将专注于快速部署和实现客户自给自足，工程师直接嵌入公司内部，部署针对特定业务需求定制的 AI 代理。
+
+rss · 36氪 - 科技 · 6月30日 15:00
+
+**背景**: 定制 AI 代理是为特定任务（如网络钓鱼检测或 SOC 分类）设计的 AI 系统，不同于通用聊天机器人。将其部署到生产环境需要仔细的架构、基础设施和监控。亚马逊此举紧随 OpenAI 和 Anthropic 的类似投资，反映出对实际 AI 部署的日益重视。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://machinelearningmastery.com/deploying-ai-agents-to-production-architecture-infrastructure-and-implementation-roadmap/">Deploying AI Agents to Production: Architecture, Infrastructure, and Implementation Roadmap - MachineLearningMastery.com</a></li>
+<li><a href="https://www.scworld.com/perspective/purpose-built-ai-agents-will-replace-general-purpose-promises">Purpose-built AI agents will replace general-purpose promises | SC Media</a></li>
+<li><a href="https://www.ibm.com/think/topics/ai-agent-deployment">How to Deploy AI Agents Across the Enterprise | IBM</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI`, `#Amazon`, `#enterprise`, `#agents`, `#investment`
 
 ---
 
 <a id="item-5"></a>
-## [特斯拉在奥斯汀开始测试无方向盘 Cybercab](https://techcrunch.com/2026/06/30/tesla-starts-testing-cybercab-without-pedals-or-a-steering-wheel-in-austin/) ⭐️ 8.0/10
+## [韩国芯片巨头承诺超 5500 亿美元缓解内存危机](https://techcrunch.com/2026/06/29/south-korean-tech-giants-commit-over-550b-to-ease-ramageddon/) ⭐️ 8.0/10
 
-特斯拉已开始在德克萨斯州奥斯汀的公共道路上测试其 Cybercab，这是一款没有踏板或方向盘的完全自动驾驶双座车辆。这是自 2026 年 2 月投产以来，该车辆首次在现实世界中部署。 此次测试是朝着推出特斯拉长期承诺的机器人出租车网络迈出的关键一步，可能颠覆网约车行业。成功将验证特斯拉的全自动驾驶技术，并为商业自动驾驶车队铺平道路。 Cybercab 专为两名乘客设计，完全依赖特斯拉的全自动驾驶（FSD）软件，没有手动控制装置。特斯拉于 2025 年 6 月在奥斯汀有限度地推出了机器人出租车服务，而 Cybercab 测试旨在扩展该服务。
+韩国顶级内存芯片制造商，包括三星和 SK 海力士，承诺投入超过 5500 亿美元建设新的制造设施，以应对被称为“RAMageddon”的全球内存短缺，并增强 AI 基础设施。 这一巨额投资标志着战略重心转向满足 AI 驱动的内存需求，可能缓解自 2025 年以来影响消费电子和企业 PC 的严重短缺，并巩固韩国作为 AI 强国的地位。 根据美光 CEO 的说法，短缺是由制造能力向高利润 AI 数据中心产品转移所致，预计将持续到至少 2027 年，供应将在 2028 年逐步改善。
 
-rss · 36氪 - 科技 · 6月30日 15:32
+rss · 36氪 - 科技 · 6月29日 18:07
 
-**背景**: 特斯拉 Cybercab 最初于 2024 年 10 月作为概念车亮相，当时有 20 辆原型车在活动中提供短途试乘。它是一款纯电动汽车，旨在作为特斯拉机器人出租车叫车服务的一部分运营。特斯拉在自动驾驶承诺方面一直面临质疑，但此次测试代表了向前迈出的切实一步。
+**背景**: “RAMageddon”指的是始于 2025 年的全球内存供应短缺，主要影响 DRAM 和 NAND 闪存。与早期的疫情芯片短缺不同，此次短缺源于晶圆厂产能向 AI 基础设施的结构性转移，导致消费和企业市场供应不足。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Cybercab">Cybercab</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Tesla_Robotaxi">Tesla Robotaxi - Wikipedia</a></li>
-<li><a href="https://www.caranddriver.com/news/a71590701/tesla-cybercab-specs-epa-documents-revealed/">We Have New Tesla Cybercab Specs Before You're Supposed to See Them Thanks to EPA Documents</a></li>
+<li><a href="https://en.wikipedia.org/wiki/RAMmageddon">RAMmageddon</a></li>
+<li><a href="https://www.cnet.com/tech/computing/tech-companies-are-freaking-out-about-ramageddon/">Tech Companies Are Freaking Out About RAMageddon - CNET</a></li>
 
 </ul>
 </details>
 
-**标签**: `#Tesla`, `#autonomous vehicles`, `#robotaxi`, `#self-driving`
+**标签**: `#semiconductors`, `#memory`, `#AI infrastructure`, `#investment`, `#South Korea`
 
 ---
 
 <a id="item-6"></a>
-## [Arcturus 纳米铜有望将电网损耗减半](https://techcrunch.com/2026/06/30/arcturus-could-halve-the-grids-electrical-losses-using-its-nano-infused-copper/) ⭐️ 8.0/10
+## [Arena AI 排行榜估值达 1 亿美元](https://techcrunch.com/2026/06/29/arena-the-ai-leaderboard-everyone-uses-is-now-a-100m-business/) ⭐️ 8.0/10
 
-隐秘初创公司 Arcturus 开发了一种基于激光的工艺，将碳纳米材料注入铜中，显著提高了导电性，有望将电网传输损耗降低高达 50%。 如果实现规模化，这项技术可以显著提高全球电网的能源效率，减少电力浪费，并在无需新建发电厂的情况下降低碳排放。 阿贡国家实验室测量发现，纳米碳注入的铜薄膜导电性提高了约 30%，而 Arcturus 声称其工艺在块体导体中可实现更高的增益。
+Arena，这个广受欢迎的众包 AI 排行榜，在 2025 年 9 月推出商业服务仅八个月后，估值已达到 1 亿美元。 这一里程碑标志着市场对社区驱动的 AI 基准测试的强烈认可，并凸显了模型评估平台日益增长的商业价值。 Arena 的排行榜基于超过 1000 万次用户评估生成，其商业服务的年化经常性收入支撑了 1 亿美元的估值。
 
-rss · 36氪 - 科技 · 6月30日 15:01
+rss · 36氪 - 科技 · 6月29日 17:39
 
-**背景**: 电网因铜线和铝线的电阻，会以热量形式损失约 5-10%的传输能量。提高导体导电性可减少这些损耗，但传统合金方法已接近基本极限。纳米碳注入（如添加石墨烯或碳纳米管）通过创建更高效的电子路径，提供了一条超越这些极限的途径。
+**背景**: Arena 以其众包 AI 模型性能排行榜而闻名，用户可以在该平台上与不同 AI 模型聊天、比较和投票。该平台已成为 AI 社区广泛引用的基准。其商业服务为企业提供额外功能。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://techcrunch.com/2026/06/30/arcturus-could-halve-the-grids-electrical-losses-using-its-nano-infused-copper/">Arcturus could halve the grid’s electrical losses using its nano-infused copper | TechCrunch</a></li>
-<li><a href="https://www.anl.gov/amd/nanocarboninfused-metallic-conductors">Nanocarbon-infused Metallic Conductors | Argonne National Laboratory</a></li>
+<li><a href="https://techcrunch.com/2026/06/29/arena-the-ai-leaderboard-everyone-uses-is-now-a-100m-business/">Arena, the AI leaderboard everyone uses, is now a $100M business | TechCrunch</a></li>
+<li><a href="https://arena.ai/leaderboard">Arena Leaderboard | Compare & Benchmark the Best Frontier AI Models</a></li>
+<li><a href="https://huggingface.co/spaces/lmarena-ai/chatbot-arena">Chatbot Arena - a Hugging Face Space by lmarena-ai</a></li>
 
 </ul>
 </details>
 
-**标签**: `#materials science`, `#energy`, `#nanotechnology`, `#grid infrastructure`
+**标签**: `#AI`, `#leaderboard`, `#startup`, `#valuation`, `#business`
 
 ---
 
 <a id="item-7"></a>
-## [亚马逊斥资 10 亿美元成立 FDE 组织，专注 AI 代理部署](https://techcrunch.com/2026/06/30/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/) ⭐️ 8.0/10
+## [分层 AI 绘制 RNA 剪接中的长程 DNA 信号](https://news.google.com/rss/articles/CBMiWEFVX3lxTE55aXEzVDdCTXhTdW5IOGdsUlB0S3gtZ3VSTTdDbE1qeDBJS2I1bW9RejdQYi1OM19pb09GZjY5SGwwRnV0OXZCZXFLOXg4QnBBOTRRZXJnaGM?oc=5) ⭐️ 8.0/10
 
-亚马逊云服务（AWS）宣布成立一个耗资 10 亿美元的内部组织，由前向部署工程师（FDE）组成，他们将嵌入客户公司，部署专门构建的 AI 代理。此举紧随 OpenAI 和 Anthropic 之后。 这项投资标志着行业正从通用模型转向专门化、客户定制的 AI 代理部署，通过确保更快、更量身定制的实施，可能加速企业对 AI 的采用。 FDE 模式由 Palantir 首创，工程师在客户现场工作，定制和部署解决方案；亚马逊的新组织将专注于快速介入，并通过专门构建的代理使客户能够自主运营。
+研究人员开发了一种分层人工智能模型，能够绘制控制 RNA 剪接的长程 DNA 信号，据 EurekAlert!报道。 这一突破可能显著推进我们对基因调控的理解，有望为剪接错误导致的遗传疾病带来新疗法。 该分层 AI 模型能够捕捉局部和远距离的基因组相互作用，相比传统方法提高了剪接位点的预测准确性。
 
-rss · 36氪 - 科技 · 6月30日 15:00
+google_news · EurekAlert! · 6月30日 13:18
 
-**背景**: 前向部署工程师（FDE）是直接与客户组织合作，在运营环境中开发、定制和部署技术解决方案的软件工程师。专门构建的 AI 代理是为特定任务设计的专用自主系统，与通用 AI 模型形成对比。亚马逊此举延续了 OpenAI 和 Anthropic 等 AI 公司创建 FDE 团队以帮助企业有效部署 AI 的趋势。
+**背景**: RNA 剪接是从前体 mRNA 中移除非编码区（内含子）并连接编码区（外显子）的过程。长程 DNA 信号通常位于远离剪接位点的位置，能够影响这一过程。由于基因组相互作用的复杂性，传统模型难以捕捉这些远距离效应。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://techcrunch.com/2026/06/30/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/">Amazon launches new $1 billion FDE org, following OpenAI and Anthropic | TechCrunch</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Forward_Deployed_Engineer">Forward Deployed Engineer - Wikipedia</a></li>
-<li><a href="https://theriseofthedigitalworkforce.cio.com/drive-ai-value-build-trust-lead-change/why-purpose-built-agents-are-the-future-of-ai-at-work/">Why purpose-built agents are the future of AI at work</a></li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11601704/">Leveraging hierarchical structures for genetic block interaction studies using the hierarchical transformer - PMC</a></li>
+<li><a href="https://openreview.net/forum?id=6pN2KNCspk">dnaHNet: A Scalable and Hierarchical Foundation Model for Genomic Sequence Learning</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI`, `#Amazon`, `#AI Agents`, `#Enterprise`, `#Investment`
+**标签**: `#AI`, `#genomics`, `#RNA splicing`, `#machine learning`, `#bioinformatics`
 
 ---
 
 <a id="item-8"></a>
-## [纳斯达克将市场数据分发扩展至区块链](https://www.coindesk.com/markets/2026/06/30/nasdaq-expands-distribution-of-its-market-data-into-blockchain-infrastructure) ⭐️ 7.0/10
+## [shot-scraper video：用 Playwright 录制智能体演示视频](https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything) ⭐️ 7.0/10
 
-纳斯达克宣布将其市场数据分发扩展至区块链基础设施，将传统金融数据流与去中心化技术相结合。 此举标志着区块链在核心金融基础设施中的主流采用日益增长，可能提高市场数据的透明度、效率和可访问性，惠及更广泛的参与者。 该计划利用纳斯达克现有的市场数据流（如 Nasdaq Basic 和 Nasdaq Last Sale），通过区块链网络进行分发，但具体技术细节和时间表尚未披露。
+shot-scraper 1.10 新增了 `shot-scraper video` 命令，它接受一个 storyboard.yml 文件，并利用 Playwright 录制 Web 应用程序操作的视频，使编码智能体能够生成其工作的可视化证明。 该工具满足了 AI 智能体为其代码变更提供可演示证明的需求，这对于 AI 辅助开发工作流中的信任和验证至关重要。 该命令支持通过 JSON cookie 文件进行身份验证、自定义视口大小、光标可见性以及注入 JavaScript 以模拟剪贴板 API。输出格式可以是 WebM 或 MP4。
 
-rss · CoinDesk · 6月30日 13:00
+rss · Simon Willison · 6月30日 16:54
 
-**背景**: 区块链技术因其提供不可篡改、透明和实时数据共享的潜力，正越来越多地被金融机构采用。纳斯达克的举措与银行和交易所探索区块链用于市场数据分发、代币化和结算的更广泛趋势相一致。
+**背景**: shot-scraper 是一个使用 Playwright 自动截取网页截图的工具。新的 video 命令将其扩展为录制完整的用户交互屏幕录像，使开发者和 AI 智能体更容易创建可复现的演示。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://www.nasdaq.com/solutions/nasdaq-market-data-feeds">Nasdaq Market Data Feeds | Real-time Global Stock Data</a></li>
-<li><a href="https://www.weforum.org/stories/2026/01/new-foundation-global-finance-dialogue-between-banks-and-blockchains/">Global finance’s new foundation: banks and blockchains</a></li>
-
-</ul>
-</details>
-
-**标签**: `#blockchain`, `#finance`, `#Nasdaq`, `#market data`, `#fintech`
+**标签**: `#developer-tools`, `#testing`, `#AI-agents`, `#playwright`, `#automation`
 
 ---
 
 <a id="item-9"></a>
-## [人工智能可改变乳腺癌检测与复发预测](https://news.google.com/rss/articles/CBMiXEFVX3lxTFBPbkVuSFFDbFF2YU9rUHhQZ09qZFg0YzdPYllxbXIxWXdkM3diaGZKNllMVEhMdC1ucWlacDNsdmcybzFScThUMXEtMzZWQ29mYmhHRkhjSW9MQU1p?oc=5) ⭐️ 7.0/10
+## [纽约人寿通过 Centrifuge 推出首个代币化基金](https://www.coindesk.com/business/2026/06/29/new-york-life-makes-tokenization-debut-with-onchain-high-yield-bond-fund-with-centrifuge) ⭐️ 7.0/10
 
-最近的一篇文章强调，人工智能在改善乳腺癌检测和预测复发方面显示出潜力，可能改变临床工作流程。 这一进展可能带来更早、更准确的诊断，减少假阳性并改善患者预后，同时实现个性化复发监测。 文章未指定具体的 AI 模型或数据集，但表明 AI 工具正在开发中，用于分析乳腺 X 光片和其他影像数据以识别癌症迹象和复发风险。
+管理 8000 亿美元资产的纽约人寿资产管理公司通过 Centrifuge 推出了首个代币化基金，提供链上高收益债券敞口。 这标志着区块链代币化在资产管理领域获得了重要的机构认可，可能为其他传统金融巨头采用类似的链上策略铺平道路。 该基金基于 Centrifuge 构建，Centrifuge 是一个用于代币化现实世界资产的 DeFi 协议，这标志着纽约人寿首次涉足链上资产管理。
 
-google_news · EurekAlert! · 6月30日 16:33
+rss · CoinDesk · 6月30日 11:20
 
-**背景**: 乳腺癌是全球最常见的癌症之一，早期检测对成功治疗至关重要。传统的筛查方法如乳腺 X 光摄影存在局限性，包括假阳性和漏诊。人工智能，尤其是深度学习，在医学影像中显示出潜力，能够识别人类肉眼可能无法察觉的模式。
+**背景**: 代币化将传统基金份额转换为基于区块链的代币，实现部分所有权、更快的结算和更广泛的访问性。Centrifuge 是一个领先的协议，将现实世界资产连接到去中心化金融（DeFi）。
 
-**标签**: `#AI`, `#healthcare`, `#breast cancer`, `#machine learning`
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://grokipedia.com/page/Tokenized_Hedge_Funds">Tokenized Hedge Funds</a></li>
+
+</ul>
+</details>
+
+**标签**: `#tokenization`, `#blockchain`, `#asset management`, `#institutional adoption`, `#DeFi`
 
 ---
 
 <a id="item-10"></a>
-## [MIT 问答探讨当前与未来的智能体 AI](https://news.google.com/rss/articles/CBMidkFVX3lxTE5RM1ZBZHlsbkR4dlJscXJLMkhFUzN1S280eXBsV1hCXzdCOTBraWZ1cUt1SUhqXzBUbThPSnBQdWpKTTI2aXdxQTdHbk9SM1d2NGluUXZ0cWktNzdWeS1xZHRQcVhDcWs5M2R4YXdUTGVvMThCRXc?oc=5) ⭐️ 7.0/10
+## [MIT 问答：定义今天的智能体 AI 及其未来](https://news.google.com/rss/articles/CBMidkFVX3lxTE5RM1ZBZHlsbkR4dlJscXJLMkhFUzN1S280eXBsV1hCXzdCOTBraWZ1cUt1SUhqXzBUbThPSnBQdWpKTTI2aXdxQTdHbk9SM1d2NGluUXZ0cWktNzdWeS1xZHRQcVhDcWs5M2R4YXdUTGVvMThCRXc?oc=5) ⭐️ 7.0/10
 
-MIT News 发表了一篇问答文章，探讨了智能体 AI 的当前状态及其期望的未来，并包含了专家见解。 这篇文章为智能体 AI 提供了权威视角，智能体 AI 是快速发展的领域，代表了生成式 AI 之后的下一步，有可能通过自主决策改变各行各业。 智能体 AI 系统是半自主或全自主的，能够自行感知、推理和行动，不同于传统生成式 AI 仅根据提示生成内容。
+MIT News 发表了一篇问答文章，探讨了智能体 AI 系统的当前定义、能力以及期望的未来，其中包含了研究人员的见解。 这篇文章有助于澄清常被模糊定义的术语“智能体 AI”，并为其发展设定了愿景，这在 AI 系统变得更加自主并融入日常生活时至关重要。 问答形式包含了 MIT 研究人员对智能体 AI 今天含义以及未来应具备能力的观点，例如目标导向行为和适应性。
 
 google_news · MIT News · 6月30日 15:30
 
-**背景**: 智能体 AI，也称为 AI 代理或复合 AI 系统，指的是能够追求目标并以不同程度的自主性采取行动的 AI。这与生成式 AI 形成对比，后者专注于创建文本或图像等内容。MIT 的问答可能讨论了定义、当前能力、局限性以及对未来发展的期望。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/AI_agent">AI agent - Wikipedia</a></li>
-<li><a href="https://mitsloan.mit.edu/ideas-made-to-matter/agentic-ai-explained">Agentic AI, explained - MIT Sloan</a></li>
-<li><a href="https://www.ibm.com/think/topics/agentic-ai-vs-generative-ai">Agentic AI vs. generative AI - IBM</a></li>
-
-</ul>
-</details>
+**背景**: 智能体 AI 指的是能够自主行动以实现目标的 AI 系统，通常涉及规划、决策和与环境交互。随着 AI 从简单的模式识别发展到更主动的角色，这一术语变得日益重要。
 
 **标签**: `#agentic AI`, `#AI research`, `#MIT`, `#future of AI`
 
 ---
 
 <a id="item-11"></a>
-## [国际象棋特级大师批评 AI 愿景者的理解](https://news.google.com/rss/articles/CBMikwFBVV95cUxNVmdsYmR1c0hxSGxxN2lLV1RmaEJQSUkxOS1jSW96LWF3NHU0RVVydEhGam1fd285Y2R4ajRVWHZDOUc4LWpVcnpzTzM0NldMdFlfZ0ZPNTl2Z3lRVGhuNm1XQ1gyM3J3bVFVMlpVa0ljN2EzU1BfeWFGNE5xcHJCWGkta0N4OFFta0dhQ2JtX2xpUE0?oc=5) ⭐️ 7.0/10
+## [国际象棋特级大师批评 AI 愿景家](https://news.google.com/rss/articles/CBMikwFBVV95cUxNVmdsYmR1c0hxSGxxN2lLV1RmaEJQSUkxOS1jSW96LWF3NHU0RVVydEhGam1fd285Y2R4ajRVWHZDOUc4LWpVcnpzTzM0NldMdFlfZ0ZPNTl2Z3lRVGhuNm1XQ1gyM3J3bVFVMlpVa0ljN2EzU1BfeWFGNE5xcHJCWGkta0N4OFFta0dhQ2JtX2xpUE0?oc=5) ⭐️ 7.0/10
 
-一位国际象棋特级大师在《华盛顿邮报》发表评论文章，指出 AI 愿景者误解了人类智能和决策的关键方面。 这位顶级棋手对人与 AI 对手都有深刻体验，其观点挑战了 AI 将很快超越所有人类认知能力的普遍说法。 这位特级大师可能利用自己与 AI 国际象棋引擎对弈的经历，强调 AI 缺乏的直觉、创造力和战略思维等方面的差异。
+一位国际象棋特级大师在《华盛顿邮报》发表评论文章，认为 AI 愿景家误解了智能和决策的本质，并从国际象棋中汲取教训。 这位复杂战略游戏领域专家的观点挑战了关于 AI 能力的普遍说法，指出了可能影响 AI 研究重点和公众理解的局限性。 这位特级大师可能将国际象棋中的人类直觉和模式识别与 AI 的暴力计算进行对比，暗示真正的智能不仅仅是优化。
 
 google_news · The Washington Post · 6月30日 17:02
 
-**背景**: 国际象棋长期以来一直是 AI 进步的基准，像深蓝和 AlphaZero 这样的引擎击败了世界冠军。然而，特级大师们经常指出，AI 的玩法与人类根本不同，侧重于蛮力计算而非人类式的理解。
+**背景**: 国际象棋长期以来一直是 AI 的基准，像 DeepBlue 和 AlphaZero 这样的程序已经超越了人类冠军。然而，特级大师们经常强调创造力和直觉在棋局中的作用，而当前的 AI 缺乏这些。
 
-**标签**: `#AI`, `#chess`, `#opinion`, `#cognition`, `#human vs AI`
+**标签**: `#AI`, `#chess`, `#opinion`, `#intelligence`
 
 ---
