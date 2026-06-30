@@ -5,210 +5,153 @@ date: 2026-06-30
 lang: en
 ---
 
-> From 127 items, 14 important content pieces were selected
+> From 130 items, 12 important content pieces were selected
 
 ---
 
-1. [Supreme Court rules geofence warrants need constitutional protections](#item-1) ⭐️ 9.0/10
-2. [Google's AI Peer Reviewer Handles ~10K Papers at ICML/STOC](#item-2) ⭐️ 9.0/10
-3. [vLLM v0.24.0 Adds MiniMax-M3 Support and DeepSeek-V4 Optimizations](#item-3) ⭐️ 8.0/10
-4. [Ornith-1.0: Open-Weight Self-Scaffolding LLMs for Coding](#item-4) ⭐️ 8.0/10
-5. [MiCA deadline may force 10M EU crypto users off platforms](#item-5) ⭐️ 7.0/10
-6. [BNY Mellon Expands Stablecoin Services with USDC](#item-6) ⭐️ 7.0/10
-7. [BIS warns AI spending boom risks financial instability](#item-7) ⭐️ 7.0/10
-8. [OpenAI Maps AI's Impact on EU Jobs](#item-8) ⭐️ 6.0/10
-9. [Private Key Hacks Cause 40% of $16B Crypto Losses](#item-9) ⭐️ 6.0/10
-10. [White House Pushes Crypto Clarity Act with Law Enforcement](#item-10) ⭐️ 6.0/10
-11. [J.P. Morgan Expands Blockchain Settlement Network](#item-11) ⭐️ 6.0/10
-12. [Vitalik Buterin: Crypto's Most Powerful Idea Not Ready Yet](#item-12) ⭐️ 6.0/10
-13. [Breez SDK enables Bitcoin-to-stablecoin payments across 30+ chains](#item-13) ⭐️ 6.0/10
-14. [Vitalik Buterin: Obfuscation Could Enable Private Onchain Voting](#item-14) ⭐️ 6.0/10
+1. [Supreme Court: Geofence Warrants Need Constitutional Protections](#item-1) ⭐️ 9.0/10
+2. [Google's AI Peer-Reviewer Handles ~10K Papers, Catches 34% More Errors](#item-2) ⭐️ 9.0/10
+3. [vLLM v0.24.0 Adds MiniMax-M3, DeepSeek-V4 Optimizations](#item-3) ⭐️ 8.0/10
+4. [Ornith-1.0: Open-Weight Self-Scaffolding LLMs for Agentic Coding](#item-4) ⭐️ 8.0/10
+5. [OpenAI's Chief Research Officer Warns AGI Window Is Small](#item-5) ⭐️ 6.0/10
+6. [Private keys cause 40% of $16B crypto hack losses](#item-6) ⭐️ 6.0/10
+7. [J.P. Morgan Expands Blockchain Settlement Network](#item-7) ⭐️ 6.0/10
+8. [MiCA Deadline May Displace 10 Million EU Crypto Users](#item-8) ⭐️ 6.0/10
+9. [BNY Mellon Adds USDC Minting and Redemption for Institutions](#item-9) ⭐️ 6.0/10
+10. [UK Sets 2027 FCA Authorization Deadline for Crypto Firms](#item-10) ⭐️ 6.0/10
+11. [Breez SDK Enables Bitcoin-to-Stablecoin Payments Across 30+ Chains](#item-11) ⭐️ 6.0/10
+12. [Vitalik: Obfuscation could enable private onchain voting](#item-12) ⭐️ 6.0/10
 
 ---
 
 <a id="item-1"></a>
-## [Supreme Court rules geofence warrants need constitutional protections](https://www.theguardian.com/us-news/2026/jun/29/supreme-court-geofence-warrants-case-decision) ⭐️ 9.0/10
+## [Supreme Court: Geofence Warrants Need Constitutional Protections](https://www.theguardian.com/us-news/2026/jun/29/supreme-court-geofence-warrants-case-decision) ⭐️ 9.0/10
 
-The US Supreme Court ruled that geofence warrants, which allow law enforcement to obtain location data of all devices within a specific area, require constitutional protections under the Fourth Amendment. This landmark decision significantly limits law enforcement's ability to conduct mass digital surveillance without individualized suspicion, strengthening privacy rights for all Americans in the digital age. The case involved a bank robbery where Google provided location data of 19 devices near the crime scene; the Court held that such warrants must meet traditional probable cause and particularity requirements.
+The US Supreme Court ruled 6-3 that geofence warrants require constitutional protections under the Fourth Amendment, limiting warrantless digital location tracking by law enforcement. This landmark decision strengthens digital privacy rights by requiring law enforcement to obtain a warrant based on probable cause before accessing location data from tech companies like Google, affecting millions of smartphone users. The case involved a bank robbery where police used a geofence warrant to obtain location data from Google, identifying 19 devices near the crime scene; the Court held that such searches are subject to the Fourth Amendment's warrant requirement.
 
 hackernews · cdrnsf · Jun 29, 15:54 · [Discussion](https://news.ycombinator.com/item?id=48720924)
 
-**Background**: A geofence warrant is a search warrant that compels a company like Google to identify all mobile devices within a defined geographic area over a specific time period. These warrants have been controversial because they can sweep up data from innocent bystanders, raising Fourth Amendment concerns about unreasonable searches.
+**Background**: A geofence warrant, also known as a reverse location warrant, allows law enforcement to request location data for all devices within a specific geographic area during a certain time period. The Fourth Amendment protects against unreasonable searches and seizures, and the Supreme Court has previously extended its protections to digital location data in cases like Riley v. California and Carpenter v. United States.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Geofence_warrant">Geofence warrant</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Geofence_warrant">Geofence warrant - Wikipedia</a></li>
+<li><a href="https://www.congress.gov/crs-product/LSB11274">Geofence Warrants and the Fourth Amendment | Congress.gov | Library of Congress</a></li>
+<li><a href="https://www.nacdl.org/Content/Geofence-Warrants">NACDL - Geofence Warrants</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters noted the Court's use of sources in the opinion and discussed historical examples like the Paula Broadwell case, where location data was used to identify a suspect. Some questioned whether the ruling would extend to other surveillance tools like Flock cameras.
+**Discussion**: Commenters expressed support for the ruling, with some noting the court's use of factual sources in the opinion. Others discussed implications for other surveillance technologies like Flock cameras, and debated the dissenting justices' positions.
 
-**Tags**: `#privacy`, `#supreme court`, `#digital rights`, `#law enforcement`, `#geolocation`
+**Tags**: `#privacy`, `#supreme court`, `#geofence warrants`, `#digital surveillance`, `#law`
 
 ---
 
 <a id="item-2"></a>
-## [Google's AI Peer Reviewer Handles ~10K Papers at ICML/STOC](https://www.reddit.com/r/MachineLearning/comments/1uio9rb/googles_agentic_peerreviewer_handled_10k_papers/) ⭐️ 9.0/10
+## [Google's AI Peer-Reviewer Handles ~10K Papers, Catches 34% More Errors](https://www.reddit.com/r/MachineLearning/comments/1uio9rb/googles_agentic_peerreviewer_handled_10k_papers/) ⭐️ 9.0/10
 
-Google deployed an agentic AI peer-reviewer at ICML and STOC that processed approximately 10,000 papers with a 30-minute turnaround, and the formal research paper shows it catches 34% more mathematical errors than zero-shot prompting. This sets a precedent for AI-automated scientific review at conference scale, potentially transforming the peer review process by improving error detection and reducing reviewer burden. The agentic AI system was deployed at two top computer science conferences, ICML and STOC, and the formal paper is available on arXiv (2606.28277). The 34% improvement in catching mathematical errors is measured against zero-shot prompting baselines.
+Google deployed an agentic AI peer-reviewer at ICML and STOC that processed approximately 10,000 papers with a 30-minute turnaround, and a formal research paper shows it catches 34% more mathematical errors than zero-shot prompting. This sets a precedent for AI-automated scientific review at conference scale, potentially transforming the peer-review process by improving error detection and reducing reviewer workload. The system uses an agentic approach, meaning it can take actions like searching for references or performing calculations, rather than just generating text. It was tested on real papers from top machine learning and theory conferences.
 
 reddit · r/MachineLearning · /u/Justgototheeffinmoon · Jun 29, 10:05
 
-**Background**: Peer review is a critical but time-consuming process in scientific publishing, often struggling with reviewer shortages and inconsistency. Zero-shot prompting refers to asking an AI model to perform a task without any examples, while agentic AI systems can autonomously plan and execute multi-step tasks. Google's approach uses an agentic framework to conduct thorough reviews, including mathematical verification.
+**Background**: Peer review is the process where experts evaluate research papers before publication to ensure quality and correctness. Zero-shot prompting asks an AI to perform a task without providing examples, which is a common baseline for AI performance. Agentic AI systems can interact with tools and environments, enabling more complex tasks like verifying mathematical proofs.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.wired.com/2017/02/ai-can-solve-peer-review-ai-can-solve-anything/">If AI Can Fix Peer Review in Science, AI Can Do Anything | WIRED</a></li>
-<li><a href="https://www.yeschat.ai/gpts-9t55RFv0k6P-AI-Peer-Reviewer">AI Peer Reviewer -Free Automated Peer Review</a></li>
-<li><a href="https://huggingface.co/papers/2606.13044">Paper page - No Hidden Prompts Needed! You Can Game AI Peer ...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Zero-shot_prompting">Zero-shot prompting</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Reddit discussion is substantive, with users debating the implications for academic integrity, potential biases, and the role of human reviewers. Some express concern about AI replacing human judgment, while others see it as a useful tool to augment reviewers.
+**Discussion**: The Reddit discussion is generally positive, with users impressed by the scale and error-detection improvement. Some express concerns about AI replacing human reviewers, while others see it as a useful assistant. A few commenters question the generalizability to other fields beyond CS.
 
-**Tags**: `#AI`, `#peer review`, `#machine learning`, `#conference`, `#automation`
+**Tags**: `#AI`, `#peer review`, `#machine learning`, `#scientific publishing`, `#Google`
 
 ---
 
 <a id="item-3"></a>
-## [vLLM v0.24.0 Adds MiniMax-M3 Support and DeepSeek-V4 Optimizations](https://github.com/vllm-project/vllm/releases/tag/v0.24.0) ⭐️ 8.0/10
+## [vLLM v0.24.0 Adds MiniMax-M3, DeepSeek-V4 Optimizations](https://github.com/vllm-project/vllm/releases/tag/v0.24.0) ⭐️ 8.0/10
 
-vLLM v0.24.0, released with 571 commits from 256 contributors, adds support for the MiniMax-M3 model and delivers major optimizations for DeepSeek-V4, including a FlashInfer sparse index cache and prefill chunk-planning improvements. This release significantly expands vLLM's model ecosystem and inference performance, enabling efficient serving of cutting-edge models like MiniMax-M3 and DeepSeek-V4, which are critical for coding, agentic tasks, and long-context applications. MiniMax-M3 support includes BF16/FP8 indexer via MSA, MXFP4, FP8 sparse GQA, and extensive AMD/ROCm tuning. DeepSeek-V4 optimizations yield 2-4% TTFT improvement from FlashInfer sparse index cache and 4% end-to-end throughput gain from prefill chunk-planning.
+vLLM v0.24.0, released with 571 commits from 256 contributors, adds support for the MiniMax-M3 model and delivers major optimizations for DeepSeek-V4, including a FlashInfer sparse index cache and prefill chunk-planning improvements. This release significantly improves inference performance for two cutting-edge models, enabling faster and more efficient deployment of large language models in production environments. MiniMax-M3 support includes BF16/FP8 indexer via MSA, MXFP4 support, and FP8 sparse GQA; DeepSeek-V4 gains a FlashInfer sparse index cache (2–4% TTFT improvement) and prefill chunk-planning optimization (4% E2E throughput gain).
 
 github · khluu · Jun 29, 19:41
 
-**Background**: vLLM is an open-source high-throughput LLM inference engine widely used in production. MiniMax-M3 is a frontier open-weight model with 1M context and strong coding/agentic capabilities, while DeepSeek-V4 is a massive MoE model with up to 1.6T parameters. FlashInfer is a kernel library for LLM serving that provides efficient sparse attention implementations.
+**Background**: vLLM is a high-throughput, memory-efficient inference engine for large language models. MiniMax-M3 uses a novel sparse attention mechanism that requires specialized kernel support, while DeepSeek-V4 employs a complex multi-pool KV cache architecture that benefits from optimized sparse indexing.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.minimax.io/models/text/m3">MiniMax M3 - Coding & Agentic Frontier, 1M Context, Multimodal | MiniMax</a></li>
-<li><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro">deepseek-ai/DeepSeek-V4-Pro · Hugging Face</a></li>
+<li><a href="https://discuss.vllm.ai/t/minimax-m3-support/2689">Minimax m3 support - Model Support - vLLM Forums</a></li>
+<li><a href="https://www.lmsys.org/blog/2026-04-25-deepseek-v4/">DeepSeek-V4 on Day 0: From Fast Inference to Verified RL with SGLang and Miles - LMSYS Org</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#vLLM`, `#LLM inference`, `#DeepSeek-V4`, `#MiniMax-M3`, `#open source`
+**Discussion**: The vLLM community has been actively discussing MiniMax-M3 support, noting that M3 moves away from MLA-style latent compression to full-attention GQA, which required new kernel implementations. The release was well-received for its performance gains and broad model support.
+
+**Tags**: `#vLLM`, `#LLM inference`, `#DeepSeek`, `#MiniMax`, `#performance optimization`
 
 ---
 
 <a id="item-4"></a>
-## [Ornith-1.0: Open-Weight Self-Scaffolding LLMs for Coding](https://simonwillison.net/2026/Jun/29/ornith/#atom-everything) ⭐️ 8.0/10
+## [Ornith-1.0: Open-Weight Self-Scaffolding LLMs for Agentic Coding](https://simonwillison.net/2026/Jun/29/ornith/#atom-everything) ⭐️ 8.0/10
 
-DeepReinforce released Ornith-1.0, a family of open-weights (MIT licensed) LLMs ranging from 9B to 397B parameters, built on Gemma 4 and Qwen 3.5, achieving state-of-the-art coding benchmark performance among open-source models of comparable size. This release provides a high-performance, open-source alternative for agentic coding tasks, with a novel self-scaffolding training approach that may improve efficiency and reduce chain-of-thought length, potentially lowering inference costs. The model family includes 9B Dense, 31B Dense, 35B MoE, and 397B MoE variants, all MIT licensed. Early user reports indicate Ornith-1.0 35B is faster than Qwen 3.6 35B due to shorter chain-of-thought, and performs well on complex code modification tasks.
+DeepReinforce released Ornith-1.0, a family of MIT-licensed open-weight LLMs for agentic coding, with variants from 9B to 397B parameters, built on Gemma 4 and Qwen 3.5 base models. It achieves state-of-the-art performance among open-source models of comparable size on coding benchmarks. Ornith-1.0 introduces a novel self-scaffolding training framework where the model learns to generate both solution rollouts and the scaffolds that drive them, potentially reducing the need for external orchestration in agentic coding tasks. Its MIT license and strong performance make it highly accessible for developers and researchers. The model family includes 9B Dense, 31B Dense, 35B MoE, and 397B MoE variants, all MIT-licensed. The underlying base models (Gemma 4 and Qwen 3.5) are Apache 2.0 licensed, ensuring license compatibility. Early user reports indicate faster inference than comparable models due to shorter chain-of-thought.
 
 rss · Simon Willison · Jun 29, 16:17
 
-**Background**: Agentic coding refers to AI agents that autonomously plan, write, test, and modify code with minimal human intervention. Self-scaffolding is a training technique where the model learns to generate its own reasoning structure (scaffold) to improve performance on complex tasks, potentially reducing reliance on external prompting frameworks.
+**Background**: Agentic coding refers to AI agents that autonomously plan, write, test, and modify code with minimal human intervention. Traditional LLM-based coding assistants require external scaffolding (e.g., tool-use frameworks) to perform multi-step tasks. Ornith-1.0's self-scaffolding approach aims to internalize this capability, allowing the model to generate its own execution plan and tool calls.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://simonwillison.net/2026/Jun/29/ornith/">Ornith-1.0: Self - Scaffolding LLMs for Agentic Coding</a></li>
-<li><a href="https://deep-reinforce.com/ornith_1_0.html">Ornith-1.0: Self - Scaffolding LLMs ... | DeepReinforce Blog | Jun. 2026</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Agentic_coding">Agentic coding</a></li>
+<li><a href="https://deep-reinforce.com/ornith_1_0.html">Ornith - 1 . 0 : Self-Scaffolding LLMs... | DeepReinforce Blog | Jun. 2026</a></li>
+<li><a href="https://ornith.site/">Ornith 1 . 0 — Open-Source Agentic Coding Models</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community feedback is generally positive: users report Ornith-1.0 35B outperforms Qwen 3.6 35B in speed and code modification tasks, though some note it still struggles with hallucination in chat without tools. Questions remain about the training methodology and the identity of DeepReinforce.
+**Discussion**: Community sentiment is mixed: some users report strong coding performance and faster inference, while others note poor performance in chat without tools and a tendency to hallucinate. Some commenters question whether Ornith-1.0 is merely a fine-tuned version of Qwen or Gemma 4, and there is curiosity about the DeepReinforce team's background.
 
-**Tags**: `#LLM`, `#open-source`, `#coding`, `#AI agents`, `#model release`
+**Tags**: `#LLM`, `#open-source`, `#coding`, `#AI`, `#machine learning`
 
 ---
 
 <a id="item-5"></a>
-## [MiCA deadline may force 10M EU crypto users off platforms](https://www.coindesk.com/business/2026/06/29/mica-july-1-deadline-could-leave-10-million-crypto-users-searching-for-a-new-platform-in-the-eu) ⭐️ 7.0/10
+## [OpenAI's Chief Research Officer Warns AGI Window Is Small](https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652710037&idx=2&sn=942dd7ab7358a3a8a5729c96860e9831) ⭐️ 6.0/10
 
-The MiCA regulation's July 1 deadline could leave approximately 10 million cryptocurrency users in the European Union without access to compliant trading platforms, as many exchanges may fail to obtain necessary licenses in time. This could cause significant market disruption, forcing users to move funds to unregulated venues or exit crypto altogether, while shaping the competitive landscape for crypto exchanges in the EU. The MiCA regulation, which entered into force in June 2023, requires crypto-asset service providers to obtain authorization from national competent authorities by July 1, 2026, or cease operations in the EU.
+OpenAI's Chief Research Officer, Mark Chen, stated that the window for humanity to prepare for artificial general intelligence (AGI) is very small, implying that AGI may arrive sooner than many expect. This warning from a key OpenAI figure underscores the urgency of AI safety research and policy development, as AGI could have transformative impacts on society and the global economy. The statement was made without specifying a precise timeline, but it aligns with other predictions that AGI could emerge within the next few years. The comment reflects ongoing internal concerns at OpenAI about the pace of progress.
 
-rss · CoinDesk · Jun 29, 15:03
+rss · 新智元 · Jun 30, 04:32
 
-**Background**: MiCA (Markets in Crypto-Assets) is a comprehensive EU regulatory framework for crypto assets, designed to protect investors and ensure market integrity while fostering innovation. It covers issuers of crypto assets, crypto-asset service providers, and stablecoins. The regulation includes a transitional period during which existing operators can continue serving EU customers while applying for licenses.
+**Background**: Artificial general intelligence (AGI) is a hypothetical AI system that can perform any intellectual task that a human can. Unlike narrow AI, which excels at specific tasks, AGI would possess general cognitive abilities. The timeline for AGI is highly debated, with some experts predicting it within a decade and others arguing it is far off. AI safety is a field focused on ensuring that advanced AI systems are aligned with human values and do not cause harm.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Markets_in_Crypto-Assets">Markets in Crypto - Assets - Wikipedia</a></li>
-<li><a href="https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica">Markets in Crypto - Assets Regulation (MiCA)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Artificial_general_intelligence">Artificial general intelligence - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/AI_safety">AI safety - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#crypto`, `#regulation`, `#EU`, `#MiCA`
+**Tags**: `#AGI`, `#OpenAI`, `#AI safety`, `#timeline`
 
 ---
 
 <a id="item-6"></a>
-## [BNY Mellon Expands Stablecoin Services with USDC](https://www.coindesk.com/business/2026/06/29/wall-street-s-bny-expands-stablecoin-services-for-institutions-starting-with-circle-s-usdc) ⭐️ 7.0/10
+## [Private keys cause 40% of $16B crypto hack losses](https://www.coindesk.com/tech/2026/06/29/private-keys-not-smart-contracts-caused-40-of-crypto-s-usd16-billion-hack-losses-here-s-whats-being-done) ⭐️ 6.0/10
 
-BNY Mellon, a major Wall Street bank, is expanding its stablecoin services for institutional clients, starting with Circle's USDC, by adding minting and redemption capabilities to its institutional custody platform. This move signals a significant step in traditional finance embracing crypto, as BNY Mellon is one of the largest custodian banks globally, and its entry into stablecoin services could drive broader institutional adoption of digital assets. The expansion deepens BNY Mellon's existing partnership with Circle, building on its role as the primary custodian of USDC reserves, and allows institutional clients to mint and redeem USDC directly through the bank's platform.
-
-rss · CoinDesk · Jun 29, 14:46
-
-**Background**: Stablecoins like USDC are digital tokens pegged 1:1 to the US dollar, designed to maintain a stable value for transactions and as a store of value. BNY Mellon has been gradually expanding into crypto services, having launched Bitcoin and Ethereum custody in 2022. Minting refers to creating new stablecoin tokens by depositing fiat currency, while redemption is the reverse process of converting tokens back to fiat.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://www.coinbase.com/en-gb/USDC">USDC : The Dollar for the Digital Age | Coinbase</a></li>
-<li><a href="https://decrypt.co/111641/bny-mellon-launches-bitcoin-ethereum-custody-services-investment-firms">BNY Mellon Launches Bitcoin, Ethereum Custody Services... - Decrypt</a></li>
-<li><a href="https://www.bitgo.com/resources/blog/how-to-build-stablecoins/">Stablecoin Development: How to Build Secure Digital Money | BitGo</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#stablecoins`, `#institutional adoption`, `#crypto`, `#finance`, `#blockchain`
-
----
-
-<a id="item-7"></a>
-## [BIS warns AI spending boom risks financial instability](https://cointelegraph.com/news/bis-sounds-alarm-on-ai-exuberance-as-debt-fueled-boom-risks-bust?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound) ⭐️ 7.0/10
-
-The Bank for International Settlements (BIS) has warned that excessive AI spending, fueled by debt and leveraged nonbank structures, could lead to global financial consequences. This warning highlights a potential systemic risk in the financial system, as the AI investment surge relies on risky financing that could rapidly unwind, affecting global markets and investors. The BIS report points to enormous debt and highly leveraged nonbank structures, such as hedge funds and private credit, as key financing sources for AI investments that could amplify a bust.
-
-rss · CoinTelegraph · Jun 29, 05:31
-
-**Background**: The Bank for International Settlements is an international financial institution that fosters monetary and financial stability. It regularly monitors systemic risks in the global financial system. Nonbank financial intermediaries (NBFIs) include entities like hedge funds and private equity firms that borrow heavily to invest, increasing leverage and potential contagion.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Bank_for_International_Settlements">Bank for International Settlements - Wikipedia</a></li>
-<li><a href="https://www.fsb.org/uploads/P090725-1.pdf">Leverage in Nonbank Financial Intermediation: Final report</a></li>
-<li><a href="https://www.linkedin.com/posts/francescorosamech_debt-has-entered-the-ai-boom-activity-7393220683910250496-M7SX">Debt Has Entered the A . I . Boom | Francesco Rosa</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#AI`, `#finance`, `#systemic risk`, `#investment`
-
----
-
-<a id="item-8"></a>
-## [OpenAI Maps AI's Impact on EU Jobs](https://openai.com/index/mapping-ai-jobs-transition-eu) ⭐️ 6.0/10
-
-OpenAI released a report mapping how AI could automate, augment, or transform occupations across the European Union, identifying which jobs face the highest exposure to AI-driven changes. This report provides a high-level overview of AI's potential impact on the EU labor market, helping policymakers and businesses anticipate workforce transitions and plan for reskilling initiatives. The report categorizes occupations by automation risk, growth potential, and workflow changes, but lacks specific technical details or granular data on individual job roles.
-
-rss · OpenAI Blog · Jun 29, 07:00
-
-**Background**: AI technologies like large language models are increasingly capable of performing tasks traditionally done by humans, raising concerns about job displacement. This report is part of OpenAI's broader effort to study AI's societal impacts.
-
-**Tags**: `#AI`, `#labor market`, `#Europe`, `#automation`
-
----
-
-<a id="item-9"></a>
-## [Private Key Hacks Cause 40% of $16B Crypto Losses](https://www.coindesk.com/tech/2026/06/29/private-keys-not-smart-contracts-caused-40-of-crypto-s-usd16-billion-hack-losses-here-s-whats-being-done) ⭐️ 6.0/10
-
-A new report reveals that 40% of the $16 billion in cryptocurrency hack losses are due to private key compromises, not smart contract vulnerabilities, prompting industry initiatives to improve key management. This finding shifts the security focus from code audits to key custody, affecting how exchanges, protocols, and individual users protect assets. Improved key management could significantly reduce future losses. Private key compromises include phishing, server breaches, and poor storage practices, often bypassing robust smart contract security. The report emphasizes that even audited protocols remain vulnerable if keys are mishandled.
+A recent report reveals that 40% of the $16 billion in crypto hack losses are due to private key compromises, not smart contract vulnerabilities, prompting the industry to develop new mitigation strategies. This finding shifts the security focus from smart contract audits to private key management, affecting how exchanges, wallets, and DeFi protocols protect user assets. The report estimates that about 49.6% of realized crypto losses since 2022 come from private key compromise, phishing, and social engineering, not contract logic failures.
 
 rss · CoinDesk · Jun 29, 15:45
 
-**Background**: In cryptocurrency, a private key is a secret string that proves ownership of funds, similar to a password. Smart contracts are self-executing code on blockchain, but hacks often target key storage rather than code flaws. Many users rely on custodians or hardware wallets for key security.
+**Background**: Private keys are cryptographic secrets that grant control over crypto assets; if compromised, attackers can steal funds without exploiting smart contract bugs. Historically, the crypto industry has focused heavily on auditing smart contracts, but this data highlights that key management is a larger risk.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.investopedia.com/terms/p/private-key.asp">Understanding Private Keys: How They Work and Secure Storage Tips</a></li>
-<li><a href="https://www.coinbase.com/learn/crypto-basics/what-is-a-private-key">What is a private key? | Coinbase</a></li>
-<li><a href="https://www.gemini.com/cryptopedia/public-private-keys-cryptography">Public and Private Keys: What Are They? | Gemini</a></li>
+<li><a href="https://www.coindesk.com/tech/2026/06/29/private-keys-not-smart-contracts-caused-40-of-crypto-s-usd16-billion-hack-losses-here-s-whats-being-done">Private keys, not smart contracts, caused 40% of crypto's $16 billion ...</a></li>
+<li><a href="https://cryptodaily.co.uk/2026/06/crypto-audit-gap-private-keys-phishing">The Crypto Audit Gap: Keys , Phishing, and Missed Risks</a></li>
+<li><a href="https://blog.trailofbits.com/2025/06/25/maturing-your-smart-contracts-beyond-private-key-risk/">Maturing your smart contracts beyond private key risk - The Trail of Bits Blog</a></li>
 
 </ul>
 </details>
@@ -217,42 +160,20 @@ rss · CoinDesk · Jun 29, 15:45
 
 ---
 
-<a id="item-10"></a>
-## [White House Pushes Crypto Clarity Act with Law Enforcement](https://www.coindesk.com/policy/2026/06/29/white-house-to-speak-with-law-enforcement-groups-to-push-crypto-s-clarity-act) ⭐️ 6.0/10
-
-The White House is meeting with law enforcement groups to advocate for the Crypto's Clarity Act, a bill aimed at establishing clear federal regulations for cryptocurrencies. This engagement signals a strategic push to gain law enforcement support, which could accelerate the bill's passage and bring regulatory clarity to the crypto industry, affecting exchanges, investors, and users. The Clarity Act has faced opposition from various groups, including Catholic leaders, and its passage depends on key Senate Democrats. The White House's outreach aims to counter opposition and build bipartisan support.
-
-rss · CoinDesk · Jun 29, 15:23
-
-**Background**: The Crypto's Clarity Act is a proposed U.S. federal law that would define which digital assets are securities and which are commodities, assigning regulatory authority to the SEC or CFTC. Currently, crypto regulation in the U.S. is fragmented, with agencies issuing conflicting guidance. The bill seeks to resolve this uncertainty, which has been a major hurdle for industry growth.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://news.google.com/stories/CAAqNggKIjBDQklTSGpvSmMzUnZjbmt0TXpZd1NoRUtEd2lKekpxNUVSR2RYMXlKekJSTXNTZ0FQAQ?hl=en-US&gl=US&ceid=US:en">Google News - News about CLARITY Act - Overview</a></li>
-<li><a href="https://decrypt.co/371923/crypto-clarity-act-new-enemy-catholic-leaders">Crypto ’ s Clarity Act Has a New Enemy: Catholic Leaders - Decrypt</a></li>
-<li><a href="https://coinunited.io/learn/en/opinions-&-insights/crypto-s-clarity-act-showdown-will-the-financial-future-be-forged-or-forgotten">Cryptos Clarity Act Showdown: Will the Financial... - CoinUnited.io</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#cryptocurrency`, `#regulation`, `#policy`, `#law enforcement`
-
----
-
-<a id="item-11"></a>
+<a id="item-7"></a>
 ## [J.P. Morgan Expands Blockchain Settlement Network](https://www.coindesk.com/business/2026/06/29/j-p-morgan-broadens-blockchain-settlement-network-as-banks-modernize-cross-border-payments) ⭐️ 6.0/10
 
-J.P. Morgan has expanded its Kinexys blockchain settlement network, which has processed over $4 trillion in transactions, to deepen its reach in the Asia-Pacific region for modernizing cross-border payments. This expansion signals growing adoption of blockchain for core banking infrastructure, potentially reducing costs and settlement times for cross-border payments, which have traditionally been slow and expensive. Kinexys is a bank-led blockchain platform offering programmable payments, asset tokenization, and near-real-time settlement. The latest expansion focuses on the Asia-Pacific region, a key area for cross-border trade.
+J.P. Morgan has broadened its Kinexys blockchain settlement network, enabling banks to modernize cross-border payments using a permissioned blockchain for near-real-time settlement. This expansion signals growing institutional adoption of blockchain for core banking operations, potentially reducing settlement times from days to minutes and lowering costs for cross-border transactions. The network uses a permissioned blockchain operated by J.P. Morgan, and its JPM Coin (JPMD) is being integrated with the Canton Network to enable public blockchain interoperability.
 
 rss · CoinDesk · Jun 29, 15:23
 
-**Background**: Cross-border payments traditionally rely on a network of correspondent banks, leading to delays and high fees. Blockchain technology enables direct, transparent, and faster settlement by using a shared ledger. J.P. Morgan's Kinexys is one of the largest bank-led blockchain networks, processing trillions in transactions.
+**Background**: Traditional cross-border payments rely on correspondent banking networks, which can take days and incur high fees. Blockchain-based solutions offer faster, cheaper, and 24/7 settlement by eliminating intermediaries. J.P. Morgan's Kinexys platform is a bank-led blockchain for programmable payments and asset tokenization.
 
 <details><summary>References</summary>
 <ul>
+<li><a href="https://www.coindesk.com/business/2026/06/29/j-p-morgan-broadens-blockchain-settlement-network-as-banks-modernize-cross-border-payments">J.P. Morgan broadens Kinexys blockchain settlement network as banks modernize cross-border payments</a></li>
 <li><a href="https://www.jpmorgan.com/kinexys/index">Kinexys: Enterprise Bank-Led Blockchain Solutions</a></li>
-<li><a href="https://www.coindesk.com/business/2026/06/29/j-p-morgan-broadens-blockchain-settlement-network-as-banks-modernize-cross-border-payments">J . P . Morgan broadens Kinexys blockchain settlement network as...</a></li>
-<li><a href="https://www.paymentsjournal.com/a-look-at-blockchain-in-cross-border-payments/">A Look at Blockchain in Cross - Border Payments - PaymentsJournal</a></li>
+<li><a href="https://blog.digitalasset.com/news/digital-asset-and-kinexys-by-j.p.-morgan-bring-usd-jpm-coin-jpmd-natively-to-canton">Digital Asset and Kinexys by J.P. Morgan announce intention to bring USD JPM Coin (JPMD) natively to the Canton Network</a></li>
 
 </ul>
 </details>
@@ -261,58 +182,112 @@ rss · CoinDesk · Jun 29, 15:23
 
 ---
 
-<a id="item-12"></a>
-## [Vitalik Buterin: Crypto's Most Powerful Idea Not Ready Yet](https://www.coindesk.com/tech/2026/06/29/vitalik-buterin-says-crypto-s-most-powerful-idea-is-still-nowhere-near-ready) ⭐️ 6.0/10
+<a id="item-8"></a>
+## [MiCA Deadline May Displace 10 Million EU Crypto Users](https://www.coindesk.com/business/2026/06/29/mica-july-1-deadline-could-leave-10-million-crypto-users-searching-for-a-new-platform-in-the-eu) ⭐️ 6.0/10
 
-Vitalik Buterin stated that a foundational crypto concept, widely considered the most powerful idea in the space, is still far from being ready for practical use. This commentary from Ethereum's co-founder highlights the gap between theoretical potential and real-world readiness, affecting expectations for blockchain innovation and investment. The specific idea was not named in the summary, but the discussion likely refers to concepts like full decentralization, zero-knowledge proofs, or sharding, which face scalability and security hurdles.
+The European Union's Markets in Crypto-Assets (MiCA) regulation faces a key deadline on July 1, 2026, which could force approximately 10 million crypto users in the EU to find new platforms if existing providers fail to comply with the new rules. This deadline represents a major regulatory shift that could disrupt access to crypto services for millions of EU residents, potentially driving users to unregulated platforms or reducing market participation, while also setting a precedent for global crypto regulation. The MiCA regulation, fully adopted in 2024, requires all crypto-asset service providers in the EU to obtain authorization and comply with strict rules on transparency, consumer protection, and anti-money laundering. Non-compliant platforms must cease operations by July 1, 2026.
 
-rss · CoinDesk · Jun 29, 11:52
+rss · CoinDesk · Jun 29, 15:03
 
-**Background**: Vitalik Buterin is the co-founder of Ethereum, a leading blockchain platform. His views often influence the crypto industry. The 'most powerful idea' likely refers to a core crypto principle that promises transformative change but requires further development.
-
-**Tags**: `#cryptocurrency`, `#blockchain`, `#Vitalik Buterin`, `#technology readiness`
-
----
-
-<a id="item-13"></a>
-## [Breez SDK enables Bitcoin-to-stablecoin payments across 30+ chains](https://cointelegraph.com/news/breez-bitcoin-wallets-send-usdc-usdt-without-holding-stablecoins?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound) ⭐️ 6.0/10
-
-Breez has launched a new SDK feature that allows developers to route payments from Bitcoin balances to recipients in USDC and USDT across more than 30 blockchains, without requiring users to hold stablecoins. This simplifies cross-chain payments by letting Bitcoin users send stablecoins directly, potentially increasing Bitcoin's utility in everyday transactions and DeFi. It also reduces friction for developers building payment applications that need stablecoin settlement. The feature is part of the Breez SDK, which is trusted by over 75 teams and enables non-custodial Bitcoin and Lightning Network integrations. The cross-chain routing likely uses atomic swap technology to ensure trustless settlement.
-
-rss · CoinTelegraph · Jun 29, 13:00
-
-**Background**: Breez is known for its Bitcoin and Lightning Network payment infrastructure. Stablecoins like USDC and USDT are widely used for their price stability, but typically require users to hold them directly. This SDK bridges Bitcoin and stablecoin ecosystems without requiring users to manage multiple assets.
+**Background**: MiCA is the world's first comprehensive regulatory framework for digital assets, designed to harmonize crypto rules across EU member states. It covers issuers of crypto-assets, service providers, and stablecoins, aiming to protect investors and ensure market integrity. The July 1 deadline is a transitional period end date for existing crypto businesses to become fully compliant.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://cryptobriefing.com/breez-bitcoin-stablecoin-payments-30-blockchains/">Breez launches Bitcoin -to- stablecoin payments across 30 blockchains</a></li>
-<li><a href="https://breez.technology/sdk/">Breez SDK | Add Bitcoin to Any App or Service</a></li>
-<li><a href="https://en.coin-turk.com/breez-launched-direct-usdc-and-usdt-transfers-from-bitcoin-balances-across-more-than-30-blockchains/">COINTURK NEWS - Bitcoin , Blockchain and Cryptocurrency News...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Markets_in_Crypto-Assets">Markets in Crypto -Assets - Wikipedia</a></li>
+<li><a href="https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica">Markets in Crypto -Assets Regulation ( MiCA )</a></li>
+<li><a href="https://ondato.com/blog/mica-regulation/">MiCA Regulation and its Impact on the Crypto Market | Ondato</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#Bitcoin`, `#Stablecoins`, `#Cross-chain`, `#Payments`, `#SDK`
+**Tags**: `#crypto`, `#regulation`, `#EU`, `#MiCA`
 
 ---
 
-<a id="item-14"></a>
-## [Vitalik Buterin: Obfuscation Could Enable Private Onchain Voting](https://cointelegraph.com/news/vitalik-buterin-private-onchain-voting-obfuscation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound) ⭐️ 6.0/10
+<a id="item-9"></a>
+## [BNY Mellon Adds USDC Minting and Redemption for Institutions](https://www.coindesk.com/business/2026/06/29/wall-street-s-bny-expands-stablecoin-services-for-institutions-starting-with-circle-s-usdc) ⭐️ 6.0/10
 
-Ethereum co-founder Vitalik Buterin stated that indistinguishability obfuscation (iO) could eventually enable private, collusion-resistant onchain voting without trusted committees, though the technology remains impractical for now. If realized, iO-based voting could revolutionize blockchain governance by ensuring voter privacy and preventing collusion, addressing key limitations of current onchain voting systems that rely on transparency or trusted third parties. Indistinguishability obfuscation hides a program's implementation while allowing it to run, but current candidates are extremely impractical—for example, obfuscating a simple 32-bit AND function produces a program nearly 12 gigabytes in size.
+BNY Mellon has expanded its Digital Asset Custody platform to support Circle's USDC, enabling institutional clients to mint, redeem, store, and transfer the stablecoin directly through the bank. This marks the first stablecoin integration on BNY's institutional custody offering. This move signals growing institutional adoption of stablecoins, bridging traditional finance with digital assets. By offering USDC services, BNY Mellon provides a regulated gateway for institutions to access stablecoin liquidity and settlement, potentially accelerating mainstream crypto integration. BNY Mellon already served as the primary custodian of USDC reserves; this expansion adds client-facing minting and redemption capabilities. USDC is the first stablecoin available on BNY's Digital Asset Custody platform, which launched in October 2022 for Bitcoin and Ethereum.
+
+rss · CoinDesk · Jun 29, 14:46
+
+**Background**: Stablecoins like USDC are cryptocurrencies pegged to a stable asset, typically the US dollar, enabling price stability for transactions and settlements. BNY Mellon's Digital Asset Custody platform allows institutional investors to hold digital assets alongside traditional securities in a regulated environment. This integration deepens BNY's partnership with Circle, the issuer of USDC.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://crypto.news/bny-unlocks-usdc-minting-and-redemption-for-clients/">BNY unlocks USDC minting and redemption for institutional clients</a></li>
+<li><a href="https://cryptobriefing.com/bny-mellon-usdc-digital-asset-custody/">BNY Mellon integrates USDC as first stablecoin on Digital Asset...</a></li>
+<li><a href="https://tokenmetrics.com/usdc/news/bny-usdc-minting-institutional-custody/">BNY Adds USDC Minting To Institutional Custody Platform</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#stablecoins`, `#institutional finance`, `#crypto`, `#BNY Mellon`
+
+---
+
+<a id="item-10"></a>
+## [UK Sets 2027 FCA Authorization Deadline for Crypto Firms](https://cointelegraph.com/news/uk-crypto-rules-2027-fca-authorization-deadline?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound) ⭐️ 6.0/10
+
+The UK's Financial Conduct Authority (FCA) has published its final crypto regulatory framework, requiring all crypto firms to obtain FCA authorization by February 2027. This regulation brings crypto firms under the same oversight as traditional financial institutions, enhancing consumer protection and market integrity, and positions the UK as a leading crypto hub. Firms currently registered under the Money Laundering Regulations must also apply for full authorization. The new regime is expected to come into force on October 25, 2027.
+
+rss · CoinTelegraph · Jun 29, 23:01
+
+**Background**: The UK has been developing a comprehensive crypto regulatory framework to align digital assets with traditional finance. The FCA is the financial regulator responsible for authorizing and supervising firms. This move aims to provide clarity and legal certainty for crypto businesses operating in the UK.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://www.grantthornton.co.uk/insights/crypto-firms--a-guide-to-fca-authorisation/">Crypto firms – a guide to FCA authorisation | Grant Thornton</a></li>
+<li><a href="https://www.fca.org.uk/firms/new-regime-cryptoasset-regulation/authorisation-supervision-enforcement">Cryptoasset firms: Authorisation, supervision and enforcement | FCA</a></li>
+<li><a href="https://www.edgen.tech/news/crypto/uk-targets-crypto-hub-status-with-2027-regulatory-framework">UK Targets Crypto Hub Status With 2027 Regulatory Framework</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#cryptocurrency`, `#regulation`, `#UK`, `#FCA`
+
+---
+
+<a id="item-11"></a>
+## [Breez SDK Enables Bitcoin-to-Stablecoin Payments Across 30+ Chains](https://cointelegraph.com/news/breez-bitcoin-wallets-send-usdc-usdt-without-holding-stablecoins?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound) ⭐️ 6.0/10
+
+Breez has launched a new SDK feature that allows developers to route Bitcoin payments to recipients in USDC and USDT across more than 30 blockchains, without requiring users to hold stablecoins. This innovation bridges Bitcoin and stablecoin ecosystems, enabling Bitcoin holders to make payments in widely used stablecoins without converting their holdings, potentially expanding Bitcoin's utility in everyday transactions and DeFi. The feature is part of the Breez SDK, built on Spark, a native Bitcoin Layer 2 with instant settlement and multi-asset support. It supports over 30 blockchains, including major networks like Ethereum, Solana, and Tron.
+
+rss · CoinTelegraph · Jun 29, 13:00
+
+**Background**: Stablecoins like USDC and USDT are digital assets pegged to fiat currencies, commonly used for payments and DeFi. Bitcoin, while valuable, is less practical for everyday transactions due to volatility and slower settlement. Breez SDK is a non-custodial toolkit that lets developers integrate Bitcoin payments into apps. This new feature uses cross-chain routing to convert Bitcoin value into stablecoins at the recipient's end, simplifying the payment experience.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://cryptobriefing.com/breez-bitcoin-stablecoin-payments-30-blockchains/">Breez launches Bitcoin - to - stablecoin payments across 30 blockchains</a></li>
+<li><a href="https://breez.technology/sdk/">Breez SDK | Add Bitcoin to Any App or Service</a></li>
+<li><a href="https://coincentral.com/breez-launches-bitcoin-to-stablecoin-payments-without-holding-usdc-or-usdt/">Breez Launches Bitcoin - to - Stablecoin Payments Without Holding...</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#Bitcoin`, `#Stablecoins`, `#Payments`, `#SDK`, `#Blockchain`
+
+---
+
+<a id="item-12"></a>
+## [Vitalik: Obfuscation could enable private onchain voting](https://cointelegraph.com/news/vitalik-buterin-private-onchain-voting-obfuscation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound) ⭐️ 6.0/10
+
+Ethereum co-founder Vitalik Buterin suggested that indistinguishability obfuscation (iO) could eventually enable private, collusion-resistant onchain voting without trusted committees, though the technology remains impractical today. If realized, iO-based voting could transform governance in DAOs and DeFi protocols by ensuring voter privacy and preventing collusion, addressing key limitations of current onchain voting systems. Indistinguishability obfuscation hides a program's implementation while allowing it to be run, but current candidates are extremely impractical—for example, obfuscating a simple 32-bit AND function produces a program nearly 12 gigabytes in size.
 
 rss · CoinTelegraph · Jun 29, 10:53
 
-**Background**: Onchain voting is used by DAOs and blockchain protocols for governance, but it typically lacks privacy because votes are publicly visible. Indistinguishability obfuscation is a cryptographic primitive that makes any two programs computing the same function indistinguishable, enabling secure execution without revealing internal logic. However, iO is still far from practical deployment due to enormous computational and storage overhead.
+**Background**: Indistinguishability obfuscation (iO) is a cryptographic primitive that makes two programs computing the same function indistinguishable, effectively hiding their internal logic. It is considered a 'best-possible' obfuscation and can theoretically construct many other cryptographic primitives. However, known iO constructions rely on unproven assumptions and are far from practical deployment.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Indistinguishability_obfuscation">Indistinguishability obfuscation</a></li>
-<li><a href="https://docs.tally.xyz/user-guides/governance-concepts/onchain-vs.-offchain-voting">Onchain vs. Offchain Voting | Prod site - docs.tally.xyz</a></li>
+<li><a href="https://coinfractal.com/vitalik-buterin-indistinguishability-obfuscation-private-onchain-voting/">Vitalik: Obfuscation Could Power Private Onchain Voting</a></li>
+<li><a href="https://coinmarketcap.com/academy/article/vitalik-buterin-obfuscation-private-onchain-voting">Vitalik Buterin Says Obfuscation Could Enable Private On - Chain Voting</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#cryptography`, `#voting`, `#privacy`, `#blockchain`
+**Tags**: `#cryptography`, `#blockchain`, `#voting`, `#privacy`
 
 ---
