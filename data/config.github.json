@@ -131,7 +131,7 @@
       },
       {
         "name": "36氪 - 科技",
-        "url": "https://36kr.com/feed",
+        "url": "https://techcrunch.com/feed/",
         "enabled": true,
         "category": "tech-news"
       }
