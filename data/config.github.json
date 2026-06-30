@@ -232,7 +232,7 @@
     "request_body": {
       "msgtype": "markdown",
       "markdown": {
-        "content": "#  AI资讯推荐 #{date}\n\n**[EN] TrendRadar** — AI multi-platform news aggregator, monitors 35 platforms (Douyin, Zhihu, Bilibili, Weibo, etc.) with AI-powered filtering and smart alerts\n**[中文] TrendRadar** — AI多平台热点聚合(38k⭐)，监控35个平台，智能筛选+自动推送\n\n**[EN] Newspaper** — AI-powered news assistant with 13 analysis tools: trend tracking, sentiment analysis, semantic search\n**[中文] Newspaper** — AI新闻助手(3k⭐)，13种分析工具：趋势追踪、情感分析、相似检索\n\n**[EN] Horizon** — Your AI-powered news radar, multi-source collection → AI scoring → dedup → daily bilingual briefing\n**[中文] Horizon** — AI新闻雷达(4.8k⭐)，多源采集 → AI评分 → 去重 → 生成中英双语日报\n\n---\n> 原文+中文对照: https://bat-man-101.github.io/Horizon/projects.html"
+        "content": "#  AI日报 #{date} — 今日精选\n\n#{summary?limit=3000&split=---}"
       }
     },
     "headers": ""
