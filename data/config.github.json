@@ -128,6 +128,18 @@
         "url": "https://cointelegraph.com/rss",
         "enabled": true,
         "category": "crypto"
+      },
+      {
+        "name": "小红书 - AI热门",
+        "url": "https://rsshub.app/xiaohongshu/search_result/人工智能",
+        "enabled": true,
+        "category": "xiaohongshu"
+      },
+      {
+        "name": "小红书 - 科技数码",
+        "url": "https://rsshub.app/xiaohongshu/search_result/科技",
+        "enabled": true,
+        "category": "xiaohongshu"
       }
     ],
     "github": [
@@ -198,27 +210,35 @@
   "filtering": {
     "ai_score_threshold": 6.0,
     "time_window_hours": 24,
-    "max_items": 25,
+    "max_items": 12,
     "category_groups": {
-      "ai": {
-        "limit": 8,
-        "categories": ["ai-official", "ai-tools", "ai-news", "machine-learning"]
+      "ai-hot": {
+        "limit": 3,
+        "categories": ["ai-news", "news"]
+      },
+      "ai-tools": {
+        "limit": 3,
+        "categories": ["ai-tools", "ai-official", "machine-learning", "github-trending"]
+      },
+      "xiaohongshu": {
+        "limit": 3,
+        "categories": ["xiaohongshu"]
       },
       "research": {
-        "limit": 5,
+        "limit": 1,
         "categories": ["research", "papers"]
       },
-      "github": {
-        "limit": 5,
-        "categories": ["github-trending"]
-      },
       "crypto": {
-        "limit": 10,
+        "limit": 1,
         "categories": ["crypto"]
+      },
+      "semiconductors": {
+        "limit": 1,
+        "categories": ["semiconductors"]
       }
     },
     "default_group": "other",
-    "default_group_limit": 3
+    "default_group_limit": 1
   },
   "webhook": {
     "enabled": true,
