@@ -29,31 +29,6 @@ jobs:
       - name: Prepare GitHub Actions config
         run: cp data/config.github.json data/config.json
 
-      - name: Debug - Check webhook URL secret
-        env:
-          HORIZON_WEBHOOK_URL: ${{ secrets.HORIZON_WEBHOOK_URL }}
-        run: |
-          if [ -z "$HORIZON_WEBHOOK_URL" ]; then
-            echo "::warning::HORIZON_WEBHOOK_URL secret is EMPTY or NOT SET!"
-          else
-            echo "::notice::HORIZON_WEBHOOK_URL secret IS SET (length: ${#HORIZON_WEBHOOK_URL} chars)"
-          fi
-
-      - name: Debug - Check config file
-        run: |
-          echo "=== config.json webhook section ==="
-          python3 << 'PYEOF'
-import json
-with open('data/config.json') as f:
-    cfg = json.load(f)
-wh = cfg.get('webhook', {})
-print('enabled:', wh.get('enabled'))
-print('url_env:', wh.get('url_env'))
-print('delivery:', wh.get('delivery'))
-print('platform:', wh.get('platform'))
-print('languages:', wh.get('languages'))
-PYEOF
-
       - name: Run Horizon
         env:
           # AI API Keys (DeepSeek 推荐)
@@ -65,8 +40,6 @@ PYEOF
           GH_PAT: ${{ secrets.GH_PAT }}
           # Webhook 推送 (企业微信/飞书/钉钉等)
           HORIZON_WEBHOOK_URL: ${{ secrets.HORIZON_WEBHOOK_URL }}
-          # 开启调试日志
-          HORIZON_DEBUG: "1"
         run: uv run horizon --hours 24
 
       - name: Set current date as environment variable
