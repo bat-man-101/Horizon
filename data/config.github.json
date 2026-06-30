@@ -246,7 +246,7 @@
     "request_body": {
       "msgtype": "markdown",
       "markdown": {
-        "content": "#  AI日报 #{date} — 今日精选\n\n从 #{all_items} 条内容中筛选出 #{important_items} 条重要资讯。\n\n---\n\n#{summary?limit=4000&split=---}"
+        "content": "#  AI日报 #{date} — 今日精选\n\n#{summary?limit=3000&split=---}"
       }
     },
     "headers": ""
