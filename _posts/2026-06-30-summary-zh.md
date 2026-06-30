@@ -5,232 +5,314 @@ date: 2026-06-30
 lang: zh
 ---
 
-> 从 133 条内容中筛选出 10 条重要资讯。
+> 从 127 条内容中筛选出 14 条重要资讯。
 
 ---
 
-1. [最高法院裁定地理围栏搜查令需受第四修正案保护](#item-1) ⭐️ 9.0/10
-2. [vLLM v0.24.0：支持 MiniMax-M3，深度优化 DeepSeek-V4](#item-2) ⭐️ 8.0/10
-3. [llama.cpp b9840 增加对 DeepSeek V4 的支持](#item-3) ⭐️ 8.0/10
-4. [Ornith-1.0：用于智能体编程的自脚手架大语言模型](#item-4) ⭐️ 8.0/10
-5. [ChatGPT 推翻陈立杰苦思 7 年的计算几何难题](#item-5) ⭐️ 8.0/10
-6. [MiCA 截止日期或迫使 1000 万欧盟加密用户离开平台](#item-6) ⭐️ 8.0/10
-7. [OpenAI 绘制 AI 对欧盟就业的影响图](#item-7) ⭐️ 6.0/10
-8. [摩根大通扩大区块链结算网络以优化跨境支付](#item-8) ⭐️ 6.0/10
-9. [Vitalik Buterin：混淆技术或可实现链上私密投票](#item-9) ⭐️ 6.0/10
-10. [国际清算银行警告 AI 投资热潮或引发全球金融危机](#item-10) ⭐️ 6.0/10
+1. [最高法院裁定地理围栏搜查令需受宪法保护](#item-1) ⭐️ 9.0/10
+2. [谷歌 AI 同行评审处理 ICML/STOC 约 1 万篇论文](#item-2) ⭐️ 9.0/10
+3. [vLLM v0.24.0 新增 MiniMax-M3 支持与 DeepSeek-V4 优化](#item-3) ⭐️ 8.0/10
+4. [Ornith-1.0：开源自脚手架编码大模型](#item-4) ⭐️ 8.0/10
+5. [MiCA 截止日或致 1000 万欧盟加密用户失去平台](#item-5) ⭐️ 7.0/10
+6. [纽约梅隆银行扩展 USDC 稳定币服务](#item-6) ⭐️ 7.0/10
+7. [国际清算银行警告 AI 投资热潮可能引发金融不稳定](#item-7) ⭐️ 7.0/10
+8. [OpenAI 绘制 AI 对欧盟就业影响地图](#item-8) ⭐️ 6.0/10
+9. [私钥泄露导致 160 亿美元加密损失中的 40%](#item-9) ⭐️ 6.0/10
+10. [白宫推动加密货币清晰法案，与执法部门沟通](#item-10) ⭐️ 6.0/10
+11. [摩根大通扩大区块链结算网络](#item-11) ⭐️ 6.0/10
+12. [Vitalik Buterin：加密最强大的理念尚未准备好](#item-12) ⭐️ 6.0/10
+13. [Breez SDK 实现比特币到稳定币跨链支付](#item-13) ⭐️ 6.0/10
+14. [Vitalik Buterin：混淆技术或可实现私有链上投票](#item-14) ⭐️ 6.0/10
 
 ---
 
 <a id="item-1"></a>
-## [最高法院裁定地理围栏搜查令需受第四修正案保护](https://www.theguardian.com/us-news/2026/jun/29/supreme-court-geofence-warrants-case-decision) ⭐️ 9.0/10
+## [最高法院裁定地理围栏搜查令需受宪法保护](https://www.theguardian.com/us-news/2026/jun/29/supreme-court-geofence-warrants-case-decision) ⭐️ 9.0/10
 
-美国最高法院裁定，地理围栏搜查令（要求科技公司提供特定区域内所有设备的位置数据）必须符合第四修正案关于可能原因和特定性的要求。Chatrie 诉美国案的判决为数字隐私设立了里程碑式的先例。 该裁决限制了执法部门通过地理围栏搜查令进行大规模监控的能力，保护无辜旁观者的位置数据不被无司法监督地收集。它强化了数字时代的第四修正案保护，并可能影响全球类似案件。 法院认为地理围栏搜查令属于第四修正案下的“搜查”，需要基于可能原因并具体描述搜查地点的搜查令。由卡根大法官撰写的意见引用了 2014 年 Riley 诉加州案关于手机搜查的判决。
+美国最高法院裁定，地理围栏搜查令（允许执法机构获取特定区域内所有设备的位置数据）需要受到第四修正案的宪法保护。 这一里程碑式的裁决显著限制了执法机构在没有个别嫌疑的情况下进行大规模数字监控的能力，增强了数字时代所有美国人的隐私权。 该案件涉及一起银行抢劫案，谷歌提供了犯罪现场附近 19 台设备的位置数据；法院认为此类搜查令必须满足传统的可能原因和特定性要求。
 
 hackernews · cdrnsf · 6月29日 15:54 · [社区讨论](https://news.ycombinator.com/item?id=48720924)
 
-**背景**: 地理围栏搜查令允许警方要求谷歌等公司提供在特定时间窗口内位于犯罪现场周围虚拟边界（地理围栏）内的所有设备列表。批评者认为这些搜查令违宪，因为它们实际上搜查了区域内的所有人，而不仅仅是嫌疑人。该案源于 2018 年一起银行抢劫案，谷歌提供了银行附近 19 台设备的数据。
+**背景**: 地理围栏搜查令是一种强制要求谷歌等公司识别特定时间段内特定地理区域内所有移动设备的搜查令。这类搜查令存在争议，因为它们可能收集无辜旁观者的数据，引发第四修正案关于不合理搜查的担忧。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://techcrunch.com/2026/04/28/scotus-chatrie-geofence-search-warrant-ruling-arguments/">US Supreme Court appears split over controversial use of ' geofence ...</a></li>
-<li><a href="https://www.texaspolicyresearch.com/decision-on-geofence-warrants-a-critical-blow-to-mass-surveillance/">Decision on Geofence Warrants : A Critical... - Texas Policy Research</a></li>
-<li><a href="https://www.culawreview.org/journal/mapping-the-future-of-surveillance-geofence-warrants-and-the-risks-of-chatrie">Mapping the Future of Surveillance: Geofence Warrants and the Risks...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Geofence_warrant">Geofence warrant</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 评论者称赞该裁决是隐私权的胜利，有人指出法院在意见中引用来源是积极信号。另一位评论者强调了窃听的历史类比，指出物理限制曾限制了滥用，但数字监控缺乏这些限制。第三位评论者分享了一个例子，说明即使没有手机，位置数据也能识别个人，展示了此类技术的威力。
+**社区讨论**: 评论者注意到法院在意见中引用了来源，并讨论了历史案例，如 Paula Broadwell 案中利用位置数据识别嫌疑人。一些人质疑该裁决是否会扩展到其他监控工具，如 Flock 摄像头。
 
-**标签**: `#privacy`, `#supreme court`, `#geofence warrants`, `#digital rights`, `#law enforcement`
+**标签**: `#privacy`, `#supreme court`, `#digital rights`, `#law enforcement`, `#geolocation`
 
 ---
 
 <a id="item-2"></a>
-## [vLLM v0.24.0：支持 MiniMax-M3，深度优化 DeepSeek-V4](https://github.com/vllm-project/vllm/releases/tag/v0.24.0) ⭐️ 8.0/10
+## [谷歌 AI 同行评审处理 ICML/STOC 约 1 万篇论文](https://www.reddit.com/r/MachineLearning/comments/1uio9rb/googles_agentic_peerreviewer_handled_10k_papers/) ⭐️ 9.0/10
 
-vLLM v0.24.0 新增了对 MiniMax-M3 模型的支持，并对 DeepSeek-V4 进行了重大优化，包括 FlashInfer 稀疏索引缓存和 prefill 分块规划改进。该版本还引入了默认支持量化的 Model Runner V2、流式解析引擎，以及用于专家并行性的 DeepEP v2 集成。 此版本显著增强了 vLLM 服务前沿模型（如 MiniMax-M3 和 DeepSeek-V4）的能力，这些模型在编程、智能体推理和长上下文任务中处于领先地位。优化提高了推理吞吐量和延迟，使依赖 vLLM 进行高效 LLM 服务的广大 AI 社区受益。 该版本包含来自 256 位贡献者的 571 次提交，其中 77 位是新贡献者。关键技术新增包括 MiniMax-M3 的 MXFP4 支持、DeepSeek-V4 的集群协作 topK 内核，以及具有 API 密钥认证和 CORS 支持的新 Rust 前端。vLLM 还更改了设备选择方式，不再在内部设置 CUDA_VISIBLE_DEVICES。
+谷歌在 ICML 和 STOC 部署了一个智能 AI 同行评审系统，处理了约 1 万篇论文，周转时间 30 分钟，正式研究论文显示其比零样本提示多捕获 34%的数学错误。 这为会议规模的 AI 自动化科学评审树立了先例，通过改进错误检测和减轻评审负担，可能改变同行评审流程。 该智能 AI 系统部署在两个顶级计算机科学会议 ICML 和 STOC 上，正式论文可在 arXiv（2606.28277）上获取。捕获数学错误方面 34%的提升是相对于零样本提示基线测量的。
 
-github · khluu · 6月29日 19:41
+reddit · r/MachineLearning · /u/Justgototheeffinmoon · 6月29日 10:05
 
-**背景**: vLLM 是一个高性能的开源 LLM 推理和服务库，以其高效的内存管理和快速解码而广泛使用。MiniMax-M3 是一个前沿的开源权重模型，具有 1M 上下文窗口和多模态能力，而 DeepSeek-V4 是一个 1 万亿参数的混合专家模型。FlashInfer 是一个用于 LLM 服务的内核库，提供高效的注意力机制，如稀疏注意力和分页注意力。
+**背景**: 同行评审是科学出版中关键但耗时的过程，常面临评审人员短缺和不一致的问题。零样本提示是指在没有示例的情况下要求 AI 模型执行任务，而智能 AI 系统可以自主规划和执行多步骤任务。谷歌的方法使用智能框架进行彻底评审，包括数学验证。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.minimax.io/models/text/m3">MiniMax M3 - Coding & Agentic Frontier, 1M Context, Multimodal</a></li>
-<li><a href="https://deepseek.ai/deepseek-v4">DeepSeek V 4 (2026) — 1T Params, Benchmarks & Pricing</a></li>
+<li><a href="https://www.wired.com/2017/02/ai-can-solve-peer-review-ai-can-solve-anything/">If AI Can Fix Peer Review in Science, AI Can Do Anything | WIRED</a></li>
+<li><a href="https://www.yeschat.ai/gpts-9t55RFv0k6P-AI-Peer-Reviewer">AI Peer Reviewer -Free Automated Peer Review</a></li>
+<li><a href="https://huggingface.co/papers/2606.13044">Paper page - No Hidden Prompts Needed! You Can Game AI Peer ...</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论并非直接关于 vLLM v0.24.0，而是讨论另一个模型（可能是 Qwen 微调版）。评论意见不一：一些人认为它在创造性编码解决方案方面表现良好，而另一些人则指出存在幻觉和在消费级硬件上的限制。这些评论与本版本无关。
+**社区讨论**: Reddit 上的讨论内容丰富，用户们就学术诚信、潜在偏见以及人类评审员的角色展开辩论。一些人担心 AI 取代人类判断，而另一些人则认为这是增强评审员的有用工具。
 
-**标签**: `#vLLM`, `#LLM inference`, `#model optimization`, `#open source`, `#AI infrastructure`
+**标签**: `#AI`, `#peer review`, `#machine learning`, `#conference`, `#automation`
 
 ---
 
 <a id="item-3"></a>
-## [llama.cpp b9840 增加对 DeepSeek V4 的支持](https://github.com/ggml-org/llama.cpp/releases/tag/b9840) ⭐️ 8.0/10
+## [vLLM v0.24.0 新增 MiniMax-M3 支持与 DeepSeek-V4 优化](https://github.com/vllm-project/vllm/releases/tag/v0.24.0) ⭐️ 8.0/10
 
-llama.cpp b9840 引入了对 DeepSeek V4 模型架构的支持，包括转换脚本、推理图以及对 V4-Pro 和 V4-Flash 两种变体的优化。 此次更新使得在消费级硬件上本地高效推理 DeepSeek V4（一种最先进的开源 MoE 模型）成为可能，扩大了先进 AI 能力的可及性。 该版本包含多平台二进制文件（macOS、Linux、Windows、Android），并支持 DeepSeek V4 的闪存注意力、图复用和部分检查点等功能。
+vLLM v0.24.0 版本由 256 位贡献者提交了 571 次提交，新增了对 MiniMax-M3 模型的支持，并对 DeepSeek-V4 进行了重大优化，包括 FlashInfer 稀疏索引缓存和预填充块规划改进。 此版本显著扩展了 vLLM 的模型生态系统和推理性能，能够高效服务 MiniMax-M3 和 DeepSeek-V4 等前沿模型，这些模型对编程、智能体任务和长上下文应用至关重要。 MiniMax-M3 支持包括通过 MSA 实现的 BF16/FP8 索引器、MXFP4、FP8 稀疏 GQA 以及广泛的 AMD/ROCm 调优。DeepSeek-V4 优化通过 FlashInfer 稀疏索引缓存使 TTFT 提升 2-4%，通过预填充块规划使端到端吞吐量提升 4%。
 
-github · github-actions[bot] · 6月29日 10:25
+github · khluu · 6月29日 19:41
 
-**背景**: llama.cpp 是一个流行的开源项目，用于在 CPU 和 GPU 上本地运行大型语言模型，依赖极少。DeepSeek V4 是 DeepSeek 以 MIT 许可证发布的一系列混合专家（MoE）模型，拥有高达 1.6 万亿总参数和 100 万 token 的上下文窗口。GGUF 格式用于存储量化模型以实现高效推理。
+**背景**: vLLM 是一个开源的高吞吐量 LLM 推理引擎，广泛应用于生产环境。MiniMax-M3 是一个前沿的开源权重模型，支持 1M 上下文，具备强大的编程和智能体能力；DeepSeek-V4 是一个巨大的 MoE 模型，参数规模高达 1.6T。FlashInfer 是一个用于 LLM 服务的核函数库，提供高效的稀疏注意力实现。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://github.com/ggml-org/llama.cpp/releases">Releases · ggml-org/ llama . cpp</a></li>
-<li><a href="https://www.morphllm.com/deepseek-v4">DeepSeek V4: 1.6T MoE, 1M Context, $0.87/M Output. Architecture ...</a></li>
-<li><a href="https://en.wikipedia.org/wiki/GGUF">GGUF - Wikipedia</a></li>
+<li><a href="https://www.minimax.io/models/text/m3">MiniMax M3 - Coding & Agentic Frontier, 1M Context, Multimodal | MiniMax</a></li>
+<li><a href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro">deepseek-ai/DeepSeek-V4-Pro · Hugging Face</a></li>
 
 </ul>
 </details>
 
-**标签**: `#llama.cpp`, `#DeepSeek V4`, `#LLM inference`, `#open-source`, `#machine learning`
+**标签**: `#vLLM`, `#LLM inference`, `#DeepSeek-V4`, `#MiniMax-M3`, `#open source`
 
 ---
 
 <a id="item-4"></a>
-## [Ornith-1.0：用于智能体编程的自脚手架大语言模型](https://simonwillison.net/2026/Jun/29/ornith/#atom-everything) ⭐️ 8.0/10
+## [Ornith-1.0：开源自脚手架编码大模型](https://simonwillison.net/2026/Jun/29/ornith/#atom-everything) ⭐️ 8.0/10
 
-DeepReinforce 发布了 Ornith-1.0，这是一个用于智能体编程的开源权重大语言模型系列（MIT 许可证），尺寸从 9B 到 397B，基于 Gemma 4 和 Qwen 3.5 构建。在编程基准测试中，它在同尺寸开源模型中达到了最先进的性能。 Ornith-1.0 引入了一种自脚手架训练框架，模型学会同时生成解决方案和任务特定的脚手架，可能减少对人类设计的智能体框架的依赖。这可以加速自主编程智能体的开发，并降低开源智能体编程的门槛。 该模型系列包括 9B Dense、31B Dense、35B MoE 和 397B MoE 变体，全部采用 MIT 许可证。35B MoE 变体在单 GPU 上以 103 tokens/秒运行，4-bit 量化后仅需 20GB。底层基础模型（Gemma 4 和 Qwen 3.5）采用 Apache 2.0 许可证。
+DeepReinforce 发布了 Ornith-1.0 系列开源（MIT 许可）大模型，参数规模从 9B 到 397B 不等，基于 Gemma 4 和 Qwen 3.5 构建，在编码基准测试中达到了同规模开源模型的最高水平。 该发布为智能体编码任务提供了一个高性能的开源选择，其新颖的自脚手架训练方法可能提高效率并缩短思维链长度，从而降低推理成本。 该模型系列包括 9B Dense、31B Dense、35B MoE 和 397B MoE 变体，均采用 MIT 许可。早期用户报告显示，Ornith-1.0 35B 因思维链更短而比 Qwen 3.6 35B 更快，且在复杂代码修改任务上表现良好。
 
 rss · Simon Willison · 6月29日 16:17
 
-**背景**: 智能体编程是指 AI 系统以最少的人类干预执行多步骤软件开发任务。传统的基于大语言模型的编程智能体依赖人类编写的脚手架（框架）来指导工具使用和推理。自脚手架是一种新范式，模型学会生成自己的任务特定脚手架，并与解决方案策略共同进化。
+**背景**: 智能体编码是指 AI 智能体自主规划、编写、测试和修改代码，几乎无需人工干预。自脚手架是一种训练技术，模型学习生成自己的推理结构（脚手架）以提升复杂任务的表现，可能减少对外部提示框架的依赖。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://deep-reinforce.com/ornith_1_0.html">Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding | DeepReinforce Blog | Jun. 2026</a></li>
-<li><a href="https://essamamdani.com/blog/ornith-1-0-self-scaffolding-llm-coding-2026">Ornith-1.0: The Self-Scaffolding LLM That Teaches Itself to Code Better | Essa Mamdani | Essa Mamdani</a></li>
-<li><a href="https://www.mindstudio.ai/blog/self-scaffolding-ai-models-ornith-1-0">Self-Scaffolding AI Models: How Ornith 1.0 Writes Its Own Agent Harness | MindStudio</a></li>
+<li><a href="https://simonwillison.net/2026/Jun/29/ornith/">Ornith-1.0: Self - Scaffolding LLMs for Agentic Coding</a></li>
+<li><a href="https://deep-reinforce.com/ornith_1_0.html">Ornith-1.0: Self - Scaffolding LLMs ... | DeepReinforce Blog | Jun. 2026</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Agentic_coding">Agentic coding</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论褒贬不一：一些用户报告在编程任务上表现良好且能提供创造性解决方案，而另一些用户则指出在无工具聊天时表现不佳且容易产生幻觉。有人怀疑这仅仅是 Qwen 或 Gemma 的微调版本，并且对可访问性表示担忧（例如，9B 模型需要 80GB GPU）。
+**社区讨论**: 社区反馈总体积极：用户报告 Ornith-1.0 35B 在速度和代码修改任务上优于 Qwen 3.6 35B，但部分用户指出其在无工具聊天中仍存在幻觉问题。关于训练方法和 DeepReinforce 的身份仍有疑问。
 
-**标签**: `#LLM`, `#open-source`, `#coding`, `#agentic`, `#model release`
+**标签**: `#LLM`, `#open-source`, `#coding`, `#AI agents`, `#model release`
 
 ---
 
 <a id="item-5"></a>
-## [ChatGPT 推翻陈立杰苦思 7 年的计算几何难题](https://mp.weixin.qq.com/s?__biz=MzI3MTA0MTk1MA==&mid=2652709773&idx=2&sn=68bde762eb0070f5bd61518728971232) ⭐️ 8.0/10
+## [MiCA 截止日或致 1000 万欧盟加密用户失去平台](https://www.coindesk.com/business/2026/06/29/mica-july-1-deadline-could-leave-10-million-crypto-users-searching-for-a-new-platform-in-the-eu) ⭐️ 7.0/10
 
-据报道，ChatGPT 解决了困扰著名研究员陈立杰七年的计算几何核心问题，该成果基于 OpenAI 近期解决的一个 Erdős 猜想。 这表明 AI 解决长期数学难题的能力日益增强，可能加速计算几何及相关领域的研究。 该问题是陈立杰研究了七年的计算几何核心难题。解决方案基于 OpenAI 此前解决的 Erdős 猜想，但问题及解决方案的具体细节尚未公开。
+MiCA 法规的 7 月 1 日截止日期可能导致欧盟约 1000 万加密货币用户无法使用合规交易平台，因为许多交易所可能无法及时获得必要牌照。 这可能导致重大市场混乱，迫使用户将资金转移到不受监管的场所或完全退出加密货币领域，同时重塑欧盟加密货币交易所的竞争格局。 MiCA 法规于 2023 年 6 月生效，要求加密资产服务提供商在 2026 年 7 月 1 日前获得国家主管当局的授权，否则将停止在欧盟的运营。
 
-rss · 新智元 · 6月29日 05:01
+rss · CoinDesk · 6月29日 15:03
 
-**背景**: 计算几何研究几何问题的算法，如点定位和范围搜索。陈立杰是著名的计算机科学家，以复杂性理论研究闻名。Erdős 猜想是 Paul Erdős 提出的著名数论未解问题。
+**背景**: MiCA（加密资产市场）是欧盟针对加密资产的全面监管框架，旨在保护投资者、确保市场诚信并促进创新。它涵盖加密资产发行人、加密资产服务提供商和稳定币。该法规包含一个过渡期，在此期间现有运营商可以在申请牌照的同时继续为欧盟客户提供服务。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Computational_geometry">Computational geometry - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Markets_in_Crypto-Assets">Markets in Crypto - Assets - Wikipedia</a></li>
+<li><a href="https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica">Markets in Crypto - Assets Regulation (MiCA)</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI`, `#computational geometry`, `#ChatGPT`, `#OpenAI`, `#breakthrough`
+**标签**: `#crypto`, `#regulation`, `#EU`, `#MiCA`
 
 ---
 
 <a id="item-6"></a>
-## [MiCA 截止日期或迫使 1000 万欧盟加密用户离开平台](https://www.coindesk.com/business/2026/06/29/mica-july-1-deadline-could-leave-10-million-crypto-users-searching-for-a-new-platform-in-the-eu) ⭐️ 8.0/10
+## [纽约梅隆银行扩展 USDC 稳定币服务](https://www.coindesk.com/business/2026/06/29/wall-street-s-bny-expands-stablecoin-services-for-institutions-starting-with-circle-s-usdc) ⭐️ 7.0/10
 
-欧盟《加密资产市场法案》（MiCA）面临 7 月 1 日的截止日期，由于许多交易所尚未获得必要许可，约 1000 万加密用户可能失去合规平台。 这一截止日期标志着欧盟加密市场的重大监管变革，可能扰乱数百万用户的访问，迫使交易所要么合规要么退出该地区，为全球加密监管树立先例。 MiCA 于 2023 年 6 月生效，要求加密资产服务提供商在 2026 年 7 月 1 日前获得授权；不合规平台将面临执法行动，包括可能禁止服务欧盟客户。
+华尔街大型银行纽约梅隆银行正在扩展其面向机构客户的稳定币服务，首先从 Circle 的 USDC 开始，在其机构托管平台中增加铸造和赎回功能。 此举标志着传统金融拥抱加密货币的重要一步，因为纽约梅隆银行是全球最大的托管银行之一，其进入稳定币服务领域可能推动机构更广泛地采用数字资产。 此次扩展深化了纽约梅隆银行与 Circle 的现有合作关系，基于其作为 USDC 储备主要托管人的角色，允许机构客户通过该银行平台直接铸造和赎回 USDC。
 
-rss · CoinDesk · 6月29日 15:03
+rss · CoinDesk · 6月29日 14:46
 
-**背景**: MiCA 是欧盟针对加密资产的全面监管框架，旨在保护投资者、确保市场诚信并促进创新。它涵盖加密资产发行人、交易所和钱包提供商，要求其满足严格合规标准，如反洗钱（AML）和消费者保护规则。该法规分阶段实施，全面应用截止日期即将在 2026 年 7 月到来。
+**背景**: 像 USDC 这样的稳定币是与美元 1:1 锚定的数字代币，旨在为交易和价值储存提供稳定价值。纽约梅隆银行一直在逐步扩展加密货币服务，于 2022 年推出了比特币和以太坊托管服务。铸造是指通过存入法定货币来创建新的稳定币代币，而赎回则是将代币转换回法定货币的逆向过程。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Markets_in_Crypto-Assets">Markets in Crypto -Assets - Wikipedia</a></li>
-<li><a href="https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica">Markets in Crypto -Assets Regulation ( MiCA )</a></li>
-<li><a href="https://aurum.law/newsroom/EU-MiCA-Regulation">EU MiCA Regulation : Crypto Compliance Guide | Aurum</a></li>
+<li><a href="https://www.coinbase.com/en-gb/USDC">USDC : The Dollar for the Digital Age | Coinbase</a></li>
+<li><a href="https://decrypt.co/111641/bny-mellon-launches-bitcoin-ethereum-custody-services-investment-firms">BNY Mellon Launches Bitcoin, Ethereum Custody Services... - Decrypt</a></li>
+<li><a href="https://www.bitgo.com/resources/blog/how-to-build-stablecoins/">Stablecoin Development: How to Build Secure Digital Money | BitGo</a></li>
 
 </ul>
 </details>
 
-**标签**: `#crypto regulation`, `#MiCA`, `#EU`, `#blockchain`, `#finance`
+**标签**: `#stablecoins`, `#institutional adoption`, `#crypto`, `#finance`, `#blockchain`
 
 ---
 
 <a id="item-7"></a>
-## [OpenAI 绘制 AI 对欧盟就业的影响图](https://openai.com/index/mapping-ai-jobs-transition-eu) ⭐️ 6.0/10
+## [国际清算银行警告 AI 投资热潮可能引发金融不稳定](https://cointelegraph.com/news/bis-sounds-alarm-on-ai-exuberance-as-debt-fueled-boom-risks-bust?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound) ⭐️ 7.0/10
 
-OpenAI 发布了一份报告，绘制了 AI 如何重塑欧盟各职业的图景，识别出面临自动化风险的岗位、有望增长的岗位以及可能发生变化的工作流程。 这份报告提供了高层次的概述，可能为欧盟政策和劳动力规划提供参考，突显了随着 AI 采用加速，技能重塑和适应的必要性。 该报告将职业分为自动化、增长和工作流程变化三类，但缺乏具体的技术细节或定量预测。
+国际清算银行（BIS）警告称，由债务和高杠杆非银行结构推动的过度 AI 支出可能导致全球金融后果。 这一警告突显了金融体系中潜在的系统性风险，因为 AI 投资热潮依赖于可能迅速瓦解的高风险融资，从而影响全球市场和投资者。 BIS 报告指出，巨额债务和高杠杆非银行结构（如对冲基金和私人信贷）是 AI 投资的关键融资来源，可能放大崩盘风险。
 
-rss · OpenAI Blog · 6月29日 07:00
+rss · CoinTelegraph · 6月29日 05:31
 
-**背景**: 像大型语言模型这样的 AI 技术越来越能够执行传统上由人类完成的任务，引发了关于岗位替代和转型的讨论。欧盟一直通过《AI 法案》积极监管 AI，了解其对劳动力的影响对政策制定至关重要。
+**背景**: 国际清算银行是一家促进货币和金融稳定的国际金融机构，定期监测全球金融体系中的系统性风险。非银行金融中介包括对冲基金和私募股权公司等实体，它们大量借贷进行投资，增加了杠杆率和潜在的传染风险。
 
-**标签**: `#AI`, `#labor`, `#EU`, `#automation`, `#workforce`
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Bank_for_International_Settlements">Bank for International Settlements - Wikipedia</a></li>
+<li><a href="https://www.fsb.org/uploads/P090725-1.pdf">Leverage in Nonbank Financial Intermediation: Final report</a></li>
+<li><a href="https://www.linkedin.com/posts/francescorosamech_debt-has-entered-the-ai-boom-activity-7393220683910250496-M7SX">Debt Has Entered the A . I . Boom | Francesco Rosa</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI`, `#finance`, `#systemic risk`, `#investment`
 
 ---
 
 <a id="item-8"></a>
-## [摩根大通扩大区块链结算网络以优化跨境支付](https://www.coindesk.com/business/2026/06/29/j-p-morgan-broadens-blockchain-settlement-network-as-banks-modernize-cross-border-payments) ⭐️ 6.0/10
+## [OpenAI 绘制 AI 对欧盟就业影响地图](https://openai.com/index/mapping-ai-jobs-transition-eu) ⭐️ 6.0/10
 
-摩根大通扩大了其 Kinexys 区块链结算网络，深化了在亚太地区的覆盖，该平台迄今已处理超过 4 万亿美元的交易。 此次扩张标志着区块链在核心银行基础设施中的应用日益增长，可能降低跨境支付的成本和结算时间，而传统上这些支付依赖 SWIFT 等较慢的系统。 Kinexys 是一个由银行主导的区块链平台，提供可编程支付、资产代币化和近乎实时的结算。最新扩张聚焦亚太地区，这是跨境贸易的关键区域。
+OpenAI 发布了一份报告，绘制了人工智能如何自动化、增强或改变欧盟各职业的图景，识别出哪些工作面临最高的人工智能驱动变革风险。 该报告概述了人工智能对欧盟劳动力市场的潜在影响，帮助政策制定者和企业预测劳动力转型，并规划再培训计划。 该报告按自动化风险、增长潜力和工作流程变化对职业进行分类，但缺乏具体的技术细节或关于个别岗位的精细数据。
 
-rss · CoinDesk · 6月29日 15:23
+rss · OpenAI Blog · 6月29日 07:00
 
-**背景**: 传统的跨境支付通常使用 SWIFT 等代理银行网络，可能缓慢且成本高昂。基于区块链的结算网络提供了更快、透明且可编程的替代方案。摩根大通的 Kinexys 就是这样一个企业级解决方案。
+**背景**: 像大型语言模型这样的人工智能技术越来越能够执行传统上由人类完成的任务，引发了对就业替代的担忧。该报告是 OpenAI 研究人工智能社会影响更广泛努力的一部分。
 
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://www.coindesk.com/business/2026/06/29/j-p-morgan-broadens-blockchain-settlement-network-as-banks-modernize-cross-border-payments">J . P . Morgan broadens Kinexys blockchain settlement network as...</a></li>
-<li><a href="https://www.jpmorgan.com/kinexys/index">Kinexys: Enterprise Bank-Led Blockchain Solutions</a></li>
-<li><a href="https://www.paycio.com/blog/blockchain-cross-border-payments-and-how-do-they-work">Blockchain Cross - border Payments & How Do They Work</a></li>
-
-</ul>
-</details>
-
-**标签**: `#blockchain`, `#finance`, `#cross-border payments`, `#J.P. Morgan`
+**标签**: `#AI`, `#labor market`, `#Europe`, `#automation`
 
 ---
 
 <a id="item-9"></a>
-## [Vitalik Buterin：混淆技术或可实现链上私密投票](https://cointelegraph.com/news/vitalik-buterin-private-onchain-voting-obfuscation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound) ⭐️ 6.0/10
+## [私钥泄露导致 160 亿美元加密损失中的 40%](https://www.coindesk.com/tech/2026/06/29/private-keys-not-smart-contracts-caused-40-of-crypto-s-usd16-billion-hack-losses-here-s-whats-being-done) ⭐️ 6.0/10
 
-以太坊联合创始人 Vitalik Buterin 提出，不可区分混淆（iO）最终可能实现无需可信委员会的私密、抗合谋的链上投票，尽管该技术目前尚不实用。 如果实现，基于 iO 的投票将显著提升 DAO 治理和 DeFi 协议的隐私与安全性，减少对可信第三方的依赖并降低合谋风险。 不可区分混淆是一种隐藏程序实现同时保留其功能的密码学原语，但当前的候选方案极不实用——例如，混淆一个简单的 32 位 AND 函数会产生近 12GB 的程序。
+一份新报告显示，160 亿美元加密货币黑客损失中的 40%源于私钥泄露，而非智能合约漏洞，这促使行业采取措施改进密钥管理。 这一发现将安全焦点从代码审计转向密钥托管，影响交易所、协议和个人用户保护资产的方式。改进密钥管理可大幅减少未来损失。 私钥泄露包括钓鱼攻击、服务器入侵和存储不当，常绕过强大的智能合约安全措施。报告强调，即使经过审计的协议，如果密钥管理不当，仍然脆弱。
 
-rss · CoinTelegraph · 6月29日 10:53
+rss · CoinDesk · 6月29日 15:45
 
-**背景**: 不可区分混淆（iO）是一种软件混淆形式，其中计算相同函数的任意两个程序的混淆版本在计算上是不可区分的。它被视为一种“密码学完备”原语，因为可用于构建几乎所有其他密码学原语。然而，已知的 iO 构造依赖于复杂的数学假设，距离实际部署还很遥远。
+**背景**: 在加密货币中，私钥是证明资金所有权的秘密字符串，类似于密码。智能合约是区块链上的自执行代码，但黑客攻击常针对密钥存储而非代码缺陷。许多用户依赖托管方或硬件钱包来保障密钥安全。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Indistinguishability_obfuscation">Indistinguishability obfuscation</a></li>
-<li><a href="https://coinmarketcap.com/academy/article/vitalik-buterin-obfuscation-private-onchain-voting">Vitalik Buterin Says Obfuscation Could Enable Private On - Chain Voting</a></li>
-<li><a href="https://coinfractal.com/vitalik-buterin-indistinguishability-obfuscation-private-onchain-voting/">Vitalik: Obfuscation Could Power Private Onchain Voting</a></li>
+<li><a href="https://www.investopedia.com/terms/p/private-key.asp">Understanding Private Keys: How They Work and Secure Storage Tips</a></li>
+<li><a href="https://www.coinbase.com/learn/crypto-basics/what-is-a-private-key">What is a private key? | Coinbase</a></li>
+<li><a href="https://www.gemini.com/cryptopedia/public-private-keys-cryptography">Public and Private Keys: What Are They? | Gemini</a></li>
 
 </ul>
 </details>
 
-**标签**: `#cryptography`, `#voting`, `#privacy`, `#blockchain`, `#Ethereum`
+**标签**: `#cryptocurrency`, `#security`, `#private keys`, `#hacks`
 
 ---
 
 <a id="item-10"></a>
-## [国际清算银行警告 AI 投资热潮或引发全球金融危机](https://cointelegraph.com/news/bis-sounds-alarm-on-ai-exuberance-as-debt-fueled-boom-risks-bust?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound) ⭐️ 6.0/10
+## [白宫推动加密货币清晰法案，与执法部门沟通](https://www.coindesk.com/policy/2026/06/29/white-house-to-speak-with-law-enforcement-groups-to-push-crypto-s-clarity-act) ⭐️ 6.0/10
 
-国际清算银行（BIS）警告称，由债务和高杠杆非银行结构推动的过度 AI 投资可能导致全球金融不稳定。 这一警告突显了可能影响全球金融市场的系统性风险，因为杠杆化 AI 投资的快速平仓可能引发更广泛的金融危机。 BIS 报告指出，AI 投资融资严重依赖债务和高杠杆的非银行结构，这些结构可能迅速平仓并导致系统性破坏。
+白宫正与执法团体会面，推动《加密货币清晰法案》，该法案旨在为加密货币建立明确的联邦监管框架。 此举表明白宫正策略性地争取执法部门支持，可能加速法案通过，为加密行业带来监管清晰度，影响交易所、投资者和用户。 该法案面临包括天主教领袖在内的多方反对，其通过取决于关键参议院民主党人。白宫此举旨在对抗反对声音，建立两党支持。
 
-rss · CoinTelegraph · 6月29日 05:31
+rss · CoinDesk · 6月29日 15:23
 
-**背景**: 国际清算银行是一家为中央银行服务的国际金融机构，负责监测全球金融稳定。系统性风险是指金融服务中断的风险，可能对实体经济产生严重的负面影响。杠杆化非银行结构包括对冲基金和私募股权公司等大量借贷投资的实体。
+**背景**: 《加密货币清晰法案》是一项拟议的美国联邦法律，旨在界定哪些数字资产属于证券、哪些属于商品，并将监管权分配给 SEC 或 CFTC。目前，美国加密货币监管分散，各机构发布相互矛盾的指导。该法案旨在解决这一不确定性，而这一直是行业发展的主要障碍。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.bis.org/publ/othp08.htm">Systemic risk: how to deal with it?</a></li>
-<li><a href="https://www.fitchratings.com/research/banks/non-bank-entities-face-greater-us-leveraged-lending-risk-vs-banks-06-03-2020">Non-Bank Entities Face Greater US Leveraged Lending Risk vs Banks</a></li>
+<li><a href="https://news.google.com/stories/CAAqNggKIjBDQklTSGpvSmMzUnZjbmt0TXpZd1NoRUtEd2lKekpxNUVSR2RYMXlKekJSTXNTZ0FQAQ?hl=en-US&gl=US&ceid=US:en">Google News - News about CLARITY Act - Overview</a></li>
+<li><a href="https://decrypt.co/371923/crypto-clarity-act-new-enemy-catholic-leaders">Crypto ’ s Clarity Act Has a New Enemy: Catholic Leaders - Decrypt</a></li>
+<li><a href="https://coinunited.io/learn/en/opinions-&-insights/crypto-s-clarity-act-showdown-will-the-financial-future-be-forged-or-forgotten">Cryptos Clarity Act Showdown: Will the Financial... - CoinUnited.io</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI`, `#finance`, `#systemic risk`, `#BIS`
+**标签**: `#cryptocurrency`, `#regulation`, `#policy`, `#law enforcement`
+
+---
+
+<a id="item-11"></a>
+## [摩根大通扩大区块链结算网络](https://www.coindesk.com/business/2026/06/29/j-p-morgan-broadens-blockchain-settlement-network-as-banks-modernize-cross-border-payments) ⭐️ 6.0/10
+
+摩根大通扩大了其 Kinexys 区块链结算网络，该网络已处理超过 4 万亿美元的交易，以深化其在亚太地区的覆盖，推动跨境支付现代化。 此次扩张标志着区块链在核心银行基础设施中的应用日益广泛，有望降低跨境支付的成本和结算时间，而传统跨境支付通常缓慢且昂贵。 Kinexys 是一个由银行主导的区块链平台，提供可编程支付、资产代币化和近乎实时的结算。最新扩张聚焦亚太地区，这是跨境贸易的关键区域。
+
+rss · CoinDesk · 6月29日 15:23
+
+**背景**: 传统跨境支付依赖代理银行网络，导致延迟和高费用。区块链技术通过共享账本实现直接、透明且更快的结算。摩根大通的 Kinexys 是最大的银行主导区块链网络之一，处理了数万亿美元的交易。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.jpmorgan.com/kinexys/index">Kinexys: Enterprise Bank-Led Blockchain Solutions</a></li>
+<li><a href="https://www.coindesk.com/business/2026/06/29/j-p-morgan-broadens-blockchain-settlement-network-as-banks-modernize-cross-border-payments">J . P . Morgan broadens Kinexys blockchain settlement network as...</a></li>
+<li><a href="https://www.paymentsjournal.com/a-look-at-blockchain-in-cross-border-payments/">A Look at Blockchain in Cross - Border Payments - PaymentsJournal</a></li>
+
+</ul>
+</details>
+
+**标签**: `#blockchain`, `#banking`, `#cross-border payments`, `#J.P. Morgan`
+
+---
+
+<a id="item-12"></a>
+## [Vitalik Buterin：加密最强大的理念尚未准备好](https://www.coindesk.com/tech/2026/06/29/vitalik-buterin-says-crypto-s-most-powerful-idea-is-still-nowhere-near-ready) ⭐️ 6.0/10
+
+以太坊联合创始人的这番评论凸显了理论潜力与现实准备之间的差距，影响了人们对区块链创新和投资的预期。 摘要中未指明具体理念，但讨论可能涉及完全去中心化、零知识证明或分片等概念，这些概念面临可扩展性和安全性障碍。
+
+rss · CoinDesk · 6月29日 11:52
+
+**背景**: Vitalik Buterin 是以太坊（一个领先的区块链平台）的联合创始人。他的观点经常影响加密行业。'最强大的理念'可能指一个承诺带来变革性变化但需要进一步发展的核心加密原则。
+
+**标签**: `#cryptocurrency`, `#blockchain`, `#Vitalik Buterin`, `#technology readiness`
+
+---
+
+<a id="item-13"></a>
+## [Breez SDK 实现比特币到稳定币跨链支付](https://cointelegraph.com/news/breez-bitcoin-wallets-send-usdc-usdt-without-holding-stablecoins?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound) ⭐️ 6.0/10
+
+Breez 推出了新的 SDK 功能，允许开发者将比特币余额的支付路由到超过 30 个区块链上的 USDC 和 USDT 接收方，而无需用户持有稳定币。 这简化了跨链支付，让比特币用户可以直接发送稳定币，可能提升比特币在日常交易和 DeFi 中的实用性。同时减少了开发者构建需要稳定币结算的支付应用的障碍。 该功能是 Breez SDK 的一部分，已被超过 75 个团队信任，支持非托管的比特币和闪电网络集成。跨链路由可能使用原子交换技术来确保无需信任的结算。
+
+rss · CoinTelegraph · 6月29日 13:00
+
+**背景**: Breez 以其比特币和闪电网络支付基础设施闻名。USDC 和 USDT 等稳定币因其价格稳定而被广泛使用，但通常需要用户直接持有。该 SDK 桥接了比特币和稳定币生态系统，无需用户管理多种资产。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://cryptobriefing.com/breez-bitcoin-stablecoin-payments-30-blockchains/">Breez launches Bitcoin -to- stablecoin payments across 30 blockchains</a></li>
+<li><a href="https://breez.technology/sdk/">Breez SDK | Add Bitcoin to Any App or Service</a></li>
+<li><a href="https://en.coin-turk.com/breez-launched-direct-usdc-and-usdt-transfers-from-bitcoin-balances-across-more-than-30-blockchains/">COINTURK NEWS - Bitcoin , Blockchain and Cryptocurrency News...</a></li>
+
+</ul>
+</details>
+
+**标签**: `#Bitcoin`, `#Stablecoins`, `#Cross-chain`, `#Payments`, `#SDK`
+
+---
+
+<a id="item-14"></a>
+## [Vitalik Buterin：混淆技术或可实现私有链上投票](https://cointelegraph.com/news/vitalik-buterin-private-onchain-voting-obfuscation?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound) ⭐️ 6.0/10
+
+以太坊联合创始人 Vitalik Buterin 表示，不可区分混淆（iO）最终可能实现无需可信委员会的私有、抗合谋链上投票，尽管该技术目前仍不实用。 如果实现，基于 iO 的投票可能彻底改变区块链治理，确保选民隐私并防止合谋，解决当前依赖透明度或可信第三方的链上投票系统的关键局限。 不可区分混淆隐藏程序实现的同时允许其运行，但当前候选方案极不实用——例如，混淆一个简单的 32 位 AND 函数会产生近 12GB 的程序。
+
+rss · CoinTelegraph · 6月29日 10:53
+
+**背景**: 链上投票被 DAO 和区块链协议用于治理，但由于投票公开可见，通常缺乏隐私。不可区分混淆是一种密码学原语，使计算相同函数的任意两个程序无法区分，从而在不泄露内部逻辑的情况下安全执行。然而，由于巨大的计算和存储开销，iO 距离实际部署仍很遥远。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Indistinguishability_obfuscation">Indistinguishability obfuscation</a></li>
+<li><a href="https://docs.tally.xyz/user-guides/governance-concepts/onchain-vs.-offchain-voting">Onchain vs. Offchain Voting | Prod site - docs.tally.xyz</a></li>
+
+</ul>
+</details>
+
+**标签**: `#cryptography`, `#voting`, `#privacy`, `#blockchain`
 
 ---
