@@ -5,75 +5,76 @@ date: 2026-07-01
 lang: en
 ---
 
-> From 183 items, 10 important content pieces were selected
+> From 181 items, 11 important content pieces were selected
 
 ---
 
 **📌 Other（1）**
-  1. [US Lifts Export Controls on Anthropic's Claude Fable 5 and Mythos 5](#item-1) ⭐️ 9.0/10
+  1. [US Lifts Export Controls on Anthropic's Fable 5 and Mythos 5](#item-1) ⭐️ 9.0/10
 
 **🚀 Tech Trends（3）**
-  2. [Realta Fusion claims first direct electricity from fusion](#item-2) ⭐️ 9.0/10
-  3. [Tesla Begins Testing Cybercab Without Steering Wheel in Austin](#item-3) ⭐️ 8.0/10
-  4. [Arcturus uses nano-infused copper to halve grid losses](#item-4) ⭐️ 8.0/10
+  2. [Realta Fusion claims first direct electricity generation from fusion](#item-2) ⭐️ 9.0/10
+  3. [Vint Cerf, 'Father of the Internet,' Retires from Google](#item-3) ⭐️ 8.0/10
+  4. [Arcturus uses nano-infused metals to halve grid losses](#item-4) ⭐️ 8.0/10
 
-**🤖 AI News（1）**
-  5. [shot-scraper video records agent demos with Playwright](#item-5) ⭐️ 8.0/10
-
-**₿ Crypto（1）**
-  6. [Circle's market share drops 17% as Stripe, Coinbase, BlackRock back rival stablecoin](#item-6) ⭐️ 7.0/10
+**🤖 AI News（2）**
+  5. [shot-scraper video: Agents Record Demos Automatically](#item-5) ⭐️ 8.0/10
+  6. [ChatGPT Adoption Expands Globally](#item-6) ⭐️ 6.0/10
 
 **📰 Top News（3）**
-  7. [AI Could Revolutionize Vaccine Development](#item-7) ⭐️ 7.0/10
-  8. [US AI Regulatory Tracker by White & Case](#item-8) ⭐️ 7.0/10
-  9. [Anthropic Expands into Drug Development](#item-9) ⭐️ 7.0/10
+  7. [US Extends Export Controls to Advanced AI Models](#item-7) ⭐️ 8.0/10
+  8. [Fourth Amendment Gap in US National AI Framework](#item-8) ⭐️ 7.0/10
+  9. [AI Could Revolutionize Vaccine Development](#item-9) ⭐️ 7.0/10
 
 **🔬 Semiconductors（1）**
-  10. [TokenBudgeting: Debunking TokenMaxxing in Enterprise AI](#item-10) ⭐️ 6.0/10
+  10. [Enterprise Token Spending Patterns Challenge 'TokenMaxxing'](#item-10) ⭐️ 7.0/10
+
+**₿ Crypto（1）**
+  11. [Taiwan Passes Sweeping Crypto Law with Licensing and Penalties](#item-11) ⭐️ 7.0/10
 ---
 
 ## 📌 Other
 
 <a id="item-1"></a>
-## [US Lifts Export Controls on Anthropic's Claude Fable 5 and Mythos 5](https://twitter.com/AnthropicAI/status/2072106151890809341) ⭐️ 9.0/10
+## [US Lifts Export Controls on Anthropic's Fable 5 and Mythos 5](https://twitter.com/AnthropicAI/status/2072106151890809341) ⭐️ 9.0/10
 
-The US Department of Commerce has lifted export controls on Anthropic's Claude Fable 5 and Mythos 5 models, allowing their redeployment with new cybersecurity classifiers that block certain tasks like coding and debugging. This policy shift signals a new phase in AI regulation, balancing national security concerns with industry growth, and affects global access to frontier AI models. The models were initially restricted on June 12, 2026, and after negotiations, Anthropic added classifiers to target cybersecurity tasks; some routine tasks will fall back to Opus 4.8.
+The US Department of Commerce has lifted export controls on Anthropic's advanced AI models, Claude Fable 5 and Claude Mythos 5, allowing their global deployment with new classifiers to block cybersecurity tasks. This marks a significant policy shift, as the US government had previously restricted these frontier models due to national security concerns, and the lifting could reshape global AI competition and regulatory precedents. The models were initially released on June 9, 2026, but were restricted after 96 hours due to jailbreak risks; the new deployment includes classifiers that target and block cybersecurity tasks, with routine coding and debugging falling back to Opus 4.8.
 
 hackernews · Pragmata · Jun 30, 23:55 · [Discussion](https://news.ycombinator.com/item?id=48740771)
 
-**Background**: Claude Fable 5 is Anthropic's most capable widely released model for reasoning and agentic work, while Mythos 5 is a specialized model for finding software vulnerabilities. Export controls were imposed due to concerns about misuse in cybersecurity, leading to a temporary global access ban.
+**Background**: Export controls on AI models are part of US efforts to prevent adversaries from accessing advanced technology. Anthropic's Fable 5 and Mythos 5 are state-of-the-art models with 1M token context windows, priced at $10/M input tokens and $50/M output tokens.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.anthropic.com/news/redeploying-fable-5">Redeploying Claude Fable 5 \ Anthropic</a></li>
-<li><a href="https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5">Introducing Claude Fable 5 and Claude Mythos 5 - Claude Platform Docs</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Claude_Fable_5">Claude Fable 5</a></li>
+<li><a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">Claude Fable 5 and Claude Mythos 5 \ Anthropic</a></li>
+<li><a href="https://www.bbc.com/news/articles/cdr42623e1do">Fable and Mythos : Anthropic says US lifts export ban on its advanced...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/United_States_export_controls_on_AI_chips_and_semiconductors">United States export controls on AI chips and semiconductors</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters expressed concerns about unpredictability in regulation, with some noting that the lack of clear laws harms investment. Others highlighted that the model's coding capabilities are now limited, and the damage to trust in US AI companies may be lasting.
+**Discussion**: Community comments highlight concerns about unpredictability in regulation, with users noting that the lack of clear laws undermines business planning and investment. Some also question the effectiveness of the new classifiers, as the models were previously jailbroken.
 
-**Tags**: `#AI regulation`, `#export controls`, `#Anthropic`, `#Claude`, `#national security`
+**Tags**: `#AI regulation`, `#export controls`, `#Anthropic`, `#US policy`, `#frontier models`
 
 ---
 
 ## 🚀 Tech Trends
 
 <a id="item-2"></a>
-## [Realta Fusion claims first direct electricity from fusion](https://techcrunch.com/2026/06/30/realta-fusion-generates-electricity-directly-from-a-fusion-reaction-an-apparent-first/) ⭐️ 9.0/10
+## [Realta Fusion claims first direct electricity generation from fusion](https://techcrunch.com/2026/06/30/realta-fusion-generates-electricity-directly-from-a-fusion-reaction-an-apparent-first/) ⭐️ 9.0/10
 
-Realta Fusion announced that on June 19, 2026, it successfully generated multiple amps of electricity at 100 volts directly from a fusion reaction, powering a lightbulb using its prototype direct energy converter attached to the WHAM experimental fusion device. This is a potential first for a private company to demonstrate direct electricity generation from fusion, which could significantly improve the efficiency and economics of fusion power plants by bypassing the traditional steam turbine cycle. The direct energy converter harvested energy from alpha particles (charged helium nuclei), which carry about 20% of the energy in deuterium-tritium fusion reactions. The experiment generated enough electricity to power a few lightbulbs, demonstrating proof of concept.
+Realta Fusion announced it has directly generated electricity from a controlled fusion reaction, a milestone that the company says is a first. CEO Kieran Furlong stated, 'We can take power from a plasma.' This breakthrough could dramatically improve the economics of fusion power by eliminating the need for traditional steam turbines and heat exchangers. If verified, it would accelerate the path to commercial fusion energy, a clean and virtually limitless power source. The company uses a compact, scalable fusion system called CoSMo (Compact, Scalable, Modular). Direct energy conversion extracts electricity from charged particles in the plasma, rather than using heat to drive a turbine.
 
 rss · 36氪 - 科技 · Jun 30, 19:12
 
-**Background**: Traditional fusion power concepts convert heat from neutrons into electricity via steam turbines, similar to fission reactors. Direct energy conversion, proposed in the 1960s, aims to capture the kinetic energy of charged fusion products directly as electricity, potentially achieving higher efficiency. Realta Fusion uses a magnetic mirror confinement concept with high-temperature superconducting magnets.
+**Background**: Traditional fusion power plants are expected to use heat from fusion reactions to produce steam and spin turbines, similar to conventional power plants. Direct energy conversion is a more efficient method that converts the kinetic energy of charged particles directly into electricity, but it has been challenging to implement in fusion reactors. Realta Fusion previously raised $36 million in Series A funding.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://techcrunch.com/2026/06/30/realta-fusion-generates-electricity-directly-from-a-fusion-reaction-an-apparent-first/">Realta Fusion generates electricity directly from a fusion reaction, an apparent first | TechCrunch</a></li>
-<li><a href="https://www.prnewswire.com/news-releases/realta-fusion-becomes-first-commercial-fusion-company-to-convert-plasma-energy-into-electricity-302813632.html">REALTA FUSION BECOMES FIRST COMMERCIAL FUSION COMPANY TO CONVERT PLASMA ENERGY INTO ELECTRICITY</a></li>
+<li><a href="https://techcrunch.com/2026/06/30/realta-fusion-generates-electricity-directly-from-a-fusion-reaction-an-apparent-first/">Realta Fusion generates electricity directly from a fusion ...</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Direct_energy_conversion">Direct energy conversion - Wikipedia</a></li>
+<li><a href="https://realtafusion.com/technology/">Technology - Realta Fusion</a></li>
 
 </ul>
 </details>
@@ -83,172 +84,188 @@ rss · 36氪 - 科技 · Jun 30, 19:12
 ---
 
 <a id="item-3"></a>
-## [Tesla Begins Testing Cybercab Without Steering Wheel in Austin](https://techcrunch.com/2026/06/30/tesla-starts-testing-cybercab-without-pedals-or-a-steering-wheel-in-austin/) ⭐️ 8.0/10
+## [Vint Cerf, 'Father of the Internet,' Retires from Google](https://techcrunch.com/2026/06/30/the-father-of-the-internet-is-finally-retiring/) ⭐️ 8.0/10
 
-Tesla has started testing its Cybercab, a fully autonomous two-passenger vehicle without a steering wheel or pedals, on public roads in Austin, Texas. This marks a major step toward launching Tesla's robotaxi network, potentially disrupting the ride-hailing industry and accelerating the adoption of autonomous vehicles. The Cybercab was unveiled in October 2024 with 20 prototypes, and production began in February 2026. The vehicle is designed to be fully autonomous and is intended for Tesla's Robotaxi service.
+Vint Cerf, co-creator of the TCP/IP protocols, is retiring from his role as Google's chief internet evangelist next week. Cerf's retirement marks the end of an era for a key figure who shaped the internet's architecture and advocated for its open development, influencing billions of users worldwide. Cerf has served as Google's chief internet evangelist since 2005, promoting internet standards and accessibility. His departure comes after decades of contributions to networking technology.
 
-rss · 36氪 - 科技 · Jun 30, 15:32
+rss · 36氪 - 科技 · Jul 1, 03:15
 
-**Background**: Tesla has long promised a robotaxi network, and the Cybercab is the vehicle designed for that purpose. Unlike traditional cars, it has no manual controls, relying entirely on Tesla's Full Self-Driving (FSD) system. Competitors like Waymo already operate autonomous ride-hailing services in some cities.
+**Background**: Vint Cerf, often called the 'Father of the Internet,' co-designed the TCP/IP protocols with Bob Kahn in the 1970s, which became the foundation of the modern internet. He has been a prominent advocate for internet governance, security, and expansion.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Cybercab">Cybercab</a></li>
-<li><a href="https://www.tesla.com/robotaxi">Robotaxi | Tesla</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#Tesla`, `#autonomous vehicles`, `#robotaxi`, `#Cybercab`
+**Tags**: `#Vint Cerf`, `#internet history`, `#Google`, `#retirement`, `#technology`
 
 ---
 
 <a id="item-4"></a>
-## [Arcturus uses nano-infused copper to halve grid losses](https://techcrunch.com/2026/06/30/arcturus-could-halve-the-grids-electrical-losses-using-its-nano-infused-copper/) ⭐️ 8.0/10
+## [Arcturus uses nano-infused metals to halve grid losses](https://techcrunch.com/2026/06/30/arcturus-could-halve-the-grids-electrical-losses-using-its-nano-infused-copper/) ⭐️ 8.0/10
 
-Stealth startup Arcturus has developed a laser-based process to infuse carbon nanomaterials into copper, creating a composite that could reduce electrical grid losses by up to 50%. If scaled, this technology could dramatically improve global energy efficiency, reducing electricity waste in transmission and distribution, and lowering carbon emissions. It addresses a critical need for modernizing aging grid infrastructure. The process uses lasers to embed carbon nanomaterials into copper, enhancing its electrical conductivity without significantly increasing cost. The company remains in stealth mode, so specific performance metrics and commercialization timelines are not yet public.
+Stealthy startup Arcturus emerged from stealth with an $8 million seed round, revealing a laser-based process to infuse carbon nanomaterials into copper, dramatically improving electrical conductivity and potentially halving grid electrical losses. This breakthrough could significantly reduce energy waste in power grids, data centers, and electric motors, addressing a critical infrastructure challenge and advancing global energy efficiency. The company has raised a total of $10 million, with investors including Initialized Capital, Breakthrough Energy Discovery, Toyota Ventures, and Wireframe Ventures. The exact composition of the carbon nanomaterials (likely carbon nanotubes or graphene derivatives) has not been publicly disclosed.
 
 rss · 36氪 - 科技 · Jun 30, 15:01
 
-**Background**: Copper is the standard conductor in electrical grids, but it suffers from resistive losses that waste about 5-10% of transmitted energy. Carbon nanomaterials like graphene have much higher conductivity, but integrating them into bulk metals has been challenging. Arcturus's laser infusion technique may overcome this hurdle by creating a stable composite.
+**Background**: Copper is the most common conductor in electrical systems, but it still suffers from resistive losses that waste energy as heat. Nanomaterials like carbon nanotubes have exceptional electrical properties, but integrating them into metals has been challenging. Arcturus uses lasers to achieve this infusion, potentially creating a composite with much lower resistance than pure copper.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://techcrunch.com/2026/06/30/arcturus-could-halve-the-grids-electrical-losses-using-its-nano-infused-copper/">Arcturus could halve the grid’s electrical losses using its nano-infused copper | TechCrunch</a></li>
+<li><a href="https://arcturus.io/">Arcturus | Metals Infused with Advanced Carbon Nanomaterials</a></li>
+<li><a href="https://thesheffieldpress.com/arcturus-raises-8-million-to-boost-copper-conductivity-with">Arcturus raises $8 million to boost copper conductivity with ...</a></li>
+<li><a href="https://europeanpurpose.com/news/nano-infused-copper-startup-arcturus-could-cut-data-centre-energy-losses-in-half">Nano-Infused Copper Startup Arcturus Could Cut Data Centre ...</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#energy`, `#nanomaterials`, `#electrical grid`, `#startup`
+**Tags**: `#materials science`, `#energy`, `#nanotechnology`, `#grid efficiency`
 
 ---
 
 ## 🤖 AI News
 
 <a id="item-5"></a>
-## [shot-scraper video records agent demos with Playwright](https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything) ⭐️ 8.0/10
+## [shot-scraper video: Agents Record Demos Automatically](https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything) ⭐️ 8.0/10
 
-shot-scraper 1.10 introduces the `shot-scraper video` command, which accepts a YAML storyboard file and uses Playwright to record a WebM video of a web application routine. This tool enables coding agents to produce visual proof of their work, addressing a key need for transparency and verification in AI-assisted development. The storyboard defines scenes with actions like clicking, pausing, and waiting for elements; the command can also start a local server and inject JavaScript to mock clipboard APIs.
+Simon Willison released shot-scraper 1.10 with a new 'video' command that uses Playwright to record a video of a web application routine defined in a storyboard.yml file. This tool enables coding agents to automatically produce visual proof of their work, addressing a key need in agent-based development workflows for verifiable demos. The storyboard.yml file specifies server setup, URL, viewport, cursor visibility, wait conditions, JavaScript overrides, and a sequence of scenes with actions like clicks and pauses.
 
 rss · Simon Willison · Jun 30, 16:54
 
-**Background**: shot-scraper is a command-line tool for taking automated screenshots of websites using Playwright, a browser automation library by Microsoft. The new video feature extends this to record full workflows, which is especially useful for AI agents that need to demonstrate their results.
+**Background**: shot-scraper is a command-line utility for automated screenshots of web pages, built on Playwright. Playwright is a browser automation library that supports multiple browsers and enables reliable end-to-end testing. The new video command extends shot-scraper to capture full video recordings of browser interactions.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://shot-scraper.datasette.io/en/stable/video.html">Recording videos - shot - scraper</a></li>
-<li><a href="https://simonwillison.net/2026/Jun/30/shot-scraper-video/">Have your agent record video demos of its work with shot - scraper ...</a></li>
-<li><a href="https://github.com/simonw/shot-scraper">GitHub - simonw/ shot - scraper : A command -line utility for taking...</a></li>
+<li><a href="https://simonwillison.net/2026/Jun/30/shot-scraper-video/">Have your agent record video demos of its work with shot ...</a></li>
+<li><a href="https://github.com/simonw/shot-scraper">GitHub - simonw/shot-scraper: A command-line utility for ...</a></li>
+<li><a href="https://playwright.dev/">Playwright</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#developer-tools`, `#testing`, `#AI-agents`, `#video-recording`, `#playwright`
+**Tags**: `#agent-tooling`, `#playwright`, `#video-recording`, `#web-development`, `#automation`
 
 ---
 
-## ₿ Crypto
-
 <a id="item-6"></a>
-## [Circle's market share drops 17% as Stripe, Coinbase, BlackRock back rival stablecoin](https://www.coindesk.com/business/2026/06/30/circle-slides-8-as-stripe-coinbase-and-blackrock-back-rival-stablecoin-network) ⭐️ 7.0/10
+## [ChatGPT Adoption Expands Globally](https://openai.com/index/how-chatgpt-adoption-has-expanded) ⭐️ 6.0/10
 
-Circle's stablecoin USDC has lost 17% market share as Stripe, Coinbase, and BlackRock back a competing stablecoin network supported by Visa and Mastercard. This shift signals a major realignment in the stablecoin market, potentially challenging the dominance of Tether's USDT and Circle's USDC, and could reshape how major financial institutions engage with digital currencies. The rival network is backed by Visa, Mastercard, and several crypto companies, and aims to challenge the two largest stablecoins by market capitalization. Circle's market share drop of 17% reflects the immediate impact of this new competition.
+OpenAI released new Signals data showing that ChatGPT adoption is growing globally, with users increasing usage frequency and exploring more capabilities across regions and languages. This indicates that ChatGPT is becoming more integrated into daily workflows and expanding its user base, which could drive further innovation and competition in the AI assistant market. The data highlights increased usage and capability exploration, but the blog post lacks specific metrics, technical details, or regional breakdowns.
 
-rss · CoinDesk · Jun 30, 14:32
+rss · OpenAI Blog · Jun 30, 09:00
 
-**Background**: Stablecoins are digital currencies pegged to a stable asset like the US dollar, used for trading and payments. USDT (Tether) and USDC (Circle) are the two largest stablecoins by market cap. The entry of major financial institutions into a competing network could significantly alter the competitive landscape.
+**Background**: ChatGPT is a conversational AI model developed by OpenAI, launched in late 2022. Adoption metrics help gauge its real-world impact and market penetration.
 
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Stablecoin">Stablecoin - Wikipedia</a></li>
-<li><a href="https://www.visa.com/en-us/solutions/stablecoins">Empowering the future of payments with stablecoins - Visa</a></li>
-<li><a href="https://defillama.com/stablecoins">Stablecoin Market Cap Chart, Supply & Peg Data - DefiLlama</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#stablecoin`, `#cryptocurrency`, `#finance`, `#blockchain`, `#market`
+**Tags**: `#ChatGPT`, `#AI adoption`, `#OpenAI`
 
 ---
 
 ## 📰 Top News
 
 <a id="item-7"></a>
-## [AI Could Revolutionize Vaccine Development](https://news.google.com/rss/articles/CBMioAFBVV95cUxPWGlPaUVNdnVRVzc0Y3FzRWQxTWg4UnJSTXhlU0hybGVwYTdiTnkwaXVSVXB3ZU9teGlkamZLLVZfR25MMm1Xc3JUVzdMN2QzOVoxMDhzR3ZybUhVcndZY1pMcFpVOUwxVHhsSi1GbVFueTd1WlFxZEZycjl6T1ZDR0lhcUpGdFhLR0Y0ZWc3N042aDlWdkt6OHdwcnBTc3Zw?oc=5) ⭐️ 7.0/10
+## [US Extends Export Controls to Advanced AI Models](https://news.google.com/rss/articles/CBMigwJBVV95cUxOWTQzZjJ5VGNUaGtJY3dTaTVwb0dWN01yWFY2RGtZX0gwZEpFVHM5NTZZQWRRZ04yZk1Hc2tCcFplcTg2VkxPZzVyUDhBeElfM21Id25YX3NpSXpRSmpLRVlkdXdkRWUyU1NMVXRydklfYmI4eWFrS1BqdnpNTlFmSnZ0RkZZeG9zYXRBRmdDYWIxOVA3R3E2aENra054OHl6WjhkTDVuWUY3eDdtc0J4WmVSR0lKbXNXaUNlaF9obXV5ajUwU0RNR3pLdjhlbGJYdllmNnZwZjNISUlvZFVUUkRGNTNoRWEyODgtVUQ3WXVKeDRUbHNYMEJXNnNQQWFyVGZN?oc=5) ⭐️ 8.0/10
 
-A news article from CIDRAP discusses how artificial intelligence could accelerate vaccine design and testing, potentially ushering in a new era of rapid response to diseases. This matters because faster vaccine development could save millions of lives during pandemics and improve responses to emerging infectious diseases, transforming public health and biotechnology. The article highlights AI's potential to optimize antigen selection, predict immune responses, and streamline clinical trials, but does not provide specific technical details or recent breakthroughs.
+The US Commerce Department has extended export controls to advanced AI models, requiring authorization for release to specific trusted partners. This policy shift tightens control over cutting-edge AI technology, potentially limiting global access and shaping international AI development dynamics. The controls apply to models like Anthropic's Claude Mythos 5 and Fable 5, which were previously restricted but now can be released to trusted partners under authorization.
 
-google_news · CIDRAP · Jun 30, 17:45
+google_news · Mayer Brown · Jul 1, 04:30
 
-**Background**: Traditional vaccine development is slow and costly, often taking years. AI can analyze vast biological data to identify promising vaccine candidates faster, reducing the time from pathogen discovery to vaccine approval.
+**Background**: Export controls are government restrictions on the transfer of sensitive technologies to foreign entities. The US has increasingly targeted AI models due to national security concerns, especially regarding advanced capabilities that could be used for malicious purposes.
 
-**Tags**: `#AI`, `#vaccine development`, `#biotechnology`, `#public health`
+<details><summary>References</summary>
+<ul>
+<li><a href="https://www.canberratimes.com.au/story/9302586/export-controls-lifted-on-anthropics-advanced-ai-model/">Export controls lifted on Anthropic's advanced AI model</a></li>
+<li><a href="https://www.euronews.com/2026/07/01/us-lifts-export-controls-on-powerful-ai-models-anthropic-says">US lifts export controls on powerful AI models , Anthropic... | Euronews</a></li>
+<li><a href="https://economictimes.indiatimes.com/tech/artificial-intelligence/us-allows-anthropic-to-release-mythos-to-trusted-partners/articleshow/132049733.cms">US allows Anthropic to release Mythos to ' trusted partners ' - The...</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI`, `#export controls`, `#regulation`, `#policy`, `#technology`
 
 ---
 
 <a id="item-8"></a>
-## [US AI Regulatory Tracker by White & Case](https://news.google.com/rss/articles/CBMimwFBVV95cUxPbnFCYmQ4ZElvUk9tUFQ0Z210S2hrNmtMaGhid3IxZmozUnVDUm8tZ0FrY05nNlR5bXZLOUk5WWJkcHVjMzhvazJ6M3I2bGtCUlZFWlBBT2l1MGdGbExWY09kWXZZNlQxTW16VjJzSC1McDZ2N21oTjdqclZnVHZTN1VpbmRacC10NjZNYVNIWnBOUGRpblNsRURZbw?oc=5) ⭐️ 7.0/10
+## [Fourth Amendment Gap in US National AI Framework](https://news.google.com/rss/articles/CBMiowFBVV95cUxQS1VZMl9Telk1cG15Um1wLWZfWm1lMExJSWpLMkdvY3d4OGxBUXBOMXhvckZUanJmWFZmcUxhOU02c0hlMXYzTnZqVzVYZlRDUVp1dEJXZC1maDNrMUJmTl9jcGQ3Mk9QZnc3SzRhUkZXYWo2eldtUlBGM1l5RTVYQk9iMy1Ud1hXNVFrZmV2NUlhdmhpanU1dHI2cmZjYjllNExV?oc=5) ⭐️ 7.0/10
 
-White & Case LLP has published a comprehensive tracker outlining current and proposed AI regulations in the United States. This tracker provides a valuable resource for professionals navigating the complex and evolving US AI regulatory landscape, helping them stay informed about policy developments. The tracker is produced by White & Case LLP, a global law firm with expertise in regulatory matters, and covers both enacted and proposed regulations at the federal and state levels.
+An article on The Regulatory Review highlights that the U.S. national AI legislative framework, released on March 20, 2026, lacks explicit protections for Fourth Amendment rights against AI-powered surveillance. This gap could allow government use of AI surveillance without adequate constitutional safeguards, potentially violating privacy rights. It underscores the need for policymakers to integrate Fourth Amendment principles into AI governance. The article argues that current Fourth Amendment doctrine, based on cases like Kyllo v. United States, does not address AI systems that autonomously decide what to surveil. The framework's six pillars focus on innovation and security but omit privacy protections against algorithmic surveillance.
 
-google_news · White & Case LLP · Jun 30, 12:00
+google_news · The Regulatory Review · Jul 1, 04:13
 
-**Background**: AI regulation in the US is fragmented, with no comprehensive federal law yet; instead, various agencies and states have introduced guidelines and bills. This tracker helps consolidate that information for legal and compliance professionals.
+**Background**: The Fourth Amendment protects against unreasonable searches and seizures. AI surveillance technologies, such as facial recognition and predictive policing, can create comprehensive mosaics of personal life, but courts have not yet clarified how the Fourth Amendment applies to AI-driven searches. The national AI framework aims to guide U.S. AI policy but has been criticized for not addressing civil liberties.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/White_&_Case_LLP">White & Case LLP</a></li>
-<li><a href="https://www.whitecase.com/">White & Case LLP International Law Firm, Global Law Practice</a></li>
+<li><a href="https://proceedings.nyumootcourt.org/2026/01/policing-by-algorithm-rethinking-the-fourth-amendment-in-the-age-of-ai-surveillance/">Policing by Algorithm: Rethinking the Fourth Amendment in the Age of AI Surveillance – N.Y.U. Proceedings</a></li>
+<li><a href="https://scholarship.law.upenn.edu/jcl/vol27/iss5/4/">"Artificial Intelligence and the Anti-Authoritarian Fourth Amendment" by Matthew Tokson</a></li>
+<li><a href="https://journals.law.unc.edu/ncjolt/blogs/artificial-intelligence-fourth-amendment-searches/">Artificial Intelligence and Fourth Amendment Searches | North Carolina Journal of Law & Technology</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI regulation`, `#United States`, `#policy`, `#legal`
+**Tags**: `#AI regulation`, `#Fourth Amendment`, `#privacy`, `#policy`
 
 ---
 
 <a id="item-9"></a>
-## [Anthropic Expands into Drug Development](https://news.google.com/rss/articles/CBMidEFVX3lxTE45WVhQaWJkX2FqRi04MW9UaW50dWhzMXNVNGFtVkplOVc0MzhkdFlid2lGblNudDRFRFk0cl9sRmpyU2pvNHdvb3RmNmFlbjNaWlJDUnFuVEk4eFJ0aWlEWXhLN3EzbVQ1bWJrTi1YYXRnUnFR?oc=5) ⭐️ 7.0/10
+## [AI Could Revolutionize Vaccine Development](https://news.google.com/rss/articles/CBMioAFBVV95cUxPWGlPaUVNdnVRVzc0Y3FzRWQxTWg4UnJSTXhlU0hybGVwYTdiTnkwaXVSVXB3ZU9teGlkamZLLVZfR25MMm1Xc3JUVzdMN2QzOVoxMDhzR3ZybUhVcndZY1pMcFpVOUwxVHhsSi1GbVFueTd1WlFxZEZycjl6T1ZDR0lhcUpGdFhLR0Y0ZWc3N042aDlWdkt6OHdwcnBTc3Zw?oc=5) ⭐️ 7.0/10
 
-Anthropic, an AI safety company known for its Claude models, announced it will begin developing its own drugs, marking a major expansion into biotechnology. This move signals a growing trend of AI companies applying their technology to drug discovery, potentially accelerating the development of new therapies and reshaping the biotech landscape. Anthropic has not disclosed specific therapeutic areas or timelines, but the initiative leverages its AI expertise in data analysis and molecular modeling to identify novel drug candidates.
+A new wave of research highlights that artificial intelligence can significantly accelerate vaccine design and testing, potentially enabling faster responses to emerging infectious diseases. This matters because traditional vaccine development is slow and costly, and AI-driven approaches could shorten timelines, reduce costs, and improve pandemic preparedness, ultimately saving lives. AI can assist in antigen discovery, epitope prediction, and clinical trial optimization. However, challenges remain, including algorithmic bias, data privacy, and regulatory harmonization.
 
-google_news · statnews.com · Jun 30, 23:21
+google_news · CIDRAP · Jun 30, 17:45
 
-**Background**: Anthropic is an AI safety and research company founded in 2021 by former OpenAI employees. It develops large language models like Claude, focusing on reliability and interpretability. AI is increasingly used in drug development to analyze biomedical data and simulate drug interactions, though its impact is still debated.
+**Background**: Traditional vaccine development often takes 10-15 years and costs billions of dollars. AI technologies, such as machine learning and deep learning, can analyze vast biological datasets to identify vaccine targets and predict immune responses, streamlining the development pipeline.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Anthropic">Anthropic - Wikipedia</a></li>
-<li><a href="https://www.anthropic.com/">Home \ Anthropic</a></li>
-<li><a href="https://www.anthropic.com/company">Company \ Anthropic</a></li>
+<li><a href="https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2025.1567116/full">Frontiers | Artificial intelligence in vaccine research and development ...</a></li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/39019262/">Leveraging artificial intelligence in vaccine development : A narrative...</a></li>
+<li><a href="https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(25)00497-9/fulltext">Artificial intelligence in the development of vaccines for ...</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI`, `#biotech`, `#Anthropic`, `#drug development`
+**Tags**: `#AI`, `#vaccine development`, `#biotechnology`, `#public health`
 
 ---
 
 ## 🔬 Semiconductors
 
 <a id="item-10"></a>
-## [TokenBudgeting: Debunking TokenMaxxing in Enterprise AI](https://newsletter.semianalysis.com/p/tokenbudgeting-our-conversations) ⭐️ 6.0/10
+## [Enterprise Token Spending Patterns Challenge 'TokenMaxxing'](https://newsletter.semianalysis.com/p/tokenbudgeting-our-conversations) ⭐️ 7.0/10
 
-The article 'TokenBudgeting: Our Conversations with Enterprises on Token Spend' questions whether widespread token maximization (TokenMaxxing) was ever a real phenomenon in enterprise AI usage, based on direct conversations with enterprises. This analysis challenges a common assumption in the AI industry, helping enterprises focus on cost-effective token budgeting rather than maximizing token consumption, which could lead to better resource allocation and reduced AI operational costs. The article reports that enterprises are moving toward token budgeting architectures that treat tokens like memory or CPU resources, enforcing limits and optimizing usage rather than pursuing raw token volume.
+A new analysis from SemiAnalysis, based on conversations with enterprises, suggests that widespread 'TokenMaxxing'—the practice of maximizing AI token consumption as a productivity metric—may not be as common as assumed, with token spend concentrated among a few top performers. This challenges the prevailing narrative that enterprises are blindly maximizing token usage, which has implications for AI budgeting, productivity metrics, and the strategies of AI service providers who may benefit from such trends. The analysis notes that at SemiAnalysis itself, only a handful of employees spend 4 to 5 figures per day on tokens, while others spend close to zero, and no limits have been imposed as top performers are the heavy users.
 
 rss · Semianalysis · Jun 30, 18:32
 
-**Background**: TokenMaxxing refers to the practice of maximizing token usage as a productivity metric in AI workplaces, often criticized as vanity metric. Token budgeting is an emerging architectural approach that plans, allocates, and enforces token usage across AI applications for cost control and predictability.
+**Background**: TokenMaxxing is a term describing the practice of maximizing AI token consumption as a proxy for productivity, often encouraged by management or AI vendors. Critics argue it can lead to wasteful spending and poor code quality. This analysis provides real-world enterprise data that questions the prevalence of this behavior.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Token_maxxing">Token maxxing - Wikipedia</a></li>
-<li><a href="https://www.linkedin.com/pulse/why-token-budgeting-architecture-missing-layer-enterprise-rama-maddi-lmlsc">Why Token Budgeting Architecture Is the Missing Layer in Enterprise ...</a></li>
-<li><a href="https://www.vantage.sh/blog/ai-token-budgeting">Token Budgeting : How To Think About AI Cost Control | Vantage</a></li>
+<li><a href="https://newsletter.semianalysis.com/p/tokenbudgeting-our-conversations">TokenBudgeting: Our Conversations with Enterprises on Token Spend</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Token_maxxing">Token maxxing</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI`, `#enterprise`, `#token usage`, `#LLM`, `#cost optimization`
+**Tags**: `#AI`, `#enterprise`, `#token spend`, `#industry analysis`
+
+---
+
+## ₿ Crypto
+
+<a id="item-11"></a>
+## [Taiwan Passes Sweeping Crypto Law with Licensing and Penalties](https://www.coindesk.com/policy/2026/07/01/taiwan-s-sweeping-crypto-law-raises-the-bar-with-licensing-reserve-mandates-and-tough-penalties) ⭐️ 7.0/10
+
+Taiwan has passed its first dedicated cryptocurrency law, requiring all Virtual Asset Service Providers (VASPs) to obtain a license from the Financial Supervisory Commission (FSC) and comply with reserve mandates for stablecoins, with penalties including up to 7 years in prison for violations. This law sets a new benchmark for crypto regulation in Asia, potentially influencing other jurisdictions and increasing compliance costs for exchanges, while providing clearer legal protections for investors. The law mandates a strict stablecoin framework by 2027, requiring issuers to maintain full reserves, and imposes severe penalties including prison terms for unlicensed operations and fraud.
+
+rss · CoinDesk · Jul 1, 05:04
+
+**Background**: Previously, cryptocurrency in Taiwan operated in a legal gray area with no dedicated licensing regime, only AML registration requirements. The FSC had classified virtual assets as highly speculative 'virtual commodities' rather than legal tender. This new law brings comprehensive oversight, aligning Taiwan with global trends toward stricter crypto regulation.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://news.bitcoin.com/taiwan-unleashes-sweeping-crypto-law-with-7-year-prison-terms-for-rule-breakers/">Taiwan Unleashes Sweeping Crypto Law With 7-Year Prison Terms for...</a></li>
+<li><a href="https://www.globallegalinsights.com/practice-areas/blockchain-cryptocurrency-laws-and-regulations/taiwan/">Blockchain & Cryptocurrency Laws & Regulations 2026 | Taiwan</a></li>
+<li><a href="https://legalbison.com/crypto-license/taiwan/">Crypto License in Taiwan | Expert Legal Consulting Service - LegalBison</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#cryptocurrency`, `#regulation`, `#Taiwan`, `#blockchain`, `#fintech`
 
 ---
