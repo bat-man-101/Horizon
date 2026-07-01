@@ -17,6 +17,53 @@ def _pangu(text: str) -> str:
     return text
 
 
+# Map individual source categories → category group keys used in config
+_SOURCE_CATEGORY_TO_GROUP = {
+    "news": "热点新闻",
+    "hackernews": "热点新闻",
+    "ai-news": "ai新闻",
+    "ai-tools": "ai新闻",
+    "ai-official": "ai新闻",
+    "machine-learning": "ai新闻",
+    "tech-news": "科技动态",
+    "github-trending": "科技动态",
+    "research": "研究",
+    "papers": "研究",
+    "crypto": "crypto",
+    "semiconductors": "半导体",
+}
+
+# Display names and emojis for each group (Chinese)
+_CATEGORY_DISPLAY_ZH: Dict[str, tuple[str, str]] = {
+    "热点新闻": ("📰", "热点新闻"),
+    "ai新闻": ("🤖", "AI 新闻"),
+    "科技动态": ("🚀", "科技动态"),
+    "研究": ("📄", "论文研究"),
+    "crypto": ("₿", "加密资产"),
+    "半导体": ("🔬", "半导体"),
+    "other": ("📌", "其他"),
+}
+
+# Display names and emojis for each group (English)
+_CATEGORY_DISPLAY_EN: Dict[str, tuple[str, str]] = {
+    "热点新闻": ("📰", "Top News"),
+    "ai新闻": ("🤖", "AI News"),
+    "科技动态": ("🚀", "Tech Trends"),
+    "研究": ("📄", "Research"),
+    "crypto": ("₿", "Crypto"),
+    "半导体": ("🔬", "Semiconductors"),
+    "other": ("📌", "Other"),
+}
+
+
+def _get_category_group(item: ContentItem) -> str:
+    """Get the category group key for an item based on its metadata category."""
+    cat = item.metadata.get("category")
+    if isinstance(cat, str) and cat in _SOURCE_CATEGORY_TO_GROUP:
+        return _SOURCE_CATEGORY_TO_GROUP[cat]
+    return "other"
+
+
 LABELS = {
     "en": {
         "header": "Horizon Daily",
@@ -74,9 +121,10 @@ class DailySummarizer:
         total_fetched: int,
         language: str = "en",
     ) -> str:
-        """Generate daily summary in Markdown format.
+        """Generate daily summary in Markdown format with category sections.
 
-        Items are rendered in score-descending order (already sorted by orchestrator).
+        Items are grouped by their source category and rendered under
+        emoji-labeled section headers (e.g. 🤖 AI News).
 
         Args:
             items: High-scoring content items (already enriched)
@@ -98,18 +146,45 @@ class DailySummarizer:
             "---\n\n"
         )
 
-        # TOC
-        toc_entries = []
-        for i, item in enumerate(items):
-            _t = item.metadata.get(f"title_{language}") or item.title
-            t = str(_t).replace("[", "(").replace("]", ")")
-            if language == "zh":
-                t = _pangu(t)
-            score = item.ai_score or "?"
-            toc_entries.append(f"{i + 1}. [{t}](#item-{i + 1}) \u2b50\ufe0f {score}/10")
-        toc = "\n".join(toc_entries) + "\n\n---\n\n"
+        # Group items by category
+        category_display = _CATEGORY_DISPLAY_ZH if language == "zh" else _CATEGORY_DISPLAY_EN
+        groups: Dict[str, List[ContentItem]] = {}
+        group_order: List[str] = []
+        for item in items:
+            gk = _get_category_group(item)
+            if gk not in groups:
+                groups[gk] = []
+                group_order.append(gk)
+            groups[gk].append(item)
 
-        parts = [self._format_item(item, labels, language, i + 1) for i, item in enumerate(items)]
+        # Build TOC with category info
+        toc_sections: List[str] = []
+        global_idx = 0
+        for gk in group_order:
+            group_items = groups[gk]
+            emoji, display_name = category_display.get(gk, ("📌", gk))
+            toc_sections.append(f"**{emoji} {display_name}（{len(group_items)}）**")
+            for item in group_items:
+                global_idx += 1
+                _t = item.metadata.get(f"title_{language}") or item.title
+                t = str(_t).replace("[", "(").replace("]", ")")
+                if language == "zh":
+                    t = _pangu(t)
+                score = item.ai_score or "?"
+                toc_sections.append(f"  {global_idx}. [{t}](#item-{global_idx}) ⭐️ {score}/10")
+            toc_sections.append("")
+        toc = "\n".join(toc_sections) + "---\n\n"
+
+        # Render item details grouped by category
+        global_idx = 0
+        parts: List[str] = []
+        for gk in group_order:
+            group_items = groups[gk]
+            emoji, display_name = category_display.get(gk, ("📌", gk))
+            parts.append(f"## {emoji} {display_name}\n\n")
+            for item in group_items:
+                global_idx += 1
+                parts.append(self._format_item(item, labels, language, global_idx))
 
         return header + toc + "".join(parts)
 

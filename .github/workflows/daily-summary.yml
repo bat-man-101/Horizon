@@ -29,6 +29,21 @@ jobs:
       - name: Prepare GitHub Actions config
         run: cp data/config.github.json data/config.json
 
+      - name: Test webhook connectivity
+        env:
+          HORIZON_WEBHOOK_URL: ${{ secrets.HORIZON_WEBHOOK_URL }}
+        run: |
+          echo "测试 webhook URL 连通性..."
+          RESP=$(curl -s -o /dev/null -w "%{http_code}" -X POST \
+            -H "Content-Type: application/json" \
+            -d '{"msgtype":"markdown","markdown":{"content":"#  GHA 连通性测试\n\n> 来自 GitHub Actions 运行环境的测试消息"}}' \
+            "$HORIZON_WEBHOOK_URL")
+          if [ "$RESP" = "200" ]; then
+            echo "::notice::Webhook URL 连通性测试通过 (HTTP 200)"
+          else
+            echo "::warning::Webhook URL 测试返回 HTTP $RESP"
+          fi
+
       - name: Run Horizon
         env:
           # AI API Keys (DeepSeek 推荐)
