@@ -183,12 +183,12 @@
     },
     "google_news": {
       "enabled": true,
-      "query": "社会热点 新闻",
-      "language": "zh-CN",
-      "country": "CN",
+      "query": "artificial intelligence",
+      "language": "en",
+      "country": "US",
       "ceid": null,
-      "max_results": 30,
-      "category": "social-news"
+      "max_results": 50,
+      "category": "news"
     },
     "gdelt": {
       "enabled": true,
@@ -204,13 +204,12 @@
   "filtering": {
     "ai_score_threshold": 6.0,
     "time_window_hours": 24,
-    "max_items": 17,
+    "max_items": 15,
     "category_groups": {
-      "社会热点": {
-        "limit": 5,
-        "categories": ["social-news"]
-      },
       "热点新闻": {
+        "limit": 3,
+        "categories": ["news", "hackernews"]
+      },
         "limit": 3,
         "categories": ["news", "hackernews"]
       },
@@ -236,7 +235,7 @@
       }
     },
     "default_group": "other",
-    "default_group_limit": 1
+    "default_group_limit": 3
   },
   "webhook": {
     "enabled": true,
