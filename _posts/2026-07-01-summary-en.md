@@ -5,198 +5,222 @@ date: 2026-07-01
 lang: en
 ---
 
-> From 164 items, 11 important content pieces were selected
+> From 183 items, 10 important content pieces were selected
 
 ---
 
-1. [US Lifts Export Controls on Anthropic's Claude Fable 5 and Mythos 5](#item-1) ⭐️ 9.0/10
-2. [Realta Fusion claims first direct electricity generation from fusion](#item-2) ⭐️ 9.0/10
-3. [shot-scraper video lets agents record demos](#item-3) ⭐️ 8.0/10
-4. [Tesla Begins Testing Cybercab Without Steering Wheel in Austin](#item-4) ⭐️ 8.0/10
-5. [Arcturus' Nano-Infused Copper Could Halve Grid Losses](#item-5) ⭐️ 8.0/10
-6. [US Senators Propose Bill to Block AI Access by Adversaries](#item-6) ⭐️ 7.0/10
-7. [AI Could Revolutionize Vaccine Development](#item-7) ⭐️ 7.0/10
-8. [AWS Resilience Patterns for Bedrock and LLM Gateway](#item-8) ⭐️ 7.0/10
-9. [Anthropic to Develop Its Own Drugs](#item-9) ⭐️ 7.0/10
-10. [OpenAI Reports Global Growth in ChatGPT Adoption](#item-10) ⭐️ 6.0/10
-11. [TokenBudgeting: Did Enterprise TokenMaxxing Ever Happen?](#item-11) ⭐️ 6.0/10
+**📌 Other（1）**
+  1. [US Lifts Export Controls on Anthropic's Claude Fable 5 and Mythos 5](#item-1) ⭐️ 9.0/10
 
+**🚀 Tech Trends（3）**
+  2. [Realta Fusion claims first direct electricity from fusion](#item-2) ⭐️ 9.0/10
+  3. [Tesla Begins Testing Cybercab Without Steering Wheel in Austin](#item-3) ⭐️ 8.0/10
+  4. [Arcturus uses nano-infused copper to halve grid losses](#item-4) ⭐️ 8.0/10
+
+**🤖 AI News（1）**
+  5. [shot-scraper video records agent demos with Playwright](#item-5) ⭐️ 8.0/10
+
+**₿ Crypto（1）**
+  6. [Circle's market share drops 17% as Stripe, Coinbase, BlackRock back rival stablecoin](#item-6) ⭐️ 7.0/10
+
+**📰 Top News（3）**
+  7. [AI Could Revolutionize Vaccine Development](#item-7) ⭐️ 7.0/10
+  8. [US AI Regulatory Tracker by White & Case](#item-8) ⭐️ 7.0/10
+  9. [Anthropic Expands into Drug Development](#item-9) ⭐️ 7.0/10
+
+**🔬 Semiconductors（1）**
+  10. [TokenBudgeting: Debunking TokenMaxxing in Enterprise AI](#item-10) ⭐️ 6.0/10
 ---
+
+## 📌 Other
 
 <a id="item-1"></a>
 ## [US Lifts Export Controls on Anthropic's Claude Fable 5 and Mythos 5](https://twitter.com/AnthropicAI/status/2072106151890809341) ⭐️ 9.0/10
 
-The US Department of Commerce has lifted export controls on Anthropic's Claude Fable 5 and Mythos 5, allowing the company to restore access to these models globally starting tomorrow. This policy shift directly impacts the availability of frontier AI models and sparks debate on AI regulation, global competitiveness, and the balance between security and innovation. Anthropic had previously agreed to proactively detect and address security risks, but critics argue that such measures were already in place and the administration's backpedaling leaves the situation worse.
+The US Department of Commerce has lifted export controls on Anthropic's Claude Fable 5 and Mythos 5 models, allowing their redeployment with new cybersecurity classifiers that block certain tasks like coding and debugging. This policy shift signals a new phase in AI regulation, balancing national security concerns with industry growth, and affects global access to frontier AI models. The models were initially restricted on June 12, 2026, and after negotiations, Anthropic added classifiers to target cybersecurity tasks; some routine tasks will fall back to Opus 4.8.
 
 hackernews · Pragmata · Jun 30, 23:55 · [Discussion](https://news.ycombinator.com/item?id=48740771)
 
-**Background**: Claude Fable 5 and Mythos 5 are advanced large language models developed by Anthropic, with Mythos 5 designed for vulnerability discovery in software. Export controls were imposed due to national security concerns, but recent Chinese AI advancements have challenged the effectiveness of such restrictions.
+**Background**: Claude Fable 5 is Anthropic's most capable widely released model for reasoning and agentic work, while Mythos 5 is a specialized model for finding software vulnerabilities. Export controls were imposed due to concerns about misuse in cybersecurity, leading to a temporary global access ban.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">Claude Fable 5 and Claude Mythos 5 \ Anthropic</a></li>
+<li><a href="https://www.anthropic.com/news/redeploying-fable-5">Redeploying Claude Fable 5 \ Anthropic</a></li>
 <li><a href="https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5">Introducing Claude Fable 5 and Claude Mythos 5 - Claude Platform Docs</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Claude_Fable_5">Claude Fable 5</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments are mixed: some argue the damage is done and trust in US frontier models is broken, while others question the value of export controls given Chinese models' rapid progress. A copy of the Commerce Department's letter to Anthropic was shared, highlighting the ongoing regulatory back-and-forth.
+**Discussion**: Commenters expressed concerns about unpredictability in regulation, with some noting that the lack of clear laws harms investment. Others highlighted that the model's coding capabilities are now limited, and the damage to trust in US AI companies may be lasting.
 
-**Tags**: `#AI regulation`, `#export controls`, `#Anthropic`, `#geopolitics`, `#frontier models`
+**Tags**: `#AI regulation`, `#export controls`, `#Anthropic`, `#Claude`, `#national security`
 
 ---
 
-<a id="item-2"></a>
-## [Realta Fusion claims first direct electricity generation from fusion](https://techcrunch.com/2026/06/30/realta-fusion-generates-electricity-directly-from-a-fusion-reaction-an-apparent-first/) ⭐️ 9.0/10
+## 🚀 Tech Trends
 
-Realta Fusion has announced that it directly generated electricity from a fusion reaction, a milestone that appears to be a first in the field. CEO Kieran Furlong stated, 'We can take power from a plasma.' Direct electricity generation from fusion could dramatically improve the economics of fusion reactors, bringing clean, virtually limitless energy closer to commercial reality. This breakthrough may accelerate the timeline for fusion power plants and reshape the global energy landscape. Realta Fusion previously raised $36 million in a Series A round led by Future Ventures in 2025. The company spun out from the University of Wisconsin-Madison in 2022 and focuses on compact, scalable fusion systems using superconducting materials.
+<a id="item-2"></a>
+## [Realta Fusion claims first direct electricity from fusion](https://techcrunch.com/2026/06/30/realta-fusion-generates-electricity-directly-from-a-fusion-reaction-an-apparent-first/) ⭐️ 9.0/10
+
+Realta Fusion announced that on June 19, 2026, it successfully generated multiple amps of electricity at 100 volts directly from a fusion reaction, powering a lightbulb using its prototype direct energy converter attached to the WHAM experimental fusion device. This is a potential first for a private company to demonstrate direct electricity generation from fusion, which could significantly improve the efficiency and economics of fusion power plants by bypassing the traditional steam turbine cycle. The direct energy converter harvested energy from alpha particles (charged helium nuclei), which carry about 20% of the energy in deuterium-tritium fusion reactions. The experiment generated enough electricity to power a few lightbulbs, demonstrating proof of concept.
 
 rss · 36氪 - 科技 · Jun 30, 19:12
 
-**Background**: Fusion energy replicates the process that powers the sun, but most experimental reactors generate heat that must be converted to electricity via traditional turbines, losing efficiency. Direct electricity generation captures energy from charged particles in the plasma, bypassing the thermal cycle. Other companies like Helion Energy are also pursuing this approach but have not yet demonstrated it.
+**Background**: Traditional fusion power concepts convert heat from neutrons into electricity via steam turbines, similar to fission reactors. Direct energy conversion, proposed in the 1960s, aims to capture the kinetic energy of charged fusion products directly as electricity, potentially achieving higher efficiency. Realta Fusion uses a magnetic mirror confinement concept with high-temperature superconducting magnets.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://techcrunch.com/2026/06/30/realta-fusion-generates-electricity-directly-from-a-fusion-reaction-an-apparent-first/">Realta Fusion generates electricity directly from... | TechCrunch</a></li>
-<li><a href="https://realtafusion.com/technology/">Technology | Realta Fusion</a></li>
-<li><a href="https://www.crunchbase.com/organization/realta-fusion">Realta Fusion - Crunchbase Company Profile & Funding</a></li>
+<li><a href="https://techcrunch.com/2026/06/30/realta-fusion-generates-electricity-directly-from-a-fusion-reaction-an-apparent-first/">Realta Fusion generates electricity directly from a fusion reaction, an apparent first | TechCrunch</a></li>
+<li><a href="https://www.prnewswire.com/news-releases/realta-fusion-becomes-first-commercial-fusion-company-to-convert-plasma-energy-into-electricity-302813632.html">REALTA FUSION BECOMES FIRST COMMERCIAL FUSION COMPANY TO CONVERT PLASMA ENERGY INTO ELECTRICITY</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Direct_energy_conversion">Direct energy conversion - Wikipedia</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#fusion energy`, `#clean energy`, `#breakthrough`, `#physics`, `#technology`
+**Tags**: `#fusion energy`, `#clean energy`, `#breakthrough`, `#physics`, `#startup`
 
 ---
 
 <a id="item-3"></a>
-## [shot-scraper video lets agents record demos](https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything) ⭐️ 8.0/10
+## [Tesla Begins Testing Cybercab Without Steering Wheel in Austin](https://techcrunch.com/2026/06/30/tesla-starts-testing-cybercab-without-pedals-or-a-steering-wheel-in-austin/) ⭐️ 8.0/10
 
-Simon Willison released shot-scraper 1.10 with a new 'shot-scraper video' command that uses Playwright to record WebM videos of web application routines defined in a storyboard.yml file. This tool enables AI coding agents to automatically produce visual proof of their work, addressing a critical need for verifying agent behavior in software development workflows. The storyboard.yml file specifies server setup, viewport size, cursor visibility, wait conditions, JavaScript overrides (e.g., clipboard mocking), and a sequence of scenes with actions like clicks and pauses. The command supports authentication via a cookie JSON file.
+Tesla has started testing its Cybercab, a fully autonomous two-passenger vehicle without a steering wheel or pedals, on public roads in Austin, Texas. This marks a major step toward launching Tesla's robotaxi network, potentially disrupting the ride-hailing industry and accelerating the adoption of autonomous vehicles. The Cybercab was unveiled in October 2024 with 20 prototypes, and production began in February 2026. The vehicle is designed to be fully autonomous and is intended for Tesla's Robotaxi service.
+
+rss · 36氪 - 科技 · Jun 30, 15:32
+
+**Background**: Tesla has long promised a robotaxi network, and the Cybercab is the vehicle designed for that purpose. Unlike traditional cars, it has no manual controls, relying entirely on Tesla's Full Self-Driving (FSD) system. Competitors like Waymo already operate autonomous ride-hailing services in some cities.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Cybercab">Cybercab</a></li>
+<li><a href="https://www.tesla.com/robotaxi">Robotaxi | Tesla</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#Tesla`, `#autonomous vehicles`, `#robotaxi`, `#Cybercab`
+
+---
+
+<a id="item-4"></a>
+## [Arcturus uses nano-infused copper to halve grid losses](https://techcrunch.com/2026/06/30/arcturus-could-halve-the-grids-electrical-losses-using-its-nano-infused-copper/) ⭐️ 8.0/10
+
+Stealth startup Arcturus has developed a laser-based process to infuse carbon nanomaterials into copper, creating a composite that could reduce electrical grid losses by up to 50%. If scaled, this technology could dramatically improve global energy efficiency, reducing electricity waste in transmission and distribution, and lowering carbon emissions. It addresses a critical need for modernizing aging grid infrastructure. The process uses lasers to embed carbon nanomaterials into copper, enhancing its electrical conductivity without significantly increasing cost. The company remains in stealth mode, so specific performance metrics and commercialization timelines are not yet public.
+
+rss · 36氪 - 科技 · Jun 30, 15:01
+
+**Background**: Copper is the standard conductor in electrical grids, but it suffers from resistive losses that waste about 5-10% of transmitted energy. Carbon nanomaterials like graphene have much higher conductivity, but integrating them into bulk metals has been challenging. Arcturus's laser infusion technique may overcome this hurdle by creating a stable composite.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://techcrunch.com/2026/06/30/arcturus-could-halve-the-grids-electrical-losses-using-its-nano-infused-copper/">Arcturus could halve the grid’s electrical losses using its nano-infused copper | TechCrunch</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#energy`, `#nanomaterials`, `#electrical grid`, `#startup`
+
+---
+
+## 🤖 AI News
+
+<a id="item-5"></a>
+## [shot-scraper video records agent demos with Playwright](https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything) ⭐️ 8.0/10
+
+shot-scraper 1.10 introduces the `shot-scraper video` command, which accepts a YAML storyboard file and uses Playwright to record a WebM video of a web application routine. This tool enables coding agents to produce visual proof of their work, addressing a key need for transparency and verification in AI-assisted development. The storyboard defines scenes with actions like clicking, pausing, and waiting for elements; the command can also start a local server and inject JavaScript to mock clipboard APIs.
 
 rss · Simon Willison · Jun 30, 16:54
 
-**Background**: shot-scraper is a tool for taking screenshots of web pages using Playwright, a browser automation library. The new video command extends this to record full sessions, allowing developers to create reproducible demos without manual recording.
+**Background**: shot-scraper is a command-line tool for taking automated screenshots of websites using Playwright, a browser automation library by Microsoft. The new video feature extends this to record full workflows, which is especially useful for AI agents that need to demonstrate their results.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://shot-scraper.datasette.io/en/stable/video.html">Recording videos - shot - scraper</a></li>
 <li><a href="https://simonwillison.net/2026/Jun/30/shot-scraper-video/">Have your agent record video demos of its work with shot - scraper ...</a></li>
-<li><a href="https://www.remio.ai/post/shot-scraper-video-lets-ai-agents-record-demo-videos">Shot - scraper Video Lets AI Agents Record Demo Videos</a></li>
+<li><a href="https://github.com/simonw/shot-scraper">GitHub - simonw/ shot - scraper : A command -line utility for taking...</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#developer-tools`, `#AI-agents`, `#testing`, `#video-recording`, `#playwright`
+**Tags**: `#developer-tools`, `#testing`, `#AI-agents`, `#video-recording`, `#playwright`
 
 ---
 
-<a id="item-4"></a>
-## [Tesla Begins Testing Cybercab Without Steering Wheel in Austin](https://techcrunch.com/2026/06/30/tesla-starts-testing-cybercab-without-pedals-or-a-steering-wheel-in-austin/) ⭐️ 8.0/10
-
-Tesla has started testing its Cybercab robotaxi without pedals or a steering wheel on public roads in Austin, Texas, marking a major step toward launching a driverless ride-hailing network. This testing brings Tesla closer to fulfilling Elon Musk's long-standing promise of a robotaxi network, which could disrupt the transportation industry by removing the driver cost and enabling autonomous ride-hailing at scale. The Cybercab is a two-passenger, fully autonomous electric vehicle designed without manual controls, relying solely on Tesla's camera-based Autopilot system. Testing in Austin is a real-world validation before commercial deployment.
-
-rss · 36氪 - 科技 · Jun 30, 15:32
-
-**Background**: Tesla's Cybercab was unveiled at the 'We, Robot' event in 2024, with a target price around $30,000. The company aims to operate its own ride-hailing network where owners can send their cars to earn fares, similar to a robotaxi service. Competitors like Waymo already operate driverless taxis in some cities, but Tesla's approach uses only cameras rather than lidar or radar.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Tesla_Cybercab">Tesla Cybercab - Wikipedia</a></li>
-<li><a href="https://www.tesla.com/robotaxi">Robotaxi | Tesla</a></li>
-<li><a href="https://www.tesery.com/blogs/news/tesla-launches-fully-driverless-public-robotaxi-rides-in-austin-without-safety-monitors">Tesla Launches Fully Driverless Public Robotaxi Rides in Austin Withou</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#Tesla`, `#autonomous vehicles`, `#robotaxi`, `#self-driving`, `#transportation`
-
----
-
-<a id="item-5"></a>
-## [Arcturus' Nano-Infused Copper Could Halve Grid Losses](https://techcrunch.com/2026/06/30/arcturus-could-halve-the-grids-electrical-losses-using-its-nano-infused-copper/) ⭐️ 8.0/10
-
-Stealth startup Arcturus has developed a laser-based process to infuse carbon nanomaterials into copper, claiming it can halve the electrical losses in power transmission. This breakthrough could dramatically improve energy efficiency in the electrical grid, reducing wasted electricity and lowering costs for utilities and consumers. The process uses lasers to embed carbon nanomaterials into copper and aluminum, enhancing conductivity without changing the conductor's size. Arcturus claims the material can carry more electricity while generating less heat.
-
-rss · 36氪 - 科技 · Jun 30, 15:01
-
-**Background**: Electrical grids lose about 5-10% of transmitted energy as heat due to resistance in conductors. Copper is the standard material for power lines, but its conductivity is limited. Nanocarbon-infused metals, known as covetic materials, have been studied for years, but Arcturus' laser infusion method may offer a scalable production route.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://techcrunch.com/2026/06/30/arcturus-could-halve-the-grids-electrical-losses-using-its-nano-infused-copper/">Arcturus could halve the grid’s electrical losses using its nano - infused ...</a></li>
-<li><a href="https://techscoopcanada.com/arcturus-unveils-nano-infused-copper-to-halve-grid-electrical-losses/">Arcturus Unveils Nano- Infused Copper To Halve Grid Electrical Losses</a></li>
-<li><a href="https://www.researchgate.net/publication/309762955_Nanocarbon-infused_Metals_A_New_Class_of_Covetic_Materials_for_Energy_Applications">Nanocarbon- infused Metals : A New Class of Covetic Materials for...</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#energy`, `#materials science`, `#nanotechnology`, `#startup`
-
----
+## ₿ Crypto
 
 <a id="item-6"></a>
-## [US Senators Propose Bill to Block AI Access by Adversaries](https://www.coindesk.com/policy/2026/06/30/u-s-senators-seek-to-block-foreign-adversaries-from-ai-technology-in-new-bill) ⭐️ 7.0/10
+## [Circle's market share drops 17% as Stripe, Coinbase, BlackRock back rival stablecoin](https://www.coindesk.com/business/2026/06/30/circle-slides-8-as-stripe-coinbase-and-blackrock-back-rival-stablecoin-network) ⭐️ 7.0/10
 
-A group of U.S. senators introduced a new bill aimed at preventing foreign adversaries from accessing advanced artificial intelligence technologies, citing national security concerns. This legislation could reshape global AI development by restricting technology transfer to adversarial nations, potentially accelerating a split in AI ecosystems and intensifying geopolitical tensions. The bill's specific provisions and list of targeted adversaries have not been disclosed yet, but it is expected to impose strict export controls and investment screening related to AI technologies.
+Circle's stablecoin USDC has lost 17% market share as Stripe, Coinbase, and BlackRock back a competing stablecoin network supported by Visa and Mastercard. This shift signals a major realignment in the stablecoin market, potentially challenging the dominance of Tether's USDT and Circle's USDC, and could reshape how major financial institutions engage with digital currencies. The rival network is backed by Visa, Mastercard, and several crypto companies, and aims to challenge the two largest stablecoins by market capitalization. Circle's market share drop of 17% reflects the immediate impact of this new competition.
 
-rss · CoinDesk · Jun 30, 23:02
+rss · CoinDesk · Jun 30, 14:32
 
-**Background**: The U.S. government has increasingly focused on controlling the flow of critical technologies like AI to countries such as China and Russia. Previous actions include adding AI-related entities to trade blacklists and tightening semiconductor exports. This bill represents a legislative effort to formalize and expand such restrictions.
+**Background**: Stablecoins are digital currencies pegged to a stable asset like the US dollar, used for trading and payments. USDT (Tether) and USDC (Circle) are the two largest stablecoins by market cap. The entry of major financial institutions into a competing network could significantly alter the competitive landscape.
 
-**Tags**: `#AI policy`, `#legislation`, `#national security`, `#technology export control`
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Stablecoin">Stablecoin - Wikipedia</a></li>
+<li><a href="https://www.visa.com/en-us/solutions/stablecoins">Empowering the future of payments with stablecoins - Visa</a></li>
+<li><a href="https://defillama.com/stablecoins">Stablecoin Market Cap Chart, Supply & Peg Data - DefiLlama</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#stablecoin`, `#cryptocurrency`, `#finance`, `#blockchain`, `#market`
 
 ---
+
+## 📰 Top News
 
 <a id="item-7"></a>
 ## [AI Could Revolutionize Vaccine Development](https://news.google.com/rss/articles/CBMioAFBVV95cUxPWGlPaUVNdnVRVzc0Y3FzRWQxTWg4UnJSTXhlU0hybGVwYTdiTnkwaXVSVXB3ZU9teGlkamZLLVZfR25MMm1Xc3JUVzdMN2QzOVoxMDhzR3ZybUhVcndZY1pMcFpVOUwxVHhsSi1GbVFueTd1WlFxZEZycjl6T1ZDR0lhcUpGdFhLR0Y0ZWc3N042aDlWdkt6OHdwcnBTc3Zw?oc=5) ⭐️ 7.0/10
 
-A recent article from CIDRAP discusses how artificial intelligence could accelerate vaccine design and testing, potentially ushering in a new era of vaccine development. This matters because faster vaccine development could improve pandemic response and reduce the time to market for new vaccines, benefiting global public health. The article highlights AI's potential to optimize antigen design, predict immune responses, and streamline clinical trials, but does not provide specific technical breakthroughs or case studies.
+A news article from CIDRAP discusses how artificial intelligence could accelerate vaccine design and testing, potentially ushering in a new era of rapid response to diseases. This matters because faster vaccine development could save millions of lives during pandemics and improve responses to emerging infectious diseases, transforming public health and biotechnology. The article highlights AI's potential to optimize antigen selection, predict immune responses, and streamline clinical trials, but does not provide specific technical details or recent breakthroughs.
 
 google_news · CIDRAP · Jun 30, 17:45
 
-**Background**: Traditional vaccine development is a lengthy and costly process, often taking years. AI can analyze vast datasets to identify promising vaccine candidates more quickly, reducing the time and cost involved.
+**Background**: Traditional vaccine development is slow and costly, often taking years. AI can analyze vast biological data to identify promising vaccine candidates faster, reducing the time from pathogen discovery to vaccine approval.
 
-**Tags**: `#AI`, `#vaccine development`, `#healthcare`, `#biotechnology`
+**Tags**: `#AI`, `#vaccine development`, `#biotechnology`, `#public health`
 
 ---
 
 <a id="item-8"></a>
-## [AWS Resilience Patterns for Bedrock and LLM Gateway](https://news.google.com/rss/articles/CBMitgFBVV95cUxNSV9fb1N6S3pmalp5dU1qUnp3QnZhQVdDdFRHMmxrU2pFSjFXaVJRSFNwb3ZXNTUyWWE0TlBaaU41S1FPam9YYnJJS2xnbUVxSU05WjdJZ2EzMG4tVS1BYTczbEh5NmFfRXZCZXRCZHhWWE9qLVdhTUJHdzVMR0dodmVWRU1ERUVzS0NaY1FTdkp3dDVMOWdMUnZlUkROdUIwTWxfUC1CZVdwR3RfMDRjMUhIU1pYZw?oc=5) ⭐️ 7.0/10
+## [US AI Regulatory Tracker by White & Case](https://news.google.com/rss/articles/CBMimwFBVV95cUxPbnFCYmQ4ZElvUk9tUFQ0Z210S2hrNmtMaGhid3IxZmozUnVDUm8tZ0FrY05nNlR5bXZLOUk5WWJkcHVjMzhvazJ6M3I2bGtCUlZFWlBBT2l1MGdGbExWY09kWXZZNlQxTW16VjJzSC1McDZ2N21oTjdqclZnVHZTN1VpbmRacC10NjZNYVNIWnBOUGRpblNsRURZbw?oc=5) ⭐️ 7.0/10
 
-AWS published a blog post detailing five practical resilience patterns for building reliable generative AI applications using Amazon Bedrock and an LLM gateway, progressing from native Bedrock features to multi-model orchestration. As AI/ML systems mature, production deployments require robust fault tolerance and reliability; these patterns address real-world challenges like quota exhaustion and service disruptions, helping developers build more resilient applications. The patterns cover native Amazon Bedrock retries and fallbacks, multi-region failover, and using an LLM gateway for routing across multiple models and providers, with the gateway being an open-source tool that provides a unified OpenAI-compatible API.
+White & Case LLP has published a comprehensive tracker outlining current and proposed AI regulations in the United States. This tracker provides a valuable resource for professionals navigating the complex and evolving US AI regulatory landscape, helping them stay informed about policy developments. The tracker is produced by White & Case LLP, a global law firm with expertise in regulatory matters, and covers both enacted and proposed regulations at the federal and state levels.
 
-google_news · Amazon Web Services (AWS) · Jun 30, 16:40
+google_news · White & Case LLP · Jun 30, 12:00
 
-**Background**: Amazon Bedrock is a managed service for building generative AI applications using foundation models. An LLM gateway acts as a unified API layer to route requests across multiple LLM providers, enabling load balancing, failover, and centralized management. Resilience patterns are architectural strategies to ensure system availability and graceful degradation under failures.
+**Background**: AI regulation in the US is fragmented, with no comprehensive federal law yet; instead, various agencies and states have introduced guidelines and bills. This tracker helps consolidate that information for legal and compliance professionals.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://aws.amazon.com/blogs/machine-learning/implementing-resilience-patterns-with-amazon-bedrock-and-llm-gateway/">Implementing resilience patterns with Amazon Bedrock and LLM gateway | Artificial Intelligence</a></li>
-<li><a href="https://github.com/theopenco/llmgateway">GitHub - theopenco/llmgateway: Route, manage, and analyze your LLM requests across multiple providers with a unified API interface. · GitHub</a></li>
-<li><a href="https://aws.amazon.com/blogs/publicsector/building-self-recovering-systems-against-technology-and-business-risk-with-amazon-bedrock-production-resilience/">Building self-recovering systems against technology and business risk with Amazon Bedrock production resilience | AWS Public Sector Blog</a></li>
+<li><a href="https://en.wikipedia.org/wiki/White_&_Case_LLP">White & Case LLP</a></li>
+<li><a href="https://www.whitecase.com/">White & Case LLP International Law Firm, Global Law Practice</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AWS`, `#resilience patterns`, `#LLM gateway`, `#Amazon Bedrock`, `#AI/ML`
+**Tags**: `#AI regulation`, `#United States`, `#policy`, `#legal`
 
 ---
 
 <a id="item-9"></a>
-## [Anthropic to Develop Its Own Drugs](https://news.google.com/rss/articles/CBMidEFVX3lxTE45WVhQaWJkX2FqRi04MW9UaW50dWhzMXNVNGFtVkplOVc0MzhkdFlid2lGblNudDRFRFk0cl9sRmpyU2pvNHdvb3RmNmFlbjNaWlJDUnFuVEk4eFJ0aWlEWXhLN3EzbVQ1bWJrTi1YYXRnUnFR?oc=5) ⭐️ 7.0/10
+## [Anthropic Expands into Drug Development](https://news.google.com/rss/articles/CBMidEFVX3lxTE45WVhQaWJkX2FqRi04MW9UaW50dWhzMXNVNGFtVkplOVc0MzhkdFlid2lGblNudDRFRFk0cl9sRmpyU2pvNHdvb3RmNmFlbjNaWlJDUnFuVEk4eFJ0aWlEWXhLN3EzbVQ1bWJrTi1YYXRnUnFR?oc=5) ⭐️ 7.0/10
 
-Anthropic announced on June 30, 2026, that it will launch an internal drug discovery program, marking its expansion into biotechnology. This move signals a major convergence of AI and biotech, as Anthropic aims to apply its AI models to real-world scientific problems, potentially accelerating drug development for neglected diseases. The program will focus on neglected diseases that traditional pharmaceutical companies find commercially unattractive, and Anthropic executives emphasized gaining hands-on experience with their own AI products.
+Anthropic, an AI safety company known for its Claude models, announced it will begin developing its own drugs, marking a major expansion into biotechnology. This move signals a growing trend of AI companies applying their technology to drug discovery, potentially accelerating the development of new therapies and reshaping the biotech landscape. Anthropic has not disclosed specific therapeutic areas or timelines, but the initiative leverages its AI expertise in data analysis and molecular modeling to identify novel drug candidates.
 
 google_news · statnews.com · Jun 30, 23:21
 
-**Background**: Anthropic is a leading AI company known for developing the Claude AI assistant. Drug discovery traditionally involves lengthy and costly processes, and AI has been increasingly used to predict molecular interactions and optimize candidate compounds.
+**Background**: Anthropic is an AI safety and research company founded in 2021 by former OpenAI employees. It develops large language models like Claude, focusing on reliability and interpretability. AI is increasingly used in drug development to analyze biomedical data and simulate drug interactions, though its impact is still debated.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.cnbc.com/2026/06/30/anthropic-launches-ai-drug-discovery-program-claude-science.html">Anthropic launches AI drug discovery program, joining tech giants in betting on healthcare</a></li>
-<li><a href="https://www.statnews.com/2026/06/30/anthropic-ai-drug-development/">Anthropic, AI powerhouse, announces it will begin developing drugs of its own</a></li>
-<li><a href="https://www.beckershospitalreview.com/healthcare-information-technology/ai/anthropic-enters-drug-discovery/">Anthropic enters drug discovery - Becker's Hospital Review | Healthcare News & Analysis</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Anthropic">Anthropic - Wikipedia</a></li>
+<li><a href="https://www.anthropic.com/">Home \ Anthropic</a></li>
+<li><a href="https://www.anthropic.com/company">Company \ Anthropic</a></li>
 
 </ul>
 </details>
@@ -205,37 +229,26 @@ google_news · statnews.com · Jun 30, 23:21
 
 ---
 
+## 🔬 Semiconductors
+
 <a id="item-10"></a>
-## [OpenAI Reports Global Growth in ChatGPT Adoption](https://openai.com/index/how-chatgpt-adoption-has-expanded) ⭐️ 6.0/10
+## [TokenBudgeting: Debunking TokenMaxxing in Enterprise AI](https://newsletter.semianalysis.com/p/tokenbudgeting-our-conversations) ⭐️ 6.0/10
 
-OpenAI released new data from its Signals platform showing that ChatGPT adoption is growing globally, with users increasing usage, exploring more capabilities, and driving growth across regions and languages. This data highlights the expanding reach and deepening integration of AI assistants into daily life and business, signaling a shift in how people interact with technology worldwide. The report is based on OpenAI Signals data, which tracks usage patterns, but no specific metrics or regional breakdowns were provided in the summary.
-
-rss · OpenAI Blog · Jun 30, 09:00
-
-**Background**: ChatGPT is a conversational AI model developed by OpenAI, launched in late 2022. Adoption metrics help understand its real-world impact and areas for improvement.
-
-**Tags**: `#ChatGPT`, `#AI adoption`, `#OpenAI`, `#trends`
-
----
-
-<a id="item-11"></a>
-## [TokenBudgeting: Did Enterprise TokenMaxxing Ever Happen?](https://newsletter.semianalysis.com/p/tokenbudgeting-our-conversations) ⭐️ 6.0/10
-
-Semianalysis reports that based on conversations with enterprises, the widespread 'TokenMaxxing' phenomenon—excessive token usage in AI deployments—may not have been as prevalent as assumed. The article suggests that enterprises are actually moving toward token budgeting and cost optimization rather than unrestrained consumption. This insight challenges the narrative that enterprises are wasting AI resources, which has implications for AI vendors' pricing strategies and enterprise cost management. Understanding real token usage trends helps businesses avoid budget blowouts and optimize AI investments. The article is based on qualitative industry conversations rather than quantitative data, so its conclusions are observational. It highlights that enterprises are increasingly adopting hybrid consumption models (SaaS, APIs, self-hosted) and refreshing TCO models to manage token costs.
+The article 'TokenBudgeting: Our Conversations with Enterprises on Token Spend' questions whether widespread token maximization (TokenMaxxing) was ever a real phenomenon in enterprise AI usage, based on direct conversations with enterprises. This analysis challenges a common assumption in the AI industry, helping enterprises focus on cost-effective token budgeting rather than maximizing token consumption, which could lead to better resource allocation and reduced AI operational costs. The article reports that enterprises are moving toward token budgeting architectures that treat tokens like memory or CPU resources, enforcing limits and optimizing usage rather than pursuing raw token volume.
 
 rss · Semianalysis · Jun 30, 18:32
 
-**Background**: TokenMaxxing refers to the practice of maximizing AI usage, often measured by token consumption, sometimes as a productivity theater. Token budgeting is the emerging discipline of controlling AI token spend, as enterprises realize that seat-based pricing masked real compute costs. Deloitte notes that AI tokens have become a primary unit of value, requiring new cost management frameworks.
+**Background**: TokenMaxxing refers to the practice of maximizing token usage as a productivity metric in AI workplaces, often criticized as vanity metric. Token budgeting is an emerging architectural approach that plans, allocates, and enforces token usage across AI applications for cost control and predictability.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Token_maxxing">Token maxxing - Wikipedia</a></li>
-<li><a href="https://tokenmaxxing.com/guides/what-is-tokenmaxxing">What Is Tokenmaxxing ? | Tokenmaxxing</a></li>
-<li><a href="https://www.deloitte.com/us/en/insights/topics/emerging-technologies/ai-tokens-how-to-navigate-spend-dynamics.html">AI tokens: How to navigate AI’s new spend dynamics | Deloitte Insights</a></li>
+<li><a href="https://www.linkedin.com/pulse/why-token-budgeting-architecture-missing-layer-enterprise-rama-maddi-lmlsc">Why Token Budgeting Architecture Is the Missing Layer in Enterprise ...</a></li>
+<li><a href="https://www.vantage.sh/blog/ai-token-budgeting">Token Budgeting : How To Think About AI Cost Control | Vantage</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI`, `#token usage`, `#enterprise`, `#cost optimization`
+**Tags**: `#AI`, `#enterprise`, `#token usage`, `#LLM`, `#cost optimization`
 
 ---
