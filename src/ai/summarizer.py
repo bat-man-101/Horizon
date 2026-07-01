@@ -221,7 +221,6 @@ class DailySummarizer:
         header = (
             f"# {labels['header']} - {date}\n\n"
             f"> {labels['selected_items'].format(total=total_fetched, selected=len(items))}\n\n"
-            "---\n\n"
         )
 
         category_display = _CATEGORY_DISPLAY_ZH if language == "zh" else _CATEGORY_DISPLAY_EN
@@ -251,7 +250,7 @@ class DailySummarizer:
                 toc_sections.append(f"  {global_idx}. [{t}]({url}) ⭐️ {score}/10")
             toc_sections.append("")
 
-        return header + "\n".join(toc_sections) + "---"
+        return header + "\n".join(toc_sections)
 
     def generate_webhook_overview(
         self,
