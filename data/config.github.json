@@ -189,7 +189,7 @@
     },
     "google_news": {
       "enabled": true,
-      "query": "artificial intelligence",
+      "query": "China social news economy",
       "language": "en",
       "country": "US",
       "ceid": null,
@@ -198,9 +198,9 @@
     },
     "gdelt": {
       "enabled": true,
-      "query": "bitcoin cryptocurrency",
+      "query": "bitcoin cryptocurrency | china economy society",
       "mode": "ArtList",
-      "max_records": 20,
+      "max_records": 30,
       "timespan": "24h",
       "language": null,
       "country": null,
