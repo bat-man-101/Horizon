@@ -5,325 +5,294 @@ date: 2026-07-01
 lang: en
 ---
 
-> From 206 items, 13 important content pieces were selected
+> From 187 items, 12 important content pieces were selected
 
 ---
 
 **📌 Other（3）**
-  1. [Claude Code Secretly Embeds Steganographic Watermarks](#item-1) ⭐️ 9.0/10
-  2. [US Lifts Export Controls on Anthropic's Claude Fable 5 and Mythos 5](#item-2) ⭐️ 9.0/10
-  3. [Anthropic Releases Claude Sonnet 5 for Agentic Tasks](#item-3) ⭐️ 8.0/10
+  1. [US Lifts Export Controls on Claude Fable 5 and Mythos 5](#item-1) ⭐️ 9.0/10
+  2. [Claude Code Steganographically Marks Requests](#item-2) ⭐️ 8.0/10
+  3. [Anthropic Launches Claude Sonnet 5 for Agentic Tasks](#item-3) ⭐️ 8.0/10
 
 **🚀 Tech Trends（3）**
-  4. [Realta Fusion achieves first direct electricity from fusion](#item-4) ⭐️ 9.0/10
+  4. [Realta Fusion Claims First Direct Electricity from Fusion](#item-4) ⭐️ 9.0/10
   5. [Etched hits $5B valuation, $1B in AI chip sales](#item-5) ⭐️ 8.0/10
-  6. [Tesla Starts Testing Cybercab Without Pedals or Steering Wheel in Austin](#item-6) ⭐️ 8.0/10
+  6. [Tesla Begins Testing Cybercab Without Pedals or Steering Wheel in Austin](#item-6) ⭐️ 8.0/10
 
-**📰 Top News（3）**
-  7. [US Extends Export Controls to Advanced AI Models](#item-7) ⭐️ 8.0/10
-  8. [AI Could Revolutionize Vaccine Development](#item-8) ⭐️ 7.0/10
-  9. [AI Could Transform Breast Cancer Detection and Recurrence Prediction](#item-9) ⭐️ 7.0/10
-
-**🤖 AI News（2）**
-  10. [shot-scraper video records agent demos](#item-10) ⭐️ 7.0/10
-  11. [OpenAI Reports Global Growth in ChatGPT Adoption](#item-11) ⭐️ 6.0/10
-
-**🔬 Semiconductors（1）**
-  12. [TokenBudgeting: Enterprise AI Cost Management Insights](#item-12) ⭐️ 7.0/10
+**🤖 AI News（1）**
+  7. [Shot-scraper video lets agents record demos](#item-7) ⭐️ 8.0/10
 
 **₿ Crypto（1）**
-  13. [New York Life's $800B asset manager launches tokenized bond fund](#item-13) ⭐️ 7.0/10
+  8. [New York Life Launches Tokenized Bond Fund on Centrifuge](#item-8) ⭐️ 8.0/10
+
+**🔬 Semiconductors（1）**
+  9. [Enterprise Token Spend: TokenMaxxing Narrative Overblown](#item-9) ⭐️ 7.0/10
+
+**📰 Top News（3）**
+  10. [China's Strategy to Counter AI Job Losses](#item-10) ⭐️ 7.0/10
+  11. [Meituan trains trillion-parameter AI on domestic chips](#item-11) ⭐️ 7.0/10
+  12. [Hong Kong tech chief warns AI will trigger greatest industrial revolution](#item-12) ⭐️ 6.0/10
 ---
 
 ## 📌 Other
 
 <a id="item-1"></a>
-## [Claude Code Secretly Embeds Steganographic Watermarks](https://thereallo.dev/blog/claude-code-prompt-steganography) ⭐️ 9.0/10
+## [US Lifts Export Controls on Claude Fable 5 and Mythos 5](https://twitter.com/AnthropicAI/status/2072106151890809341) ⭐️ 9.0/10
 
-Anthropic's Claude Code tool has been found to secretly embed steganographic watermarks in user requests, as revealed by a blog post that reverse-engineered the tool. This raises serious concerns about transparency and trust in AI vendor tooling, as users may unknowingly have their data marked and tracked without consent. The steganographic markers are embedded in the prompts sent to Claude Code, potentially allowing Anthropic to identify the source of requests, such as those from Chinese firms conducting model distillation.
+The US Department of Commerce has lifted export controls on Anthropic's Claude Fable 5 and Mythos 5 models, but imposed restrictions on their cybersecurity capabilities, requiring classifiers to block certain tasks like coding and debugging. This decision sets a precedent for how frontier AI models are regulated, balancing national security concerns with commercial deployment, and could influence future AI export control policies globally. The restrictions mean that for routine tasks like coding and debugging, Claude Fable 5 will fall back to Opus 4.8. The Commerce Department's letter to Anthropic outlines the specific conditions for the model's release.
 
-hackernews · kirushik · Jun 30, 15:44 · [Discussion](https://news.ycombinator.com/item?id=48734373)
+hackernews · Pragmata · Jun 30, 23:55 · [Discussion](https://news.ycombinator.com/item?id=48740771)
 
-**Background**: Steganography is the practice of hiding secret data within ordinary files, such as text or images, to avoid detection. Claude Code is Anthropic's agentic coding tool that operates in the terminal to assist developers with code editing and project management.
+**Background**: Claude Fable 5 and Mythos 5 are Anthropic's most capable frontier models, with Mythos 5 designed to find and fix software vulnerabilities. Export controls on AI models aim to prevent misuse by adversaries, but critics argue they hinder innovation and create uncertainty for businesses.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://topaihubs.com/articles/claude-s-hidden-watermarks-ai-security-and-the-ethics-of-invisible-data">Claude's Hidden Watermarks: AI Security and the Ethics of ...</a></li>
-<li><a href="https://www.anthropic.com/product/claude-code">Claude Code | Anthropic's agentic coding system</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Claude_Fable_5">Claude Fable 5</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Claude_Mythos">Claude Mythos - Wikipedia</a></li>
+<li><a href="https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5">Introducing Claude Fable 5 and Claude Mythos 5 - Claude Platform Docs</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments are divided: some criticize Anthropic for lack of transparency and sloppy implementation, while others argue the intent (e.g., detecting model distillation by Chinese firms) is understandable. There is also a call for running AI locally to preserve privacy.
+**Discussion**: Commenters expressed concerns about the lack of predictability in AI regulation, with some noting that businesses cannot rely on US frontier models for critical functions. Others debated whether AI should be regulated like nuclear technology, and pointed out that the restrictions limit the models' utility for coding tasks.
 
-**Tags**: `#AI`, `#security`, `#steganography`, `#Anthropic`, `#trust`
+**Tags**: `#AI regulation`, `#export controls`, `#Anthropic`, `#frontier models`, `#national security`
 
 ---
 
 <a id="item-2"></a>
-## [US Lifts Export Controls on Anthropic's Claude Fable 5 and Mythos 5](https://twitter.com/AnthropicAI/status/2072106151890809341) ⭐️ 9.0/10
+## [Claude Code Steganographically Marks Requests](https://thereallo.dev/blog/claude-code-prompt-steganography) ⭐️ 8.0/10
 
-The US Department of Commerce lifted export controls on Anthropic's Claude Fable 5 and Mythos 5 AI models on June 30, 2026, restoring global access after a three-week ban. This decision marks a significant shift in AI regulation, highlighting the tension between national security concerns and the business dependency on US frontier models, and sets a precedent for future export controls on advanced AI. Claude Fable 5 is Anthropic's most capable widely released model for coding and agentic tasks, while Mythos 5 is a limited-release model for cybersecurity vulnerability discovery; both were disabled on June 12 following an export control order.
+A developer discovered that Anthropic's Claude Code tool embeds hidden Unicode markers in system prompts to fingerprint API requests based on the user's API base URL and timezone. This steganographic technique was found during a privacy inspection of the tool. This raises serious concerns about transparency and trust in AI service providers, as the undisclosed behavior could be used to track or identify users without their knowledge. It also highlights the need for greater scrutiny of what AI tools do on customer machines. The markers are inserted into system prompts based on the API base URL and the user's timezone, potentially allowing Anthropic to identify requests from Chinese AI labs or other specific groups. The implementation was described as sloppy and easily detectable through reverse engineering.
 
-hackernews · Pragmata · Jun 30, 23:55 · [Discussion](https://news.ycombinator.com/item?id=48740771)
+hackernews · kirushik · Jun 30, 15:44 · [Discussion](https://news.ycombinator.com/item?id=48734373)
 
-**Background**: Export controls are government restrictions on the transfer of sensitive technologies to foreign entities. In June 2026, the US government imposed an export ban on Anthropic's most advanced AI models, citing national security risks. The ban was lifted after Anthropic implemented new classifiers to block cybersecurity tasks, though some routine coding tasks now fall back to older models.
+**Background**: Steganography is the practice of hiding messages within other non-secret data, such as text or images. In this context, Claude Code is a command-line tool that uses Anthropic's Claude AI model to assist with coding tasks. The discovery was made by a developer who inspected the tool's network requests for privacy reasons.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.theguardian.com/technology/2026/jul/01/anthropic-fable-mythos-ai-models-us-export-controls-lifted">Anthropic : US has lifted export controls on Fable and Mythos AI ...</a></li>
-<li><a href="https://nypost.com/2026/06/30/business/trump-administration-lifts-export-controls-on-anthropics-most-powerful-ai-models-ending-bitter-standoff/">Trump administration lifts export controls on Anthropic 's most...</a></li>
-<li><a href="https://www.euronews.com/2026/07/01/us-lifts-export-controls-on-powerful-ai-models-anthropic-says">US lifts export controls on powerful AI models , Anthropic says</a></li>
+<li><a href="https://thereallo.dev/blog/claude-code-prompt-steganography">Claude Code Is Steganographically Marking Requests</a></li>
+<li><a href="https://byteiota.com/claude-code-is-marking-requests-what-anthropic-hid/">Claude Code Is Marking Requests: What Anthropic Hid</a></li>
+<li><a href="https://eu.36kr.com/en/p/3876461674917892">Confirmed: Claude Code Secretly Accesses User Data - Time Zones and Chinese AI Labs as Key Targets</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments express concern over the unpredictability of US AI regulation, with some arguing that businesses cannot rely on frontier models for critical functions. Others note that the lifting of controls does not address the lack of clear legal standards, and that the process appears ad hoc.
+**Discussion**: The community is divided: some downplay the severity, arguing the intent is clearly to detect model distillation by Chinese firms, while others express strong distrust of Anthropic and all big AI labs. Critics note that the lack of honest disclosure is unacceptable, even if the business need is understandable.
 
-**Tags**: `#AI regulation`, `#export controls`, `#Anthropic`, `#frontier models`, `#geopolitics`
+**Tags**: `#AI`, `#privacy`, `#steganography`, `#Anthropic`, `#trust`
 
 ---
 
 <a id="item-3"></a>
-## [Anthropic Releases Claude Sonnet 5 for Agentic Tasks](https://www.anthropic.com/news/claude-sonnet-5) ⭐️ 8.0/10
+## [Anthropic Launches Claude Sonnet 5 for Agentic Tasks](https://www.anthropic.com/news/claude-sonnet-5) ⭐️ 8.0/10
 
-Anthropic has released Claude Sonnet 5, a new model optimized for agentic tasks such as planning, tool use, and autonomous execution, with pricing at $3/$15 per million tokens. This release highlights the industry trend toward agentic AI, offering a cost-effective option for autonomous workflows, though it shows mixed benchmark results compared to the more expensive Opus model. On some benchmarks, Sonnet 5 matches or exceeds Opus 4.8 at a lower cost, but on others like CyberGym vulnerability discovery, it underperforms compared to Sonnet 4.6 and Opus 4.8. The model also scored 0 on CyberGym when default mitigations were enabled.
+Anthropic has released Claude Sonnet 5, a new AI model optimized for agentic tasks such as planning, using browsers and terminals, and autonomous execution. It is now the default model for Free and Pro plans, with introductory API pricing of $2/$10 per million tokens through August 31, 2026. Sonnet 5 brings near-flagship agentic performance at a lower base price, making advanced autonomous capabilities more accessible. However, community analysis reveals that at higher effort levels, its cost per task can exceed that of Opus 4.8, forcing users to carefully choose between models and effort settings. On agentic benchmarks like AA-Briefcase and GDPval-AA, Sonnet 5 matches or slightly outperforms Opus 4.8, trailing only the unreleased Claude Fable 5. It also demonstrates self-verification behavior, completing complex tasks without explicit prompting, a step change over previous Sonnet models.
 
 hackernews · marinesebastian · Jun 30, 17:59 · [Discussion](https://news.ycombinator.com/item?id=48736605)
 
-**Background**: Agentic AI refers to systems that can autonomously plan, use tools, and execute multi-step tasks with minimal human intervention. Claude Sonnet models are mid-tier offerings from Anthropic, balancing performance and cost, while Opus is the flagship high-end model.
+**Background**: Anthropic's Claude model family includes Haiku (fast/cheap), Sonnet (balanced), and Opus (flagship). Agentic tasks involve AI models autonomously planning and executing multi-step actions using tools like code interpreters, web browsers, or terminals. Sonnet 5 is designed to bring such capabilities to a mid-tier model, but cost-performance trade-offs vary by task complexity and effort level.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://llm-stats.com/blog/research/claude-sonnet-5-vs-claude-opus-4-8">Claude Sonnet 5 vs Claude Opus 4.8: The Complete Comparison</a></li>
-<li><a href="https://codingfleet.com/blog/claude-sonnet-5-vs-claude-opus-4-8/">Claude Sonnet 5 vs Claude Opus 4.8: 93% Power, 60% Price ...</a></li>
-<li><a href="https://en.wikipedia.org/wiki/AI_agent">AI agent - Wikipedia</a></li>
+<li><a href="https://artificialanalysis.ai/articles/claude-sonnet-5-agentic-cost">Claude Sonnet 5 : strong agentic performance at a higher cost per task</a></li>
+<li><a href="https://www.digitalapplied.com/blog/claude-sonnet-5-agentic-coding-near-opus-price-2026">Claude Sonnet 5: Near-Opus Agentic Coding - Digital Applied</a></li>
+<li><a href="https://www.marktechpost.com/2026/06/30/anthropic-claude-sonnet-5-vs-sonnet-4-6-vs-opus-4-8-agentic-coding-benchmarks-api-pricing-and-cost-performance-tradeoffs-compared/">Anthropic Claude Sonnet 5 vs Sonnet 4.6 vs Opus 4.8: Agentic Coding Benchmarks, API Pricing, and Cost-Performance Tradeoffs Compared - MarkTechPost</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community comments express confusion about Sonnet 5's value proposition, noting that Opus often performs better per cost at higher effort levels. Some users highlight regressions in security benchmarks and question the model's pricing strategy.
+**Discussion**: Community comments are mixed: some users question the value proposition, noting that Opus 4.8 often provides better cost-performance at medium-to-high effort levels. Others highlight Sonnet 5's self-verification and faster speed as key advantages, while some benchmarks show it underperforming on trivia and tool-calling tasks compared to competitors like GLM 5.2.
 
-**Tags**: `#AI`, `#LLM`, `#Anthropic`, `#Claude`, `#model release`
+**Tags**: `#AI`, `#Anthropic`, `#Claude`, `#LLM`, `#agentic`
 
 ---
 
 ## 🚀 Tech Trends
 
 <a id="item-4"></a>
-## [Realta Fusion achieves first direct electricity from fusion](https://techcrunch.com/2026/06/30/realta-fusion-generates-electricity-directly-from-a-fusion-reaction-an-apparent-first/) ⭐️ 9.0/10
+## [Realta Fusion Claims First Direct Electricity from Fusion](https://techcrunch.com/2026/06/30/realta-fusion-generates-electricity-directly-from-a-fusion-reaction-an-apparent-first/) ⭐️ 9.0/10
 
-Realta Fusion has demonstrated the first direct generation of electricity from a fusion reaction, bypassing the traditional steam turbine cycle. The milestone was announced by CEO Kieran Furlong in a TechCrunch interview on June 30, 2026. This breakthrough could dramatically improve the economics and efficiency of fusion power plants, making fusion a more viable clean energy source. It represents a major step toward practical, commercial fusion energy, potentially transforming global energy production. The company used a field-reversed configuration (FRC) reactor, which naturally pulses and allows direct electricity extraction without intermediate heat conversion. Realta Fusion is a spin-out from the University of Wisconsin-Madison and aims to build a fusion device by 2028.
+Realta Fusion, a startup spun out from the University of Wisconsin-Madison, announced it has directly generated electricity from a fusion reaction, a milestone that has not been publicly achieved before. CEO Kieran Furlong stated, 'We can take power from a plasma.' This breakthrough could accelerate the development of practical fusion power, offering a potentially limitless, clean energy source. Direct electricity generation from fusion bypasses traditional heat-exchange methods, increasing efficiency and reducing complexity. The company uses a direct energy conversion approach that captures the kinetic energy of charged particles from the fusion plasma, rather than using heat to drive a turbine. Realta Fusion's technology is based on advances in superconducting materials and plasma physics, aiming for a compact and scalable reactor design.
 
 rss · 36氪 - 科技 · Jun 30, 19:12
 
-**Background**: Traditional fusion reactor designs, like tokamaks, rely on heat from fusion to produce steam that drives turbines, similar to conventional power plants. Direct electricity generation from fusion has been a long-sought goal because it eliminates the inefficiency of thermal conversion. Realta Fusion's approach uses a linear FRC reactor with advanced superconducting magnets and plasma physics to achieve this.
+**Background**: Nuclear fusion, the process that powers the sun, has long been pursued as a clean energy source. Traditional fusion power plant designs use heat from fusion reactions to produce steam and drive turbines, similar to conventional power plants. Direct energy conversion, however, converts the kinetic energy of charged particles directly into electricity, potentially offering higher efficiency and simpler engineering.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.msn.com/en-us/technology/renewable-energy/realta-fusion-generates-electricity-directly-from-a-fusion-reaction-an-apparent-first/ar-AA26UNPp">Realta Fusion generates electricity directly from a fusion reaction...</a></li>
-<li><a href="https://podmarized.com/episodes/lex-fridman-podcast/david-kirtley-nuclear-fusion-plasma-physics-and-the-future-of-energy-lex-fridman-podcast-485">David Kirtley: Nuclear Fusion , Plasma Physics, and the Future of Energy</a></li>
-<li><a href="https://planetforward.org/story/realta-fusion-wisconsin/">UW-Madison startup aims to build fusion energy device by 2028</a></li>
+<li><a href="https://techcrunch.com/2026/06/30/realta-fusion-generates-electricity-directly-from-a-fusion-reaction-an-apparent-first/">Realta Fusion generates electricity directly from a fusion ...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Direct_energy_conversion">Direct energy conversion - Wikipedia</a></li>
+<li><a href="https://realtafusion.com/technology/">Technology | Realta Fusion</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#fusion energy`, `#clean energy`, `#breakthrough`, `#nuclear fusion`
+**Tags**: `#fusion energy`, `#clean energy`, `#breakthrough`, `#physics`, `#startup`
 
 ---
 
 <a id="item-5"></a>
 ## [Etched hits $5B valuation, $1B in AI chip sales](https://techcrunch.com/2026/06/30/nvidia-competitor-etched-hits-5b-valuation-1b-in-sales-for-ai-chip/) ⭐️ 8.0/10
 
-AI chip startup Etched announced it has secured $1 billion in contracts for its transformer-specific inference systems and achieved a $5 billion valuation, positioning itself as a serious competitor to Nvidia. This milestone signals strong market validation for specialized AI inference chips, potentially challenging Nvidia's dominance in the AI hardware market and accelerating the shift toward purpose-built accelerators. Etched's first-generation chip, Sohu, is an ASIC purpose-built for transformer models, which power large language models like ChatGPT. The company has booked $1 billion under contract for inference systems using Sohu.
+AI chip startup Etched announced it has reached a $5 billion valuation and secured $1 billion in contracted sales for its inference systems, challenging Nvidia's dominance in the AI hardware market. This milestone signals strong market validation for a specialized AI chip competitor, potentially reshaping the AI hardware landscape by offering alternatives to Nvidia's general-purpose GPUs for inference workloads. Etched's chip, called Sohu, is an ASIC designed specifically for transformer models, manufactured using TSMC's 4nm process. The $1 billion in sales is for inference systems powered by this chip.
 
 rss · 36氪 - 科技 · Jun 30, 18:13
 
-**Background**: Etched is an American semiconductor startup designing custom ASICs for AI workloads. Its chip Sohu is the first purpose-built for transformer AI architecture, focusing on inference rather than training. Nvidia currently dominates the AI chip market with its general-purpose GPUs.
+**Background**: AI inference systems run trained models to make predictions, requiring high throughput and low latency. Etched's Sohu chip is an application-specific integrated circuit (ASIC) optimized solely for transformer-based models, unlike Nvidia's general-purpose GPUs that handle both training and inference.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Etched.ai">Etched (company) - Wikipedia</a></li>
-<li><a href="https://techcrunch.com/2024/06/25/etched-is-building-an-ai-chip-that-only-runs-transformer-models/">Etched is building an AI chip that only runs one type of... | TechCrunch</a></li>
+<li><a href="https://techcrunch.com/2026/06/30/nvidia-competitor-etched-hits-5b-valuation-1b-in-sales-for-ai-chip/">Nvidia competitor Etched hits $5B valuation, $1B in sales for ...</a></li>
+<li><a href="https://www.etched.com/">Etched</a></li>
+<li><a href="https://techcrunch.com/2024/06/25/etched-is-building-an-ai-chip-that-only-runs-transformer-models/">Etched is building an AI chip that only runs one type of model</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI hardware`, `#Nvidia competitor`, `#startup funding`, `#AI chips`, `#inference`
+**Tags**: `#AI hardware`, `#semiconductors`, `#Nvidia competitor`, `#inference chips`
 
 ---
 
 <a id="item-6"></a>
-## [Tesla Starts Testing Cybercab Without Pedals or Steering Wheel in Austin](https://techcrunch.com/2026/06/30/tesla-starts-testing-cybercab-without-pedals-or-a-steering-wheel-in-austin/) ⭐️ 8.0/10
+## [Tesla Begins Testing Cybercab Without Pedals or Steering Wheel in Austin](https://techcrunch.com/2026/06/30/tesla-starts-testing-cybercab-without-pedals-or-a-steering-wheel-in-austin/) ⭐️ 8.0/10
 
-Tesla has begun testing its Cybercab robotaxi without pedals or a steering wheel on public roads in Austin, Texas, marking a major step toward launching a fully autonomous ride-hailing network. This testing represents a critical milestone for Tesla's long-promised robotaxi network, potentially transforming urban transportation by offering driverless rides. If successful, it could accelerate the adoption of autonomous vehicles and disrupt traditional ride-hailing services. The Cybercab is a two-passenger electric vehicle designed exclusively for autonomy, with no manual controls. Tesla unveiled a concept in October 2024 and began production in February 2026, with 20 prototypes initially built.
+Tesla has started testing its Cybercab, a fully autonomous vehicle without pedals or a steering wheel, on public roads in Austin, Texas. This marks a concrete step toward launching its robotaxi network. This testing milestone brings Tesla closer to realizing Elon Musk's long-standing vision of a robotaxi network, which could disrupt the ride-hailing industry. If successful, it would position Tesla as a major player in autonomous mobility alongside Waymo. The Cybercab is a two-passenger battery-electric vehicle designed for full autonomy, with production starting in February 2026. Tesla's robotaxi service launched in a limited capacity in Austin on June 22, 2025, using vehicles with FSD software.
 
 rss · 36氪 - 科技 · Jun 30, 15:32
 
-**Background**: Tesla has been developing Full Self-Driving (FSD) technology for years, but the Cybercab is its first vehicle purpose-built for robotaxi service without any manual driving controls. The company plans to operate its own ride-hailing network called Tesla Robotaxi, where passengers can summon Cybercabs via an app. This test in Austin brings that vision closer to reality.
+**Background**: The Tesla Cybercab was first unveiled as a concept in October 2024, with prototypes lacking steering wheels and pedals. Tesla aims for volume production by the end of 2026, targeting 2 million units annually. The robotaxi network relies on Tesla's Full Self-Driving (FSD) technology.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Tesla_Cybercab">Tesla Cybercab - Wikipedia</a></li>
-<li><a href="https://www.tesla.com/robotaxi">Robotaxi | Tesla</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cybercab">Cybercab</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tesla_Robotaxi">Tesla Robotaxi - Wikipedia</a></li>
+<li><a href="https://www.tesla.com/robotaxi">Robotaxi - Tesla</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#Tesla`, `#autonomous vehicles`, `#robotaxi`, `#self-driving`, `#transportation`
-
----
-
-## 📰 Top News
-
-<a id="item-7"></a>
-## [US Extends Export Controls to Advanced AI Models](https://news.google.com/rss/articles/CBMigwJBVV95cUxOWTQzZjJ5VGNUaGtJY3dTaTVwb0dWN01yWFY2RGtZX0gwZEpFVHM5NTZZQWRRZ04yZk1Hc2tCcFplcTg2VkxPZzVyUDhBeElfM21Id25YX3NpSXpRSmpLRVlkdXdkRWUyU1NMVXRydklfYmI4eWFrS1BqdnpNTlFmSnZ0RkZZeG9zYXRBRmdDYWIxOVA3R3E2aENra054OHl6WjhkTDVuWUY3eDdtc0J4WmVSR0lKbXNXaUNlaF9obXV5ajUwU0RNR3pLdjhlbGJYdllmNnZwZjNISUlvZFVUUkRGNTNoRWEyODgtVUQ3WXVKeDRUbHNYMEJXNnNQQWFyVGZN?oc=5) ⭐️ 8.0/10
-
-The US Commerce Department's Bureau of Industry and Security (BIS) has extended export controls to cover advanced AI model weights, while authorizing releases to specific trusted partners under a new framework. This marks a significant escalation in US AI regulation, potentially limiting global access to cutting-edge AI models and reshaping international AI development dynamics. Companies and researchers outside trusted partner networks may face new barriers. The controls apply to advanced AI model weights, and compliance deadlines vary: some changes take effect May 15, 2025, while others are deferred to January 25, 2026. The rule also establishes an 'American AI Exports Program' for trusted partners.
-
-google_news · Mayer Brown · Jul 1, 04:30
-
-**Background**: Export controls on advanced computing items began in October 2022, targeting semiconductor technologies. The new rule extends these controls to AI model weights, which are the parameters that define a model's behavior. Trusted partners are entities deemed low-risk by the US government, such as allied nations or vetted companies.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://www.sidley.com/en/insights/newsupdates/2025/01/new-us-export-controls-on-advanced-computing-items-and-artificial-intelligence-model-weights">New U.S. Export Controls on Advanced Computing Items and Artificial Intelligence Model Weights: Seven Key Takeaways | Insights | Sidley Austin LLP</a></li>
-<li><a href="https://www.cov.com/en/news-and-insights/insights/2025/01/us-department-of-commerce-establishes-export-control-framework-limiting-the-diffusion-of-advanced-artificial-intelligence-and-expands-and-clarifies-advanced-computing-controls">U.S. Department of Commerce Establishes Export Control Framework Limiting the Diffusion of Advanced Artificial Intelligence and Expands and Clarifies Advanced Computing Controls | Covington & Burling LLP</a></li>
-<li><a href="https://www.federalregister.gov/documents/2025/10/28/2025-19674/american-ai-exports-program">Federal Register :: American AI Exports Program</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#AI regulation`, `#export controls`, `#US policy`, `#AI models`
-
----
-
-<a id="item-8"></a>
-## [AI Could Revolutionize Vaccine Development](https://news.google.com/rss/articles/CBMioAFBVV95cUxPWGlPaUVNdnVRVzc0Y3FzRWQxTWg4UnJSTXhlU0hybGVwYTdiTnkwaXVSVXB3ZU9teGlkamZLLVZfR25MMm1Xc3JUVzdMN2QzOVoxMDhzR3ZybUhVcndZY1pMcFpVOUwxVHhsSi1GbVFueTd1WlFxZEZycjl6T1ZDR0lhcUpGdFhLR0Y0ZWc3N042aDlWdkt6OHdwcnBTc3Zw?oc=5) ⭐️ 7.0/10
-
-A new article from CIDRAP discusses how artificial intelligence could accelerate vaccine discovery and design, potentially transforming the entire vaccine development process. This matters because faster vaccine development can improve pandemic preparedness and enable rapid responses to emerging infectious diseases, ultimately saving lives and reducing economic disruption. AI techniques such as AlphaFold can predict protein structures, aiding in antigen design, while machine learning helps identify optimal vaccine targets and streamline clinical trials.
-
-google_news · CIDRAP · Jun 30, 17:45
-
-**Background**: Traditional vaccine development is slow and costly, often taking years or decades. AI can analyze vast biological datasets to identify patterns and predict immune responses, significantly shortening the timeline. During the COVID-19 pandemic, AI helped rapidly sequence the virus and design mRNA vaccines.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://www.cidrap.umn.edu/covid-19/artificial-intelligence-could-usher-new-era-vaccine-development">Artificial intelligence could usher in a new era of vaccine ... | CIDRAP</a></li>
-<li><a href="https://www.gavi.org/vaccineswork/using-ai-lab-jab-how-did-artificial-intelligence-help-us-develop-and-deliver-covid">Using AI from lab to jab: how did artificial intelligence help us develop and deliver COVID-19 vaccines?</a></li>
-<li><a href="https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2025.1567116/full">Frontiers | Artificial intelligence in vaccine research and development ...</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#AI`, `#vaccine development`, `#healthcare`, `#biotechnology`
-
----
-
-<a id="item-9"></a>
-## [AI Could Transform Breast Cancer Detection and Recurrence Prediction](https://news.google.com/rss/articles/CBMiXEFVX3lxTFBPbkVuSFFDbFF2YU9rUHhQZ09qZFg0YzdPYllxbXIxWXdkM3diaGZKNllMVEhMdC1ucWlacDNsdmcybzFScThUMXEtMzZWQ29mYmhHRkhjSW9MQU1p?oc=5) ⭐️ 7.0/10
-
-A recent article on EurekAlert! reports that artificial intelligence shows promise in transforming breast cancer detection and predicting recurrence, potentially improving patient outcomes. This development could lead to earlier and more accurate diagnosis of breast cancer, as well as better prediction of recurrence, ultimately saving lives and reducing healthcare costs. The article highlights AI's ability to analyze mammograms and other imaging data with high accuracy, and to identify patterns associated with cancer recurrence. However, specific models, datasets, or performance metrics are not detailed.
-
-google_news · EurekAlert! · Jun 30, 16:33
-
-**Background**: Breast cancer is one of the most common cancers worldwide, and early detection is critical for successful treatment. Traditional methods like mammography can miss some cancers or yield false positives. AI, particularly deep learning, has been increasingly applied to medical imaging to improve diagnostic accuracy and predict disease progression.
-
-**Tags**: `#AI`, `#healthcare`, `#breast cancer`, `#machine learning`
+**Tags**: `#Tesla`, `#autonomous vehicles`, `#robotaxi`, `#Cybercab`
 
 ---
 
 ## 🤖 AI News
 
-<a id="item-10"></a>
-## [shot-scraper video records agent demos](https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything) ⭐️ 7.0/10
+<a id="item-7"></a>
+## [Shot-scraper video lets agents record demos](https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything) ⭐️ 8.0/10
 
-Simon Willison released shot-scraper 1.10 with a new 'video' command that accepts a storyboard.yml file and uses Playwright to record a video of a web application routine. The tool is designed to let coding agents automatically produce visual demos of their work. This addresses a key challenge in AI-assisted development: proving that agent-generated code actually works. By enabling agents to record reproducible video demos, it increases trust and accountability in automated workflows. The storyboard.yml file defines server startup, URL, viewport, cursor visibility, wait conditions, JavaScript overrides, and a sequence of scenes with actions like pause and click. The command supports --auth for cookie-based authentication and outputs WebM or MP4 video.
+Simon Willison released shot-scraper 1.10 with a new 'video' command that accepts a storyboard.yml file and uses Playwright to record a video of a web application routine. This tool enables coding agents to automatically produce visual demos of their work, addressing a practical need for proving that code actually works in agent-based development workflows. The storyboard.yml file defines steps like clicking, pausing, and injecting JavaScript, and the command can optionally use an --auth file for authenticated sessions.
 
 rss · Simon Willison · Jun 30, 16:54
 
-**Background**: shot-scraper is a command-line tool for taking screenshots of web pages using Playwright, a browser automation framework. The new video command extends this to full session recording, making it easier for AI agents to create visual proof of their work without manual intervention.
+**Background**: shot-scraper is a browser automation tool that previously only captured screenshots. Playwright is a cross-browser automation framework by Microsoft that supports video recording. The new command removes the need to manually stitch screenshots into videos.
 
 <details><summary>References</summary>
 <ul>
 <li><a href="https://simonwillison.net/2026/Jun/30/shot-scraper-video/">Have your agent record video demos of its work with shot ...</a></li>
-<li><a href="https://letsdatascience.com/news/shot-scraper-launches-video-command-in-110-07962b66">shot-scraper launches video command in 1.10 | Let's Data Science</a></li>
 <li><a href="https://playwright.dev/">Fast and reliable end-to-end testing for modern web apps ...</a></li>
 
 </ul>
 </details>
 
-**Discussion**: The announcement was well-received, with commenters noting the architectural insight that well-designed --help output can serve as a SKILL.md equivalent for coding agents. Some discussed the potential for integrating with high-performance APIs and the value of reproducible demos.
-
-**Tags**: `#developer-tools`, `#testing`, `#AI-agents`, `#web-automation`
-
----
-
-<a id="item-11"></a>
-## [OpenAI Reports Global Growth in ChatGPT Adoption](https://openai.com/index/how-chatgpt-adoption-has-expanded) ⭐️ 6.0/10
-
-OpenAI released new Signals data showing that ChatGPT adoption is growing globally, with users increasing usage and exploring more capabilities across regions and languages. This indicates that ChatGPT is becoming more deeply integrated into users' daily workflows, which could accelerate AI adoption trends and influence how businesses and individuals leverage AI tools. The data comes from OpenAI's Signals hub, which provides research and analysis on real-world AI use, and highlights growth across multiple regions and languages.
-
-rss · OpenAI Blog · Jun 30, 09:00
-
-**Background**: ChatGPT is a conversational AI model developed by OpenAI, capable of understanding and generating human-like text. Adoption metrics track how many people use the tool and how they engage with it, such as frequency of use and feature exploration.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://openai.com/signals/">Signals | OpenAI | OpenAI</a></li>
-<li><a href="https://openai.com/signals/data/">Signals data | OpenAI | OpenAI</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#ChatGPT`, `#AI adoption`, `#OpenAI`, `#trends`
-
----
-
-## 🔬 Semiconductors
-
-<a id="item-12"></a>
-## [TokenBudgeting: Enterprise AI Cost Management Insights](https://newsletter.semianalysis.com/p/tokenbudgeting-our-conversations) ⭐️ 7.0/10
-
-SemiAnalysis published an analysis of enterprise conversations on token spend, questioning whether widespread 'TokenMaxxing' ever truly existed and highlighting the shift toward token budgeting. This matters because enterprises are grappling with rising AI costs, and understanding real usage patterns versus hype can help them adopt more sustainable cost management strategies. TokenMaxxing refers to maximizing AI token usage as a productivity metric, but the article suggests it may have been overhyped; instead, enterprises are focusing on token budgeting to control costs.
-
-rss · Semianalysis · Jun 30, 18:32
-
-**Background**: Token budgeting is an approach where enterprises allocate and monitor AI token usage similarly to how operating systems manage memory, preventing runaway costs. The concept of TokenMaxxing emerged as a way to track AI productivity, but critics argue it encourages wasteful usage.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Token_maxxing">Token maxxing - Wikipedia</a></li>
-<li><a href="https://www.linkedin.com/pulse/why-token-budgeting-architecture-missing-layer-enterprise-rama-maddi-lmlsc">Why Token Budgeting Architecture Is the Missing Layer in Enterprise ...</a></li>
-<li><a href="https://www.vantage.sh/blog/ai-token-budgeting">Token Budgeting : How To Think About AI Cost Control | Vantage</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#AI`, `#enterprise`, `#token economics`, `#cost management`
+**Tags**: `#developer-tools`, `#automation`, `#testing`, `#playwright`, `#demo`
 
 ---
 
 ## ₿ Crypto
 
-<a id="item-13"></a>
-## [New York Life's $800B asset manager launches tokenized bond fund](https://www.coindesk.com/business/2026/06/29/new-york-life-makes-tokenization-debut-with-onchain-high-yield-bond-fund-with-centrifuge) ⭐️ 7.0/10
+<a id="item-8"></a>
+## [New York Life Launches Tokenized Bond Fund on Centrifuge](https://www.coindesk.com/business/2026/06/29/new-york-life-makes-tokenization-debut-with-onchain-high-yield-bond-fund-with-centrifuge) ⭐️ 8.0/10
 
-New York Life's asset manager, with $800 billion in assets, has launched its first tokenized high-yield bond fund on the Centrifuge platform, marking the firm's debut in blockchain-based asset tokenization. This move signals growing institutional adoption of tokenization, potentially transforming asset management by improving liquidity, transparency, and accessibility for traditionally illiquid assets like bonds. The fund is a high-yield bond fund tokenized on Centrifuge, a platform that has already tokenized over $2 billion in real-world assets and is used by institutions like Apollo and Janus Henderson.
+New York Life's $800 billion asset management arm has launched a tokenized high-yield bond fund on the Centrifuge protocol, marking its first foray into blockchain-based real-world asset tokenization. This move signals growing institutional adoption of tokenization, potentially unlocking liquidity and efficiency in traditional fixed-income markets. It also validates Centrifuge's infrastructure for bringing real-world assets on-chain. The fund is a tokenized high-yield bond fund, providing exposure to a diversified portfolio of corporate bonds. It leverages Centrifuge's open-source protocol for onchain asset management and distribution.
 
 rss · CoinDesk · Jun 30, 11:20
 
-**Background**: Tokenization involves creating digital tokens on a blockchain that represent ownership of real-world assets like bonds or real estate. Centrifuge is a blockchain platform specializing in tokenizing real-world assets and integrating them into decentralized finance (DeFi). This launch represents a major traditional financial institution entering the tokenized asset space.
+**Background**: Real-world asset (RWA) tokenization converts ownership rights of physical or financial assets into digital tokens on a blockchain, enabling fractional ownership, 24/7 trading, and programmable compliance. Centrifuge is a decentralized protocol that facilitates the tokenization and distribution of financial products across multiple blockchains. High-yield bond funds typically invest in below-investment-grade corporate debt, offering higher returns with increased risk.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://centrifuge.io/">Centrifuge | Infrastructure for Onchain Asset Management</a></li>
-<li><a href="https://messari.io/project/centrifuge/profile">What is Centrifuge? | Messari</a></li>
-<li><a href="https://github.com/centrifuge">Centrifuge · GitHub</a></li>
+<li><a href="https://github.com/centrifuge/protocol">GitHub - centrifuge/protocol: Centrifuge Protocol: The open infrastructure for onchain asset management · GitHub</a></li>
+<li><a href="https://www.solulab.com/asset-tokenization-guide/">Real-World Asset Tokenization Guide 2026 - SoluLab</a></li>
+<li><a href="https://investax.io/blog/investax-launches-tokenized-high-yield-corporate-bond-hycb">InvestaX Partners With OpenTrade to Bring BlackRock’s $6.3B Bond ...</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#tokenization`, `#blockchain`, `#asset management`, `#DeFi`, `#institutional adoption`
+**Tags**: `#tokenization`, `#institutional adoption`, `#DeFi`, `#real-world assets`, `#blockchain`
+
+---
+
+## 🔬 Semiconductors
+
+<a id="item-9"></a>
+## [Enterprise Token Spend: TokenMaxxing Narrative Overblown](https://newsletter.semianalysis.com/p/tokenbudgeting-our-conversations) ⭐️ 7.0/10
+
+SemiAnalysis conducted direct conversations with over 50 enterprise customers and found that widespread 'TokenMaxxing' (excessive token usage) is largely overstated, contrary to earlier reports of a token budgeting crisis. This analysis challenges the prevailing narrative that enterprises are burning through AI tokens uncontrollably, providing a more nuanced view that can help AI/ML practitioners and business leaders make informed decisions about token budgeting and AI adoption. The SemiAnalysis team gathered insights via Slack, phone, and at the Databricks AI Summit, and found that widely reported responses from companies like Meta and Uber are overstated.
+
+rss · Semianalysis · Jun 30, 18:32
+
+**Background**: TokenMaxxing refers to the practice of maximizing AI usage, often measured by token consumption, sometimes seen as 'productivity theater.' Earlier reports suggested enterprises were hitting a budgeting wall due to unhinged token consumption, but this new analysis indicates the trend is not as widespread.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://newsletter.semianalysis.com/p/tokenbudgeting-our-conversations">TokenBudgeting: Our Conversations with Enterprises on Token Spend</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Token_maxxing">Token maxxing - Wikipedia</a></li>
+<li><a href="https://tokenmaxxing.com/guides/what-is-tokenmaxxing">What Is Tokenmaxxing ? | Tokenmaxxing</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI/ML`, `#enterprise`, `#token economics`, `#industry analysis`
+
+---
+
+## 📰 Top News
+
+<a id="item-10"></a>
+## [China's Strategy to Counter AI Job Losses](https://news.google.com/rss/articles/CBMigwFBVV95cUxQOERiSFVoaHY5ZkNwWURzMWUyRDV3ZHl1MkpuZDlDcVhQaXN1dEhYQXZhd3oxNFdjYUZFOFFQTW1LdUItQ092ODRSVV9ickRoT1pwYWNJVlQwQ1NNVS0teExQbkM3WkUwSmd2LUlmcy1waFdKSkptcHJpbEM2MV9iZlZtUQ?oc=5) ⭐️ 7.0/10
+
+The New York Times reports that China is developing a comprehensive plan to mitigate job displacement caused by artificial intelligence, focusing on retraining programs and social safety nets. This plan could serve as a model for other nations grappling with AI-driven labor market disruptions, and its success or failure will have significant implications for global economic policy and social stability. The article highlights China's unique position as both a major AI developer and a country with a large workforce, and discusses specific measures such as government-funded training and job matching platforms.
+
+google_news · The New York Times · Jun 30, 21:04
+
+**Background**: AI advancements are expected to automate many jobs, particularly in manufacturing and services, raising concerns about widespread unemployment. China, with its vast labor force and rapid AI adoption, faces acute challenges in balancing technological progress with employment stability.
+
+**Tags**: `#AI`, `#China`, `#job displacement`, `#policy`, `#labor`
+
+---
+
+<a id="item-11"></a>
+## [Meituan trains trillion-parameter AI on domestic chips](https://news.google.com/rss/articles/CBMi2AFBVV95cUxOWEJOc2tfMDNfQll0RHlyRy1uRU1IcWozeHNRTUxJQllWMFJTMXF2X0xhSk92VTZDMXhESi04UEJVWU5tb0EtX014Z3lScmpUd2dMODZFd0JYcjRhWko0V2ZzN195VlU5SUJXYjZYckFUcnV3REttNWVhNkVNVGhHNFZ6SXp2VFZTUWo4UF9OQ2xmMHd0NkRBV1Jwc2xpbWhhTHQyb0Y5dFNsUzh5RXB6NG14TGh4c2VvNGdKMUdOWWs3STBjVVdmV0tPNURyRzRPcEF5cGwzSTHSAd4BQVVfeXFMUEpUaVI2N1Exa25YaEM5Q2YtX19kUEk3N0I0c0x0aDU3MG5jQktnS1BucWoxMW5LTFUycEp6c2c4MEhHa3dwR2RlVXREZzBSa2Q0V09JdUJpdnktdzllWmRzb2dDV1pZYUFsUThPVGQ0NGJnV195ZUo0RENMN2Y0Ym9lTEVfakViVVN4d0E5TE9wOGk3RGg2TVE2Uk0zVUdjMjlsWHRaQzc4UUFOS2xfeTBnUVVLRm9XRFVfUHNRWjA3R0NlSjZ5VXA2LWtiV3VfOFM2ODdDYWt1eC1sV0xR?oc=5) ⭐️ 7.0/10
+
+Meituan announced it has trained and open-sourced LongCat 2.0, a 1.6 trillion parameter MoE language model, entirely on domestic AI ASIC chips, claiming it is the world's first trillion-parameter AI model trained on homegrown hardware. This achievement demonstrates that China can train frontier-level AI models without relying on advanced Nvidia chips, reducing vulnerability to US export controls and boosting the domestic semiconductor ecosystem. LongCat 2.0 features a 1 million token context window and is released under the MIT license. The model has been leading OpenRouter's leaderboard for agentic coding tasks.
+
+google_news · The Economic Times · Jun 30, 07:21
+
+**Background**: Most Chinese AI models have been trained on Nvidia chips, which are subject to US export restrictions. China has been pushing for semiconductor self-sufficiency, and domestic chip makers have developed AI ASICs as alternatives. Meituan's success with LongCat 2.0 marks a significant milestone in this effort.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://www.reuters.com/world/china/chinas-meituan-says-new-ai-model-trained-domestic-chips-2026-06-30/">China's Meituan says new AI model trained on domestic chips</a></li>
+<li><a href="https://comfyui-wiki.com/en/news/2026-06-30-longcat-2-moe-meituan">Meituan Open Sources LongCat 2.0: 1.6 Trillion Parameter MoE ...</a></li>
+<li><a href="https://venturebeat.com/technology/meituan-open-sources-longcat-2-0-the-1-6t-near-frontier-agentic-coding-model-thats-been-leading-openrouter-trained-entirely-on-chinese-chips">Meituan open sources LongCat-2.0, the 1.6T, near-frontier ...</a></li>
+
+</ul>
+</details>
+
+**Tags**: `#AI`, `#semiconductors`, `#China`, `#Meituan`, `#geopolitics`
+
+---
+
+<a id="item-12"></a>
+## [Hong Kong tech chief warns AI will trigger greatest industrial revolution](https://news.google.com/rss/articles/CBMizgFBVV95cUxOV2hwVF9oQ29hTG16bG5SZkNuZ21oXzBBazAtNmdFUmlEZ1FkbmtrbTFNNnhWNFdEaVJKbWZSTTNUR2hJV05YOWFNZHlnQzRxc0RmYnZsWkpaeDZSa0dDN1loYm5wOXdwME0zS19xSXc3Nk5RYXA3ZEw0aDFuYzhWd2RVTnVlbHpMeUNTeXJqRHI2cW5pdExkVlVNeXZhM2UwM2pEbWVvenNVbHBYS3FiSEpkWUVLQlE5dmxXOVh2MWRnN2xHMFo3S1kxMzZSZ9IBzgFBVV95cUxNbFBzZjg4VS1qTjl2S2NnVzZEUHZ2UmdHbzlsXzFIaDVITDZjNmlEekwwdTExc1llOWp3amJJMThzellJZzRGdUdzZUNudnVhajY5dFdIRlJsejBPb2dCUHRGbzc2UDJ3dTNjQUMxeXNORXlmVG9yTmhtcEpvX1dSaElZZUhsLW1DWXE2S1AwMGdWbHI4cDNZdV90dThqUTRJZEVVNm9nOW9OWXZWQ2ZEWGZnTUJfWXBqbHdhVVFOcjQyai1PTDZpTXZtYm9KUQ?oc=5) ⭐️ 6.0/10
+
+Hong Kong's technology chief issued a warning that artificial intelligence will unleash the greatest industrial revolution in history, urging the city to prepare for transformative changes. This statement highlights the growing recognition of AI's transformative potential by government officials, signaling potential policy shifts and increased focus on AI readiness in Hong Kong and beyond. The warning was delivered by Hong Kong's tech chief, but specific details about the expected timeline or sectors most affected were not provided in the report.
+
+google_news · South China Morning Post · Jul 1, 04:00
+
+**Background**: The industrial revolution refers to major shifts in manufacturing and society driven by new technologies. AI is increasingly seen as a general-purpose technology that could automate cognitive tasks, similar to how steam power automated physical labor.
+
+**Tags**: `#AI`, `#industrial revolution`, `#Hong Kong`, `#technology policy`
 
 ---

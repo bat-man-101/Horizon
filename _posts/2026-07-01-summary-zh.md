@@ -5,325 +5,294 @@ date: 2026-07-01
 lang: zh
 ---
 
-> 从 206 条内容中筛选出 13 条重要资讯。
+> 从 187 条内容中筛选出 12 条重要资讯。
 
 ---
 
 **📌 其他（3）**
-  1. [Claude Code 秘密嵌入隐写水印](#item-1) ⭐️ 9.0/10
-  2. [美国解除对 Anthropic 的 Claude Fable 5 和 Mythos 5 的出口管制](#item-2) ⭐️ 9.0/10
+  1. [美国解除对 Claude Fable 5 和 Mythos 5 的出口管制](#item-1) ⭐️ 9.0/10
+  2. [Claude Code 隐写标记请求](#item-2) ⭐️ 8.0/10
   3. [Anthropic 发布面向智能体任务的 Claude Sonnet 5](#item-3) ⭐️ 8.0/10
 
 **🚀 科技动态（3）**
-  4. [Realta Fusion 首次实现聚变直接发电](#item-4) ⭐️ 9.0/10
-  5. [Etched 估值 50 亿美元，AI 芯片销售额达 10 亿美元](#item-5) ⭐️ 8.0/10
+  4. [Realta Fusion 声称首次直接从聚变反应发电](#item-4) ⭐️ 9.0/10
+  5. [Etched 估值达 50 亿美元，AI 芯片销售额达 10 亿](#item-5) ⭐️ 8.0/10
   6. [特斯拉在奥斯汀开始测试无踏板无方向盘的 Cybercab](#item-6) ⭐️ 8.0/10
 
-**📰 热点新闻（3）**
-  7. [美国将出口管制扩展至先进 AI 模型](#item-7) ⭐️ 8.0/10
-  8. [AI 可能彻底改变疫苗研发](#item-8) ⭐️ 7.0/10
-  9. [AI 可变革乳腺癌检测与复发预测](#item-9) ⭐️ 7.0/10
-
-**🤖 AI 新闻（2）**
-  10. [shot-scraper video 录制代理演示视频](#item-10) ⭐️ 7.0/10
-  11. [OpenAI 报告 ChatGPT 全球采用增长](#item-11) ⭐️ 6.0/10
-
-**🔬 半导体（1）**
-  12. [TokenBudgeting：企业 AI 成本管理洞察](#item-12) ⭐️ 7.0/10
+**🤖 AI 新闻（1）**
+  7. [shot-scraper video 让智能体录制演示视频](#item-7) ⭐️ 8.0/10
 
 **₿ 加密资产（1）**
-  13. [纽约人寿 8000 亿美元资产管理公司推出代币化债券基金](#item-13) ⭐️ 7.0/10
+  8. [纽约人寿在 Centrifuge 上推出代币化债券基金](#item-8) ⭐️ 8.0/10
+
+**🔬 半导体（1）**
+  9. [企业 Token 支出：TokenMaxxing 说法被夸大](#item-9) ⭐️ 7.0/10
+
+**📰 热点新闻（3）**
+  10. [中国应对 AI 失业的策略](#item-10) ⭐️ 7.0/10
+  11. [美团用国产芯片训练万亿参数 AI 模型](#item-11) ⭐️ 7.0/10
+  12. [香港科技官员警告 AI 将引发最伟大的工业革命](#item-12) ⭐️ 6.0/10
 ---
 
 ## 📌 其他
 
 <a id="item-1"></a>
-## [Claude Code 秘密嵌入隐写水印](https://thereallo.dev/blog/claude-code-prompt-steganography) ⭐️ 9.0/10
+## [美国解除对 Claude Fable 5 和 Mythos 5 的出口管制](https://twitter.com/AnthropicAI/status/2072106151890809341) ⭐️ 9.0/10
 
-Anthropic 的 Claude Code 工具被发现秘密地在用户请求中嵌入隐写水印，这一发现源于一篇对该工具进行逆向工程的博客文章。 这引发了对 AI 供应商工具透明度和信任的严重担忧，因为用户可能在不知情的情况下被标记和追踪其数据。 这些隐写标记被嵌入发送给 Claude Code 的提示中，可能使 Anthropic 能够识别请求的来源，例如来自进行模型蒸馏的中国公司。
+美国商务部解除了对 Anthropic 的 Claude Fable 5 和 Mythos 5 模型的出口管制，但对其网络安全能力施加了限制，要求使用分类器阻止编码和调试等任务。 这一决定为前沿 AI 模型的监管树立了先例，平衡了国家安全关切与商业部署，并可能影响全球未来的 AI 出口管制政策。 这些限制意味着，对于编码和调试等常规任务，Claude Fable 5 将回退到 Opus 4.8。商务部致 Anthropic 的信函概述了模型发布的具体条件。
 
-hackernews · kirushik · 6月30日 15:44 · [社区讨论](https://news.ycombinator.com/item?id=48734373)
+hackernews · Pragmata · 6月30日 23:55 · [社区讨论](https://news.ycombinator.com/item?id=48740771)
 
-**背景**: 隐写术是一种将秘密数据隐藏在普通文件（如文本或图像）中以避免检测的做法。Claude Code 是 Anthropic 的智能编码工具，在终端中运行，帮助开发者进行代码编辑和项目管理。
+**背景**: Claude Fable 5 和 Mythos 5 是 Anthropic 最强大的前沿模型，其中 Mythos 5 旨在发现和修复软件漏洞。AI 模型的出口管制旨在防止被对手滥用，但批评者认为这阻碍了创新并给企业带来不确定性。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://topaihubs.com/articles/claude-s-hidden-watermarks-ai-security-and-the-ethics-of-invisible-data">Claude's Hidden Watermarks: AI Security and the Ethics of ...</a></li>
-<li><a href="https://www.anthropic.com/product/claude-code">Claude Code | Anthropic's agentic coding system</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Claude_Fable_5">Claude Fable 5</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Claude_Mythos">Claude Mythos - Wikipedia</a></li>
+<li><a href="https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5">Introducing Claude Fable 5 and Claude Mythos 5 - Claude Platform Docs</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论存在分歧：一些人批评 Anthropic 缺乏透明度且实现粗糙，而另一些人则认为其意图（例如检测中国公司的模型蒸馏）可以理解。还有人呼吁本地运行 AI 以保护隐私。
+**社区讨论**: 评论者对 AI 监管缺乏可预测性表示担忧，一些人指出企业无法依赖美国前沿模型来承担关键功能。其他人则辩论 AI 是否应像核技术一样受到监管，并指出这些限制限制了模型在编码任务中的实用性。
 
-**标签**: `#AI`, `#security`, `#steganography`, `#Anthropic`, `#trust`
+**标签**: `#AI regulation`, `#export controls`, `#Anthropic`, `#frontier models`, `#national security`
 
 ---
 
 <a id="item-2"></a>
-## [美国解除对 Anthropic 的 Claude Fable 5 和 Mythos 5 的出口管制](https://twitter.com/AnthropicAI/status/2072106151890809341) ⭐️ 9.0/10
+## [Claude Code 隐写标记请求](https://thereallo.dev/blog/claude-code-prompt-steganography) ⭐️ 8.0/10
 
-美国商务部于 2026 年 6 月 30 日解除了对 Anthropic 的 Claude Fable 5 和 Mythos 5 AI 模型的出口管制，恢复了全球访问权限，此前这些模型被禁用了三周。 这一决定标志着 AI 监管的重大转变，凸显了国家安全关切与对美国前沿模型商业依赖之间的紧张关系，并为未来先进 AI 的出口管制开创了先例。 Claude Fable 5 是 Anthropic 最强大的广泛发布模型，用于编码和智能体任务，而 Mythos 5 是用于网络安全漏洞发现的限量发布模型；两者均于 6 月 12 日因出口管制令被禁用。
+一位开发者发现，Anthropic 的 Claude Code 工具在系统提示中嵌入隐藏的 Unicode 标记，根据用户的 API 基础 URL 和时区对 API 请求进行指纹识别。这一隐写技术是在对该工具进行隐私检查时发现的。 这引发了对 AI 服务提供商透明度和信任的严重担忧，因为未公开的行为可能被用于在用户不知情的情况下跟踪或识别用户。这也凸显了需要对 AI 工具在客户机器上的行为进行更严格的审查。 这些标记根据 API 基础 URL 和用户时区插入到系统提示中，可能使 Anthropic 能够识别来自中国 AI 实验室或其他特定群体的请求。该实现被描述为草率且易于通过逆向工程检测。
 
-hackernews · Pragmata · 6月30日 23:55 · [社区讨论](https://news.ycombinator.com/item?id=48740771)
+hackernews · kirushik · 6月30日 15:44 · [社区讨论](https://news.ycombinator.com/item?id=48734373)
 
-**背景**: 出口管制是政府对向外国实体转让敏感技术的限制。2026 年 6 月，美国政府以国家安全风险为由，对 Anthropic 最先进的 AI 模型实施了出口禁令。在 Anthropic 部署新的分类器以阻止网络安全任务后，禁令被解除，但一些常规编码任务现在回退到旧模型。
+**背景**: 隐写术是将消息隐藏在其他非秘密数据（如文本或图像）中的做法。在此背景下，Claude Code 是一个命令行工具，使用 Anthropic 的 Claude AI 模型协助编码任务。该发现是由一位开发者出于隐私原因检查该工具的网络请求时做出的。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.theguardian.com/technology/2026/jul/01/anthropic-fable-mythos-ai-models-us-export-controls-lifted">Anthropic : US has lifted export controls on Fable and Mythos AI ...</a></li>
-<li><a href="https://nypost.com/2026/06/30/business/trump-administration-lifts-export-controls-on-anthropics-most-powerful-ai-models-ending-bitter-standoff/">Trump administration lifts export controls on Anthropic 's most...</a></li>
-<li><a href="https://www.euronews.com/2026/07/01/us-lifts-export-controls-on-powerful-ai-models-anthropic-says">US lifts export controls on powerful AI models , Anthropic says</a></li>
+<li><a href="https://thereallo.dev/blog/claude-code-prompt-steganography">Claude Code Is Steganographically Marking Requests</a></li>
+<li><a href="https://byteiota.com/claude-code-is-marking-requests-what-anthropic-hid/">Claude Code Is Marking Requests: What Anthropic Hid</a></li>
+<li><a href="https://eu.36kr.com/en/p/3876461674917892">Confirmed: Claude Code Secretly Accesses User Data - Time Zones and Chinese AI Labs as Key Targets</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论对美国 AI 监管的不可预测性表示担忧，一些人认为企业不能依赖前沿模型来执行关键功能。另一些人指出，解除管制并未解决缺乏明确法律标准的问题，且整个过程显得临时随意。
+**社区讨论**: 社区意见分歧：一些人淡化其严重性，认为意图明显是检测中国公司的模型蒸馏，而另一些人则对 Anthropic 和所有大型 AI 实验室表示强烈不信任。批评者指出，即使业务需求可以理解，缺乏诚实披露也是不可接受的。
 
-**标签**: `#AI regulation`, `#export controls`, `#Anthropic`, `#frontier models`, `#geopolitics`
+**标签**: `#AI`, `#privacy`, `#steganography`, `#Anthropic`, `#trust`
 
 ---
 
 <a id="item-3"></a>
 ## [Anthropic 发布面向智能体任务的 Claude Sonnet 5](https://www.anthropic.com/news/claude-sonnet-5) ⭐️ 8.0/10
 
-Anthropic 发布了 Claude Sonnet 5，这是一款针对智能体任务（如规划、工具使用和自主执行）优化的新模型，定价为每百万 token 3/15 美元。 此次发布凸显了行业向智能体 AI 发展的趋势，为自主工作流提供了高性价比的选择，但与更昂贵的 Opus 模型相比，其基准测试结果好坏参半。 在某些基准测试中，Sonnet 5 以更低成本达到或超过 Opus 4.8，但在 CyberGym 漏洞发现等测试中，其表现不如 Sonnet 4.6 和 Opus 4.8。启用默认缓解措施后，该模型在 CyberGym 上得分为 0。
+Anthropic 发布了 Claude Sonnet 5，这是一款针对智能体任务（如规划、使用浏览器和终端以及自主执行）优化的新 AI 模型。它现已成为 Free 和 Pro 计划的默认模型，API 入门定价为每百万 token 2/10 美元，有效期至 2026 年 8 月 31 日。 Sonnet 5 以更低的基准价格提供了接近旗舰级的智能体性能，使高级自主能力更加普及。然而，社区分析显示，在较高努力水平下，其每任务成本可能超过 Opus 4.8，迫使用户在模型和努力设置之间仔细权衡。 在 AA-Briefcase 和 GDPval-AA 等智能体基准测试中，Sonnet 5 匹配或略微超过 Opus 4.8，仅次于尚未公开发布的 Claude Fable 5。它还表现出自我验证行为，无需明确提示即可完成复杂任务，这是对之前 Sonnet 模型的阶跃式改进。
 
 hackernews · marinesebastian · 6月30日 17:59 · [社区讨论](https://news.ycombinator.com/item?id=48736605)
 
-**背景**: 智能体 AI 指能够自主规划、使用工具并执行多步骤任务、只需极少人工干预的系统。Claude Sonnet 系列是 Anthropic 的中端产品，平衡性能与成本，而 Opus 是旗舰高端模型。
+**背景**: Anthropic 的 Claude 模型系列包括 Haiku（快速/廉价）、Sonnet（均衡）和 Opus（旗舰）。智能体任务涉及 AI 模型自主规划并使用代码解释器、网页浏览器或终端等工具执行多步骤操作。Sonnet 5 旨在将此类能力引入中端模型，但成本-性能权衡因任务复杂性和努力水平而异。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://llm-stats.com/blog/research/claude-sonnet-5-vs-claude-opus-4-8">Claude Sonnet 5 vs Claude Opus 4.8: The Complete Comparison</a></li>
-<li><a href="https://codingfleet.com/blog/claude-sonnet-5-vs-claude-opus-4-8/">Claude Sonnet 5 vs Claude Opus 4.8: 93% Power, 60% Price ...</a></li>
-<li><a href="https://en.wikipedia.org/wiki/AI_agent">AI agent - Wikipedia</a></li>
+<li><a href="https://artificialanalysis.ai/articles/claude-sonnet-5-agentic-cost">Claude Sonnet 5 : strong agentic performance at a higher cost per task</a></li>
+<li><a href="https://www.digitalapplied.com/blog/claude-sonnet-5-agentic-coding-near-opus-price-2026">Claude Sonnet 5: Near-Opus Agentic Coding - Digital Applied</a></li>
+<li><a href="https://www.marktechpost.com/2026/06/30/anthropic-claude-sonnet-5-vs-sonnet-4-6-vs-opus-4-8-agentic-coding-benchmarks-api-pricing-and-cost-performance-tradeoffs-compared/">Anthropic Claude Sonnet 5 vs Sonnet 4.6 vs Opus 4.8: Agentic Coding Benchmarks, API Pricing, and Cost-Performance Tradeoffs Compared - MarkTechPost</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 社区评论对 Sonnet 5 的价值主张表示困惑，指出在更高努力级别下，Opus 的单位成本表现往往更好。一些用户强调了安全基准测试中的性能倒退，并对定价策略提出质疑。
+**社区讨论**: 社区评论褒贬不一：一些用户质疑其价值主张，指出 Opus 4.8 在中高努力水平下通常提供更好的成本-性能比。其他人则强调 Sonnet 5 的自我验证和更快速度是主要优势，而一些基准测试显示，在常识问答和工具调用任务上，其表现不如 GLM 5.2 等竞争对手。
 
-**标签**: `#AI`, `#LLM`, `#Anthropic`, `#Claude`, `#model release`
+**标签**: `#AI`, `#Anthropic`, `#Claude`, `#LLM`, `#agentic`
 
 ---
 
 ## 🚀 科技动态
 
 <a id="item-4"></a>
-## [Realta Fusion 首次实现聚变直接发电](https://techcrunch.com/2026/06/30/realta-fusion-generates-electricity-directly-from-a-fusion-reaction-an-apparent-first/) ⭐️ 9.0/10
+## [Realta Fusion 声称首次直接从聚变反应发电](https://techcrunch.com/2026/06/30/realta-fusion-generates-electricity-directly-from-a-fusion-reaction-an-apparent-first/) ⭐️ 9.0/10
 
-Realta Fusion 展示了首次从聚变反应中直接发电，绕过了传统的蒸汽涡轮机循环。首席执行官 Kieran Furlong 在 2026 年 6 月 30 日的 TechCrunch 采访中宣布了这一里程碑。 这一突破可能大幅提高聚变电站的经济性和效率，使聚变更具可行性。它代表了向实用化、商业化聚变能源迈出的重要一步，可能改变全球能源生产格局。 该公司使用了场反转位形（FRC）反应堆，这种反应堆自然脉冲，无需中间热转换即可直接提取电力。Realta Fusion 是威斯康星大学麦迪逊分校的衍生公司，目标是在 2028 年前建造聚变装置。
+从威斯康星大学麦迪逊分校分拆出来的初创公司 Realta Fusion 宣布，它已直接从聚变反应中发电，这是一个此前未公开实现的里程碑。首席执行官 Kieran Furlong 表示：“我们可以从等离子体中获取电力。” 这一突破可能加速实用聚变能的发展，提供一种潜在无限、清洁的能源。直接从聚变发电绕过了传统的热交换方法，提高了效率并降低了复杂性。 该公司采用直接能量转换方法，捕获聚变等离子体中带电粒子的动能，而不是利用热量驱动涡轮机。Realta Fusion 的技术基于超导材料和等离子体物理学的进步，旨在实现紧凑且可扩展的反应堆设计。
 
 rss · 36氪 - 科技 · 6月30日 19:12
 
-**背景**: 传统的聚变反应堆设计（如托卡马克）依赖聚变产生的热量来产生蒸汽驱动涡轮机，与传统发电厂类似。直接从聚变发电一直是长期追求的目标，因为它消除了热转换的效率损失。Realta Fusion 的方法使用线性 FRC 反应堆，结合先进的超导磁体和等离子体物理来实现这一目标。
+**背景**: 核聚变是为太阳提供能量的过程，长期以来一直被追求作为清洁能源。传统的聚变电站设计利用聚变反应产生的热量来产生蒸汽并驱动涡轮机，类似于传统发电厂。然而，直接能量转换将带电粒子的动能直接转化为电能，可能提供更高的效率和更简单的工程。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://www.msn.com/en-us/technology/renewable-energy/realta-fusion-generates-electricity-directly-from-a-fusion-reaction-an-apparent-first/ar-AA26UNPp">Realta Fusion generates electricity directly from a fusion reaction...</a></li>
-<li><a href="https://podmarized.com/episodes/lex-fridman-podcast/david-kirtley-nuclear-fusion-plasma-physics-and-the-future-of-energy-lex-fridman-podcast-485">David Kirtley: Nuclear Fusion , Plasma Physics, and the Future of Energy</a></li>
-<li><a href="https://planetforward.org/story/realta-fusion-wisconsin/">UW-Madison startup aims to build fusion energy device by 2028</a></li>
+<li><a href="https://techcrunch.com/2026/06/30/realta-fusion-generates-electricity-directly-from-a-fusion-reaction-an-apparent-first/">Realta Fusion generates electricity directly from a fusion ...</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Direct_energy_conversion">Direct energy conversion - Wikipedia</a></li>
+<li><a href="https://realtafusion.com/technology/">Technology | Realta Fusion</a></li>
 
 </ul>
 </details>
 
-**标签**: `#fusion energy`, `#clean energy`, `#breakthrough`, `#nuclear fusion`
+**标签**: `#fusion energy`, `#clean energy`, `#breakthrough`, `#physics`, `#startup`
 
 ---
 
 <a id="item-5"></a>
-## [Etched 估值 50 亿美元，AI 芯片销售额达 10 亿美元](https://techcrunch.com/2026/06/30/nvidia-competitor-etched-hits-5b-valuation-1b-in-sales-for-ai-chip/) ⭐️ 8.0/10
+## [Etched 估值达 50 亿美元，AI 芯片销售额达 10 亿](https://techcrunch.com/2026/06/30/nvidia-competitor-etched-hits-5b-valuation-1b-in-sales-for-ai-chip/) ⭐️ 8.0/10
 
-AI 芯片初创公司 Etched 宣布已获得 10 亿美元合同，用于其专为 Transformer 架构设计的推理系统，估值达到 50 亿美元，成为 Nvidia 的有力竞争对手。 这一里程碑表明市场对专用 AI 推理芯片的强烈认可，可能挑战 Nvidia 在 AI 硬件市场的主导地位，并加速向专用加速器的转变。 Etched 的第一代芯片 Sohu 是专为 Transformer 模型（如 ChatGPT 等大语言模型）设计的 ASIC。该公司已为使用 Sohu 的推理系统签订了 10 亿美元的合同。
+AI 芯片初创公司 Etched 宣布其估值达到 50 亿美元，并已获得 10 亿美元的推理系统合同销售额，挑战英伟达在 AI 硬件市场的主导地位。 这一里程碑标志着专业 AI 芯片竞争对手获得了强大的市场验证，可能通过为推理工作负载提供英伟达通用 GPU 的替代方案，重塑 AI 硬件格局。 Etched 的芯片名为 Sohu，是一款专为 Transformer 模型设计的 ASIC，采用台积电 4nm 工艺制造。10 亿美元的销售额来自该芯片驱动的推理系统。
 
 rss · 36氪 - 科技 · 6月30日 18:13
 
-**背景**: Etched 是一家美国半导体初创公司，为 AI 工作负载设计定制 ASIC。其芯片 Sohu 是首款专为 Transformer AI 架构设计的芯片，专注于推理而非训练。Nvidia 目前凭借其通用 GPU 主导 AI 芯片市场。
+**背景**: AI 推理系统运行训练好的模型进行预测，需要高吞吐量和低延迟。Etched 的 Sohu 芯片是专用集成电路（ASIC），仅针对基于 Transformer 的模型进行了优化，不同于英伟达同时处理训练和推理的通用 GPU。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Etched.ai">Etched (company) - Wikipedia</a></li>
-<li><a href="https://techcrunch.com/2024/06/25/etched-is-building-an-ai-chip-that-only-runs-transformer-models/">Etched is building an AI chip that only runs one type of... | TechCrunch</a></li>
+<li><a href="https://techcrunch.com/2026/06/30/nvidia-competitor-etched-hits-5b-valuation-1b-in-sales-for-ai-chip/">Nvidia competitor Etched hits $5B valuation, $1B in sales for ...</a></li>
+<li><a href="https://www.etched.com/">Etched</a></li>
+<li><a href="https://techcrunch.com/2024/06/25/etched-is-building-an-ai-chip-that-only-runs-transformer-models/">Etched is building an AI chip that only runs one type of model</a></li>
 
 </ul>
 </details>
 
-**标签**: `#AI hardware`, `#Nvidia competitor`, `#startup funding`, `#AI chips`, `#inference`
+**标签**: `#AI hardware`, `#semiconductors`, `#Nvidia competitor`, `#inference chips`
 
 ---
 
 <a id="item-6"></a>
 ## [特斯拉在奥斯汀开始测试无踏板无方向盘的 Cybercab](https://techcrunch.com/2026/06/30/tesla-starts-testing-cybercab-without-pedals-or-a-steering-wheel-in-austin/) ⭐️ 8.0/10
 
-特斯拉已在德克萨斯州奥斯汀的公共道路上开始测试没有踏板和方向盘的 Cybercab 机器人出租车，这标志着向推出全自动驾驶叫车网络迈出了重要一步。 此次测试是特斯拉长期承诺的机器人出租车网络的关键里程碑，有望通过提供无人驾驶出行服务改变城市交通。如果成功，可能加速自动驾驶汽车的普及，并颠覆传统叫车服务。 Cybercab 是一款专为自动驾驶设计的双座电动车，没有手动控制装置。特斯拉于 2024 年 10 月发布了概念车，并于 2026 年 2 月开始生产，最初制造了 20 辆原型车。
+特斯拉已开始在德克萨斯州奥斯汀的公共道路上测试其 Cybercab，这是一款没有踏板和方向盘的完全自动驾驶车辆。这标志着其向推出机器人出租车网络迈出了具体一步。 这一测试里程碑使特斯拉更接近实现埃隆·马斯克长期以来的机器人出租车网络愿景，可能颠覆网约车行业。如果成功，特斯拉将与 Waymo 并列为自动驾驶出行领域的主要参与者。 Cybercab 是一款专为完全自动驾驶设计的双座纯电动汽车，于 2026 年 2 月开始生产。特斯拉的机器人出租车服务于 2025 年 6 月 22 日在奥斯汀以有限容量推出，使用配备 FSD 软件的车辆。
 
 rss · 36氪 - 科技 · 6月30日 15:32
 
-**背景**: 特斯拉多年来一直在开发全自动驾驶（FSD）技术，但 Cybercab 是其首款专为机器人出租车服务设计、没有任何手动驾驶控制的车辆。该公司计划运营自己的叫车网络 Tesla Robotaxi，乘客可通过应用程序召唤 Cybercab。此次在奥斯汀的测试使这一愿景更接近现实。
+**背景**: 特斯拉 Cybercab 于 2024 年 10 月首次以概念车形式亮相，原型车没有方向盘和踏板。特斯拉计划在 2026 年底前实现量产，年产量目标为 200 万辆。机器人出租车网络依赖于特斯拉的全自动驾驶（FSD）技术。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Tesla_Cybercab">Tesla Cybercab - Wikipedia</a></li>
-<li><a href="https://www.tesla.com/robotaxi">Robotaxi | Tesla</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cybercab">Cybercab</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tesla_Robotaxi">Tesla Robotaxi - Wikipedia</a></li>
+<li><a href="https://www.tesla.com/robotaxi">Robotaxi - Tesla</a></li>
 
 </ul>
 </details>
 
-**标签**: `#Tesla`, `#autonomous vehicles`, `#robotaxi`, `#self-driving`, `#transportation`
-
----
-
-## 📰 热点新闻
-
-<a id="item-7"></a>
-## [美国将出口管制扩展至先进 AI 模型](https://news.google.com/rss/articles/CBMigwJBVV95cUxOWTQzZjJ5VGNUaGtJY3dTaTVwb0dWN01yWFY2RGtZX0gwZEpFVHM5NTZZQWRRZ04yZk1Hc2tCcFplcTg2VkxPZzVyUDhBeElfM21Id25YX3NpSXpRSmpLRVlkdXdkRWUyU1NMVXRydklfYmI4eWFrS1BqdnpNTlFmSnZ0RkZZeG9zYXRBRmdDYWIxOVA3R3E2aENra054OHl6WjhkTDVuWUY3eDdtc0J4WmVSR0lKbXNXaUNlaF9obXV5ajUwU0RNR3pLdjhlbGJYdllmNnZwZjNISUlvZFVUUkRGNTNoRWEyODgtVUQ3WXVKeDRUbHNYMEJXNnNQQWFyVGZN?oc=5) ⭐️ 8.0/10
-
-美国商务部工业与安全局（BIS）将出口管制扩展至先进 AI 模型权重，同时授权在全新框架下向特定可信合作伙伴发布。 这标志着美国 AI 监管的重大升级，可能限制全球对尖端 AI 模型的获取，并重塑国际 AI 发展格局。可信合作伙伴网络之外的企业和研究者可能面临新障碍。 管制适用于先进 AI 模型权重，合规截止日期各异：部分变更于 2025 年 5 月 15 日生效，其他则推迟至 2026 年 1 月 25 日。该规则还设立了面向可信合作伙伴的“美国 AI 出口计划”。
-
-google_news · Mayer Brown · 7月1日 04:30
-
-**背景**: 先进计算物项的出口管制始于 2022 年 10 月，针对半导体技术。新规将管制扩展至 AI 模型权重——即定义模型行为的参数。可信合作伙伴是指美国政府认为风险较低的实体，如盟国或经审查的公司。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://www.sidley.com/en/insights/newsupdates/2025/01/new-us-export-controls-on-advanced-computing-items-and-artificial-intelligence-model-weights">New U.S. Export Controls on Advanced Computing Items and Artificial Intelligence Model Weights: Seven Key Takeaways | Insights | Sidley Austin LLP</a></li>
-<li><a href="https://www.cov.com/en/news-and-insights/insights/2025/01/us-department-of-commerce-establishes-export-control-framework-limiting-the-diffusion-of-advanced-artificial-intelligence-and-expands-and-clarifies-advanced-computing-controls">U.S. Department of Commerce Establishes Export Control Framework Limiting the Diffusion of Advanced Artificial Intelligence and Expands and Clarifies Advanced Computing Controls | Covington & Burling LLP</a></li>
-<li><a href="https://www.federalregister.gov/documents/2025/10/28/2025-19674/american-ai-exports-program">Federal Register :: American AI Exports Program</a></li>
-
-</ul>
-</details>
-
-**标签**: `#AI regulation`, `#export controls`, `#US policy`, `#AI models`
-
----
-
-<a id="item-8"></a>
-## [AI 可能彻底改变疫苗研发](https://news.google.com/rss/articles/CBMioAFBVV95cUxPWGlPaUVNdnVRVzc0Y3FzRWQxTWg4UnJSTXhlU0hybGVwYTdiTnkwaXVSVXB3ZU9teGlkamZLLVZfR25MMm1Xc3JUVzdMN2QzOVoxMDhzR3ZybUhVcndZY1pMcFpVOUwxVHhsSi1GbVFueTd1WlFxZEZycjl6T1ZDR0lhcUpGdFhLR0Y0ZWc3N042aDlWdkt6OHdwcnBTc3Zw?oc=5) ⭐️ 7.0/10
-
-CIDRAP 的一篇新文章讨论了人工智能如何加速疫苗发现和设计，可能彻底改变整个疫苗研发过程。 这很重要，因为更快的疫苗研发可以改善大流行防范，并实现对新兴传染病的快速响应，最终挽救生命并减少经济影响。 AlphaFold 等 AI 技术可以预测蛋白质结构，辅助抗原设计，而机器学习有助于识别最佳疫苗靶点并简化临床试验。
-
-google_news · CIDRAP · 6月30日 17:45
-
-**背景**: 传统疫苗研发缓慢且昂贵，通常需要数年甚至数十年。AI 可以分析大量生物数据集，识别模式并预测免疫反应，从而大幅缩短时间线。在 COVID-19 大流行期间，AI 帮助快速测序病毒并设计 mRNA 疫苗。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://www.cidrap.umn.edu/covid-19/artificial-intelligence-could-usher-new-era-vaccine-development">Artificial intelligence could usher in a new era of vaccine ... | CIDRAP</a></li>
-<li><a href="https://www.gavi.org/vaccineswork/using-ai-lab-jab-how-did-artificial-intelligence-help-us-develop-and-deliver-covid">Using AI from lab to jab: how did artificial intelligence help us develop and deliver COVID-19 vaccines?</a></li>
-<li><a href="https://www.frontiersin.org/journals/immunology/articles/10.3389/fimmu.2025.1567116/full">Frontiers | Artificial intelligence in vaccine research and development ...</a></li>
-
-</ul>
-</details>
-
-**标签**: `#AI`, `#vaccine development`, `#healthcare`, `#biotechnology`
-
----
-
-<a id="item-9"></a>
-## [AI 可变革乳腺癌检测与复发预测](https://news.google.com/rss/articles/CBMiXEFVX3lxTFBPbkVuSFFDbFF2YU9rUHhQZ09qZFg0YzdPYllxbXIxWXdkM3diaGZKNllMVEhMdC1ucWlacDNsdmcybzFScThUMXEtMzZWQ29mYmhHRkhjSW9MQU1p?oc=5) ⭐️ 7.0/10
-
-EurekAlert! 上的一篇文章报道称，人工智能在改变乳腺癌检测和预测复发方面显示出潜力，可能改善患者预后。 这一进展可能带来更早、更准确的乳腺癌诊断以及更好的复发预测，最终挽救生命并降低医疗成本。 文章强调了 AI 分析乳腺 X 光片及其他影像数据的高准确性，以及识别与癌症复发相关模式的能力。但未详细说明具体模型、数据集或性能指标。
-
-google_news · EurekAlert! · 6月30日 16:33
-
-**背景**: 乳腺癌是全球最常见的癌症之一，早期检测对成功治疗至关重要。传统方法如乳腺 X 光检查可能漏诊或产生假阳性。AI，尤其是深度学习，越来越多地应用于医学影像，以提高诊断准确性并预测疾病进展。
-
-**标签**: `#AI`, `#healthcare`, `#breast cancer`, `#machine learning`
+**标签**: `#Tesla`, `#autonomous vehicles`, `#robotaxi`, `#Cybercab`
 
 ---
 
 ## 🤖 AI 新闻
 
-<a id="item-10"></a>
-## [shot-scraper video 录制代理演示视频](https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything) ⭐️ 7.0/10
+<a id="item-7"></a>
+## [shot-scraper video 让智能体录制演示视频](https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything) ⭐️ 8.0/10
 
-Simon Willison 发布了 shot-scraper 1.10，新增了 'video' 命令，该命令接受 storyboard.yml 文件并使用 Playwright 录制 Web 应用程序操作的视频。该工具旨在让编码代理自动生成其工作的视觉演示。 这解决了 AI 辅助开发中的一个关键挑战：证明代理生成的代码确实有效。通过让代理录制可复现的视频演示，它提高了自动化工作流程中的信任度和可问责性。 storyboard.yml 文件定义了服务器启动、URL、视口、光标可见性、等待条件、JavaScript 覆盖以及一系列包含暂停和点击等操作的场景。该命令支持 --auth 进行基于 cookie 的身份验证，并输出 WebM 或 MP4 视频。
+Simon Willison 发布了 shot-scraper 1.10，新增了 'video' 命令，该命令接受 storyboard.yml 文件，并使用 Playwright 录制 Web 应用程序操作的视频。 该工具使编码智能体能够自动生成其工作的可视化演示，满足了在基于智能体的开发流程中证明代码实际运行效果的实际需求。 storyboard.yml 文件定义了点击、暂停和注入 JavaScript 等步骤，该命令还可以使用 --auth 文件进行身份验证会话。
 
 rss · Simon Willison · 6月30日 16:54
 
-**背景**: shot-scraper 是一个命令行工具，使用 Playwright（一个浏览器自动化框架）来截取网页截图。新的 video 命令将其扩展到完整的会话录制，使 AI 代理无需人工干预即可轻松创建其工作的视觉证明。
+**背景**: shot-scraper 是一个浏览器自动化工具，之前只能截取屏幕截图。Playwright 是微软开发的跨浏览器自动化框架，支持视频录制。新命令消除了手动将截图拼接成视频的需求。
 
 <details><summary>参考链接</summary>
 <ul>
 <li><a href="https://simonwillison.net/2026/Jun/30/shot-scraper-video/">Have your agent record video demos of its work with shot ...</a></li>
-<li><a href="https://letsdatascience.com/news/shot-scraper-launches-video-command-in-110-07962b66">shot-scraper launches video command in 1.10 | Let's Data Science</a></li>
 <li><a href="https://playwright.dev/">Fast and reliable end-to-end testing for modern web apps ...</a></li>
 
 </ul>
 </details>
 
-**社区讨论**: 该公告受到好评，评论者指出，精心设计的 --help 输出可以作为编码代理的 SKILL.md 等效物。一些人讨论了与高性能 API 集成的潜力以及可复现演示的价值。
-
-**标签**: `#developer-tools`, `#testing`, `#AI-agents`, `#web-automation`
-
----
-
-<a id="item-11"></a>
-## [OpenAI 报告 ChatGPT 全球采用增长](https://openai.com/index/how-chatgpt-adoption-has-expanded) ⭐️ 6.0/10
-
-OpenAI 发布了新的 Signals 数据，显示 ChatGPT 在全球范围内的采用率正在增长，用户增加了使用量，并在不同地区和语言中探索更多功能。 这表明 ChatGPT 正更深入地融入用户的日常工作流程，可能加速 AI 采用趋势，并影响企业和个人利用 AI 工具的方式。 数据来自 OpenAI 的 Signals 中心，该中心提供关于现实世界 AI 使用的研究和分析，并突出了多个地区和语言的增长。
-
-rss · OpenAI Blog · 6月30日 09:00
-
-**背景**: ChatGPT 是由 OpenAI 开发的对话式 AI 模型，能够理解和生成类似人类的文本。采用指标跟踪有多少人使用该工具以及他们如何与之互动，例如使用频率和功能探索。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://openai.com/signals/">Signals | OpenAI | OpenAI</a></li>
-<li><a href="https://openai.com/signals/data/">Signals data | OpenAI | OpenAI</a></li>
-
-</ul>
-</details>
-
-**标签**: `#ChatGPT`, `#AI adoption`, `#OpenAI`, `#trends`
-
----
-
-## 🔬 半导体
-
-<a id="item-12"></a>
-## [TokenBudgeting：企业 AI 成本管理洞察](https://newsletter.semianalysis.com/p/tokenbudgeting-our-conversations) ⭐️ 7.0/10
-
-SemiAnalysis 发布了对企业关于 token 支出对话的分析，质疑广泛的“TokenMaxxing”是否真的存在，并强调了向 token 预算管理的转变。 这很重要，因为企业正在应对不断上升的 AI 成本，了解真实的使用模式与炒作之间的区别有助于他们采用更可持续的成本管理策略。 TokenMaxxing 指的是将最大化 AI token 使用量作为生产力指标，但文章暗示这可能被过度炒作；相反，企业正专注于 token 预算管理以控制成本。
-
-rss · Semianalysis · 6月30日 18:32
-
-**背景**: Token 预算管理是一种方法，企业像操作系统管理内存一样分配和监控 AI token 使用，防止成本失控。TokenMaxxing 的概念作为追踪 AI 生产力的一种方式出现，但批评者认为它鼓励浪费性使用。
-
-<details><summary>参考链接</summary>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Token_maxxing">Token maxxing - Wikipedia</a></li>
-<li><a href="https://www.linkedin.com/pulse/why-token-budgeting-architecture-missing-layer-enterprise-rama-maddi-lmlsc">Why Token Budgeting Architecture Is the Missing Layer in Enterprise ...</a></li>
-<li><a href="https://www.vantage.sh/blog/ai-token-budgeting">Token Budgeting : How To Think About AI Cost Control | Vantage</a></li>
-
-</ul>
-</details>
-
-**标签**: `#AI`, `#enterprise`, `#token economics`, `#cost management`
+**标签**: `#developer-tools`, `#automation`, `#testing`, `#playwright`, `#demo`
 
 ---
 
 ## ₿ 加密资产
 
-<a id="item-13"></a>
-## [纽约人寿 8000 亿美元资产管理公司推出代币化债券基金](https://www.coindesk.com/business/2026/06/29/new-york-life-makes-tokenization-debut-with-onchain-high-yield-bond-fund-with-centrifuge) ⭐️ 7.0/10
+<a id="item-8"></a>
+## [纽约人寿在 Centrifuge 上推出代币化债券基金](https://www.coindesk.com/business/2026/06/29/new-york-life-makes-tokenization-debut-with-onchain-high-yield-bond-fund-with-centrifuge) ⭐️ 8.0/10
 
-管理 8000 亿美元资产的纽约人寿资产管理公司，在 Centrifuge 平台上推出了其首个代币化高收益债券基金，标志着该公司在基于区块链的资产代币化领域的首次亮相。 此举标志着机构对代币化的接受度日益提高，可能通过改善债券等传统非流动性资产的流动性、透明度和可及性，改变资产管理行业。 该基金是在 Centrifuge 上代币化的高收益债券基金，Centrifuge 平台已代币化超过 20 亿美元的现实世界资产，并被 Apollo 和 Janus Henderson 等机构使用。
+纽约人寿旗下管理 8000 亿美元资产的部门在 Centrifuge 协议上推出了代币化高收益债券基金，标志着其首次涉足基于区块链的现实世界资产代币化。 此举标志着机构对代币化的接受度日益提高，可能为传统固定收益市场带来流动性和效率提升。同时，它也验证了 Centrifuge 基础设施在将现实世界资产上链方面的能力。 该基金是一只代币化高收益债券基金，提供对多元化公司债券组合的投资敞口。它利用 Centrifuge 的开源协议进行链上资产管理和分销。
 
 rss · CoinDesk · 6月30日 11:20
 
-**背景**: 代币化是指在区块链上创建代表债券或房地产等现实世界资产所有权的数字代币。Centrifuge 是一个专门代币化现实世界资产并将其集成到去中心化金融（DeFi）中的区块链平台。此次发布代表一家大型传统金融机构进入代币化资产领域。
+**背景**: 现实世界资产（RWA）代币化将实物或金融资产的所有权转换为区块链上的数字代币，从而实现部分所有权、全天候交易和可编程合规。Centrifuge 是一个去中心化协议，支持在多个区块链上代币化和分发金融产品。高收益债券基金通常投资于低于投资级别的公司债务，提供更高回报但伴随更高风险。
 
 <details><summary>参考链接</summary>
 <ul>
-<li><a href="https://centrifuge.io/">Centrifuge | Infrastructure for Onchain Asset Management</a></li>
-<li><a href="https://messari.io/project/centrifuge/profile">What is Centrifuge? | Messari</a></li>
-<li><a href="https://github.com/centrifuge">Centrifuge · GitHub</a></li>
+<li><a href="https://github.com/centrifuge/protocol">GitHub - centrifuge/protocol: Centrifuge Protocol: The open infrastructure for onchain asset management · GitHub</a></li>
+<li><a href="https://www.solulab.com/asset-tokenization-guide/">Real-World Asset Tokenization Guide 2026 - SoluLab</a></li>
+<li><a href="https://investax.io/blog/investax-launches-tokenized-high-yield-corporate-bond-hycb">InvestaX Partners With OpenTrade to Bring BlackRock’s $6.3B Bond ...</a></li>
 
 </ul>
 </details>
 
-**标签**: `#tokenization`, `#blockchain`, `#asset management`, `#DeFi`, `#institutional adoption`
+**标签**: `#tokenization`, `#institutional adoption`, `#DeFi`, `#real-world assets`, `#blockchain`
+
+---
+
+## 🔬 半导体
+
+<a id="item-9"></a>
+## [企业 Token 支出：TokenMaxxing 说法被夸大](https://newsletter.semianalysis.com/p/tokenbudgeting-our-conversations) ⭐️ 7.0/10
+
+SemiAnalysis 与超过 50 家企业客户进行了直接对话，发现普遍的“TokenMaxxing”（过度使用 token）在很大程度上被夸大了，与早先关于 token 预算危机的报道相反。 这一分析挑战了企业正在不受控制地消耗 AI token 的主流说法，提供了更细致的视角，有助于 AI/ML 从业者和商业领袖就 token 预算和 AI 采用做出明智决策。 SemiAnalysis 团队通过 Slack、电话以及在 Databricks AI 峰会上收集了见解，发现来自 Meta 和 Uber 等公司的广泛报道的反应被夸大了。
+
+rss · Semianalysis · 6月30日 18:32
+
+**背景**: TokenMaxxing 指的是最大化 AI 使用的做法，通常以 token 消耗量来衡量，有时被视为“生产力表演”。早先的报告表明，由于无节制的 token 消耗，企业正面临预算瓶颈，但这项新分析表明，这一趋势并不像想象中那么普遍。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://newsletter.semianalysis.com/p/tokenbudgeting-our-conversations">TokenBudgeting: Our Conversations with Enterprises on Token Spend</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Token_maxxing">Token maxxing - Wikipedia</a></li>
+<li><a href="https://tokenmaxxing.com/guides/what-is-tokenmaxxing">What Is Tokenmaxxing ? | Tokenmaxxing</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI/ML`, `#enterprise`, `#token economics`, `#industry analysis`
+
+---
+
+## 📰 热点新闻
+
+<a id="item-10"></a>
+## [中国应对 AI 失业的策略](https://news.google.com/rss/articles/CBMigwFBVV95cUxQOERiSFVoaHY5ZkNwWURzMWUyRDV3ZHl1MkpuZDlDcVhQaXN1dEhYQXZhd3oxNFdjYUZFOFFQTW1LdUItQ092ODRSVV9ickRoT1pwYWNJVlQwQ1NNVS0teExQbkM3WkUwSmd2LUlmcy1waFdKSkptcHJpbEM2MV9iZlZtUQ?oc=5) ⭐️ 7.0/10
+
+《纽约时报》报道称，中国正在制定一项全面计划，通过再培训项目和社会安全网来缓解人工智能导致的失业问题。 该计划可能成为其他应对 AI 驱动劳动力市场冲击国家的范本，其成败将对全球经济政策和社会稳定产生重大影响。 文章强调了中国作为 AI 主要开发国和劳动力大国的独特地位，并讨论了政府资助培训、就业匹配平台等具体措施。
+
+google_news · The New York Times · 6月30日 21:04
+
+**背景**: AI 的进步预计将自动化许多工作，尤其是在制造业和服务业，引发对大规模失业的担忧。中国拥有庞大的劳动力和快速的 AI 应用，在平衡技术进步与就业稳定方面面临严峻挑战。
+
+**标签**: `#AI`, `#China`, `#job displacement`, `#policy`, `#labor`
+
+---
+
+<a id="item-11"></a>
+## [美团用国产芯片训练万亿参数 AI 模型](https://news.google.com/rss/articles/CBMi2AFBVV95cUxOWEJOc2tfMDNfQll0RHlyRy1uRU1IcWozeHNRTUxJQllWMFJTMXF2X0xhSk92VTZDMXhESi04UEJVWU5tb0EtX014Z3lScmpUd2dMODZFd0JYcjRhWko0V2ZzN195VlU5SUJXYjZYckFUcnV3REttNWVhNkVNVGhHNFZ6SXp2VFZTUWo4UF9OQ2xmMHd0NkRBV1Jwc2xpbWhhTHQyb0Y5dFNsUzh5RXB6NG14TGh4c2VvNGdKMUdOWWs3STBjVVdmV0tPNURyRzRPcEF5cGwzSTHSAd4BQVVfeXFMUEpUaVI2N1Exa25YaEM5Q2YtX19kUEk3N0I0c0x0aDU3MG5jQktnS1BucWoxMW5LTFUycEp6c2c4MEhHa3dwR2RlVXREZzBSa2Q0V09JdUJpdnktdzllWmRzb2dDV1pZYUFsUThPVGQ0NGJnV195ZUo0RENMN2Y0Ym9lTEVfakViVVN4d0E5TE9wOGk3RGg2TVE2Uk0zVUdjMjlsWHRaQzc4UUFOS2xfeTBnUVVLRm9XRFVfUHNRWjA3R0NlSjZ5VXA2LWtiV3VfOFM2ODdDYWt1eC1sV0xR?oc=5) ⭐️ 7.0/10
+
+美团宣布已完全使用国产 AI ASIC 芯片训练并开源了 LongCat 2.0，这是一个 1.6 万亿参数的 MoE 语言模型，并声称这是全球首个在国产硬件上训练的万亿参数 AI 模型。 这一成就表明，中国可以在不依赖先进英伟达芯片的情况下训练前沿 AI 模型，从而降低对美国出口管制的脆弱性，并提振国内半导体生态系统。 LongCat 2.0 拥有 100 万 token 的上下文窗口，并以 MIT 许可证发布。该模型在 OpenRouter 的智能体编码任务排行榜上一直领先。
+
+google_news · The Economic Times · 6月30日 07:21
+
+**背景**: 大多数中国 AI 模型都是在受美国出口限制的英伟达芯片上训练的。中国一直在推动半导体自给自足，国内芯片制造商已开发出 AI ASIC 作为替代方案。美团在 LongCat 2.0 上的成功标志着这一努力的重要里程碑。
+
+<details><summary>参考链接</summary>
+<ul>
+<li><a href="https://www.reuters.com/world/china/chinas-meituan-says-new-ai-model-trained-domestic-chips-2026-06-30/">China's Meituan says new AI model trained on domestic chips</a></li>
+<li><a href="https://comfyui-wiki.com/en/news/2026-06-30-longcat-2-moe-meituan">Meituan Open Sources LongCat 2.0: 1.6 Trillion Parameter MoE ...</a></li>
+<li><a href="https://venturebeat.com/technology/meituan-open-sources-longcat-2-0-the-1-6t-near-frontier-agentic-coding-model-thats-been-leading-openrouter-trained-entirely-on-chinese-chips">Meituan open sources LongCat-2.0, the 1.6T, near-frontier ...</a></li>
+
+</ul>
+</details>
+
+**标签**: `#AI`, `#semiconductors`, `#China`, `#Meituan`, `#geopolitics`
+
+---
+
+<a id="item-12"></a>
+## [香港科技官员警告 AI 将引发最伟大的工业革命](https://news.google.com/rss/articles/CBMizgFBVV95cUxOV2hwVF9oQ29hTG16bG5SZkNuZ21oXzBBazAtNmdFUmlEZ1FkbmtrbTFNNnhWNFdEaVJKbWZSTTNUR2hJV05YOWFNZHlnQzRxc0RmYnZsWkpaeDZSa0dDN1loYm5wOXdwME0zS19xSXc3Nk5RYXA3ZEw0aDFuYzhWd2RVTnVlbHpMeUNTeXJqRHI2cW5pdExkVlVNeXZhM2UwM2pEbWVvenNVbHBYS3FiSEpkWUVLQlE5dmxXOVh2MWRnN2xHMFo3S1kxMzZSZ9IBzgFBVV95cUxNbFBzZjg4VS1qTjl2S2NnVzZEUHZ2UmdHbzlsXzFIaDVITDZjNmlEekwwdTExc1llOWp3amJJMThzellJZzRGdUdzZUNudnVhajY5dFdIRlJsejBPb2dCUHRGbzc2UDJ3dTNjQUMxeXNORXlmVG9yTmhtcEpvX1dSaElZZUhsLW1DWXE2S1AwMGdWbHI4cDNZdV90dThqUTRJZEVVNm9nOW9OWXZWQ2ZEWGZnTUJfWXBqbHdhVVFOcjQyai1PTDZpTXZtYm9KUQ?oc=5) ⭐️ 6.0/10
+
+香港科技官员发出警告，称人工智能将引发历史上最伟大的工业革命，并敦促香港为变革做好准备。 这一声明凸显了政府官员对人工智能变革潜力的日益认可，预示着香港及其他地区可能调整政策并更加关注 AI 准备。 该警告由香港科技官员发出，但报道中未提供预期时间表或受影响最严重行业的具体细节。
+
+google_news · South China Morning Post · 7月1日 04:00
+
+**背景**: 工业革命指的是由新技术驱动的制造业和社会重大变革。人工智能越来越被视为一种通用技术，可以自动化认知任务，类似于蒸汽动力自动化体力劳动。
+
+**标签**: `#AI`, `#industrial revolution`, `#Hong Kong`, `#technology policy`
 
 ---
