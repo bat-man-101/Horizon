@@ -504,6 +504,7 @@ class WebhookNotifier:
                 ),
                 "message_kind": "overview",
                 "summary": overview,
+                "toc": summarizer.generate_toc(important_items, date, all_items_count, language=lang),
             }
             for item_index, item in enumerate(important_items, start=1):
                 title = str(item.metadata.get(f"title_{lang}") or item.title)
@@ -524,6 +525,7 @@ class WebhookNotifier:
                         "item_url": str(item.url),
                         "item_score": item.ai_score or "",
                         "summary": item_summary,
+                        "toc": summarizer.generate_toc(important_items, date, all_items_count, language=lang),
                     }
                 )
 
@@ -532,6 +534,7 @@ class WebhookNotifier:
 
             return [overview_message] + item_messages
 
+        toc = summarizer.generate_toc(important_items, date, all_items_count, language=lang)
         return [
             {
                 **base_vars,
@@ -540,6 +543,7 @@ class WebhookNotifier:
                 ),
                 "message_kind": "summary",
                 "summary": summary,
+                "toc": toc,
             }
         ]
 

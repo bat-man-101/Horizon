@@ -21,6 +21,7 @@ def _pangu(text: str) -> str:
 _SOURCE_CATEGORY_TO_GROUP = {
     "news": "热点新闻",
     "hackernews": "热点新闻",
+    "social-news": "社会热点",
     "ai-news": "ai新闻",
     "ai-tools": "ai新闻",
     "ai-official": "ai新闻",
@@ -35,6 +36,7 @@ _SOURCE_CATEGORY_TO_GROUP = {
 
 # Display names and emojis for each group (Chinese)
 _CATEGORY_DISPLAY_ZH: Dict[str, tuple[str, str]] = {
+    "社会热点": ("🇨🇳", "社会热点"),
     "热点新闻": ("📰", "热点新闻"),
     "ai新闻": ("🤖", "AI 新闻"),
     "科技动态": ("🚀", "科技动态"),
@@ -46,6 +48,7 @@ _CATEGORY_DISPLAY_ZH: Dict[str, tuple[str, str]] = {
 
 # Display names and emojis for each group (English)
 _CATEGORY_DISPLAY_EN: Dict[str, tuple[str, str]] = {
+    "社会热点": ("🇨🇳", "China Hot Topics"),
     "热点新闻": ("📰", "Top News"),
     "ai新闻": ("🤖", "AI News"),
     "科技动态": ("🚀", "Tech Trends"),
@@ -187,6 +190,67 @@ class DailySummarizer:
                 parts.append(self._format_item(item, labels, language, global_idx))
 
         return header + toc + "".join(parts)
+
+    def generate_toc(
+        self,
+        items: List[ContentItem],
+        date: str,
+        total_fetched: int,
+        language: str = "en",
+    ) -> str:
+        """Generate a compact TOC-only summary (header + stats + category listing).
+
+        Unlike ``generate_summary`` this omits all detailed item content,
+        making it suitable for webhook push notifications where space is
+        limited (e.g. WeCom 4096-char limit).
+
+        Args:
+            items: High-scoring content items (already enriched)
+            date: Date string (YYYY-MM-DD)
+            total_fetched: Total number of items fetched before filtering
+            language: Output language, either "en" or "zh"
+
+        Returns:
+            str: Markdown formatted TOC
+        """
+        labels = LABELS.get(language, LABELS["en"])
+
+        if not items:
+            return self._generate_empty_summary(date, total_fetched, labels)
+
+        header = (
+            f"# {labels['header']} - {date}\n\n"
+            f"> {labels['selected_items'].format(total=total_fetched, selected=len(items))}\n\n"
+            "---\n\n"
+        )
+
+        category_display = _CATEGORY_DISPLAY_ZH if language == "zh" else _CATEGORY_DISPLAY_EN
+        groups: Dict[str, List[ContentItem]] = {}
+        group_order: List[str] = []
+        for item in items:
+            gk = _get_category_group(item)
+            if gk not in groups:
+                groups[gk] = []
+                group_order.append(gk)
+            groups[gk].append(item)
+
+        toc_sections: List[str] = []
+        global_idx = 0
+        for gk in group_order:
+            group_items = groups[gk]
+            emoji, display_name = category_display.get(gk, ("📌", gk))
+            toc_sections.append(f"{emoji} {display_name}（{len(group_items)}）")
+            for item in group_items:
+                global_idx += 1
+                _t = item.metadata.get(f"title_{language}") or item.title
+                t = str(_t).replace("[", "(").replace("]", ")")
+                if language == "zh":
+                    t = _pangu(t)
+                score = item.ai_score or "?"
+                toc_sections.append(f"  {global_idx}. {t} ⭐️ {score}/10")
+            toc_sections.append("")
+
+        return header + "\n".join(toc_sections) + "---"
 
     def generate_webhook_overview(
         self,
