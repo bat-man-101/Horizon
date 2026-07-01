@@ -136,20 +136,8 @@
         "category": "tech-news"
       },
       {
-        "name": "Reuters - China",
-        "url": "https://www.reutersagency.com/feed/?taxonomy=best-sectors&post_type=best&best-sectors=china",
-        "enabled": true,
-        "category": "news"
-      },
-      {
         "name": "NHK World - Japan/Asia",
         "url": "https://www3.nhk.or.jp/rss/news/cat0.xml",
-        "enabled": true,
-        "category": "news"
-      },
-      {
-        "name": "FT China",
-        "url": "https://www.ft.com/news-today-china?format=rss",
         "enabled": true,
         "category": "news"
       }
@@ -225,9 +213,6 @@
     "max_items": 15,
     "category_groups": {
       "热点新闻": {
-        "limit": 3,
-        "categories": ["news", "hackernews"]
-      },
         "limit": 3,
         "categories": ["news", "hackernews"]
       },
