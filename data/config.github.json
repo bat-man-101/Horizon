@@ -13,7 +13,8 @@
       "en"
     ],
     "analysis_concurrency": 5,
-    "enrichment_concurrency": 5
+    "enrichment_concurrency": 5,
+    "disable_analysis": true
   },
   "sources": {
     "hackernews": {
@@ -252,7 +253,7 @@
     "request_body": {
       "msgtype": "markdown",
       "markdown": {
-        "content": "#  AI日报 #{date} — 今日精选\n\n#{toc}"
+        "content": "#  AI日报 #{date} — 今日精选\n\n#{toc}\n\n📖 [查看完整日报](https://bat-man-101.github.io/Horizon/)"
       }
     },
     "headers": ""
