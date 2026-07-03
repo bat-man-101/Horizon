@@ -10,25 +10,25 @@ lang: zh
 ---
 
 **📌 其他（3）**
-  1. [karpathy pushed 0 commit(s) to karpathy/nanochat](#item-1) ⭐️ ?/10
-  2. [ggerganov/llama.cpp released b9860](#item-2) ⭐️ ?/10
-  3. [The Free Market Lie: Why Switzerland Has 25 Gbit Internet and America Doesn't](#item-3) ⭐️ ?/10
+  1. [karpathy 向 karpathy/nanochat 推送了 0 次提交](#item-1) ⭐️ ?/10
+  2. [ggerganov/llama.cpp 发布了 b9860](#item-2) ⭐️ ?/10
+  3. [自由市场的谎言：为什么瑞士拥有 25 Gbit 互联网而美国却没有](#item-3) ⭐️ ?/10
 
 **🤖 AI 新闻（3）**
-  4. [llm-coding-agent 0.1a0](#item-4) ⭐️ ?/10
-  5. [Using DSPy to evaluate and improve Datasette Agent's SQL system prompts](#item-5) ⭐️ ?/10
-  6. [Understand to participate](#item-6) ⭐️ ?/10
+  4. [llm-编码代理 0.1a0](#item-4) ⭐️ ?/10
+  5. [使用 DSPy 评估和改进 Datasette Agent 的 SQL 系统提示](#item-5) ⭐️ ?/10
+  6. [了解参与](#item-6) ⭐️ ?/10
 
 **🔬 半导体（1）**
-  7. [Meta Compute: Everyone Wants To Be A Neocloud](#item-7) ⭐️ ?/10
+  7. [元计算：每个人都想成为 Neocloud](#item-7) ⭐️ ?/10
 
 **₿ 加密资产（1）**
-  8. [Securitize tokenizes $295 million of its own stock on Solana and Avalanche amid NYSE debut](#item-8) ⭐️ ?/10
+  8. [Securitize 在 NYSE 首次亮相时，在 Solana 和 Avalanche 上将价值 2.95 亿美元的自有股票代币化](#item-8) ⭐️ ?/10
 
 **🚀 科技动态（3）**
-  9. [Politician who investigated spyware abuses had his phone hacked with Pegasus spyware](#item-9) ⭐️ ?/10
-  10. [Last chance to apply — Startup Battlefield Australia applications close July 6](#item-10) ⭐️ ?/10
-  11. [Mark Zuckerberg tells staff that AI agents haven’t progressed as quickly as he’d hoped](#item-11) ⭐️ ?/10
+  9. [调查间谍软件滥用行为的政客的手机被 Pegasus 间谍软件入侵](#item-9) ⭐️ ?/10
+  10. [最后申请机会 — Startup Battlefield Australia 申请将于 7 月 6 日截止](#item-10) ⭐️ ?/10
+  11. [马克·扎克伯格告诉员工，人工智能代理的进展没有他希望的那么快](#item-11) ⭐️ ?/10
 
 **📰 热点新闻（3）**
   12. [皇室典範改正案 与党 衆院議運委で審議提案 野党“聞き置く”](#item-12) ⭐️ ?/10
@@ -39,7 +39,7 @@ lang: zh
 ## 📌 其他
 
 <a id="item-1"></a>
-## [karpathy pushed 0 commit(s) to karpathy/nanochat](https://github.com/karpathy/nanochat) ⭐️ ?/10
+## [karpathy 向 karpathy/nanochat 推送了 0 次提交](https://github.com/karpathy/nanochat) ⭐️ ?/10
 
 
 
@@ -48,7 +48,7 @@ github · karpathy · 7月3日 04:01
 ---
 
 <a id="item-2"></a>
-## [ggerganov/llama.cpp released b9860](https://github.com/ggml-org/llama.cpp/releases/tag/b9860) ⭐️ ?/10
+## [ggerganov/llama.cpp 发布了 b9860](https://github.com/ggml-org/llama.cpp/releases/tag/b9860) ⭐️ ?/10
 
 
 
@@ -57,7 +57,7 @@ github · github-actions[bot] · 7月2日 16:23
 ---
 
 <a id="item-3"></a>
-## [The Free Market Lie: Why Switzerland Has 25 Gbit Internet and America Doesn't](https://stefan.schueller.net/posts/the-free-market-lie/) ⭐️ ?/10
+## [自由市场的谎言：为什么瑞士拥有 25 Gbit 互联网而美国却没有](https://stefan.schueller.net/posts/the-free-market-lie/) ⭐️ ?/10
 
 
 
@@ -68,7 +68,7 @@ hackernews · talonx · 7月3日 04:16 · [社区讨论](https://news.ycombinato
 ## 🤖 AI 新闻
 
 <a id="item-4"></a>
-## [llm-coding-agent 0.1a0](https://simonwillison.net/2026/Jul/2/llm-coding-agent/#atom-everything) ⭐️ ?/10
+## [llm-编码代理 0.1a0](https://simonwillison.net/2026/Jul/2/llm-coding-agent/#atom-everything) ⭐️ ?/10
 
 
 
@@ -77,7 +77,7 @@ rss · Simon Willison · 7月2日 19:33
 ---
 
 <a id="item-5"></a>
-## [Using DSPy to evaluate and improve Datasette Agent's SQL system prompts](https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts/#atom-everything) ⭐️ ?/10
+## [使用 DSPy 评估和改进 Datasette Agent 的 SQL 系统提示](https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts/#atom-everything) ⭐️ ?/10
 
 
 
@@ -86,7 +86,7 @@ rss · Simon Willison · 7月2日 18:25
 ---
 
 <a id="item-6"></a>
-## [Understand to participate](https://simonwillison.net/2026/Jul/2/understand-to-participate/#atom-everything) ⭐️ ?/10
+## [了解参与](https://simonwillison.net/2026/Jul/2/understand-to-participate/#atom-everything) ⭐️ ?/10
 
 
 
@@ -97,7 +97,7 @@ rss · Simon Willison · 7月2日 17:07
 ## 🔬 半导体
 
 <a id="item-7"></a>
-## [Meta Compute: Everyone Wants To Be A Neocloud](https://newsletter.semianalysis.com/p/meta-compute-everyone-wants-to-be) ⭐️ ?/10
+## [元计算：每个人都想成为 Neocloud](https://newsletter.semianalysis.com/p/meta-compute-everyone-wants-to-be) ⭐️ ?/10
 
 
 
@@ -108,7 +108,7 @@ rss · Semianalysis · 7月2日 22:18
 ## ₿ 加密资产
 
 <a id="item-8"></a>
-## [Securitize tokenizes $295 million of its own stock on Solana and Avalanche amid NYSE debut](https://www.coindesk.com/business/2026/07/02/securitize-tokenizes-usd295-million-of-its-own-stock-on-solana-and-avalanche-amid-nyse-debut) ⭐️ ?/10
+## [Securitize 在 NYSE 首次亮相时，在 Solana 和 Avalanche 上将价值 2.95 亿美元的自有股票代币化](https://www.coindesk.com/business/2026/07/02/securitize-tokenizes-usd295-million-of-its-own-stock-on-solana-and-avalanche-amid-nyse-debut) ⭐️ ?/10
 
 
 
@@ -119,7 +119,7 @@ rss · CoinDesk · 7月2日 19:00
 ## 🚀 科技动态
 
 <a id="item-9"></a>
-## [Politician who investigated spyware abuses had his phone hacked with Pegasus spyware](https://techcrunch.com/2026/07/02/politician-who-investigated-spyware-abuses-had-his-phone-hacked-with-pegasus-spyware/) ⭐️ ?/10
+## [调查间谍软件滥用行为的政客的手机被 Pegasus 间谍软件入侵](https://techcrunch.com/2026/07/02/politician-who-investigated-spyware-abuses-had-his-phone-hacked-with-pegasus-spyware/) ⭐️ ?/10
 
 
 
@@ -128,7 +128,7 @@ rss · 36氪 - 科技 · 7月3日 05:05
 ---
 
 <a id="item-10"></a>
-## [Last chance to apply — Startup Battlefield Australia applications close July 6](https://techcrunch.com/2026/07/02/last-chance-to-apply-startup-battlefield-australia-applications-close-july-6-2/) ⭐️ ?/10
+## [最后申请机会 — Startup Battlefield Australia 申请将于 7 月 6 日截止](https://techcrunch.com/2026/07/02/last-chance-to-apply-startup-battlefield-australia-applications-close-july-6-2/) ⭐️ ?/10
 
 
 
@@ -137,7 +137,7 @@ rss · 36氪 - 科技 · 7月3日 00:00
 ---
 
 <a id="item-11"></a>
-## [Mark Zuckerberg tells staff that AI agents haven’t progressed as quickly as he’d hoped](https://techcrunch.com/2026/07/02/mark-zuckerberg-tells-staff-that-ai-agents-havent-progressed-as-quickly-as-hed-hoped/) ⭐️ ?/10
+## [马克·扎克伯格告诉员工，人工智能代理的进展没有他希望的那么快](https://techcrunch.com/2026/07/02/mark-zuckerberg-tells-staff-that-ai-agents-havent-progressed-as-quickly-as-hed-hoped/) ⭐️ ?/10
 
 
 
