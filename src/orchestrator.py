@@ -101,33 +101,40 @@ class HorizonOrchestrator:
                     f"→ {len(merged_items)} unique items\n"
                 )
 
-            # 4. Analyze with AI
-            analyzed_items = await self._analyze_content(merged_items)
-            self.console.print(f"🤖 Analyzed {len(analyzed_items)} items with AI\n")
-
-            # 5. Filter by score threshold
-            threshold = self.config.filtering.ai_score_threshold
-            important_items = [
-                item for item in analyzed_items
-                if item.ai_score and item.ai_score >= threshold
-            ]
-            important_items.sort(key=lambda x: x.ai_score or 0, reverse=True)
-
-            self.console.print(
-                f"⭐️ {len(important_items)} items scored ≥ {threshold}\n"
-            )
-
-            # 5.5 Semantic deduplication: drop items covering the same topic
-            deduped_items = await self.merge_topic_duplicates(important_items)
-            if len(deduped_items) < len(important_items):
+            # 4. Analyze with AI (skip if disable_analysis is set)
+            if self.config.ai.disable_analysis:
+                analyzed_items = merged_items
+                important_items = list(analyzed_items)
                 self.console.print(
-                    f"🧹 Removed {len(important_items) - len(deduped_items)} topic duplicates "
-                    f"→ {len(deduped_items)} unique items\n"
+                    f"⏭️ AI analysis disabled — using {len(important_items)} items as-is\n"
                 )
-            important_items = deduped_items
+            else:
+                analyzed_items = await self._analyze_content(merged_items)
+                self.console.print(f"🤖 Analyzed {len(analyzed_items)} items with AI\n")
+
+                # 5. Filter by score threshold
+                threshold = self.config.filtering.ai_score_threshold
+                important_items = [
+                    item for item in analyzed_items
+                    if item.ai_score and item.ai_score >= threshold
+                ]
+                important_items.sort(key=lambda x: x.ai_score or 0, reverse=True)
+                self.console.print(
+                    f"⭐️ {len(important_items)} items scored ≥ {threshold}\n"
+                )
+
+                # 5.5 Semantic deduplication: drop items covering the same topic
+                deduped_items = await self.merge_topic_duplicates(important_items)
+                if len(deduped_items) < len(important_items):
+                    self.console.print(
+                        f"🧹 Removed {len(important_items) - len(deduped_items)} topic duplicates "
+                        f"→ {len(deduped_items)} unique items\n"
+                    )
+                important_items = deduped_items
 
             # 5.6 Optional second-stage Twitter reply expansion + targeted re-analysis
-            await self._expand_twitter_discussion(important_items)
+            if not self.config.ai.disable_analysis:
+                await self._expand_twitter_discussion(important_items)
 
             # 5.7 Apply per-category and global digest limits before enrichment
             balanced_result = self.apply_balanced_digest(important_items)
@@ -143,7 +150,8 @@ class HorizonOrchestrator:
             self.console.print("")
 
             # 6. Search related stories + enrich with background knowledge (2nd AI pass)
-            await self._enrich_important_items(important_items)
+            if not self.config.ai.disable_analysis:
+                await self._enrich_important_items(important_items)
 
             # 7. Generate and save daily summaries for each configured language
             today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
