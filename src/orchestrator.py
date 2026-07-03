@@ -153,6 +153,10 @@ class HorizonOrchestrator:
             if not self.config.ai.disable_analysis:
                 await self._enrich_important_items(important_items)
 
+            # 6.5 Translate titles to Chinese when AI is disabled (free, no API key needed)
+            if self.config.ai.disable_analysis:
+                await self._translate_titles(important_items)
+
             # 7. Generate and save daily summaries for each configured language
             today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
             for lang in self.config.ai.languages:
@@ -733,3 +737,49 @@ class HorizonOrchestrator:
         summarizer = DailySummarizer()
 
         return await summarizer.generate_summary(items, date, total_fetched, language=language)
+
+    async def _translate_titles(self, items: List[ContentItem]) -> None:
+        """Translate English titles to Chinese using Google Translate (free, no API key).
+
+        Sets ``title_zh`` metadata on each item. Falls back silently on failure.
+        """
+        if not items:
+            return
+
+        self.console.print("🌐 Translating titles to Chinese...")
+        translated = 0
+
+        async with httpx.AsyncClient(timeout=10.0) as client:
+            for item in items:
+                if item.metadata.get("title_zh"):
+                    continue  # already translated
+
+                title = item.title
+                if not title or len(title) < 3:
+                    continue
+
+                # Check if already contains CJK characters
+                if any("\u4e00" <= c <= "\u9fff" for c in title):
+                    item.metadata["title_zh"] = title
+                    continue
+
+                try:
+                    url = "https://translate.googleapis.com/translate_a/single"
+                    params = {
+                        "client": "gtx",
+                        "sl": "auto",
+                        "tl": "zh-CN",
+                        "dt": "t",
+                        "q": title,
+                    }
+                    resp = await client.get(url, params=params)
+                    if resp.status_code == 200:
+                        data = resp.json()
+                        zh_text = data[0][0][0] if data and data[0] and data[0][0] else ""
+                        if zh_text:
+                            item.metadata["title_zh"] = zh_text
+                            translated += 1
+                except Exception:
+                    pass  # skip on error
+
+        self.console.print(f"   Translated {translated} titles\n")
