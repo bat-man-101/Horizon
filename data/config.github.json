@@ -147,41 +147,41 @@
       {
         "type": "user_events",
         "username": "karpathy",
-        "enabled": true
+        "enabled": false
       },
       {
         "type": "repo_releases",
         "owner": "vllm-project",
         "repo": "vllm",
-        "enabled": true
+        "enabled": false
       },
       {
         "type": "repo_releases",
         "owner": "sgl-project",
         "repo": "sglang",
-        "enabled": true
+        "enabled": false
       },
       {
         "type": "repo_releases",
         "owner": "ggerganov",
         "repo": "llama.cpp",
-        "enabled": true
+        "enabled": false
       },
       {
         "type": "repo_releases",
         "owner": "huggingface",
         "repo": "transformers",
-        "enabled": true
+        "enabled": false
       },
       {
         "type": "repo_releases",
         "owner": "comfyanonymous",
         "repo": "ComfyUI",
-        "enabled": true
+        "enabled": false
       }
     ],
     "ossinsight": {
-      "enabled": true,
+      "enabled": false,
       "period": "past_24_hours",
       "languages": ["All", "Python", "TypeScript", "Rust"],
       "keywords": [],
