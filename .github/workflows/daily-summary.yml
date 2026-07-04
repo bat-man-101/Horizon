@@ -3,8 +3,6 @@ name: Daily Horizon Summary
 on:
   schedule:
     - cron: '30 0 * * *'  # UTC 0:30 = 北京时间 8:30
-  push:
-    branches: [main]       # 推 main 时自动触发,便于调试
   workflow_dispatch:      # 手动触发
 
 jobs:
@@ -30,34 +28,6 @@ jobs:
 
       - name: Prepare GitHub Actions config
         run: cp data/config.github.json data/config.json
-
-      - name: Check webhook env var
-        env:
-          HORIZON_WEBHOOK_URL: ${{ secrets.HORIZON_WEBHOOK_URL }}
-        run: |
-          echo "HORIZON_WEBHOOK_URL length: ${#HORIZON_WEBHOOK_URL}"
-          if [ -z "$HORIZON_WEBHOOK_URL" ]; then
-            echo "::warning::HORIZON_WEBHOOK_URL is EMPTY - no push will be sent!"
-          else
-            echo "::notice::HORIZON_WEBHOOK_URL is set"
-          fi
-
-      - name: Test webhook URL (curl)
-        env:
-          HORIZON_WEBHOOK_URL: ${{ secrets.HORIZON_WEBHOOK_URL }}
-        run: |
-          echo "发送测试消息到企微..."
-          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -X POST \
-            -H "Content-Type: application/json" \
-            -d '{"msgtype":"markdown","markdown":{"content":"**GHA 连接测试** 来自 GitHub Actions 运行环境"}}' \
-            "$HORIZON_WEBHOOK_URL" 2>&1)
-          echo "curl exit code: $?"
-          echo "HTTP response: $HTTP_CODE"
-          if [ "$HTTP_CODE" = "200" ]; then
-            echo "::notice::Webhook 测试通过 (HTTP 200)"
-          else
-            echo "::warning::Webhook 测试返回 HTTP $HTTP_CODE - 推送可能失败!"
-          fi
 
       - name: Run Horizon
         env:

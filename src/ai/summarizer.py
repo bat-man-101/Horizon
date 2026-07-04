@@ -245,9 +245,8 @@ class DailySummarizer:
                 t = str(_t).replace("[", "(").replace("]", ")")
                 if language == "zh":
                     t = _pangu(t)
-                score = item.ai_score or "?"
                 url = str(item.url)
-                toc_sections.append(f"  {global_idx}. [{t}]({url}) ⭐️ {score}/10")
+                toc_sections.append(f"  {global_idx}. [{t}]({url})")
             toc_sections.append("")
 
         return header + "\n".join(toc_sections)
