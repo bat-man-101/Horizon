@@ -5,14 +5,14 @@ date: 2026-07-04
 lang: zh
 ---
 
-> 从 116 条内容中筛选出 13 条重要资讯。
+> 从 113 条内容中筛选出 13 条重要资讯。
 
 ---
 
 **📌 其他（3）**
-  1. [SearXNG：免费的互联网元搜索引擎](#item-1) ⭐️ ?/10
-  2. [Jamesob 在本地运行 SOTA LLM 的指南](#item-2) ⭐️ ?/10
-  3. [针对欧洲议会的间谍活动](#item-3) ⭐️ ?/10
+  1. [新研究：巨树可以毫无困难地将水抽到顶部树枝](#item-1) ⭐️ ?/10
+  2. [Leanstral 1.5：所有人的丰富性证明](#item-2) ⭐️ ?/10
+  3. [AMD MI355X 上的 GLM5.2 为 2626 tok/s/节点，成本比 Blackwell 低 2 倍以上](#item-3) ⭐️ ?/10
 
 **🤖 AI 新闻（3）**
   4. [开源人工智能差距图](#item-4) ⭐️ ?/10
@@ -28,37 +28,37 @@ lang: zh
   10. [Dune 键盘设备可以作为您的会议控制器等](#item-10) ⭐️ ?/10
 
 **📰 热点新闻（3）**
-  11. [アメリカ建国 250 年 トランプ大統領実績強調 政治利用批判も](#item-11) ⭐️ ?/10
-  12. [イラン ハメネイ師の葬儀準備進む 各国の要人も次々に到着](#item-12) ⭐️ ?/10
-  13. [九州北部と山口県 きょう夕方にかけ 線状降水帯発生のおそれ](#item-13) ⭐️ ?/10
+  11. [九州北部で非常に激しい雨 雨雲移動も6 日にかけ前線停滞](#item-11) ⭐️ ?/10
+  12. [イラン 前の最高指導者ハメネイ師の葬儀始まる](#item-12) ⭐️ ?/10
+  13. [熊本豪雨から6 年 安心して住み続けられる環境づくり課題](#item-13) ⭐️ ?/10
 ---
 
 ## 📌 其他
 
 <a id="item-1"></a>
-## [SearXNG：免费的互联网元搜索引擎](https://github.com/searxng/searxng) ⭐️ ?/10
+## [新研究：巨树可以毫无困难地将水抽到顶部树枝](https://news.exeter.ac.uk/faculty-of-environment-science-and-economy/giant-trees-have-no-trouble-pumping-water-to-top-branches/) ⭐️ ?/10
 
 
 
-hackernews · theanonymousone · 7月3日 20:15 · [社区讨论](https://news.ycombinator.com/item?id=48779454)
+hackernews · hhs · 7月3日 22:40 · [社区讨论](https://news.ycombinator.com/item?id=48780870)
 
 ---
 
 <a id="item-2"></a>
-## [Jamesob 在本地运行 SOTA LLM 的指南](https://github.com/jamesob/local-llm) ⭐️ ?/10
+## [Leanstral 1.5：所有人的丰富性证明](https://mistral.ai/news/leanstral-1-5/) ⭐️ ?/10
 
 
 
-hackernews · livestyle · 7月3日 15:03 · [社区讨论](https://news.ycombinator.com/item?id=48775921)
+hackernews · programLyrique · 7月3日 22:33 · [社区讨论](https://news.ycombinator.com/item?id=48780801)
 
 ---
 
 <a id="item-3"></a>
-## [针对欧洲议会的间谍活动](https://citizenlab.ca/research/member-of-committee-investigating-spyware-hacked-with-pegasus/) ⭐️ ?/10
+## [AMD MI355X 上的 GLM5.2 为 2626 tok/s/节点，成本比 Blackwell 低 2 倍以上](https://www.wafer.ai/blog/glm52-amd) ⭐️ ?/10
 
 
 
-hackernews · ledoge · 7月3日 20:38 · [社区讨论](https://news.ycombinator.com/item?id=48779683)
+hackernews · latchkey · 7月3日 21:49 · [社区讨论](https://news.ycombinator.com/item?id=48780417)
 
 ---
 
@@ -134,28 +134,28 @@ rss · 36氪 - 科技 · 7月3日 18:28
 ## 📰 热点新闻
 
 <a id="item-11"></a>
-## [アメリカ建国 250 年 トランプ大統領実績強調 政治利用批判も](http://www3.nhk.or.jp/news/html/20260704/k10015168551000.html) ⭐️ ?/10
+## [九州北部で非常に激しい雨 雨雲移動も6 日にかけ前線停滞](http://www3.nhk.or.jp/news/html/20260704/k10015168721000.html) ⭐️ ?/10
 
 
 
-rss · NHK World - Japan/Asia · 7月3日 22:13
+rss · NHK World - Japan/Asia · 7月4日 02:54
 
 ---
 
 <a id="item-12"></a>
-## [イラン ハメネイ師の葬儀準備進む 各国の要人も次々に到着](http://www3.nhk.or.jp/news/html/20260704/k10015168431000.html) ⭐️ ?/10
+## [イラン 前の最高指導者ハメネイ師の葬儀始まる](http://www3.nhk.or.jp/news/html/20260704/k10015168741000.html) ⭐️ ?/10
 
 
 
-rss · NHK World - Japan/Asia · 7月3日 20:33
+rss · NHK World - Japan/Asia · 7月4日 03:32
 
 ---
 
 <a id="item-13"></a>
-## [九州北部と山口県 きょう夕方にかけ 線状降水帯発生のおそれ](http://www3.nhk.or.jp/news/html/20260704/k10015168601000.html) ⭐️ ?/10
+## [熊本豪雨から6 年 安心して住み続けられる環境づくり課題](http://www3.nhk.or.jp/news/html/20260704/k10015168161000.html) ⭐️ ?/10
 
 
 
-rss · NHK World - Japan/Asia · 7月4日 01:16
+rss · NHK World - Japan/Asia · 7月4日 02:51
 
 ---

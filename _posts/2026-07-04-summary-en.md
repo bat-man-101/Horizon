@@ -5,14 +5,14 @@ date: 2026-07-04
 lang: en
 ---
 
-> From 116 items, 13 important content pieces were selected
+> From 113 items, 13 important content pieces were selected
 
 ---
 
 **📌 Other（3）**
-  1. [SearXNG: A free internet metasearch engine](#item-1) ⭐️ ?/10
-  2. [Jamesob's guide to running SOTA LLMs locally](#item-2) ⭐️ ?/10
-  3. [Espionage Against the European Parliament](#item-3) ⭐️ ?/10
+  1. [Giant trees have no trouble pumping water to top branches: new research](#item-1) ⭐️ ?/10
+  2. [Leanstral 1.5: Proof abundance for all](#item-2) ⭐️ ?/10
+  3. [GLM5.2 on AMD MI355X at 2626 tok/s/node at over 2x lower cost than Blackwell](#item-3) ⭐️ ?/10
 
 **🤖 AI News（3）**
   4. [Open Source AI Gap Map](#item-4) ⭐️ ?/10
@@ -28,37 +28,37 @@ lang: en
   10. [The Dune keypad device can be your meeting controller and more](#item-10) ⭐️ ?/10
 
 **📰 Top News（3）**
-  11. [アメリカ建国250年 トランプ大統領実績強調 政治利用批判も](#item-11) ⭐️ ?/10
-  12. [イラン ハメネイ師の葬儀準備進む 各国の要人も次々に到着](#item-12) ⭐️ ?/10
-  13. [九州北部と山口県 きょう夕方にかけ 線状降水帯発生のおそれ](#item-13) ⭐️ ?/10
+  11. [九州北部で非常に激しい雨 雨雲移動も6日にかけ前線停滞](#item-11) ⭐️ ?/10
+  12. [イラン 前の最高指導者ハメネイ師の葬儀始まる](#item-12) ⭐️ ?/10
+  13. [熊本豪雨から6年 安心して住み続けられる環境づくり課題](#item-13) ⭐️ ?/10
 ---
 
 ## 📌 Other
 
 <a id="item-1"></a>
-## [SearXNG: A free internet metasearch engine](https://github.com/searxng/searxng) ⭐️ ?/10
+## [Giant trees have no trouble pumping water to top branches: new research](https://news.exeter.ac.uk/faculty-of-environment-science-and-economy/giant-trees-have-no-trouble-pumping-water-to-top-branches/) ⭐️ ?/10
 
 
 
-hackernews · theanonymousone · Jul 3, 20:15 · [Discussion](https://news.ycombinator.com/item?id=48779454)
+hackernews · hhs · Jul 3, 22:40 · [Discussion](https://news.ycombinator.com/item?id=48780870)
 
 ---
 
 <a id="item-2"></a>
-## [Jamesob's guide to running SOTA LLMs locally](https://github.com/jamesob/local-llm) ⭐️ ?/10
+## [Leanstral 1.5: Proof abundance for all](https://mistral.ai/news/leanstral-1-5/) ⭐️ ?/10
 
 
 
-hackernews · livestyle · Jul 3, 15:03 · [Discussion](https://news.ycombinator.com/item?id=48775921)
+hackernews · programLyrique · Jul 3, 22:33 · [Discussion](https://news.ycombinator.com/item?id=48780801)
 
 ---
 
 <a id="item-3"></a>
-## [Espionage Against the European Parliament](https://citizenlab.ca/research/member-of-committee-investigating-spyware-hacked-with-pegasus/) ⭐️ ?/10
+## [GLM5.2 on AMD MI355X at 2626 tok/s/node at over 2x lower cost than Blackwell](https://www.wafer.ai/blog/glm52-amd) ⭐️ ?/10
 
 
 
-hackernews · ledoge · Jul 3, 20:38 · [Discussion](https://news.ycombinator.com/item?id=48779683)
+hackernews · latchkey · Jul 3, 21:49 · [Discussion](https://news.ycombinator.com/item?id=48780417)
 
 ---
 
@@ -134,28 +134,28 @@ rss · 36氪 - 科技 · Jul 3, 18:28
 ## 📰 Top News
 
 <a id="item-11"></a>
-## [アメリカ建国250年 トランプ大統領実績強調 政治利用批判も](http://www3.nhk.or.jp/news/html/20260704/k10015168551000.html) ⭐️ ?/10
+## [九州北部で非常に激しい雨 雨雲移動も6日にかけ前線停滞](http://www3.nhk.or.jp/news/html/20260704/k10015168721000.html) ⭐️ ?/10
 
 
 
-rss · NHK World - Japan/Asia · Jul 3, 22:13
+rss · NHK World - Japan/Asia · Jul 4, 02:54
 
 ---
 
 <a id="item-12"></a>
-## [イラン ハメネイ師の葬儀準備進む 各国の要人も次々に到着](http://www3.nhk.or.jp/news/html/20260704/k10015168431000.html) ⭐️ ?/10
+## [イラン 前の最高指導者ハメネイ師の葬儀始まる](http://www3.nhk.or.jp/news/html/20260704/k10015168741000.html) ⭐️ ?/10
 
 
 
-rss · NHK World - Japan/Asia · Jul 3, 20:33
+rss · NHK World - Japan/Asia · Jul 4, 03:32
 
 ---
 
 <a id="item-13"></a>
-## [九州北部と山口県 きょう夕方にかけ 線状降水帯発生のおそれ](http://www3.nhk.or.jp/news/html/20260704/k10015168601000.html) ⭐️ ?/10
+## [熊本豪雨から6年 安心して住み続けられる環境づくり課題](http://www3.nhk.or.jp/news/html/20260704/k10015168161000.html) ⭐️ ?/10
 
 
 
-rss · NHK World - Japan/Asia · Jul 4, 01:16
+rss · NHK World - Japan/Asia · Jul 4, 02:51
 
 ---
