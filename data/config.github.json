@@ -11,7 +11,7 @@
     "languages": ["zh", "en"],
     "analysis_concurrency": 5,
     "enrichment_concurrency": 5,
-    "disable_analysis": false,
+    "disable_analysis": false
   },
   "sources": {
     "hackernews": {
