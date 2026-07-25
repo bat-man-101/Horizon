@@ -1,10 +1,10 @@
 {
   "version": "1.0",
   "ai": {
-    "provider": "siliconflow",
-    "model": "deepseek-ai/DeepSeek-V4-Flash",
-    "base_url": "https://api.siliconflow.cn/v1",
-    "api_key_env": "SILICONFLOW_API_KEY",
+    "provider": "deepseek",
+    "model": "deepseek-chat",
+    "base_url": "https://api.deepseek.com",
+    "api_key_env": "DEEPSEEK_API_KEY",
     "temperature": 0.3,
     "max_tokens": 8192,
     "throttle_sec": 1,
@@ -12,10 +12,10 @@
     "analysis_concurrency": 5,
     "enrichment_concurrency": 5,
     "disable_analysis": false,
-    "fallback_provider": "deepseek",
-    "fallback_model": "deepseek-chat",
-    "fallback_base_url": "https://api.deepseek.com",
-    "fallback_api_key_env": "DEEPSEEK_API_KEY"
+    "fallback_provider": "siliconflow",
+    "fallback_model": "deepseek-ai/DeepSeek-V4-Flash",
+    "fallback_base_url": "https://api.siliconflow.cn/v1",
+    "fallback_api_key_env": "SILICONFLOW_API_KEY"
   },
   "sources": {
     "hackernews": {
