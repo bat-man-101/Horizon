@@ -62,7 +62,7 @@
     "gdelt": {"enabled": true, "query": "bitcoin cryptocurrency | china economy society", "mode": "ArtList", "max_records": 30, "timespan": "24h", "language": null, "country": null, "category": "crypto"}
   },
   "filtering": {
-    "ai_score_threshold": 3.0,
+    "ai_score_threshold": 0.0,
     "time_window_hours": 24,
     "max_items": 15,
     "category_groups": {
