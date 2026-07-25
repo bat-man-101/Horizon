@@ -1,20 +1,21 @@
 {
   "version": "1.0",
   "ai": {
-    "provider": "deepseek",
-    "model": "deepseek-chat",
-    "base_url": "https://api.deepseek.com",
-    "api_key_env": "DEEPSEEK_API_KEY",
+    "provider": "siliconflow",
+    "model": "deepseek-ai/DeepSeek-V4-Flash",
+    "base_url": "https://api.siliconflow.cn/v1",
+    "api_key_env": "SILICONFLOW_API_KEY",
     "temperature": 0.3,
     "max_tokens": 8192,
     "throttle_sec": 1,
-    "languages": [
-      "zh",
-      "en"
-    ],
+    "languages": ["zh", "en"],
     "analysis_concurrency": 5,
     "enrichment_concurrency": 5,
-    "disable_analysis": true
+    "disable_analysis": false,
+    "fallback_provider": "deepseek",
+    "fallback_model": "deepseek-chat",
+    "fallback_base_url": "https://api.deepseek.com",
+    "fallback_api_key_env": "DEEPSEEK_API_KEY"
   },
   "sources": {
     "hackernews": {
@@ -25,218 +26,52 @@
     "reddit": {
       "enabled": true,
       "subreddits": [
-        {
-          "subreddit": "MachineLearning",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 10,
-          "min_score": 60
-        },
-        {
-          "subreddit": "LocalLLaMA",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 10,
-          "min_score": 60
-        },
-        {
-          "subreddit": "artificial",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 10,
-          "min_score": 50
-        },
-        {
-          "subreddit": "Bitcoin",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 10,
-          "min_score": 50
-        },
-        {
-          "subreddit": "CryptoCurrency",
-          "enabled": true,
-          "sort": "hot",
-          "time_filter": "day",
-          "fetch_limit": 10,
-          "min_score": 50
-        }
+        {"subreddit": "MachineLearning", "enabled": true, "sort": "hot", "time_filter": "day", "fetch_limit": 10, "min_score": 60},
+        {"subreddit": "LocalLLaMA", "enabled": true, "sort": "hot", "time_filter": "day", "fetch_limit": 10, "min_score": 60},
+        {"subreddit": "artificial", "enabled": true, "sort": "hot", "time_filter": "day", "fetch_limit": 10, "min_score": 50},
+        {"subreddit": "Bitcoin", "enabled": true, "sort": "hot", "time_filter": "day", "fetch_limit": 10, "min_score": 50},
+        {"subreddit": "CryptoCurrency", "enabled": true, "sort": "hot", "time_filter": "day", "fetch_limit": 10, "min_score": 50}
       ],
       "users": [],
       "fetch_comments": 5
     },
     "rss": [
-      {
-        "name": "Simon Willison",
-        "url": "https://simonwillison.net/atom/everything/",
-        "enabled": true,
-        "category": "ai-tools"
-      },
-      {
-        "name": "GitHub Trending - Daily",
-        "url": "https://mshibanami.github.io/GitHubTrendingRSS/daily/all.xml",
-        "enabled": true,
-        "category": "github-trending"
-      },
-      {
-        "name": "OpenAI Blog",
-        "url": "https://openai.com/blog/rss.xml",
-        "enabled": true,
-        "category": "ai-official"
-      },
-      {
-        "name": "Anthropic Blog",
-        "url": "https://www.anthropic.com/feed.xml",
-        "enabled": true,
-        "category": "ai-official"
-      },
-      {
-        "name": "The Verge - AI",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/rss.xml",
-        "enabled": true,
-        "category": "ai-news"
-      },
-      {
-        "name": "量子位",
-        "url": "https://wechat2rss.xlab.app/feed/7131b577c61365cb47e81000738c10d872685908.xml",
-        "enabled": true,
-        "category": "ai-news"
-      },
-      {
-        "name": "新智元",
-        "url": "https://wechat2rss.xlab.app/feed/ede30346413ea70dbef5d485ea5cbb95cca446e7.xml",
-        "enabled": true,
-        "category": "ai-news"
-      },
-      {
-        "name": "Semianalysis",
-        "url": "https://newsletter.semianalysis.com/feed",
-        "enabled": true,
-        "category": "semiconductors"
-      },
-      {
-        "name": "CoinDesk",
-        "url": "https://www.coindesk.com/arc/outboundfeeds/rss/",
-        "enabled": true,
-        "category": "crypto"
-      },
-      {
-        "name": "CoinTelegraph",
-        "url": "https://cointelegraph.com/rss",
-        "enabled": true,
-        "category": "crypto"
-      },
-      {
-        "name": "36氪 - 科技",
-        "url": "https://techcrunch.com/feed/",
-        "enabled": true,
-        "category": "tech-news"
-      },
-      {
-        "name": "NHK World - Japan/Asia",
-        "url": "https://www3.nhk.or.jp/rss/news/cat0.xml",
-        "enabled": true,
-        "category": "news"
-      }
+      {"name": "Simon Willison", "url": "https://simonwillison.net/atom/everything/", "enabled": true, "category": "ai-tools"},
+      {"name": "GitHub Trending - Daily", "url": "https://mshibanami.github.io/GitHubTrendingRSS/daily/all.xml", "enabled": true, "category": "github-trending"},
+      {"name": "OpenAI Blog", "url": "https://openai.com/blog/rss.xml", "enabled": true, "category": "ai-official"},
+      {"name": "Anthropic Blog", "url": "https://www.anthropic.com/feed.xml", "enabled": true, "category": "ai-official"},
+      {"name": "The Verge - AI", "url": "https://www.theverge.com/ai-artificial-intelligence/rss.xml", "enabled": true, "category": "ai-news"},
+      {"name": "量子位", "url": "https://wechat2rss.xlab.app/feed/7131b577c61365cb47e81000738c10d872685908.xml", "enabled": true, "category": "ai-news"},
+      {"name": "新智元", "url": "https://wechat2rss.xlab.app/feed/ede30346413ea70dbef5d485ea5cbb95cca446e7.xml", "enabled": true, "category": "ai-news"},
+      {"name": "Semianalysis", "url": "https://newsletter.semianalysis.com/feed", "enabled": true, "category": "semiconductors"},
+      {"name": "CoinDesk", "url": "https://www.coindesk.com/arc/outboundfeeds/rss/", "enabled": true, "category": "crypto"},
+      {"name": "CoinTelegraph", "url": "https://cointelegraph.com/rss", "enabled": true, "category": "crypto"},
+      {"name": "36氪 - 科技", "url": "https://techcrunch.com/feed/", "enabled": true, "category": "tech-news"},
+      {"name": "NHK World - Japan/Asia", "url": "https://www3.nhk.or.jp/rss/news/cat0.xml", "enabled": true, "category": "news"}
     ],
     "github": [
-      {
-        "type": "user_events",
-        "username": "karpathy",
-        "enabled": false
-      },
-      {
-        "type": "repo_releases",
-        "owner": "vllm-project",
-        "repo": "vllm",
-        "enabled": false
-      },
-      {
-        "type": "repo_releases",
-        "owner": "sgl-project",
-        "repo": "sglang",
-        "enabled": false
-      },
-      {
-        "type": "repo_releases",
-        "owner": "ggerganov",
-        "repo": "llama.cpp",
-        "enabled": false
-      },
-      {
-        "type": "repo_releases",
-        "owner": "huggingface",
-        "repo": "transformers",
-        "enabled": false
-      },
-      {
-        "type": "repo_releases",
-        "owner": "comfyanonymous",
-        "repo": "ComfyUI",
-        "enabled": false
-      }
+      {"type": "user_events", "username": "karpathy", "enabled": false},
+      {"type": "repo_releases", "owner": "vllm-project", "repo": "vllm", "enabled": false},
+      {"type": "repo_releases", "owner": "sgl-project", "repo": "sglang", "enabled": false},
+      {"type": "repo_releases", "owner": "ggerganov", "repo": "llama.cpp", "enabled": false},
+      {"type": "repo_releases", "owner": "huggingface", "repo": "transformers", "enabled": false},
+      {"type": "repo_releases", "owner": "comfyanonymous", "repo": "ComfyUI", "enabled": false}
     ],
-    "ossinsight": {
-      "enabled": false,
-      "period": "past_24_hours",
-      "languages": ["All", "Python", "TypeScript", "Rust"],
-      "keywords": [],
-      "min_stars": 10,
-      "max_items": 20
-    },
-    "google_news": {
-      "enabled": true,
-      "query": "China social news economy",
-      "language": "en",
-      "country": "US",
-      "ceid": null,
-      "max_results": 50,
-      "category": "news"
-    },
-    "gdelt": {
-      "enabled": true,
-      "query": "bitcoin cryptocurrency | china economy society",
-      "mode": "ArtList",
-      "max_records": 30,
-      "timespan": "24h",
-      "language": null,
-      "country": null,
-      "category": "crypto"
-    }
+    "ossinsight": {"enabled": false, "period": "past_24_hours", "languages": ["All", "Python", "TypeScript", "Rust"], "keywords": [], "min_stars": 10, "max_items": 20},
+    "google_news": {"enabled": true, "query": "China social news economy", "language": "en", "country": "US", "ceid": null, "max_results": 50, "category": "news"},
+    "gdelt": {"enabled": true, "query": "bitcoin cryptocurrency | china economy society", "mode": "ArtList", "max_records": 30, "timespan": "24h", "language": null, "country": null, "category": "crypto"}
   },
   "filtering": {
     "ai_score_threshold": 6.0,
     "time_window_hours": 24,
     "max_items": 15,
     "category_groups": {
-      "热点新闻": {
-        "limit": 3,
-        "categories": ["news", "hackernews"]
-      },
-      "ai新闻": {
-        "limit": 3,
-        "categories": ["ai-news", "ai-tools", "ai-official", "machine-learning"]
-      },
-      "科技动态": {
-        "limit": 3,
-        "categories": ["tech-news", "github-trending"]
-      },
-      "研究": {
-        "limit": 1,
-        "categories": ["research", "papers"]
-      },
-      "crypto": {
-        "limit": 1,
-        "categories": ["crypto"]
-      },
-      "半导体": {
-        "limit": 1,
-        "categories": ["semiconductors"]
-      }
+      "热点新闻": {"limit": 3, "categories": ["news", "hackernews"]},
+      "ai新闻": {"limit": 3, "categories": ["ai-news", "ai-tools", "ai-official", "machine-learning"]},
+      "科技动态": {"limit": 3, "categories": ["tech-news", "github-trending"]},
+      "研究": {"limit": 1, "categories": ["research", "papers"]},
+      "crypto": {"limit": 1, "categories": ["crypto"]},
+      "半导体": {"limit": 1, "categories": ["semiconductors"]}
     },
     "default_group": "other",
     "default_group_limit": 3
@@ -253,7 +88,7 @@
     "request_body": {
       "msgtype": "markdown",
       "markdown": {
-        "content": "#  AI日报 #{date} — 今日精选\n\n#{toc}\n\n📖 [查看完整日报](https://bat-man-101.github.io/Horizon/)"
+        "content": "# 🤖 AI日报 #{date} — 今日精选\n\n#{overview}\n\n#{toc}\n\n📖 [查看完整日报](https://bat-man-101.github.io/Horizon/)"
       }
     },
     "headers": ""
