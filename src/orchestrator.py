@@ -116,7 +116,7 @@ class HorizonOrchestrator:
                 threshold = self.config.filtering.ai_score_threshold
                 important_items = [
                     item for item in analyzed_items
-                    if item.ai_score and item.ai_score >= threshold
+                    if item.ai_score is not None and item.ai_score >= threshold
                 ]
                 important_items.sort(key=lambda x: x.ai_score or 0, reverse=True)
                 self.console.print(
