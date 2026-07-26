@@ -43,7 +43,13 @@
       {"name": "CoinDesk", "url": "https://www.coindesk.com/arc/outboundfeeds/rss/", "enabled": true, "category": "crypto"},
       {"name": "CoinTelegraph", "url": "https://cointelegraph.com/rss", "enabled": true, "category": "crypto"},
       {"name": "36氪 - 科技", "url": "https://techcrunch.com/feed/", "enabled": true, "category": "tech-news"},
-      {"name": "NHK World - Japan/Asia", "url": "https://www3.nhk.or.jp/rss/news/cat0.xml", "enabled": true, "category": "news"}
+      {"name": "NHK World - Japan/Asia", "url": "https://www3.nhk.or.jp/rss/news/cat0.xml", "enabled": true, "category": "news"},
+      {"name": "arXiv AI", "url": "https://rss.arxiv.org/rss/cs.AI", "enabled": true, "category": "research"},
+      {"name": "arXiv CV", "url": "https://rss.arxiv.org/rss/cs.CV", "enabled": true, "category": "research"},
+      {"name": "Papers With Code", "url": "https://feeds.feedburner.com/PapersWithCode", "enabled": true, "category": "research"},
+      {"name": "澎湃新闻", "url": "https://www.thepaper.cn/rss/tech.xml", "enabled": true, "category": "news"},
+      {"name": "BBC Technology", "url": "https://feeds.bbci.co.uk/news/technology/rss.xml", "enabled": true, "category": "news"},
+      {"name": "AnandTech", "url": "https://www.anandtech.com/rss", "enabled": true, "category": "semiconductors"}
     ],
     "github": [
       {"type": "user_events", "username": "karpathy", "enabled": false},
@@ -65,9 +71,9 @@
       "热点新闻": {"limit": 3, "categories": ["news", "hackernews"]},
       "ai新闻": {"limit": 3, "categories": ["ai-news", "ai-tools", "ai-official", "machine-learning"]},
       "科技动态": {"limit": 3, "categories": ["tech-news", "github-trending"]},
-      "研究": {"limit": 1, "categories": ["research", "papers"]},
+      "研究": {"limit": 2, "categories": ["research", "papers"]},
       "crypto": {"limit": 1, "categories": ["crypto"]},
-      "半导体": {"limit": 1, "categories": ["semiconductors"]}
+      "半导体": {"limit": 2, "categories": ["semiconductors"]}
     },
     "default_group": "other",
     "default_group_limit": 3
