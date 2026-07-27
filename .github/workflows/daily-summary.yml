@@ -31,9 +31,9 @@ jobs:
 
       - name: Run Horizon
         env:
-          # DeepSeek (全球可用，key 在 GitHub Secrets 里)
-          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-          # 备用 API Keys
+          # 腾讯混元 Hunyuan (国际端点)
+          HUNYUAN_API_KEY: sk-CWIyn3pDa76S4qsqqf1x9rTqgyyN2unNY6MHc9Qjl3S5yGJf
+          # 备用
           SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}

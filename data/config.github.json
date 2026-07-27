@@ -1,16 +1,16 @@
 {
   "version": "1.0",
   "ai": {
-    "provider": "deepseek",
-    "model": "deepseek-chat",
-    "base_url": "https://api.deepseek.com",
-    "api_key_env": "DEEPSEEK_API_KEY",
+    "provider": "openai",
+    "model": "hy3-preview",
+    "base_url": "https://tokenhub-intl.tencentmaas.com/v1",
+    "api_key_env": "HUNYUAN_API_KEY",
     "temperature": 0.3,
     "max_tokens": 8192,
-    "throttle_sec": 1,
+    "throttle_sec": 2,
     "languages": ["zh", "en"],
-    "analysis_concurrency": 2,
-    "enrichment_concurrency": 1,
+    "analysis_concurrency": 3,
+    "enrichment_concurrency": 2,
     "disable_analysis": false
   },
   "sources": {
