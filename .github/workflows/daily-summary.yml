@@ -31,8 +31,8 @@ jobs:
 
       - name: Run Horizon
         env:
-          # 腾讯混元 Hunyuan (国际端点)
-          HUNYUAN_API_KEY: sk-CWIyn3pDa76S4qsqqf1x9rTqgyyN2unNY6MHc9Qjl3S5yGJf
+          # 通义千问 Qwen (阿里云全球节点)
+          QWEN_API_KEY: sk-ws-H.EMPLHLX.w9nk.MEUCIHaGl_pE5X6XOONIfAfHmM2L4LfhR8O7TF7MDjcPPc4zAiEAjALH7YULtUU7H7sEP0IrcK0Q0STo3OECfM6FHuC40DE
           # 备用
           SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
