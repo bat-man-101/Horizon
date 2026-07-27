@@ -451,8 +451,10 @@ class WebhookNotifier:
         if webhook_languages and lang not in webhook_languages:
             return []
 
+        date_url = date.replace("-", "/")
         base_vars = {
             "date": date,
+            "date_url": date_url,
             "language": lang,
             "important_items": len(important_items),
             "all_items": all_items_count,
