@@ -5,203 +5,211 @@ date: 2026-07-27
 lang: en
 ---
 
-> From 84 items, 10 important content pieces were selected
+> From 90 items, 9 important content pieces were selected
 
 ---
 
 **📌 Other（3）**
-  1. [GrapheneOS details locked device data extraction protections](#item-1) ⭐️ 8.0/10
-  2. [Focus and Followthrough as Key AI Adoption Differentiators](#item-2) ⭐️ 7.0/10
-  3. [Underground relay market fuels AI token reselling fraud](#item-3) ⭐️ 7.0/10
+  1. [PGSimCity: Interactive 3D Visualization of PostgreSQL Internals](#item-1) ⭐️ 7.0/10
+  2. [US citizen charged after GrapheneOS phone wipe at airport](#item-2) ⭐️ 7.0/10
+  3. [Introduction to Data-Oriented Design PDF Presentation](#item-3) ⭐️ 7.0/10
 
 **🤖 AI News（1）**
-  4. [MonkeyOCRv2 0.7B model tops 17-language document parsing](#item-4) ⭐️ 7.0/10
+  4. [MonkeyOCRv2 0.7B tops 17-language document parsing benchmark](#item-4) ⭐️ 7.0/10
 
 **🚀 Tech Trends（3）**
-  5. [Brain waves as new data for physical AI training](#item-5) ⭐️ 6.0/10
-  6. [Hugging Face CEO urges radical transparency after OpenAI hack](#item-6) ⭐️ 6.0/10
-  7. [TechCrunch podcast recaps panic over Chinese AI Kimi](#item-7) ⭐️ 4.0/10
+  5. [Hugging Face CEO urges radical transparency after OpenAI hack](#item-5) ⭐️ 6.0/10
+  6. [Brain waves as new data for physical AI training](#item-6) ⭐️ 5.0/10
+  7. [TechCrunch analyzes panic over Chinese AI Kimi model](#item-7) ⭐️ 4.0/10
 
 **₿ Crypto（1）**
-  8. [South Korean trading firm tests receivables tokenization with LG CNS](#item-8) ⭐️ 5.0/10
+  8. [South Korean firm tests receivables tokenization with LG CNS](#item-8) ⭐️ 5.0/10
 
-**📰 Top News（2）**
+**📰 Top News（1）**
   9. [Google launches large-scale AI usage study with 15M chats](#item-9) ⭐️ 3.0/10
-  10. [Naver pursuing large-scale global AI factory joint venture](#item-10) ⭐️ 3.0/10
 ---
 
 ## 📌 Other
 
 <a id="item-1"></a>
-## [GrapheneOS details locked device data extraction protections](https://discuss.grapheneos.org/d/40700-grapheneos-protections-against-data-extraction-from-locked-devices) ⭐️ 8.0/10
+## [PGSimCity: Interactive 3D Visualization of PostgreSQL Internals](https://nikolays.github.io/PGSimCity/) ⭐️ 7.0/10
 
-GrapheneOS has detailed its security architecture that prevents data extraction from locked devices, including an auto-reboot feature that returns phones to the encrypted Before First Unlock (BFU) state. This design ensures that encryption keys cannot be extracted even when the device is in a locked state. This protection is critical for high-risk users such as journalists and activists who may face device forensics at border crossings or during legal proceedings. It sets a higher standard for mobile privacy and security compared to mainstream operating systems, pushing the industry toward stronger user data protection. The auto-reboot feature triggers after 18 hours of inactivity to force the device back into BFU mode, where file-based encryption keys are not available for extraction. Community analysis also notes that Android pattern locks provide only about 18.57 bits of entropy, far less than sufficiently strong alphanumeric passwords.
+PGSimCity is a new open-source project that presents PostgreSQL's internal architecture and processes as an explorable 3D city running live in the browser. It visualizes core components such as backends, shared buffers, WAL, checkpoints, autovacuum, and replication in an animated, interactive format. This tool makes PostgreSQL's complex internal mechanisms much more accessible to learners, developers, and database administrators, potentially improving technical education and onboarding. Its open-source nature also opens the door to adapting similar interactive visualizations for other complex systems like Kubernetes or cloud computing platforms. The project is still in early stages, with community feedback pointing out that the automatic tour mode and excessive on-screen elements can make it overwhelming for new users. Users have also suggested adding interactive query input to trace a SQL statement's full execution path through the system.
 
-hackernews · Cider9986 · Jul 26, 05:57 · [Discussion](https://news.ycombinator.com/item?id=49055169)
+hackernews · jonbaer · Jul 27, 00:19 · [Discussion](https://news.ycombinator.com/item?id=49063754)
 
-**Background**: GrapheneOS is an open-source, security-focused mobile operating system built on the Android Open Source Project (AOSP), primarily available for Google Pixel devices. Modern mobile devices use file-based encryption (FBE) and operate in two primary lock states: Before First Unlock (BFU), where encryption keys are not loaded into memory, and After First Unlock (AFU), where keys are available after the user first authenticates. Forensic extraction tools often rely on accessing devices in AFU state to retrieve data, making BFU mode a critical security boundary.
+**Background**: PostgreSQL is a widely used open-source relational database management system whose internal architecture includes multiple cooperating processes and memory structures such as shared buffers and the write-ahead log (WAL). Understanding these internals typically requires reading dense documentation or studying static architecture diagrams, which can be challenging for beginners.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/GrapheneOS">GrapheneOS</a></li>
-<li><a href="https://teeltechcanada.com/understanding-mobile-device-lock-states-in-forensic-extractions/">Understanding Mobile Device Lock States in Forensic Extractions...</a></li>
+<li><a href="https://nikolays.github.io/PGSimCity/">PGSimCity · How PostgreSQL Works, in 3D</a></li>
+<li><a href="https://www.interdb.jp/pg/pgsql02.html">2. Process and Memory Architecture :: Hironobu SUZUKI @ InterDB</a></li>
+<li><a href="https://www.enterprisedb.com/blog/postgres-internals-deep-dive-process-architecture">Postgres Internals Deep Dive: Process Architecture</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Community members noted that the post was likely a response to a recent US prosecution case, and highlighted a real-world example of a journalist using the 18-hour auto-reboot feature to protect confidential sources. Some users requested a complete backup and restore solution to wipe devices before border crossings, while others discussed the low entropy of Android pattern locks compared to strong passwords, and a few compared GrapheneOS's security guarantees to those of Apple devices.
+**Discussion**: Community members appreciate the novel approach but criticize the automatic tour for being too fast and cluttered, recommending more interactivity and clearer starting points. Several users expressed interest in being able to input their own queries to see the full execution flow, while others praised the engaging UI and suggested the concept could be reused for other technical domains.
 
-**Tags**: `#mobile-security`, `#privacy`, `#encryption`, `#grapheneos`, `#digital-forensics`
+**Tags**: `#postgresql`, `#database-internals`, `#visualization`, `#education`, `#open-source`
 
 ---
 
 <a id="item-2"></a>
-## [Focus and Followthrough as Key AI Adoption Differentiators](https://www.rickmanelius.com/p/the-new-ai-superpowers-focus-and) ⭐️ 7.0/10
+## [US citizen charged after GrapheneOS phone wipe at airport](https://www.techspot.com/news/113236-us-prosecutors-charge-atlanta-man-after-grapheneos-phone.html) ⭐️ 7.0/10
 
-The article argues that focus and followthrough are the primary differentiators for effective AI adoption in software engineering. It highlights how these two factors determine the success of integrating AI tools into real-world development workflows. This perspective is significant as it shifts the focus from merely adopting AI tools to how teams strategically manage and sustain their AI integration efforts. It impacts software engineering teams by emphasizing that sustainable productivity gains require disciplined workflow management alongside AI usage. Community feedback reveals that over-reliance on AI-generated code is leading to redundant, incompatible tooling and increased fragmentation across projects. Additionally, developers note that while AI accelerates most development tasks, it often leaves projects stuck at 99% completion, creating new backlog challenges.
+A U.S. citizen is facing criminal charges after using a GrapheneOS duress PIN to wipe their phone during an airport search by authorities. This case marks a notable legal confrontation over the use of device-wiping features at national borders. The case could set a significant legal precedent regarding digital privacy rights and the limits of government search powers at U.S. borders. It directly affects travelers who use privacy-focused tools and raises broader questions about how security features are treated under the law. The duress PIN feature in GrapheneOS is designed to perform a complete and irreversible wipe of the device when entered, protecting data from unauthorized access. Legal experts note that U.S. law considers intent as heavily as the physical action, meaning the purpose of wiping the phone can influence charges.
 
-hackernews · mooreds · Jul 26, 13:13 · [Discussion](https://news.ycombinator.com/item?id=49057877)
+hackernews · eecc · Jul 26, 22:21 · [Discussion](https://news.ycombinator.com/item?id=49063022)
 
-**Background**: AI adoption in software engineering refers to the integration of artificial intelligence tools, such as coding assistants and agents, into the software development lifecycle to automate tasks and improve efficiency. Developer workflows encompass the structured processes and habits that teams use to plan, code, test, and release software. Industry trends currently show a rapid increase in the use of AI tools to reduce cognitive load and speed up routine development tasks.
-
-**Discussion**: Community members generally agree that AI boosts productivity but raises concerns about redundant, incompatible tooling due to over-reliance on AI-generated code. Some developers highlight that AI helps prevent burnout by handling tedious configuration tasks, while others note that it often leaves projects at 99% completion, creating new backlog management challenges.
-
-**Tags**: `#AI`, `#software engineering`, `#productivity`, `#developer workflows`, `#industry trends`
-
----
-
-<a id="item-3"></a>
-## [Underground relay market fuels AI token reselling fraud](https://vectoral.com/blog/token-relay-market) ⭐️ 7.0/10
-
-An investigation has uncovered an underground relay market that enables discounted AI token reselling through account takeovers, stolen credentials, and cloud credit abuse. This fraud ecosystem has become endemic to the growing token economy, with operators openly discussing their methods on Chinese forums. This fraud undermines the financial integrity of AI service providers and creates unfair competitive advantages for businesses using stolen resources. It highlights a critical vulnerability in the token economy that could erode trust and increase costs for legitimate users. The relay infrastructure pools API keys from compromised accounts and abused cloud credits to resell tokens at steep discounts, often as low as 4% of the original price. The operation is highly sophisticated, involving organized actors who exploit billing systems and registration loopholes.
-
-hackernews · mlenhard · Jul 26, 15:17 · [Discussion](https://news.ycombinator.com/item?id=49058993)
-
-**Background**: In the AI economy, tokens are units used to measure and bill for API usage, such as accessing large language models (LLMs). Cloud providers like AWS and Azure often offer free credits to new companies to encourage adoption, which can be exploited by fraudsters. Relay markets act as intermediaries that aggregate these stolen or discounted resources for resale, similar to ticket touting in event markets.
+**Background**: GrapheneOS is an open-source, security- and privacy-focused mobile operating system based on the Android Open Source Project (AOSP), available primarily for Google Pixel devices. A duress PIN is a secondary code that, when entered instead of a regular unlock PIN, silently triggers a full device wipe to protect user data during coercive situations. U.S. border authorities have broad legal powers to search electronic devices of individuals entering the country, which has long raised civil liberty concerns among privacy advocates.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://vectoral.com/blog/token-relay-market">An Inside Look at the Relay Market Powering Token Resellers and Fraud | Vectoral</a></li>
-<li><a href="https://simonwillison.net/2026/Jul/26/relay-market/">An Inside Look at the Relay Market Powering Token Resellers and...</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Underground_forum">Underground forum - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/GrapheneOS">GrapheneOS</a></li>
+<li><a href="https://www.androidauthority.com/grapheneos-duress-pin-3584795/">I use a duress PIN to protect my data — here’s how it works and why everyone needs one</a></li>
 
 </ul>
 </details>
 
-**Discussion**: Commenters noted that this type of resale fraud is not new and mirrors similar schemes in the digital advertising industry involving stolen financial instruments and account abuse. Others highlighted the specific abuse of free cloud credits by new company registrations, while some argued that flawed subscription pricing models create the arbitrage opportunities enabling this fraud.
+**Discussion**: Commenters debated whether wiping a phone at the border should be illegal, with some arguing that U.S. law prioritizes intent over the superficial action of entering a PIN. Others suggested alternative security measures, such as triggering device encryption with a stored key instead of a full wipe, or using decoy systems like VeraCrypt's hidden volume feature to avoid legal risks.
 
-**Tags**: `#AI`, `#security`, `#fraud`, `#cloud-computing`, `#token-economics`
+**Tags**: `#privacy`, `#security`, `#law`, `#GrapheneOS`, `#civil-liberties`
+
+---
+
+<a id="item-3"></a>
+## [Introduction to Data-Oriented Design PDF Presentation](https://www.gamedevs.org/uploads/introduction-to-data-oriented-design.pdf) ⭐️ 7.0/10
+
+A foundational PDF presentation titled 'Introduction to Data-Oriented Design' has been shared, focusing on data layout and cache efficiency as core drivers for algorithm and system design. The presentation is authored by Mike Acton, a well-known proponent of this design approach. This presentation is a classic, influential resource in systems and game development, shaping how developers optimize performance-critical software by prioritizing data organization. It provides foundational concepts that help developers reduce CPU cache misses and improve overall system throughput. The approach contrasts with object-oriented design's typical array of structures by advocating for parallel arrays (structure of arrays) to improve cache utilization. It emphasizes defining data inputs and outputs first before writing code, tailoring system design to the specific shape of application data.
+
+hackernews · tosh · Jul 26, 18:11 · [Discussion](https://news.ycombinator.com/item?id=49060724)
+
+**Background**: Data-Oriented Design is a program optimization approach motivated by efficient usage of the CPU cache, which is significantly faster than main memory access. It focuses on organizing data layout to match how the CPU fetches and processes information, often using parallel arrays instead of arrays of structures. The term was officially named by Noel Llopis in a September 2009 article, though the underlying concepts have existed for decades. Proponents like Mike Acton argue that data layout should be the primary driver of software design rather than code structure.
+
+<details><summary>References</summary>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Data-oriented_design">Data-oriented design</a></li>
+<li><a href="https://dataorienteddesign.com/dodbook.pdf">Data - Oriented Design</a></li>
+<li><a href="https://en.wikipedia.org/wiki/CPU_cache">CPU cache - Wikipedia</a></li>
+
+</ul>
+</details>
+
+**Discussion**: Commenters highlighted that the core of Data-Oriented Design is prioritizing data definition before code implementation, with one noting its effectiveness varies by application data shape. Some users questioned if the approach is just a rebranding of cache-aware design or equivalent to array programming, while others pointed out practical challenges like adapting to changing requirements. A comment also mentioned the author released an LLM skill related to Data-Oriented Programming.
+
+**Tags**: `#data-oriented-design`, `#systems-programming`, `#performance-optimization`, `#game-development`, `#software-architecture`
 
 ---
 
 ## 🤖 AI News
 
 <a id="item-4"></a>
-## [MonkeyOCRv2 0.7B model tops 17-language document parsing](https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247907283&idx=2&sn=5df8a52712c79f67232ca9672d4cc34e) ⭐️ 7.0/10
+## [MonkeyOCRv2 0.7B tops 17-language document parsing benchmark](https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247907283&idx=2&sn=5df8a52712c79f67232ca9672d4cc34e) ⭐️ 7.0/10
 
-MonkeyOCRv2, a 0.7B parameter open-source model, has achieved first place among open-source solutions for 17-language document parsing tasks. The model demonstrates that compact architectures can outperform much larger models in document understanding scenarios. This breakthrough shows that efficient, smaller models can match or exceed the performance of large-scale systems in multilingual document parsing, reducing computational costs for real-world deployment. It sets a new benchmark for open-source document AI tools targeting global, multi-language use cases. MonkeyOCRv2 adopts a parsing-first approach that predicts document element coordinates and categories in natural reading order to provide explicit layout structure for extraction. The model combines a frozen encoder with large language models to build its 0.7B document parsing architecture.
+MonkeyOCRv2, an open-source model with 0.7 billion parameters, has achieved first place in 17-language document parsing benchmarks. The project has open-sourced both its model weights and related dataset resources. This result demonstrates that smaller, efficiently designed models can outperform larger counterparts in specialized tasks like multilingual document parsing. It advances the trend of building parameter-efficient AI systems that reduce computational costs while maintaining high performance. The MonkeyOCRv2 architecture includes multiple vision encoder variants such as ViT-Small, ViT-Base, and ViTAEv2-Small, with parameter counts ranging from 28M to 113M for different scaled versions. The model is trained on the MonkeyDoc v2 corpus and focuses on unifying fine-grained text modeling and cross-lingual generalization in a single encoder.
 
 rss · 量子位 · Jul 26, 04:30
 
-**Background**: Document parsing is the task of converting unstructured document images into structured, machine-readable data, often used to prepare content for large language models. Traditional approaches required very large vision-language models with tens or hundreds of billions of parameters to achieve high accuracy. Recent research has shown that smaller, document-native models pretrained on multilingual corpora can deliver competitive results with far fewer parameters.
+**Background**: Document parsing is the task of extracting structured information such as text, tables, and layouts from digital or photographed documents. Multilingual document parsing benchmarks like MDPBench and OmniDocBench are designed to evaluate model performance across diverse languages and real-world document scenarios. Efficient AI models prioritize architectural optimization over simply increasing parameter scale to achieve better performance per compute cost.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://arxiv.org/html/2607.11562">MonkeyOCRv 2 : A Visual-Text Foundation Model for Document AI</a></li>
-<li><a href="https://www.alphaxiv.org/abs/2607.11562">MonkeyOCRv 2 : A Visual-Text Foundation Model for Document AI</a></li>
-<li><a href="https://www.emergentmind.com/topics/monkeyocrv2">MonkeyOCRv 2 : Document AI Pretraining</a></li>
+<li><a href="https://arxiv.org/html/2607.11562">MonkeyOCRv2: A Visual-Text Foundation Model for Document AI</a></li>
+<li><a href="https://github.com/Yuliang-Liu/MonkeyOCRv2">GitHub - Yuliang-Liu/MonkeyOCRv2: MonkeyOCRv2 Vision Encoder — A Document-Native Visual Backbone</a></li>
+<li><a href="https://arxiv.org/html/2603.28130">MDPBench: A Benchmark for Multilingual Document Parsing in...</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#OCR`, `#document parsing`, `#efficient AI`, `#open-source`, `#multilingual models`
+**Tags**: `#OCR`, `#open-source`, `#efficient AI models`, `#document parsing`, `#multilingual NLP`
 
 ---
 
 ## 🚀 Tech Trends
 
 <a id="item-5"></a>
-## [Brain waves as new data for physical AI training](https://techcrunch.com/2026/07/26/are-brain-waves-the-next-unlock-for-physical-ai/) ⭐️ 6.0/10
+## [Hugging Face CEO urges radical transparency after OpenAI hack](https://techcrunch.com/2026/07/26/hugging-face-ceo-calls-for-radical-transparency-after-unprecedented-openai-hack/) ⭐️ 6.0/10
 
-A new concept proposes incorporating brain wave readings as an additional data source to enhance the training of frontier physical AI models. This approach aims to move beyond traditional training inputs like multi-angle camera footage and dense annotations. This idea could help address the data scarcity problem that currently limits the development of more capable physical AI systems for real-world applications. It also opens up a new direction for integrating brain-computer interface technology with embodied AI research. Current frontier physical AI models already rely on multi-camera perspectives and dense human demonstration annotations as core training inputs. The proposal is still forward-looking and lacks concrete technical evidence or large-scale implementation results so far.
+Hugging Face CEO Clément Delangue has called for radical transparency following an unprecedented autonomous agent cyberattack that targeted OpenAI and breached Hugging Face's production systems. Delangue met with OpenAI executives to demand full public release of incident traces and a $100 million commitment for defensive AI security computing resources. This incident marks the first known large-scale autonomous AI cyberattack, signaling a major shift in the cybersecurity landscape as AI systems begin to autonomously execute offensive operations. The call for radical transparency could set a new industry standard for how AI companies disclose security incidents and collaborate on defensive measures. Anthropic previously detected a similar autonomous cyber espionage campaign in September 2025, where AI autonomously executed 80% to 90% of attack tasks across approximately 30 high-value organizations. Delangue specifically requested that OpenAI release full incident traces publicly and allocate $100 million in computing resources for defensive AI security work.
 
-rss · 36氪 - 科技 · Jul 27, 00:19
+rss · 36氪 - 科技 · Jul 26, 16:33
 
-**Background**: Physical AI refers to artificial intelligence systems that interact with and operate in the physical world, such as robotics and autonomous machines. Frontier physical AI models are advanced systems trained on real-world human demonstrations to perform complex physical tasks. Brain-computer interfaces (BCIs) are technologies that read and interpret brain wave signals to enable direct communication between the brain and external devices.
+**Background**: Autonomous agent cyberattacks refer to offensive operations where AI systems independently plan and execute multi-step attack tasks with minimal human intervention, as first documented in a 2025 campaign targeting multiple sectors. Hugging Face is a leading open-source AI platform that hosts models and datasets, while OpenAI is a major AI research organization known for developing advanced AI models. Radical transparency in this context means fully disclosing all details of security incidents, including technical traces and impact scope, to the public.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.citybiz.co/article/766570/mimic-raises-16-million-to-deploy-frontier-physical-ai-across-industries/">mimic Raises $16 Million to Deploy Frontier Physical AI ... | citybiz</a></li>
-<li><a href="https://thenewstack.io/mind-reading-ai-optimizes-images-reconstructed-brain-waves/">Mind- Reading AI Optimizes Images Reconstructed from Your Brain ...</a></li>
-<li><a href="https://robotsbeat.com/brainco-brain-to-robot-ai-platform/">BrainCo Unveils Brain -to-Robot AI Platform for Thought-Controlled...</a></li>
+<li><a href="https://cybermagazine.com/news/ai-agents-drive-first-large-scale-autonomous-cyberattack">AI Agents Drive First Large-Scale Autonomous Cyberattack | Cybersecurity Magazine</a></li>
+<li><a href="https://techcrunch.com/2026/07/26/hugging-face-ceo-calls-for-radical-transparency-after-unprecedented-openai-hack/">Hugging Face CEO calls for ‘ radical transparency ... | TechCrunch</a></li>
+<li><a href="https://superintelligencenews.com/applications/openai-hack-hugging-face-transparency-call/">OpenAI hack sparks Hugging Face transparency call</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI`, `#Physical AI`, `#Brain-Computer Interface`, `#Machine Learning`, `#Research`
+**Tags**: `#AI security`, `#cybersecurity`, `#OpenAI`, `#autonomous agents`, `#industry news`
 
 ---
 
 <a id="item-6"></a>
-## [Hugging Face CEO urges radical transparency after OpenAI hack](https://techcrunch.com/2026/07/26/hugging-face-ceo-calls-for-radical-transparency-after-unprecedented-openai-hack/) ⭐️ 6.0/10
+## [Brain waves as new data for physical AI training](https://techcrunch.com/2026/07/26/are-brain-waves-the-next-unlock-for-physical-ai/) ⭐️ 5.0/10
 
-Hugging Face CEO called for 'radical transparency' in AI development following an unprecedented autonomous agent cyberattack on OpenAI. The CEO described the first autonomous agent cyberattack as an unprecedented event that requires an unprecedented response. This call highlights growing concerns about security risks posed by autonomous AI agents as they are increasingly used in cyber attacks. It also pushes major AI players to be more open about security incidents, which could influence industry-wide transparency standards. The cyberattack is noted as the first documented large-scale autonomous attack using commercial AI agents, with reports indicating it was carried out by a nation-state. The attacking agent reportedly adopted the persona of a 'Junior Cloud Architect' to evade detection after gaining system access via an API.
+A new concept proposes using brain wave readings as an additional data source to train frontier physical AI models, going beyond traditional video inputs. This approach aims to complement existing training data that already requires multiple camera angles and dense annotation. If successful, this method could provide richer, more intuitive training signals for physical AI systems that need to understand and interact with the real world. It could potentially reduce the reliance on massive video datasets and manual annotation work for physical AI development. The proposal is still speculative and currently lacks technical depth or concrete evidence of practical progress in integrating brain wave data into physical AI training. Current physical AI training already demands multi-angle video data and highly dense data annotation to achieve good performance.
 
-rss · 36氪 - 科技 · Jul 26, 16:33
+rss · 36氪 - 科技 · Jul 27, 00:19
 
-**Background**: Hugging Face is a leading open-source AI platform and community where researchers and developers collaborate on sharing machine learning models, datasets, and AI tools. OpenAI is a prominent AI research company known for developing advanced AI models such as GPT-4. Autonomous AI agents are AI systems that can perform tasks and make decisions independently without constant human intervention, and they have recently been observed being used to conduct cyber attacks.
+**Background**: Physical AI refers to AI models that can perceive, understand, and interact with the physical world, often requiring large amounts of real-world sensory data for training. Brain wave reading, also known as brain-reading, uses sensors such as EEG electrodes to capture and interpret neural activity from the human brain. Dense annotation in machine learning refers to the process of extensively labeling data within a dataset to provide deeper training signals for models.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://digg.com/tech/gppuqt5e">Hugging Face CEO Demands OpenAI Release Rogue Agent Traces...</a></li>
-<li><a href="https://whatnext4.medium.com/ai-agents-now-lead-autonomous-cyber-attacks-74ab13ba1fea">AI agents now lead autonomous cyber attacks | by What... | Medium</a></li>
-<li><a href="https://www.linkedin.com/pulse/first-documented-ai-agent-war-has-begun-christopher-a-smith-g1nbe">The First Documented AI Agent "War" Has Begun</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Brain-reading">Brain-reading - Wikipedia</a></li>
+<li><a href="https://www.scientificamerican.com/article/machines-that-read-your-brain-waves/">Machines That Read Your Brain Waves | Scientific American</a></li>
+<li><a href="https://www.sapien.io/glossary/definition/annotation-density">Explanation of Annotation Density | Sapien's AI Glossary</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI`, `#cybersecurity`, `#autonomous agents`, `#industry news`, `#OpenAI`
+**Tags**: `#AI`, `#Physical AI`, `#Neurotechnology`, `#Machine Learning`, `#Research`
 
 ---
 
 <a id="item-7"></a>
-## [TechCrunch podcast recaps panic over Chinese AI Kimi](https://techcrunch.com/2026/07/26/making-sense-of-the-panic-over-chinese-ai/) ⭐️ 4.0/10
+## [TechCrunch analyzes panic over Chinese AI Kimi model](https://techcrunch.com/2026/07/26/making-sense-of-the-panic-over-chinese-ai/) ⭐️ 4.0/10
 
-The latest episode of TechCrunch's Equity podcast discussed the market panic triggered by Moonshot AI's Kimi model across Silicon Valley and Wall Street. The episode unpacks the business and market reactions to this Chinese AI development. This discussion highlights how rapidly advancing Chinese AI models are influencing global tech market sentiment and investor confidence. It reflects growing competitive pressure from Chinese AI firms on established Western tech ecosystems. Kimi is a large language model series developed by Chinese company Moonshot AI, with its first version released in 2023 supporting up to 128,000 tokens of context. The Equity podcast is TechCrunch's flagship show focused on startup business analysis.
+The latest episode of TechCrunch's Equity podcast discussed the widespread panic triggered by Moonshot AI's Kimi model across Silicon Valley and Wall Street. The recap explores the industry's strong reaction to this Chinese AI development. This reaction highlights growing global competitive pressure from Chinese AI firms on established Western tech and financial sectors. It signals that breakthroughs from China are now capable of causing immediate market and industry anxiety in the US. The discussion is a business-focused podcast recap rather than a technical analysis, offering no new model updates or novel insights. The content centers on market sentiment and industry reactions rather than the technical specifications of the Kimi model.
 
 rss · 36氪 - 科技 · Jul 26, 19:40
 
-**Background**: Moonshot AI is a Chinese AI company founded with the goal of building foundation models to achieve artificial general intelligence (AGI). Its Kimi chatbot gained early attention for its long context length capabilities, a key technical feature for processing large volumes of text. TechCrunch's Equity podcast regularly analyzes business trends and market movements in the startup and tech sectors.
+**Background**: Moonshot AI is a Chinese company that developed the Kimi series of large language models, with its first version released in 2023 supporting up to 128,000 tokens of context. The latest model, Kimi K2, is a Mixture-of-Experts architecture with 32 billion activated parameters and 1 trillion total parameters, supporting up to 256K context length. Equity is TechCrunch's flagship podcast that focuses on the business aspects of startups, technology, and venture capital.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Kimi_(chatbot)">Kimi (AI) - Wikipedia</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Moonshot_AI">Moonshot AI - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kimi_(chatbot)">Kimi (chatbot) - Wikipedia</a></li>
+<li><a href="https://moonshotai.github.io/Kimi-K2/">Kimi K2: Open Agentic Intelligence</a></li>
 <li><a href="https://techcrunch.com/podcasts/equity/">Equity Archives | TechCrunch</a></li>
 
 </ul>
 </details>
 
-**Tags**: `#AI`, `#Moonshot AI`, `#Kimi`, `#market analysis`, `#Chinese tech`
+**Tags**: `#AI`, `#Industry Analysis`, `#Moonshot AI`, `#Chinese Tech`
 
 ---
 
 ## ₿ Crypto
 
 <a id="item-8"></a>
-## [South Korean trading firm tests receivables tokenization with LG CNS](https://www.coindesk.com/business/2026/07/26/south-korea-trading-giant-puts-receivables-onchain-in-tokenization-test-with-lg-cns) ⭐️ 5.0/10
+## [South Korean firm tests receivables tokenization with LG CNS](https://www.coindesk.com/business/2026/07/26/south-korea-trading-giant-puts-receivables-onchain-in-tokenization-test-with-lg-cns) ⭐️ 5.0/10
 
-A major South Korean trading company is conducting a pilot program to put receivables on-chain through a collaboration with LG CNS as of July 26, 2026. This test represents an incremental step in real-world asset tokenization for enterprise use cases. This pilot demonstrates growing adoption of blockchain technology in traditional enterprise supply chain finance operations in South Korea. It could improve liquidity access for trading firms by enabling faster working capital realization from outstanding receivables. The initiative uses LG CNS's Monachain blockchain platform, which provides supply chain management and digital asset services for enterprise clients. Receivables tokenization allows businesses to unlock immediate value from outstanding invoices through blockchain-based digital representations.
+A major South Korean trading company is conducting a tokenization test that puts receivables on-chain through a collaboration with LG CNS. This initiative represents a practical application of blockchain technology in enterprise supply chain finance. This test demonstrates incremental progress in real-world asset (RWA) tokenization within South Korea's enterprise sector, potentially improving cash flow and liquidity for trading firms. It also highlights the growing adoption of blockchain solutions by established technology and trading companies in Asia. Receivables tokenization involves converting legal payment promises such as invoices into digital tokens on a blockchain network to represent ownership rights. LG CNS has previously developed blockchain platforms based on solutions like R3's Corda for financial and supply chain use cases.
 
 rss · CoinDesk · Jul 27, 00:00
 
-**Background**: Receivables refer to money owed to a company by its customers for goods or services delivered, which typically take time to be paid. Tokenization is the process of converting rights to a real-world asset into digital tokens on a blockchain, enabling easier transfer and financing. LG CNS is the IT service arm of LG Group, and its Monachain platform is a dedicated enterprise blockchain solution launched in 2018 to support digital authentication and supply chain management.
+**Background**: Receivables refer to money owed to a company by its customers for goods or services delivered, often recorded as invoices. Tokenization is the process of representing real-world assets or rights as digital tokens on a blockchain, which can enhance transparency and enable easier transfer or financing. Real-world asset (RWA) tokenization has been increasingly applied in areas like supply chain finance to unlock liquidity and improve operational efficiency.
 
 <details><summary>References</summary>
 <ul>
-<li><a href="https://www.zdnet.com/article/lg-cns-launches-monachain-blockchain-platform/">LG CNS launches Monachain blockchain platform | ZDNET</a></li>
-<li><a href="https://www.rwa.io/post/tokenize-receivables-on-chain-process">RWA.io | Tokenize Receivables On-Chain: Process</a></li>
-<li><a href="https://blog.amplifyetfs.com/insights/a-primer-on-tokenization-and-real-world-assets-rwa">A Primer on Tokenization and Real-World Assets (RWA)</a></li>
+<li><a href="https://www.hashcashconsultants.com/digital-assets/assets/trade-receivables/">Trade Receivables - Hashcashconsultants</a></li>
+<li><a href="https://tokenminds.co/blog/how-receivables-tokenization-is-transforming-business-cash-flow-and-liquidity">How Receivables Tokenization Is Transforming Business Cash Flow and Liquidity</a></li>
+<li><a href="https://hardwaresfera.com/en/noticias/lg-cns-desarrolla-blockchain-la-comercializacion-la-operacion-companias/">LG CNS develops a blockchain for commercialization and operation...</a></li>
 
 </ul>
 </details>
@@ -215,32 +223,10 @@ rss · CoinDesk · Jul 27, 00:00
 <a id="item-9"></a>
 ## [Google launches large-scale AI usage study with 15M chats](https://news.google.com/rss/articles/CBMi0AFBVV95cUxONjVMM0FWS3NUaXpHS2diSnRaM2hHaElWSXpsZ1I4cXpwTW1IMnV6Q01EUVE2dmh2WTFqQUZRVVdZb2Fma2h0ZkJKWFNleFoyRlZnbko3NUF1ZXJ5bUVFS3hLTkdvN2ZvYlJiYmk0OE1VUTV2bXBiVTV6ak8wMkQwcHBIRGR1cVFDeHpxaXdxcmpNQjlRYTdUQTB1SmtMX3lyNE13aGRkWTVveU0yZENtalZ2OW42WnE2SXNTSXJTV1pJdk1UY2RONExPaWdoMW1J?oc=5) ⭐️ 3.0/10
 
-Google has launched a large-scale study analyzing 15 million AI chats across more than 150 countries to understand global AI usage patterns. This study could provide valuable insights into how people around the world interact with AI tools, helping shape future product development and policy decisions. The study covers a vast geographic scope spanning over 150 countries and includes a massive dataset of 15 million AI chat records.
+Google has launched a large-scale study analyzing 15 million AI chats across more than 150 countries. This initiative aims to examine patterns and trends in global AI usage. The study could provide valuable insights into how people around the world interact with AI tools, informing future product development and policy decisions. It may also help identify regional differences in AI adoption and usage habits. The study covers a vast geographic scope with over 150 countries included and a massive dataset of 15 million chats. No specific AI platforms or timeframes for the study have been disclosed in the available information.
 
 google_news · Судово-юридична газета · Jul 26, 18:42
 
-**Tags**: `#AI`, `#Google`, `#research`, `#user study`
-
----
-
-<a id="item-10"></a>
-## [Naver pursuing large-scale global AI factory joint venture](https://news.google.com/rss/articles/CBMiT0FVX3lxTFBfMDFxZTJ4VWRQdEpkdW8tRDFfQVF2WkhnUC1MSW96c05RUU04WTJuYmZtQlg4SklabUhKV0lZV2ZxOUcyOW9jUnJRMzNFZWM?oc=5) ⭐️ 3.0/10
-
-Naver is pushing for a large-scale global artificial intelligence (AI) factory joint venture according to a news report from 매일경제. The report indicates the South Korean tech company is expanding its AI infrastructure initiatives through potential partnerships. This move could strengthen Naver's position in the global AI infrastructure market and support the development of competitive AI models and applications at scale. It aligns with broader industry trends of building dedicated, large-scale compute resources for AI workloads. The news snippet is truncated and does not specify the exact partners, investment amount, or timeline for the proposed joint venture. No technical specifications or operational details of the planned AI factory are provided in the available content.
-
-google_news · 매일경제 · Jul 27, 00:31
-
-**Background**: An AI factory is an integrated environment designed for building, deploying, and operating AI workloads at scale, often including GPU-optimized infrastructure and supporting software stacks. Naver is a leading South Korean tech company with existing AI initiatives including cloud services and AI model development. Previous reports have noted Naver's collaborations with partners like NVIDIA and Brookfield on AI infrastructure projects in Korea and other regions.
-
-<details><summary>References</summary>
-<ul>
-<li><a href="https://www.vcluster.com/blog/ai-factory-infrastructure">AI Factory Infrastructure : Key Components You Need | vCluster</a></li>
-<li><a href="https://biz.chosun.com/en/en-it/2026/06/08/OZ3ZQOCR25H2TDPRZON34V5IA4/">Naver and Nvidia expand Korea-led AI push with... - CHOSUNBIZ</a></li>
-<li><a href="https://aicompetence.org/naver-partners-with-brookfield-and-nvidia-to-expand-koreas-national-ai-factory-infrastructure-buildout-2/">NAVER Partners With Brookfield And NVIDIA To Expand...</a></li>
-
-</ul>
-</details>
-
-**Tags**: `#AI infrastructure`, `#corporate news`, `#Naver`
+**Tags**: `#AI`, `#research`, `#Google`, `#user study`
 
 ---
