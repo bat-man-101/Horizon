@@ -41,7 +41,9 @@ jobs:
           python .github/workflows/translate_html.py
 
       - name: Convert markdown to standalone HTML
-        run: python .github/workflows/build_static.py
+        run: |
+          pip install markdown -q
+          python .github/workflows/build_static.py
 
       - name: Set current date as environment variable
         run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
