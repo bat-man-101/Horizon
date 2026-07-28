@@ -5,211 +5,181 @@ date: 2026-07-28
 lang: zh
 ---
 
-> 从 447 条内容中筛选出 15 条重要资讯。
+> 从 450 条内容中筛选出 15 条重要资讯。
 
 ---
-
-**📄 论文研究（2）**
-  1. [FlowEvo: Self-Evolving Agents through the Co-Evolution of Workflows and Executable Skills](#item-1) ⭐️ 9.0/10
-  2. [Securing Multimodal AI through Internal Information Decomposition](#item-2) ⭐️ 9.0/10
 
 **📌 其他（3）**
-  3. [Self-contained highly-portable Python distributions](#item-3) ⭐️ 8.0/10
-  4. [Judge Rejects Google's Attempt to DMCA Its Way Out of Being Scraped](#item-4) ⭐️ 8.0/10
-  5. [Exploiting Volvo/Eicher's fleet platform to gain control over all users/vehicles](#item-5) ⭐️ 8.0/10
+  1. [我们对开放重量模型的立场](#item-1) ⭐️ ?/10
+  2. [在 SlopCodeBench 上对 Opus 5 进行基准测试](#item-2) ⭐️ ?/10
+  3. [独立的高度可移植的 Python 发行版](#item-3) ⭐️ ?/10
 
 **🤖 AI 新闻（3）**
-  6. [How AI is expanding what people do at work](#item-6) ⭐️ 8.0/10
-  7. [moonshotai/Kimi-K3](#item-7) ⭐️ 7.0/10
-  8. [An opinionated guide to which AI to use to do stuff](#item-8) ⭐️ 7.0/10
+  4. [月射太/Kimi-K3](#item-4) ⭐️ ?/10
+  5. [关于使用哪种人工智能来做事的固执己见的指南](#item-5) ⭐️ ?/10
+  6. [人工智能如何扩展人们的工作范围](#item-6) ⭐️ ?/10
 
 **₿ 加密资产（1）**
-  9. [Nvidia forms 37-member AI security alliance without OpenAI, Anthropic or Google](#item-9) ⭐️ 8.0/10
+  7. [美国参议院暂时推迟《加密清晰度法案》，因为该法案将有限的带宽集中在其他地方](#item-7) ⭐️ ?/10
 
 **🚀 科技动态（3）**
-  10. [Anthropic’s Dario Amodei responds: doesn’t oppose open-weight models, but fears Chinese AI](#item-10) ⭐️ 8.0/10
-  11. [PSA: Your Claude shared chats and Artifacts may have ended up on Google](#item-11) ⭐️ 8.0/10
-  12. [Microsoft launches its first cybersecurity model, plus a new agentic cybersecurity system](#item-12) ⭐️ 8.0/10
+  8. [Anthropic 的 Dario Amodei 回应：不反对开放权重模型，但担心中国 AI](#item-8) ⭐️ ?/10
+  9. [萨蒂亚·纳德拉 (Satya Nadella) 表示，那些相信一种人工智能能解决所有问题的公司可能无法生存](#item-9) ⭐️ ?/10
+  10. [Thea Energy 获得 2000 万美元联邦拨款，用于制造聚变反应堆磁体](#item-10) ⭐️ ?/10
 
 **📰 热点新闻（3）**
-  13. [Some people's chats with Claude AI found publicly available online](#item-13) ⭐️ 8.0/10
-  14. [Is it time to stop using glue and labels on paper?](#item-14) ⭐️ 5.0/10
-  15. [Quantum tech roadmap effort starts to accelerate - Bangkok Post](#item-15) ⭐️ 5.0/10
----
+  11. [【地震速報】鹿児島 阿久根で震度 3 津波の心配なし](#item-11) ⭐️ ?/10
+  12. [株価 一時 2600 円以上値下がり NY 市場 半導体関連の値下がりで](#item-12) ⭐️ ?/10
+  13. [東北～九州 局地的に非常に激しい雨 西日本中心に危険な暑さ](#item-13) ⭐️ ?/10
 
-## 📄 论文研究
-
-<a id="item-1"></a>
-## [FlowEvo: Self-Evolving Agents through the Co-Evolution of Workflows and Executable Skills](https://arxiv.org/abs/2607.21596) ⭐️ 9.0/10
-
-FlowEvo presents a novel training-free framework that compiles successful task traces into reusable skill records, enabling self-evolving agents through persistent learning and improvement.
-
-rss · arXiv AI · 7月27日 04:00
-
-**标签**: `#AI/ML`, `#Large Language Models`, `#Self-Evolving Agents`, `#Workflow Optimization`
-
----
-
-<a id="item-2"></a>
-## [Securing Multimodal AI through Internal Information Decomposition](https://arxiv.org/abs/2607.21600) ⭐️ 9.0/10
-
-FlowGuard: A novel lightweight framework for detecting harmful inputs in multimodal AI systems by monitoring internal cross-modal consistency.
-
-rss · arXiv AI · 7月27日 04:00
-
-**标签**: `#AI Security`, `#Multimodal AI`, `#Cross-Modal Consistency`
-
+**📄 论文研究（2）**
+  14. [FlowEvo：通过工作流程和可执行技能的共同进化实现自我进化代理](#item-14) ⭐️ ?/10
+  15. [风险不是目标：评估野火操作风险信号的单调框架](#item-15) ⭐️ ?/10
 ---
 
 ## 📌 其他
 
-<a id="item-3"></a>
-## [Self-contained highly-portable Python distributions](https://gregoryszorc.com/docs/python-build-standalone/main/) ⭐️ 8.0/10
+<a id="item-1"></a>
+## [我们对开放重量模型的立场](https://www.anthropic.com/news/position-open-weights-models) ⭐️ ?/10
 
-A detailed resource on creating highly-portable Python distributions using python-build-standalone, with strong community adoption and discussion around its use cases and related projects.
+
+
+hackernews · surprisetalk · 7月27日 22:03 · [社区讨论](https://news.ycombinator.com/item?id=49076057)
+
+---
+
+<a id="item-2"></a>
+## [在 SlopCodeBench 上对 Opus 5 进行基准测试](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-opus-5-on-slop-code-bench.md) ⭐️ ?/10
+
+
+
+hackernews · dhorthy · 7月27日 22:37 · [社区讨论](https://news.ycombinator.com/item?id=49076391)
+
+---
+
+<a id="item-3"></a>
+## [独立的高度可移植的 Python 发行版](https://gregoryszorc.com/docs/python-build-standalone/main/) ⭐️ ?/10
+
+
 
 hackernews · jcbhmr · 7月27日 18:43 · [社区讨论](https://news.ycombinator.com/item?id=49073942)
-
-**标签**: `#Python`, `#Portability`, `#Package Management`
-
----
-
-<a id="item-4"></a>
-## [Judge Rejects Google's Attempt to DMCA Its Way Out of Being Scraped](https://www.techdirt.com/2026/07/27/judge-rejects-googles-attempt-to-dmca-its-way-out-of-being-scraped/) ⭐️ 8.0/10
-
-A judge rejected Google's DMCA takedown request against a scraper of its search results, sparking debate on data access, copyright law, and API availability.
-
-hackernews · cdrnsf · 7月27日 18:15 · [社区讨论](https://news.ycombinator.com/item?id=49073513)
-
-**标签**: `#legal`, `#data-scraping`, `#api`, `#google`, `#copyright`
-
----
-
-<a id="item-5"></a>
-## [Exploiting Volvo/Eicher's fleet platform to gain control over all users/vehicles](https://eaton-works.com/2026/07/27/my-eicher-hack/) ⭐️ 8.0/10
-
-A detailed report on exploiting a security vulnerability in Volvo/Eicher's fleet platform, sparking a discussion on car security and user dependency on cloud services.
-
-hackernews · EatonZ · 7月27日 15:08 · [社区讨论](https://news.ycombinator.com/item?id=49070756)
-
-**标签**: `#car-security`, `#vulnerability-disclosure`, `#cloud-dependency`
 
 ---
 
 ## 🤖 AI 新闻
 
-<a id="item-6"></a>
-## [How AI is expanding what people do at work](https://openai.com/index/how-ai-is-expanding-what-people-do-at-work) ⭐️ 8.0/10
+<a id="item-4"></a>
+## [月射太/Kimi-K3](https://simonwillison.net/2026/Jul/27/kimi-k3/#atom-everything) ⭐️ ?/10
 
-New research from OpenAI demonstrates how AI tools like ChatGPT are expanding workers' capabilities and reshaping job roles across industries.
 
-rss · OpenAI Blog · 7月27日 03:30
-
-**标签**: `#AI`, `#workplace transformation`, `#ChatGPT`, `#OpenAI`
-
----
-
-<a id="item-7"></a>
-## [moonshotai/Kimi-K3](https://simonwillison.net/2026/Jul/27/kimi-k3/#atom-everything) ⭐️ 7.0/10
-
-Moonshot has released Kimi-K3, a 2.8 trillion parameter language model, along with a modified MIT license that includes specific attribution requirements for large commercial entities.
 
 rss · Simon Willison · 7月27日 23:39
 
-**标签**: `#AI`, `#Language Models`, `#Large-Scale Models`
-
 ---
 
-<a id="item-8"></a>
-## [An opinionated guide to which AI to use to do stuff](https://simonwillison.net/2026/Jul/27/an-opinionated-guide-to-which-ai-to-use-to-do-stuff/#atom-everything) ⭐️ 7.0/10
+<a id="item-5"></a>
+## [关于使用哪种人工智能来做事的固执己见的指南](https://simonwillison.net/2026/Jul/27/an-opinionated-guide-to-which-ai-to-use-to-do-stuff/#atom-everything) ⭐️ ?/10
 
-An analysis of the evolution of AI tool usage, highlighting the shift towards agentic systems and their implications for real-world applications.
+
 
 rss · Simon Willison · 7月27日 21:55
 
-**标签**: `#AI`, `#agentic systems`, `#tool evaluation`, `#software engineering`
+---
+
+<a id="item-6"></a>
+## [人工智能如何扩展人们的工作范围](https://openai.com/index/how-ai-is-expanding-what-people-do-at-work) ⭐️ ?/10
+
+
+
+rss · OpenAI Blog · 7月27日 03:30
 
 ---
 
 ## ₿ 加密资产
 
-<a id="item-9"></a>
-## [Nvidia forms 37-member AI security alliance without OpenAI, Anthropic or Google](https://www.coindesk.com/tech/2026/07/27/nvidia-forms-37-member-ai-security-alliance-without-openai-anthropic-or-google) ⭐️ 8.0/10
+<a id="item-7"></a>
+## [美国参议院暂时推迟《加密清晰度法案》，因为该法案将有限的带宽集中在其他地方](https://www.coindesk.com/policy/2026/07/27/u-s-senate-puts-off-crypto-clarity-act-for-now-as-it-focuses-limited-bandwidth-elsewhere) ⭐️ ?/10
 
-Nvidia establishes a 37-member AI security alliance excluding major competitors like OpenAI, Anthropic, and Google, signaling strategic shifts in the AI industry.
 
-rss · CoinDesk · 7月27日 13:25
 
-**标签**: `#AI`, `#Security`, `#Alliances`, `#Nvidia`
+rss · CoinDesk · 7月27日 23:55
 
 ---
 
 ## 🚀 科技动态
 
-<a id="item-10"></a>
-## [Anthropic’s Dario Amodei responds: doesn’t oppose open-weight models, but fears Chinese AI](https://techcrunch.com/2026/07/27/anthropics-dario-amodei-responds-doesnt-oppose-open-weight-models-but-fears-chinese-ai/) ⭐️ 8.0/10
+<a id="item-8"></a>
+## [Anthropic 的 Dario Amodei 回应：不反对开放权重模型，但担心中国 AI](https://techcrunch.com/2026/07/27/anthropics-dario-amodei-responds-doesnt-oppose-open-weight-models-but-fears-chinese-ai/) ⭐️ ?/10
 
-Anthropic's CEO Dario Amodei weighs in on the open-weight model debate, expressing support for openness while raising concerns about China's AI capabilities.
+
 
 rss · 36氪 - 科技 · 7月28日 00:13
 
-**标签**: `#AI`, `#open-source`, `#China`, `#ethics`, `#machine learning`
+---
+
+<a id="item-9"></a>
+## [萨蒂亚·纳德拉 (Satya Nadella) 表示，那些相信一种人工智能能解决所有问题的公司可能无法生存](https://techcrunch.com/2026/07/27/satya-nadella-says-companies-that-trust-one-ai-for-everything-may-not-survive/) ⭐️ ?/10
+
+
+
+rss · 36氪 - 科技 · 7月27日 21:17
 
 ---
 
-<a id="item-11"></a>
-## [PSA: Your Claude shared chats and Artifacts may have ended up on Google](https://techcrunch.com/2026/07/27/psa-your-claude-shared-chats-and-artifacts-may-have-ended-up-on-google/) ⭐️ 8.0/10
+<a id="item-10"></a>
+## [Thea Energy 获得 2000 万美元联邦拨款，用于制造聚变反应堆磁体](https://techcrunch.com/2026/07/27/thea-energy-lands-20m-federal-grant-to-build-its-magnets-for-fusion-reactors/) ⭐️ ?/10
 
-A privacy vulnerability in Claude's 'share chat' feature may have exposed user conversations and artifacts to unintended parties.
 
-rss · 36氪 - 科技 · 7月27日 20:19
 
-**标签**: `#AI`, `#privacy`, `#security`, `#data exposure`
-
----
-
-<a id="item-12"></a>
-## [Microsoft launches its first cybersecurity model, plus a new agentic cybersecurity system](https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/) ⭐️ 8.0/10
-
-Microsoft introduces its first AI security model and a new agentic cybersecurity system, advancing AI-driven cybersecurity solutions.
-
-rss · 36氪 - 科技 · 7月27日 18:32
-
-**标签**: `#cybersecurity`, `#AI`, `#Microsoft`, `#technology`
+rss · 36氪 - 科技 · 7月27日 20:40
 
 ---
 
 ## 📰 热点新闻
 
-<a id="item-13"></a>
-## [Some people's chats with Claude AI found publicly available online](https://www.bbc.co.uk/news/articles/cly5qgjk5ywo?at_medium=RSS&at_campaign=rss) ⭐️ 8.0/10
+<a id="item-11"></a>
+## [【地震速報】鹿児島 阿久根で震度 3 津波の心配なし](http://www3.nhk.or.jp/news/html/20260728/k10015186931000.html) ⭐️ ?/10
 
-Hundreds of conversations with Anthropic’s Claude AI were found publicly available, raising serious privacy and security concerns.
 
-rss · BBC Technology · 7月27日 22:14
 
-**标签**: `#AI Ethics`, `#Cybersecurity`, `#Privacy`, `#Anthropic`, `#Claude AI`
+rss · NHK World - Japan/Asia · 7月28日 00:47
 
 ---
 
+<a id="item-12"></a>
+## [株価 一時 2600 円以上値下がり NY 市場 半導体関連の値下がりで](http://www3.nhk.or.jp/news/html/20260728/k10015187711000.html) ⭐️ ?/10
+
+
+
+rss · NHK World - Japan/Asia · 7月28日 00:54
+
+---
+
+<a id="item-13"></a>
+## [東北～九州 局地的に非常に激しい雨 西日本中心に危険な暑さ](http://www3.nhk.or.jp/news/html/20260728/k10015187561000.html) ⭐️ ?/10
+
+
+
+rss · NHK World - Japan/Asia · 7月27日 21:47
+
+---
+
+## 📄 论文研究
+
 <a id="item-14"></a>
-## [Is it time to stop using glue and labels on paper?](https://www.bbc.co.uk/news/articles/c872nj1n4xyo?at_medium=RSS&at_campaign=rss) ⭐️ 5.0/10
+## [FlowEvo：通过工作流程和可执行技能的共同进化实现自我进化代理](https://arxiv.org/abs/2607.21596) ⭐️ ?/10
 
-New technology aims to improve paper recycling by addressing issues with labels and adhesives.
 
-rss · BBC Technology · 7月27日 23:00
 
-**标签**: `#sustainability`, `#recycling`, `#technology`
+rss · arXiv AI · 7月27日 04:00
 
 ---
 
 <a id="item-15"></a>
-## [Quantum tech roadmap effort starts to accelerate - Bangkok Post](https://news.google.com/rss/articles/CBMiowFBVV95cUxNa1lVRUdXaV94eklsbldtSmtLenAwVk02NlUzLVh6SXZpSHotaUo3MlNySW1PNXlSZTNabmZfYUFqcHFXdUhjSFQteE9kT0lWMVZZc1BpMXVlS1RzU091Vkt1M2huSXBwY05IZFhvanF4dzYwbU1jTFBsOURJdEp4SjU5SHE5eWpxaXJsOENaeUxqY2tCUHB5eXZRcU02Zy1tajJN?oc=5) ⭐️ 5.0/10
+## [风险不是目标：评估野火操作风险信号的单调框架](https://arxiv.org/abs/2607.21597) ⭐️ ?/10
 
-An article from the Bangkok Post reports that efforts to develop a quantum technology roadmap are gaining momentum.
 
-google_news · Bangkok Post · 7月27日 22:36
 
-**标签**: `#quantum computing`, `#technology roadmap`, `#innovation`
+rss · arXiv AI · 7月27日 04:00
 
 ---
