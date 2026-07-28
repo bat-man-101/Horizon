@@ -90,7 +90,7 @@
     "request_body": {
       "msgtype": "markdown",
       "markdown": {
-        "content": "# 🤖 AI日报 #{date} — 今日精选\n\n#{overview}\n\n#{toc}\n\n📖 完整日报：https://bat-man-101.github.io/Horizon/#{date_url}/summary-zh.html"
+        "content": "# 🤖 AI日报 #{date} — 今日精选\n\n#{overview}\n\n#{toc}\n\n📖 [完整日报](https://bat-man-101.github.io/Horizon/#{date_url}/summary-zh.html)"
       }
     },
     "headers": ""
