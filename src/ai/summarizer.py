@@ -1,7 +1,33 @@
 """Daily summary generation — pure programmatic rendering."""
 
 import re
-from typing import List, Dict
+from typing import List, Dict, Optional
+
+from ..models import ContentItem
+
+# Optional machine translation (no-API mode)
+_HAS_KANA = re.compile(r'[\u3040-\u309f\u30a0-\u30ff]')
+_translator = None
+
+def _machine_translate(text: str) -> Optional[str]:
+    """Translate English/Japanese text to Chinese using Google Translate (free).
+    Falls back silently if deep-translator is not installed or translation fails."""
+    global _translator
+    if not text or len(text) < 3:
+        return None
+    # Already Chinese (has CJK but no kana) → skip
+    if re.search(r'[\u4e00-\u9fff]', text) and not _HAS_KANA.search(text):
+        return None
+    try:
+        if _translator is None:
+            from deep_translator import GoogleTranslator
+            _translator = GoogleTranslator(source='auto', target='zh-CN')
+        result = _translator.translate(text)
+        if result and result != text:
+            return result
+    except Exception:
+        pass
+    return None
 
 from ..models import ContentItem
 
@@ -242,6 +268,11 @@ class DailySummarizer:
             for item in group_items:
                 global_idx += 1
                 _t = item.metadata.get(f"title_{language}") or item.title
+                # Machine translate if Chinese title unavailable (no-API mode)
+                if language == "zh" and _t == item.title and not re.search(r'[\u4e00-\u9fff]', str(_t)):
+                    mt = _machine_translate(str(_t))
+                    if mt:
+                        _t = mt
                 t = str(_t).replace("[", "(").replace("]", ")")
                 if language == "zh":
                     t = _pangu(t)
