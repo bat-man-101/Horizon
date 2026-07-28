@@ -5,7 +5,7 @@ date: 2026-07-28
 lang: en
 ---
 
-> From 450 items, 15 important content pieces were selected
+> From 456 items, 15 important content pieces were selected
 
 ---
 
@@ -28,7 +28,7 @@ lang: en
   10. [Thea Energy lands $20M federal grant to build its magnets for fusion reactors](#item-10) ⭐️ ?/10
 
 **📰 Top News（3）**
-  11. [【地震速報】鹿児島 阿久根で震度3 津波の心配なし](#item-11) ⭐️ ?/10
+  11. [政府 高木美帆さんに国民栄誉賞授与決定 五輪でメダル10個獲得](#item-11) ⭐️ ?/10
   12. [株価 一時2600円以上値下がり NY市場 半導体関連の値下がりで](#item-12) ⭐️ ?/10
   13. [東北～九州 局地的に非常に激しい雨 西日本中心に危険な暑さ](#item-13) ⭐️ ?/10
 
@@ -138,11 +138,11 @@ rss · 36氪 - 科技 · Jul 27, 20:40
 ## 📰 Top News
 
 <a id="item-11"></a>
-## [【地震速報】鹿児島 阿久根で震度3 津波の心配なし](http://www3.nhk.or.jp/news/html/20260728/k10015186931000.html) ⭐️ ?/10
+## [政府 高木美帆さんに国民栄誉賞授与決定 五輪でメダル10個獲得](http://www3.nhk.or.jp/news/html/20260728/k10015187771000.html) ⭐️ ?/10
 
 
 
-rss · NHK World - Japan/Asia · Jul 28, 00:47
+rss · NHK World - Japan/Asia · Jul 28, 01:39
 
 ---
 
