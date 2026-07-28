@@ -9,67 +9,67 @@ lang: en
 
 ---
 
-**📌 Other（3）**
-  1. [Our position on open-weights models](#item-1) ⭐️ ?/10
-  2. [Benchmarking Opus 5 on SlopCodeBench](#item-2) ⭐️ ?/10
-  3. [Self-contained highly-portable Python distributions](#item-3) ⭐️ ?/10
+**📌其他（3）**
+  1. [我们对开放重量模型的立场](#item-1) ⭐️ ?/10
+  2. [在 SlopCodeBench 上对 Opus 5 进行基准测试](#item-2) ⭐️ ?/10
+  3. [独立的高度可移植的 Python 发行版](#item-3) ⭐️ ?/10
 
-**🤖 AI News（3）**
-  4. [moonshotai/Kimi-K3](#item-4) ⭐️ ?/10
-  5. [An opinionated guide to which AI to use to do stuff](#item-5) ⭐️ ?/10
-  6. [How AI is expanding what people do at work](#item-6) ⭐️ ?/10
+**🤖 人工智能新闻（3）**
+  4. [月射太/Kimi-K3](#item-4) ⭐️ ?/10
+  5. [关于使用哪种人工智能来做事的固执己见的指南](#item-5) ⭐️ ?/10
+  6. [人工智能如何扩展人们的工作范围](#item-6) ⭐️ ?/10
 
-**₿ Crypto（1）**
-  7. [U.S. Senate puts off crypto Clarity Act for now as it focuses limited bandwidth elsewhere](#item-7) ⭐️ ?/10
+**₿ 加密货币（1）**
+  7. [美国参议院暂时推迟《加密清晰度法案》，因为该法案将有限的带宽集中在其他地方](#item-7) ⭐️ ?/10
 
-**🚀 Tech Trends（3）**
-  8. [Anthropic’s Dario Amodei responds: doesn’t oppose open-weight models, but fears Chinese AI](#item-8) ⭐️ ?/10
-  9. [Satya Nadella says companies that trust one AI for everything may not survive](#item-9) ⭐️ ?/10
-  10. [Thea Energy lands $20M federal grant to build its magnets for fusion reactors](#item-10) ⭐️ ?/10
+**🚀 科技趋势（3）**
+  8. [Anthropic的Dario Amodei回应：不反对开放权重模型，但担心中国AI](#item-8) ⭐️ ?/10
+  9. [萨蒂亚·纳德拉 (Satya Nadella) 表示，那些相信一种人工智能能解决所有问题的公司可能无法生存](#item-9) ⭐️ ?/10
+  10. [Thea Energy 获得 2000 万美元联邦拨款，用于制造聚变反应堆磁体](#item-10) ⭐️ ?/10
 
-**📰 Top News（3）**
-  11. [東北～九州 局地的に非常に激しい雨 西日本中心に危険な暑さ](#item-11) ⭐️ ?/10
-  12. [政府 高木美帆さんに国民栄誉賞授与決定 五輪でメダル10個獲得](#item-12) ⭐️ ?/10
-  13. [株価 一時2600円以上値下がり NY市場 半導体関連の値下がりで](#item-13) ⭐️ ?/10
+**📰 热门新闻（3）**
+  11. [北陆暴雨、石川县暴雨4级危险警报、日本东部有暴雨风险](#item-11) ⭐️ ?/10
+  12. [政府决定向在奥运会上获得10枚奖牌的高木美穗颁发国家荣誉奖](#item-12) ⭐️ ?/10
+  13. [因半导体相关价格下跌，纽约市场股价暂时下跌2,600日元以上](#item-13) ⭐️ ?/10
 
-**📄 Research（2）**
-  14. [FlowEvo: Self-Evolving Agents through the Co-Evolution of Workflows and Executable Skills](#item-14) ⭐️ ?/10
-  15. [Risk Is Not the Target: A Monotonic Framework for Evaluating Wildfire Operational Risk Signals](#item-15) ⭐️ ?/10
+**📄 研究（2）**
+  14. [FlowEvo：通过工作流程和可执行技能的共同进化实现自我进化代理](#item-14) ⭐️ ?/10
+  15. [风险不是目标：评估野火操作风险信号的单调框架](#item-15) ⭐️ ?/10
 ---
 
-## 📌 Other
+## 📌其他
 
 <a id="item-1"></a>
-## [Our position on open-weights models](https://www.anthropic.com/news/position-open-weights-models) ⭐️ ?/10
+## [我们对开放权重模型的立场](https://www.anthropic.com/news/position-open-weights-models) ⭐️ ?/10
 
 
 
-hackernews · surprisetalk · Jul 27, 22:03 · [Discussion](https://news.ycombinator.com/item?id=49076057)
+hackernews · surprisetalk · Jul 27, 22:03 · [讨论](https://news.ycombinator.com/item?id=49076057)
 
 ---
 
 <a id="item-2"></a>
-## [Benchmarking Opus 5 on SlopCodeBench](https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-opus-5-on-slop-code-bench.md) ⭐️ ?/10
+## [SlopCodeBench 上的 Opus 5 基准测试](https://github.com/ humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-opus-5-on-slop-code-bench.md) ⭐️ ?/10
 
 
 
-hackernews · dhorthy · Jul 27, 22:37 · [Discussion](https://news.ycombinator.com/item?id=49076391)
+hackernews · dhorthy · Jul 27, 22:37 · [讨论](https://news.ycombinator.com/item?id=49076391)
 
 ---
 
 <a id="item-3"></a>
-## [Self-contained highly-portable Python distributions](https://gregoryszorc.com/docs/python-build-standalone/main/) ⭐️ ?/10
+## [独立的高度可移植的Python发行版](https://gregoryszorc.com/docs/python-build-standalone/main/) ⭐️ ?/10
 
 
 
-hackernews · jcbhmr · Jul 27, 18:43 · [Discussion](https://news.ycombinator.com/item?id=49073942)
+hackernews · jcbhmr · Jul 27, 18:43 · [讨论](https://news.ycombinator.com/item?id=49073942)
 
 ---
 
-## 🤖 AI News
+## 🤖 人工智能新闻
 
 <a id="item-4"></a>
-## [moonshotai/Kimi-K3](https://simonwillison.net/2026/Jul/27/kimi-k3/#atom-everything) ⭐️ ?/10
+## [月射太/Kimi-K3](https://simonwillison.net/2026/Jul/27/kimi-k3/#atom-everything) ⭐️ ?/10
 
 
 
@@ -78,7 +78,7 @@ rss · Simon Willison · Jul 27, 23:39
 ---
 
 <a id="item-5"></a>
-## [An opinionated guide to which AI to use to do stuff](https://simonwillison.net/2026/Jul/27/an-opinionated-guide-to-which-ai-to-use-to-do-stuff/#atom-everything) ⭐️ ?/10
+## [关于使用哪种人工智能来做事的固执己见的指南](https://simonwillison.net/2026/Jul/27/an-opinionated-guide-to-which-ai-to-use-to-do-stuff/#atom-everything) ⭐️ ?/10
 
 
 
@@ -87,7 +87,7 @@ rss · Simon Willison · Jul 27, 21:55
 ---
 
 <a id="item-6"></a>
-## [How AI is expanding what people do at work](https://openai.com/index/how-ai-is-expanding-what-people-do-at-work) ⭐️ ?/10
+## [人工智能如何扩展人们的工作范围](https://openai.com/index/how-ai-is-expanding-what-people-do-at-work) ⭐️ ?/10
 
 
 
@@ -95,10 +95,10 @@ rss · OpenAI Blog · Jul 27, 03:30
 
 ---
 
-## ₿ Crypto
+## ₿ 加密货币
 
 <a id="item-7"></a>
-## [U.S. Senate puts off crypto Clarity Act for now as it focuses limited bandwidth elsewhere](https://www.coindesk.com/policy/2026/07/27/u-s-senate-puts-off-crypto-clarity-act-for-now-as-it-focuses-limited-bandwidth-elsewhere) ⭐️ ?/10
+## [我们。参议院暂时推迟《加密清晰度法案》，因为它将有限的带宽集中在其他地方](https://www.coindesk.com/policy/2026/07/27/u-s-senate-puts-off-crypto-clarity-act-for-now-as-it-focuses-limited-bandwidth-elsewhere) ⭐️ ?/10
 
 
 
@@ -106,10 +106,10 @@ rss · CoinDesk · Jul 27, 23:55
 
 ---
 
-## 🚀 Tech Trends
+## 🚀 科技趋势
 
 <a id="item-8"></a>
-## [Anthropic’s Dario Amodei responds: doesn’t oppose open-weight models, but fears Chinese AI](https://techcrunch.com/2026/07/27/anthropics-dario-amodei-responds-doesnt-oppose-open-weight-models-but-fears-chinese-ai/) ⭐️ ?/10
+## 【Anthropic的Dario Amodei回应：不反对开放权重模型，但害怕中国AI】(https://techcrunch.com/2026/07/27/anthropics-dario-amodei-responds-doesnt-oppose-open-weight-models-but-fears-chinese-ai/)⭐️ ?/10
 
 
 
@@ -118,7 +118,7 @@ rss · 36氪 - 科技 · Jul 28, 00:13
 ---
 
 <a id="item-9"></a>
-## [Satya Nadella says companies that trust one AI for everything may not survive](https://techcrunch.com/2026/07/27/satya-nadella-says-companies-that-trust-one-ai-for-everything-may-not-survive/) ⭐️ ?/10
+## [萨蒂亚·纳德拉 (Satya Nadella) 表示，信任一种人工智能解决所有问题的公司可能无法生存](https://techcrunch.com/2026/07/27/satya-nadella-says-companies-that-trust-one-ai-for-everything-may-not-survive/) ⭐️ ?/10
 
 
 
@@ -127,7 +127,7 @@ rss · 36氪 - 科技 · Jul 27, 21:17
 ---
 
 <a id="item-10"></a>
-## [Thea Energy lands $20M federal grant to build its magnets for fusion reactors](https://techcrunch.com/2026/07/27/thea-energy-lands-20m-federal-grant-to-build-its-magnets-for-fusion-reactors/) ⭐️ ?/10
+## [Thea Energy 获得 2000 万美元联邦拨款，用于建造聚变反应堆磁体](https://techcrunch.com/2026/07/27/thea-energy-lands-20m-federal-grant-to-build-its-magnets-for-fusion-reactors/) ⭐️ ?/10
 
 
 
@@ -135,19 +135,19 @@ rss · 36氪 - 科技 · Jul 27, 20:40
 
 ---
 
-## 📰 Top News
+## 📰 热门新闻
 
 <a id="item-11"></a>
-## [東北～九州 局地的に非常に激しい雨 西日本中心に危険な暑さ](http://www3.nhk.or.jp/news/html/20260728/k10015187561000.html) ⭐️ ?/10
+## 【北陆大雨、石川县4级大雨危险警报、东日本大雨风险】(http://www3.nhk.or.jp/news/html/20260728/k10015187561000.html) ⭐️ ?/10
 
 
 
-rss · NHK World - Japan/Asia · Jul 27, 21:47
+rss · NHK World - Japan/Asia · Jul 28, 01:52
 
 ---
 
 <a id="item-12"></a>
-## [政府 高木美帆さんに国民栄誉賞授与決定 五輪でメダル10個獲得](http://www3.nhk.or.jp/news/html/20260728/k10015187771000.html) ⭐️ ?/10
+## 【政府决定向在奥运会上获得10枚奖牌的高木美穗颁发人民荣誉奖】(http://www3.nhk.or.jp/news/html/20260728/k10015187771000.html)⭐️?/10
 
 
 
@@ -156,7 +156,7 @@ rss · NHK World - Japan/Asia · Jul 28, 01:39
 ---
 
 <a id="item-13"></a>
-## [株価 一時2600円以上値下がり NY市場 半導体関連の値下がりで](http://www3.nhk.or.jp/news/html/20260728/k10015187711000.html) ⭐️ ?/10
+## [因半导体相关价格下跌，纽约市场股价暂时下跌2,600日元以上](http://www3.nhk.or.jp/news/html/20260728/k10015187711000.html) ⭐️ ?/10
 
 
 
@@ -164,10 +164,10 @@ rss · NHK World - Japan/Asia · Jul 28, 00:54
 
 ---
 
-## 📄 Research
+## 📄 研究
 
 <a id="item-14"></a>
-## [FlowEvo: Self-Evolving Agents through the Co-Evolution of Workflows and Executable Skills](https://arxiv.org/abs/2607.21596) ⭐️ ?/10
+## [FlowEvo：通过工作流程和可执行技能的共同进化实现自我进化代理](https://arxiv.org/abs/2607.21596) ⭐️ ?/10
 
 
 
@@ -176,7 +176,7 @@ rss · arXiv AI · Jul 27, 04:00
 ---
 
 <a id="item-15"></a>
-## [Risk Is Not the Target: A Monotonic Framework for Evaluating Wildfire Operational Risk Signals](https://arxiv.org/abs/2607.21597) ⭐️ ?/10
+## [风险不是目标：评估野火操作风险信号的单调框架](https://arxiv.org/abs/2607.21597) ⭐️ ?/10
 
 
 

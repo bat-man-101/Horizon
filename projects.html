@@ -96,12 +96,12 @@
 
   <div class="tools-bar">
     <span style="font-size:.82rem;color:#868e96;padding:6px 0">🔧 推荐工具：</span>
-    <a href="https://github.com/sansan0/TrendRadar" target="_blank">⭐ 趋势雷达<
-    <a href="https://github.com/Xiaoseymy/newspaper" target="_blank">⭐ 报纸<
-    <a href="https://github.com/Thysrael/Horizon" target="_blank">⭐ 地平线<
-    <a href="https://github.com/jx-177/finance-inform" target="_blank">⭐ 财务-通知<
-    <a href="https://github.com/ArvinLovegood/go-stock" target="_blank">⭐ 现货<
-    <a href="https://github.com/DGLLD/Global-Financial-News-Access" target="_blank">⭐ 全球金融<
+    <a href="https://github.com/sansan0/TrendRadar" target="_blank">⭐ TrendRadar</a>
+    <a href="https://github.com/Xiaoseymy/newspaper" target="_blank">⭐ Newspaper</a>
+    <a href="https://github.com/Thysrael/Horizon" target="_blank">⭐ Horizon</a>
+    <a href="https://github.com/jx-177/finance-inform" target="_blank">⭐ Finance-Inform</a>
+    <a href="https://github.com/ArvinLovegood/go-stock" target="_blank">⭐ go-stock</a>
+    <a href="https://github.com/DGLLD/Global-Financial-News-Access" target="_blank">⭐ Global-Financial</a>
   </div>
 
   <div class="footer">
@@ -197,7 +197,7 @@ async function loadNews() {
       <div class="news-item">
         <div class="rank">${i+1}</div>
         <h3>
-          <a href="${item.url}" target="_blank">${项目.标题}<
+          <a href="${item.url}" target="_blank">${item.title}</a>
           <span class="score ${item.score >= 8 ? 'score-high' : 'score-mid'}">${item.score.toFixed(1)}</span>
         </h3>
         <div class="meta">

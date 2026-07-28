@@ -3,13 +3,13 @@ layout: default
 title: Source Scrapers
 ---
 
-# Source Scrapers
+# 源码抓取器
 
 Horizon fetches content from multiple source types. All scrapers inherit from `BaseScraper`, share an async HTTP client, and implement a `fetch(since)` method that returns a list of `ContentItem` objects. Sources are fetched concurrently via `asyncio.gather`.
 
-## Hacker News
+## 黑客新闻
 
-**File**: `src/scrapers/hackernews.py`
+**文件**: `src/scrapers/hackernews.py`
 
 Uses the [Firebase HN API](https://hacker-news.firebaseio.com/v0):
 
@@ -18,7 +18,7 @@ Uses the [Firebase HN API](https://hacker-news.firebaseio.com/v0):
 
 Stories and their comments are fetched concurrently. For each story, the top 5 comments are included (deleted/dead comments excluded, HTML stripped, truncated at 500 chars).
 
-**Config** (`sources.hackernews`):
+**配置** (`sources.hackernews`):
 
 ```json
 {
@@ -31,11 +31,11 @@ Stories and their comments are fetched concurrently. For each story, the top 5 c
 - `fetch_top_stories` — number of top story IDs to fetch
 - `min_score` — minimum HN points to include a story
 
-**Extracted data**: title, URL (falls back to HN discussion URL), author, score, comment count, and top comment text.
+**提取的数据**: title, URL (falls back to HN discussion URL), author, score, comment count, and top comment text.
 
 ## GitHub
 
-**File**: `src/scrapers/github.py`
+**文件**: `src/scrapers/github.py`
 
 Uses the [GitHub REST API](https://api.github.com):
 
@@ -44,10 +44,10 @@ Uses the [GitHub REST API](https://api.github.com):
 
 Two source types are supported:
 
-- **`user_events`** — tracks push, create, release, public, and watch events for a user
+- **`用户事件`** — tracks push, create, release, public, and watch events for a user
 - **`repo_releases`** — tracks new releases for a specific repository
 
-**Config** (`sources.github`, list of entries):
+**配置** (`sources.github`, list of entries):
 
 ```json
 {
@@ -66,15 +66,15 @@ Two source types are supported:
 }
 ```
 
-**Authentication**: Set `GITHUB_TOKEN` in your environment for higher rate limits (5000 req/hr vs 60 without).
+**验证**: Set `GITHUB_TOKEN` in your environment for higher rate limits (5000 req/hr vs 60 without).
 
 ## RSS
 
-**File**: `src/scrapers/rss.py`
+**文件**: `src/scrapers/rss.py`
 
 Fetches any Atom/RSS feed using the `feedparser` library. Tries multiple date fields (`published`, `updated`, `created`) with fallback parsing.
 
-**Config** (`sources.rss`, list of entries):
+**配置** (`sources.rss`, list of entries):
 
 ```json
 {
@@ -87,11 +87,11 @@ Fetches any Atom/RSS feed using the `feedparser` library. Tries multiple date fi
 
 - `category` — optional tag for grouping (e.g., `"programming"`, `"microblog"`)
 
-**Extracted data**: title, URL, author, content (from `summary`/`description`/`content` fields), feed name, category, and entry tags.
+**提取的数据**: title, URL, author, content (from `summary`/`description`/`content` fields), feed name, category, and entry tags.
 
-## Reddit
+## 红迪网
 
-**File**: `src/scrapers/reddit.py`
+**文件**: `src/scrapers/reddit.py`
 
 Uses public, no-key Reddit endpoints. Subreddit listings and comments prefer `old.reddit.com` HTML because Reddit's unauthenticated JSON and RSS endpoints can intermittently block or fail:
 
@@ -104,7 +104,7 @@ Uses public, no-key Reddit endpoints. Subreddit listings and comments prefer `ol
 
 Subreddits and users are fetched concurrently. Comments are sorted by score, limited to the configured count, and exclude moderator-distinguished comments. Self-text is truncated at 1500 chars, comments at 500 chars.
 
-**Config** (`sources.reddit`):
+**配置** (`sources.reddit`):
 
 ```json
 {
@@ -132,19 +132,19 @@ Subreddits and users are fetched concurrently. Comments are sorted by score, lim
 - `time_filter` — for `top`/`rising` sorts: `hour`, `day`, `week`, `month`, `year`, `all`
 - `min_score` — minimum post score (subreddits only)
 
-**Rate limiting**: Detects HTTP 429 responses on JSON requests, reads the `Retry-After` header, waits, and retries once. Uses browser-like request headers for no-key public access.
+**速率限制**: Detects HTTP 429 responses on JSON requests, reads the `Retry-After` header, waits, and retries once. Uses browser-like request headers for no-key public access.
 
-**Extracted data**: title, URL, author, score, upvote ratio, comment count, subreddit, flair, self-text, and top comments.
+**提取的数据**: title, URL, author, score, upvote ratio, comment count, subreddit, flair, self-text, and top comments.
 
-## OpenBB
+## 开放BB
 
-**File**: `src/scrapers/openbb.py`
+**文件**: `src/scrapers/openbb.py`
 
-Uses the [OpenBB Platform](https://www.openbb.co/platform) Python SDK via `obb.news.company()` to fetch company news for one or more ticker watchlists.
+Uses the [OpenBB平台](https://www.openbb.co/platform) Python SDK via `obb.news.company()` to fetch company news for one or more ticker watchlists.
 
 The scraper imports `openbb` lazily. If the optional dependency is not installed, Horizon logs a warning and skips the source instead of failing the whole run.
 
-**Config** (`sources.openbb`):
+**配置** (`sources.openbb`):
 
 ```json
 {
@@ -175,22 +175,22 @@ Behavior:
 - Skips malformed rows, rows without URL/title/date, and items older than the current time window
 - Keeps fetching other watchlists if one provider call fails
 
-**Credentials**: provider-specific secrets are resolved by the OpenBB SDK from its own environment variables or settings file. Horizon does not pass those values directly.
+**证书**: provider-specific secrets are resolved by the OpenBB SDK from its own environment variables or settings file. Horizon does not pass those values directly.
 
-**Extracted data**: title, URL, author, published time, article body/excerpt, watchlist name, provider, category, and symbol list.
+**提取的数据**: title, URL, author, published time, article body/excerpt, watchlist name, provider, category, and symbol list.
 
-## Twitter
+## 叽叽喳喳
 
-**File**: `src/scrapers/twitter.py`
+**文件**: `src/scrapers/twitter.py`
 
-Uses the [Apify](https://apify.com) platform to bypass Twitter's anti-scraping measures. The actor `altimis~scweet` is called via the Apify REST API.
+Uses the [阿皮菲](https://apify.com) platform to bypass Twitter's anti-scraping measures. The actor `altimis~scweet` is called via the Apify REST API.
 
 Flow:
 1. POST to `/v2/acts/{actor_id}/runs` to trigger a run
 2. Poll `/v2/actor-runs/{run_id}` until status is `SUCCEEDED` or a terminal failure
 3. GET `/v2/datasets/{dataset_id}/items` to retrieve results
 
-**Config** (`sources.twitter`):
+**配置** (`sources.twitter`):
 
 ```json
 {
@@ -215,6 +215,6 @@ Flow:
 - `actor_id` — Apify actor ID (default: `altimis~scweet`)
 - `apify_token_env` — environment variable name containing the Apify API token
 
-**Authentication**: Set `APIFY_TOKEN` in your `.env`. Get a token at [console.apify.com](https://console.apify.com/account/integrations).
+**验证**: Set `APIFY_TOKEN` in your `.env`. Get a token at [控制台.apify.com](https://console.apify.com/account/integrations).
 
-**Extracted data**: tweet text, URL, author, publish time, likes, retweets, replies, views, and (optionally) reply-thread text appended under `--- Top Comments ---`.
+**提取的数据**: tweet text, URL, author, publish time, likes, retweets, replies, views, and (optionally) reply-thread text appended under `--- Top Comments ---`.
