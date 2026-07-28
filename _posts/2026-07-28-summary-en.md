@@ -5,7 +5,7 @@ date: 2026-07-28
 lang: en
 ---
 
-> From 448 items, 15 important content pieces were selected
+> From 446 items, 15 important content pieces were selected
 
 ---
 
@@ -157,9 +157,9 @@ rss · NHK World - Japan/Asia · Jul 28, 01:52
 <a id="item-12"></a>
 ## 【政府决定向在奥运会上获得10枚奖牌的高木美穗颁发人民荣誉奖】(http://www3.nhk.or.jp/news/html/20260728/k10015187771000.html)⭐️?/10
 
-政府は、スピードスケート女子でオリンピックの日本の女子選手で最多となる10個のメダルを獲得して現役を引退した高木美帆さんに国民栄誉賞を授与することを決めました。
+政府は、スピードスケート女子でオリンピックの日本の女子選手で最多となる10個のメダルを獲得して現役を引退した、高木美帆さんに国民栄誉賞を授与することを決めました。表彰式は来月4日に行われます。
 
-rss · NHK World - Japan/Asia · Jul 28, 01:39
+rss · NHK World - Japan/Asia · Jul 28, 02:25
 
 ---
 
