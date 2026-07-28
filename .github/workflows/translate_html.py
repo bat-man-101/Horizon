@@ -34,36 +34,28 @@ def translate_title(title):
 summary_dir = 'docs'
 for root, dirs, files in os.walk(summary_dir):
     for f in files:
-        if f.endswith('.html'):
+        if f.endswith('.md') or f.endswith('.html'):
             path = os.path.join(root, f)
-            with open(path, 'r', encoding='utf-8') as fh:
+            with open(path, 'r', encoding='utf-8', errors='replace') as fh:
                 content = fh.read()
 
-            def trans_title_tag(m):
-                return '<title>' + translate_title(m.group(1)) + '</title>'
-            content = re.sub(r'<title>(.*?)</title>', trans_title_tag, content)
+            # Translate markdown headings
+            def trans_heading(m):
+                prefix = m.group(1)  # ## 
+                orig = m.group(2)
+                t = translate_title(orig)
+                return f'{prefix}{t}' if t != orig else m.group(0)
+            content = re.sub(r'^(#{1,4}\s+)(.+)$', trans_heading, content, flags=re.MULTILINE)
 
-            for tag in ['h1', 'h2', 'h3', 'h4']:
-                def make_trans(t=tag):
-                    def trans_h(m):
-                        orig = m.group(1)
-                        t2 = translate_title(orig)
-                        return f'<{t}>{t2}</{t}>' if t2 != orig else m.group(0)
-                    return trans_h
-                content = re.sub(f'<{tag}>(.*?)</{tag}>', make_trans(), content)
+            # Translate markdown links [title](url) - the title part
+            def trans_link(m):
+                orig = m.group(1)
+                url = m.group(2)
+                t = translate_title(orig)
+                return f'[{t}]({url})' if t != orig else m.group(0)
+            content = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', trans_link, content)
 
-            # Translate <a> anchor text (item titles)
-            def trans_a(m):
-                t = translate_title(m.group(1))
-                return f'>{t}<' if t != m.group(1) else m.group(0)
-            content = re.sub(r'>([^<]{4,})</a>', trans_a, content)
-
-            # Translate <li> text that looks like item titles (数字. text)
-            def trans_li(m):
-                t = translate_title(m.group(1))
-                return f'{t}</li>' if t != m.group(1) else m.group(0)
-            content = re.sub(r'<li>([^<]{4,}?)</li>', trans_li, content)
-
+            # Translate bold text **title**
             def trans_bold(m):
                 t = translate_title(m.group(1))
                 return f'**{t}**' if t != m.group(1) else m.group(0)
