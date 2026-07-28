@@ -24,7 +24,9 @@ jobs:
         uses: astral-sh/setup-uv@v7
 
       - name: Install dependencies
-        run: uv sync
+        run: |
+          uv sync
+          pip install deep-translator -q
 
       - name: Prepare GitHub Actions config
         run: cp data/config.github.json data/config.json
@@ -35,15 +37,15 @@ jobs:
           HORIZON_WEBHOOK_URL: ${{ secrets.HORIZON_WEBHOOK_URL }}
         run: uv run horizon --hours 24
 
-      - name: Machine translate to Chinese
-        run: |
-          pip install deep-translator -q
-          python .github/workflows/translate_html.py
-
       - name: Convert markdown to standalone HTML
         run: |
           pip install markdown -q
           python .github/workflows/build_static.py
+
+      - name: Machine translate HTML to Chinese
+        run: |
+          pip install deep-translator -q
+          python .github/workflows/translate_html.py
 
       - name: Set current date as environment variable
         run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV

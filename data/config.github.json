@@ -43,7 +43,7 @@
       {"name": "CoinDesk", "url": "https://www.coindesk.com/arc/outboundfeeds/rss/", "enabled": true, "category": "crypto"},
       {"name": "CoinTelegraph", "url": "https://cointelegraph.com/rss", "enabled": true, "category": "crypto"},
       {"name": "36氪 - 科技", "url": "https://techcrunch.com/feed/", "enabled": true, "category": "tech-news"},
-      {"name": "NHK World - Japan/Asia", "url": "https://www3.nhk.or.jp/rss/news/cat0.xml", "enabled": true, "category": "news"},
+      {"name": "Reuters World News", "url": "https://www.rss-bridge.org/bridge01/?action=display&bridge=FilterBridge&url=https%3A%2F%2Fwww.reuters.com%2Fworld%2F&content_filter=&content_filter_type=text&title_filter=&title_filter_type=text&inverse=on&case_insensitive=on&fix_encoding=on&format=Atom", "enabled": false, "category": "news"},
       {"name": "arXiv AI", "url": "https://rss.arxiv.org/rss/cs.AI", "enabled": true, "category": "research"},
       {"name": "arXiv CV", "url": "https://rss.arxiv.org/rss/cs.CV", "enabled": true, "category": "research"},
       {"name": "Papers With Code", "url": "https://feeds.feedburner.com/PapersWithCode", "enabled": true, "category": "research"},
@@ -90,7 +90,7 @@
     "request_body": {
       "msgtype": "markdown",
       "markdown": {
-        "content": "# 🤖 AI日报 #{date} — 今日精选\n\n#{overview}\n\n#{toc}\n\n📖 [查看完整日报](https://bat-man-101.github.io/Horizon/#{date_url}/summary-zh.html)"
+        "content": "# 🤖 AI日报 #{date} — 今日精选\n\n#{overview}\n\n#{toc}\n\n📖 完整日报：https://bat-man-101.github.io/Horizon/#{date_url}/summary-zh.html"
       }
     },
     "headers": ""
