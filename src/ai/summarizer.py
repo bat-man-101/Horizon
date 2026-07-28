@@ -312,6 +312,14 @@ class DailySummarizer:
             or item.ai_summary
             or ""
         )
+        # Fallback: use original content as summary (non-API mode)
+        if not summary and item.content:
+            content_text = item.content
+            if "--- Top Comments ---" in content_text:
+                content_text = content_text.split("--- Top Comments ---", 1)[0]
+            # Strip HTML tags
+            content_text = re.sub(r'<[^>]+>', '', content_text)
+            summary = content_text.strip()[:500]
         background = meta.get(f"background_{language}") or meta.get("background") or ""
         discussion = (
             meta.get(f"community_discussion_{language}")
