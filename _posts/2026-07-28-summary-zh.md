@@ -5,7 +5,7 @@ date: 2026-07-28
 lang: zh
 ---
 
-> 从 442 条内容中筛选出 15 条重要资讯。
+> 从 439 条内容中筛选出 15 条重要资讯。
 
 ---
 
@@ -27,14 +27,14 @@ lang: zh
   9. [萨蒂亚·纳德拉 (Satya Nadella) 表示，那些相信一种人工智能能解决所有问题的公司可能无法生存](#item-9) ⭐️ ?/10
   10. [Thea Energy 获得 2000 万美元联邦拨款，用于制造聚变反应堆磁体](#item-10) ⭐️ ?/10
 
-**📰 热点新闻（3）**
-  11. [从东北到近畿可能有大雨，日本西部下午危险炎热](#item-11) ⭐️ ?/10
-  12. [政府考虑为跟踪者配备全球定位系统以保护受害者](#item-12) ⭐️ ?/10
-  13. [农林水产省回购库存稻米以确定新稻米种植等。](#item-13) ⭐️ ?/10
-
 **📄 论文研究（2）**
-  14. [FlowEvo：通过工作流程和可执行技能的共同进化实现自我进化代理](#item-14) ⭐️ ?/10
-  15. [风险不是目标：评估野火操作风险信号的单调框架](#item-15) ⭐️ ?/10
+  11. [FlowEvo：通过工作流程和可执行技能的共同进化实现自我进化代理](#item-11) ⭐️ ?/10
+  12. [风险不是目标：评估野火操作风险信号的单调框架](#item-12) ⭐️ ?/10
+
+**📰 热点新闻（3）**
+  13. [是时候停止在纸上使用胶水和标签了吗？](#item-13) ⭐️ ?/10
+  14. [一些人与 Claude AI 的聊天记录在网上被发现](#item-14) ⭐️ ?/10
+  15. [为什么新晋观鸟者纷纷涌向类似 Shazam 的应用程序来识别鸟类](#item-15) ⭐️ ?/10
 ---
 
 ## 📌 其他
@@ -143,38 +143,9 @@ rss · 36氪 - 科技 · 7月27日 20:40
 
 ---
 
-## 📰 热点新闻
-
-<a id="item-11"></a>
-## [从东北到近畿可能有大雨，日本西部下午危险炎热](http://www3.nhk.or.jp/news/html/20260728/k10015187561000.html) ⭐️ ?/10
-
-低気圧の影響などで、東日本を中心に大気の状態が非常に不安定になり、激しい雨が降っています。東北から近畿では28 日、激しい雨や非常に激しい雨が降って大雨になるところもある見込みで、気象庁は土砂災害や低い土地の浸水などに警戒するよう呼びかけています。
-
-rss · NHK World - Japan/Asia · 7月28日 03:01
-
----
-
-<a id="item-12"></a>
-## 【政府考虑为缠扰者安装GPS以保护受害者】(http://www3.nhk.or.jp/news/html/20260728/k10015187881000.html) ⭐️ ?/10
-
-ストーカーによる重大事件が後を絶たないことを受けて、政府は28 日、危険性の高い加害者にGPS 機器を装着させて居場所を把握できるようにする、新たな対策の導入を早急に検討していく方針を決定しました。
-
-rss · NHK World - Japan/Asia · 7月28日 03:10
-
----
-
-<a id="item-13"></a>
-## 【农林水产省回购库存大米，根据新稻米品质做出决策】(http://www3.nhk.or.jp/news/html/20260728/k10015187861000.html) ⭐️ ?/10
-
-民間のコメの在庫量が過去最大に増え、生産地から新米が本格的に出回る前の政府備蓄米の買い戻しを求める声が強まる中、農林水産省は買い戻しについて来月下旬以降に発表される新米の作柄をはじめ、需給動向を見極めたうえで判断する考えを示しました。
-
-rss · NHK World - Japan/Asia · 7月28日 03:13
-
----
-
 ## 📄 论文研究
 
-<a id="item-14"></a>
+<a id="item-11"></a>
 ## [FlowEvo：通过工作流程和可执行技能的共同进化实现自我进化代理](https://arxiv.org/abs/2607.21596) ⭐️ ?/10
 
 arXiv:2607.21596v1 Announce Type: new 
@@ -184,12 +155,41 @@ rss · arXiv AI · 7月27日 04:00
 
 ---
 
-<a id="item-15"></a>
+<a id="item-12"></a>
 ## [风险不是目标：评估野火操作风险信号的单调框架](https://arxiv.org/abs/2607.21597) ⭐️ ?/10
 
 arXiv:2607.21597v1 Announce Type: new 
 Abstract: Evaluating wildfire risk systems using standard machine-learning metrics such as F1-score or IoU is fundamentally flawed: these metrics assess event prediction accuracy, not the operational coherence of a continuous risk signal. This work proposes a novel monotonic evaluation framework that measures whether increases in a predicted risk score consistently correspond to increases in observed operational load, such as number of fires, intervention t
 
 rss · arXiv AI · 7月27日 04:00
+
+---
+
+## 📰 热点新闻
+
+<a id="item-13"></a>
+## [是时候停止在纸上使用胶水和标签了吗？](https://www.bbc.co.uk/news/articles/c872nj1n4xyo?at_medium=RSS&at_campaign=rss) ⭐️ ?/10
+
+Labels and adhesives can prevent paper from being recycled but there's new tech aimed at changing that.
+
+rss · BBC Technology · 7月27日 23:00
+
+---
+
+<a id="item-14"></a>
+## [一些人与 Claude AI 的聊天记录在网上被发现](https://www.bbc.co.uk/news/articles/cly5qgjk5ywo?at_medium=RSS&at_campaign=rss) ⭐️ ?/10
+
+Hundreds of conversations with Anthropic’s chatbot were discovered as being publicly accessible.
+
+rss · BBC Technology · 7月27日 22:14
+
+---
+
+<a id="item-15"></a>
+## [为什么新晋观鸟者纷纷涌向类似 Shazam 的应用程序来识别鸟类](https://www.bbc.co.uk/news/articles/cr59m5nmemno?at_medium=RSS&at_campaign=rss) ⭐️ ?/10
+
+Birdwatchers tell the BBC how apps have changed their lifelong hobby - and attracted new birders.
+
+rss · BBC Technology · 7月27日 07:53
 
 ---
