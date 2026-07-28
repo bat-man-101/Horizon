@@ -38,58 +38,7 @@ jobs:
       - name: Machine translate to Chinese
         run: |
           pip install deep-translator -q
-          python -c "
-import os, re, html
-from deep_translator import GoogleTranslator
-
-summary_dir = 'docs'
-translator = GoogleTranslator(source='en', target='zh-CN')
-
-def translate_title(title):
-    '''Translate English title to Chinese, keep technical terms'''
-    if not title or re.search(r'[\u4e00-\u9fff]', title):
-        return title  # Already Chinese
-    try:
-        result = translator.translate(title)
-        if result and result != title:
-            return result
-    except:
-        pass
-    return title
-
-for root, dirs, files in os.walk(summary_dir):
-    for f in files:
-        if f.endswith('.html'):
-            path = os.path.join(root, f)
-            with open(path, 'r', encoding='utf-8') as fh:
-                content = fh.read()
-            # Translate <title> tag
-            def trans_title(m):
-                return '<title>' + translate_title(m.group(1)) + '</title>'
-            content = re.sub(r'<title>(.*?)</title>', trans_title, content)
-            # Translate h1/h2/h3
-            for tag in ['h1','h2','h3']:
-                def trans_h(m):
-                    orig = m.group(1)
-                    t = translate_title(orig)
-                    return f'<{tag}>{t}</{tag}>' if t != orig else m.group(0)
-                content = re.sub(f'<{tag}>(.*?)</{tag}>', trans_h, content)
-            # Translate markdown section headers like **xxx**
-            def trans_bold(m):
-                t = translate_title(m.group(1))
-                return f'**{t}**' if t != m.group(1) else m.group(0)
-            content = re.sub(r'\*\*(.*?)\*\*', trans_bold, content)
-            # Translate list item titles (数字. English...)
-            def trans_item(m):
-                num = m.group(1)
-                t = translate_title(m.group(2))
-                return f'{num}. [{t}]' if t != m.group(2) else m.group(0)
-            content = re.sub(r'(\d+)\. \[(.*?)\]', trans_item, content)
-            with open(path, 'w', encoding='utf-8') as fh:
-                fh.write(content)
-            print(f'  Translated: {path}')
-print('Done: all HTML files translated')
-"
+          python .github/workflows/translate_html.py
 
       - name: Set current date as environment variable
         run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
