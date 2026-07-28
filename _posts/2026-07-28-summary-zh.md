@@ -5,7 +5,7 @@ date: 2026-07-28
 lang: zh
 ---
 
-> 从 439 条内容中筛选出 15 条重要资讯。
+> 从 433 条内容中筛选出 14 条重要资讯。
 
 ---
 
@@ -14,27 +14,26 @@ lang: zh
   2. [在 SlopCodeBench 上对 Opus 5 进行基准测试](#item-2) ⭐️ ?/10
   3. [宇航员描述六个月任务后持续的“观察者”感觉](#item-3) ⭐️ ?/10
 
-**🤖 AI 新闻（3）**
+**🤖 AI 新闻（2）**
   4. [月射太/Kimi-K3](#item-4) ⭐️ ?/10
   5. [关于使用哪种人工智能来做事的固执己见的指南](#item-5) ⭐️ ?/10
-  6. [人工智能如何扩展人们的工作范围](#item-6) ⭐️ ?/10
 
 **₿ 加密资产（1）**
-  7. [美国参议院暂时推迟《加密清晰度法案》，因为该法案将有限的带宽集中在其他地方](#item-7) ⭐️ ?/10
+  6. [美国参议院暂时推迟《加密清晰度法案》，因为该法案将有限的带宽集中在其他地方](#item-6) ⭐️ ?/10
 
 **🚀 科技动态（3）**
-  8. [Anthropic 的 Dario Amodei 回应：不反对开放权重模型，但担心中国 AI](#item-8) ⭐️ ?/10
-  9. [萨蒂亚·纳德拉 (Satya Nadella) 表示，那些相信一种人工智能能解决所有问题的公司可能无法生存](#item-9) ⭐️ ?/10
-  10. [Thea Energy 获得 2000 万美元联邦拨款，用于制造聚变反应堆磁体](#item-10) ⭐️ ?/10
+  7. [Anthropic 的 Dario Amodei 回应：不反对开放权重模型，但担心中国 AI](#item-7) ⭐️ ?/10
+  8. [萨蒂亚·纳德拉 (Satya Nadella) 表示，那些相信一种人工智能能解决所有问题的公司可能无法生存](#item-8) ⭐️ ?/10
+  9. [Thea Energy 获得 2000 万美元联邦拨款，用于制造聚变反应堆磁体](#item-9) ⭐️ ?/10
 
 **📄 论文研究（2）**
-  11. [FlowEvo：通过工作流程和可执行技能的共同进化实现自我进化代理](#item-11) ⭐️ ?/10
-  12. [风险不是目标：评估野火操作风险信号的单调框架](#item-12) ⭐️ ?/10
+  10. [FlowEvo：通过工作流程和可执行技能的共同进化实现自我进化代理](#item-10) ⭐️ ?/10
+  11. [风险不是目标：评估野火操作风险信号的单调框架](#item-11) ⭐️ ?/10
 
 **📰 热点新闻（3）**
-  13. [是时候停止在纸上使用胶水和标签了吗？](#item-13) ⭐️ ?/10
-  14. [一些人与 Claude AI 的聊天记录在网上被发现](#item-14) ⭐️ ?/10
-  15. [为什么新晋观鸟者纷纷涌向类似 Shazam 的应用程序来识别鸟类](#item-15) ⭐️ ?/10
+  12. [是时候停止在纸上使用胶水和标签了吗？](#item-12) ⭐️ ?/10
+  13. [一些人与 Claude AI 的聊天记录在网上被发现](#item-13) ⭐️ ?/10
+  14. [为什么新晋观鸟者纷纷涌向类似 Shazam 的应用程序来识别鸟类](#item-14) ⭐️ ?/10
 ---
 
 ## 📌 其他
@@ -94,18 +93,9 @@ rss · Simon Willison · 7月27日 21:55
 
 ---
 
-<a id="item-6"></a>
-## [人工智能如何扩展人们的工作范围](https://openai.com/index/how-ai-is-expanding-what-people-do-at-work) ⭐️ ?/10
-
-New OpenAI research shows how AI is expanding what workers do, with ChatGPT users taking on tasks across roles and reshaping job boundaries.
-
-rss · OpenAI Blog · 7月27日 03:30
-
----
-
 ## ₿ 加密资产
 
-<a id="item-7"></a>
+<a id="item-6"></a>
 ## [美国参议院暂时推迟《加密清晰度法案》，因为该法案将有限的带宽集中在其他地方](https://www.coindesk.com/policy/2026/07/27/u-s-senate-puts-off-crypto-clarity-act-for-now-as-it-focuses-limited-bandwidth-elsewhere) ⭐️ ?/10
 
 
@@ -116,7 +106,7 @@ rss · CoinDesk · 7月27日 23:55
 
 ## 🚀 科技动态
 
-<a id="item-8"></a>
+<a id="item-7"></a>
 ## [Anthropic 的 Dario Amodei 回应：不反对开放权重模型，但担心中国 AI](https://techcrunch.com/2026/07/27/anthropics-dario-amodei-responds-doesnt-oppose-open-weight-models-but-fears-chinese-ai/) ⭐️ ?/10
 
 Anthropic founder and CEO Dario Amodei made his views clear about open-weight models and China's growing AI capabilities.
@@ -125,7 +115,7 @@ rss · 36氪 - 科技 · 7月28日 00:13
 
 ---
 
-<a id="item-9"></a>
+<a id="item-8"></a>
 ## [萨蒂亚·纳德拉 (Satya Nadella) 表示，那些相信一种人工智能能解决所有问题的公司可能无法生存](https://techcrunch.com/2026/07/27/satya-nadella-says-companies-that-trust-one-ai-for-everything-may-not-survive/) ⭐️ ?/10
 
 Companies without their own models — or without a layer of AI infrastructure known as AI gateways to separate their prompts from the model itself — will be in trouble, Nadella says.
@@ -134,7 +124,7 @@ rss · 36氪 - 科技 · 7月27日 21:17
 
 ---
 
-<a id="item-10"></a>
+<a id="item-9"></a>
 ## [Thea Energy 获得 2000 万美元联邦拨款，用于制造聚变反应堆磁体](https://techcrunch.com/2026/07/27/thea-energy-lands-20m-federal-grant-to-build-its-magnets-for-fusion-reactors/) ⭐️ ?/10
 
 Fusion power startup Thea Energy snagged a $20 million award from ARPA-E to scale production of its high-temperature superconducting magnets.
@@ -145,7 +135,7 @@ rss · 36氪 - 科技 · 7月27日 20:40
 
 ## 📄 论文研究
 
-<a id="item-11"></a>
+<a id="item-10"></a>
 ## [FlowEvo：通过工作流程和可执行技能的共同进化实现自我进化代理](https://arxiv.org/abs/2607.21596) ⭐️ ?/10
 
 arXiv:2607.21596v1 Announce Type: new 
@@ -155,7 +145,7 @@ rss · arXiv AI · 7月27日 04:00
 
 ---
 
-<a id="item-12"></a>
+<a id="item-11"></a>
 ## [风险不是目标：评估野火操作风险信号的单调框架](https://arxiv.org/abs/2607.21597) ⭐️ ?/10
 
 arXiv:2607.21597v1 Announce Type: new 
@@ -167,7 +157,7 @@ rss · arXiv AI · 7月27日 04:00
 
 ## 📰 热点新闻
 
-<a id="item-13"></a>
+<a id="item-12"></a>
 ## [是时候停止在纸上使用胶水和标签了吗？](https://www.bbc.co.uk/news/articles/c872nj1n4xyo?at_medium=RSS&at_campaign=rss) ⭐️ ?/10
 
 Labels and adhesives can prevent paper from being recycled but there's new tech aimed at changing that.
@@ -176,7 +166,7 @@ rss · BBC Technology · 7月27日 23:00
 
 ---
 
-<a id="item-14"></a>
+<a id="item-13"></a>
 ## [一些人与 Claude AI 的聊天记录在网上被发现](https://www.bbc.co.uk/news/articles/cly5qgjk5ywo?at_medium=RSS&at_campaign=rss) ⭐️ ?/10
 
 Hundreds of conversations with Anthropic’s chatbot were discovered as being publicly accessible.
@@ -185,7 +175,7 @@ rss · BBC Technology · 7月27日 22:14
 
 ---
 
-<a id="item-15"></a>
+<a id="item-14"></a>
 ## [为什么新晋观鸟者纷纷涌向类似 Shazam 的应用程序来识别鸟类](https://www.bbc.co.uk/news/articles/cr59m5nmemno?at_medium=RSS&at_campaign=rss) ⭐️ ?/10
 
 Birdwatchers tell the BBC how apps have changed their lifelong hobby - and attracted new birders.
