@@ -5,7 +5,7 @@ date: 2026-07-28
 lang: zh
 ---
 
-> 从 670 条内容中筛选出 14 条重要资讯。
+> 从 665 条内容中筛选出 14 条重要资讯。
 
 ---
 
@@ -31,7 +31,7 @@ lang: zh
   11. [风险不是目标：评估野火操作风险信号的单调框架](#item-11) ⭐️ ?/10
 
 **📰 热点新闻（3）**
-  12. [由于人工智能的不安让投资者不安，美国和亚洲的芯片公司纷纷下跌](#item-12) ⭐️ ?/10
+  12. [由于人工智能的不安令投资者不安，美国和亚洲的芯片股下跌](#item-12) ⭐️ ?/10
   13. [是时候停止在纸上使用胶水和标签了吗？](#item-13) ⭐️ ?/10
   14. [一些人与 Claude AI 的聊天记录在网上被发现](#item-14) ⭐️ ?/10
 ---
@@ -158,11 +158,11 @@ rss · arXiv AI · 7月28日 04:00
 ## 📰 热点新闻
 
 <a id="item-12"></a>
-## [由于人工智能的不安让投资者不安，美国和亚洲的芯片公司纷纷下跌](https://www.bbc.co.uk/news/articles/cly8zng43npo?at_medium=RSS&at_campaign=rss) ⭐️ ?/10
+## [由于人工智能的不安令投资者不安，美国和亚洲的芯片股下跌](https://www.bbc.co.uk/news/articles/cly8zng43npo?at_medium=RSS&at_campaign=rss) ⭐️ ?/10
 
-Trading on South Korea's Kospi index was paused temporarily on Tuesday morning after sliding by 8%.
+Trading on South Korea's Kospi index was paused temporarily on Tuesday morning after slumping by 8%.
 
-rss · BBC Technology · 7月28日 03:49
+rss · BBC Technology · 7月28日 05:31
 
 ---
 

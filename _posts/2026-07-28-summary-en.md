@@ -5,7 +5,7 @@ date: 2026-07-28
 lang: en
 ---
 
-> From 670 items, 14 important content pieces were selected
+> From 665 items, 14 important content pieces were selected
 
 ---
 
@@ -14,7 +14,7 @@ lang: en
   2. [使用开放模型感觉出奇的好](#item-2) ⭐️ ?/10
   3. [在 SlopCodeBench 上对 Opus 5 进行基准测试](#item-3) ⭐️ ?/10
 
-**🤖 人工智能新闻（2）**
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**
   4. [月射太/Kimi-K3](#item-4) ⭐️ ?/10
   5. [关于使用哪种人工智能来做事的固执己见的指南](#item-5) ⭐️ ?/10
 
@@ -31,7 +31,7 @@ lang: en
   11. [风险不是目标：评估野火操作风险信号的单调框架](#item-11) ⭐️ ?/10
 
 **📰 热门新闻（3）**
-  12. [由于人工智能的不安让投资者不安，美国和亚洲的芯片公司纷纷下跌](#item-12) ⭐️ ?/10
+  12. [由于人工智能的不安令投资者不安，美国和亚洲的芯片股下跌](#item-12) ⭐️ ?/10
   13. [是时候停止在纸上使用胶水和标签了吗？](#item-13) ⭐️ ?/10
   14. [一些人与 Claude AI 的聊天记录在网上被发现](#item-14) ⭐️ ?/10
 ---
@@ -158,11 +158,11 @@ rss · arXiv AI · Jul 28, 04:00
 ## 📰 热门新闻
 
 <a id="item-12"></a>
-## [由于人工智能的不安让投资者感到不安，美国和亚洲的芯片公司纷纷倒闭](https://www.bbc.co.uk/news/articles/cly8zng43npo?at_medium=RSS&at_campaign=rss) ⭐️ ?/10
+## [随着人工智能的紧​​张不安，芯片股在美国和亚洲下滑](https://www.bbc.co.uk/news/articles/cly8zng43npo?at_medium=RSS&at_campaign=rss) ⭐️ ?/10
 
-Trading on South Korea's Kospi index was paused temporarily on Tuesday morning after sliding by 8%.
+Trading on South Korea's Kospi index was paused temporarily on Tuesday morning after slumping by 8%.
 
-rss · BBC Technology · Jul 28, 03:49
+rss · BBC Technology · Jul 28, 05:31
 
 ---
 
