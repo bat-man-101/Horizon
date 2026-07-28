@@ -5,7 +5,7 @@ date: 2026-07-28
 lang: en
 ---
 
-> From 446 items, 15 important content pieces were selected
+> From 444 items, 15 important content pieces were selected
 
 ---
 
