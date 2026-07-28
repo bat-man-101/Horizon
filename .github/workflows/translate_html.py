@@ -52,6 +52,18 @@ for root, dirs, files in os.walk(summary_dir):
                     return trans_h
                 content = re.sub(f'<{tag}>(.*?)</{tag}>', make_trans(), content)
 
+            # Translate <a> anchor text (item titles)
+            def trans_a(m):
+                t = translate_title(m.group(1))
+                return f'>{t}<' if t != m.group(1) else m.group(0)
+            content = re.sub(r'>([^<]{4,})</a>', trans_a, content)
+
+            # Translate <li> text that looks like item titles (数字. text)
+            def trans_li(m):
+                t = translate_title(m.group(1))
+                return f'{t}</li>' if t != m.group(1) else m.group(0)
+            content = re.sub(r'<li>([^<]{4,}?)</li>', trans_li, content)
+
             def trans_bold(m):
                 t = translate_title(m.group(1))
                 return f'**{t}**' if t != m.group(1) else m.group(0)
