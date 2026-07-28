@@ -1,11 +1,27 @@
-"""Machine translate generated Horizon HTML files to Chinese using Google Translate."""
+"""Machine translate generated Horizon HTML files to Chinese using Google Translate.
+Translates English, Japanese and other languages to Chinese."""
 import os, re
 from deep_translator import GoogleTranslator
 
-translator = GoogleTranslator(source='en', target='zh-CN')
+translator = GoogleTranslator(source='auto', target='zh-CN')
+
+HAS_CJK = re.compile(r'[\u4e00-\u9fff]')       # Chinese characters
+HAS_KANA = re.compile(r'[\u3040-\u309f\u30a0-\u30ff]')  # Japanese hiragana/katakana
+
+def needs_translate(text):
+    """Return True if text needs translation (English, Japanese, or mixed)."""
+    if not text or len(text) < 3:
+        return False
+    has_cjk = bool(HAS_CJK.search(text))
+    has_kana = bool(HAS_KANA.search(text))
+    if has_cjk and not has_kana:
+        return False  # Already Chinese (or mixed CJK like "AI 新闻")
+    if has_kana:
+        return True   # Japanese text needs translation
+    return True       # No CJK at all = English/others
 
 def translate_title(title):
-    if not title or re.search(r'[\u4e00-\u9fff]', title):
+    if not needs_translate(title):
         return title
     try:
         result = translator.translate(title)
