@@ -62,9 +62,9 @@ jobs:
       # 推模式：构建完直接把 HTML POST 进 NAS（经 Cloudflare 隧道），
       # 不再让 NAS 去拉被 GFW 阻断的 github.io。需仓库 Secret: HORIZON_UPLOAD_TOKEN
       - name: Push to NAS (ymeet.store) via Cloudflare Tunnel
-        if: ${{ secrets.HORIZON_UPLOAD_TOKEN != '' }}
+        if: ${{ env.HORIZON_UPLOAD_TOKEN != '' }}
         env:
-          TOK: ${{ secrets.HORIZON_UPLOAD_TOKEN }}
+          HORIZON_UPLOAD_TOKEN: ${{ secrets.HORIZON_UPLOAD_TOKEN }}
         run: |
           F=$(ls docs/*/*/*/summary-zh.html 2>/dev/null | head -1)
           if [ -z "$F" ]; then echo "summary-zh.html not found in docs/"; exit 1; fi
@@ -72,5 +72,5 @@ jobs:
           M=$(echo "$F" | cut -d/ -f3)
           D=$(echo "$F" | cut -d/ -f4)
           echo "Pushing $F -> /horizon-upload/$Y/$M/$D/summary-zh.html"
-          curl -fsS -X POST -H "X-Token: $TOK" --data-binary "@$F" \
+          curl -fsS -X POST -H "X-Token: $HORIZON_UPLOAD_TOKEN" --data-binary "@$F" \
             "https://ymeet.store/horizon-upload/$Y/$M/$D/summary-zh.html"
