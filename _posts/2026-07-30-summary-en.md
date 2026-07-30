@@ -5,7 +5,7 @@ date: 2026-07-30
 lang: en
 ---
 
-> From 644 items, 15 important content pieces were selected
+> From 641 items, 15 important content pieces were selected
 
 ---
 
@@ -27,12 +27,12 @@ lang: en
   9. [乐高数据中心的狂野西部](#item-9) ⭐️ ?/10
 
 **₿ 加密货币（1）**
-  10. [据说参议员们正在酝酿加强特朗普对《清晰法案》加密货币限制的让步](#item-10) ⭐️ ?/10
+  10. [消息人士称，参议员准备向白宫提交针对特朗普加密货币企业的更严格的道德规则](#item-10) ⭐️ ?/10
 
 **🚀 科技趋势（3）**
   11. [微软比以往任何时候都更加公开地与 OpenAI、Anthropic 竞争](#item-11) ⭐️ ?/10
   12. [马克·扎克伯格预测五年内数十亿人将拥有个人人工智能代理](#item-12) ⭐️ ?/10
-  13. [微软从 Anthropic 获得了 3.2B 美元的投资，但 OpenAI 的情况好坏参半](#item-13) ⭐️ ?/10
+  13. [微软从 Anthropic 获得 3.2B 美元投资，但 OpenAI 好坏参半](#item-13) ⭐️ ?/10
 
 **📰 热门新闻（2）**
   14. [OpenAI 黑客事件后特朗普考虑控制人工智能](#item-14) ⭐️ ?/10
@@ -82,7 +82,7 @@ hackernews · arXiv AI · Jul 29, 13:01 · [讨论](https://news.ycombinator.com
 <a id="item-5"></a>
 ## [模型会在没有明显后果的情况下伪造对齐吗？](https://arxiv.org/abs/2607.24758) ⭐️ ?/10
 
-arXiv:2607.24758v1 Announce Type: new 
+arXiv:2607.24758v2 Announce Type: new 
 Abstract: Large language models are capable of recognizing evaluation contexts and altering their behavior to reflect evaluator expectations rather than typical deployment behaviors, a phenomenon known as alignment faking. The reasons why models fake alignment are not fully understood, however. Canonical examples of alignment faking have taken place in scenarios that explicitly connect evaluation to consequences for the model, such as retraining the model o
 
 rss · arXiv AI · Jul 29, 04:00
@@ -138,7 +138,7 @@ rss · Semianalysis · Jul 29, 22:09
 ## ₿ 加密货币
 
 <a id="item-10"></a>
-## [据说参议员们正在酝酿加强特朗普对《清晰法案》加密货币限制的让步的想法](https://www.coindesk.com/policy/2026/07/29/senators-said-to-strike-idea-to-toughen-trump-s-concession-on-clarity-act-s-crypto-limits) ⭐️ ?/10
+## [消息人士称，参议员准备向白宫发送针对特朗普加密货币企业的更严格的道德规则](https://www.coindesk.com/policy/2026/07/29/senators-said-to-strike-idea-to-toughen-trump-s-concession-on-clarity-act-s-crypto-limits) ⭐️ ?/10
 
 
 
