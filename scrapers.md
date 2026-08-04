@@ -7,7 +7,7 @@ title: Source Scrapers
 
 Horizon fetches content from multiple source types. All scrapers inherit from `BaseScraper`, share an async HTTP client, and implement a `fetch(since)` method that returns a list of `ContentItem` objects. Sources are fetched concurrently via `asyncio.gather`.
 
-## 黑客新闻
+## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 **文件**: `src/scrapers/hackernews.py`
 
@@ -18,7 +18,7 @@ Uses the [Firebase HN API](https://hacker-news.firebaseio.com/v0):
 
 Stories and their comments are fetched concurrently. For each story, the top 5 comments are included (deleted/dead comments excluded, HTML stripped, truncated at 500 chars).
 
-**配置** (`sources.hackernews`):
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (`sources.hackernews`):
 
 ```json
 {
@@ -33,7 +33,7 @@ Stories and their comments are fetched concurrently. For each story, the top 5 c
 
 **提取的数据**: title, URL (falls back to HN discussion URL), author, score, comment count, and top comment text.
 
-## GitHub
+## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 **文件**: `src/scrapers/github.py`
 
@@ -45,7 +45,7 @@ Uses the [GitHub REST API](https://api.github.com):
 Two source types are supported:
 
 - **`用户事件`** — tracks push, create, release, public, and watch events for a user
-- **`repo_releases`** — tracks new releases for a specific repository
+- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** — tracks new releases for a specific repository
 
 **配置** (`sources.github`, list of entries):
 
@@ -74,7 +74,7 @@ Two source types are supported:
 
 Fetches any Atom/RSS feed using the `feedparser` library. Tries multiple date fields (`published`, `updated`, `created`) with fallback parsing.
 
-**配置** (`sources.rss`, list of entries):
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (`sources.rss`, list of entries):
 
 ```json
 {
@@ -89,7 +89,7 @@ Fetches any Atom/RSS feed using the `feedparser` library. Tries multiple date fi
 
 **提取的数据**: title, URL, author, content (from `summary`/`description`/`content` fields), feed name, category, and entry tags.
 
-## 红迪网
+## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 **文件**: `src/scrapers/reddit.py`
 
@@ -104,7 +104,7 @@ Uses public, no-key Reddit endpoints. Subreddit listings and comments prefer `ol
 
 Subreddits and users are fetched concurrently. Comments are sorted by score, limited to the configured count, and exclude moderator-distinguished comments. Self-text is truncated at 1500 chars, comments at 500 chars.
 
-**配置** (`sources.reddit`):
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (`sources.reddit`):
 
 ```json
 {
@@ -132,15 +132,15 @@ Subreddits and users are fetched concurrently. Comments are sorted by score, lim
 - `time_filter` — for `top`/`rising` sorts: `hour`, `day`, `week`, `month`, `year`, `all`
 - `min_score` — minimum post score (subreddits only)
 
-**速率限制**: Detects HTTP 429 responses on JSON requests, reads the `Retry-After` header, waits, and retries once. Uses browser-like request headers for no-key public access.
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Detects HTTP 429 responses on JSON requests, reads the `Retry-After` header, waits, and retries once. Uses browser-like request headers for no-key public access.
 
-**提取的数据**: title, URL, author, score, upvote ratio, comment count, subreddit, flair, self-text, and top comments.
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: title, URL, author, score, upvote ratio, comment count, subreddit, flair, self-text, and top comments.
 
 ## 开放BB
 
-**文件**: `src/scrapers/openbb.py`
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: `src/scrapers/openbb.py`
 
-Uses the [OpenBB平台](https://www.openbb.co/platform) Python SDK via `obb.news.company()` to fetch company news for one or more ticker watchlists.
+Uses the [Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.](https://www.openbb.co/platform) Python SDK via `obb.news.company()` to fetch company news for one or more ticker watchlists.
 
 The scraper imports `openbb` lazily. If the optional dependency is not installed, Horizon logs a warning and skips the source instead of failing the whole run.
 
@@ -179,7 +179,7 @@ Behavior:
 
 **提取的数据**: title, URL, author, published time, article body/excerpt, watchlist name, provider, category, and symbol list.
 
-## 叽叽喳喳
+## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 **文件**: `src/scrapers/twitter.py`
 
@@ -190,7 +190,7 @@ Flow:
 2. Poll `/v2/actor-runs/{run_id}` until status is `SUCCEEDED` or a terminal failure
 3. GET `/v2/datasets/{dataset_id}/items` to retrieve results
 
-**配置** (`sources.twitter`):
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (`sources.twitter`):
 
 ```json
 {
@@ -215,6 +215,6 @@ Flow:
 - `actor_id` — Apify actor ID (default: `altimis~scweet`)
 - `apify_token_env` — environment variable name containing the Apify API token
 
-**验证**: Set `APIFY_TOKEN` in your `.env`. Get a token at [控制台.apify.com](https://console.apify.com/account/integrations).
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Set `APIFY_TOKEN` in your `.env`. Get a token at [Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.](https://console.apify.com/account/integrations).
 
 **提取的数据**: tweet text, URL, author, publish time, likes, retweets, replies, views, and (optionally) reply-thread text appended under `--- Top Comments ---`.
