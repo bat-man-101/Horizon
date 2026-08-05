@@ -4,8 +4,8 @@ Horizon 支持两种 Twitter 抓取方式：
 
 | 方式 | 成本 | 稳定性 | 适用场景 |
 |------|------|--------|----------|
-| **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (默认) | 需订阅 ($49/月起) | ⭐⭐⭐ 高 | 生产环境、大量账号 |
-| **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (免费) | 免费 | ⭐⭐ 中 | 个人使用、少量账号 |
+| **阿皮菲** (默认) | 需订阅 ($49/月起) | ⭐⭐⭐ 高 | 生产环境、大量账号 |
+| **剧作家+饼干** (免费) | 免费 | ⭐⭐ 中 | 个人使用、少量账号 |
 
 本文档介绍免费方案的配置方法。
 
