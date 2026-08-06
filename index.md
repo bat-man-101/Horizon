@@ -32,9 +32,9 @@ title: Home
 
 <div id="lang-en" class="lang-section" markdown="1">
 
-Welcome to [地平线](https://github.com/thysrael/Horizon), an AI-driven information aggregation system.
+Welcome to [Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.](https://github.com/thysrael/Horizon), an AI-driven information aggregation system.
 
-## 文档
+## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 - [配置指南](configuration) — AI providers, information sources, filtering, and environment variable substitution
 - [源码抓取器](scrapers) — How Horizon collects content from GitHub, Hacker News, RSS, and Reddit
