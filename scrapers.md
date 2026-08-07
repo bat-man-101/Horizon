@@ -44,7 +44,7 @@ Uses the [GitHub REST API](https://api.github.com):
 
 Two source types are supported:
 
-- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** — tracks push, create, release, public, and watch events for a user
+- **`用户事件`** — tracks push, create, release, public, and watch events for a user
 - **`repo_releases`** — tracks new releases for a specific repository
 
 **配置** (`sources.github`, list of entries):
@@ -70,7 +70,7 @@ Two source types are supported:
 
 ## RSS
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: `src/scrapers/rss.py`
+**文件**: `src/scrapers/rss.py`
 
 Fetches any Atom/RSS feed using the `feedparser` library. Tries multiple date fields (`published`, `updated`, `created`) with fallback parsing.
 
@@ -87,7 +87,7 @@ Fetches any Atom/RSS feed using the `feedparser` library. Tries multiple date fi
 
 - `category` — optional tag for grouping (e.g., `"programming"`, `"microblog"`)
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: title, URL, author, content (from `summary`/`description`/`content` fields), feed name, category, and entry tags.
+**提取的数据**: title, URL, author, content (from `summary`/`description`/`content` fields), feed name, category, and entry tags.
 
 ## 红迪网
 
@@ -104,7 +104,7 @@ Uses public, no-key Reddit endpoints. Subreddit listings and comments prefer `ol
 
 Subreddits and users are fetched concurrently. Comments are sorted by score, limited to the configured count, and exclude moderator-distinguished comments. Self-text is truncated at 1500 chars, comments at 500 chars.
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (`sources.reddit`):
+**配置** (`sources.reddit`):
 
 ```json
 {
@@ -134,11 +134,11 @@ Subreddits and users are fetched concurrently. Comments are sorted by score, lim
 
 **速率限制**: Detects HTTP 429 responses on JSON requests, reads the `Retry-After` header, waits, and retries once. Uses browser-like request headers for no-key public access.
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: title, URL, author, score, upvote ratio, comment count, subreddit, flair, self-text, and top comments.
+**提取的数据**: title, URL, author, score, upvote ratio, comment count, subreddit, flair, self-text, and top comments.
 
 ## 开放BB
 
-**文件**: `src/scrapers/openbb.py`
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: `src/scrapers/openbb.py`
 
 Uses the [OpenBB平台](https://www.openbb.co/platform) Python SDK via `obb.news.company()` to fetch company news for one or more ticker watchlists.
 
@@ -175,7 +175,7 @@ Behavior:
 - Skips malformed rows, rows without URL/title/date, and items older than the current time window
 - Keeps fetching other watchlists if one provider call fails
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: provider-specific secrets are resolved by the OpenBB SDK from its own environment variables or settings file. Horizon does not pass those values directly.
+**证书**: provider-specific secrets are resolved by the OpenBB SDK from its own environment variables or settings file. Horizon does not pass those values directly.
 
 **提取的数据**: title, URL, author, published time, article body/excerpt, watchlist name, provider, category, and symbol list.
 
