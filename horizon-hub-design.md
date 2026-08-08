@@ -13,7 +13,7 @@
 | HN / Reddit | Community-driven content aggregation | Fixed sources, user cannot customize |
 | **地平线枢纽** | **数据驱动的来源推荐和质量评估** | **没有内容托管，没有读者** |
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: The daily operation of every Horizon user generates quality data for information sources (AI scores, signal-to-noise ratio, output frequency). When aggregated in the Hub, this data forms a **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** that no static recommendation list can provide.
+**核心护城河**: The daily operation of every Horizon user generates quality data for information sources (AI scores, signal-to-noise ratio, output frequency). When aggregated in the Hub, this data forms a **动态质量概况** that no static recommendation list can provide.
 
 ---
 
@@ -64,7 +64,7 @@ The core interface users see when opening the Hub website.
 - **顶部仪表板**: A row of statistics cards.
   - Total Sources | Field Categories | Contributors | Active Users
 
-- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Each source has a card.
+- **源卡瀑布**: Each source has a card.
   - Source Name + Type Tags (RSS / Reddit / GitHub / Telegram / Twitter)
   - Color-coded Field Tags (AI Purple, Systems Blue, Security Red...)
   - One-sentence Bio (CN/EN)
@@ -120,7 +120,7 @@ Hub Server
 **应用场景**:
 
 1. **新用户冷启动**: Enter interest keywords ("AI", "Linux Kernel") to recommend the best source combination.
-2. **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Analyze existing config to recommend sources with complementary coverage and flag high-overlap sources.
+2. **补充推荐**: Analyze existing config to recommend sources with complementary coverage and flag high-overlap sources.
 3. **协同过滤** (post-scale): "Users with similar tastes also read..."
 
 **Rec 算法的输入**:
