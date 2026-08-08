@@ -138,7 +138,7 @@ Subreddits and users are fetched concurrently. Comments are sorted by score, lim
 
 ## 开放BB
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: `src/scrapers/openbb.py`
+**文件**: `src/scrapers/openbb.py`
 
 Uses the [OpenBB平台](https://www.openbb.co/platform) Python SDK via `obb.news.company()` to fetch company news for one or more ticker watchlists.
 
