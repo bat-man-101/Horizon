@@ -108,7 +108,7 @@ Set `AZURE_OPENAI_API_KEY` and `AZURE_OPENAI_ENDPOINT` in your `.env`. The `mode
 
 Available models: `MiniMax-M3`, `MiniMax-M2.7`, `MiniMax-M2.7-highspeed`
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (OpenAI-compatible):
+**阿里云 DashScope** (OpenAI-compatible):
 
 ```json
 {
@@ -233,7 +233,7 @@ All sources are configured under the top-level `sources` key in `config.json`.
 }
 ```
 
-### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+### RSS 源
 
 ```json
 {
@@ -416,7 +416,7 @@ Content is scored 0-10:
 - **7-8**: High Value - Important developments, deep technical content
 - **5-6**: Interesting - Worth knowing but not urgent
 - **3-4**: Low Priority - Generic or routine content
-- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Noise - Spam, off-topic, or trivial
+- **0-2**: Noise - Spam, off-topic, or trivial
 
 ```json
 {

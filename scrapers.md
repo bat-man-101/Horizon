@@ -33,7 +33,7 @@ Stories and their comments are fetched concurrently. For each story, the top 5 c
 
 **提取的数据**: title, URL (falls back to HN discussion URL), author, score, comment count, and top comment text.
 
-## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+## GitHub
 
 **文件**: `src/scrapers/github.py`
 
@@ -45,7 +45,7 @@ Uses the [GitHub REST API](https://api.github.com):
 Two source types are supported:
 
 - **`用户事件`** — tracks push, create, release, public, and watch events for a user
-- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** — tracks new releases for a specific repository
+- **`repo_releases`** — tracks new releases for a specific repository
 
 **配置** (`sources.github`, list of entries):
 
@@ -215,6 +215,6 @@ Flow:
 - `actor_id` — Apify actor ID (default: `altimis~scweet`)
 - `apify_token_env` — environment variable name containing the Apify API token
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Set `APIFY_TOKEN` in your `.env`. Get a token at [控制台.apify.com](https://console.apify.com/account/integrations).
+**验证**: Set `APIFY_TOKEN` in your `.env`. Get a token at [控制台.apify.com](https://console.apify.com/account/integrations).
 
 **提取的数据**: tweet text, URL, author, publish time, likes, retweets, replies, views, and (optionally) reply-thread text appended under `--- Top Comments ---`.
