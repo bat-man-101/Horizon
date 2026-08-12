@@ -37,7 +37,7 @@ The AI evaluates each item based on:
 
 Engagement metadata is source-specific: HN provides score and comment count, Reddit provides upvote ratio and comment count.
 
-## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+## 过滤
 
 After scoring, items are filtered by `filtering.ai_score_threshold` (default: `7.0`) and sorted by score descending. Optional balanced digest quotas are then applied before enrichment.
 

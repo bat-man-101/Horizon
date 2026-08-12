@@ -48,7 +48,7 @@
 ```
 
 Two core components:
-- **集线器服务器**: Data center + Web frontend, receiving reports, storing statistics, providing APIs and web pages.
+- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Data center + Web frontend, receiving reports, storing statistics, providing APIs and web pages.
 - **本地客户端（地平线向导）**: The sole entry point for users to manage information sources; every operation naturally generates data.
 
 ---
@@ -61,7 +61,7 @@ The core interface users see when opening the Hub website.
 
 **页面结构**:
 
-- **顶部仪表板**: A row of statistics cards.
+- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: A row of statistics cards.
   - Total Sources | Field Categories | Contributors | Active Users
 
 - **源卡瀑布**: Each source has a card.
@@ -94,7 +94,7 @@ The detail page for each source, showing a complete data-driven profile.
 | Contributor | Who submitted this source | User submission records |
 | Date Added | When it was added to the Hub | Submission records |
 
-### 用户提交（贡献）
+### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 **提交流程**:
 
@@ -181,7 +181,7 @@ Reported to the Hub, integrated with decay data for comprehensive judgment.
 
 ## 分布式代理操作系统
 
-### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+### 类比
 
 If the Horizon ecosystem is viewed as a **分布式代理操作系统**.
 
@@ -190,7 +190,7 @@ A single Horizon instance is like a "standalone machine" managing one user's inf
 ### 为何“出现”？
 
 Each Agent runs independently and is unaware of others, but:
-- **多样性**: Different users subscribe to sources in different fields, naturally providing diverse perspectives.
+- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Different users subscribe to sources in different fields, naturally providing diverse perspectives.
 - **独立**: Each Agent's AI scoring is unaffected by other users.
 - **聚合**: The Hub aggregates all scores to form a global quality signal more accurate than any single Agent.
 
