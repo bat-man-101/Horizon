@@ -7,7 +7,7 @@ title: Scoring System
 
 After fetching content from all sources, Horizon uses an AI model to score each item on a 0-10 scale. This determines what appears in the daily summary.
 
-## 管道
+## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 1. **批量处理** — Items are scored in batches of 10 with a progress bar. Failed items receive a score of 0.
 2. **内容准备** — For each item, the content is truncated (800 chars if comments are present, 1000 otherwise) and engagement metrics are assembled from metadata (HN score, Reddit upvote ratio, etc.).
@@ -69,7 +69,7 @@ Items that pass the score threshold and any balanced digest limits go through a 
 
 1. **概念提取** — AI identifies 1-3 technical concepts in the item that may need explanation.
 2. **网页搜索** — Each concept is searched via DuckDuckGo to gather grounding context.
-3. **结构化分析** — The item content and search results are sent to AI, which produces:
+3. **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** — The item content and search results are sent to AI, which produces:
    - `whats_new` — what specifically happened or changed
    - `why_it_matters` — significance and impact
    - `key_details` — notable technical details or caveats

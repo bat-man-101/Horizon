@@ -3,7 +3,7 @@ layout: default
 title: Source Scrapers
 ---
 
-# Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+# 源码抓取器
 
 Horizon fetches content from multiple source types. All scrapers inherit from `BaseScraper`, share an async HTTP client, and implement a `fetch(since)` method that returns a list of `ContentItem` objects. Sources are fetched concurrently via `asyncio.gather`.
 
@@ -11,7 +11,7 @@ Horizon fetches content from multiple source types. All scrapers inherit from `B
 
 **文件**: `src/scrapers/hackernews.py`
 
-Uses the [Firebase HN API](https://hacker-news.firebaseio.com/v0):
+Uses the [Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.](https://hacker-news.firebaseio.com/v0):
 
 - `GET /topstories.json` — fetches top story IDs
 - `GET /item/{id}.json` — fetches story/comment details
@@ -33,7 +33,7 @@ Stories and their comments are fetched concurrently. For each story, the top 5 c
 
 **提取的数据**: title, URL (falls back to HN discussion URL), author, score, comment count, and top comment text.
 
-## GitHub
+## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 **文件**: `src/scrapers/github.py`
 
@@ -66,7 +66,7 @@ Two source types are supported:
 }
 ```
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Set `GITHUB_TOKEN` in your environment for higher rate limits (5000 req/hr vs 60 without).
+**验证**: Set `GITHUB_TOKEN` in your environment for higher rate limits (5000 req/hr vs 60 without).
 
 ## RSS
 
@@ -89,9 +89,9 @@ Fetches any Atom/RSS feed using the `feedparser` library. Tries multiple date fi
 
 **提取的数据**: title, URL, author, content (from `summary`/`description`/`content` fields), feed name, category, and entry tags.
 
-## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+## 红迪网
 
-**文件**: `src/scrapers/reddit.py`
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: `src/scrapers/reddit.py`
 
 Uses public, no-key Reddit endpoints. Subreddit listings and comments prefer `old.reddit.com` HTML because Reddit's unauthenticated JSON and RSS endpoints can intermittently block or fail:
 
@@ -136,7 +136,7 @@ Subreddits and users are fetched concurrently. Comments are sorted by score, lim
 
 **提取的数据**: title, URL, author, score, upvote ratio, comment count, subreddit, flair, self-text, and top comments.
 
-## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+## 开放BB
 
 **文件**: `src/scrapers/openbb.py`
 
@@ -190,7 +190,7 @@ Flow:
 2. Poll `/v2/actor-runs/{run_id}` until status is `SUCCEEDED` or a terminal failure
 3. GET `/v2/datasets/{dataset_id}/items` to retrieve results
 
-**配置** (`sources.twitter`):
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (`sources.twitter`):
 
 ```json
 {
@@ -215,6 +215,6 @@ Flow:
 - `actor_id` — Apify actor ID (default: `altimis~scweet`)
 - `apify_token_env` — environment variable name containing the Apify API token
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Set `APIFY_TOKEN` in your `.env`. Get a token at [控制台.apify.com](https://console.apify.com/account/integrations).
+**验证**: Set `APIFY_TOKEN` in your `.env`. Get a token at [控制台.apify.com](https://console.apify.com/account/integrations).
 
 **提取的数据**: tweet text, URL, author, publish time, likes, retweets, replies, views, and (optionally) reply-thread text appended under `--- Top Comments ---`.

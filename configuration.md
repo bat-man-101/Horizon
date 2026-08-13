@@ -37,7 +37,7 @@ Common API key variable names:
 | Doubao | `DOUBAO_API_KEY` |
 | DeepSeek | `DEEPSEEK_API_KEY` |
 
-**人性化的克劳德**:
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
 
 ```json
 {
@@ -159,7 +159,7 @@ If your model has a strict per-minute request cap, you can slow the scorer down 
 - `4.5` is a reasonable starting point for free-tier models capped around 15 requests per minute.
 - Set it back to `0` if you have enough throughput headroom and want maximum speed.
 
-### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+### 人工智能并发
 
 By default, AI scoring and enrichment run one item at a time. If your API endpoint supports concurrent requests, you can increase throughput:
 
@@ -498,7 +498,7 @@ Example:
 - Unset variables are left as `${NAME}` instead of becoming an empty string, so configuration mistakes fail loudly downstream.
 - Expansion is recursive through dicts, lists, and tuples; non-string values are left unchanged.
 
-## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+## 邮件订阅
 
 Email delivery is optional and disabled unless `email.enabled` is `true`. Horizon uses SMTP to send daily summaries and IMAP to check subscribe/unsubscribe requests.
 
