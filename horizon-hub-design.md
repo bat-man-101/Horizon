@@ -2,7 +2,7 @@
 
 ## 定位
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: The information source marketplace for the Horizon ecosystem—driven by real community usage data for discovery, recommendation, and quality assessment.
+**一句话定位**: The information source marketplace for the Horizon ecosystem—driven by real community usage data for discovery, recommendation, and quality assessment.
 
 **与竞争对手的差异**:
 
@@ -49,7 +49,7 @@
 
 Two core components:
 - **集线器服务器**: Data center + Web frontend, receiving reports, storing statistics, providing APIs and web pages.
-- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: The sole entry point for users to manage information sources; every operation naturally generates data.
+- **本地客户端（地平线向导）**: The sole entry point for users to manage information sources; every operation naturally generates data.
 
 ---
 
@@ -59,12 +59,12 @@ Two core components:
 
 The core interface users see when opening the Hub website.
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
+**页面结构**:
 
 - **顶部仪表板**: A row of statistics cards.
   - Total Sources | Field Categories | Contributors | Active Users
 
-- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Each source has a card.
+- **源卡瀑布**: Each source has a card.
   - Source Name + Type Tags (RSS / Reddit / GitHub / Telegram / Twitter)
   - Color-coded Field Tags (AI Purple, Systems Blue, Security Red...)
   - One-sentence Bio (CN/EN)
@@ -96,7 +96,7 @@ The detail page for each source, showing a complete data-driven profile.
 
 ### 用户提交（贡献）
 
-**提交流程**:
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
 
 ```
 User (Hub Web or Local Client)
@@ -115,7 +115,7 @@ Hub Server
 - Hub Web Form (most intuitive)
 - Local Client Submission (one-click via `horizon-wizard`)
 
-### 智能推荐（推荐）
+### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 **应用场景**:
 
@@ -179,7 +179,7 @@ Reported to the Hub, integrated with decay data for comprehensive judgment.
 
 ---
 
-## 分布式代理操作系统
+## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 ### 类比
 
@@ -187,7 +187,7 @@ If the Horizon ecosystem is viewed as a **分布式代理操作系统**.
 
 A single Horizon instance is like a "standalone machine" managing one user's information flow. HorizonHub acts as the **控制平面** that coordinates all users' Agents into a whole, allowing decentralized individual judgments to converge into collective intelligence.
 
-### 为何“出现”？
+### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 Each Agent runs independently and is unaware of others, but:
 - **多样性**: Different users subscribe to sources in different fields, naturally providing diverse perspectives.

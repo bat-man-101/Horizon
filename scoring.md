@@ -3,11 +3,11 @@ layout: default
 title: Scoring System
 ---
 
-# Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+# 评分系统
 
 After fetching content from all sources, Horizon uses an AI model to score each item on a 0-10 scale. This determines what appears in the daily summary.
 
-## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+## 管道
 
 1. **批量处理** — Items are scored in batches of 10 with a progress bar. Failed items receive a score of 0.
 2. **内容准备** — For each item, the content is truncated (800 chars if comments are present, 1000 otherwise) and engagement metrics are assembled from metadata (HN score, Reddit upvote ratio, etc.).
@@ -31,9 +31,9 @@ The AI evaluates each item based on:
 
 - **技术深度和新颖性** — original ideas, new techniques, research contributions
 - **潜在影响** — how broadly this affects software engineering, AI/ML, or systems research
-- **写作/演讲质量** — clarity, structure, thoroughness
-- **社区讨论** — insightful comments, diverse viewpoints, substantive debates
-- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** — high upvotes/favorites paired with substantive discussion (not just raw numbers)
+- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** — clarity, structure, thoroughness
+- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** — insightful comments, diverse viewpoints, substantive debates
+- **参与信号** — high upvotes/favorites paired with substantive discussion (not just raw numbers)
 
 Engagement metadata is source-specific: HN provides score and comment count, Reddit provides upvote ratio and comment count.
 
@@ -67,7 +67,7 @@ Items scoring 9.0 or above are featured in the "Today's Highlights" section of t
 
 Items that pass the score threshold and any balanced digest limits go through a second AI pass for enrichment (`src/ai/enricher.py`):
 
-1. **概念提取** — AI identifies 1-3 technical concepts in the item that may need explanation.
+1. **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** — AI identifies 1-3 technical concepts in the item that may need explanation.
 2. **网页搜索** — Each concept is searched via DuckDuckGo to gather grounding context.
 3. **结构化分析** — The item content and search results are sent to AI, which produces:
    - `whats_new` — what specifically happened or changed
