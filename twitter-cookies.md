@@ -24,7 +24,7 @@ uv run playwright install chromium
 
 ### 方法一：浏览器扩展（推荐）
 
-1. 用 Chrome/Edge/Firefox 登录 [x.com](https://x.com)
+1. 用 Chrome/Edge/Firefox 登录 [Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.](https://x.com)
 2. 安装扩展 **“Cookie 编辑器”** 或 **“在本地获取 cookies.txt”**
 3. 在 x.com 页面打开扩展，导出为 **JSON 格式**
 4. 保存到 `data/x_cookies_1.json`

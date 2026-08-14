@@ -37,7 +37,7 @@ Common API key variable names:
 | Doubao | `DOUBAO_API_KEY` |
 | DeepSeek | `DEEPSEEK_API_KEY` |
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
+**人性化的克劳德**:
 
 ```json
 {
@@ -50,7 +50,7 @@ Common API key variable names:
 }
 ```
 
-**开放人工智能**:
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
 
 ```json
 {
@@ -414,7 +414,7 @@ Content is scored 0-10:
 
 - **9-10**: Groundbreaking - Major breakthroughs, paradigm shifts
 - **7-8**: High Value - Important developments, deep technical content
-- **5-6**: Interesting - Worth knowing but not urgent
+- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Interesting - Worth knowing but not urgent
 - **3-4**: Low Priority - Generic or routine content
 - **0-2**: Noise - Spam, off-topic, or trivial
 

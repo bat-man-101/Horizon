@@ -9,9 +9,9 @@ Horizon fetches content from multiple source types. All scrapers inherit from `B
 
 ## 黑客新闻
 
-**文件**: `src/scrapers/hackernews.py`
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: `src/scrapers/hackernews.py`
 
-Uses the [Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.](https://hacker-news.firebaseio.com/v0):
+Uses the [Firebase HN API](https://hacker-news.firebaseio.com/v0):
 
 - `GET /topstories.json` — fetches top story IDs
 - `GET /item/{id}.json` — fetches story/comment details
@@ -33,7 +33,7 @@ Stories and their comments are fetched concurrently. For each story, the top 5 c
 
 **提取的数据**: title, URL (falls back to HN discussion URL), author, score, comment count, and top comment text.
 
-## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+## GitHub
 
 **文件**: `src/scrapers/github.py`
 
@@ -45,7 +45,7 @@ Uses the [GitHub REST API](https://api.github.com):
 Two source types are supported:
 
 - **`用户事件`** — tracks push, create, release, public, and watch events for a user
-- **`repo_releases`** — tracks new releases for a specific repository
+- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** — tracks new releases for a specific repository
 
 **配置** (`sources.github`, list of entries):
 
@@ -89,9 +89,9 @@ Fetches any Atom/RSS feed using the `feedparser` library. Tries multiple date fi
 
 **提取的数据**: title, URL, author, content (from `summary`/`description`/`content` fields), feed name, category, and entry tags.
 
-## 红迪网
+## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: `src/scrapers/reddit.py`
+**文件**: `src/scrapers/reddit.py`
 
 Uses public, no-key Reddit endpoints. Subreddit listings and comments prefer `old.reddit.com` HTML because Reddit's unauthenticated JSON and RSS endpoints can intermittently block or fail:
 
@@ -132,7 +132,7 @@ Subreddits and users are fetched concurrently. Comments are sorted by score, lim
 - `time_filter` — for `top`/`rising` sorts: `hour`, `day`, `week`, `month`, `year`, `all`
 - `min_score` — minimum post score (subreddits only)
 
-**速率限制**: Detects HTTP 429 responses on JSON requests, reads the `Retry-After` header, waits, and retries once. Uses browser-like request headers for no-key public access.
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Detects HTTP 429 responses on JSON requests, reads the `Retry-After` header, waits, and retries once. Uses browser-like request headers for no-key public access.
 
 **提取的数据**: title, URL, author, score, upvote ratio, comment count, subreddit, flair, self-text, and top comments.
 
@@ -177,20 +177,20 @@ Behavior:
 
 **证书**: provider-specific secrets are resolved by the OpenBB SDK from its own environment variables or settings file. Horizon does not pass those values directly.
 
-**提取的数据**: title, URL, author, published time, article body/excerpt, watchlist name, provider, category, and symbol list.
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: title, URL, author, published time, article body/excerpt, watchlist name, provider, category, and symbol list.
 
 ## 叽叽喳喳
 
 **文件**: `src/scrapers/twitter.py`
 
-Uses the [阿皮菲](https://apify.com) platform to bypass Twitter's anti-scraping measures. The actor `altimis~scweet` is called via the Apify REST API.
+Uses the [Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.](https://apify.com) platform to bypass Twitter's anti-scraping measures. The actor `altimis~scweet` is called via the Apify REST API.
 
 Flow:
 1. POST to `/v2/acts/{actor_id}/runs` to trigger a run
 2. Poll `/v2/actor-runs/{run_id}` until status is `SUCCEEDED` or a terminal failure
 3. GET `/v2/datasets/{dataset_id}/items` to retrieve results
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (`sources.twitter`):
+**配置** (`sources.twitter`):
 
 ```json
 {
@@ -215,6 +215,6 @@ Flow:
 - `actor_id` — Apify actor ID (default: `altimis~scweet`)
 - `apify_token_env` — environment variable name containing the Apify API token
 
-**验证**: Set `APIFY_TOKEN` in your `.env`. Get a token at [控制台.apify.com](https://console.apify.com/account/integrations).
+**验证**: Set `APIFY_TOKEN` in your `.env`. Get a token at [Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.](https://console.apify.com/account/integrations).
 
 **提取的数据**: tweet text, URL, author, publish time, likes, retweets, replies, views, and (optionally) reply-thread text appended under `--- Top Comments ---`.

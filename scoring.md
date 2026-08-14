@@ -3,7 +3,7 @@ layout: default
 title: Scoring System
 ---
 
-# 评分系统
+# Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 After fetching content from all sources, Horizon uses an AI model to score each item on a 0-10 scale. This determines what appears in the daily summary.
 
@@ -33,7 +33,7 @@ The AI evaluates each item based on:
 - **潜在影响** — how broadly this affects software engineering, AI/ML, or systems research
 - **写作/演讲质量** — clarity, structure, thoroughness
 - **社区讨论** — insightful comments, diverse viewpoints, substantive debates
-- **参与信号** — high upvotes/favorites paired with substantive discussion (not just raw numbers)
+- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** — high upvotes/favorites paired with substantive discussion (not just raw numbers)
 
 Engagement metadata is source-specific: HN provides score and comment count, Reddit provides upvote ratio and comment count.
 
@@ -69,7 +69,7 @@ Items that pass the score threshold and any balanced digest limits go through a 
 
 1. **概念提取** — AI identifies 1-3 technical concepts in the item that may need explanation.
 2. **网页搜索** — Each concept is searched via DuckDuckGo to gather grounding context.
-3. **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** — The item content and search results are sent to AI, which produces:
+3. **结构化分析** — The item content and search results are sent to AI, which produces:
    - `whats_new` — what specifically happened or changed
    - `why_it_matters` — significance and impact
    - `key_details` — notable technical details or caveats
