@@ -3,13 +3,13 @@ layout: default
 title: Source Scrapers
 ---
 
-# Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+# 源码抓取器
 
 Horizon fetches content from multiple source types. All scrapers inherit from `BaseScraper`, share an async HTTP client, and implement a `fetch(since)` method that returns a list of `ContentItem` objects. Sources are fetched concurrently via `asyncio.gather`.
 
-## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+## 黑客新闻
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: `src/scrapers/hackernews.py`
+**文件**: `src/scrapers/hackernews.py`
 
 Uses the [Firebase HN API](https://hacker-news.firebaseio.com/v0):
 
@@ -35,7 +35,7 @@ Stories and their comments are fetched concurrently. For each story, the top 5 c
 
 ## GitHub
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: `src/scrapers/github.py`
+**文件**: `src/scrapers/github.py`
 
 Uses the [GitHub REST API](https://api.github.com):
 
@@ -45,7 +45,7 @@ Uses the [GitHub REST API](https://api.github.com):
 Two source types are supported:
 
 - **`用户事件`** — tracks push, create, release, public, and watch events for a user
-- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** — tracks new releases for a specific repository
+- **`repo_releases`** — tracks new releases for a specific repository
 
 **配置** (`sources.github`, list of entries):
 
@@ -89,7 +89,7 @@ Fetches any Atom/RSS feed using the `feedparser` library. Tries multiple date fi
 
 **提取的数据**: title, URL, author, content (from `summary`/`description`/`content` fields), feed name, category, and entry tags.
 
-## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+## 红迪网
 
 **文件**: `src/scrapers/reddit.py`
 
@@ -190,7 +190,7 @@ Flow:
 2. Poll `/v2/actor-runs/{run_id}` until status is `SUCCEEDED` or a terminal failure
 3. GET `/v2/datasets/{dataset_id}/items` to retrieve results
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (`sources.twitter`):
+**配置** (`sources.twitter`):
 
 ```json
 {
@@ -217,4 +217,4 @@ Flow:
 
 **验证**: Set `APIFY_TOKEN` in your `.env`. Get a token at [控制台.apify.com](https://console.apify.com/account/integrations).
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: tweet text, URL, author, publish time, likes, retweets, replies, views, and (optionally) reply-thread text appended under `--- Top Comments ---`.
+**提取的数据**: tweet text, URL, author, publish time, likes, retweets, replies, views, and (optionally) reply-thread text appended under `--- Top Comments ---`.

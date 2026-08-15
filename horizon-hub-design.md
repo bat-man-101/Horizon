@@ -11,7 +11,7 @@
 | RSSHub | Turns websites without RSS into RSS (Pipe) | No quality assessment, no recommendations |
 | Feedly | RSS Reader with discovery features | No AI filtering, no personalized recommendations |
 | HN / Reddit | Community-driven content aggregation | Fixed sources, user cannot customize |
-| **地平线枢纽** | **数据驱动的来源推荐和质量评估** | **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** |
+| **地平线枢纽** | **数据驱动的来源推荐和质量评估** | **没有内容托管，没有读者** |
 
 **核心护城河**: The daily operation of every Horizon user generates quality data for information sources (AI scores, signal-to-noise ratio, output frequency). When aggregated in the Hub, this data forms a **动态质量概况** that no static recommendation list can provide.
 
@@ -53,7 +53,7 @@ Two core components:
 
 ---
 
-## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+## 功能列表
 
 ### 客源市场（浏览）
 
@@ -96,7 +96,7 @@ The detail page for each source, showing a complete data-driven profile.
 
 ### 用户提交（贡献）
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
+**提交流程**:
 
 ```
 User (Hub Web or Local Client)
@@ -115,7 +115,7 @@ Hub Server
 - Hub Web Form (most intuitive)
 - Local Client Submission (one-click via `horizon-wizard`)
 
-### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+### 智能推荐（推荐）
 
 **应用场景**:
 
@@ -179,7 +179,7 @@ Reported to the Hub, integrated with decay data for comprehensive judgment.
 
 ---
 
-## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+## 分布式代理操作系统
 
 ### 类比
 
@@ -187,7 +187,7 @@ If the Horizon ecosystem is viewed as a **分布式代理操作系统**.
 
 A single Horizon instance is like a "standalone machine" managing one user's information flow. HorizonHub acts as the **控制平面** that coordinates all users' Agents into a whole, allowing decentralized individual judgments to converge into collective intelligence.
 
-### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+### 为何“出现”？
 
 Each Agent runs independently and is unaware of others, but:
 - **多样性**: Different users subscribe to sources in different fields, naturally providing diverse perspectives.
