@@ -4,7 +4,7 @@
 
 **一句话定位**: The information source marketplace for the Horizon ecosystem—driven by real community usage data for discovery, recommendation, and quality assessment.
 
-**与竞争对手的差异**:
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
 
 | Product | What it does | What it doesn't do |
 |---|---|---|
@@ -17,7 +17,7 @@
 
 ---
 
-## 系统架构
+## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 ```
 ┌──────────────────────────────────────────────────┐
@@ -77,7 +77,7 @@ The core interface users see when opening the Hub website.
   - Sort by Popularity (Users) / Quality (AI Avg) / SNR / Latest Added
   - Keyword Search
 
-### 来源简介
+### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 The detail page for each source, showing a complete data-driven profile.
 
@@ -94,7 +94,7 @@ The detail page for each source, showing a complete data-driven profile.
 | Contributor | Who submitted this source | User submission records |
 | Date Added | When it was added to the Hub | Submission records |
 
-### 用户提交（贡献）
+### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 **提交流程**:
 
@@ -119,8 +119,8 @@ Hub Server
 
 **应用场景**:
 
-1. **新用户冷启动**: Enter interest keywords ("AI", "Linux Kernel") to recommend the best source combination.
-2. **补充推荐**: Analyze existing config to recommend sources with complementary coverage and flag high-overlap sources.
+1. **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Enter interest keywords ("AI", "Linux Kernel") to recommend the best source combination.
+2. **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Analyze existing config to recommend sources with complementary coverage and flag high-overlap sources.
 3. **协同过滤** (post-scale): "Users with similar tastes also read..."
 
 **Rec 算法的输入**:
@@ -147,7 +147,7 @@ After users select sources on the Hub website:
 - How many people use my sources in total.
 - Average quality score of my sources.
 
-**徽章系统**:
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
 
 | Badge | Condition |
 |---|---|
@@ -156,9 +156,9 @@ After users select sources on the Hub website:
 | 🔥 Popular Contributor| A single source used by ≥ 50 people |
 | 👑 Core Contributor | Contributed ≥ 10 sources |
 
-### 源健康监测
+### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
-**自动衰变检测** (Option A — Passive):
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (Option A — Passive):
 
 Hub server continuously tracks active user trends for each source. If usage drops continuously (e.g., >30% drop within 30 days), auto-mark with a ⚠️ warning.
 
@@ -183,7 +183,7 @@ Reported to the Hub, integrated with decay data for comprehensive judgment.
 
 ### 类比
 
-If the Horizon ecosystem is viewed as a **分布式代理操作系统**.
+If the Horizon ecosystem is viewed as a **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**.
 
 A single Horizon instance is like a "standalone machine" managing one user's information flow. HorizonHub acts as the **控制平面** that coordinates all users' Agents into a whole, allowing decentralized individual judgments to converge into collective intelligence.
 
@@ -191,9 +191,9 @@ A single Horizon instance is like a "standalone machine" managing one user's inf
 
 Each Agent runs independently and is unaware of others, but:
 - **多样性**: Different users subscribe to sources in different fields, naturally providing diverse perspectives.
-- **独立**: Each Agent's AI scoring is unaffected by other users.
+- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Each Agent's AI scoring is unaffected by other users.
 - **聚合**: The Hub aggregates all scores to form a global quality signal more accurate than any single Agent.
 
-This is not designed intelligence, but rather consensus **新兴的** from a large number of independent judgments—mathematically aligned with the Condorcet Jury Theorem.
+This is not designed intelligence, but rather consensus **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** from a large number of independent judgments—mathematically aligned with the Condorcet Jury Theorem.
 
 ---
