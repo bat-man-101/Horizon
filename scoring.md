@@ -3,7 +3,7 @@ layout: default
 title: Scoring System
 ---
 
-# 评分系统
+# Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 After fetching content from all sources, Horizon uses an AI model to score each item on a 0-10 scale. This determines what appears in the daily summary.
 

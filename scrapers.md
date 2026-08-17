@@ -35,7 +35,7 @@ Stories and their comments are fetched concurrently. For each story, the top 5 c
 
 ## GitHub
 
-**文件**: `src/scrapers/github.py`
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: `src/scrapers/github.py`
 
 Uses the [GitHub REST API](https://api.github.com):
 
@@ -66,11 +66,11 @@ Two source types are supported:
 }
 ```
 
-**验证**: Set `GITHUB_TOKEN` in your environment for higher rate limits (5000 req/hr vs 60 without).
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Set `GITHUB_TOKEN` in your environment for higher rate limits (5000 req/hr vs 60 without).
 
-## RSS
+## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
-**文件**: `src/scrapers/rss.py`
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: `src/scrapers/rss.py`
 
 Fetches any Atom/RSS feed using the `feedparser` library. Tries multiple date fields (`published`, `updated`, `created`) with fallback parsing.
 
@@ -104,7 +104,7 @@ Uses public, no-key Reddit endpoints. Subreddit listings and comments prefer `ol
 
 Subreddits and users are fetched concurrently. Comments are sorted by score, limited to the configured count, and exclude moderator-distinguished comments. Self-text is truncated at 1500 chars, comments at 500 chars.
 
-**配置** (`sources.reddit`):
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (`sources.reddit`):
 
 ```json
 {

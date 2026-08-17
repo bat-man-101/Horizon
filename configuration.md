@@ -7,7 +7,7 @@ title: Configuration Guide
 
 Horizon is configured through two files: a `.env` file for API keys and a `data/config.json` file for sources, AI provider, and filtering options.
 
-## 人工智能提供商
+## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 Configure which AI model scores and summarizes your content.
 
@@ -37,7 +37,7 @@ Common API key variable names:
 | Doubao | `DOUBAO_API_KEY` |
 | DeepSeek | `DEEPSEEK_API_KEY` |
 
-**人性化的克劳德**:
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
 
 ```json
 {
@@ -179,7 +179,7 @@ By default, AI scoring and enrichment run one item at a time. If your API endpoi
 - Result ordering is preserved regardless of concurrency.
 - If you also use `throttle_sec`, each concurrent task sleeps independently after finishing an item.
 
-**自定义基本 URL** (for proxies):
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (for proxies):
 
 ```json
 {
@@ -250,7 +250,7 @@ All sources are configured under the top-level `sources` key in `config.json`.
 }
 ```
 
-### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+### 红迪网
 
 Reddit scraping is free and does not require API keys. Subreddit posts and comments prefer `old.reddit.com`; JSON and RSS endpoints are used as fallbacks when needed.
 
@@ -308,7 +308,7 @@ Telegram scraping uses the public web preview at `https://t.me/s/<channel>`, so 
 
 ### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
-Requires an [阿皮菲](https://apify.com) account. Set `APIFY_TOKEN` in your `.env` file. The free tier includes $5/month of credit, enough for roughly 20,000 tweets.
+Requires an [Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.](https://apify.com) account. Set `APIFY_TOKEN` in your `.env` file. The free tier includes $5/month of credit, enough for roughly 20,000 tweets.
 
 ```json
 {
@@ -381,7 +381,7 @@ uv pip install --only-binary=:all: openbb openbb-benzinga
 
 OpenBB provider credentials are handled by the OpenBB SDK itself, using its own environment variables or user settings. Horizon does not pass those secrets through `data/config.json`.
 
-### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+### OSS Insight（热门 GitHub 存储库）
 
 Pulls top star-gain repositories from the [操作系统洞察](https://ossinsight.io) public API, which aggregates GitHub WatchEvents. Useful for surfacing repos that are gaining stars right now without needing to scrape GitHub Trending or query BigQuery.
 
@@ -498,7 +498,7 @@ Example:
 - Unset variables are left as `${NAME}` instead of becoming an empty string, so configuration mistakes fail loudly downstream.
 - Expansion is recursive through dicts, lists, and tuples; non-string values are left unchanged.
 
-## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+## 邮件订阅
 
 Email delivery is optional and disabled unless `email.enabled` is `true`. Horizon uses SMTP to send daily summaries and IMAP to check subscribe/unsubscribe requests.
 
@@ -727,7 +727,7 @@ With this layout, Horizon sends one interactive card containing the overview and
 }
 ```
 
-## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+## 静态站点
 
 Horizon writes generated summaries to `data/summaries/` and copies publishable Markdown into `docs/` for the GitHub Pages site. The repository includes a ready-to-use workflow at `.github/workflows/daily-summary.yml`.
 
