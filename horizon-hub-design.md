@@ -11,7 +11,7 @@
 | RSSHub | Turns websites without RSS into RSS (Pipe) | No quality assessment, no recommendations |
 | Feedly | RSS Reader with discovery features | No AI filtering, no personalized recommendations |
 | HN / Reddit | Community-driven content aggregation | Fixed sources, user cannot customize |
-| **地平线枢纽** | **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** | **没有内容托管，没有读者** |
+| **地平线枢纽** | **数据驱动的来源推荐和质量评估** | **没有内容托管，没有读者** |
 
 **核心护城河**: The daily operation of every Horizon user generates quality data for information sources (AI scores, signal-to-noise ratio, output frequency). When aggregated in the Hub, this data forms a **动态质量概况** that no static recommendation list can provide.
 
@@ -81,7 +81,7 @@ The core interface users see when opening the Hub website.
 
 The detail page for each source, showing a complete data-driven profile.
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
+**包含数据**:
 
 | Metric | Description | Data Source |
 |---|---|---|
@@ -96,7 +96,7 @@ The detail page for each source, showing a complete data-driven profile.
 
 ### 用户提交（贡献）
 
-**提交流程**:
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
 
 ```
 User (Hub Web or Local Client)
@@ -115,7 +115,7 @@ Hub Server
 - Hub Web Form (most intuitive)
 - Local Client Submission (one-click via `horizon-wizard`)
 
-### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+### 智能推荐（推荐）
 
 **应用场景**:
 
@@ -187,13 +187,13 @@ If the Horizon ecosystem is viewed as a **分布式代理操作系统**.
 
 A single Horizon instance is like a "standalone machine" managing one user's information flow. HorizonHub acts as the **控制平面** that coordinates all users' Agents into a whole, allowing decentralized individual judgments to converge into collective intelligence.
 
-### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+### 为何“出现”？
 
 Each Agent runs independently and is unaware of others, but:
 - **多样性**: Different users subscribe to sources in different fields, naturally providing diverse perspectives.
 - **独立**: Each Agent's AI scoring is unaffected by other users.
 - **聚合**: The Hub aggregates all scores to form a global quality signal more accurate than any single Agent.
 
-This is not designed intelligence, but rather consensus **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** from a large number of independent judgments—mathematically aligned with the Condorcet Jury Theorem.
+This is not designed intelligence, but rather consensus **新兴的** from a large number of independent judgments—mathematically aligned with the Condorcet Jury Theorem.
 
 ---

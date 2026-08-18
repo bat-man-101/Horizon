@@ -7,7 +7,7 @@ title: Source Scrapers
 
 Horizon fetches content from multiple source types. All scrapers inherit from `BaseScraper`, share an async HTTP client, and implement a `fetch(since)` method that returns a list of `ContentItem` objects. Sources are fetched concurrently via `asyncio.gather`.
 
-## 黑客新闻
+## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 **文件**: `src/scrapers/hackernews.py`
 
@@ -18,7 +18,7 @@ Uses the [Firebase HN API](https://hacker-news.firebaseio.com/v0):
 
 Stories and their comments are fetched concurrently. For each story, the top 5 comments are included (deleted/dead comments excluded, HTML stripped, truncated at 500 chars).
 
-**配置** (`sources.hackernews`):
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (`sources.hackernews`):
 
 ```json
 {
@@ -31,11 +31,11 @@ Stories and their comments are fetched concurrently. For each story, the top 5 c
 - `fetch_top_stories` — number of top story IDs to fetch
 - `min_score` — minimum HN points to include a story
 
-**提取的数据**: title, URL (falls back to HN discussion URL), author, score, comment count, and top comment text.
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: title, URL (falls back to HN discussion URL), author, score, comment count, and top comment text.
 
 ## GitHub
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: `src/scrapers/github.py`
+**文件**: `src/scrapers/github.py`
 
 Uses the [GitHub REST API](https://api.github.com):
 
@@ -66,11 +66,11 @@ Two source types are supported:
 }
 ```
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Set `GITHUB_TOKEN` in your environment for higher rate limits (5000 req/hr vs 60 without).
+**验证**: Set `GITHUB_TOKEN` in your environment for higher rate limits (5000 req/hr vs 60 without).
 
-## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+## RSS
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: `src/scrapers/rss.py`
+**文件**: `src/scrapers/rss.py`
 
 Fetches any Atom/RSS feed using the `feedparser` library. Tries multiple date fields (`published`, `updated`, `created`) with fallback parsing.
 
@@ -87,7 +87,7 @@ Fetches any Atom/RSS feed using the `feedparser` library. Tries multiple date fi
 
 - `category` — optional tag for grouping (e.g., `"programming"`, `"microblog"`)
 
-**提取的数据**: title, URL, author, content (from `summary`/`description`/`content` fields), feed name, category, and entry tags.
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: title, URL, author, content (from `summary`/`description`/`content` fields), feed name, category, and entry tags.
 
 ## 红迪网
 
@@ -104,7 +104,7 @@ Uses public, no-key Reddit endpoints. Subreddit listings and comments prefer `ol
 
 Subreddits and users are fetched concurrently. Comments are sorted by score, limited to the configured count, and exclude moderator-distinguished comments. Self-text is truncated at 1500 chars, comments at 500 chars.
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (`sources.reddit`):
+**配置** (`sources.reddit`):
 
 ```json
 {

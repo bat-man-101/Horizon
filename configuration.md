@@ -3,11 +3,11 @@ layout: default
 title: Configuration Guide
 ---
 
-# 配置指南
+# Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 Horizon is configured through two files: a `.env` file for API keys and a `data/config.json` file for sources, AI provider, and filtering options.
 
-## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+## 人工智能提供商
 
 Configure which AI model scores and summarizes your content.
 
@@ -37,7 +37,7 @@ Common API key variable names:
 | Doubao | `DOUBAO_API_KEY` |
 | DeepSeek | `DEEPSEEK_API_KEY` |
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
+**人性化的克劳德**:
 
 ```json
 {
@@ -121,7 +121,7 @@ Available models: `MiniMax-M3`, `MiniMax-M2.7`, `MiniMax-M2.7-highspeed`
 }
 ```
 
-Use the [DashScope 兼容模式](https://help.aliyun.com/zh/dashscope/developer-reference/use-dashscope-by-calling-openai-api) endpoint. Set `DASHSCOPE_API_KEY` in your `.env`. Optional: set `base_url` to override the default `https://dashscope.aliyuncs.com/compatible-mode/v1`.
+Use the [Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.](https://help.aliyun.com/zh/dashscope/developer-reference/use-dashscope-by-calling-openai-api) endpoint. Set `DASHSCOPE_API_KEY` in your `.env`. Optional: set `base_url` to override the default `https://dashscope.aliyuncs.com/compatible-mode/v1`.
 
 **成为**:
 
@@ -179,7 +179,7 @@ By default, AI scoring and enrichment run one item at a time. If your API endpoi
 - Result ordering is preserved regardless of concurrency.
 - If you also use `throttle_sec`, each concurrent task sleeps independently after finishing an item.
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (for proxies):
+**自定义基本 URL** (for proxies):
 
 ```json
 {
@@ -193,7 +193,7 @@ By default, AI scoring and enrichment run one item at a time. If your API endpoi
 
 For OpenAI-compatible gateways, Horizon sends `temperature` by default. If a newer reasoning-style model rejects that parameter with an error such as `temperature is deprecated for this model`, Horizon retries once without it and remembers that capability for later requests.
 
-## 信息来源
+## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 All sources are configured under the top-level `sources` key in `config.json`.
 
@@ -306,9 +306,9 @@ Telegram scraping uses the public web preview at `https://t.me/s/<channel>`, so 
 - `channel` — Telegram channel username only, without `@` or the full `https://t.me/` URL
 - `fetch_limit` — maximum number of recent messages to inspect per channel per run (default: `20`)
 
-### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+### 叽叽喳喳
 
-Requires an [Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.](https://apify.com) account. Set `APIFY_TOKEN` in your `.env` file. The free tier includes $5/month of credit, enough for roughly 20,000 tweets.
+Requires an [阿皮菲](https://apify.com) account. Set `APIFY_TOKEN` in your `.env` file. The free tier includes $5/month of credit, enough for roughly 20,000 tweets.
 
 ```json
 {
@@ -413,7 +413,7 @@ No API key is required.
 Content is scored 0-10:
 
 - **9-10**: Groundbreaking - Major breakthroughs, paradigm shifts
-- **7-8**: High Value - Important developments, deep technical content
+- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: High Value - Important developments, deep technical content
 - **5-6**: Interesting - Worth knowing but not urgent
 - **3-4**: Low Priority - Generic or routine content
 - **0-2**: Noise - Spam, off-topic, or trivial
@@ -588,7 +588,7 @@ Webhook notification is optional and disabled unless `webhook.enabled` is `true`
 
 When `request_body` is a JSON object or array, Horizon renders placeholders and serializes it as JSON. When it is a string, Horizon renders it directly and detects JSON if the rendered string is valid JSON.
 
-### 交付模式和布局
+### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 `delivery` controls how many webhook messages Horizon sends:
 
@@ -733,7 +733,7 @@ Horizon writes generated summaries to `data/summaries/` and copies publishable M
 
 To use GitHub Pages, enable Pages for the repository and run the scheduled workflow or trigger it manually. The generated site is built from the `docs/` directory.
 
-## MCP服务器
+## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 Horizon includes an MCP server for AI assistants and MCP-compatible clients.
 
