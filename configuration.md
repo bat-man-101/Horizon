@@ -3,7 +3,7 @@ layout: default
 title: Configuration Guide
 ---
 
-# Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+# 配置指南
 
 Horizon is configured through two files: a `.env` file for API keys and a `data/config.json` file for sources, AI provider, and filtering options.
 
@@ -121,7 +121,7 @@ Available models: `MiniMax-M3`, `MiniMax-M2.7`, `MiniMax-M2.7-highspeed`
 }
 ```
 
-Use the [Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.](https://help.aliyun.com/zh/dashscope/developer-reference/use-dashscope-by-calling-openai-api) endpoint. Set `DASHSCOPE_API_KEY` in your `.env`. Optional: set `base_url` to override the default `https://dashscope.aliyuncs.com/compatible-mode/v1`.
+Use the [DashScope 兼容模式](https://help.aliyun.com/zh/dashscope/developer-reference/use-dashscope-by-calling-openai-api) endpoint. Set `DASHSCOPE_API_KEY` in your `.env`. Optional: set `base_url` to override the default `https://dashscope.aliyuncs.com/compatible-mode/v1`.
 
 **成为**:
 
@@ -193,7 +193,7 @@ By default, AI scoring and enrichment run one item at a time. If your API endpoi
 
 For OpenAI-compatible gateways, Horizon sends `temperature` by default. If a newer reasoning-style model rejects that parameter with an error such as `temperature is deprecated for this model`, Horizon retries once without it and remembers that capability for later requests.
 
-## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+## 信息来源
 
 All sources are configured under the top-level `sources` key in `config.json`.
 
@@ -413,7 +413,7 @@ No API key is required.
 Content is scored 0-10:
 
 - **9-10**: Groundbreaking - Major breakthroughs, paradigm shifts
-- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: High Value - Important developments, deep technical content
+- **7-8**: High Value - Important developments, deep technical content
 - **5-6**: Interesting - Worth knowing but not urgent
 - **3-4**: Low Priority - Generic or routine content
 - **0-2**: Noise - Spam, off-topic, or trivial
@@ -588,7 +588,7 @@ Webhook notification is optional and disabled unless `webhook.enabled` is `true`
 
 When `request_body` is a JSON object or array, Horizon renders placeholders and serializes it as JSON. When it is a string, Horizon renders it directly and detects JSON if the rendered string is valid JSON.
 
-### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+### 交付模式和布局
 
 `delivery` controls how many webhook messages Horizon sends:
 
@@ -733,7 +733,7 @@ Horizon writes generated summaries to `data/summaries/` and copies publishable M
 
 To use GitHub Pages, enable Pages for the repository and run the scheduled workflow or trigger it manually. The generated site is built from the `docs/` directory.
 
-## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+## MCP服务器
 
 Horizon includes an MCP server for AI assistants and MCP-compatible clients.
 

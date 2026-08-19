@@ -7,7 +7,7 @@ title: Source Scrapers
 
 Horizon fetches content from multiple source types. All scrapers inherit from `BaseScraper`, share an async HTTP client, and implement a `fetch(since)` method that returns a list of `ContentItem` objects. Sources are fetched concurrently via `asyncio.gather`.
 
-## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+## 黑客新闻
 
 **文件**: `src/scrapers/hackernews.py`
 
@@ -18,7 +18,7 @@ Uses the [Firebase HN API](https://hacker-news.firebaseio.com/v0):
 
 Stories and their comments are fetched concurrently. For each story, the top 5 comments are included (deleted/dead comments excluded, HTML stripped, truncated at 500 chars).
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (`sources.hackernews`):
+**配置** (`sources.hackernews`):
 
 ```json
 {
@@ -31,7 +31,7 @@ Stories and their comments are fetched concurrently. For each story, the top 5 c
 - `fetch_top_stories` — number of top story IDs to fetch
 - `min_score` — minimum HN points to include a story
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: title, URL (falls back to HN discussion URL), author, score, comment count, and top comment text.
+**提取的数据**: title, URL (falls back to HN discussion URL), author, score, comment count, and top comment text.
 
 ## GitHub
 
@@ -87,7 +87,7 @@ Fetches any Atom/RSS feed using the `feedparser` library. Tries multiple date fi
 
 - `category` — optional tag for grouping (e.g., `"programming"`, `"microblog"`)
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: title, URL, author, content (from `summary`/`description`/`content` fields), feed name, category, and entry tags.
+**提取的数据**: title, URL, author, content (from `summary`/`description`/`content` fields), feed name, category, and entry tags.
 
 ## 红迪网
 

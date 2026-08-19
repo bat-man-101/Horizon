@@ -12,10 +12,10 @@ After fetching content from all sources, Horizon uses an AI model to score each 
 1. **批量处理** — Items are scored in batches of 10 with a progress bar. Failed items receive a score of 0.
 2. **内容准备** — For each item, the content is truncated (800 chars if comments are present, 1000 otherwise) and engagement metrics are assembled from metadata (HN score, Reddit upvote ratio, etc.).
 3. **人工智能分析** — The prepared content is sent to the configured AI model (temperature 0.3) with a system prompt defining the scoring criteria.
-4. **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** — The AI response is parsed as JSON (with fallbacks for code-block-wrapped JSON). Each item gets: `ai_score` (float), `ai_reason` (string), `ai_summary` (string), and `ai_tags` (list).
+4. **响应解析** — The AI response is parsed as JSON (with fallbacks for code-block-wrapped JSON). Each item gets: `ai_score` (float), `ai_reason` (string), `ai_summary` (string), and `ai_tags` (list).
 5. **重试** — Failed AI calls are retried up to 3 times with exponential backoff (2-10 seconds).
 
-## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+## 评分标准
 
 | Score | Tier | Description |
 |-------|------|-------------|

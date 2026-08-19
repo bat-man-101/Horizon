@@ -96,7 +96,7 @@ The detail page for each source, showing a complete data-driven profile.
 
 ### 用户提交（贡献）
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
+**提交流程**:
 
 ```
 User (Hub Web or Local Client)
