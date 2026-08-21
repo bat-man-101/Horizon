@@ -50,7 +50,7 @@ Common API key variable names:
 }
 ```
 
-**开放人工智能**:
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
 
 ```json
 {
@@ -93,7 +93,7 @@ Common API key variable names:
 
 Set `AZURE_OPENAI_API_KEY` and `AZURE_OPENAI_ENDPOINT` in your `.env`. The `model` field should be your Azure deployment name, not just the base model family name.
 
-**最小最大**:
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
 
 ```json
 {
@@ -219,7 +219,7 @@ All sources are configured under the top-level `sources` key in `config.json`.
 }
 ```
 
-### 黑客新闻
+### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 ```json
 {
@@ -588,7 +588,7 @@ Webhook notification is optional and disabled unless `webhook.enabled` is `true`
 
 When `request_body` is a JSON object or array, Horizon renders placeholders and serializes it as JSON. When it is a string, Horizon renders it directly and detects JSON if the rendered string is valid JSON.
 
-### 交付模式和布局
+### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 `delivery` controls how many webhook messages Horizon sends:
 
@@ -670,7 +670,7 @@ In DingTalk, create a custom group robot and use a custom keyword such as `Horiz
 }
 ```
 
-### Feishu / Lark
+### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 In Feishu or Lark, create a custom group robot and use a custom keyword such as `Horizon`. The keyword must appear in the body content.
 

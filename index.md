@@ -3,11 +3,11 @@ layout: default
 title: Home
 ---
 
-# 地平线
+# Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 <div id="lang-zh" class="lang-section" markdown="1">
 
-欢迎来到 [地平线](https://github.com/thysrael/Horizon)，一个 AI 驱动的信息聚合系统。
+欢迎来到 [Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.](https://github.com/thysrael/Horizon)，一个 AI 驱动的信息聚合系统。
 
 ## 文档
 
@@ -32,7 +32,7 @@ title: Home
 
 <div id="lang-en" class="lang-section" markdown="1">
 
-Welcome to [地平线](https://github.com/thysrael/Horizon), an AI-driven information aggregation system.
+Welcome to [Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.](https://github.com/thysrael/Horizon), an AI-driven information aggregation system.
 
 ## 文档
 

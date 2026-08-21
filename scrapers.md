@@ -3,7 +3,7 @@ layout: default
 title: Source Scrapers
 ---
 
-# 源码抓取器
+# Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 Horizon fetches content from multiple source types. All scrapers inherit from `BaseScraper`, share an async HTTP client, and implement a `fetch(since)` method that returns a list of `ContentItem` objects. Sources are fetched concurrently via `asyncio.gather`.
 
@@ -11,7 +11,7 @@ Horizon fetches content from multiple source types. All scrapers inherit from `B
 
 **文件**: `src/scrapers/hackernews.py`
 
-Uses the [Firebase HN API](https://hacker-news.firebaseio.com/v0):
+Uses the [Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.](https://hacker-news.firebaseio.com/v0):
 
 - `GET /topstories.json` — fetches top story IDs
 - `GET /item/{id}.json` — fetches story/comment details
@@ -37,7 +37,7 @@ Stories and their comments are fetched concurrently. For each story, the top 5 c
 
 **文件**: `src/scrapers/github.py`
 
-Uses the [GitHub REST API](https://api.github.com):
+Uses the [Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.](https://api.github.com):
 
 - `GET /users/{username}/events/public` — user activity events
 - `GET /repos/{owner}/{repo}/releases` — repository releases
@@ -175,7 +175,7 @@ Behavior:
 - Skips malformed rows, rows without URL/title/date, and items older than the current time window
 - Keeps fetching other watchlists if one provider call fails
 
-**证书**: provider-specific secrets are resolved by the OpenBB SDK from its own environment variables or settings file. Horizon does not pass those values directly.
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: provider-specific secrets are resolved by the OpenBB SDK from its own environment variables or settings file. Horizon does not pass those values directly.
 
 **提取的数据**: title, URL, author, published time, article body/excerpt, watchlist name, provider, category, and symbol list.
 

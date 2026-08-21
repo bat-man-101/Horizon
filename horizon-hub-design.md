@@ -13,7 +13,7 @@
 | HN / Reddit | Community-driven content aggregation | Fixed sources, user cannot customize |
 | **地平线枢纽** | **数据驱动的来源推荐和质量评估** | **没有内容托管，没有读者** |
 
-**核心护城河**: The daily operation of every Horizon user generates quality data for information sources (AI scores, signal-to-noise ratio, output frequency). When aggregated in the Hub, this data forms a **动态质量概况** that no static recommendation list can provide.
+**核心护城河**: The daily operation of every Horizon user generates quality data for information sources (AI scores, signal-to-noise ratio, output frequency). When aggregated in the Hub, this data forms a **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** that no static recommendation list can provide.
 
 ---
 
@@ -59,7 +59,7 @@ Two core components:
 
 The core interface users see when opening the Hub website.
 
-**页面结构**:
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
 
 - **顶部仪表板**: A row of statistics cards.
   - Total Sources | Field Categories | Contributors | Active Users
@@ -156,7 +156,7 @@ After users select sources on the Hub website:
 | 🔥 Popular Contributor| A single source used by ≥ 50 people |
 | 👑 Core Contributor | Contributed ≥ 10 sources |
 
-### 源健康监测
+### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 **自动衰变检测** (Option A — Passive):
 
