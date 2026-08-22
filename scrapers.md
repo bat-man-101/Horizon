@@ -3,15 +3,15 @@ layout: default
 title: Source Scrapers
 ---
 
-# Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+# 源码抓取器
 
 Horizon fetches content from multiple source types. All scrapers inherit from `BaseScraper`, share an async HTTP client, and implement a `fetch(since)` method that returns a list of `ContentItem` objects. Sources are fetched concurrently via `asyncio.gather`.
 
-## 黑客新闻
+## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 **文件**: `src/scrapers/hackernews.py`
 
-Uses the [Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.](https://hacker-news.firebaseio.com/v0):
+Uses the [Firebase HN API](https://hacker-news.firebaseio.com/v0):
 
 - `GET /topstories.json` — fetches top story IDs
 - `GET /item/{id}.json` — fetches story/comment details
@@ -37,15 +37,15 @@ Stories and their comments are fetched concurrently. For each story, the top 5 c
 
 **文件**: `src/scrapers/github.py`
 
-Uses the [Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.](https://api.github.com):
+Uses the [GitHub REST API](https://api.github.com):
 
 - `GET /users/{username}/events/public` — user activity events
 - `GET /repos/{owner}/{repo}/releases` — repository releases
 
 Two source types are supported:
 
-- **`用户事件`** — tracks push, create, release, public, and watch events for a user
-- **`repo_releases`** — tracks new releases for a specific repository
+- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** — tracks push, create, release, public, and watch events for a user
+- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** — tracks new releases for a specific repository
 
 **配置** (`sources.github`, list of entries):
 
@@ -87,11 +87,11 @@ Fetches any Atom/RSS feed using the `feedparser` library. Tries multiple date fi
 
 - `category` — optional tag for grouping (e.g., `"programming"`, `"microblog"`)
 
-**提取的数据**: title, URL, author, content (from `summary`/`description`/`content` fields), feed name, category, and entry tags.
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: title, URL, author, content (from `summary`/`description`/`content` fields), feed name, category, and entry tags.
 
-## 红迪网
+## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
-**文件**: `src/scrapers/reddit.py`
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: `src/scrapers/reddit.py`
 
 Uses public, no-key Reddit endpoints. Subreddit listings and comments prefer `old.reddit.com` HTML because Reddit's unauthenticated JSON and RSS endpoints can intermittently block or fail:
 
@@ -138,13 +138,13 @@ Subreddits and users are fetched concurrently. Comments are sorted by score, lim
 
 ## 开放BB
 
-**文件**: `src/scrapers/openbb.py`
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: `src/scrapers/openbb.py`
 
 Uses the [OpenBB平台](https://www.openbb.co/platform) Python SDK via `obb.news.company()` to fetch company news for one or more ticker watchlists.
 
 The scraper imports `openbb` lazily. If the optional dependency is not installed, Horizon logs a warning and skips the source instead of failing the whole run.
 
-**配置** (`sources.openbb`):
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (`sources.openbb`):
 
 ```json
 {
@@ -175,13 +175,13 @@ Behavior:
 - Skips malformed rows, rows without URL/title/date, and items older than the current time window
 - Keeps fetching other watchlists if one provider call fails
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: provider-specific secrets are resolved by the OpenBB SDK from its own environment variables or settings file. Horizon does not pass those values directly.
+**证书**: provider-specific secrets are resolved by the OpenBB SDK from its own environment variables or settings file. Horizon does not pass those values directly.
 
 **提取的数据**: title, URL, author, published time, article body/excerpt, watchlist name, provider, category, and symbol list.
 
 ## 叽叽喳喳
 
-**文件**: `src/scrapers/twitter.py`
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: `src/scrapers/twitter.py`
 
 Uses the [阿皮菲](https://apify.com) platform to bypass Twitter's anti-scraping measures. The actor `altimis~scweet` is called via the Apify REST API.
 
@@ -190,7 +190,7 @@ Flow:
 2. Poll `/v2/actor-runs/{run_id}` until status is `SUCCEEDED` or a terminal failure
 3. GET `/v2/datasets/{dataset_id}/items` to retrieve results
 
-**配置** (`sources.twitter`):
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (`sources.twitter`):
 
 ```json
 {
@@ -215,6 +215,6 @@ Flow:
 - `actor_id` — Apify actor ID (default: `altimis~scweet`)
 - `apify_token_env` — environment variable name containing the Apify API token
 
-**验证**: Set `APIFY_TOKEN` in your `.env`. Get a token at [控制台.apify.com](https://console.apify.com/account/integrations).
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Set `APIFY_TOKEN` in your `.env`. Get a token at [控制台.apify.com](https://console.apify.com/account/integrations).
 
 **提取的数据**: tweet text, URL, author, publish time, likes, retweets, replies, views, and (optionally) reply-thread text appended under `--- Top Comments ---`.

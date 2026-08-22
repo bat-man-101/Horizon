@@ -13,7 +13,7 @@
 | HN / Reddit | Community-driven content aggregation | Fixed sources, user cannot customize |
 | **地平线枢纽** | **数据驱动的来源推荐和质量评估** | **没有内容托管，没有读者** |
 
-**核心护城河**: The daily operation of every Horizon user generates quality data for information sources (AI scores, signal-to-noise ratio, output frequency). When aggregated in the Hub, this data forms a **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** that no static recommendation list can provide.
+**核心护城河**: The daily operation of every Horizon user generates quality data for information sources (AI scores, signal-to-noise ratio, output frequency). When aggregated in the Hub, this data forms a **动态质量概况** that no static recommendation list can provide.
 
 ---
 
@@ -49,7 +49,7 @@
 
 Two core components:
 - **集线器服务器**: Data center + Web frontend, receiving reports, storing statistics, providing APIs and web pages.
-- **本地客户端（地平线向导）**: The sole entry point for users to manage information sources; every operation naturally generates data.
+- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: The sole entry point for users to manage information sources; every operation naturally generates data.
 
 ---
 
@@ -59,7 +59,7 @@ Two core components:
 
 The core interface users see when opening the Hub website.
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
+**页面结构**:
 
 - **顶部仪表板**: A row of statistics cards.
   - Total Sources | Field Categories | Contributors | Active Users
@@ -94,7 +94,7 @@ The detail page for each source, showing a complete data-driven profile.
 | Contributor | Who submitted this source | User submission records |
 | Date Added | When it was added to the Hub | Submission records |
 
-### 用户提交（贡献）
+### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 **提交流程**:
 
@@ -117,7 +117,7 @@ Hub Server
 
 ### 智能推荐（推荐）
 
-**应用场景**:
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
 
 1. **新用户冷启动**: Enter interest keywords ("AI", "Linux Kernel") to recommend the best source combination.
 2. **补充推荐**: Analyze existing config to recommend sources with complementary coverage and flag high-overlap sources.
@@ -156,9 +156,9 @@ After users select sources on the Hub website:
 | 🔥 Popular Contributor| A single source used by ≥ 50 people |
 | 👑 Core Contributor | Contributed ≥ 10 sources |
 
-### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+### 源健康监测
 
-**自动衰变检测** (Option A — Passive):
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (Option A — Passive):
 
 Hub server continuously tracks active user trends for each source. If usage drops continuously (e.g., >30% drop within 30 days), auto-mark with a ⚠️ warning.
 
@@ -181,7 +181,7 @@ Reported to the Hub, integrated with decay data for comprehensive judgment.
 
 ## 分布式代理操作系统
 
-### 类比
+### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 If the Horizon ecosystem is viewed as a **分布式代理操作系统**.
 

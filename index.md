@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-# Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+# 地平线
 
 <div id="lang-zh" class="lang-section" markdown="1">
 
@@ -32,7 +32,7 @@ title: Home
 
 <div id="lang-en" class="lang-section" markdown="1">
 
-Welcome to [Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.](https://github.com/thysrael/Horizon), an AI-driven information aggregation system.
+Welcome to [地平线](https://github.com/thysrael/Horizon), an AI-driven information aggregation system.
 
 ## 文档
 
