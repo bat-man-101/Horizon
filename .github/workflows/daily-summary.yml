@@ -61,16 +61,31 @@ jobs:
 
       # 推模式：构建完直接把 HTML POST 进 NAS（经 Cloudflare 隧道），
       # 不再让 NAS 去拉被 GFW 阻断的 github.io。需仓库 Secret: HORIZON_UPLOAD_TOKEN
+      # 修复：原版 curl -f 遇任何非 2xx 都会以退出码 22 失败且不输出状态码/响应体，
+      #   无法判断是密钥错(401/403)、路径错(404)还是服务端(5xx)。
+      #   现打印真实 HTTP 状态码与响应体 + 失败重试，且 continue-on-error 不拖垮核心日报任务。
       - name: Push to NAS (ymeet.store) via Cloudflare Tunnel
         if: ${{ env.HORIZON_UPLOAD_TOKEN != '' }}
+        continue-on-error: true  # 上云失败不应拖垮日报主任务（无人值守约定），错误仍以 ::error:: 展示
         env:
           HORIZON_UPLOAD_TOKEN: ${{ secrets.HORIZON_UPLOAD_TOKEN }}
         run: |
+          set -u
           F=$(ls docs/*/*/*/summary-zh.html 2>/dev/null | head -1)
-          if [ -z "$F" ]; then echo "summary-zh.html not found in docs/"; exit 1; fi
+          if [ -z "$F" ]; then echo "::error::summary-zh.html not found in docs/"; exit 1; fi
           Y=$(echo "$F" | cut -d/ -f2)
           M=$(echo "$F" | cut -d/ -f3)
           D=$(echo "$F" | cut -d/ -f4)
-          echo "Pushing $F -> /horizon-upload/$Y/$M/$D/summary-zh.html"
-          curl -fsS -X POST -H "X-Token: $HORIZON_UPLOAD_TOKEN" --data-binary "@$F" \
-            "https://ymeet.store/horizon-upload/$Y/$M/$D/summary-zh.html"
+          URL="https://ymeet.store/horizon-upload/$Y/$M/$D/summary-zh.html"
+          echo "Pushing $F -> $URL"
+          # 抓取真实 HTTP 状态码与响应体，便于区分 401/403(密钥) / 404(路径) / 5xx(服务端)
+          HTTP_CODE=$(curl -sS -o /tmp/nas_resp.txt -w '%{http_code}' \
+            --max-time 60 --retry 3 --retry-delay 5 --retry-connrefused \
+            -X POST -H "X-Token: $HORIZON_UPLOAD_TOKEN" \
+            --data-binary "@$F" "$URL") || true
+          echo "HTTP status: $HTTP_CODE"
+          if [ "$HTTP_CODE" != "200" ] && [ "$HTTP_CODE" != "201" ] && [ "$HTTP_CODE" != "204" ]; then
+            echo "::error::NAS upload 失败，HTTP $HTTP_CODE"
+            head -c 1000 /tmp/nas_resp.txt 2>/dev/null || true
+            exit 22   # 语义与原退出码一致
+          fi
