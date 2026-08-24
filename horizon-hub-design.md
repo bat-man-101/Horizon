@@ -1,23 +1,23 @@
-# Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+# HorizonHub Product Design Document
 
-## 定位
+## Positioning
 
-**一句话定位**: The information source marketplace for the Horizon ecosystem—driven by real community usage data for discovery, recommendation, and quality assessment.
+**One-sentence positioning**: The information source marketplace for the Horizon ecosystem—driven by real community usage data for discovery, recommendation, and quality assessment.
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
+**Difference from Competitors**:
 
 | Product | What it does | What it doesn't do |
 |---|---|---|
 | RSSHub | Turns websites without RSS into RSS (Pipe) | No quality assessment, no recommendations |
 | Feedly | RSS Reader with discovery features | No AI filtering, no personalized recommendations |
 | HN / Reddit | Community-driven content aggregation | Fixed sources, user cannot customize |
-| **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** | **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** | **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** |
+| **HorizonHub** | **Data-driven source recommendation & quality assessment** | **No content hosting, not a reader** |
 
-**核心护城河**: The daily operation of every Horizon user generates quality data for information sources (AI scores, signal-to-noise ratio, output frequency). When aggregated in the Hub, this data forms a **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** that no static recommendation list can provide.
+**Core Moat**: The daily operation of every Horizon user generates quality data for information sources (AI scores, signal-to-noise ratio, output frequency). When aggregated in the Hub, this data forms a **dynamic quality profile** that no static recommendation list can provide.
 
 ---
 
-## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+## 系统架构
 
 ```
 ┌──────────────────────────────────────────────────┐
@@ -48,23 +48,23 @@
 ```
 
 Two core components:
-- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Data center + Web frontend, receiving reports, storing statistics, providing APIs and web pages.
-- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: The sole entry point for users to manage information sources; every operation naturally generates data.
+- **Hub Server**: Data center + Web frontend, receiving reports, storing statistics, providing APIs and web pages.
+- **Local Client (horizon-wizard)**: The sole entry point for users to manage information sources; every operation naturally generates data.
 
 ---
 
-## 功能列表
+## Feature List
 
-### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+### Source Market (Browse)
 
 The core interface users see when opening the Hub website.
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
+**页面结构**:
 
-- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: A row of statistics cards.
+- **Top Dashboard**: A row of statistics cards.
   - Total Sources | Field Categories | Contributors | Active Users
 
-- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Each source has a card.
+- **Source Card Waterfall**: Each source has a card.
   - Source Name + Type Tags (RSS / Reddit / GitHub / Telegram / Twitter)
   - Color-coded Field Tags (AI Purple, Systems Blue, Security Red...)
   - One-sentence Bio (CN/EN)
@@ -72,16 +72,16 @@ The core interface users see when opening the Hub website.
   - Contributor Avatars
   - Badges: 🔥 Hot / ✨ New / ⚠️ Quality Dropped
 
-- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
+- **Filtering and Sorting**:
   - Filter by field / language / type
   - Sort by Popularity (Users) / Quality (AI Avg) / SNR / Latest Added
   - Keyword Search
 
-### 来源简介
+### Source Profile
 
 The detail page for each source, showing a complete data-driven profile.
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
+**Included Data**:
 
 | Metric | Description | Data Source |
 |---|---|---|
@@ -94,9 +94,9 @@ The detail page for each source, showing a complete data-driven profile.
 | Contributor | Who submitted this source | User submission records |
 | Date Added | When it was added to the Hub | Submission records |
 
-### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+### User Submission (Contribute)
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
+**Submission Process**:
 
 ```
 User (Hub Web or Local Client)
@@ -111,24 +111,24 @@ Hub Server
   → Quality Poor → Mark pending, notify maintainer for manual review
 ```
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
+**Channels**:
 - Hub Web Form (most intuitive)
 - Local Client Submission (one-click via `horizon-wizard`)
 
-### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+### Intelligent Recommendation (Recommend)
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
+**应用场景**:
 
-1. **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Enter interest keywords ("AI", "Linux Kernel") to recommend the best source combination.
-2. **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Analyze existing config to recommend sources with complementary coverage and flag high-overlap sources.
-3. **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (post-scale): "Users with similar tastes also read..."
+1. **新用户冷启动**: Enter interest keywords ("AI", "Linux Kernel") to recommend the best source combination.
+2. **Complementary Recommendation**: Analyze existing config to recommend sources with complementary coverage and flag high-overlap sources.
+3. **Collaborative Filtering** (post-scale): "Users with similar tastes also read..."
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
+**Input for Rec Algorithm**:
 - Source field tags
 - Content overlap between sources (calculated via deduplication data)
 - Usage patterns of user cohorts
 
-### 一键导出（Export）
+### One-click Export (Export)
 
 After users select sources on the Hub website:
 
@@ -136,18 +136,18 @@ After users select sources on the Hub website:
 - Download full config file
 - Generate `horizon-wizard` command → One-click import via terminal
 
-### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+### Contributor System (Community)
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
+**Contributor Leaderboard**:
 - Ranked by number of sources contributed.
 - Displays GitHub avatar + link + contribution count.
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
+**Contributor Homepage**:
 - Sources I submitted.
 - How many people use my sources in total.
 - Average quality score of my sources.
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
+**Badge System**:
 
 | Badge | Condition |
 |---|---|
@@ -156,13 +156,13 @@ After users select sources on the Hub website:
 | 🔥 Popular Contributor| A single source used by ≥ 50 people |
 | 👑 Core Contributor | Contributed ≥ 10 sources |
 
-### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+### Source Health Monitoring
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (Option A — Passive):
+**Automatic Decay Detection** (Option A — Passive):
 
 Hub server continuously tracks active user trends for each source. If usage drops continuously (e.g., >30% drop within 30 days), auto-mark with a ⚠️ warning.
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (Option B — Active):
+**User Feedback Collection** (Option B — Active):
 
 When a user deletes or disables a source via `horizon-wizard`, a popup asks for optional feedback:
 
@@ -179,21 +179,21 @@ Reported to the Hub, integrated with decay data for comprehensive judgment.
 
 ---
 
-## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+## Distributed Agent Operating System
 
-### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+### Analogy
 
-If the Horizon ecosystem is viewed as a **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**.
+If the Horizon ecosystem is viewed as a **Distributed Agent Operating System**.
 
-A single Horizon instance is like a "standalone machine" managing one user's information flow. HorizonHub acts as the **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** that coordinates all users' Agents into a whole, allowing decentralized individual judgments to converge into collective intelligence.
+A single Horizon instance is like a "standalone machine" managing one user's information flow. HorizonHub acts as the **Control Plane** that coordinates all users' Agents into a whole, allowing decentralized individual judgments to converge into collective intelligence.
 
-### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+### Why "Emergence"?
 
 Each Agent runs independently and is unaware of others, but:
-- **多样性**: Different users subscribe to sources in different fields, naturally providing diverse perspectives.
-- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Each Agent's AI scoring is unaffected by other users.
-- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: The Hub aggregates all scores to form a global quality signal more accurate than any single Agent.
+- **Diversity**: Different users subscribe to sources in different fields, naturally providing diverse perspectives.
+- **Independence**: Each Agent's AI scoring is unaffected by other users.
+- **Aggregation**: The Hub aggregates all scores to form a global quality signal more accurate than any single Agent.
 
-This is not designed intelligence, but rather consensus **新兴的** from a large number of independent judgments—mathematically aligned with the Condorcet Jury Theorem.
+This is not designed intelligence, but rather consensus **emerging** from a large number of independent judgments—mathematically aligned with the Condorcet Jury Theorem.
 
 ---
