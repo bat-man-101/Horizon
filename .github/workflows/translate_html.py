@@ -28,7 +28,9 @@ def translate_text(text):
         return text
     try:
         result = translator.translate(text)
-        if result and result != text:
+        # 目标 zh-CN：合法译文必含中文。gtx 接口被限流时常返回 "Error 500 (Server Error)!!1500..."
+        # 这类纯英文错误页文本，若直接采用会污染整份日报的标题；不含 CJK 一律视为失败，保留原文。
+        if result and result != text and re.search(r'[\u4e00-\u9fff]', result):
             return result
     except:
         pass
