@@ -23,7 +23,8 @@ def _machine_translate(text: str) -> Optional[str]:
             from deep_translator import GoogleTranslator
             _translator = GoogleTranslator(source='auto', target='zh-CN')
         result = _translator.translate(text)
-        if result and result != text:
+        # 目标语言为 zh-CN；结果不含 CJK 说明是错误页文本/翻译失败，回退保留原文
+        if result and result != text and re.search(r"[\u4e00-\u9fff]", result):
             return result
     except Exception:
         pass

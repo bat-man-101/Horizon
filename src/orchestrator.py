@@ -776,7 +776,10 @@ class HorizonOrchestrator:
                     if resp.status_code == 200:
                         data = resp.json()
                         zh_text = data[0][0][0] if data and data[0] and data[0][0] else ""
-                        if zh_text:
+                        # Google 免费 gtx 接口被限流时常返回 "Error 500 (Server Error)!!1500..." 错误页
+                        # 文本，会被误当译文写入 title_zh，进而污染整份日报标题。目标语言为 zh-CN，
+                        # 合法译文必含 CJK，不含 CJK 一律视为翻译失败，保持 title_zh 未设置（回退原文）。
+                        if zh_text and any("\u4e00" <= c <= "\u9fff" for c in zh_text):
                             item.metadata["title_zh"] = zh_text
                             translated += 1
                 except Exception:
