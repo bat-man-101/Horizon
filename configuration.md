@@ -76,7 +76,7 @@ Common API key variable names:
 }
 ```
 
-**Azure 开放人工智能**:
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
 
 ```json
 {
@@ -743,4 +743,4 @@ uv run horizon-mcp
 
 Available tools include `hz_validate_config`, `hz_fetch_items`, `hz_score_items`, `hz_filter_items`, `hz_enrich_items`, `hz_generate_summary`, and `hz_run_pipeline`.
 
-See [Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.](../src/mcp/README.md) for the full tool reference and [`src/mcp/integration.md`](../src/mcp/integration.md) for client setup.
+See [`src/mcp/README.md`](../src/mcp/README.md) for the full tool reference and [Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.](../src/mcp/integration.md) for client setup.

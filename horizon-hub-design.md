@@ -1,8 +1,8 @@
 # Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
-## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+## 定位
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: The information source marketplace for the Horizon ecosystem—driven by real community usage data for discovery, recommendation, and quality assessment.
+**一句话定位**: The information source marketplace for the Horizon ecosystem—driven by real community usage data for discovery, recommendation, and quality assessment.
 
 **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
 
@@ -13,7 +13,7 @@
 | HN / Reddit | Community-driven content aggregation | Fixed sources, user cannot customize |
 | **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** | **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** | **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** |
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: The daily operation of every Horizon user generates quality data for information sources (AI scores, signal-to-noise ratio, output frequency). When aggregated in the Hub, this data forms a **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** that no static recommendation list can provide.
+**核心护城河**: The daily operation of every Horizon user generates quality data for information sources (AI scores, signal-to-noise ratio, output frequency). When aggregated in the Hub, this data forms a **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** that no static recommendation list can provide.
 
 ---
 
@@ -53,7 +53,7 @@ Two core components:
 
 ---
 
-## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+## 功能列表
 
 ### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
@@ -77,7 +77,7 @@ The core interface users see when opening the Hub website.
   - Sort by Popularity (Users) / Quality (AI Avg) / SNR / Latest Added
   - Keyword Search
 
-### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+### 来源简介
 
 The detail page for each source, showing a complete data-driven profile.
 
@@ -123,12 +123,12 @@ Hub Server
 2. **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Analyze existing config to recommend sources with complementary coverage and flag high-overlap sources.
 3. **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (post-scale): "Users with similar tastes also read..."
 
-**Rec 算法的输入**:
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**:
 - Source field tags
 - Content overlap between sources (calculated via deduplication data)
 - Usage patterns of user cohorts
 
-### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
+### 一键导出（Export）
 
 After users select sources on the Hub website:
 
@@ -190,10 +190,10 @@ A single Horizon instance is like a "standalone machine" managing one user's inf
 ### Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 Each Agent runs independently and is unaware of others, but:
-- **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Different users subscribe to sources in different fields, naturally providing diverse perspectives.
+- **多样性**: Different users subscribe to sources in different fields, naturally providing diverse perspectives.
 - **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Each Agent's AI scoring is unaffected by other users.
 - **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: The Hub aggregates all scores to form a global quality signal more accurate than any single Agent.
 
-This is not designed intelligence, but rather consensus **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** from a large number of independent judgments—mathematically aligned with the Condorcet Jury Theorem.
+This is not designed intelligence, but rather consensus **新兴的** from a large number of independent judgments—mathematically aligned with the Condorcet Jury Theorem.
 
 ---

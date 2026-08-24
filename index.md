@@ -7,7 +7,7 @@ title: Home
 
 <div id="lang-zh" class="lang-section" markdown="1">
 
-欢迎来到 [Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.](https://github.com/thysrael/Horizon)，一个 AI 驱动的信息聚合系统。
+欢迎来到 [地平线](https://github.com/thysrael/Horizon)，一个 AI 驱动的信息聚合系统。
 
 ## 文档
 
@@ -37,7 +37,7 @@ Welcome to [Error 500 (Server Error)!!1500.That’s an error.There was an error.
 ## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
 - [Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.](configuration) — AI providers, information sources, filtering, and environment variable substitution
-- [Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.](scrapers) — How Horizon collects content from GitHub, Hacker News, RSS, and Reddit
+- [源码抓取器](scrapers) — How Horizon collects content from GitHub, Hacker News, RSS, and Reddit
 - [Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.](scoring) — AI-based content analysis and the 0-10 scoring scale
 
 ## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.

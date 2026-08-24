@@ -37,7 +37,7 @@ Stories and their comments are fetched concurrently. For each story, the top 5 c
 
 **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: `src/scrapers/github.py`
 
-Uses the [Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.](https://api.github.com):
+Uses the [GitHub REST API](https://api.github.com):
 
 - `GET /users/{username}/events/public` — user activity events
 - `GET /repos/{owner}/{repo}/releases` — repository releases
@@ -74,7 +74,7 @@ Two source types are supported:
 
 Fetches any Atom/RSS feed using the `feedparser` library. Tries multiple date fields (`published`, `updated`, `created`) with fallback parsing.
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (`sources.rss`, list of entries):
+**配置** (`sources.rss`, list of entries):
 
 ```json
 {
@@ -91,7 +91,7 @@ Fetches any Atom/RSS feed using the `feedparser` library. Tries multiple date fi
 
 ## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: `src/scrapers/reddit.py`
+**文件**: `src/scrapers/reddit.py`
 
 Uses public, no-key Reddit endpoints. Subreddit listings and comments prefer `old.reddit.com` HTML because Reddit's unauthenticated JSON and RSS endpoints can intermittently block or fail:
 
@@ -134,7 +134,7 @@ Subreddits and users are fetched concurrently. Comments are sorted by score, lim
 
 **Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: Detects HTTP 429 responses on JSON requests, reads the `Retry-After` header, waits, and retries once. Uses browser-like request headers for no-key public access.
 
-**提取的数据**: title, URL, author, score, upvote ratio, comment count, subreddit, flair, self-text, and top comments.
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: title, URL, author, score, upvote ratio, comment count, subreddit, flair, self-text, and top comments.
 
 ## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
@@ -144,7 +144,7 @@ Uses the [Error 500 (Server Error)!!1500.That’s an error.There was an error. P
 
 The scraper imports `openbb` lazily. If the optional dependency is not installed, Horizon logs a warning and skips the source instead of failing the whole run.
 
-**配置** (`sources.openbb`):
+**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.** (`sources.openbb`):
 
 ```json
 {
@@ -175,9 +175,9 @@ Behavior:
 - Skips malformed rows, rows without URL/title/date, and items older than the current time window
 - Keeps fetching other watchlists if one provider call fails
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: provider-specific secrets are resolved by the OpenBB SDK from its own environment variables or settings file. Horizon does not pass those values directly.
+**证书**: provider-specific secrets are resolved by the OpenBB SDK from its own environment variables or settings file. Horizon does not pass those values directly.
 
-**Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.**: title, URL, author, published time, article body/excerpt, watchlist name, provider, category, and symbol list.
+**提取的数据**: title, URL, author, published time, article body/excerpt, watchlist name, provider, category, and symbol list.
 
 ## Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.
 
