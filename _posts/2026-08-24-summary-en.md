@@ -5,111 +5,102 @@ date: 2026-08-24
 lang: en
 ---
 
-> From 61 items, 14 important content pieces were selected
+> From 544 items, 15 important content pieces were selected
 
 ---
 
 **📌 Other（3）**
-  1. [Everything I own, owned](#item-1) ⭐️ ?/10
-  2. [How I find problems to solve as a staff engineer](#item-2) ⭐️ ?/10
-  3. [Anthropic's best AI model struggles to attract users as cheaper tools thrive](#item-3) ⭐️ ?/10
+  1. [iCloud+ Hide My Email addresses will remain on icloud.com](#item-1) ⭐️ ?/10
+  2. [Xiaomi: New CPU matches Apple cores single threaded, much faster multithreaded](#item-2) ⭐️ ?/10
+  3. [MS Paint and Photos inivisibly watermark even locally generated output with GUID](#item-3) ⭐️ ?/10
 
 **🤖 AI News（3）**
-  4. [Anthropic’s best AI model struggles to attract users as cheaper tools thrive](#item-4) ⭐️ ?/10
-  5. [Quoting Drew Breunig](#item-5) ⭐️ ?/10
-  6. [匿名牛来大模型被扒出智谱血缘，也有人怀疑Cursor拿开源GLM训的](#item-6) ⭐️ ?/10
+  4. [llm-anthropic 0.27](#item-4) ⭐️ ?/10
+  5. [Your executable is a SQLite database](#item-5) ⭐️ ?/10
+  6. [Advancing price-performance for developers with GPT‑5.6 in Kiro](#item-6) ⭐️ ?/10
 
 **🔬 Semiconductors（1）**
   7. [AgentX - InferenceXv3: Does CUDA Moat Hold up in Agentic Inferencing?](#item-7) ⭐️ ?/10
 
 **₿ Crypto（1）**
-  8. [Regulation Crypto is here: State of Crypto](#item-8) ⭐️ ?/10
+  8. [Bitcoin nears $80,000, but analysts say the next pullback will be key](#item-8) ⭐️ ?/10
 
 **🚀 Tech Trends（3）**
-  9. [Who’s behind the new ‘stealth model’ Ox Alpha?](#item-9) ⭐️ ?/10
-  10. [Uber faces fine of nearly $1B over automated driver suspensions](#item-10) ⭐️ ?/10
-  11. [Linkdaze’s smart calendar is built to run a household, not just track a schedule](#item-11) ⭐️ ?/10
+  9. [Oura is reportedly eyeing a September IPO that could value it at more than $16B](#item-9) ⭐️ ?/10
+  10. [Trump bought SpaceX shares two weeks after blockbuster IPO](#item-10) ⭐️ ?/10
+  11. [Zillow and Redfin settle FTC antitrust case](#item-11) ⭐️ ?/10
 
-**📰 Top News（3）**
-  12. [Why students are being paid £2,000 to play computer games](#item-12) ⭐️ ?/10
-  13. [Pope Leo lifts San Marino up as model for republics - The Arkansas Democrat-Gazette](#item-13) ⭐️ ?/10
-  14. [BRICS News Digest for the previous week - TV BRICS](#item-14) ⭐️ ?/10
+**📄 Research（2）**
+  12. [SDAD: Spec-Driven Agentic Development for the AI-Native SDLC](#item-12) ⭐️ ?/10
+  13. [PrimeAgentOrchestrator: Memory-Primed Agent Spawning for Personal AI Infrastructure](#item-13) ⭐️ ?/10
+
+**📰 Top News（2）**
+  14. [Sharing dangerous driving videos is 'truly reprehensible', PM says](#item-14) ⭐️ ?/10
+  15. [Twitch and Amazon face legal action over using livestreams to train AI](#item-15) ⭐️ ?/10
 ---
 
-## 📌其他
+## 📌 Other
 
 <a id="item-1"></a>
-## [Everything I own, owned](https://schlarp.com/posts/everything-i-own-owned/) ⭐️ ?/10
+## [iCloud+ Hide My Email addresses will remain on icloud.com](https://developer.apple.com/news/?id=1ptvdtcm) ⭐️ ?/10
 
-https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20260823225933&#x2F;https:&#x2F;&#x2F;schlarp.c...
 
-hackernews · schlarpc · Aug 23, 22:41 · [Discussion](https://news.ycombinator.com/item?id=49413320)
+
+hackernews · K7PJP · Aug 24, 22:13 · [Discussion](https://news.ycombinator.com/item?id=49426564)
 
 ---
 
 <a id="item-2"></a>
-## [作为一名高级工程师，我如何找到需要解决的问题](https://lalitm.com/post/find-problems-staff-engineer/) ⭐️ ?/10
+## [Xiaomi: New CPU matches Apple cores single threaded, much faster multithreaded](https://twitter.com/lemire/status/2091894299289874926) ⭐️ ?/10
 
+https:&#x2F;&#x2F;xcancel.com&#x2F;lemire&#x2F;status&#x2F;2091894299289874926
 
-
-hackernews · vanpra · Aug 23, 19:23 · [Discussion](https://news.ycombinator.com/item?id=49411643)
+hackernews · tosh · Aug 24, 15:08 · [Discussion](https://news.ycombinator.com/item?id=49420873)
 
 ---
 
 <a id="item-3"></a>
-## [Anthropic's best AI model struggles to attract users as cheaper tools thrive](https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245) ⭐️ ?/10
+## [MS Paint and Photos inivisibly watermark even locally generated output with GUID](https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/) ⭐️ ?/10
 
 
 
-hackernews · naves · Aug 23, 18:16 · [Discussion](https://news.ycombinator.com/item?id=49411102)
+hackernews · ComputerGuru · Aug 24, 15:28 · [Discussion](https://news.ycombinator.com/item?id=49421158)
 
 ---
 
 ## 🤖 AI News
 
 <a id="item-4"></a>
-## [随着更便宜的工具蓬勃发展，Anthropic 最好的人工智能模型难以吸引用户](https://simonwillison.net/2026/Aug/23/anthropics-best-ai-model-struggles-to-attract-users-as-cheaper-t/) ⭐️ ?/10
+## [llm-anthropic 0.27](https://simonwillison.net/2026/Aug/24/llm-anthropic/) ⭐️ ?/10
 
-Anthropic’s best AI model struggles to attract users as cheaper tools thrive
-A few interesting numbers in this FT story gathered from "people with knowledge of the matter":
+Release: llm-anthropic 0.27
+        This release of the Anthropic plugin for LLM mainly provides compatibility with the recently released anthropic v1.0.0 Python library, which switches from httpx to httpx2. OpenAI made the same change in their v3.0.0 release two weeks ago.
+Anthropic provide this migration guide for upgrading to 1.0, so I prompted Fable 5 in Claude Code with:
 
-Anthropic's "annualized revenue" for July is up to $65bn - it was $47bn in May, and I collected more historic numbers here.
-Anthropic expect Q3 to be profitable according to the same model they used to declare Q2 profitable. "It also told investors that it had 6,000 customers that spend $100,000 annually or more."
-As for Ope
+Upgrade to anthropic&gt;=1 - read https://raw.githubusercontent.com/anthropics/anthropic-sdk-python/refs/heads/main/MIGR
 
-rss · Simon Willison · Aug 23, 20:24
+rss · Simon Willison · Aug 24, 16:27
 
 ---
 
 <a id="item-5"></a>
-## [引用德鲁·布罗伊尼格的话](https://simonwillison.net/2026/Aug/23/drew-breunig/) ⭐️ ?/10
+## [Your executable is a SQLite database](https://simonwillison.net/2026/Aug/24/your-executable-is-a-sqlite-database/) ⭐️ ?/10
 
-Prior to Fable, it felt silly to waste too much time improving your coding harness or context strategies. A new model would arrive at the same price (or cheaper!) and paper over most of your problems.
-But then Fable landed. It was (and still is!) incredible. But the cost was so high and Opus was good enough (as was 5.6, K3, and even GLM) for most of the code we needed.
-So we started to think about what work went where.
-&mdash; Drew Breunig, Fable &amp; The End of the Free Lunch
+Your executable is a SQLite database
+Farid Zakaria describes a neat Linux pattern for creating a SQLite database file that can be directly used as an executable binary.
+The trick sets the SQLite file format's 4-byte application ID (68 bytes into the file) to SELF, standing for Structured Executable &amp; Linkable Format.  The various components of the ELF executable format are then arranged into a number of different SQLite tables, using this schema.
+Their self-exec interpreter (C code here) can
 
-    Tags: drew-b
-
-rss · Simon Willison · Aug 23, 19:55
+rss · Simon Willison · Aug 24, 11:38
 
 ---
 
 <a id="item-6"></a>
-## [匿名牛来大模型被扒出智谱血缘，也有人怀疑Cursor拿开源GLM训的](https://mp.weixin.qq.com/s?__biz=MzIzNjc1NzUzMw==&mid=2247914338&idx=2&sn=2ff9bfd49e1df185bba2332ffe2db8de) ⭐️ ?/10
+## [Advancing price-performance for developers with GPT‑5.6 in Kiro](https://openai.com/index/gpt-5-6-in-kiro) ⭐️ ?/10
 
-Tokenizer、视频编码、API报错全扒一遍
+GPT‑5.6 is now available in Kiro, helping developers plan, build, review, and test software with better price-performance.
 
---- From rss ---
-机器人开卡丁车连续过弯，一镜到底全自主！
-
---- From rss ---
-3个岗位（含实习），不设边界
-
---- From rss ---
-三大奇点：软件奇点、经济奇点、科斯奇点。
-
-rss · 量子位 · Aug 23, 05:30
+rss · OpenAI Blog · Aug 24, 12:00
 
 ---
 
@@ -127,68 +118,81 @@ rss · Semianalysis · Aug 24, 00:19
 ## ₿ Crypto
 
 <a id="item-8"></a>
-## [Regulation Crypto is here: State of Crypto](https://www.coindesk.com/policy/2026/08/23/regulation-crypto-is-here-state-of-crypto) ⭐️ ?/10
+## [Bitcoin nears $80,000, but analysts say the next pullback will be key](https://www.coindesk.com/markets/2026/08/24/bitcoin-nears-usd80-000-but-analysts-say-the-next-pullback-will-be-key) ⭐️ ?/10
 
 
 
-rss · CoinDesk · Aug 23, 18:30
+rss · CoinDesk · Aug 24, 19:36
 
 ---
 
 ## 🚀 Tech Trends
 
 <a id="item-9"></a>
-## [Who’s behind the new ‘stealth model’ Ox Alpha?](https://techcrunch.com/2026/08/23/whos-behind-the-new-stealth-model-ox-alpha/) ⭐️ ?/10
+## [Oura is reportedly eyeing a September IPO that could value it at more than $16B](https://techcrunch.com/2026/08/24/oura-is-reportedly-eyeing-a-september-ipo-that-could-value-it-at-more-than-16b/) ⭐️ ?/10
 
-A mysterious new AI model called Ox Alpha has driven certain corners of the internet into a frenzy of speculation.
+We all knew it was coming. The expected valuation may surprise, though.
 
-rss · 36氪 - 科技 · Aug 23, 20:01
+rss · 36氪 - 科技 · Aug 24, 23:05
 
 ---
 
 <a id="item-10"></a>
-## [Uber faces fine of nearly $1B over automated driver suspensions](https://techcrunch.com/2026/08/23/uber-faces-fine-of-nearly-1b-over-automated-driver-suspensions/) ⭐️ ?/10
+## [Trump bought SpaceX shares two weeks after blockbuster IPO](https://techcrunch.com/2026/08/24/trump-bought-spacex-shares-two-weeks-after-blockbuster-ipo/) ⭐️ ?/10
 
-The Dutch Data Protection Authority is fining Uber €825 million in the second largest penalty issued under Europe’s GDPR.
+The president bought when the stock was in the mid-$150 range. SpaceX finished trading on Monday back at its IPO price of $135.
 
-rss · 36氪 - 科技 · Aug 23, 19:30
+rss · 36氪 - 科技 · Aug 24, 21:24
 
 ---
 
 <a id="item-11"></a>
-## [Linkdaze’s smart calendar is built to run a household, not just track a schedule](https://techcrunch.com/2026/08/23/linkdazes-smart-calendar-is-built-to-run-a-household-not-just-track-a-schedule/) ⭐️ ?/10
+## [Zillow and Redfin settle FTC antitrust case](https://techcrunch.com/2026/08/24/zillow-and-redfin-settle-ftc-antitrust-case/) ⭐️ ?/10
 
-Linkdaze's smart digital calendar stands out for not putting its features behind a paywall, including an AI meal planner tool.
+Zillow and Redfin reached a settlement with the FTC, which requires Redfin to reenter the rental advertising business.
 
-rss · 36氪 - 科技 · Aug 23, 19:14
+rss · 36氪 - 科技 · Aug 24, 20:45
+
+---
+
+## 📄 Research
+
+<a id="item-12"></a>
+## [SDAD: Spec-Driven Agentic Development for the AI-Native SDLC](https://arxiv.org/abs/2608.20341) ⭐️ ?/10
+
+arXiv:2608.20341v1 Announce Type: new 
+Abstract: Frontier coding agents backed by large language models with context windows from hundreds of thousands to millions of tokens are restructuring the Software Development Life Cycle (SDLC). Rich context handling and multi-step reasoning now allow substantial Functional Requirement Documents (FRDs) and repository context to be ingested in a single workflow, making specification quality the execution fuel for autonomous delivery. This report formalises
+
+rss · arXiv AI · Aug 24, 04:00
+
+---
+
+<a id="item-13"></a>
+## [PrimeAgentOrchestrator: Memory-Primed Agent Spawning for Personal AI Infrastructure](https://arxiv.org/abs/2608.20342) ⭐️ ?/10
+
+arXiv:2608.20342v1 Announce Type: new 
+Abstract: Large language model (LLM) coding agents start each session with an empty context window, discarding accumulated knowledge from prior work. We present PrimeAgentOrchestrator (PAO), a system that spawns new instances of Claude Code -- Anthropic's terminal-based coding agent -- pre-loaded with relevant memories compiled from the user's existing personal databases. At spawn time, PAO queries two independently-operated memory backends in parallel (a P
+
+rss · arXiv AI · Aug 24, 04:00
 
 ---
 
 ## 📰 Top News
 
-<a id="item-12"></a>
-## [Why students are being paid £2,000 to play computer games](https://www.bbc.co.uk/news/articles/cz647wlvg1do?at_medium=RSS&at_campaign=rss) ⭐️ ?/10
-
-Roehampton University offers students £2,000 a year to play esports alongside their studies.
-
-rss · BBC Technology · Aug 23, 23:23
-
----
-
-<a id="item-13"></a>
-## [Pope Leo lifts San Marino up as model for republics - The Arkansas Democrat-Gazette](https://news.google.com/rss/articles/CBMilAFBVV95cUxQd0tPSC1xV2trSGtyYTE5LTB3bVRNRzZrckpEVy1iUnRncjYwWWhndVhJU19nT3J5ZzNFcGo0U2ZoVG5jdkp1b3VDWmFuV2UwYktRc1lKZjl4VHIzcC1zcUZBOFI5ZVhiUEZ6NE5COXRqSmJhWVJSUHBWTnRqUDhOMWI0dFlFa1VyT0JFcWpWbjRIVjNs?oc=5) ⭐️ ?/10
-
-Pope Leo lifts San Marino up as model for republics&nbsp;&nbsp;The Arkansas Democrat-Gazette
-
-google_news · The Arkansas Democrat-Gazette · Aug 23, 08:25
-
----
-
 <a id="item-14"></a>
-## [BRICS News Digest for the previous week - TV BRICS](https://news.google.com/rss/articles/CBMihgFBVV95cUxOS2hLeHRCZG84WVp4UFJsNUdDM0tnclN1T09faWZPU09mWWNJX1puVjAxbVVXRWpqOW1BOVRnT0NMT3FnR0UyaWNqRlFJM2ZRdW9Pa2xTdU1HMUhDVFpUaVd1dHhfRV9meGoxLVdaTVRJREdNRThNRWxCZ2RPd2hIOVA2TTl3Zw?oc=5) ⭐️ ?/10
+## [Sharing dangerous driving videos is 'truly reprehensible', PM says](https://www.bbc.co.uk/news/articles/ce308l1w5q5o?at_medium=RSS&at_campaign=rss) ⭐️ ?/10
 
-BRICS News Digest for the previous week&nbsp;&nbsp;TV BRICS
+His comments come as the government urged TikTok and other social media firms to remove wrong-way driving videos.
 
-google_news · TV BRICS · Aug 23, 16:03
+rss · BBC Technology · Aug 24, 16:03
+
+---
+
+<a id="item-15"></a>
+## [Twitch and Amazon face legal action over using livestreams to train AI](https://www.bbc.co.uk/news/articles/c70ljqk5kjqo?at_medium=RSS&at_campaign=rss) ⭐️ ?/10
+
+The lawsuit alleges Twitch used streamers' videos to train AI without their permission or proper compensation.
+
+rss · BBC Technology · Aug 24, 13:09
 
 ---

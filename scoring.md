@@ -33,11 +33,11 @@ The AI evaluates each item based on:
 - **Potential impact** — how broadly this affects software engineering, AI/ML, or systems research
 - **Quality of writing/presentation** — clarity, structure, thoroughness
 - **Community discussion** — insightful comments, diverse viewpoints, substantive debates
-- **参与信号** — high upvotes/favorites paired with substantive discussion (not just raw numbers)
+- **Engagement signals** — high upvotes/favorites paired with substantive discussion (not just raw numbers)
 
 Engagement metadata is source-specific: HN provides score and comment count, Reddit provides upvote ratio and comment count.
 
-## 过滤
+## Filtering
 
 After scoring, items are filtered by `filtering.ai_score_threshold` (default: `7.0`) and sorted by score descending. Optional balanced digest quotas are then applied before enrichment.
 
@@ -69,7 +69,7 @@ Items that pass the score threshold and any balanced digest limits go through a 
 
 1. **Concept extraction** — AI identifies 1-3 technical concepts in the item that may need explanation.
 2. **Web search** — Each concept is searched via DuckDuckGo to gather grounding context.
-3. **结构化分析** — The item content and search results are sent to AI, which produces:
+3. **Structured analysis** — The item content and search results are sent to AI, which produces:
    - `whats_new` — what specifically happened or changed
    - `why_it_matters` — significance and impact
    - `key_details` — notable technical details or caveats

@@ -17,7 +17,7 @@
 
 ---
 
-## 系统架构
+## System Architecture
 
 ```
 ┌──────────────────────────────────────────────────┐
@@ -59,7 +59,7 @@ Two core components:
 
 The core interface users see when opening the Hub website.
 
-**页面结构**:
+**Page Structure**:
 
 - **Top Dashboard**: A row of statistics cards.
   - Total Sources | Field Categories | Contributors | Active Users
@@ -117,9 +117,9 @@ Hub Server
 
 ### Intelligent Recommendation (Recommend)
 
-**应用场景**:
+**Scenarios**:
 
-1. **新用户冷启动**: Enter interest keywords ("AI", "Linux Kernel") to recommend the best source combination.
+1. **New User Cold Start**: Enter interest keywords ("AI", "Linux Kernel") to recommend the best source combination.
 2. **Complementary Recommendation**: Analyze existing config to recommend sources with complementary coverage and flag high-overlap sources.
 3. **Collaborative Filtering** (post-scale): "Users with similar tastes also read..."
 
