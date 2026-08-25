@@ -15,7 +15,7 @@ After fetching content from all sources, Horizon uses an AI model to score each 
 4. **Response parsing** — The AI response is parsed as JSON (with fallbacks for code-block-wrapped JSON). Each item gets: `ai_score` (float), `ai_reason` (string), `ai_summary` (string), and `ai_tags` (list).
 5. **Retry** — Failed AI calls are retried up to 3 times with exponential backoff (2-10 seconds).
 
-## Scoring Scale
+## 评分标准
 
 | Score | Tier | Description |
 |-------|------|-------------|
@@ -68,7 +68,7 @@ Items scoring 9.0 or above are featured in the "Today's Highlights" section of t
 Items that pass the score threshold and any balanced digest limits go through a second AI pass for enrichment (`src/ai/enricher.py`):
 
 1. **Concept extraction** — AI identifies 1-3 technical concepts in the item that may need explanation.
-2. **Web search** — Each concept is searched via DuckDuckGo to gather grounding context.
+2. **网页搜索** — Each concept is searched via DuckDuckGo to gather grounding context.
 3. **Structured analysis** — The item content and search results are sent to AI, which produces:
    - `whats_new` — what specifically happened or changed
    - `why_it_matters` — significance and impact

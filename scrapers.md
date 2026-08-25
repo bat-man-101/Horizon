@@ -138,7 +138,7 @@ Subreddits and users are fetched concurrently. Comments are sorted by score, lim
 
 ## OpenBB
 
-**File**: `src/scrapers/openbb.py`
+**文件**: `src/scrapers/openbb.py`
 
 Uses the [OpenBB Platform](https://www.openbb.co/platform) Python SDK via `obb.news.company()` to fetch company news for one or more ticker watchlists.
 
