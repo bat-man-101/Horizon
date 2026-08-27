@@ -4,8 +4,8 @@ Horizon 支持两种 Twitter 抓取方式：
 
 | 方式 | 成本 | 稳定性 | 适用场景 |
 |------|------|--------|----------|
-| **Apify** (默认) | 需订阅 ($49/月起) | ⭐⭐⭐ 高 | 生产环境、大量账号 |
-| **Playwright + Cookie** (免费) | 免费 | ⭐⭐ 中 | 个人使用、少量账号 |
+| **阿皮菲** (默认) | 需订阅 ($49/月起) | ⭐⭐⭐ 高 | 生产环境、大量账号 |
+| **剧作家+饼干** (免费) | 免费 | ⭐⭐ 中 | 个人使用、少量账号 |
 
 本文档介绍免费方案的配置方法。
 
@@ -25,14 +25,14 @@ uv run playwright install chromium
 ### 方法一：浏览器扩展（推荐）
 
 1. 用 Chrome/Edge/Firefox 登录 [x.com](https://x.com)
-2. 安装扩展 **"Cookie-Editor"** 或 **"Get cookies.txt LOCALLY"**
+2. 安装扩展 **“Cookie 编辑器”** 或 **“在本地获取 cookies.txt”**
 3. 在 x.com 页面打开扩展，导出为 **JSON 格式**
 4. 保存到 `data/x_cookies_1.json`
 
 ### 方法二：开发者工具
 
 1. 登录 x.com 后按 `F12` 打开开发者工具
-2. 切换到 **Application (应用)** → **Cookies** → `https://x.com`
+2. 切换到 **Application (应用)** → **曲奇饼** → `https://x.com`
 3. 找到以下关键 Cookie（名称可能略有不同）：
    - `auth_token`
    - `ct0`
