@@ -59,6 +59,7 @@ _SOURCE_CATEGORY_TO_GROUP = {
     "papers": "研究",
     "crypto": "crypto",
     "semiconductors": "半导体",
+    "solopreneur": "一人公司",
 }
 
 # Display names and emojis for each group (Chinese)
@@ -70,6 +71,7 @@ _CATEGORY_DISPLAY_ZH: Dict[str, tuple[str, str]] = {
     "研究": ("📄", "论文研究"),
     "crypto": ("₿", "加密资产"),
     "半导体": ("🔬", "半导体"),
+    "一人公司": ("💡", "一人公司"),
     "other": ("📌", "其他"),
 }
 
@@ -82,6 +84,7 @@ _CATEGORY_DISPLAY_EN: Dict[str, tuple[str, str]] = {
     "研究": ("📄", "Research"),
     "crypto": ("₿", "Crypto"),
     "半导体": ("🔬", "Semiconductors"),
+    "一人公司": ("💡", "Solopreneur"),
     "other": ("📌", "Other"),
 }
 

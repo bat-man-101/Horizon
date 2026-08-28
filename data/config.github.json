@@ -49,7 +49,10 @@
       {"name": "Papers With Code", "url": "https://feeds.feedburner.com/PapersWithCode", "enabled": true, "category": "research"},
       {"name": "澎湃新闻", "url": "https://www.thepaper.cn/rss/tech.xml", "enabled": true, "category": "news"},
       {"name": "BBC Technology", "url": "https://feeds.bbci.co.uk/news/technology/rss.xml", "enabled": true, "category": "news"},
-      {"name": "AnandTech", "url": "https://www.anandtech.com/rss", "enabled": true, "category": "semiconductors"}
+      {"name": "AnandTech", "url": "https://www.anandtech.com/rss", "enabled": true, "category": "semiconductors"},
+      {"name": "Google News - 一人公司", "url": "https://news.google.com/rss/search?q=%E4%B8%80%E4%BA%BA%E5%85%AC%E5%8F%B8+OR+%E7%8B%AC%E7%AB%8B%E5%BC%80%E5%8F%91%E8%80%85+OR+%E5%87%BA%E6%B5%B7+OR+%E8%B6%85%E4%B8%AA%E4%BA%BA&hl=zh-CN&gl=CN&ceid=CN:zh-Hans", "enabled": true, "category": "solopreneur"},
+      {"name": "Google News - Solopreneur", "url": "https://news.google.com/rss/search?q=solopreneur+OR+%22one-person+business%22+OR+%22indie+hacker%22+OR+%22solo+founder%22&hl=en-US&gl=US&ceid=US:en", "enabled": true, "category": "solopreneur"},
+      {"name": "Product Hunt", "url": "https://www.producthunt.com/feed", "enabled": true, "category": "solopreneur"}
     ],
     "github": [
       {"type": "user_events", "username": "karpathy", "enabled": false},
@@ -73,7 +76,8 @@
       "科技动态": {"limit": 3, "categories": ["tech-news", "github-trending"]},
       "研究": {"limit": 2, "categories": ["research", "papers"]},
       "crypto": {"limit": 1, "categories": ["crypto"]},
-      "半导体": {"limit": 2, "categories": ["semiconductors"]}
+      "半导体": {"limit": 2, "categories": ["semiconductors"]},
+      "一人公司": {"limit": 2, "categories": ["solopreneur"]}
     },
     "default_group": "other",
     "default_group_limit": 3
