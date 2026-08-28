@@ -3,7 +3,7 @@ layout: default
 title: Configuration Guide
 ---
 
-# 配置指南
+# Configuration Guide
 
 Horizon is configured through two files: a `.env` file for API keys and a `data/config.json` file for sources, AI provider, and filtering options.
 
@@ -159,7 +159,7 @@ If your model has a strict per-minute request cap, you can slow the scorer down 
 - `4.5` is a reasonable starting point for free-tier models capped around 15 requests per minute.
 - Set it back to `0` if you have enough throughput headroom and want maximum speed.
 
-### 人工智能并发
+### AI Concurrency
 
 By default, AI scoring and enrichment run one item at a time. If your API endpoint supports concurrent requests, you can increase throughput:
 
@@ -306,7 +306,7 @@ Telegram scraping uses the public web preview at `https://t.me/s/<channel>`, so 
 - `channel` — Telegram channel username only, without `@` or the full `https://t.me/` URL
 - `fetch_limit` — maximum number of recent messages to inspect per channel per run (default: `20`)
 
-### 推特
+### 叽叽喳喳
 
 Requires an [阿皮菲](https://apify.com) account. Set `APIFY_TOKEN` in your `.env` file. The free tier includes $5/month of credit, enough for roughly 20,000 tweets.
 
@@ -381,7 +381,7 @@ uv pip install --only-binary=:all: openbb openbb-benzinga
 
 OpenBB provider credentials are handled by the OpenBB SDK itself, using its own environment variables or user settings. Horizon does not pass those secrets through `data/config.json`.
 
-### OSS Insight（热门 GitHub 存储库）
+### OSS Insight (Trending GitHub Repos)
 
 Pulls top star-gain repositories from the [操作系统洞察](https://ossinsight.io) public API, which aggregates GitHub WatchEvents. Useful for surfacing repos that are gaining stars right now without needing to scrape GitHub Trending or query BigQuery.
 
@@ -408,7 +408,7 @@ Pulls top star-gain repositories from the [操作系统洞察](https://ossinsigh
 
 No API key is required.
 
-## 过滤
+## Filtering
 
 Content is scored 0-10:
 
@@ -588,7 +588,7 @@ Webhook notification is optional and disabled unless `webhook.enabled` is `true`
 
 When `request_body` is a JSON object or array, Horizon renders placeholders and serializes it as JSON. When it is a string, Horizon renders it directly and detects JSON if the rendered string is valid JSON.
 
-### 交付模式和布局
+### Delivery Modes And Layouts
 
 `delivery` controls how many webhook messages Horizon sends:
 
