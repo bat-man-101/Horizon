@@ -1,6 +1,6 @@
-# Horizo​​nHub产品设计文档
+# HorizonHub Product Design Document
 
-## 定位
+## Positioning
 
 **One-sentence positioning**: The information source marketplace for the Horizon ecosystem—driven by real community usage data for discovery, recommendation, and quality assessment.
 
@@ -17,7 +17,7 @@
 
 ---
 
-## 系统架构
+## System Architecture
 
 ```
 ┌──────────────────────────────────────────────────┐
@@ -48,12 +48,12 @@
 ```
 
 Two core components:
-- **集线器服务器**: Data center + Web frontend, receiving reports, storing statistics, providing APIs and web pages.
-- **本地客户端（地平线向导）**: The sole entry point for users to manage information sources; every operation naturally generates data.
+- **Hub Server**: Data center + Web frontend, receiving reports, storing statistics, providing APIs and web pages.
+- **Local Client (horizon-wizard)**: The sole entry point for users to manage information sources; every operation naturally generates data.
 
 ---
 
-## 功能列表
+## Feature List
 
 ### Source Market (Browse)
 
@@ -61,7 +61,7 @@ The core interface users see when opening the Hub website.
 
 **Page Structure**:
 
-- **顶部仪表板**: A row of statistics cards.
+- **Top Dashboard**: A row of statistics cards.
   - Total Sources | Field Categories | Contributors | Active Users
 
 - **Source Card Waterfall**: Each source has a card.
@@ -77,7 +77,7 @@ The core interface users see when opening the Hub website.
   - Sort by Popularity (Users) / Quality (AI Avg) / SNR / Latest Added
   - Keyword Search
 
-### 来源简介
+### Source Profile
 
 The detail page for each source, showing a complete data-driven profile.
 
@@ -94,7 +94,7 @@ The detail page for each source, showing a complete data-driven profile.
 | Contributor | Who submitted this source | User submission records |
 | Date Added | When it was added to the Hub | Submission records |
 
-### 用户提交（贡献）
+### User Submission (Contribute)
 
 **Submission Process**:
 
@@ -115,7 +115,7 @@ Hub Server
 - Hub Web Form (most intuitive)
 - Local Client Submission (one-click via `horizon-wizard`)
 
-### 智能推荐（推荐）
+### Intelligent Recommendation (Recommend)
 
 **Scenarios**:
 
@@ -181,7 +181,7 @@ Reported to the Hub, integrated with decay data for comprehensive judgment.
 
 ## Distributed Agent Operating System
 
-### 类比
+### Analogy
 
 If the Horizon ecosystem is viewed as a **Distributed Agent Operating System**.
 
