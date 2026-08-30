@@ -68,7 +68,7 @@ Items scoring 9.0 or above are featured in the "Today's Highlights" section of t
 Items that pass the score threshold and any balanced digest limits go through a second AI pass for enrichment (`src/ai/enricher.py`):
 
 1. **Concept extraction** — AI identifies 1-3 technical concepts in the item that may need explanation.
-2. **Web search** — Each concept is searched via DuckDuckGo to gather grounding context.
+2. **网页搜索** — Each concept is searched via DuckDuckGo to gather grounding context.
 3. **Structured analysis** — The item content and search results are sent to AI, which produces:
    - `whats_new` — what specifically happened or changed
    - `why_it_matters` — significance and impact
