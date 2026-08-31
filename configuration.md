@@ -7,7 +7,7 @@ title: Configuration Guide
 
 Horizon is configured through two files: a `.env` file for API keys and a `data/config.json` file for sources, AI provider, and filtering options.
 
-## AI Providers
+## 人工智能提供商
 
 Configure which AI model scores and summarizes your content.
 
@@ -143,7 +143,7 @@ For remote Ollama servers, set `ai.base_url` in `data/config.json` or set
 also recognized. If the value omits `/v1`, Horizon appends it automatically
 for Ollama's OpenAI-compatible endpoint.
 
-### AI throttling
+### 人工智能节流
 
 If your model has a strict per-minute request cap, you can slow the scorer down in `data/config.json`:
 
@@ -193,7 +193,7 @@ By default, AI scoring and enrichment run one item at a time. If your API endpoi
 
 For OpenAI-compatible gateways, Horizon sends `temperature` by default. If a newer reasoning-style model rejects that parameter with an error such as `temperature is deprecated for this model`, Horizon retries once without it and remembers that capability for later requests.
 
-## Information Sources
+## 信息来源
 
 All sources are configured under the top-level `sources` key in `config.json`.
 
@@ -250,7 +250,7 @@ All sources are configured under the top-level `sources` key in `config.json`.
 }
 ```
 
-### Reddit
+### 红迪网
 
 Reddit scraping is free and does not require API keys. Subreddit posts and comments prefer `old.reddit.com`; JSON and RSS endpoints are used as fallbacks when needed.
 
@@ -280,7 +280,7 @@ Reddit scraping is free and does not require API keys. Subreddit posts and comme
 }
 ```
 
-### Telegram
+### 电报
 
 Telegram scraping uses the public web preview at `https://t.me/s/<channel>`, so no API key is required. Only public channels are supported.
 
@@ -335,7 +335,7 @@ Requires an [Apify](https://apify.com) account. Set `APIFY_TOKEN` in your `.env`
 
 The scraper uses the `altimis/scweet` actor by default. You can override it with `actor_id` if needed.
 
-### OpenBB Financial News
+### OpenBB财经新闻
 
 OpenBB is useful when you want equity or macro news from providers such as yfinance, Benzinga, FMP, Intrinio, Tiingo, SEC, or Federal Reserve through one SDK.
 
@@ -467,7 +467,7 @@ If the same category appears in multiple groups, Horizon logs a warning and uses
 the first group in configuration order. Omitting both `category_groups` and
 `max_items` preserves the previous filtering behavior.
 
-## Environment Variable Substitution
+## 环境变量替换
 
 Any string value in `data/config.json` supports `${VAR_NAME}` syntax. Variables are expanded at runtime from the environment (including values loaded from `.env`). This lets you keep secrets, tenant-specific endpoints, and private URLs out of the checked-in JSON file.
 
@@ -498,7 +498,7 @@ Example:
 - Unset variables are left as `${NAME}` instead of becoming an empty string, so configuration mistakes fail loudly downstream.
 - Expansion is recursive through dicts, lists, and tuples; non-string values are left unchanged.
 
-## Email Subscription
+## 邮件订阅
 
 Email delivery is optional and disabled unless `email.enabled` is `true`. Horizon uses SMTP to send daily summaries and IMAP to check subscribe/unsubscribe requests.
 
@@ -588,7 +588,7 @@ Webhook notification is optional and disabled unless `webhook.enabled` is `true`
 
 When `request_body` is a JSON object or array, Horizon renders placeholders and serializes it as JSON. When it is a string, Horizon renders it directly and detects JSON if the rendered string is valid JSON.
 
-### Delivery Modes And Layouts
+### 交付模式和布局
 
 `delivery` controls how many webhook messages Horizon sends:
 
@@ -622,7 +622,7 @@ Example `summary_and_items` Markdown delivery config:
 
 With `summary_and_items`, Horizon sends one overview plus one message per selected item. `overview_position: "last"` sends item messages first and keeps the overview as the newest chat message; omit it or set `"first"` to send the overview first.
 
-### Webhook Templates
+### Webhook 模板
 
 Available variables:
 
@@ -727,7 +727,7 @@ With this layout, Horizon sends one interactive card containing the overview and
 }
 ```
 
-## Static Site
+## 静态站点
 
 Horizon writes generated summaries to `data/summaries/` and copies publishable Markdown into `docs/` for the GitHub Pages site. The repository includes a ready-to-use workflow at `.github/workflows/daily-summary.yml`.
 

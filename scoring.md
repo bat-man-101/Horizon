@@ -7,12 +7,12 @@ title: Scoring System
 
 After fetching content from all sources, Horizon uses an AI model to score each item on a 0-10 scale. This determines what appears in the daily summary.
 
-## Pipeline
+## 管道
 
 1. **Batch processing** — Items are scored in batches of 10 with a progress bar. Failed items receive a score of 0.
 2. **Content preparation** — For each item, the content is truncated (800 chars if comments are present, 1000 otherwise) and engagement metrics are assembled from metadata (HN score, Reddit upvote ratio, etc.).
-3. **AI analysis** — The prepared content is sent to the configured AI model (temperature 0.3) with a system prompt defining the scoring criteria.
-4. **Response parsing** — The AI response is parsed as JSON (with fallbacks for code-block-wrapped JSON). Each item gets: `ai_score` (float), `ai_reason` (string), `ai_summary` (string), and `ai_tags` (list).
+3. **人工智能分析** — The prepared content is sent to the configured AI model (temperature 0.3) with a system prompt defining the scoring criteria.
+4. **响应解析** — The AI response is parsed as JSON (with fallbacks for code-block-wrapped JSON). Each item gets: `ai_score` (float), `ai_reason` (string), `ai_summary` (string), and `ai_tags` (list).
 5. **Retry** — Failed AI calls are retried up to 3 times with exponential backoff (2-10 seconds).
 
 ## Scoring Scale
@@ -29,9 +29,9 @@ After fetching content from all sources, Horizon uses an AI model to score each 
 
 The AI evaluates each item based on:
 
-- **Technical depth and novelty** — original ideas, new techniques, research contributions
-- **Potential impact** — how broadly this affects software engineering, AI/ML, or systems research
-- **Quality of writing/presentation** — clarity, structure, thoroughness
+- **技术深度和新颖性** — original ideas, new techniques, research contributions
+- **潜在影响** — how broadly this affects software engineering, AI/ML, or systems research
+- **写作/演讲质量** — clarity, structure, thoroughness
 - **Community discussion** — insightful comments, diverse viewpoints, substantive debates
 - **Engagement signals** — high upvotes/favorites paired with substantive discussion (not just raw numbers)
 
@@ -69,7 +69,7 @@ Items that pass the score threshold and any balanced digest limits go through a 
 
 1. **Concept extraction** — AI identifies 1-3 technical concepts in the item that may need explanation.
 2. **网页搜索** — Each concept is searched via DuckDuckGo to gather grounding context.
-3. **Structured analysis** — The item content and search results are sent to AI, which produces:
+3. **结构化分析** — The item content and search results are sent to AI, which produces:
    - `whats_new` — what specifically happened or changed
    - `why_it_matters` — significance and impact
    - `key_details` — notable technical details or caveats
