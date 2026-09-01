@@ -91,7 +91,7 @@ Fetches any Atom/RSS feed using the `feedparser` library. Tries multiple date fi
 
 ## Reddit
 
-**File**: `src/scrapers/reddit.py`
+**文件**: `src/scrapers/reddit.py`
 
 Uses public, no-key Reddit endpoints. Subreddit listings and comments prefer `old.reddit.com` HTML because Reddit's unauthenticated JSON and RSS endpoints can intermittently block or fail:
 

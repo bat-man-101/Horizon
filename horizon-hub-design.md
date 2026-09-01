@@ -4,20 +4,20 @@
 
 **一句话定位**: The information source marketplace for the Horizon ecosystem—driven by real community usage data for discovery, recommendation, and quality assessment.
 
-**Difference from Competitors**:
+**与竞争对手的差异**:
 
 | Product | What it does | What it doesn't do |
 |---|---|---|
 | RSSHub | Turns websites without RSS into RSS (Pipe) | No quality assessment, no recommendations |
 | Feedly | RSS Reader with discovery features | No AI filtering, no personalized recommendations |
 | HN / Reddit | Community-driven content aggregation | Fixed sources, user cannot customize |
-| **HorizonHub** | **Data-driven source recommendation & quality assessment** | **没有内容托管，没有读者** |
+| **地平线枢纽** | **数据驱动的来源推荐和质量评估** | **没有内容托管，没有读者** |
 
 **核心护城河**: The daily operation of every Horizon user generates quality data for information sources (AI scores, signal-to-noise ratio, output frequency). When aggregated in the Hub, this data forms a **动态质量概况** that no static recommendation list can provide.
 
 ---
 
-## System Architecture
+## 系统架构
 
 ```
 ┌──────────────────────────────────────────────────┐
@@ -49,11 +49,11 @@
 
 Two core components:
 - **集线器服务器**: Data center + Web frontend, receiving reports, storing statistics, providing APIs and web pages.
-- **Local Client (horizon-wizard)**: The sole entry point for users to manage information sources; every operation naturally generates data.
+- **本地客户端（地平线向导）**: The sole entry point for users to manage information sources; every operation naturally generates data.
 
 ---
 
-## Feature List
+## 功能列表
 
 ### 客源市场（浏览）
 
@@ -61,7 +61,7 @@ The core interface users see when opening the Hub website.
 
 **页面结构**:
 
-- **Top Dashboard**: A row of statistics cards.
+- **顶部仪表板**: A row of statistics cards.
   - Total Sources | Field Categories | Contributors | Active Users
 
 - **源卡瀑布**: Each source has a card.
@@ -77,7 +77,7 @@ The core interface users see when opening the Hub website.
   - Sort by Popularity (Users) / Quality (AI Avg) / SNR / Latest Added
   - Keyword Search
 
-### Source Profile
+### 来源简介
 
 The detail page for each source, showing a complete data-driven profile.
 
@@ -94,7 +94,7 @@ The detail page for each source, showing a complete data-driven profile.
 | Contributor | Who submitted this source | User submission records |
 | Date Added | When it was added to the Hub | Submission records |
 
-### User Submission (Contribute)
+### 用户提交（贡献）
 
 **提交流程**:
 
@@ -111,7 +111,7 @@ Hub Server
   → Quality Poor → Mark pending, notify maintainer for manual review
 ```
 
-**Channels**:
+**渠道**:
 - Hub Web Form (most intuitive)
 - Local Client Submission (one-click via `horizon-wizard`)
 
@@ -138,7 +138,7 @@ After users select sources on the Hub website:
 
 ### 贡献者系统（社区）
 
-**Contributor Leaderboard**:
+**贡献者排行榜**:
 - Ranked by number of sources contributed.
 - Displays GitHub avatar + link + contribution count.
 
@@ -156,9 +156,9 @@ After users select sources on the Hub website:
 | 🔥 Popular Contributor| A single source used by ≥ 50 people |
 | 👑 Core Contributor | Contributed ≥ 10 sources |
 
-### Source Health Monitoring
+### 源健康监测
 
-**Automatic Decay Detection** (Option A — Passive):
+**自动衰变检测** (Option A — Passive):
 
 Hub server continuously tracks active user trends for each source. If usage drops continuously (e.g., >30% drop within 30 days), auto-mark with a ⚠️ warning.
 
@@ -179,7 +179,7 @@ Reported to the Hub, integrated with decay data for comprehensive judgment.
 
 ---
 
-## Distributed Agent Operating System
+## 分布式代理操作系统
 
 ### 类比
 
@@ -187,12 +187,12 @@ If the Horizon ecosystem is viewed as a **分布式代理操作系统**.
 
 A single Horizon instance is like a "standalone machine" managing one user's information flow. HorizonHub acts as the **控制平面** that coordinates all users' Agents into a whole, allowing decentralized individual judgments to converge into collective intelligence.
 
-### Why "Emergence"?
+### 为何“出现”？
 
 Each Agent runs independently and is unaware of others, but:
 - **多样性**: Different users subscribe to sources in different fields, naturally providing diverse perspectives.
 - **独立**: Each Agent's AI scoring is unaffected by other users.
-- **Aggregation**: The Hub aggregates all scores to form a global quality signal more accurate than any single Agent.
+- **聚合**: The Hub aggregates all scores to form a global quality signal more accurate than any single Agent.
 
 This is not designed intelligence, but rather consensus **新兴的** from a large number of independent judgments—mathematically aligned with the Condorcet Jury Theorem.
 
