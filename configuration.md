@@ -3,11 +3,11 @@ layout: default
 title: Configuration Guide
 ---
 
-# 配置指南
+# Configuration Guide
 
 Horizon is configured through two files: a `.env` file for API keys and a `data/config.json` file for sources, AI provider, and filtering options.
 
-## 人工智能提供商
+## AI Providers
 
 Configure which AI model scores and summarizes your content.
 
@@ -50,7 +50,7 @@ Common API key variable names:
 }
 ```
 
-**OpenAI**:
+**开放人工智能**:
 
 ```json
 {
@@ -63,7 +63,7 @@ Common API key variable names:
 }
 ```
 
-**Gemini**:
+**双子座**:
 
 ```json
 {
@@ -76,7 +76,7 @@ Common API key variable names:
 }
 ```
 
-**Azure OpenAI**:
+**Azure 开放人工智能**:
 
 ```json
 {
@@ -93,7 +93,7 @@ Common API key variable names:
 
 Set `AZURE_OPENAI_API_KEY` and `AZURE_OPENAI_ENDPOINT` in your `.env`. The `model` field should be your Azure deployment name, not just the base model family name.
 
-**MiniMax**:
+**最小最大**:
 
 ```json
 {
@@ -108,7 +108,7 @@ Set `AZURE_OPENAI_API_KEY` and `AZURE_OPENAI_ENDPOINT` in your `.env`. The `mode
 
 Available models: `MiniMax-M3`, `MiniMax-M2.7`, `MiniMax-M2.7-highspeed`
 
-**Aliyun DashScope** (OpenAI-compatible):
+**阿里云 DashScope** (OpenAI-compatible):
 
 ```json
 {
@@ -121,9 +121,9 @@ Available models: `MiniMax-M3`, `MiniMax-M2.7`, `MiniMax-M2.7-highspeed`
 }
 ```
 
-Use the [DashScope 兼容模式](https://help.aliyun.com/zh/dashscope/developer-reference/use-dashscope-by-calling-openai-api) endpoint. Set `DASHSCOPE_API_KEY` in your `.env`. Optional: set `base_url` to override the default `https://dashscope.aliyuncs.com/compatible-mode/v1`.
+Use the [DashScope compatible-mode](https://help.aliyun.com/zh/dashscope/developer-reference/use-dashscope-by-calling-openai-api) endpoint. Set `DASHSCOPE_API_KEY` in your `.env`. Optional: set `base_url` to override the default `https://dashscope.aliyuncs.com/compatible-mode/v1`.
 
-**Ollama**:
+**成为**:
 
 ```json
 {
@@ -159,7 +159,7 @@ If your model has a strict per-minute request cap, you can slow the scorer down 
 - `4.5` is a reasonable starting point for free-tier models capped around 15 requests per minute.
 - Set it back to `0` if you have enough throughput headroom and want maximum speed.
 
-### 人工智能并发
+### AI Concurrency
 
 By default, AI scoring and enrichment run one item at a time. If your API endpoint supports concurrent requests, you can increase throughput:
 
@@ -193,7 +193,7 @@ By default, AI scoring and enrichment run one item at a time. If your API endpoi
 
 For OpenAI-compatible gateways, Horizon sends `temperature` by default. If a newer reasoning-style model rejects that parameter with an error such as `temperature is deprecated for this model`, Horizon retries once without it and remembers that capability for later requests.
 
-## 信息来源
+## Information Sources
 
 All sources are configured under the top-level `sources` key in `config.json`.
 
@@ -219,7 +219,7 @@ All sources are configured under the top-level `sources` key in `config.json`.
 }
 ```
 
-### 黑客新闻
+### Hacker News
 
 ```json
 {
@@ -233,7 +233,7 @@ All sources are configured under the top-level `sources` key in `config.json`.
 }
 ```
 
-### RSS 源
+### RSS Feeds
 
 ```json
 {
@@ -308,7 +308,7 @@ Telegram scraping uses the public web preview at `https://t.me/s/<channel>`, so 
 
 ### 叽叽喳喳
 
-Requires an [阿皮菲](https://apify.com) account. Set `APIFY_TOKEN` in your `.env` file. The free tier includes $5/month of credit, enough for roughly 20,000 tweets.
+Requires an [Apify](https://apify.com) account. Set `APIFY_TOKEN` in your `.env` file. The free tier includes $5/month of credit, enough for roughly 20,000 tweets.
 
 ```json
 {
@@ -383,7 +383,7 @@ OpenBB provider credentials are handled by the OpenBB SDK itself, using its own 
 
 ### OSS Insight（热门 GitHub 存储库）
 
-Pulls top star-gain repositories from the [操作系统洞察](https://ossinsight.io) public API, which aggregates GitHub WatchEvents. Useful for surfacing repos that are gaining stars right now without needing to scrape GitHub Trending or query BigQuery.
+Pulls top star-gain repositories from the [OSS Insight](https://ossinsight.io) public API, which aggregates GitHub WatchEvents. Useful for surfacing repos that are gaining stars right now without needing to scrape GitHub Trending or query BigQuery.
 
 ```json
 {
@@ -467,7 +467,7 @@ If the same category appears in multiple groups, Horizon logs a warning and uses
 the first group in configuration order. Omitting both `category_groups` and
 `max_items` preserves the previous filtering behavior.
 
-## 环境变量替换
+## Environment Variable Substitution
 
 Any string value in `data/config.json` supports `${VAR_NAME}` syntax. Variables are expanded at runtime from the environment (including values loaded from `.env`). This lets you keep secrets, tenant-specific endpoints, and private URLs out of the checked-in JSON file.
 
@@ -498,7 +498,7 @@ Example:
 - Unset variables are left as `${NAME}` instead of becoming an empty string, so configuration mistakes fail loudly downstream.
 - Expansion is recursive through dicts, lists, and tuples; non-string values are left unchanged.
 
-## 邮件订阅
+## Email Subscription
 
 Email delivery is optional and disabled unless `email.enabled` is `true`. Horizon uses SMTP to send daily summaries and IMAP to check subscribe/unsubscribe requests.
 
@@ -727,7 +727,7 @@ With this layout, Horizon sends one interactive card containing the overview and
 }
 ```
 
-## Static Site
+## 静态站点
 
 Horizon writes generated summaries to `data/summaries/` and copies publishable Markdown into `docs/` for the GitHub Pages site. The repository includes a ready-to-use workflow at `.github/workflows/daily-summary.yml`.
 

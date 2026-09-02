@@ -2,7 +2,7 @@
 
 ## 定位
 
-**一句话定位**: The information source marketplace for the Horizon ecosystem—driven by real community usage data for discovery, recommendation, and quality assessment.
+**One-sentence positioning**: The information source marketplace for the Horizon ecosystem—driven by real community usage data for discovery, recommendation, and quality assessment.
 
 **与竞争对手的差异**:
 
@@ -11,9 +11,9 @@
 | RSSHub | Turns websites without RSS into RSS (Pipe) | No quality assessment, no recommendations |
 | Feedly | RSS Reader with discovery features | No AI filtering, no personalized recommendations |
 | HN / Reddit | Community-driven content aggregation | Fixed sources, user cannot customize |
-| **地平线枢纽** | **数据驱动的来源推荐和质量评估** | **没有内容托管，没有读者** |
+| **HorizonHub** | **Data-driven source recommendation & quality assessment** | **No content hosting, not a reader** |
 
-**核心护城河**: The daily operation of every Horizon user generates quality data for information sources (AI scores, signal-to-noise ratio, output frequency). When aggregated in the Hub, this data forms a **动态质量概况** that no static recommendation list can provide.
+**Core Moat**: The daily operation of every Horizon user generates quality data for information sources (AI scores, signal-to-noise ratio, output frequency). When aggregated in the Hub, this data forms a **动态质量概况** that no static recommendation list can provide.
 
 ---
 
@@ -49,7 +49,7 @@
 
 Two core components:
 - **集线器服务器**: Data center + Web frontend, receiving reports, storing statistics, providing APIs and web pages.
-- **本地客户端（地平线向导）**: The sole entry point for users to manage information sources; every operation naturally generates data.
+- **Local Client (horizon-wizard)**: The sole entry point for users to manage information sources; every operation naturally generates data.
 
 ---
 
@@ -77,11 +77,11 @@ The core interface users see when opening the Hub website.
   - Sort by Popularity (Users) / Quality (AI Avg) / SNR / Latest Added
   - Keyword Search
 
-### 来源简介
+### Source Profile
 
 The detail page for each source, showing a complete data-driven profile.
 
-**包含数据**:
+**Included Data**:
 
 | Metric | Description | Data Source |
 |---|---|---|
@@ -115,12 +115,12 @@ Hub Server
 - Hub Web Form (most intuitive)
 - Local Client Submission (one-click via `horizon-wizard`)
 
-### 智能推荐（推荐）
+### Intelligent Recommendation (Recommend)
 
-**应用场景**:
+**Scenarios**:
 
 1. **新用户冷启动**: Enter interest keywords ("AI", "Linux Kernel") to recommend the best source combination.
-2. **补充推荐**: Analyze existing config to recommend sources with complementary coverage and flag high-overlap sources.
+2. **Complementary Recommendation**: Analyze existing config to recommend sources with complementary coverage and flag high-overlap sources.
 3. **协同过滤** (post-scale): "Users with similar tastes also read..."
 
 **Rec 算法的输入**:
@@ -142,12 +142,12 @@ After users select sources on the Hub website:
 - Ranked by number of sources contributed.
 - Displays GitHub avatar + link + contribution count.
 
-**贡献者主页**:
+**Contributor Homepage**:
 - Sources I submitted.
 - How many people use my sources in total.
 - Average quality score of my sources.
 
-**徽章系统**:
+**Badge System**:
 
 | Badge | Condition |
 |---|---|
@@ -158,11 +158,11 @@ After users select sources on the Hub website:
 
 ### 源健康监测
 
-**自动衰变检测** (Option A — Passive):
+**Automatic Decay Detection** (Option A — Passive):
 
 Hub server continuously tracks active user trends for each source. If usage drops continuously (e.g., >30% drop within 30 days), auto-mark with a ⚠️ warning.
 
-**用户反馈收集** (Option B — Active):
+**User Feedback Collection** (Option B — Active):
 
 When a user deletes or disables a source via `horizon-wizard`, a popup asks for optional feedback:
 
@@ -179,7 +179,7 @@ Reported to the Hub, integrated with decay data for comprehensive judgment.
 
 ---
 
-## 分布式代理操作系统
+## Distributed Agent Operating System
 
 ### 类比
 
@@ -187,11 +187,11 @@ If the Horizon ecosystem is viewed as a **分布式代理操作系统**.
 
 A single Horizon instance is like a "standalone machine" managing one user's information flow. HorizonHub acts as the **控制平面** that coordinates all users' Agents into a whole, allowing decentralized individual judgments to converge into collective intelligence.
 
-### 为何“出现”？
+### Why "Emergence"?
 
 Each Agent runs independently and is unaware of others, but:
-- **多样性**: Different users subscribe to sources in different fields, naturally providing diverse perspectives.
-- **独立**: Each Agent's AI scoring is unaffected by other users.
+- **Diversity**: Different users subscribe to sources in different fields, naturally providing diverse perspectives.
+- **Independence**: Each Agent's AI scoring is unaffected by other users.
 - **聚合**: The Hub aggregates all scores to form a global quality signal more accurate than any single Agent.
 
 This is not designed intelligence, but rather consensus **新兴的** from a large number of independent judgments—mathematically aligned with the Condorcet Jury Theorem.
