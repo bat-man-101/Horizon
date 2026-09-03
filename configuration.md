@@ -50,7 +50,7 @@ Common API key variable names:
 }
 ```
 
-**开放人工智能**:
+**OpenAI**:
 
 ```json
 {
@@ -63,7 +63,7 @@ Common API key variable names:
 }
 ```
 
-**双子座**:
+**Gemini**:
 
 ```json
 {
@@ -76,7 +76,7 @@ Common API key variable names:
 }
 ```
 
-**Azure 开放人工智能**:
+**Azure OpenAI**:
 
 ```json
 {
@@ -93,7 +93,7 @@ Common API key variable names:
 
 Set `AZURE_OPENAI_API_KEY` and `AZURE_OPENAI_ENDPOINT` in your `.env`. The `model` field should be your Azure deployment name, not just the base model family name.
 
-**最小最大**:
+**MiniMax**:
 
 ```json
 {
@@ -108,7 +108,7 @@ Set `AZURE_OPENAI_API_KEY` and `AZURE_OPENAI_ENDPOINT` in your `.env`. The `mode
 
 Available models: `MiniMax-M3`, `MiniMax-M2.7`, `MiniMax-M2.7-highspeed`
 
-**阿里云 DashScope** (OpenAI-compatible):
+**Aliyun DashScope** (OpenAI-compatible):
 
 ```json
 {
@@ -123,7 +123,7 @@ Available models: `MiniMax-M3`, `MiniMax-M2.7`, `MiniMax-M2.7-highspeed`
 
 Use the [DashScope compatible-mode](https://help.aliyun.com/zh/dashscope/developer-reference/use-dashscope-by-calling-openai-api) endpoint. Set `DASHSCOPE_API_KEY` in your `.env`. Optional: set `base_url` to override the default `https://dashscope.aliyuncs.com/compatible-mode/v1`.
 
-**成为**:
+**Ollama**:
 
 ```json
 {
@@ -143,7 +143,7 @@ For remote Ollama servers, set `ai.base_url` in `data/config.json` or set
 also recognized. If the value omits `/v1`, Horizon appends it automatically
 for Ollama's OpenAI-compatible endpoint.
 
-### 人工智能节流
+### AI throttling
 
 If your model has a strict per-minute request cap, you can slow the scorer down in `data/config.json`:
 
@@ -179,7 +179,7 @@ By default, AI scoring and enrichment run one item at a time. If your API endpoi
 - Result ordering is preserved regardless of concurrency.
 - If you also use `throttle_sec`, each concurrent task sleeps independently after finishing an item.
 
-**自定义基本 URL** (for proxies):
+**Custom Base URL** (for proxies):
 
 ```json
 {
@@ -250,7 +250,7 @@ All sources are configured under the top-level `sources` key in `config.json`.
 }
 ```
 
-### 红迪网
+### Reddit
 
 Reddit scraping is free and does not require API keys. Subreddit posts and comments prefer `old.reddit.com`; JSON and RSS endpoints are used as fallbacks when needed.
 
@@ -280,7 +280,7 @@ Reddit scraping is free and does not require API keys. Subreddit posts and comme
 }
 ```
 
-### 电报
+### Telegram
 
 Telegram scraping uses the public web preview at `https://t.me/s/<channel>`, so no API key is required. Only public channels are supported.
 
@@ -306,7 +306,7 @@ Telegram scraping uses the public web preview at `https://t.me/s/<channel>`, so 
 - `channel` — Telegram channel username only, without `@` or the full `https://t.me/` URL
 - `fetch_limit` — maximum number of recent messages to inspect per channel per run (default: `20`)
 
-### 叽叽喳喳
+### Twitter
 
 Requires an [Apify](https://apify.com) account. Set `APIFY_TOKEN` in your `.env` file. The free tier includes $5/month of credit, enough for roughly 20,000 tweets.
 
@@ -335,7 +335,7 @@ Requires an [Apify](https://apify.com) account. Set `APIFY_TOKEN` in your `.env`
 
 The scraper uses the `altimis/scweet` actor by default. You can override it with `actor_id` if needed.
 
-### OpenBB财经新闻
+### OpenBB Financial News
 
 OpenBB is useful when you want equity or macro news from providers such as yfinance, Benzinga, FMP, Intrinio, Tiingo, SEC, or Federal Reserve through one SDK.
 
@@ -381,7 +381,7 @@ uv pip install --only-binary=:all: openbb openbb-benzinga
 
 OpenBB provider credentials are handled by the OpenBB SDK itself, using its own environment variables or user settings. Horizon does not pass those secrets through `data/config.json`.
 
-### OSS Insight（热门 GitHub 存储库）
+### OSS Insight (Trending GitHub Repos)
 
 Pulls top star-gain repositories from the [OSS Insight](https://ossinsight.io) public API, which aggregates GitHub WatchEvents. Useful for surfacing repos that are gaining stars right now without needing to scrape GitHub Trending or query BigQuery.
 
@@ -408,7 +408,7 @@ Pulls top star-gain repositories from the [OSS Insight](https://ossinsight.io) p
 
 No API key is required.
 
-## 过滤
+## Filtering
 
 Content is scored 0-10:
 
@@ -552,7 +552,7 @@ Resend SMTP example:
 
 Set `RESEND_API_KEY` in `.env`. Recipients are loaded from `data/subscribers.json`.
 
-## 网络钩子通知
+## Webhook Notification
 
 Webhook notification is optional and disabled unless `webhook.enabled` is `true`. Horizon can call Feishu/Lark, DingTalk, Slack, Discord, or any custom webhook endpoint when the pipeline succeeds or fails.
 
@@ -588,7 +588,7 @@ Webhook notification is optional and disabled unless `webhook.enabled` is `true`
 
 When `request_body` is a JSON object or array, Horizon renders placeholders and serializes it as JSON. When it is a string, Horizon renders it directly and detects JSON if the rendered string is valid JSON.
 
-### 交付模式和布局
+### Delivery Modes And Layouts
 
 `delivery` controls how many webhook messages Horizon sends:
 
@@ -727,7 +727,7 @@ With this layout, Horizon sends one interactive card containing the overview and
 }
 ```
 
-## 静态站点
+## Static Site
 
 Horizon writes generated summaries to `data/summaries/` and copies publishable Markdown into `docs/` for the GitHub Pages site. The repository includes a ready-to-use workflow at `.github/workflows/daily-summary.yml`.
 

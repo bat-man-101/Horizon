@@ -1,10 +1,10 @@
-# Horizo​​nHub产品设计文档
+# HorizonHub Product Design Document
 
-## 定位
+## Positioning
 
 **One-sentence positioning**: The information source marketplace for the Horizon ecosystem—driven by real community usage data for discovery, recommendation, and quality assessment.
 
-**与竞争对手的差异**:
+**Difference from Competitors**:
 
 | Product | What it does | What it doesn't do |
 |---|---|---|
@@ -13,11 +13,11 @@
 | HN / Reddit | Community-driven content aggregation | Fixed sources, user cannot customize |
 | **HorizonHub** | **Data-driven source recommendation & quality assessment** | **No content hosting, not a reader** |
 
-**Core Moat**: The daily operation of every Horizon user generates quality data for information sources (AI scores, signal-to-noise ratio, output frequency). When aggregated in the Hub, this data forms a **动态质量概况** that no static recommendation list can provide.
+**Core Moat**: The daily operation of every Horizon user generates quality data for information sources (AI scores, signal-to-noise ratio, output frequency). When aggregated in the Hub, this data forms a **dynamic quality profile** that no static recommendation list can provide.
 
 ---
 
-## 系统架构
+## System Architecture
 
 ```
 ┌──────────────────────────────────────────────────┐
@@ -48,23 +48,23 @@
 ```
 
 Two core components:
-- **集线器服务器**: Data center + Web frontend, receiving reports, storing statistics, providing APIs and web pages.
+- **Hub Server**: Data center + Web frontend, receiving reports, storing statistics, providing APIs and web pages.
 - **Local Client (horizon-wizard)**: The sole entry point for users to manage information sources; every operation naturally generates data.
 
 ---
 
-## 功能列表
+## Feature List
 
-### 客源市场（浏览）
+### Source Market (Browse)
 
 The core interface users see when opening the Hub website.
 
-**页面结构**:
+**Page Structure**:
 
-- **顶部仪表板**: A row of statistics cards.
+- **Top Dashboard**: A row of statistics cards.
   - Total Sources | Field Categories | Contributors | Active Users
 
-- **源卡瀑布**: Each source has a card.
+- **Source Card Waterfall**: Each source has a card.
   - Source Name + Type Tags (RSS / Reddit / GitHub / Telegram / Twitter)
   - Color-coded Field Tags (AI Purple, Systems Blue, Security Red...)
   - One-sentence Bio (CN/EN)
@@ -72,7 +72,7 @@ The core interface users see when opening the Hub website.
   - Contributor Avatars
   - Badges: 🔥 Hot / ✨ New / ⚠️ Quality Dropped
 
-- **过滤和排序**:
+- **Filtering and Sorting**:
   - Filter by field / language / type
   - Sort by Popularity (Users) / Quality (AI Avg) / SNR / Latest Added
   - Keyword Search
@@ -94,9 +94,9 @@ The detail page for each source, showing a complete data-driven profile.
 | Contributor | Who submitted this source | User submission records |
 | Date Added | When it was added to the Hub | Submission records |
 
-### 用户提交（贡献）
+### User Submission (Contribute)
 
-**提交流程**:
+**Submission Process**:
 
 ```
 User (Hub Web or Local Client)
@@ -111,7 +111,7 @@ Hub Server
   → Quality Poor → Mark pending, notify maintainer for manual review
 ```
 
-**渠道**:
+**Channels**:
 - Hub Web Form (most intuitive)
 - Local Client Submission (one-click via `horizon-wizard`)
 
@@ -119,16 +119,16 @@ Hub Server
 
 **Scenarios**:
 
-1. **新用户冷启动**: Enter interest keywords ("AI", "Linux Kernel") to recommend the best source combination.
+1. **New User Cold Start**: Enter interest keywords ("AI", "Linux Kernel") to recommend the best source combination.
 2. **Complementary Recommendation**: Analyze existing config to recommend sources with complementary coverage and flag high-overlap sources.
-3. **协同过滤** (post-scale): "Users with similar tastes also read..."
+3. **Collaborative Filtering** (post-scale): "Users with similar tastes also read..."
 
-**Rec 算法的输入**:
+**Input for Rec Algorithm**:
 - Source field tags
 - Content overlap between sources (calculated via deduplication data)
 - Usage patterns of user cohorts
 
-### 一键导出（Export）
+### One-click Export (Export)
 
 After users select sources on the Hub website:
 
@@ -136,9 +136,9 @@ After users select sources on the Hub website:
 - Download full config file
 - Generate `horizon-wizard` command → One-click import via terminal
 
-### 贡献者系统（社区）
+### Contributor System (Community)
 
-**贡献者排行榜**:
+**Contributor Leaderboard**:
 - Ranked by number of sources contributed.
 - Displays GitHub avatar + link + contribution count.
 
@@ -156,7 +156,7 @@ After users select sources on the Hub website:
 | 🔥 Popular Contributor| A single source used by ≥ 50 people |
 | 👑 Core Contributor | Contributed ≥ 10 sources |
 
-### 源健康监测
+### Source Health Monitoring
 
 **Automatic Decay Detection** (Option A — Passive):
 
@@ -181,19 +181,19 @@ Reported to the Hub, integrated with decay data for comprehensive judgment.
 
 ## Distributed Agent Operating System
 
-### 类比
+### Analogy
 
-If the Horizon ecosystem is viewed as a **分布式代理操作系统**.
+If the Horizon ecosystem is viewed as a **Distributed Agent Operating System**.
 
-A single Horizon instance is like a "standalone machine" managing one user's information flow. HorizonHub acts as the **控制平面** that coordinates all users' Agents into a whole, allowing decentralized individual judgments to converge into collective intelligence.
+A single Horizon instance is like a "standalone machine" managing one user's information flow. HorizonHub acts as the **Control Plane** that coordinates all users' Agents into a whole, allowing decentralized individual judgments to converge into collective intelligence.
 
 ### Why "Emergence"?
 
 Each Agent runs independently and is unaware of others, but:
 - **Diversity**: Different users subscribe to sources in different fields, naturally providing diverse perspectives.
 - **Independence**: Each Agent's AI scoring is unaffected by other users.
-- **聚合**: The Hub aggregates all scores to form a global quality signal more accurate than any single Agent.
+- **Aggregation**: The Hub aggregates all scores to form a global quality signal more accurate than any single Agent.
 
-This is not designed intelligence, but rather consensus **新兴的** from a large number of independent judgments—mathematically aligned with the Condorcet Jury Theorem.
+This is not designed intelligence, but rather consensus **emerging** from a large number of independent judgments—mathematically aligned with the Condorcet Jury Theorem.
 
 ---
