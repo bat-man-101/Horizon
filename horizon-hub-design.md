@@ -1,6 +1,6 @@
-# HorizonHub Product Design Document
+# Horizo​​nHub产品设计文档
 
-## Positioning
+## 定位
 
 **One-sentence positioning**: The information source marketplace for the Horizon ecosystem—driven by real community usage data for discovery, recommendation, and quality assessment.
 
@@ -11,13 +11,13 @@
 | RSSHub | Turns websites without RSS into RSS (Pipe) | No quality assessment, no recommendations |
 | Feedly | RSS Reader with discovery features | No AI filtering, no personalized recommendations |
 | HN / Reddit | Community-driven content aggregation | Fixed sources, user cannot customize |
-| **HorizonHub** | **Data-driven source recommendation & quality assessment** | **No content hosting, not a reader** |
+| **地平线枢纽** | **Data-driven source recommendation & quality assessment** | **No content hosting, not a reader** |
 
 **Core Moat**: The daily operation of every Horizon user generates quality data for information sources (AI scores, signal-to-noise ratio, output frequency). When aggregated in the Hub, this data forms a **dynamic quality profile** that no static recommendation list can provide.
 
 ---
 
-## System Architecture
+## 系统架构
 
 ```
 ┌──────────────────────────────────────────────────┐
@@ -53,9 +53,9 @@ Two core components:
 
 ---
 
-## Feature List
+## 功能列表
 
-### Source Market (Browse)
+### 客源市场（浏览）
 
 The core interface users see when opening the Hub website.
 
@@ -64,7 +64,7 @@ The core interface users see when opening the Hub website.
 - **Top Dashboard**: A row of statistics cards.
   - Total Sources | Field Categories | Contributors | Active Users
 
-- **Source Card Waterfall**: Each source has a card.
+- **源卡瀑布**: Each source has a card.
   - Source Name + Type Tags (RSS / Reddit / GitHub / Telegram / Twitter)
   - Color-coded Field Tags (AI Purple, Systems Blue, Security Red...)
   - One-sentence Bio (CN/EN)
@@ -77,7 +77,7 @@ The core interface users see when opening the Hub website.
   - Sort by Popularity (Users) / Quality (AI Avg) / SNR / Latest Added
   - Keyword Search
 
-### Source Profile
+### 来源简介
 
 The detail page for each source, showing a complete data-driven profile.
 
@@ -94,7 +94,7 @@ The detail page for each source, showing a complete data-driven profile.
 | Contributor | Who submitted this source | User submission records |
 | Date Added | When it was added to the Hub | Submission records |
 
-### User Submission (Contribute)
+### 用户提交（贡献）
 
 **Submission Process**:
 
@@ -111,11 +111,11 @@ Hub Server
   → Quality Poor → Mark pending, notify maintainer for manual review
 ```
 
-**Channels**:
+**渠道**:
 - Hub Web Form (most intuitive)
 - Local Client Submission (one-click via `horizon-wizard`)
 
-### Intelligent Recommendation (Recommend)
+### 智能推荐（推荐）
 
 **Scenarios**:
 
@@ -128,7 +128,7 @@ Hub Server
 - Content overlap between sources (calculated via deduplication data)
 - Usage patterns of user cohorts
 
-### One-click Export (Export)
+### 一键导出（Export）
 
 After users select sources on the Hub website:
 
@@ -136,7 +136,7 @@ After users select sources on the Hub website:
 - Download full config file
 - Generate `horizon-wizard` command → One-click import via terminal
 
-### Contributor System (Community)
+### 贡献者系统（社区）
 
 **Contributor Leaderboard**:
 - Ranked by number of sources contributed.
@@ -162,7 +162,7 @@ After users select sources on the Hub website:
 
 Hub server continuously tracks active user trends for each source. If usage drops continuously (e.g., >30% drop within 30 days), auto-mark with a ⚠️ warning.
 
-**User Feedback Collection** (Option B — Active):
+**用户反馈收集** (Option B — Active):
 
 When a user deletes or disables a source via `horizon-wizard`, a popup asks for optional feedback:
 
@@ -194,6 +194,6 @@ Each Agent runs independently and is unaware of others, but:
 - **Independence**: Each Agent's AI scoring is unaffected by other users.
 - **Aggregation**: The Hub aggregates all scores to form a global quality signal more accurate than any single Agent.
 
-This is not designed intelligence, but rather consensus **emerging** from a large number of independent judgments—mathematically aligned with the Condorcet Jury Theorem.
+This is not designed intelligence, but rather consensus **新兴的** from a large number of independent judgments—mathematically aligned with the Condorcet Jury Theorem.
 
 ---
