@@ -93,7 +93,7 @@ Common API key variable names:
 
 Set `AZURE_OPENAI_API_KEY` and `AZURE_OPENAI_ENDPOINT` in your `.env`. The `model` field should be your Azure deployment name, not just the base model family name.
 
-**MiniMax**:
+**最小最大**:
 
 ```json
 {
@@ -108,7 +108,7 @@ Set `AZURE_OPENAI_API_KEY` and `AZURE_OPENAI_ENDPOINT` in your `.env`. The `mode
 
 Available models: `MiniMax-M3`, `MiniMax-M2.7`, `MiniMax-M2.7-highspeed`
 
-**Aliyun DashScope** (OpenAI-compatible):
+**阿里云 DashScope** (OpenAI-compatible):
 
 ```json
 {
@@ -159,7 +159,7 @@ If your model has a strict per-minute request cap, you can slow the scorer down 
 - `4.5` is a reasonable starting point for free-tier models capped around 15 requests per minute.
 - Set it back to `0` if you have enough throughput headroom and want maximum speed.
 
-### AI Concurrency
+### 人工智能并发
 
 By default, AI scoring and enrichment run one item at a time. If your API endpoint supports concurrent requests, you can increase throughput:
 
@@ -280,7 +280,7 @@ Reddit scraping is free and does not require API keys. Subreddit posts and comme
 }
 ```
 
-### Telegram
+### 电报
 
 Telegram scraping uses the public web preview at `https://t.me/s/<channel>`, so no API key is required. Only public channels are supported.
 
@@ -306,7 +306,7 @@ Telegram scraping uses the public web preview at `https://t.me/s/<channel>`, so 
 - `channel` — Telegram channel username only, without `@` or the full `https://t.me/` URL
 - `fetch_limit` — maximum number of recent messages to inspect per channel per run (default: `20`)
 
-### Twitter
+### 叽叽喳喳
 
 Requires an [阿皮菲](https://apify.com) account. Set `APIFY_TOKEN` in your `.env` file. The free tier includes $5/month of credit, enough for roughly 20,000 tweets.
 
@@ -552,7 +552,7 @@ Resend SMTP example:
 
 Set `RESEND_API_KEY` in `.env`. Recipients are loaded from `data/subscribers.json`.
 
-## Webhook Notification
+## 网络钩子通知
 
 Webhook notification is optional and disabled unless `webhook.enabled` is `true`. Horizon can call Feishu/Lark, DingTalk, Slack, Discord, or any custom webhook endpoint when the pipeline succeeds or fails.
 
