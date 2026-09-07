@@ -3,11 +3,11 @@ layout: default
 title: Configuration Guide
 ---
 
-# Configuration Guide
+# 配置指南
 
 Horizon is configured through two files: a `.env` file for API keys and a `data/config.json` file for sources, AI provider, and filtering options.
 
-## AI Providers
+## 人工智能提供商
 
 Configure which AI model scores and summarizes your content.
 
@@ -143,7 +143,7 @@ For remote Ollama servers, set `ai.base_url` in `data/config.json` or set
 also recognized. If the value omits `/v1`, Horizon appends it automatically
 for Ollama's OpenAI-compatible endpoint.
 
-### AI throttling
+### 人工智能节流
 
 If your model has a strict per-minute request cap, you can slow the scorer down in `data/config.json`:
 
@@ -159,7 +159,7 @@ If your model has a strict per-minute request cap, you can slow the scorer down 
 - `4.5` is a reasonable starting point for free-tier models capped around 15 requests per minute.
 - Set it back to `0` if you have enough throughput headroom and want maximum speed.
 
-### AI Concurrency
+### 人工智能并发
 
 By default, AI scoring and enrichment run one item at a time. If your API endpoint supports concurrent requests, you can increase throughput:
 
@@ -193,7 +193,7 @@ By default, AI scoring and enrichment run one item at a time. If your API endpoi
 
 For OpenAI-compatible gateways, Horizon sends `temperature` by default. If a newer reasoning-style model rejects that parameter with an error such as `temperature is deprecated for this model`, Horizon retries once without it and remembers that capability for later requests.
 
-## Information Sources
+## 信息来源
 
 All sources are configured under the top-level `sources` key in `config.json`.
 
@@ -219,7 +219,7 @@ All sources are configured under the top-level `sources` key in `config.json`.
 }
 ```
 
-### Hacker News
+### 黑客新闻
 
 ```json
 {
@@ -233,7 +233,7 @@ All sources are configured under the top-level `sources` key in `config.json`.
 }
 ```
 
-### RSS Feeds
+### RSS 源
 
 ```json
 {
@@ -280,7 +280,7 @@ Reddit scraping is free and does not require API keys. Subreddit posts and comme
 }
 ```
 
-### Telegram
+### 电报
 
 Telegram scraping uses the public web preview at `https://t.me/s/<channel>`, so no API key is required. Only public channels are supported.
 
@@ -306,7 +306,7 @@ Telegram scraping uses the public web preview at `https://t.me/s/<channel>`, so 
 - `channel` — Telegram channel username only, without `@` or the full `https://t.me/` URL
 - `fetch_limit` — maximum number of recent messages to inspect per channel per run (default: `20`)
 
-### Twitter
+### 叽叽喳喳
 
 Requires an [Apify](https://apify.com) account. Set `APIFY_TOKEN` in your `.env` file. The free tier includes $5/month of credit, enough for roughly 20,000 tweets.
 
@@ -335,7 +335,7 @@ Requires an [Apify](https://apify.com) account. Set `APIFY_TOKEN` in your `.env`
 
 The scraper uses the `altimis/scweet` actor by default. You can override it with `actor_id` if needed.
 
-### OpenBB Financial News
+### OpenBB财经新闻
 
 OpenBB is useful when you want equity or macro news from providers such as yfinance, Benzinga, FMP, Intrinio, Tiingo, SEC, or Federal Reserve through one SDK.
 
@@ -381,9 +381,9 @@ uv pip install --only-binary=:all: openbb openbb-benzinga
 
 OpenBB provider credentials are handled by the OpenBB SDK itself, using its own environment variables or user settings. Horizon does not pass those secrets through `data/config.json`.
 
-### OSS Insight (Trending GitHub Repos)
+### OSS Insight（热门 GitHub 存储库）
 
-Pulls top star-gain repositories from the [OSS Insight](https://ossinsight.io) public API, which aggregates GitHub WatchEvents. Useful for surfacing repos that are gaining stars right now without needing to scrape GitHub Trending or query BigQuery.
+Pulls top star-gain repositories from the [操作系统洞察](https://ossinsight.io) public API, which aggregates GitHub WatchEvents. Useful for surfacing repos that are gaining stars right now without needing to scrape GitHub Trending or query BigQuery.
 
 ```json
 {
@@ -408,7 +408,7 @@ Pulls top star-gain repositories from the [OSS Insight](https://ossinsight.io) p
 
 No API key is required.
 
-## Filtering
+## 过滤
 
 Content is scored 0-10:
 
@@ -656,7 +656,7 @@ Use `#{key?limit=N&split=DELIM}` to truncate long values by splitting on `DELIM`
 #{summary?limit=3000&split=---}
 ```
 
-### DingTalk
+### 钉钉
 
 In DingTalk, create a custom group robot and use a custom keyword such as `Horizon`. The keyword must appear in the body content.
 
