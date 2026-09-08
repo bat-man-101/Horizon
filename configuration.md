@@ -37,7 +37,7 @@ Common API key variable names:
 | Doubao | `DOUBAO_API_KEY` |
 | DeepSeek | `DEEPSEEK_API_KEY` |
 
-**Anthropic Claude**:
+**人性化的克劳德**:
 
 ```json
 {
@@ -50,7 +50,7 @@ Common API key variable names:
 }
 ```
 
-**OpenAI**:
+**开放人工智能**:
 
 ```json
 {
@@ -63,7 +63,7 @@ Common API key variable names:
 }
 ```
 
-**Gemini**:
+**双子座**:
 
 ```json
 {
@@ -76,7 +76,7 @@ Common API key variable names:
 }
 ```
 
-**Azure OpenAI**:
+**Azure 开放人工智能**:
 
 ```json
 {
@@ -93,7 +93,7 @@ Common API key variable names:
 
 Set `AZURE_OPENAI_API_KEY` and `AZURE_OPENAI_ENDPOINT` in your `.env`. The `model` field should be your Azure deployment name, not just the base model family name.
 
-**MiniMax**:
+**最小最大**:
 
 ```json
 {
@@ -108,7 +108,7 @@ Set `AZURE_OPENAI_API_KEY` and `AZURE_OPENAI_ENDPOINT` in your `.env`. The `mode
 
 Available models: `MiniMax-M3`, `MiniMax-M2.7`, `MiniMax-M2.7-highspeed`
 
-**Aliyun DashScope** (OpenAI-compatible):
+**阿里云 DashScope** (OpenAI-compatible):
 
 ```json
 {
@@ -121,9 +121,9 @@ Available models: `MiniMax-M3`, `MiniMax-M2.7`, `MiniMax-M2.7-highspeed`
 }
 ```
 
-Use the [DashScope compatible-mode](https://help.aliyun.com/zh/dashscope/developer-reference/use-dashscope-by-calling-openai-api) endpoint. Set `DASHSCOPE_API_KEY` in your `.env`. Optional: set `base_url` to override the default `https://dashscope.aliyuncs.com/compatible-mode/v1`.
+Use the [DashScope 兼容模式](https://help.aliyun.com/zh/dashscope/developer-reference/use-dashscope-by-calling-openai-api) endpoint. Set `DASHSCOPE_API_KEY` in your `.env`. Optional: set `base_url` to override the default `https://dashscope.aliyuncs.com/compatible-mode/v1`.
 
-**Ollama**:
+**成为**:
 
 ```json
 {
@@ -179,7 +179,7 @@ By default, AI scoring and enrichment run one item at a time. If your API endpoi
 - Result ordering is preserved regardless of concurrency.
 - If you also use `throttle_sec`, each concurrent task sleeps independently after finishing an item.
 
-**Custom Base URL** (for proxies):
+**自定义基本 URL** (for proxies):
 
 ```json
 {
@@ -250,7 +250,7 @@ All sources are configured under the top-level `sources` key in `config.json`.
 }
 ```
 
-### Reddit
+### 红迪网
 
 Reddit scraping is free and does not require API keys. Subreddit posts and comments prefer `old.reddit.com`; JSON and RSS endpoints are used as fallbacks when needed.
 
@@ -308,7 +308,7 @@ Telegram scraping uses the public web preview at `https://t.me/s/<channel>`, so 
 
 ### 叽叽喳喳
 
-Requires an [Apify](https://apify.com) account. Set `APIFY_TOKEN` in your `.env` file. The free tier includes $5/month of credit, enough for roughly 20,000 tweets.
+Requires an [阿皮菲](https://apify.com) account. Set `APIFY_TOKEN` in your `.env` file. The free tier includes $5/month of credit, enough for roughly 20,000 tweets.
 
 ```json
 {
@@ -467,7 +467,7 @@ If the same category appears in multiple groups, Horizon logs a warning and uses
 the first group in configuration order. Omitting both `category_groups` and
 `max_items` preserves the previous filtering behavior.
 
-## Environment Variable Substitution
+## 环境变量替换
 
 Any string value in `data/config.json` supports `${VAR_NAME}` syntax. Variables are expanded at runtime from the environment (including values loaded from `.env`). This lets you keep secrets, tenant-specific endpoints, and private URLs out of the checked-in JSON file.
 
@@ -498,7 +498,7 @@ Example:
 - Unset variables are left as `${NAME}` instead of becoming an empty string, so configuration mistakes fail loudly downstream.
 - Expansion is recursive through dicts, lists, and tuples; non-string values are left unchanged.
 
-## Email Subscription
+## 邮件订阅
 
 Email delivery is optional and disabled unless `email.enabled` is `true`. Horizon uses SMTP to send daily summaries and IMAP to check subscribe/unsubscribe requests.
 
@@ -552,7 +552,7 @@ Resend SMTP example:
 
 Set `RESEND_API_KEY` in `.env`. Recipients are loaded from `data/subscribers.json`.
 
-## Webhook Notification
+## 网络钩子通知
 
 Webhook notification is optional and disabled unless `webhook.enabled` is `true`. Horizon can call Feishu/Lark, DingTalk, Slack, Discord, or any custom webhook endpoint when the pipeline succeeds or fails.
 
@@ -588,7 +588,7 @@ Webhook notification is optional and disabled unless `webhook.enabled` is `true`
 
 When `request_body` is a JSON object or array, Horizon renders placeholders and serializes it as JSON. When it is a string, Horizon renders it directly and detects JSON if the rendered string is valid JSON.
 
-### Delivery Modes And Layouts
+### 交付模式和布局
 
 `delivery` controls how many webhook messages Horizon sends:
 
@@ -622,7 +622,7 @@ Example `summary_and_items` Markdown delivery config:
 
 With `summary_and_items`, Horizon sends one overview plus one message per selected item. `overview_position: "last"` sends item messages first and keeps the overview as the newest chat message; omit it or set `"first"` to send the overview first.
 
-### Webhook Templates
+### Webhook 模板
 
 Available variables:
 
@@ -727,13 +727,13 @@ With this layout, Horizon sends one interactive card containing the overview and
 }
 ```
 
-## Static Site
+## 静态站点
 
 Horizon writes generated summaries to `data/summaries/` and copies publishable Markdown into `docs/` for the GitHub Pages site. The repository includes a ready-to-use workflow at `.github/workflows/daily-summary.yml`.
 
 To use GitHub Pages, enable Pages for the repository and run the scheduled workflow or trigger it manually. The generated site is built from the `docs/` directory.
 
-## MCP Server
+## MCP服务器
 
 Horizon includes an MCP server for AI assistants and MCP-compatible clients.
 

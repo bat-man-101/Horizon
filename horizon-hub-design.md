@@ -1,6 +1,6 @@
-# Horizo​​nHub产品设计文档
+# HorizonHub Product Design Document
 
-## 定位
+## Positioning
 
 **一句话定位**: The information source marketplace for the Horizon ecosystem—driven by real community usage data for discovery, recommendation, and quality assessment.
 
@@ -17,7 +17,7 @@
 
 ---
 
-## 系统架构
+## System Architecture
 
 ```
 ┌──────────────────────────────────────────────────┐
@@ -53,7 +53,7 @@ Two core components:
 
 ---
 
-## 功能列表
+## Feature List
 
 ### 客源市场（浏览）
 
@@ -115,7 +115,7 @@ Hub Server
 - Hub Web Form (most intuitive)
 - Local Client Submission (one-click via `horizon-wizard`)
 
-### 智能推荐（推荐）
+### Intelligent Recommendation (Recommend)
 
 **应用场景**:
 
@@ -128,7 +128,7 @@ Hub Server
 - Content overlap between sources (calculated via deduplication data)
 - Usage patterns of user cohorts
 
-### 一键导出（Export）
+### One-click Export (Export)
 
 After users select sources on the Hub website:
 
@@ -136,7 +136,7 @@ After users select sources on the Hub website:
 - Download full config file
 - Generate `horizon-wizard` command → One-click import via terminal
 
-### 贡献者系统（社区）
+### Contributor System (Community)
 
 **贡献者排行榜**:
 - Ranked by number of sources contributed.
@@ -156,7 +156,7 @@ After users select sources on the Hub website:
 | 🔥 Popular Contributor| A single source used by ≥ 50 people |
 | 👑 Core Contributor | Contributed ≥ 10 sources |
 
-### 源健康监测
+### Source Health Monitoring
 
 **自动衰变检测** (Option A — Passive):
 
@@ -179,15 +179,15 @@ Reported to the Hub, integrated with decay data for comprehensive judgment.
 
 ---
 
-## 分布式代理操作系统
+## Distributed Agent Operating System
 
-### 类比
+### Analogy
 
 If the Horizon ecosystem is viewed as a **分布式代理操作系统**.
 
 A single Horizon instance is like a "standalone machine" managing one user's information flow. HorizonHub acts as the **控制平面** that coordinates all users' Agents into a whole, allowing decentralized individual judgments to converge into collective intelligence.
 
-### 为何“出现”？
+### Why "Emergence"?
 
 Each Agent runs independently and is unaware of others, but:
 - **多样性**: Different users subscribe to sources in different fields, naturally providing diverse perspectives.
