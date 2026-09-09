@@ -36,7 +36,7 @@ Welcome to [地平线](https://github.com/thysrael/Horizon), an AI-driven inform
 
 ## 文档
 
-- [配置指南](configuration) — AI providers, information sources, filtering, and environment variable substitution
+- [Configuration Guide](configuration) — AI providers, information sources, filtering, and environment variable substitution
 - [源码抓取器](scrapers) — How Horizon collects content from GitHub, Hacker News, RSS, and Reddit
 - [评分系统](scoring) — AI-based content analysis and the 0-10 scoring scale
 
