@@ -123,7 +123,7 @@ Hub Server
 2. **补充推荐**: Analyze existing config to recommend sources with complementary coverage and flag high-overlap sources.
 3. **协同过滤** (post-scale): "Users with similar tastes also read..."
 
-**Input for Rec Algorithm**:
+**Rec 算法的输入**:
 - Source field tags
 - Content overlap between sources (calculated via deduplication data)
 - Usage patterns of user cohorts
@@ -147,7 +147,7 @@ After users select sources on the Hub website:
 - How many people use my sources in total.
 - Average quality score of my sources.
 
-**Badge System**:
+**徽章系统**:
 
 | Badge | Condition |
 |---|---|
@@ -158,11 +158,11 @@ After users select sources on the Hub website:
 
 ### 源健康监测
 
-**Automatic Decay Detection** (Option A — Passive):
+**自动衰变检测** (Option A — Passive):
 
 Hub server continuously tracks active user trends for each source. If usage drops continuously (e.g., >30% drop within 30 days), auto-mark with a ⚠️ warning.
 
-**User Feedback Collection** (Option B — Active):
+**用户反馈收集** (Option B — Active):
 
 When a user deletes or disables a source via `horizon-wizard`, a popup asks for optional feedback:
 
@@ -185,15 +185,15 @@ Reported to the Hub, integrated with decay data for comprehensive judgment.
 
 If the Horizon ecosystem is viewed as a **分布式代理操作系统**.
 
-A single Horizon instance is like a "standalone machine" managing one user's information flow. HorizonHub acts as the **Control Plane** that coordinates all users' Agents into a whole, allowing decentralized individual judgments to converge into collective intelligence.
+A single Horizon instance is like a "standalone machine" managing one user's information flow. HorizonHub acts as the **控制平面** that coordinates all users' Agents into a whole, allowing decentralized individual judgments to converge into collective intelligence.
 
 ### 为何“出现”？
 
 Each Agent runs independently and is unaware of others, but:
 - **多样性**: Different users subscribe to sources in different fields, naturally providing diverse perspectives.
-- **Independence**: Each Agent's AI scoring is unaffected by other users.
-- **Aggregation**: The Hub aggregates all scores to form a global quality signal more accurate than any single Agent.
+- **独立**: Each Agent's AI scoring is unaffected by other users.
+- **聚合**: The Hub aggregates all scores to form a global quality signal more accurate than any single Agent.
 
-This is not designed intelligence, but rather consensus **emerging** from a large number of independent judgments—mathematically aligned with the Condorcet Jury Theorem.
+This is not designed intelligence, but rather consensus **新兴的** from a large number of independent judgments—mathematically aligned with the Condorcet Jury Theorem.
 
 ---
