@@ -32,7 +32,7 @@ uv run playwright install chromium
 ### 方法二：开发者工具
 
 1. 登录 x.com 后按 `F12` 打开开发者工具
-2. 切换到 **Application (应用)** → **曲奇饼** → `https://x.com`
+2. 切换到 **Application (应用)** → **Cookies** → `https://x.com`
 3. 找到以下关键 Cookie（名称可能略有不同）：
    - `auth_token`
    - `ct0`
