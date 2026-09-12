@@ -31,11 +31,11 @@ Stories and their comments are fetched concurrently. For each story, the top 5 c
 - `fetch_top_stories` — number of top story IDs to fetch
 - `min_score` — minimum HN points to include a story
 
-**提取的数据**: title, URL (falls back to HN discussion URL), author, score, comment count, and top comment text.
+**Extracted data**: title, URL (falls back to HN discussion URL), author, score, comment count, and top comment text.
 
 ## GitHub
 
-**文件**: `src/scrapers/github.py`
+**File**: `src/scrapers/github.py`
 
 Uses the [GitHub REST API](https://api.github.com):
 
@@ -44,10 +44,10 @@ Uses the [GitHub REST API](https://api.github.com):
 
 Two source types are supported:
 
-- **`用户事件`** — tracks push, create, release, public, and watch events for a user
+- **`user_events`** — tracks push, create, release, public, and watch events for a user
 - **`repo_releases`** — tracks new releases for a specific repository
 
-**配置** (`sources.github`, list of entries):
+**Config** (`sources.github`, list of entries):
 
 ```json
 {
@@ -66,11 +66,11 @@ Two source types are supported:
 }
 ```
 
-**验证**: Set `GITHUB_TOKEN` in your environment for higher rate limits (5000 req/hr vs 60 without).
+**Authentication**: Set `GITHUB_TOKEN` in your environment for higher rate limits (5000 req/hr vs 60 without).
 
 ## RSS
 
-**文件**: `src/scrapers/rss.py`
+**File**: `src/scrapers/rss.py`
 
 Fetches any Atom/RSS feed using the `feedparser` library. Tries multiple date fields (`published`, `updated`, `created`) with fallback parsing.
 
@@ -87,7 +87,7 @@ Fetches any Atom/RSS feed using the `feedparser` library. Tries multiple date fi
 
 - `category` — optional tag for grouping (e.g., `"programming"`, `"microblog"`)
 
-**提取的数据**: title, URL, author, content (from `summary`/`description`/`content` fields), feed name, category, and entry tags.
+**Extracted data**: title, URL, author, content (from `summary`/`description`/`content` fields), feed name, category, and entry tags.
 
 ## Reddit
 
@@ -104,7 +104,7 @@ Uses public, no-key Reddit endpoints. Subreddit listings and comments prefer `ol
 
 Subreddits and users are fetched concurrently. Comments are sorted by score, limited to the configured count, and exclude moderator-distinguished comments. Self-text is truncated at 1500 chars, comments at 500 chars.
 
-**配置** (`sources.reddit`):
+**Config** (`sources.reddit`):
 
 ```json
 {
@@ -134,13 +134,13 @@ Subreddits and users are fetched concurrently. Comments are sorted by score, lim
 
 **Rate limiting**: Detects HTTP 429 responses on JSON requests, reads the `Retry-After` header, waits, and retries once. Uses browser-like request headers for no-key public access.
 
-**提取的数据**: title, URL, author, score, upvote ratio, comment count, subreddit, flair, self-text, and top comments.
+**Extracted data**: title, URL, author, score, upvote ratio, comment count, subreddit, flair, self-text, and top comments.
 
 ## OpenBB
 
 **File**: `src/scrapers/openbb.py`
 
-Uses the [OpenBB平台](https://www.openbb.co/platform) Python SDK via `obb.news.company()` to fetch company news for one or more ticker watchlists.
+Uses the [OpenBB Platform](https://www.openbb.co/platform) Python SDK via `obb.news.company()` to fetch company news for one or more ticker watchlists.
 
 The scraper imports `openbb` lazily. If the optional dependency is not installed, Horizon logs a warning and skips the source instead of failing the whole run.
 
@@ -179,9 +179,9 @@ Behavior:
 
 **Extracted data**: title, URL, author, published time, article body/excerpt, watchlist name, provider, category, and symbol list.
 
-## 叽叽喳喳
+## Twitter
 
-**文件**: `src/scrapers/twitter.py`
+**File**: `src/scrapers/twitter.py`
 
 Uses the [Apify](https://apify.com) platform to bypass Twitter's anti-scraping measures. The actor `altimis~scweet` is called via the Apify REST API.
 
@@ -190,7 +190,7 @@ Flow:
 2. Poll `/v2/actor-runs/{run_id}` until status is `SUCCEEDED` or a terminal failure
 3. GET `/v2/datasets/{dataset_id}/items` to retrieve results
 
-**配置** (`sources.twitter`):
+**Config** (`sources.twitter`):
 
 ```json
 {
@@ -215,6 +215,6 @@ Flow:
 - `actor_id` — Apify actor ID (default: `altimis~scweet`)
 - `apify_token_env` — environment variable name containing the Apify API token
 
-**验证**: Set `APIFY_TOKEN` in your `.env`. Get a token at [控制台.apify.com](https://console.apify.com/account/integrations).
+**Authentication**: Set `APIFY_TOKEN` in your `.env`. Get a token at [console.apify.com](https://console.apify.com/account/integrations).
 
-**提取的数据**: tweet text, URL, author, publish time, likes, retweets, replies, views, and (optionally) reply-thread text appended under `--- Top Comments ---`.
+**Extracted data**: tweet text, URL, author, publish time, likes, retweets, replies, views, and (optionally) reply-thread text appended under `--- Top Comments ---`.
