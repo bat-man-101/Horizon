@@ -1,16 +1,21 @@
 """Content analysis using AI."""
 
 import asyncio
-import json
-import re
 from typing import List, Optional
+from pydantic import ValidationError
 from tenacity import retry, stop_after_attempt, wait_exponential
-from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn, MofNCompleteColumn
+from rich.progress import (
+    Progress,
+    SpinnerColumn,
+    BarColumn,
+    TextColumn,
+    MofNCompleteColumn,
+)
 
 from .client import AIClient
 from .prompts import CONTENT_ANALYSIS_SYSTEM, CONTENT_ANALYSIS_USER
 from .utils import parse_json_response
-from ..models import ContentItem
+from ..models import AIAnalysisResult, ContentItem
 
 DEFAULT_THROTTLE_SEC = 0.0
 
@@ -68,17 +73,12 @@ class ContentAnalyzer:
             transient=True,
         ) as progress:
             task = progress.add_task("Analyzing", total=len(items))
-            coros = [
-                _process(item, i, task) for i, item in enumerate(items)
-            ]
+            coros = [_process(item, i, task) for i, item in enumerate(items)]
             analyzed_items = await asyncio.gather(*coros)
 
         return analyzed_items
 
-    @retry(
-        stop=stop_after_attempt(3),
-        wait=wait_exponential(min=2, max=10)
-    )
+    @retry(stop=stop_after_attempt(3), wait=wait_exponential(min=2, max=10))
     async def _analyze_item(self, item: ContentItem) -> None:
         """Analyze a single content item.
 
@@ -136,7 +136,7 @@ class ContentAnalyzer:
             author=item.author or "Unknown",
             url=str(item.url),
             content_section=content_section,
-            discussion_section=discussion_section
+            discussion_section=discussion_section,
         )
 
         # Get AI completion
@@ -148,15 +148,32 @@ class ContentAnalyzer:
         # Parse JSON response with robust fallback
         result = self._parse_json_response(response)
         if result is None:
-            print(f"Warning: could not parse analysis response for {item.id}, using defaults")
+            print(
+                f"Warning: could not parse analysis response for {item.id}, using defaults"
+            )
             item.ai_score = 0.0
             item.ai_reason = "Analysis response parse failed"
             item.ai_summary = item.title
             item.ai_tags = []
             return
 
-        # Update item with analysis results
-        item.ai_score = float(result.get("score", 0))
-        item.ai_reason = result.get("reason", "")
-        item.ai_summary = result.get("summary", item.title)
-        item.ai_tags = result.get("tags", [])
+        # Validate the raw dict against the schema before writing it back.
+        # Purpose: block field-level dirty data (score="high", tags="a,b",
+        # score out of 0-10) from silently corrupting the digest.
+        try:
+            parsed = AIAnalysisResult.model_validate(result)
+        except ValidationError as e:
+            print(
+                f"Warning: invalid analysis schema for {item.id}: {e}, using defaults"
+            )
+            item.ai_score = 0.0
+            item.ai_reason = "Analysis schema validation failed"
+            item.ai_summary = item.title
+            item.ai_tags = []
+            return
+
+        # Update item with validated analysis results
+        item.ai_score = parsed.score
+        item.ai_reason = parsed.reason
+        item.ai_summary = parsed.summary or item.title
+        item.ai_tags = parsed.tags

@@ -25,14 +25,17 @@ async def search_hn(query: str, client: httpx.AsyncClient) -> List[dict]:
 
     results = []
     for hit in data.get("hits", []):
-        results.append({
-            "title": hit.get("title", ""),
-            "url": hit.get("url") or f"https://news.ycombinator.com/item?id={hit.get('objectID', '')}",
-            "source": "hackernews",
-            "score": hit.get("points", 0),
-            "num_comments": hit.get("num_comments", 0),
-            "date": hit.get("created_at", ""),
-        })
+        results.append(
+            {
+                "title": hit.get("title", ""),
+                "url": hit.get("url")
+                or f"https://news.ycombinator.com/item?id={hit.get('objectID', '')}",
+                "source": "hackernews",
+                "score": hit.get("points", 0),
+                "num_comments": hit.get("num_comments", 0),
+                "date": hit.get("created_at", ""),
+            }
+        )
     return results
 
 
@@ -51,15 +54,17 @@ async def search_reddit(query: str, client: httpx.AsyncClient) -> List[dict]:
     results = []
     for child in data.get("data", {}).get("children", []):
         post = child.get("data", {})
-        results.append({
-            "title": post.get("title", ""),
-            "url": post.get("url", ""),
-            "source": "reddit",
-            "score": post.get("score", 0),
-            "num_comments": post.get("num_comments", 0),
-            "subreddit": post.get("subreddit", ""),
-            "date": post.get("created_utc", ""),
-        })
+        results.append(
+            {
+                "title": post.get("title", ""),
+                "url": post.get("url", ""),
+                "source": "reddit",
+                "score": post.get("score", 0),
+                "num_comments": post.get("num_comments", 0),
+                "subreddit": post.get("subreddit", ""),
+                "date": post.get("created_utc", ""),
+            }
+        )
     return results
 
 

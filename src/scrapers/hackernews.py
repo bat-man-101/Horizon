@@ -93,7 +93,12 @@ class HackerNewsScraper(BaseScraper):
 
         comments = []
         for r in results:
-            if isinstance(r, dict) and r.get("text") and not r.get("deleted") and not r.get("dead"):
+            if (
+                isinstance(r, dict)
+                and r.get("text")
+                and not r.get("deleted")
+                and not r.get("dead")
+            ):
                 comments.append(r)
         return comments
 
@@ -115,7 +120,7 @@ class HackerNewsScraper(BaseScraper):
                 commenter = c.get("by", "anon")
                 text = c.get("text", "")
                 # Strip HTML tags roughly
-                text = re.sub(r'<[^>]+>', ' ', text).strip()
+                text = re.sub(r"<[^>]+>", " ", text).strip()
                 # Truncate very long comments
                 if len(text) > 500:
                     text = text[:497] + "..."
@@ -138,5 +143,5 @@ class HackerNewsScraper(BaseScraper):
                 "type": story.get("type", "story"),
                 "discussion_url": hn_discussion_url,
                 "comment_count": len(comments),
-            }
+            },
         )

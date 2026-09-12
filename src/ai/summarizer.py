@@ -6,8 +6,9 @@ from typing import List, Dict, Optional
 from ..models import ContentItem
 
 # Optional machine translation (no-API mode)
-_HAS_KANA = re.compile(r'[\u3040-\u309f\u30a0-\u30ff]')
+_HAS_KANA = re.compile(r"[\u3040-\u309f\u30a0-\u30ff]")
 _translator = None
+
 
 def _machine_translate(text: str) -> Optional[str]:
     """Translate English/Japanese text to Chinese using Google Translate (free).
@@ -16,12 +17,13 @@ def _machine_translate(text: str) -> Optional[str]:
     if not text or len(text) < 3:
         return None
     # Already Chinese (has CJK but no kana) → skip
-    if re.search(r'[\u4e00-\u9fff]', text) and not _HAS_KANA.search(text):
+    if re.search(r"[\u4e00-\u9fff]", text) and not _HAS_KANA.search(text):
         return None
     try:
         if _translator is None:
             from deep_translator import GoogleTranslator
-            _translator = GoogleTranslator(source='auto', target='zh-CN')
+
+            _translator = GoogleTranslator(source="auto", target="zh-CN")
         result = _translator.translate(text)
         # 目标语言为 zh-CN；结果不含 CJK 说明是错误页文本/翻译失败，回退保留原文
         if result and result != text and re.search(r"[\u4e00-\u9fff]", result):
@@ -29,8 +31,6 @@ def _machine_translate(text: str) -> Optional[str]:
     except Exception:
         pass
     return None
-
-from ..models import ContentItem
 
 
 _CJK = r"[\u4e00-\u9fff\u3400-\u4dbf]"
@@ -180,7 +180,9 @@ class DailySummarizer:
         )
 
         # Group items by category
-        category_display = _CATEGORY_DISPLAY_ZH if language == "zh" else _CATEGORY_DISPLAY_EN
+        category_display = (
+            _CATEGORY_DISPLAY_ZH if language == "zh" else _CATEGORY_DISPLAY_EN
+        )
         groups: Dict[str, List[ContentItem]] = {}
         group_order: List[str] = []
         for item in items:
@@ -204,7 +206,9 @@ class DailySummarizer:
                 if language == "zh":
                     t = _pangu(t)
                 score = item.ai_score or "?"
-                toc_sections.append(f"  {global_idx}. [{t}](#item-{global_idx}) ⭐️ {score}/10")
+                toc_sections.append(
+                    f"  {global_idx}. [{t}](#item-{global_idx}) ⭐️ {score}/10"
+                )
             toc_sections.append("")
         toc = "\n".join(toc_sections) + "---\n\n"
 
@@ -253,7 +257,9 @@ class DailySummarizer:
             f"> {labels['selected_items'].format(total=total_fetched, selected=len(items))}\n\n"
         )
 
-        category_display = _CATEGORY_DISPLAY_ZH if language == "zh" else _CATEGORY_DISPLAY_EN
+        category_display = (
+            _CATEGORY_DISPLAY_ZH if language == "zh" else _CATEGORY_DISPLAY_EN
+        )
         groups: Dict[str, List[ContentItem]] = {}
         group_order: List[str] = []
         for item in items:
@@ -273,7 +279,11 @@ class DailySummarizer:
                 global_idx += 1
                 _t = item.metadata.get(f"title_{language}") or item.title
                 # Machine translate if Chinese title unavailable (no-API mode)
-                if language == "zh" and _t == item.title and not re.search(r'[\u4e00-\u9fff]', str(_t)):
+                if (
+                    language == "zh"
+                    and _t == item.title
+                    and not re.search(r"[\u4e00-\u9fff]", str(_t))
+                ):
                     mt = _machine_translate(str(_t))
                     if mt:
                         _t = mt
@@ -313,7 +323,11 @@ class DailySummarizer:
 
         entries = []
         for i, item in enumerate(items, start=1):
-            title = str(item.metadata.get(f"title_{language}") or item.title).replace("[", "(").replace("]", ")")
+            title = (
+                str(item.metadata.get(f"title_{language}") or item.title)
+                .replace("[", "(")
+                .replace("]", ")")
+            )
             if language == "zh":
                 title = _pangu(title)
             score = item.ai_score or "?"
@@ -330,10 +344,16 @@ class DailySummarizer:
     ) -> str:
         """Generate one item message for multi-message webhook delivery."""
         labels = LABELS.get(language, LABELS["en"])
-        prefix = f"第 {index}/{total} 条\n\n" if language == "zh" else f"Item {index}/{total}\n\n"
+        prefix = (
+            f"第 {index}/{total} 条\n\n"
+            if language == "zh"
+            else f"Item {index}/{total}\n\n"
+        )
         return prefix + self._format_item(item, labels, language, index).rstrip("-\n ")
 
-    def _format_item(self, item: ContentItem, labels: dict, language: str, index: int) -> str:
+    def _format_item(
+        self, item: ContentItem, labels: dict, language: str, index: int
+    ) -> str:
         """Format a single ContentItem into Markdown."""
         _title = item.metadata.get(f"title_{language}") or item.title
         title = str(_title).replace("[", "(").replace("]", ")")
@@ -353,7 +373,7 @@ class DailySummarizer:
             if "--- Top Comments ---" in content_text:
                 content_text = content_text.split("--- Top Comments ---", 1)[0]
             # Strip HTML tags
-            content_text = re.sub(r'<[^>]+>', '', content_text)
+            content_text = re.sub(r"<[^>]+>", "", content_text)
             summary = content_text.strip()[:500]
         background = meta.get(f"background_{language}") or meta.get("background") or ""
         discussion = (
@@ -392,7 +412,7 @@ class DailySummarizer:
         if discussion_url:
             discussion_url = str(discussion_url)
             if discussion_url != url:
-                source_line += f' · [{labels["discussion"]}]({discussion_url})'
+                source_line += f" · [{labels['discussion']}]({discussion_url})"
 
         lines = [
             f'<a id="item-{index}"></a>',
@@ -409,10 +429,12 @@ class DailySummarizer:
 
         sources = meta.get("sources") or []
         if sources:
-            items_html = "".join(f'<li><a href="{s["url"]}">{s["title"]}</a></li>\n' for s in sources)
+            items_html = "".join(
+                f'<li><a href="{s["url"]}">{s["title"]}</a></li>\n' for s in sources
+            )
             lines += [
                 "",
-                f'<details><summary>{labels["references"]}</summary>\n<ul>\n{items_html}\n</ul>\n</details>',
+                f"<details><summary>{labels['references']}</summary>\n<ul>\n{items_html}\n</ul>\n</details>",
             ]
 
         if discussion:
@@ -429,7 +451,9 @@ class DailySummarizer:
 
         return "\n".join(lines) + "\n\n"
 
-    def _generate_empty_summary(self, date: str, total_fetched: int, labels: dict) -> str:
+    def _generate_empty_summary(
+        self, date: str, total_fetched: int, labels: dict
+    ) -> str:
         """Generate summary when no high-scoring items were found."""
         return (
             f"# {labels['header']} - {date}\n\n"

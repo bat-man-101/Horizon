@@ -40,7 +40,11 @@ def test_analyze_batch_does_not_sleep_by_default(monkeypatch):
 def test_analyze_batch_sleeps_between_items_when_throttle_configured(monkeypatch):
     client = SimpleNamespace(config=SimpleNamespace(throttle_sec=1.5))
     analyzer = ContentAnalyzer(client)
-    items = [_make_item("rss:test:1"), _make_item("rss:test:2"), _make_item("rss:test:3")]
+    items = [
+        _make_item("rss:test:1"),
+        _make_item("rss:test:2"),
+        _make_item("rss:test:3"),
+    ]
     sleep_calls = []
 
     async def fake_analyze_item(item):
@@ -77,7 +81,9 @@ def test_analyze_batch_concurrent_processing(monkeypatch):
     asyncio.run(analyzer.analyze_batch(items))
 
     assert max_active == 3
-    assert all(item.ai_score is None for item in items)  # None because fake_analyze_item doesn't set it
+    assert all(
+        item.ai_score is None for item in items
+    )  # None because fake_analyze_item doesn't set it
 
 
 def test_analyze_batch_concurrent_preserves_order(monkeypatch):

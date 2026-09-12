@@ -15,9 +15,7 @@ import httpx
 from .tag_aliases import get_tag_aliases
 
 
-API_BASE_URL = os.environ.get(
-    "HORIZON_API_URL", "https://horizon1123.top"
-)
+API_BASE_URL = os.environ.get("HORIZON_API_URL", "https://horizon1123.top")
 PRESETS_ENDPOINT = f"{API_BASE_URL}/api/presets"
 REQUEST_TIMEOUT = 10  # seconds
 
@@ -79,21 +77,27 @@ def _transform_api_response(api_data: Dict) -> Dict:
             if src_type in ("github_user", "github_repo"):
                 config.pop("subtype", None)
 
-            sources.append({
-                "type": src_type,
-                "description": src.get("description", ""),
-                "description_zh": src.get("description_zh", src.get("description", "")),
-                "tags": src.get("tags", []),
-                "config": config,
-            })
+            sources.append(
+                {
+                    "type": src_type,
+                    "description": src.get("description", ""),
+                    "description_zh": src.get(
+                        "description_zh", src.get("description", "")
+                    ),
+                    "tags": src.get("tags", []),
+                    "config": config,
+                }
+            )
 
-        domains.append({
-            "id": category.get("id", "").lower().replace("_", "-"),
-            "name": category.get("name", ""),
-            "name_zh": category.get("name_zh", category.get("name", "")),
-            "keywords": category.get("keywords", []),
-            "sources": sources,
-        })
+        domains.append(
+            {
+                "id": category.get("id", "").lower().replace("_", "-"),
+                "name": category.get("name", ""),
+                "name_zh": category.get("name_zh", category.get("name", "")),
+                "keywords": category.get("keywords", []),
+                "sources": sources,
+            }
+        )
 
     return {"domains": domains}
 
@@ -246,8 +250,7 @@ def match_sources(
         domain_keywords = [k.lower() for k in domain.get("keywords", [])]
 
         category_score = sum(
-            1.0 for kw in domain_keywords
-            if kw in tokens or kw in input_lower
+            1.0 for kw in domain_keywords if kw in tokens or kw in input_lower
         )
 
         for src in domain.get("sources", []):
@@ -257,15 +260,15 @@ def match_sources(
             seen.add(key)
 
             tag_score = sum(
-                0.5 for tag in src.get("tags", [])
+                0.5
+                for tag in src.get("tags", [])
                 if _tag_matches_input(tag, tokens, input_lower)
             )
 
             description = src.get("description", "").lower()
             desc_tokens = set(description.split())
             desc_score = sum(
-                0.3 for token in tokens
-                if len(token) >= 3 and token in desc_tokens
+                0.3 for token in tokens if len(token) >= 3 and token in desc_tokens
             )
 
             raw_score = category_score + tag_score + desc_score

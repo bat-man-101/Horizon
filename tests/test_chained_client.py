@@ -1,12 +1,11 @@
 """Tests for ChainedAIClient fallback logic."""
 
 import asyncio
-from datetime import datetime, timezone
 
 import pytest
 
 from src.ai.client import ChainedAIClient, _create_chained_client
-from src.models import AIConfig, AIProvider, ContentItem, SourceType
+from src.models import AIConfig, AIProvider
 
 
 class _DummyClient:
@@ -39,7 +38,9 @@ class _MockFactory:
         return client
 
 
-def _make_config(provider: AIProvider, model: str = "m", api_key_env: str = "K") -> AIConfig:
+def _make_config(
+    provider: AIProvider, model: str = "m", api_key_env: str = "K"
+) -> AIConfig:
     return AIConfig(
         provider=provider,
         model=model,
@@ -138,8 +139,13 @@ def test_should_fallback_detects_retryable_errors():
     assert ChainedAIClient._should_fallback(Exception("403 forbidden")) is True
     assert ChainedAIClient._should_fallback(Exception("quota exceeded")) is True
     assert ChainedAIClient._should_fallback(Exception("502 bad gateway")) is True
-    assert ChainedAIClient._should_fallback(Exception("503 service unavailable")) is True
-    assert ChainedAIClient._should_fallback(Exception("Empty response from provider")) is True
+    assert (
+        ChainedAIClient._should_fallback(Exception("503 service unavailable")) is True
+    )
+    assert (
+        ChainedAIClient._should_fallback(Exception("Empty response from provider"))
+        is True
+    )
     assert ChainedAIClient._should_fallback(Exception("some random error")) is False
 
 

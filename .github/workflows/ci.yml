@@ -1,0 +1,37 @@
+name: Quality Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  lint:
+    name: ruff + mypy + pytest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - uses: astral-sh/setup-uv@v7
+
+      - name: Install dependencies (incl. dev)
+        run: uv sync --extra dev
+
+      - name: ruff check
+        run: uv run ruff check .
+
+      - name: ruff format check
+        run: uv run ruff format --check .
+
+      # mypy 第二阶段(存量类型债清零后): 移除 continue-on-error 即强制
+      - name: mypy
+        run: uv run mypy src/
+        continue-on-error: true   # 存量 ~101 个类型债, 先报告不阻断; 债清后收紧
+
+      - name: pytest
+        run: uv run pytest

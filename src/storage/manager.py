@@ -73,7 +73,7 @@ class StorageManager:
                 data = json.load(f)
         except json.JSONDecodeError as e:
             raise ConfigError(
-                f"Invalid JSON in configuration file: {self.config_path}\n" f"Error: {e}"
+                f"Invalid JSON in configuration file: {self.config_path}\nError: {e}"
             ) from e
 
         # Expand ${VAR} references in every string value before pydantic
@@ -85,8 +85,7 @@ class StorageManager:
             return Config.model_validate(data)
         except ValidationError as e:
             raise ConfigError(
-                f"Configuration validation failed for {self.config_path}\n"
-                f"Details: {e}"
+                f"Configuration validation failed for {self.config_path}\nDetails: {e}"
             ) from e
 
     def save_config(self, config: Config, backup: bool = True) -> Path:
@@ -108,7 +107,9 @@ class StorageManager:
 
         return self.config_path
 
-    def save_daily_summary(self, date: str, markdown: str, language: str = "en") -> Path:
+    def save_daily_summary(
+        self, date: str, markdown: str, language: str = "en"
+    ) -> Path:
         filename = f"horizon-{date}-{language}.md"
         filepath = self.summaries_dir / filename
 

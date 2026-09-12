@@ -1,9 +1,7 @@
 """Interactive setup wizard for Horizon configuration."""
 
-import json
 import os
 import sys
-from pathlib import Path
 from typing import Dict, List, Optional
 
 from dotenv import load_dotenv
@@ -13,10 +11,20 @@ from rich.table import Table
 from rich.panel import Panel
 
 from ..models import (
-    AIConfig, AIProvider, AI_PROVIDER_DEFAULTS, Config, FilteringConfig, SourcesConfig,
-    GitHubSourceConfig, HackerNewsConfig, RSSSourceConfig,
-    RedditConfig, RedditSubredditConfig, RedditUserConfig,
-    TelegramConfig, TelegramChannelConfig,
+    AIConfig,
+    AIProvider,
+    AI_PROVIDER_DEFAULTS,
+    Config,
+    FilteringConfig,
+    SourcesConfig,
+    GitHubSourceConfig,
+    HackerNewsConfig,
+    RSSSourceConfig,
+    RedditConfig,
+    RedditSubredditConfig,
+    RedditUserConfig,
+    TelegramConfig,
+    TelegramChannelConfig,
 )
 from ..storage.manager import StorageManager
 from .presets import load_presets, match_sources
@@ -84,13 +92,15 @@ def configure_ai() -> Optional[AIConfig]:
             f"[yellow]⚠  {api_key_env} is not set in environment or .env file.[/yellow]"
         )
         console.print("   AI features (smart recommendations) will be skipped.")
-        console.print(f"   Add it to your .env file later: {api_key_env}=your_key_here\n")
+        console.print(
+            f"   Add it to your .env file later: {api_key_env}=your_key_here\n"
+        )
 
     languages = Prompt.ask(
         "Output languages (comma-separated)",
         default="zh,en",
     )
-    lang_list = [l.strip() for l in languages.split(",") if l.strip()]
+    lang_list = [lang.strip() for lang in languages.split(",") if lang.strip()]
 
     return AIConfig(
         provider=provider_enum,
@@ -119,8 +129,8 @@ def get_interests() -> str:
     console.print(
         "Describe what topics you'd like to follow. "
         "You can use Chinese, English, or both.\n"
-        "[dim]Examples: \"LLM inference\", \"具身智能\", \"Rust systems programming\", "
-        "\"web security\", \"开源工具\"[/dim]\n"
+        '[dim]Examples: "LLM inference", "具身智能", "Rust systems programming", '
+        '"web security", "开源工具"[/dim]\n'
     )
     interests = Prompt.ask("Your interests")
     return interests
@@ -206,50 +216,59 @@ def build_config(
     reddit_subreddits = []
     reddit_users = []
     telegram_channels = []
-    hn_enabled = False
 
     for src in selected_sources:
         src_type = src.get("type", "")
         cfg = src.get("config", {})
 
         if src_type == "github_user":
-            github_sources.append(GitHubSourceConfig(
-                type="user_events",
-                username=cfg.get("username", ""),
-                enabled=True,
-            ))
+            github_sources.append(
+                GitHubSourceConfig(
+                    type="user_events",
+                    username=cfg.get("username", ""),
+                    enabled=True,
+                )
+            )
         elif src_type == "github_repo":
-            github_sources.append(GitHubSourceConfig(
-                type="repo_releases",
-                owner=cfg.get("owner", ""),
-                repo=cfg.get("repo", ""),
-                enabled=True,
-            ))
+            github_sources.append(
+                GitHubSourceConfig(
+                    type="repo_releases",
+                    owner=cfg.get("owner", ""),
+                    repo=cfg.get("repo", ""),
+                    enabled=True,
+                )
+            )
         elif src_type == "rss":
-            rss_sources.append(RSSSourceConfig(
-                name=cfg.get("name", ""),
-                url=cfg.get("url", ""),
-                enabled=True,
-                category=cfg.get("category", ""),
-            ))
+            rss_sources.append(
+                RSSSourceConfig(
+                    name=cfg.get("name", ""),
+                    url=cfg.get("url", ""),
+                    enabled=True,
+                    category=cfg.get("category", ""),
+                )
+            )
         elif src_type == "reddit_subreddit":
-            reddit_subreddits.append(RedditSubredditConfig(
-                subreddit=cfg.get("subreddit", ""),
-                sort=cfg.get("sort", "hot"),
-                fetch_limit=cfg.get("fetch_limit", 15),
-                min_score=cfg.get("min_score", 50),
-            ))
+            reddit_subreddits.append(
+                RedditSubredditConfig(
+                    subreddit=cfg.get("subreddit", ""),
+                    sort=cfg.get("sort", "hot"),
+                    fetch_limit=cfg.get("fetch_limit", 15),
+                    min_score=cfg.get("min_score", 50),
+                )
+            )
         elif src_type == "reddit_user":
-            reddit_users.append(RedditUserConfig(
-                username=cfg.get("username", ""),
-            ))
+            reddit_users.append(
+                RedditUserConfig(
+                    username=cfg.get("username", ""),
+                )
+            )
         elif src_type == "telegram":
-            telegram_channels.append(TelegramChannelConfig(
-                channel=cfg.get("channel", ""),
-                fetch_limit=cfg.get("fetch_limit", 20),
-            ))
-        elif src_type == "hackernews":
-            hn_enabled = True
+            telegram_channels.append(
+                TelegramChannelConfig(
+                    channel=cfg.get("channel", ""),
+                    fetch_limit=cfg.get("fetch_limit", 20),
+                )
+            )
 
     # Always include HackerNews as a universal source
     hn_config = HackerNewsConfig(
@@ -329,11 +348,10 @@ def merge_configs(new_config: Config, existing_config: Config) -> Config:
 
     # Merge Reddit subreddits
     existing_subs = {
-        s.subreddit: s
-        for s in (existing_config.sources.reddit.subreddits or [])
+        s.subreddit: s for s in (existing_config.sources.reddit.subreddits or [])
     }
     new_subs = []
-    for sub in (merged.sources.reddit.subreddits or []):
+    for sub in merged.sources.reddit.subreddits or []:
         name = sub.subreddit
         if name in existing_subs:
             del existing_subs[name]
@@ -376,7 +394,9 @@ def main():
         else:
             console.print("[dim]Loaded preset sources from API[/dim]")
     except FileNotFoundError:
-        console.print("[yellow]Could not fetch presets (offline and no local file).[/yellow]")
+        console.print(
+            "[yellow]Could not fetch presets (offline and no local file).[/yellow]"
+        )
         console.print("[yellow]Skipping preset matching.[/yellow]")
         presets = {"domains": []}
 
@@ -386,7 +406,9 @@ def main():
     if matched_sources:
         console.print(f"[green]Found {len(preset_sources)} matching sources[/green]")
     else:
-        console.print("[yellow]No preset sources matched — AI will try to recommend.[/yellow]")
+        console.print(
+            "[yellow]No preset sources matched — AI will try to recommend.[/yellow]"
+        )
 
     # Step 4: AI recommendations (optional)
     ai_sources = []
@@ -397,11 +419,17 @@ def main():
             console.print("[dim]Asking AI for recommendations...[/dim]")
             from .ai_recommend import get_ai_recommendations_sync
 
-            ai_sources = get_ai_recommendations_sync(ai_config, interests, preset_sources)
+            ai_sources = get_ai_recommendations_sync(
+                ai_config, interests, preset_sources
+            )
             if ai_sources:
-                console.print(f"[green]AI recommended {len(ai_sources)} additional sources[/green]")
+                console.print(
+                    f"[green]AI recommended {len(ai_sources)} additional sources[/green]"
+                )
             else:
-                console.print("[yellow]AI returned no additional recommendations.[/yellow]")
+                console.print(
+                    "[yellow]AI returned no additional recommendations.[/yellow]"
+                )
     else:
         console.print(
             f"\n[dim]Skipping AI recommendations ({ai_config.api_key_env} not set)[/dim]"
@@ -411,7 +439,9 @@ def main():
     selected = select_sources(preset_sources, ai_sources)
 
     if not selected:
-        console.print("[yellow]No sources selected. Adding HackerNews as default.[/yellow]")
+        console.print(
+            "[yellow]No sources selected. Adding HackerNews as default.[/yellow]"
+        )
 
     # Step 6: Build config
     config = build_config(ai_config, selected)
@@ -419,7 +449,9 @@ def main():
     # Merge with existing config if present
     try:
         existing = storage.load_config()
-        if Confirm.ask("\nExisting config.json found. Merge new sources into it?", default=True):
+        if Confirm.ask(
+            "\nExisting config.json found. Merge new sources into it?", default=True
+        ):
             config = merge_configs(config, existing)
     except FileNotFoundError:
         pass
@@ -428,15 +460,17 @@ def main():
     path = storage.save_config(config, backup=True)
 
     # Summary
-    console.print(Panel(
-        f"[green]✓ Configuration saved to {path}[/green]\n\n"
-        f"  AI:      {ai_config.provider.value} / {ai_config.model}\n"
-        f"  Sources: {_count_sources(config)} total\n"
-        f"  Threshold: {config.filtering.ai_score_threshold}\n\n"
-        f"Run [bold cyan]horizon[/bold cyan] to start aggregating!",
-        title="Setup Complete",
-        border_style="green",
-    ))
+    console.print(
+        Panel(
+            f"[green]✓ Configuration saved to {path}[/green]\n\n"
+            f"  AI:      {ai_config.provider.value} / {ai_config.model}\n"
+            f"  Sources: {_count_sources(config)} total\n"
+            f"  Threshold: {config.filtering.ai_score_threshold}\n\n"
+            f"Run [bold cyan]horizon[/bold cyan] to start aggregating!",
+            title="Setup Complete",
+            border_style="green",
+        )
+    )
 
 
 def _count_sources(config: Config) -> int:

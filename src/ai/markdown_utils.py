@@ -74,7 +74,11 @@ def _convert_details_to_markdown(value: str) -> str:
                 clean_label = _strip_html_tags(label)
                 escaped_label = _escape_markdown_text(clean_label)
                 clean_href = html.unescape(href).strip()
-                if escaped_label and clean_href and _is_safe_markdown_link_url(clean_href):
+                if (
+                    escaped_label
+                    and clean_href
+                    and _is_safe_markdown_link_url(clean_href)
+                ):
                     items.append(f"- [{escaped_label}]({clean_href})")
                 elif escaped_label:
                     items.append(f"- {escaped_label}")

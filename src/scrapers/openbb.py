@@ -67,6 +67,7 @@ class OpenBBScraper(BaseScraper):
         """
         try:
             from openbb import obb
+
             return obb
         except ImportError:
             logger.warning(

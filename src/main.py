@@ -35,7 +35,9 @@ def main():
     """Main CLI entry point."""
     print_banner()
 
-    parser = argparse.ArgumentParser(description="Horizon - AI-Driven Information Aggregation System")
+    parser = argparse.ArgumentParser(
+        description="Horizon - AI-Driven Information Aggregation System"
+    )
     parser.add_argument("--hours", type=int, help="Force fetch from last N hours")
     args = parser.parse_args()
 
@@ -82,6 +84,7 @@ def main():
     except Exception as e:
         console.print(f"\n[bold red]❌ Fatal error: {e}[/bold red]")
         import traceback
+
         traceback.print_exc()
         sys.exit(1)
 

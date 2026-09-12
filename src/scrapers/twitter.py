@@ -159,7 +159,9 @@ class TwitterScraper(BaseScraper):
         rows = await self._fetch_dataset(token, dataset_id)
         return self._extract_reply_lines(item, rows, max_replies)
 
-    def _extract_reply_lines(self, item: ContentItem, rows: list, max_replies: int) -> List[str]:
+    def _extract_reply_lines(
+        self, item: ContentItem, rows: list, max_replies: int
+    ) -> List[str]:
         """Convert scweet rows into compact reply lines."""
         min_likes = max(self.config.reply_min_likes, 0)
         tweet_id = str(item.metadata.get("tweet_id") or "")

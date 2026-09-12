@@ -6,19 +6,25 @@ For items that pass the score threshold, this module:
 """
 
 import asyncio
-import json
-import re
 import sys
 import os
 from typing import List, Optional
 from tenacity import retry, stop_after_attempt, wait_exponential
-from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn, MofNCompleteColumn
+from rich.progress import (
+    Progress,
+    SpinnerColumn,
+    BarColumn,
+    TextColumn,
+    MofNCompleteColumn,
+)
 from ddgs import DDGS
 
 from .client import AIClient
 from .prompts import (
-    CONCEPT_EXTRACTION_SYSTEM, CONCEPT_EXTRACTION_USER,
-    CONTENT_ENRICHMENT_SYSTEM, CONTENT_ENRICHMENT_USER,
+    CONCEPT_EXTRACTION_SYSTEM,
+    CONCEPT_EXTRACTION_USER,
+    CONTENT_ENRICHMENT_SYSTEM,
+    CONTENT_ENRICHMENT_USER,
 )
 from .utils import parse_json_response
 from ..models import ContentItem
@@ -50,7 +56,9 @@ class ContentEnricher:
                 try:
                     await self._enrich_item(item)
                 except Exception as e:
-                    print(f"Error enriching item {item.id}: {e}, falling back to translation")
+                    print(
+                        f"Error enriching item {item.id}: {e}, falling back to translation"
+                    )
                     await self._translate_item(item)
             progress.advance(progress_task)
 
@@ -62,9 +70,7 @@ class ContentEnricher:
             transient=True,
         ) as progress:
             task = progress.add_task("Enriching", total=len(items))
-            coros = [
-                _process(item, task) for item in items
-            ]
+            coros = [_process(item, task) for item in items]
             await asyncio.gather(*coros)
 
     async def _web_search(self, query: str, max_results: int = 3) -> list:
@@ -79,7 +85,9 @@ class ContentEnricher:
             sys.stderr = open(os.devnull, "w")
             try:
                 ddgs = DDGS()
-                results = await asyncio.to_thread(ddgs.text, query, max_results=max_results)
+                results = await asyncio.to_thread(
+                    ddgs.text, query, max_results=max_results
+                )
             finally:
                 sys.stderr.close()
                 sys.stderr = stderr
@@ -87,7 +95,11 @@ class ContentEnricher:
             return []
 
         return [
-            {"title": r.get("title", ""), "url": r.get("href", ""), "body": r.get("body", "")}
+            {
+                "title": r.get("title", ""),
+                "url": r.get("href", ""),
+                "body": r.get("body", ""),
+            }
             for r in (results or [])
         ]
 
@@ -99,7 +111,9 @@ class ContentEnricher:
         """
         return parse_json_response(response)
 
-    async def _extract_concepts(self, item: ContentItem, content_text: str) -> List[str]:
+    async def _extract_concepts(
+        self, item: ContentItem, content_text: str
+    ) -> List[str]:
         """Ask AI to identify concepts that need explanation.
 
         Args:
@@ -129,10 +143,7 @@ class ContentEnricher:
         except Exception:
             return []
 
-    @retry(
-        stop=stop_after_attempt(3),
-        wait=wait_exponential(min=2, max=10)
-    )
+    @retry(stop=stop_after_attempt(3), wait=wait_exponential(min=2, max=10))
     async def _enrich_item(self, item: ContentItem) -> None:
         """Enrich a single item with background knowledge.
 
@@ -181,7 +192,9 @@ class ContentEnricher:
             reason=item.ai_reason or "",
             tags=", ".join(item.ai_tags) if item.ai_tags else "",
             content=content_text,
-            comments_section=f"\n**Community Comments:**\n{comments_text}" if comments_text else "",
+            comments_section=f"\n**Community Comments:**\n{comments_text}"
+            if comments_text
+            else "",
             web_context=web_context or "No web search results available.",
         )
 
@@ -195,7 +208,9 @@ class ContentEnricher:
         if result is None:
             # Gracefully degrade: fall back to a lightweight translation
             # instead of dropping the item untranslated.
-            print(f"Warning: could not parse enrichment response for {item.id}, falling back to translation")
+            print(
+                f"Warning: could not parse enrichment response for {item.id}, falling back to translation"
+            )
             await self._translate_item(item)
             return
 
@@ -203,7 +218,9 @@ class ContentEnricher:
         for lang in ("en", "zh"):
             if result.get(f"title_{lang}"):
                 val = result[f"title_{lang}"]
-                item.metadata[f"title_{lang}"] = val.get("text") or str(val) if isinstance(val, dict) else str(val)
+                item.metadata[f"title_{lang}"] = (
+                    val.get("text") or str(val) if isinstance(val, dict) else str(val)
+                )
 
             parts = []
             for field in ("whats_new", "why_it_matters", "key_details"):
@@ -215,11 +232,15 @@ class ContentEnricher:
 
             if result.get(f"background_{lang}"):
                 val = result[f"background_{lang}"]
-                item.metadata[f"background_{lang}"] = val.get("text") or str(val) if isinstance(val, dict) else str(val)
+                item.metadata[f"background_{lang}"] = (
+                    val.get("text") or str(val) if isinstance(val, dict) else str(val)
+                )
 
             if result.get(f"community_discussion_{lang}"):
                 val = result[f"community_discussion_{lang}"]
-                item.metadata[f"community_discussion_{lang}"] = val.get("text") or str(val) if isinstance(val, dict) else str(val)
+                item.metadata[f"community_discussion_{lang}"] = (
+                    val.get("text") or str(val) if isinstance(val, dict) else str(val)
+                )
 
         # Store citation sources — only URLs that actually came from our search results
         if result.get("sources") and available_urls:
@@ -234,7 +255,9 @@ class ContentEnricher:
         # Backward-compatible fallback fields (English as default)
         item.metadata["detailed_summary"] = item.metadata.get("detailed_summary_en", "")
         item.metadata["background"] = item.metadata.get("background_en", "")
-        item.metadata["community_discussion"] = item.metadata.get("community_discussion_en", "")
+        item.metadata["community_discussion"] = item.metadata.get(
+            "community_discussion_en", ""
+        )
 
     async def _translate_item(self, item: ContentItem) -> None:
         """Lightweight translation fallback: when full enrichment fails, at least
@@ -243,9 +266,9 @@ class ContentEnricher:
             response = await self.client.complete(
                 system="You are a translator. Translate to Simplified Chinese. Return only valid JSON, no other text.",
                 user=(
-                    f'Title: {item.title}\n'
-                    f'Summary: {item.ai_summary or item.title}\n\n'
-                    'Return JSON:\n'
+                    f"Title: {item.title}\n"
+                    f"Summary: {item.ai_summary or item.title}\n\n"
+                    "Return JSON:\n"
                     '{"title_zh": "<中文标题>", "summary_zh": "<用中文写1-2句摘要>"}'
                 ),
             )

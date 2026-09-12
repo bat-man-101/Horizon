@@ -3,7 +3,7 @@
 from datetime import datetime, timezone
 from enum import Enum
 from typing import Optional, List, Dict, Any, Union
-from pydantic import BaseModel, HttpUrl, Field, field_validator
+from pydantic import BaseModel, ConfigDict, HttpUrl, Field, field_validator
 
 
 class SourceType(str, Enum):
@@ -39,6 +39,26 @@ class ContentItem(BaseModel):
     ai_reason: Optional[str] = None
     ai_summary: Optional[str] = None
     ai_tags: List[str] = Field(default_factory=list)
+
+
+class AIAnalysisResult(BaseModel):
+    """Schema for a single AI content-analysis result.
+
+    Validates the raw dict returned by the model **before** it is written back
+    onto a :class:`ContentItem`. This blocks field-level dirty data
+    (e.g. ``score="high"``, ``tags="a,b"``, out-of-range scores) from silently
+    flowing downstream and corrupting the daily digest.
+
+    Extra keys produced by the model are ignored so prompt additions do not
+    break parsing.
+    """
+
+    model_config = ConfigDict(extra="ignore")
+
+    score: float = Field(default=0.0, ge=0.0, le=10.0)
+    reason: str = ""
+    summary: str = ""
+    tags: List[str] = Field(default_factory=list)
 
 
 class AIProvider(str, Enum):
@@ -282,7 +302,9 @@ class GDELTConfig(BaseModel):
     mode: str = "ArtList"
     max_records: int = 75  # GDELT DOC API caps at 250; keep modest
     timespan: Optional[str] = None  # e.g. "24h"; overrides since-derived window
-    language: Optional[str] = None  # sourcelang filter, e.g. "english"; None = no filter
+    language: Optional[str] = (
+        None  # sourcelang filter, e.g. "english"; None = no filter
+    )
     country: Optional[str] = None  # sourcecountry filter; None = no filter
     category: Optional[str] = None  # Horizon category label for downstream grouping
 

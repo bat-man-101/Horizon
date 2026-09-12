@@ -74,7 +74,9 @@ class TestAzureOpenAIClientComplete:
         assert call_kwargs["max_completion_tokens"] == 4096
         assert "max_tokens" not in call_kwargs
 
-    def test_retries_with_max_completion_tokens_for_custom_deployment(self, monkeypatch):
+    def test_retries_with_max_completion_tokens_for_custom_deployment(
+        self, monkeypatch
+    ):
         monkeypatch.setenv("AZURE_OPENAI_API_KEY", "test-key")
         monkeypatch.setenv("AZURE_OPENAI_ENDPOINT", "https://example.openai.azure.com")
         client = AzureOpenAIClient(_make_config(model="prod-gpt5-nano"))
@@ -83,7 +85,9 @@ class TestAzureOpenAIClientComplete:
             client.client.chat.completions, "create", new_callable=AsyncMock
         ) as mock_create:
             mock_create.side_effect = [
-                RuntimeError("Unsupported parameter: 'max_tokens'. Use 'max_completion_tokens' instead."),
+                RuntimeError(
+                    "Unsupported parameter: 'max_tokens'. Use 'max_completion_tokens' instead."
+                ),
                 _mock_response(),
             ]
             result = asyncio.run(client.complete(system="test", user="hello"))

@@ -3,7 +3,7 @@
 import asyncio
 import logging
 import re
-from datetime import datetime, timezone
+from datetime import datetime
 from typing import List, Optional
 
 import httpx
@@ -15,7 +15,9 @@ from ..models import ContentItem, TelegramConfig, TelegramChannelConfig, SourceT
 logger = logging.getLogger(__name__)
 
 TELEGRAM_WEB_BASE = "https://t.me/s"
-USER_AGENT = "Mozilla/5.0 (compatible; Horizon/1.0; +https://github.com/thysrael/horizon)"
+USER_AGENT = (
+    "Mozilla/5.0 (compatible; Horizon/1.0; +https://github.com/thysrael/horizon)"
+)
 
 
 class TelegramScraper(BaseScraper):
@@ -46,19 +48,34 @@ class TelegramScraper(BaseScraper):
                 items.extend(result)
         return items
 
-    async def _fetch_channel(self, cfg: TelegramChannelConfig, since: datetime) -> List[ContentItem]:
+    async def _fetch_channel(
+        self, cfg: TelegramChannelConfig, since: datetime
+    ) -> List[ContentItem]:
         url = f"{TELEGRAM_WEB_BASE}/{cfg.channel}"
         headers = {"User-Agent": USER_AGENT}
         try:
-            response = await self.client.get(url, headers=headers, follow_redirects=True, timeout=120.0)
+            response = await self.client.get(
+                url, headers=headers, follow_redirects=True, timeout=120.0
+            )
             if response.status_code == 429:
                 retry_after = int(response.headers.get("Retry-After", 5))
-                logger.warning("Telegram rate limited for %s, retrying after %ds", cfg.channel, retry_after)
+                logger.warning(
+                    "Telegram rate limited for %s, retrying after %ds",
+                    cfg.channel,
+                    retry_after,
+                )
                 await asyncio.sleep(retry_after)
-                response = await self.client.get(url, headers=headers, follow_redirects=True, timeout=120.0)
+                response = await self.client.get(
+                    url, headers=headers, follow_redirects=True, timeout=120.0
+                )
             response.raise_for_status()
         except Exception as e:
-            logger.warning("Telegram request failed for %s: [%s] %r", cfg.channel, type(e).__name__, e)
+            logger.warning(
+                "Telegram request failed for %s: [%s] %r",
+                cfg.channel,
+                type(e).__name__,
+                e,
+            )
             return []
 
         return self._parse_channel_html(response.text, cfg, since)
@@ -70,7 +87,7 @@ class TelegramScraper(BaseScraper):
         messages = soup.select("div.tgme_widget_message[data-post]")
 
         items = []
-        for msg in messages[-cfg.fetch_limit:]:
+        for msg in messages[-cfg.fetch_limit :]:
             item = self._parse_message(msg, cfg.channel, since)
             if item:
                 items.append(item)
@@ -90,7 +107,9 @@ class TelegramScraper(BaseScraper):
         if not time_el:
             return None
         try:
-            published_at = datetime.fromisoformat(time_el["datetime"].replace("Z", "+00:00"))
+            published_at = datetime.fromisoformat(
+                time_el["datetime"].replace("Z", "+00:00")
+            )
         except (ValueError, KeyError):
             return None
 

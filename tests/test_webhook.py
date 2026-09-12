@@ -1161,6 +1161,7 @@ class TestSendDailySummary:
             assert overview_vars["message_title"] == "Horizon 2026-04-24 总览"
         del os.environ[_TEST_URL_ENV]
 
+
 # ── send_failure_notification ──
 
 
@@ -1293,10 +1294,14 @@ class TestURLValidation:
 
     def test_shell_escape_artifacts_stripped(self):
         """Shell escape artifacts like \\? and \\= are auto-stripped from URL."""
-        os.environ[_TEST_URL_ENV] = "https://oapi.dingtalk.com/robot/send\\?access_token\\=abc123"
+        os.environ[_TEST_URL_ENV] = (
+            "https://oapi.dingtalk.com/robot/send\\?access_token\\=abc123"
+        )
         config = WebhookConfig(enabled=True, url_env=_TEST_URL_ENV)
         notifier = WebhookNotifier(config)
-        assert notifier.url == "https://oapi.dingtalk.com/robot/send?access_token=abc123"
+        assert (
+            notifier.url == "https://oapi.dingtalk.com/robot/send?access_token=abc123"
+        )
         del os.environ[_TEST_URL_ENV]
 
 
@@ -1523,7 +1528,9 @@ class TestExceptionClassification:
 
         with patch("httpx.AsyncClient") as mock_client_cls:
             mock_client = AsyncMock()
-            mock_client.get = AsyncMock(side_effect=httpx.ConnectError("Connection refused"))
+            mock_client.get = AsyncMock(
+                side_effect=httpx.ConnectError("Connection refused")
+            )
             mock_client.__aenter__ = AsyncMock(return_value=mock_client)
             mock_client.__aexit__ = AsyncMock(return_value=False)
             mock_client_cls.return_value = mock_client
@@ -1577,7 +1584,9 @@ class TestExceptionClassification:
 
         with patch("httpx.AsyncClient") as mock_client_cls:
             mock_client = AsyncMock()
-            mock_client.get = AsyncMock(side_effect=RuntimeError("Something unexpected"))
+            mock_client.get = AsyncMock(
+                side_effect=RuntimeError("Something unexpected")
+            )
             mock_client.__aenter__ = AsyncMock(return_value=mock_client)
             mock_client.__aexit__ = AsyncMock(return_value=False)
             mock_client_cls.return_value = mock_client

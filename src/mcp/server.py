@@ -28,7 +28,9 @@ METRICS: dict[str, Any] = {
 }
 
 
-def _ok(tool: str, data: dict[str, Any], duration_ms: float | None = None) -> dict[str, Any]:
+def _ok(
+    tool: str, data: dict[str, Any], duration_ms: float | None = None
+) -> dict[str, Any]:
     payload = {
         "ok": True,
         "tool": tool,
@@ -42,7 +44,9 @@ def _ok(tool: str, data: dict[str, Any], duration_ms: float | None = None) -> di
     return payload
 
 
-def _err(tool: str, error: Exception, duration_ms: float | None = None) -> dict[str, Any]:
+def _err(
+    tool: str, error: Exception, duration_ms: float | None = None
+) -> dict[str, Any]:
     if isinstance(error, HorizonMcpError):
         code = error.code
         message = error.message
@@ -69,7 +73,9 @@ def _err(tool: str, error: Exception, duration_ms: float | None = None) -> dict[
     return payload
 
 
-def _record_metrics(tool: str, ok: bool, duration_ms: float, error_code: str | None = None) -> None:
+def _record_metrics(
+    tool: str, ok: bool, duration_ms: float, error_code: str | None = None
+) -> None:
     METRICS["tool_calls_total"] += 1
     if ok:
         METRICS["tool_calls_success"] += 1
@@ -91,7 +97,9 @@ def _record_metrics(tool: str, ok: bool, duration_ms: float, error_code: str | N
         }
 
 
-async def _run_tool(tool: str, runner: Callable[[], Awaitable[dict[str, Any]]]) -> dict[str, Any]:
+async def _run_tool(
+    tool: str, runner: Callable[[], Awaitable[dict[str, Any]]]
+) -> dict[str, Any]:
     started = perf_counter()
     try:
         data = await runner()

@@ -15,7 +15,9 @@ logger = logging.getLogger(__name__)
 class GitHubScraper(BaseScraper):
     """Scraper for GitHub events and releases."""
 
-    def __init__(self, sources: List[GitHubSourceConfig], http_client: httpx.AsyncClient):
+    def __init__(
+        self, sources: List[GitHubSourceConfig], http_client: httpx.AsyncClient
+    ):
         """Initialize GitHub scraper.
 
         Args:
@@ -34,7 +36,7 @@ class GitHubScraper(BaseScraper):
         """
         headers = {
             "Accept": "application/vnd.github.v3+json",
-            "User-Agent": "Horizon-Aggregator"
+            "User-Agent": "Horizon-Aggregator",
         }
         if self.token:
             headers["Authorization"] = f"token {self.token}"
@@ -68,9 +70,7 @@ class GitHubScraper(BaseScraper):
         return items
 
     async def _fetch_user_events(
-        self,
-        username: str,
-        since: datetime
+        self, username: str, since: datetime
     ) -> List[ContentItem]:
         """Fetch public events for a user.
 
@@ -85,7 +85,9 @@ class GitHubScraper(BaseScraper):
         items = []
 
         try:
-            response = await self.client.get(url, headers=self._get_headers(), follow_redirects=True)
+            response = await self.client.get(
+                url, headers=self._get_headers(), follow_redirects=True
+            )
             response.raise_for_status()
             events = response.json()
 
@@ -100,8 +102,11 @@ class GitHubScraper(BaseScraper):
                 # Filter interesting event types
                 event_type = event["type"]
                 if event_type not in [
-                    "PushEvent", "CreateEvent", "ReleaseEvent",
-                    "PublicEvent", "WatchEvent"
+                    "PushEvent",
+                    "CreateEvent",
+                    "ReleaseEvent",
+                    "PublicEvent",
+                    "WatchEvent",
                 ]:
                     continue
 
@@ -165,14 +170,11 @@ class GitHubScraper(BaseScraper):
             metadata={
                 "event_type": event_type,
                 "repo": repo_name,
-            }
+            },
         )
 
     async def _fetch_repo_releases(
-        self,
-        owner: str,
-        repo: str,
-        since: datetime
+        self, owner: str, repo: str, since: datetime
     ) -> List[ContentItem]:
         """Fetch releases for a repository.
 
@@ -188,7 +190,9 @@ class GitHubScraper(BaseScraper):
         items = []
 
         try:
-            response = await self.client.get(url, headers=self._get_headers(), follow_redirects=True)
+            response = await self.client.get(
+                url, headers=self._get_headers(), follow_redirects=True
+            )
             response.raise_for_status()
             releases = response.json()
 
@@ -212,7 +216,7 @@ class GitHubScraper(BaseScraper):
                         "repo": f"{owner}/{repo}",
                         "tag": release["tag_name"],
                         "prerelease": release.get("prerelease", False),
-                    }
+                    },
                 )
                 items.append(item)
 

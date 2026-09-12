@@ -55,7 +55,9 @@ class HorizonOrchestrator:
         self.config = config
         self.storage = storage
         self.console = Console()
-        self.email_manager = EmailManager(config.email, console=self.console) if config.email else None
+        self.email_manager = (
+            EmailManager(config.email, console=self.console) if config.email else None
+        )
         self.webhook_notifier = (
             WebhookNotifier(config.webhook, console=self.console)
             if config.webhook and config.webhook.enabled
@@ -68,7 +70,9 @@ class HorizonOrchestrator:
         Args:
             force_hours: Optional override for time window in hours
         """
-        self.console.print("[bold cyan]🌅 Horizon - Starting aggregation...[/bold cyan]\n")
+        self.console.print(
+            "[bold cyan]🌅 Horizon - Starting aggregation...[/bold cyan]\n"
+        )
 
         # Check email subscriptions if configured
         if (
@@ -83,7 +87,9 @@ class HorizonOrchestrator:
         try:
             # 1. Determine time window
             since = self._determine_time_window(force_hours)
-            self.console.print(f"📅 Fetching content since: {since.strftime('%Y-%m-%d %H:%M:%S')}\n")
+            self.console.print(
+                f"📅 Fetching content since: {since.strftime('%Y-%m-%d %H:%M:%S')}\n"
+            )
 
             # 2. Fetch content from all sources
             all_items = await self.fetch_all_sources(since)
@@ -115,7 +121,8 @@ class HorizonOrchestrator:
                 # 5. Filter by score threshold
                 threshold = self.config.filtering.ai_score_threshold
                 important_items = [
-                    item for item in analyzed_items
+                    item
+                    for item in analyzed_items
                     if item.ai_score is not None and item.ai_score >= threshold
                 ]
                 important_items.sort(key=lambda x: x.ai_score or 0, reverse=True)
@@ -161,11 +168,17 @@ class HorizonOrchestrator:
             today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
             for lang in self.config.ai.languages:
                 summarizer = DailySummarizer()
-                summary = await summarizer.generate_summary(important_items, today, len(all_items), language=lang)
+                summary = await summarizer.generate_summary(
+                    important_items, today, len(all_items), language=lang
+                )
 
                 # Save to data/summaries/
-                summary_path = self.storage.save_daily_summary(today, summary, language=lang)
-                self.console.print(f"💾 Saved {lang.upper()} summary to: {summary_path}\n")
+                summary_path = self.storage.save_daily_summary(
+                    today, summary, language=lang
+                )
+                self.console.print(
+                    f"💾 Saved {lang.upper()} summary to: {summary_path}\n"
+                )
 
                 # Copy to docs/ for GitHub Pages
                 try:
@@ -181,7 +194,7 @@ class HorizonOrchestrator:
                     front_matter = (
                         "---\n"
                         "layout: default\n"
-                        f"title: \"Horizon Summary: {today} ({lang.upper()})\"\n"
+                        f'title: "Horizon Summary: {today} ({lang.upper()})"\n'
                         f"date: {today}\n"
                         f"lang: {lang}\n"
                         "---\n\n"
@@ -198,12 +211,20 @@ class HorizonOrchestrator:
                     with open(dest_path, "w", encoding="utf-8") as f:
                         f.write(front_matter + summary_content)
 
-                    self.console.print(f"📄 Copied {lang.upper()} summary to GitHub Pages: {dest_path}\n")
+                    self.console.print(
+                        f"📄 Copied {lang.upper()} summary to GitHub Pages: {dest_path}\n"
+                    )
                 except Exception as e:
-                    self.console.print(f"[yellow]⚠️  Failed to copy {lang.upper()} summary to docs/: {e}[/yellow]\n")
+                    self.console.print(
+                        f"[yellow]⚠️  Failed to copy {lang.upper()} summary to docs/: {e}[/yellow]\n"
+                    )
 
                 # Send email if configured
-                if self.email_manager and self.config.email and self.config.email.enabled:
+                if (
+                    self.email_manager
+                    and self.config.email
+                    and self.config.email.enabled
+                ):
                     self.console.print(f"📧 Sending {lang.upper()} email summary...")
                     subscribers = self.storage.load_subscribers()
                     subject = f"Horizon Summary ({lang.upper()}) - {today}"
@@ -220,7 +241,9 @@ class HorizonOrchestrator:
                         summarizer=summarizer,
                     )
 
-            self.console.print("[bold green]✅ Horizon completed successfully![/bold green]")
+            self.console.print(
+                "[bold green]✅ Horizon completed successfully![/bold green]"
+            )
             usage = get_usage_snapshot()
             if usage.total_tokens > 0:
                 self.console.print(
@@ -278,7 +301,9 @@ class HorizonOrchestrator:
             # Hacker News
             if self.config.sources.hackernews.enabled:
                 hn_scraper = HackerNewsScraper(self.config.sources.hackernews, client)
-                tasks.append(self._fetch_with_progress("Hacker News", hn_scraper, since))
+                tasks.append(
+                    self._fetch_with_progress("Hacker News", hn_scraper, since)
+                )
 
             # RSS feeds
             if self.config.sources.rss:
@@ -293,7 +318,9 @@ class HorizonOrchestrator:
             # Telegram
             if self.config.sources.telegram.enabled:
                 telegram_scraper = TelegramScraper(self.config.sources.telegram, client)
-                tasks.append(self._fetch_with_progress("Telegram", telegram_scraper, since))
+                tasks.append(
+                    self._fetch_with_progress("Telegram", telegram_scraper, since)
+                )
 
             # Twitter (Apify or Playwright mode)
             if self.config.sources.twitter and self.config.sources.twitter.enabled:
@@ -302,7 +329,9 @@ class HorizonOrchestrator:
                     twitter_scraper = TwitterPlaywrightScraper(tw_cfg)
                 else:
                     twitter_scraper = TwitterScraper(tw_cfg, client)
-                tasks.append(self._fetch_with_progress("Twitter", twitter_scraper, since))
+                tasks.append(
+                    self._fetch_with_progress("Twitter", twitter_scraper, since)
+                )
 
             # OpenBB (financial news / filings via the OpenBB Platform SDK)
             if self.config.sources.openbb and self.config.sources.openbb.enabled:
@@ -310,9 +339,14 @@ class HorizonOrchestrator:
                 tasks.append(self._fetch_with_progress("OpenBB", openbb_scraper, since))
 
             # OSS Insight trending repos
-            if self.config.sources.ossinsight and self.config.sources.ossinsight.enabled:
+            if (
+                self.config.sources.ossinsight
+                and self.config.sources.ossinsight.enabled
+            ):
                 oss_scraper = OSSInsightScraper(self.config.sources.ossinsight, client)
-                tasks.append(self._fetch_with_progress("OSS Insight", oss_scraper, since))
+                tasks.append(
+                    self._fetch_with_progress("OSS Insight", oss_scraper, since)
+                )
 
             # GDELT 2.0 DOC API (key-less global news)
             if self.config.sources.gdelt and self.config.sources.gdelt.enabled:
@@ -320,9 +354,14 @@ class HorizonOrchestrator:
                 tasks.append(self._fetch_with_progress("GDELT", gdelt_scraper, since))
 
             # Google News RSS (key-less news search)
-            if self.config.sources.google_news and self.config.sources.google_news.enabled:
+            if (
+                self.config.sources.google_news
+                and self.config.sources.google_news.enabled
+            ):
                 gn_scraper = GoogleNewsScraper(self.config.sources.google_news, client)
-                tasks.append(self._fetch_with_progress("Google News", gn_scraper, since))
+                tasks.append(
+                    self._fetch_with_progress("Google News", gn_scraper, since)
+                )
 
             # Fetch all concurrently
             results = await asyncio.gather(*tasks, return_exceptions=True)
@@ -337,7 +376,9 @@ class HorizonOrchestrator:
 
             return all_items
 
-    async def _fetch_with_progress(self, name: str, scraper, since: datetime) -> List[ContentItem]:
+    async def _fetch_with_progress(
+        self, name: str, scraper, since: datetime
+    ) -> List[ContentItem]:
         """Fetch from a scraper with progress indication.
 
         Args:
@@ -386,7 +427,9 @@ class HorizonOrchestrator:
             return meta["domain"]
         return item.author or "unknown"
 
-    def merge_cross_source_duplicates(self, items: List[ContentItem]) -> List[ContentItem]:
+    def merge_cross_source_duplicates(
+        self, items: List[ContentItem]
+    ) -> List[ContentItem]:
         """Merge items that point to the same URL from different sources.
 
         This is a stable stage helper for integrations such as MCP.
@@ -399,6 +442,7 @@ class HorizonOrchestrator:
         Returns:
             List[ContentItem]: Deduplicated items
         """
+
         def normalize_url(url: str) -> str:
             parsed = urlparse(str(url))
             # Strip www prefix, trailing slashes, and fragments
@@ -435,14 +479,20 @@ class HorizonOrchestrator:
                 # Append content (e.g., comments from another source)
                 if item is not primary and item.content:
                     if primary.content and item.content not in primary.content:
-                        primary.content = (primary.content or "") + f"\n\n--- From {item.source_type.value} ---\n" + item.content
+                        primary.content = (
+                            (primary.content or "")
+                            + f"\n\n--- From {item.source_type.value} ---\n"
+                            + item.content
+                        )
 
             primary.metadata["merged_sources"] = list(all_sources)
             merged.append(primary)
 
         return merged
 
-    async def merge_topic_duplicates(self, items: List[ContentItem]) -> List[ContentItem]:
+    async def merge_topic_duplicates(
+        self, items: List[ContentItem]
+    ) -> List[ContentItem]:
         """Merge items covering the same topic using AI semantic deduplication.
 
         This is a stable stage helper for integrations such as MCP.
@@ -465,7 +515,9 @@ class HorizonOrchestrator:
         for i, item in enumerate(items):
             tags = ", ".join(item.ai_tags) if item.ai_tags else "—"
             summary = item.ai_summary or "—"
-            lines.append(f"[{i}] {item.title}\n    Tags: {tags}\n    Summary: {summary}")
+            lines.append(
+                f"[{i}] {item.title}\n    Tags: {tags}\n    Summary: {summary}"
+            )
         items_text = "\n\n".join(lines)
 
         try:
@@ -476,12 +528,16 @@ class HorizonOrchestrator:
             )
             result = parse_json_response(response)
             if result is None:
-                self.console.print("[yellow]  dedup: could not parse AI response, skipping[/yellow]")
+                self.console.print(
+                    "[yellow]  dedup: could not parse AI response, skipping[/yellow]"
+                )
                 return items
 
             duplicate_groups = result.get("duplicates", [])
         except Exception as e:
-            self.console.print(f"[yellow]  dedup: AI call failed ({e}), skipping[/yellow]")
+            self.console.print(
+                f"[yellow]  dedup: AI call failed ({e}), skipping[/yellow]"
+            )
             return items
 
         if not duplicate_groups:
@@ -506,7 +562,9 @@ class HorizonOrchestrator:
                 if dup.content:
                     if not primary.content or dup.content not in primary.content:
                         label = dup.source_type.value
-                        primary.content = (primary.content or "") + f"\n\n--- From {label} ---\n{dup.content}"
+                        primary.content = (
+                            primary.content or ""
+                        ) + f"\n\n--- From {label} ---\n{dup.content}"
                 self.console.print(
                     f"   [dim]dedup: keep [{primary_idx}] {primary.title}[/dim]\n"
                     f"   [dim]       drop [{dup_idx}] {dup.title}[/dim]"
@@ -638,9 +696,8 @@ class HorizonOrchestrator:
         from .models import SourceType
 
         twitter_items = [
-            item for item in items
-            if item.source_type == SourceType.TWITTER
-        ][:tw_cfg.max_tweets_to_expand]
+            item for item in items if item.source_type == SourceType.TWITTER
+        ][: tw_cfg.max_tweets_to_expand]
 
         if not twitter_items:
             return
@@ -736,7 +793,9 @@ class HorizonOrchestrator:
 
         summarizer = DailySummarizer()
 
-        return await summarizer.generate_summary(items, date, total_fetched, language=language)
+        return await summarizer.generate_summary(
+            items, date, total_fetched, language=language
+        )
 
     async def _translate_titles(self, items: List[ContentItem]) -> None:
         """Translate English titles to Chinese using Google Translate (free, no API key).
@@ -775,7 +834,9 @@ class HorizonOrchestrator:
                     resp = await client.get(url, params=params)
                     if resp.status_code == 200:
                         data = resp.json()
-                        zh_text = data[0][0][0] if data and data[0] and data[0][0] else ""
+                        zh_text = (
+                            data[0][0][0] if data and data[0] and data[0][0] else ""
+                        )
                         # Google 免费 gtx 接口被限流时常返回 "Error 500 (Server Error)!!1500..." 错误页
                         # 文本，会被误当译文写入 title_zh，进而污染整份日报标题。目标语言为 zh-CN，
                         # 合法译文必含 CJK，不含 CJK 一律视为翻译失败，保持 title_zh 未设置（回退原文）。

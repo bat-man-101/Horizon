@@ -22,6 +22,8 @@ def make_item(item_id: str, score: float | None = None) -> ContentItem:
     )
     item.ai_score = score
     return item
+
+
 def test_validate_config_smoke(tmp_path: Path) -> None:
     repo_root = Path(__file__).resolve().parents[1]
     config_path = tmp_path / "config.json"
@@ -89,7 +91,9 @@ def test_fetch_items_uses_public_orchestrator_api(tmp_path: Path, monkeypatch) -
             [],
         ),
     )
-    monkeypatch.setattr("src.mcp.service.make_storage", lambda runtime, config_path: object())
+    monkeypatch.setattr(
+        "src.mcp.service.make_storage", lambda runtime, config_path: object()
+    )
 
     class FakeOrchestrator:
         async def fetch_all_sources(self, since):  # type: ignore[no-untyped-def]
@@ -122,11 +126,15 @@ def test_filter_items_uses_public_topic_dedup_api(tmp_path: Path, monkeypatch) -
             SimpleNamespace(
                 runtime=SimpleNamespace(),
                 config_path=tmp_path / "config.json",
-                config=SimpleNamespace(filtering=SimpleNamespace(ai_score_threshold=7.0)),
+                config=SimpleNamespace(
+                    filtering=SimpleNamespace(ai_score_threshold=7.0)
+                ),
             ),
         ),
     )
-    monkeypatch.setattr("src.mcp.service.make_storage", lambda runtime, config_path: object())
+    monkeypatch.setattr(
+        "src.mcp.service.make_storage", lambda runtime, config_path: object()
+    )
 
     class FakeOrchestrator:
         async def merge_topic_duplicates(self, items):  # type: ignore[no-untyped-def]
@@ -137,11 +145,15 @@ def test_filter_items_uses_public_topic_dedup_api(tmp_path: Path, monkeypatch) -
         lambda runtime, config, storage: FakeOrchestrator(),
     )
 
-    result = asyncio.run(service.filter_items(run_id="run-topic-dedup", topic_dedup=True))
+    result = asyncio.run(
+        service.filter_items(run_id="run-topic-dedup", topic_dedup=True)
+    )
 
     assert result["kept"] == 1
     assert result["removed_by_topic_dedup"] == 1
-    assert service.run_store.load_items("run-topic-dedup", "filtered")[0]["id"] == "item-1"
+    assert (
+        service.run_store.load_items("run-topic-dedup", "filtered")[0]["id"] == "item-1"
+    )
 
 
 def test_filter_items_applies_balanced_digest(tmp_path: Path, monkeypatch) -> None:
@@ -165,7 +177,9 @@ def test_filter_items_applies_balanced_digest(tmp_path: Path, monkeypatch) -> No
             ),
         ),
     )
-    monkeypatch.setattr("src.mcp.service.make_storage", lambda runtime, config_path: object())
+    monkeypatch.setattr(
+        "src.mcp.service.make_storage", lambda runtime, config_path: object()
+    )
 
     class FakeOrchestrator:
         def apply_balanced_digest(self, items, log=True):  # type: ignore[no-untyped-def]
@@ -177,9 +191,7 @@ def test_filter_items_applies_balanced_digest(tmp_path: Path, monkeypatch) -> No
         lambda runtime, config, storage: FakeOrchestrator(),
     )
 
-    result = asyncio.run(
-        service.filter_items(run_id="run-balanced", topic_dedup=False)
-    )
+    result = asyncio.run(service.filter_items(run_id="run-balanced", topic_dedup=False))
 
     assert result["kept"] == 1
     assert result["removed_by_balanced_digest"] == 1

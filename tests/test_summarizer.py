@@ -72,7 +72,10 @@ def test_generate_webhook_item_includes_discussion_link_when_distinct():
         total=1,
     )
 
-    assert "tester · Apr 25, 08:00 · [Discussion](https://news.ycombinator.com/item?id=1)" in result
+    assert (
+        "tester · Apr 25, 08:00 · [Discussion](https://news.ycombinator.com/item?id=1)"
+        in result
+    )
 
 
 def test_generate_webhook_item_omits_discussion_link_when_same_as_item_url():
@@ -93,7 +96,9 @@ def test_generate_webhook_item_omits_discussion_link_when_same_as_item_url():
 def test_generate_webhook_item_uses_localized_discussion_label():
     summarizer = DailySummarizer()
     item = _make_item(1)
-    item.metadata["discussion_url"] = "https://www.reddit.com/r/python/comments/abc123/test/"
+    item.metadata["discussion_url"] = (
+        "https://www.reddit.com/r/python/comments/abc123/test/"
+    )
 
     result = summarizer.generate_webhook_item(
         item,

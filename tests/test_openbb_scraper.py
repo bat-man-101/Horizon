@@ -162,9 +162,7 @@ class TestMapping:
         now = datetime.now(timezone.utc)
         iso = now.isoformat().replace("+00:00", "Z")
         obb = MagicMock()
-        obb.news.company.return_value = SimpleNamespace(
-            results=[_news_row(date=iso)]
-        )
+        obb.news.company.return_value = SimpleNamespace(results=[_news_row(date=iso)])
         scraper = _make_scraper(_cfg(), obb=obb)
         result = asyncio.run(scraper.fetch(now - timedelta(hours=1)))
         assert len(result) == 1
@@ -176,9 +174,7 @@ class TestFiltering:
         now = datetime.now(timezone.utc)
         old = now - timedelta(days=3)
         obb = MagicMock()
-        obb.news.company.return_value = SimpleNamespace(
-            results=[_news_row(date=old)]
-        )
+        obb.news.company.return_value = SimpleNamespace(results=[_news_row(date=old)])
         scraper = _make_scraper(_cfg(), obb=obb)
         result = asyncio.run(scraper.fetch(now - timedelta(hours=1)))
         assert result == []
@@ -237,9 +233,7 @@ class TestResilience:
     def test_malformed_row_missing_date_is_skipped(self):
         now = datetime.now(timezone.utc)
         obb = MagicMock()
-        obb.news.company.return_value = SimpleNamespace(
-            results=[_news_row(date=None)]
-        )
+        obb.news.company.return_value = SimpleNamespace(results=[_news_row(date=None)])
         scraper = _make_scraper(_cfg(), obb=obb)
         assert asyncio.run(scraper.fetch(now - timedelta(hours=1))) == []
 
@@ -264,14 +258,17 @@ class TestResilience:
 
 
 class TestStatic:
-    @pytest.mark.parametrize("value,expected", [
-        ("AAPL,MSFT", ["AAPL", "MSFT"]),
-        ("aapl, aapl ,msft", ["AAPL", "MSFT"]),
-        (["AAPL", "MSFT"], ["AAPL", "MSFT"]),
-        (None, []),
-        ("", []),
-        (12345, []),
-    ])
+    @pytest.mark.parametrize(
+        "value,expected",
+        [
+            ("AAPL,MSFT", ["AAPL", "MSFT"]),
+            ("aapl, aapl ,msft", ["AAPL", "MSFT"]),
+            (["AAPL", "MSFT"], ["AAPL", "MSFT"]),
+            (None, []),
+            ("", []),
+            (12345, []),
+        ],
+    )
     def test_parse_symbols(self, value, expected):
         assert OpenBBScraper._parse_symbols(value) == expected
 

@@ -278,7 +278,9 @@ class WebhookNotifier:
         """
         if not self.config.url_env:
             # url_env not configured at all
-            logger.warning("Webhook enabled but url_env is not configured, skipping notification.")
+            logger.warning(
+                "Webhook enabled but url_env is not configured, skipping notification."
+            )
             self.console.print(
                 "[yellow]Webhook enabled but 'url_env' is not set in config. "
                 "No notification URL available, skipping.[/yellow]"
@@ -506,7 +508,9 @@ class WebhookNotifier:
                 ),
                 "message_kind": "overview",
                 "summary": overview,
-                "toc": summarizer.generate_toc(important_items, date, all_items_count, language=lang),
+                "toc": summarizer.generate_toc(
+                    important_items, date, all_items_count, language=lang
+                ),
             }
             for item_index, item in enumerate(important_items, start=1):
                 title = str(item.metadata.get(f"title_{lang}") or item.title)
@@ -527,7 +531,9 @@ class WebhookNotifier:
                         "item_url": str(item.url),
                         "item_score": item.ai_score or "",
                         "summary": item_summary,
-                        "toc": summarizer.generate_toc(important_items, date, all_items_count, language=lang),
+                        "toc": summarizer.generate_toc(
+                            important_items, date, all_items_count, language=lang
+                        ),
                     }
                 )
 
@@ -536,7 +542,9 @@ class WebhookNotifier:
 
             return [overview_message] + item_messages
 
-        toc = summarizer.generate_toc(important_items, date, all_items_count, language=lang)
+        toc = summarizer.generate_toc(
+            important_items, date, all_items_count, language=lang
+        )
         return [
             {
                 **base_vars,
@@ -561,7 +569,9 @@ class WebhookNotifier:
                        in URL, request_body, and headers.
         """
         if not self.config.enabled:
-            self.console.print("[yellow]Webhook is disabled, skipping notification.[/yellow]")
+            self.console.print(
+                "[yellow]Webhook is disabled, skipping notification.[/yellow]"
+            )
             return
 
         if not self.url:
@@ -598,25 +608,24 @@ class WebhookNotifier:
             self._handle_response_status(response, safe_url)
 
         except httpx.InvalidURL as e:
-            self.console.print(
-                f"[red]Webhook URL is invalid: {e}[/red]"
-            )
+            self.console.print(f"[red]Webhook URL is invalid: {e}[/red]")
             logger.error("Webhook URL invalid: %s, env var: %s", e, self.config.url_env)
         except httpx.ConnectError as e:
-            self.console.print(
-                f"[red]Webhook connection failed: {e}[/red]"
-            )
+            self.console.print(f"[red]Webhook connection failed: {e}[/red]")
             logger.error("Webhook connection failed: URL=%s, error=%s", safe_url, e)
         except httpx.TimeoutException as e:
-            self.console.print(
-                f"[red]Webhook request timed out: {e}[/red]"
-            )
+            self.console.print(f"[red]Webhook request timed out: {e}[/red]")
             logger.error("Webhook timeout: URL=%s, error=%s", safe_url, e)
         except Exception as e:
             self.console.print(
                 f"[red]Webhook call failed unexpectedly: {type(e).__name__}: {e}[/red]"
             )
-            logger.error("Webhook unexpected error: URL=%s, type=%s, error=%s", safe_url, type(e).__name__, e)
+            logger.error(
+                "Webhook unexpected error: URL=%s, type=%s, error=%s",
+                safe_url,
+                type(e).__name__,
+                e,
+            )
 
     def _check_body_error_code(self, body: str) -> Optional[str]:
         """Check if a 2xx response body contains a platform-specific error code.
@@ -671,7 +680,9 @@ class WebhookNotifier:
             if error_hint:
                 logger.warning(
                     "Webhook 2xx but body contains error: URL=%s, status=%d, body=%s",
-                    safe_url, status, body,
+                    safe_url,
+                    status,
+                    body,
                 )
                 self.console.print(
                     f"[yellow]Webhook response (status={status}): {body}[/yellow]\n"
@@ -691,7 +702,9 @@ class WebhookNotifier:
             )
             logger.warning(
                 "Webhook redirect: URL=%s, status=%d, location=%s",
-                safe_url, status, location,
+                safe_url,
+                status,
+                location,
             )
         elif 400 <= status < 500:
             self.console.print(
@@ -699,7 +712,9 @@ class WebhookNotifier:
             )
             logger.error(
                 "Webhook client error: URL=%s, status=%d, body=%s",
-                safe_url, status, response.text[:500],
+                safe_url,
+                status,
+                response.text[:500],
             )
         elif 500 <= status < 600:
             self.console.print(
@@ -707,13 +722,17 @@ class WebhookNotifier:
             )
             logger.error(
                 "Webhook server error: URL=%s, status=%d, body=%s",
-                safe_url, status, response.text[:500],
+                safe_url,
+                status,
+                response.text[:500],
             )
         else:
             self.console.print(
                 f"[red]Webhook unexpected status={status}: {response.text[:500]}[/red]"
             )
-            logger.error("Webhook unexpected status: URL=%s, status=%d", safe_url, status)
+            logger.error(
+                "Webhook unexpected status: URL=%s, status=%d", safe_url, status
+            )
 
     async def send_daily_summary(
         self,

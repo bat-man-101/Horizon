@@ -239,7 +239,10 @@ def test_reddit_comments_use_old_reddit_first():
         requests.append(request)
         if request.url.host == "old.reddit.com" and request.url.path.endswith("/hot/"):
             return httpx.Response(200, text=_old_listing_html())
-        if request.url.host == "old.reddit.com" and "/comments/old123/" in request.url.path:
+        if (
+            request.url.host == "old.reddit.com"
+            and "/comments/old123/" in request.url.path
+        ):
             return httpx.Response(200, text=_old_comments_html())
         raise AssertionError(f"unexpected url: {request.url}")
 
@@ -269,7 +272,9 @@ def test_reddit_subreddits_are_fetched_sequentially():
         if "/r/LocalLLaMA/" in request.url.path:
             await asyncio.sleep(0)
             local_done.set()
-            return httpx.Response(200, text=_old_listing_html_for("LocalLLaMA", "local123"))
+            return httpx.Response(
+                200, text=_old_listing_html_for("LocalLLaMA", "local123")
+            )
         if "/r/MachineLearning/" in request.url.path:
             assert local_done.is_set()
             return httpx.Response(

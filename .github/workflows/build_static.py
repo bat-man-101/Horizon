@@ -1,15 +1,18 @@
 """Convert Horizon markdown posts to standalone HTML pages.
 No Jekyll dependency needed - serves directly as static HTML."""
-import os, re, markdown
-from datetime import datetime
+
+import os
+import re
+import markdown
 
 POSTS_DIR = "docs/_posts"
 OUT_DIR = "docs"
 
+
 def convert_md_to_html(md_text, title=""):
     """Convert markdown to standalone HTML with basic styling."""
-    body = markdown.markdown(md_text, extensions=['fenced_code', 'tables'])
-    
+    body = markdown.markdown(md_text, extensions=["fenced_code", "tables"])
+
     html = f"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -39,24 +42,25 @@ def convert_md_to_html(md_text, title=""):
 </html>"""
     return html
 
+
 for root, dirs, files in os.walk(POSTS_DIR):
     for f in files:
         if f.endswith(".md"):
             path = os.path.join(root, f)
             with open(path, "r", encoding="utf-8") as fh:
                 content = fh.read()
-            
+
             # Extract title from front matter
             title_match = re.search(r'title:\s*"([^"]+)"', content)
             title = title_match.group(1) if title_match else f.replace(".md", "")
-            
+
             # Remove front matter
-            body = re.sub(r'^---[\s\S]*?---\n*', "", content)
-            
+            body = re.sub(r"^---[\s\S]*?---\n*", "", content)
+
             html = convert_md_to_html(body, title)
-            
+
             # Generate output path: YYYY/MM/DD/summary-zh.html
-            date_match = re.search(r'(\d{4})-(\d{2})-(\d{2})', f)
+            date_match = re.search(r"(\d{4})-(\d{2})-(\d{2})", f)
             if date_match:
                 y, m, d = date_match.groups()
                 out_dir = os.path.join(OUT_DIR, y, m, d)
@@ -65,7 +69,7 @@ for root, dirs, files in os.walk(POSTS_DIR):
                 out_path = os.path.join(out_dir, f"summary-{lang}.html")
             else:
                 out_path = path.replace(".md", ".html")
-            
+
             with open(out_path, "w", encoding="utf-8") as fh:
                 fh.write(html)
             print(f"  Generated: {out_path}")

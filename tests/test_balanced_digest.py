@@ -181,7 +181,9 @@ def test_run_applies_balanced_digest_before_enrichment(tmp_path, monkeypatch) ->
     monkeypatch.setattr(orchestrator, "fetch_all_sources", fetch_all_sources)
     monkeypatch.setattr(orchestrator, "_analyze_content", analyze_content)
     monkeypatch.setattr(orchestrator, "merge_topic_duplicates", merge_topic_duplicates)
-    monkeypatch.setattr(orchestrator, "_expand_twitter_discussion", expand_twitter_discussion)
+    monkeypatch.setattr(
+        orchestrator, "_expand_twitter_discussion", expand_twitter_discussion
+    )
     monkeypatch.setattr(orchestrator, "_enrich_important_items", enrich_important_items)
     monkeypatch.chdir(tmp_path)
 

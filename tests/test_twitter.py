@@ -75,6 +75,7 @@ def _status_resp(status="SUCCEEDED"):
 # Existing fetch tests
 # ---------------------------------------------------------------------------
 
+
 def test_disabled_returns_empty():
     transport = httpx.MockTransport(lambda r: httpx.Response(200, json=[]))
     client = httpx.AsyncClient(transport=transport)
@@ -91,9 +92,7 @@ def test_no_users_returns_empty():
     transport = httpx.MockTransport(lambda r: httpx.Response(200, json=[]))
     client = httpx.AsyncClient(transport=transport)
     result = asyncio.run(
-        TwitterScraper(_make_config(users=[]), client).fetch(
-            datetime.now(timezone.utc)
-        )
+        TwitterScraper(_make_config(users=[]), client).fetch(datetime.now(timezone.utc))
     )
     asyncio.run(client.aclose())
     assert result == []
@@ -138,7 +137,9 @@ def test_metadata_keys_aligned_for_analyzer(monkeypatch):
     """Analyzer reads favorite_count/retweet_count/reply_count — verify they are set."""
     monkeypatch.setenv("APIFY_TOKEN", "test_token")
     since = datetime.now(timezone.utc) - timedelta(hours=1)
-    tweets = [_tweet("42", **{"favorite_count": 99, "retweet_count": 7, "reply_count": 3})]
+    tweets = [
+        _tweet("42", **{"favorite_count": 99, "retweet_count": 7, "reply_count": 3})
+    ]
 
     def handler(request: httpx.Request) -> httpx.Response:
         if "/runs" in request.url.path and request.method == "POST":
@@ -291,6 +292,7 @@ def test_url_constructed_when_missing(monkeypatch):
 # Reply fetch tests
 # ---------------------------------------------------------------------------
 
+
 def test_fetch_replies_disabled_by_default():
     """fetch_reply_text defaults to False — verify config default."""
     cfg = TwitterConfig()
@@ -353,7 +355,7 @@ def test_fetch_replies_appends_top_comments(monkeypatch):
     assert "alice" in reply_lines[0]
     assert "Interesting take!" in reply_lines[0]
     # dave (0 likes) filtered out
-    assert not any("dave" in l for l in reply_lines)
+    assert not any("dave" in line for line in reply_lines)
 
 
 def test_append_discussion_content_adds_marker():
@@ -369,7 +371,9 @@ def test_append_discussion_content_adds_marker():
         published_at=datetime.now(timezone.utc),
         metadata={},
     )
-    changed = TwitterScraper.append_discussion_content(item, ["[@alice | ❤️ 5 | 💬 1] reply text"])
+    changed = TwitterScraper.append_discussion_content(
+        item, ["[@alice | ❤️ 5 | 💬 1] reply text"]
+    )
     assert changed is True
     assert "--- Top Comments ---" in item.content
     assert "alice" in item.content
@@ -415,6 +419,3 @@ def test_fetch_replies_no_conversation_id_returns_empty(monkeypatch):
     result = asyncio.run(scraper.fetch_replies_for_item(item))
     asyncio.run(client.aclose())
     assert result == []
-
-
-

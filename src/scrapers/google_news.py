@@ -78,7 +78,9 @@ class GoogleNewsScraper(BaseScraper):
 
         query = f"{base_query} {self._time_operator(since)}"
 
-        ceid = self.gn_config.ceid or f"{self.gn_config.country}:{self.gn_config.language}"
+        ceid = (
+            self.gn_config.ceid or f"{self.gn_config.country}:{self.gn_config.language}"
+        )
         params: dict[str, Any] = {
             "q": query,
             "hl": self.gn_config.language,

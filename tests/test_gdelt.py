@@ -74,9 +74,7 @@ def test_time_window_uses_timespan_when_set() -> None:
 
 def test_language_and_country_appended_to_query() -> None:
     client = _mock_client(_articles_payload())
-    config = GDELTConfig(
-        enabled=True, query="ai", language="english", country="US"
-    )
+    config = GDELTConfig(enabled=True, query="ai", language="english", country="US")
     scraper = GDELTScraper(config, client)
 
     asyncio.run(scraper.fetch(SINCE))
