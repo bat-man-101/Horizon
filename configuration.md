@@ -3,11 +3,11 @@ layout: default
 title: Configuration Guide
 ---
 
-# 配置说明 (在线)
+# 配置指南
 
 Horizon is configured through two files: a `.env` file for API keys and a `data/config.json` file for sources, AI provider, and filtering options.
 
-## 人工智能提供商
+## AI 供应商
 
 Configure which AI model scores and summarizes your content.
 
@@ -37,7 +37,7 @@ Common API key variable names:
 | Doubao | `DOUBAO_API_KEY` |
 | DeepSeek | `DEEPSEEK_API_KEY` |
 
-**人性化的克劳德**:
+**安东尼·克劳德**:
 
 ```json
 {
@@ -50,7 +50,7 @@ Common API key variable names:
 }
 ```
 
-**OpenAI 首选模型**:
+**开放AI**:
 
 ```json
 {
@@ -76,7 +76,7 @@ Common API key variable names:
 }
 ```
 
-**Azure 开放人工智能**:
+**Azure 打开AI**:
 
 ```json
 {
@@ -93,7 +93,7 @@ Common API key variable names:
 
 Set `AZURE_OPENAI_API_KEY` and `AZURE_OPENAI_ENDPOINT` in your `.env`. The `model` field should be your Azure deployment name, not just the base model family name.
 
-**极小化极大**:
+**迷你麦克斯**:
 
 ```json
 {
@@ -108,7 +108,7 @@ Set `AZURE_OPENAI_API_KEY` and `AZURE_OPENAI_ENDPOINT` in your `.env`. The `mode
 
 Available models: `MiniMax-M3`, `MiniMax-M2.7`, `MiniMax-M2.7-highspeed`
 
-**阿里云DashScope** (OpenAI-compatible):
+**阿里云·达什斯科普** (OpenAI-compatible):
 
 ```json
 {
@@ -121,9 +121,9 @@ Available models: `MiniMax-M3`, `MiniMax-M2.7`, `MiniMax-M2.7-highspeed`
 }
 ```
 
-Use the [DashScope兼容模式](https://help.aliyun.com/zh/dashscope/developer-reference/use-dashscope-by-calling-openai-api) endpoint. Set `DASHSCOPE_API_KEY` in your `.env`. Optional: set `base_url` to override the default `https://dashscope.aliyuncs.com/compatible-mode/v1`.
+Use the [DashScope 兼容模式](https://help.aliyun.com/zh/dashscope/developer-reference/use-dashscope-by-calling-openai-api) endpoint. Set `DASHSCOPE_API_KEY` in your `.env`. Optional: set `base_url` to override the default `https://dashscope.aliyuncs.com/compatible-mode/v1`.
 
-**奥利亚马**:
+**奥拉玛**:
 
 ```json
 {
@@ -143,7 +143,7 @@ For remote Ollama servers, set `ai.base_url` in `data/config.json` or set
 also recognized. If the value omits `/v1`, Horizon appends it automatically
 for Ollama's OpenAI-compatible endpoint.
 
-### AI节流
+### 大赦国际
 
 If your model has a strict per-minute request cap, you can slow the scorer down in `data/config.json`:
 
@@ -159,7 +159,7 @@ If your model has a strict per-minute request cap, you can slow the scorer down 
 - `4.5` is a reasonable starting point for free-tier models capped around 15 requests per minute.
 - Set it back to `0` if you have enough throughput headroom and want maximum speed.
 
-### AI并发
+### AI 货币
 
 By default, AI scoring and enrichment run one item at a time. If your API endpoint supports concurrent requests, you can increase throughput:
 
@@ -179,7 +179,7 @@ By default, AI scoring and enrichment run one item at a time. If your API endpoi
 - Result ordering is preserved regardless of concurrency.
 - If you also use `throttle_sec`, each concurrent task sleeps independently after finishing an item.
 
-**自定义API基本URL** (for proxies):
+**自定义基址** (for proxies):
 
 ```json
 {
@@ -193,11 +193,11 @@ By default, AI scoring and enrichment run one item at a time. If your API endpoi
 
 For OpenAI-compatible gateways, Horizon sends `temperature` by default. If a newer reasoning-style model rejects that parameter with an error such as `temperature is deprecated for this model`, Horizon retries once without it and remembers that capability for later requests.
 
-## 信息源
+## 信息来源
 
 All sources are configured under the top-level `sources` key in `config.json`.
 
-### GitHub 代码库
+### GitHub 图像
 
 ```json
 {
@@ -233,7 +233,7 @@ All sources are configured under the top-level `sources` key in `config.json`.
 }
 ```
 
-### RSS订阅源
+### RSS 种子软件
 
 ```json
 {
@@ -250,7 +250,7 @@ All sources are configured under the top-level `sources` key in `config.json`.
 }
 ```
 
-### 保存此
+### 编辑
 
 Reddit scraping is free and does not require API keys. Subreddit posts and comments prefer `old.reddit.com`; JSON and RSS endpoints are used as fallbacks when needed.
 
@@ -306,9 +306,9 @@ Telegram scraping uses the public web preview at `https://t.me/s/<channel>`, so 
 - `channel` — Telegram channel username only, without `@` or the full `https://t.me/` URL
 - `fetch_limit` — maximum number of recent messages to inspect per channel per run (default: `20`)
 
-### 推特
+### 微博
 
-Requires an [阿皮菲](https://apify.com) account. Set `APIFY_TOKEN` in your `.env` file. The free tier includes $5/month of credit, enough for roughly 20,000 tweets.
+Requires an [说明](https://apify.com) account. Set `APIFY_TOKEN` in your `.env` file. The free tier includes $5/month of credit, enough for roughly 20,000 tweets.
 
 ```json
 {
@@ -335,7 +335,7 @@ Requires an [阿皮菲](https://apify.com) account. Set `APIFY_TOKEN` in your `.
 
 The scraper uses the `altimis/scweet` actor by default. You can override it with `actor_id` if needed.
 
-### OpenBB财经新闻
+### OpenBB 金融新闻
 
 OpenBB is useful when you want equity or macro news from providers such as yfinance, Benzinga, FMP, Intrinio, Tiingo, SEC, or Federal Reserve through one SDK.
 
@@ -381,9 +381,9 @@ uv pip install --only-binary=:all: openbb openbb-benzinga
 
 OpenBB provider credentials are handled by the OpenBB SDK itself, using its own environment variables or user settings. Horizon does not pass those secrets through `data/config.json`.
 
-### OSS Insight （热门GitHub Repos ）
+### OSS 透视( Trending GitHub Repos) :
 
-Pulls top star-gain repositories from the [操作系统洞察](https://ossinsight.io) public API, which aggregates GitHub WatchEvents. Useful for surfacing repos that are gaining stars right now without needing to scrape GitHub Trending or query BigQuery.
+Pulls top star-gain repositories from the [OSS 透视](https://ossinsight.io) public API, which aggregates GitHub WatchEvents. Useful for surfacing repos that are gaining stars right now without needing to scrape GitHub Trending or query BigQuery.
 
 ```json
 {
@@ -412,11 +412,11 @@ No API key is required.
 
 Content is scored 0-10:
 
-- **9-10**: Groundbreaking - Major breakthroughs, paradigm shifts
-- **7-8**: High Value - Important developments, deep technical content
-- **5-6**: Interesting - Worth knowing but not urgent
-- **3-4**: Low Priority - Generic or routine content
-- **0-2**: Noise - Spam, off-topic, or trivial
+- **第9-10条**: Groundbreaking - Major breakthroughs, paradigm shifts
+- **7-8 (中文(简体) )**: High Value - Important developments, deep technical content
+- **第5-6条**: Interesting - Worth knowing but not urgent
+- **3-4号**: Low Priority - Generic or routine content
+- **0-2 (韩语)**: Noise - Spam, off-topic, or trivial
 
 ```json
 {
@@ -552,7 +552,7 @@ Resend SMTP example:
 
 Set `RESEND_API_KEY` in `.env`. Recipients are loaded from `data/subscribers.json`.
 
-## Webhook通知
+## Webhook 通知
 
 Webhook notification is optional and disabled unless `webhook.enabled` is `true`. Horizon can call Feishu/Lark, DingTalk, Slack, Discord, or any custom webhook endpoint when the pipeline succeeds or fails.
 
@@ -622,7 +622,7 @@ Example `summary_and_items` Markdown delivery config:
 
 With `summary_and_items`, Horizon sends one overview plus one message per selected item. `overview_position: "last"` sends item messages first and keeps the overview as the newest chat message; omit it or set `"first"` to send the overview first.
 
-### Webhook模板
+### Webhook 模板
 
 Available variables:
 
@@ -656,7 +656,7 @@ Use `#{key?limit=N&split=DELIM}` to truncate long values by splitting on `DELIM`
 #{summary?limit=3000&split=---}
 ```
 
-### 钉钉
+### 叮当
 
 In DingTalk, create a custom group robot and use a custom keyword such as `Horizon`. The keyword must appear in the body content.
 
@@ -670,7 +670,7 @@ In DingTalk, create a custom group robot and use a custom keyword such as `Horiz
 }
 ```
 
-### 飞树/云雀
+### 费修/拉克
 
 In Feishu or Lark, create a custom group robot and use a custom keyword such as `Horizon`. The keyword must appear in the body content.
 
@@ -733,7 +733,7 @@ Horizon writes generated summaries to `data/summaries/` and copies publishable M
 
 To use GitHub Pages, enable Pages for the repository and run the scheduled workflow or trigger it manually. The generated site is built from the `docs/` directory.
 
-## MCP服务器
+## MCP 服务器
 
 Horizon includes an MCP server for AI assistants and MCP-compatible clients.
 
@@ -743,4 +743,4 @@ uv run horizon-mcp
 
 Available tools include `hz_validate_config`, `hz_fetch_items`, `hz_score_items`, `hz_filter_items`, `hz_enrich_items`, `hz_generate_summary`, and `hz_run_pipeline`.
 
-See [`src/mcp/README.md`](../src/mcp/README.md) for the full tool reference and [`src/mcp/integration.md`](../src/mcp/integration.md) for client setup.
+See [`src/mcp/README.md`](../src/mcp/README.md) for the full tool reference and [`rc/mcp/整合.md '](../src/mcp/integration.md) for client setup.

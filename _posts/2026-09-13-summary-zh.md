@@ -5,51 +5,51 @@ date: 2026-09-13
 lang: zh
 ---
 
-> 从 116 条内容中筛选出 15 条重要资讯。
+> 从 115 条内容中筛选出 15 条重要资讯。
 
 ---
 
 **📌 其他（3）**
-  1. [畜群工作人员打电话报警，举报人正在拍摄公共摄像头装置](#item-1)
-  2. [JetKVM 迷你](#item-2)
-  3. [人工智能特工为什么要撒谎、欺骗和协调？](#item-3)
+  1. [Astra 和 Fable 仍然侵入 2025 年的 配对 eval 的简单变体](#item-1)
+  2. [JetKVM 小号](#item-2)
+  3. [为什么 AI 特工说谎,作弊和协调?](#item-3)
 
 **🤖 AI 新闻（3）**
-  4. [使用 GPT-6 Astra 和 ChatGPT Work 生成运行路线](#item-4)
-  5. [加州棕鹈鹕](#item-5)
+  4. [使用 GPT-6 Astra 和 ChatGPT 工作生成运行的路由](#item-4)
+  5. [加利福尼亚州 棕 can](#item-5)
   6. [引用保罗·福特](#item-6)
 
 **₿ 加密资产（1）**
-  7. [经济学家表示，美联储加息与华尔街有关，而不是通货膨胀](#item-7)
+  7. [美联储提速是华尔街,不是通货膨胀,经济学家说](#item-7)
 
 **🚀 科技动态（3）**
-  8. [聚变电源初创公司在国防领域寻找新的合作伙伴](#item-8)
-  9. [Automattic 确认 Mullenweg 在董事会试图罢免后重新担任首席执行官](#item-9)
-  10. [OpenAI 的 Sam Altman 表示，在 2026 年上市将是“不明智的”](#item-10)
+  8. [TechCrunch 移动: Lyft 已进入机器人聊天](#item-8)
+  9. [在国防界找到新的伙伴](#item-9)
+  10. [自动程序证实 Mullenweg 在董事会试图下台后 已回任 CEO](#item-10)
 
 **📰 热点新闻（3）**
-  11. [前人类学研究员告诉英国广播公司，人工智能工作人员“真正害怕”人类的未来](#item-11)
-  12. [Anthropic 老板 Dario Amodei 呼吁放缓人工智能的发展](#item-12)
-  13. [动荡的人工智能时代已经到来。我们现在做出的选择至关重要。-盖茨笔记](#item-13)
+  11. [前安特罗派研究员告诉英国广播公司](#item-11)
+  12. [Anthropic boss Dario Amodei 呼吁 AI 开发减速](#item-12)
+  13. [动荡的 AI 时代就在这里. 我们现在作出的选择至关重要。 - 盖茨笔记](#item-13)
 
 **💡 一人公司（2）**
-  14. [打卡服贸会｜服务贸易如何助力数字文化产品出海 - 新京报](#item-14)
-  15. [大饱眼“服”丨今年的服贸会出海开始“组团”了 - 央广网](#item-15)
+  14. [全球产业格局生变 中国企业高质量出海迎接新机遇 - biz.eastmoney.com](#item-14)
+  15. [服贸会观察：中国企业出海，从“走出去”到“走得稳” - bjnews.com.cn](#item-15)
 ---
 
 ## 📌 其他
 
 <a id="item-1"></a>
-## [畜群工作人员打电话报警，举报人正在拍摄公共摄像头装置](https://www.investigatetv.com/2026/09/08/flock-worker-calls-police-investigatetv-reporter-filming-public-camera-installation/)
+## [Astra 和 Fable 仍然侵入 2025 年的 配对 eval 的简单变体](https://www.lesswrong.com/posts/munJKF7iWMsWJLAH2/astra-and-fable-still-hack-on-simple-variants-of-alignment)
 
 
 
-hackernews · SanjayMehta · 9月13日 13:35 · [社区讨论](https://news.ycombinator.com/item?id=49683853)
+hackernews · Levitating · 9月13日 14:28 · [社区讨论](https://news.ycombinator.com/item?id=49684393)
 
 ---
 
 <a id="item-2"></a>
-## [JetKVM 迷你](https://jetkvm.com/blog/introducing-jetkvm-mini)
+## [JetKVM 小号](https://jetkvm.com/blog/introducing-jetkvm-mini)
 
 
 
@@ -58,7 +58,7 @@ hackernews · taubek · 9月13日 07:49 · [社区讨论](https://news.ycombinat
 ---
 
 <a id="item-3"></a>
-## [人工智能特工为什么要撒谎、欺骗和协调？](https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating)
+## [为什么 AI 特工说谎,作弊和协调?](https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating)
 
 
 
@@ -69,7 +69,7 @@ hackernews · jonifico · 9月13日 01:22 · [社区讨论](https://news.ycombin
 ## 🤖 AI 新闻
 
 <a id="item-4"></a>
-## [使用 GPT-6 Astra 和 ChatGPT Work 生成运行路线](https://simonwillison.net/2026/Sep/12/astra-running-routes/)
+## [使用 GPT-6 Astra 和 ChatGPT 工作生成运行的路由](https://simonwillison.net/2026/Sep/12/astra-running-routes/)
 
 Here's a neat thing I had ChatGPT Work with GPT-6 Astra (Max) do this morning:
 
@@ -86,7 +86,7 @@ rss · Simon Willison · 9月12日 23:56
 ---
 
 <a id="item-5"></a>
-## [加州棕鹈鹕](https://simonwillison.net/2026/Sep/12/sighting-399708714/)
+## [加利福尼亚州 棕 can](https://simonwillison.net/2026/Sep/12/sighting-399708714/)
 
 California Brown Pelican, in San Mateo County, CA, USThe Pacifica Pier shut down at the start of June after a crack in the concrete walkway made access to the pier unsafe.
 It has since been entirely taken over by pelicans!
@@ -110,7 +110,7 @@ rss · Simon Willison · 9月12日 18:00
 ## ₿ 加密资产
 
 <a id="item-7"></a>
-## [经济学家表示，美联储加息与华尔街有关，而不是通货膨胀](https://www.coindesk.com/markets/2026/09/13/fed-rate-hike-is-about-wall-street-not-inflation-says-economist)
+## [美联储提速是华尔街,不是通货膨胀,经济学家说](https://www.coindesk.com/markets/2026/09/13/fed-rate-hike-is-about-wall-street-not-inflation-says-economist)
 
 
 
@@ -121,7 +121,16 @@ rss · CoinDesk · 9月13日 13:00
 ## 🚀 科技动态
 
 <a id="item-8"></a>
-## [聚变电源初创公司在国防领域寻找新的合作伙伴](https://techcrunch.com/2026/09/13/fusion-power-startups-find-new-partners-in-the-defense-world/)
+## [TechCrunch 移动: Lyft 已进入机器人聊天](https://techcrunch.com/2026/09/13/techcrunch-mobility-lyft-has-entered-the-robotaxi-chat/)
+
+Welcome back to TechCrunch Mobility, your hub for the future of transportation, and now, more than ever, the role AI is playing in it.
+
+rss · 36氪 - 科技 · 9月13日 16:04
+
+---
+
+<a id="item-9"></a>
+## [在国防界找到新的伙伴](https://techcrunch.com/2026/09/13/fusion-power-startups-find-new-partners-in-the-defense-world/)
 
 Fusion startups are inking defense-related deals, reigniting the relationship between fusion and national security that might have gone dormant, but never completely disappeared.
 
@@ -129,8 +138,8 @@ rss · 36氪 - 科技 · 9月13日 13:15
 
 ---
 
-<a id="item-9"></a>
-## [Automattic 确认 Mullenweg 在董事会试图罢免后重新担任首席执行官](https://techcrunch.com/2026/09/12/automattic-confirms-mullenweg-has-returned-as-ceo-after-attempted-ouster-by-board/)
+<a id="item-10"></a>
+## [自动程序证实 Mullenweg 在董事会试图下台后 已回任 CEO](https://techcrunch.com/2026/09/12/automattic-confirms-mullenweg-has-returned-as-ceo-after-attempted-ouster-by-board/)
 
 Automattic says Mullenweg is back as "chairman and CEO of Automattic, with full support of the board."
 
@@ -138,19 +147,10 @@ rss · 36氪 - 科技 · 9月12日 23:25
 
 ---
 
-<a id="item-10"></a>
-## [OpenAI 的 Sam Altman 表示，在 2026 年上市将是“不明智的”](https://techcrunch.com/2026/09/12/openais-sam-altman-says-it-would-be-ill-advised-to-go-public-in-2026/)
-
-While OpenAI has filed confidentially for an IPO, the company will not be going public this year, according to CEO Sam Altman.
-
-rss · 36氪 - 科技 · 9月12日 20:19
-
----
-
 ## 📰 热点新闻
 
 <a id="item-11"></a>
-## [前人类学研究员告诉英国广播公司，人工智能工作人员“真正害怕”人类的未来](https://www.bbc.co.uk/news/articles/c1kx0gyje9wo?at_medium=RSS&at_campaign=rss)
+## [前安特罗派研究员告诉英国广播公司](https://www.bbc.co.uk/news/articles/c1kx0gyje9wo?at_medium=RSS&at_campaign=rss)
 
 It comes as the AI firm's boss has called for the technology's development to be slowed down, citing "serious" risks.
 
@@ -159,7 +159,7 @@ rss · BBC Technology · 9月13日 14:53
 ---
 
 <a id="item-12"></a>
-## [Anthropic 老板 Dario Amodei 呼吁放缓人工智能的发展](https://www.bbc.co.uk/news/articles/c14dpgm0rg4o?at_medium=RSS&at_campaign=rss)
+## [Anthropic boss Dario Amodei 呼吁 AI 开发减速](https://www.bbc.co.uk/news/articles/c14dpgm0rg4o?at_medium=RSS&at_campaign=rss)
 
 The call comes amid growing concerns that AI models may become able to inflict serious damage worldwide.
 
@@ -168,7 +168,7 @@ rss · BBC Technology · 9月12日 21:16
 ---
 
 <a id="item-13"></a>
-## [动荡的人工智能时代已经到来。我们现在做出的选择至关重要。-盖茨笔记](https://news.google.com/rss/articles/CBMif0FVX3lxTE5vNHRZblJwZHNZZEZfZ285LUdncWl0YUk0UHVfTDM1b05YSU9rVHRhYUpkQ1VwV1RJaXZ4SzZwV2dBd2ZYeEZtbUpGNkpDdng5WjRTa28yOVdIM3drTERSVVVoeWI0WnpWT3dQbGVQcVhvdEZIZE1oaTB4cHdRb0E?oc=5)
+## [动荡的 AI 时代就在这里. 我们现在作出的选择至关重要。 - 盖茨笔记](https://news.google.com/rss/articles/CBMif0FVX3lxTE5vNHRZblJwZHNZZEZfZ285LUdncWl0YUk0UHVfTDM1b05YSU9rVHRhYUpkQ1VwV1RJaXZ4SzZwV2dBd2ZYeEZtbUpGNkpDdng5WjRTa28yOVdIM3drTERSVVVoeWI0WnpWT3dQbGVQcVhvdEZIZE1oaTB4cHdRb0E?oc=5)
 
 The turbulent AI era is here. The choices we make now are critical.&nbsp;&nbsp;Gates Notes
 
@@ -179,19 +179,19 @@ google_news · Gates Notes · 9月13日 13:04
 ## 💡 一人公司
 
 <a id="item-14"></a>
-## [打卡服贸会｜服务贸易如何助力数字文化产品出海 - 新京报](https://news.google.com/rss/articles/CBMiZEFVX3lxTFAyM3d4UVpjamlqREZ0Uks2WVZBM1Q5TEpZUEtkWml0SHdfamdLMERlT05TM2tRbVVfQUVXakgwaElVQVNZMGVCQno5ZEdZVFFIanNEZmw1WXhwUml5VzdPOFgwcUc?oc=5)
+## [全球产业格局生变 中国企业高质量出海迎接新机遇 - biz.eastmoney.com](https://news.google.com/rss/articles/CBMiYEFVX3lxTE14dlUtNEVIc1MwdXVqNG5jTUNRN2tkdHdUOWY2NmtZeHpKSEIwTnNIQTdoTnFJZEVVZFdHTURlWk8zaDduVURYR1RFYmxwX0dQRlZZMjFtTXlTSDhiM2xWRg?oc=5)
 
-打卡服贸会｜服务贸易如何助力数字文化产品出海&nbsp;&nbsp;新京报
+全球产业格局生变 中国企业高质量出海迎接新机遇&nbsp;&nbsp;biz.eastmoney.com
 
-rss · Google News - 一人公司 · 9月13日 12:12
+rss · Google News - 一人公司 · 9月13日 14:33
 
 ---
 
 <a id="item-15"></a>
-## [大饱眼“服”丨今年的服贸会出海开始“组团”了 - 央广网](https://news.google.com/rss/articles/CBMibkFVX3lxTE1yQnIyeld2Y3kxckM0Y3BXSVFyN054dzBlR0hoUHpNSVhDdkUzalJCR0kwaG93dnRwMHlGdFJmSGhGV2pFdDVyMXJyUnVUR3hJdFJpakZsR0tEaF9TUDB2Mmwzb002SXhxYjMwTkJn?oc=5)
+## [服贸会观察：中国企业出海，从“走出去”到“走得稳” - bjnews.com.cn](https://news.google.com/rss/articles/CBMiZEFVX3lxTE5kbF9iTUdiN2dtQUttSzhEWWpSQVcyQUFTYzdkVzRsa1k5WkdmQVRUTUxzM2EwUFNmQ1pSeDdidWZKck1HTUs2UjdoTUlUeGRXWmNabDNEQTN3SkxUcDZFMVVGNHI?oc=5)
 
-大饱眼“服”丨今年的服贸会出海开始“组团”了&nbsp;&nbsp;央广网
+服贸会观察：中国企业出海，从“走出去”到“走得稳”&nbsp;&nbsp;bjnews.com.cn
 
-rss · Google News - 一人公司 · 9月13日 10:46
+rss · Google News - 一人公司 · 9月13日 08:18
 
 ---

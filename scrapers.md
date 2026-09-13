@@ -3,7 +3,7 @@ layout: default
 title: Source Scrapers
 ---
 
-# 源刮板
+# 源代码
 
 Horizon fetches content from multiple source types. All scrapers inherit from `BaseScraper`, share an async HTTP client, and implement a `fetch(since)` method that returns a list of `ContentItem` objects. Sources are fetched concurrently via `asyncio.gather`.
 
@@ -11,7 +11,7 @@ Horizon fetches content from multiple source types. All scrapers inherit from `B
 
 **文件**: `src/scrapers/hackernews.py`
 
-Uses the [Firebase HN API](https://hacker-news.firebaseio.com/v0):
+Uses the [火炮基地HN API](https://hacker-news.firebaseio.com/v0):
 
 - `GET /topstories.json` — fetches top story IDs
 - `GET /item/{id}.json` — fetches story/comment details
@@ -31,21 +31,21 @@ Stories and their comments are fetched concurrently. For each story, the top 5 c
 - `fetch_top_stories` — number of top story IDs to fetch
 - `min_score` — minimum HN points to include a story
 
-**提取的数据**: title, URL (falls back to HN discussion URL), author, score, comment count, and top comment text.
+**提取数据**: title, URL (falls back to HN discussion URL), author, score, comment count, and top comment text.
 
-## GitHub 代码库
+## GitHub 图像
 
 **文件**: `src/scrapers/github.py`
 
-Uses the [GitHub REST API](https://api.github.com):
+Uses the [GitHub REST API 软件](https://api.github.com):
 
 - `GET /users/{username}/events/public` — user activity events
 - `GET /repos/{owner}/{repo}/releases` — repository releases
 
 Two source types are supported:
 
-- **用户事件** — tracks push, create, release, public, and watch events for a user
-- **`repo_releases`** — tracks new releases for a specific repository
+- **" 用户-事件 "** — tracks push, create, release, public, and watch events for a user
+- **`释放 '** — tracks new releases for a specific repository
 
 **配置** (`sources.github`, list of entries):
 
@@ -66,9 +66,9 @@ Two source types are supported:
 }
 ```
 
-**验证**: Set `GITHUB_TOKEN` in your environment for higher rate limits (5000 req/hr vs 60 without).
+**认证**: Set `GITHUB_TOKEN` in your environment for higher rate limits (5000 req/hr vs 60 without).
 
-## RSS
+## 简易新闻聚合
 
 **文件**: `src/scrapers/rss.py`
 
@@ -87,9 +87,9 @@ Fetches any Atom/RSS feed using the `feedparser` library. Tries multiple date fi
 
 - `category` — optional tag for grouping (e.g., `"programming"`, `"microblog"`)
 
-**提取的数据**: title, URL, author, content (from `summary`/`description`/`content` fields), feed name, category, and entry tags.
+**提取数据**: title, URL, author, content (from `summary`/`description`/`content` fields), feed name, category, and entry tags.
 
-## 保存此
+## 编辑
 
 **文件**: `src/scrapers/reddit.py`
 
@@ -132,15 +132,15 @@ Subreddits and users are fetched concurrently. Comments are sorted by score, lim
 - `time_filter` — for `top`/`rising` sorts: `hour`, `day`, `week`, `month`, `year`, `all`
 - `min_score` — minimum post score (subreddits only)
 
-**速率控制步驟**: Detects HTTP 429 responses on JSON requests, reads the `Retry-After` header, waits, and retries once. Uses browser-like request headers for no-key public access.
+**限制费率**: Detects HTTP 429 responses on JSON requests, reads the `Retry-After` header, waits, and retries once. Uses browser-like request headers for no-key public access.
 
-**提取的数据**: title, URL, author, score, upvote ratio, comment count, subreddit, flair, self-text, and top comments.
+**提取数据**: title, URL, author, score, upvote ratio, comment count, subreddit, flair, self-text, and top comments.
 
 ## 开放BB
 
 **文件**: `src/scrapers/openbb.py`
 
-Uses the [OpenBB平台](https://www.openbb.co/platform) Python SDK via `obb.news.company()` to fetch company news for one or more ticker watchlists.
+Uses the [OpenBB 平台](https://www.openbb.co/platform) Python SDK via `obb.news.company()` to fetch company news for one or more ticker watchlists.
 
 The scraper imports `openbb` lazily. If the optional dependency is not installed, Horizon logs a warning and skips the source instead of failing the whole run.
 
@@ -175,15 +175,15 @@ Behavior:
 - Skips malformed rows, rows without URL/title/date, and items older than the current time window
 - Keeps fetching other watchlists if one provider call fails
 
-**证书**: provider-specific secrets are resolved by the OpenBB SDK from its own environment variables or settings file. Horizon does not pass those values directly.
+**全权证书**: provider-specific secrets are resolved by the OpenBB SDK from its own environment variables or settings file. Horizon does not pass those values directly.
 
-**提取的数据**: title, URL, author, published time, article body/excerpt, watchlist name, provider, category, and symbol list.
+**提取数据**: title, URL, author, published time, article body/excerpt, watchlist name, provider, category, and symbol list.
 
-## 推特
+## 微博
 
 **文件**: `src/scrapers/twitter.py`
 
-Uses the [阿皮菲](https://apify.com) platform to bypass Twitter's anti-scraping measures. The actor `altimis~scweet` is called via the Apify REST API.
+Uses the [说明](https://apify.com) platform to bypass Twitter's anti-scraping measures. The actor `altimis~scweet` is called via the Apify REST API.
 
 Flow:
 1. POST to `/v2/acts/{actor_id}/runs` to trigger a run
@@ -215,6 +215,6 @@ Flow:
 - `actor_id` — Apify actor ID (default: `altimis~scweet`)
 - `apify_token_env` — environment variable name containing the Apify API token
 
-**验证**: Set `APIFY_TOKEN` in your `.env`. Get a token at [控制台.apify.com](https://console.apify.com/account/integrations).
+**认证**: Set `APIFY_TOKEN` in your `.env`. Get a token at [控制台. apify.com](https://console.apify.com/account/integrations).
 
-**提取的数据**: tweet text, URL, author, publish time, likes, retweets, replies, views, and (optionally) reply-thread text appended under `--- Top Comments ---`.
+**提取数据**: tweet text, URL, author, publish time, likes, retweets, replies, views, and (optionally) reply-thread text appended under `--- Top Comments ---`.

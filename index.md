@@ -34,13 +34,13 @@ title: Home
 
 Welcome to [地平线](https://github.com/thysrael/Horizon), an AI-driven information aggregation system.
 
-## 文件材料
+## 文档
 
-- [配置说明 (在线)](configuration) — AI providers, information sources, filtering, and environment variable substitution
-- [源刮板](scrapers) — How Horizon collects content from GitHub, Hacker News, RSS, and Reddit
-- [积分规则](scoring) — AI-based content analysis and the 0-10 scoring scale
+- [配置指南](configuration) — AI providers, information sources, filtering, and environment variable substitution
+- [源代码](scrapers) — How Horizon collects content from GitHub, Hacker News, RSS, and Reddit
+- [计分系统](scoring) — AI-based content analysis and the 0-10 scoring scale
 
-## 每日摘要<a class="rss-icon" href="{{ '/feed-en.xml' | relative_url }}" aria-label="Subscribe English"><svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">&lt; path fill = "currentColor" d = "M128.081 415.959c0 35.369-28.672 64.041-64.041 64.041S0 451.328 0 415.959s28.672-64.041 64.041-64.041 64.04 28.673 64.04 64.041zm175.66 47.25c-8.354-154.6-132.185-278.587-286.95-286.95C7.656 175.765 0 183.105 0 192.253v48.069c0 8.415 6.49 15.472 14.887 16.018 111.832 7.284 201.473 96.702 208.772 208.7
+## 每日文摘<a class='rs-icon'href='{{'========================================================================================================================================================================================================================================
 
 <ul>
   {% assign en_posts = site.posts | where: "lang", "en" %}
