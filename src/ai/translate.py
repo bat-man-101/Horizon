@@ -1,4 +1,4 @@
-"""Free machine translation with multi-provider fallback (no API key required).
+"""Free machine translation with multi-provider fallback (no paid tokens).
 
 Why this module exists
 ----------------------
@@ -22,14 +22,25 @@ Because the 429 arrives in ~0.3 s and the caller silently swallowed the error,
 every title fell back to the original English text — which is exactly why the
 WeCom push looked half-Chinese / half-English.
 
-Provider chain (first success wins): MyMemory → Google gtx → Google web.
+Provider chain (first success wins, all zero-cost):
+
+1. **LibreTranslate (self-hosted)** — set ``LIBRETRANSLATE_URL`` (and optional
+   ``LIBRETRANSLATE_API_KEY``) to enable.  Runs on the NAS behind Cloudflare
+   Tunnel, so it is unlimited and immune to Azure-IP blocks.  This is the
+   primary provider for full-text translation.
+2. MyMemory — the only public free endpoint that answers from Azure egress.
+3. Google gtx / Google web — kept as last resort (work from home networks).
+
+Home-network note: the NAS itself cannot reach Google (household ISP blocks the
+SNI), so the self-hosted LibreTranslate instance is the real workhorse.
 """
 
 from __future__ import annotations
 
 import logging
+import os
 import re
-from typing import Callable, Dict, List, Optional
+from typing import Awaitable, Callable, Dict, List, Optional
 
 import httpx
 
@@ -41,10 +52,6 @@ _MYMEMORY = "https://api.mymemory.translated.net/get"
 
 _CJK = re.compile(r"[\u4e00-\u9fff]")
 _KANA = re.compile(r"[\u3040-\u309f\u30a0-\u30ff]")
-
-#: Provider order.  MyMemory first because it is the only one that answers
-#: from GitHub Actions / Azure egress IPs.
-_PROVIDERS = ("mymemory", "google_gtx", "google_web")
 
 DEFAULT_TIMEOUT = 15.0
 _MAX_CHARS = 500  # MyMemory rejects very long `q` values
@@ -83,6 +90,74 @@ def needs_translation(text: str, *, min_len: int = 3) -> bool:
 
 def _normalize(text: str) -> str:
     return re.sub(r"\s+", " ", text or "").strip()
+
+
+def _ltr_config() -> Optional[Dict[str, str]]:
+    """Return config for the self-hosted instance, or ``None`` when unset."""
+    url = (os.environ.get("LIBRETRANSLATE_URL") or "").strip().rstrip("/")
+    if not url:
+        return None
+    return {
+        "base": url,
+        "api_key": (os.environ.get("LIBRETRANSLATE_API_KEY") or "").strip(),
+        "auth": (os.environ.get("LIBRETRANSLATE_AUTH") or "").strip(),
+    }
+
+
+def _ltr_auth(cfg: Dict[str, str]) -> Optional[tuple[str, str]]:
+    """Basic-auth tuple from ``LIBRETRANSLATE_AUTH`` (``user:password``)."""
+    raw = cfg.get("auth") or ""
+    if not raw or ":" not in raw:
+        return None
+    user, _, password = raw.partition(":")
+    return user, password
+
+
+def _ltr_payload(text: str) -> Dict[str, str]:
+    """Request body for the self-hosted ``/translate`` endpoint.
+
+    The source is pinned to ``ja`` when kana are present: the instance only
+    loads ``en``/``zh`` models, so letting it auto-detect Japanese makes it fall
+    back to the English model and emit *truncated Japanese* — which would then
+    pass a naive CJK check.  Pinning ``ja`` makes the instance answer with an
+    error instead, so the chain falls through to MyMemory (which handles ja→zh).
+    """
+    return {
+        "q": text,
+        "source": "ja" if has_kana(text) else "auto",
+        "target": "zh",
+        "format": "text",
+    }
+
+
+def _via_libretranslate(client: httpx.Client, text: str) -> Optional[str]:
+    cfg = _ltr_config()
+    if cfg is None:
+        raise RuntimeError("LIBRETRANSLATE_URL not configured")
+    payload = _ltr_payload(text)
+    if cfg["api_key"]:
+        payload["api_key"] = cfg["api_key"]
+    resp = client.post(f"{cfg['base']}/translate", json=payload, auth=_ltr_auth(cfg))
+    if resp.status_code != 200:
+        raise RuntimeError(f"HTTP {resp.status_code}")
+    out = (resp.json() or {}).get("translatedText") or ""
+    return out or None
+
+
+async def _avia_libretranslate(client: httpx.AsyncClient, text: str) -> Optional[str]:
+    cfg = _ltr_config()
+    if cfg is None:
+        raise RuntimeError("LIBRETRANSLATE_URL not configured")
+    payload = _ltr_payload(text)
+    if cfg["api_key"]:
+        payload["api_key"] = cfg["api_key"]
+    resp = await client.post(
+        f"{cfg['base']}/translate", json=payload, auth=_ltr_auth(cfg)
+    )
+    if resp.status_code != 200:
+        raise RuntimeError(f"HTTP {resp.status_code}")
+    out = (resp.json() or {}).get("translatedText") or ""
+    return out or None
 
 
 def _via_mymemory(client: httpx.Client, text: str) -> Optional[str]:
@@ -128,19 +203,54 @@ def _via_google_web(client: httpx.Client, text: str) -> Optional[str]:
     return match.group(1).strip() if match else None
 
 
-_PROVIDER_FUNCS: Dict[str, Callable[[httpx.Client, str], Optional[str]]] = {
+_ProviderFn = Callable[[httpx.Client, str], Optional[str]]
+_AsyncProviderFn = Callable[[httpx.AsyncClient, str], Awaitable[Optional[str]]]
+
+_PROVIDER_FUNCS: Dict[str, _ProviderFn] = {
+    "libretranslate": _via_libretranslate,
     "mymemory": _via_mymemory,
     "google_gtx": _via_google_gtx,
     "google_web": _via_google_web,
 }
 
+_ASYNC_PROVIDER_FUNCS: Dict[str, _AsyncProviderFn] = {
+    "libretranslate": _avia_libretranslate,
+}
+
+
+def _provider_order() -> tuple[str, ...]:
+    """Return providers to try, self-hosted first when configured."""
+    if _ltr_config() is not None:
+        return ("libretranslate", "mymemory", "google_gtx", "google_web")
+    return ("mymemory", "google_gtx", "google_web")
+
+
+def _providers_for(text: str) -> tuple[str, ...]:
+    """Provider order for *text*.
+
+    The self-hosted instance is loaded with ``en``/``zh`` models only, so it
+    cannot translate Japanese — skip it up front rather than burning a request
+    and logging a misleading provider failure.  MyMemory handles ja→zh.
+    """
+    order = _provider_order()
+    if has_kana(text):
+        return tuple(p for p in order if p != "libretranslate")
+    return order
+
 
 def _is_good(source: str, candidate: Optional[str]) -> bool:
-    """A usable translation is non-empty, changed, and actually Chinese."""
+    """A usable translation is non-empty, changed, Chinese, and kana-free.
+
+    The kana check guards against a provider echoing Japanese back (an
+    English-only model "translating" Japanese), which would otherwise pass the
+    CJK test because kanji live in the same Unicode block as Han characters.
+    """
     if not candidate:
         return False
     out = _normalize(candidate)
-    return bool(out) and out != _normalize(source) and has_cjk(out)
+    return (
+        bool(out) and out != _normalize(source) and has_cjk(out) and not has_kana(out)
+    )
 
 
 def _note_failure(provider: str, exc: BaseException) -> None:
@@ -170,7 +280,7 @@ def translate(
     if owns_client:
         client = httpx.Client(timeout=timeout)
     try:
-        for provider in _PROVIDERS:
+        for provider in _providers_for(text):
             try:
                 result = _PROVIDER_FUNCS[provider](client, text)
             except Exception as exc:  # noqa: BLE001 - provider chain, keep going
@@ -200,48 +310,13 @@ async def atranslate(
     if owns_client:
         client = httpx.AsyncClient(timeout=timeout)
     try:
-        for provider in _PROVIDERS:
+        for provider in _providers_for(text):
             try:
-                if provider == "mymemory":
-                    resp = await client.get(
-                        _MYMEMORY,
-                        params={
-                            "q": text[:_MAX_CHARS],
-                            "langpair": f"{guess_source(text)}|zh-CN",
-                        },
-                    )
-                    if resp.status_code != 200:
-                        raise RuntimeError(f"HTTP {resp.status_code}")
-                    data = resp.json()
-                    out = (data.get("responseData") or {}).get("translatedText") or ""
-                    if out.strip().upper() == text.strip().upper():
-                        out = ""
-                elif provider == "google_gtx":
-                    resp = await client.get(
-                        _GOOGLE_GTX,
-                        params={
-                            "client": "gtx",
-                            "sl": "auto",
-                            "tl": "zh-CN",
-                            "dt": "t",
-                            "q": text[:1500],
-                        },
-                    )
-                    if resp.status_code != 200:
-                        raise RuntimeError(f"HTTP {resp.status_code}")
-                    data = resp.json()
-                    out = "".join(seg[0] for seg in data[0] if seg and seg[0])
+                func = _ASYNC_PROVIDER_FUNCS.get(provider)
+                if func is not None:
+                    out = await func(client, text)
                 else:
-                    resp = await client.get(
-                        _GOOGLE_WEB,
-                        params={"sl": "auto", "tl": "zh-CN", "q": text[:1500]},
-                    )
-                    if resp.status_code != 200:
-                        raise RuntimeError(f"HTTP {resp.status_code}")
-                    match = re.search(
-                        r'class="result-container">(.*?)</div>', resp.text, re.S
-                    )
-                    out = match.group(1).strip() if match else ""
+                    out = await _atranslate_sync_provider(client, provider, text)
             except Exception as exc:  # noqa: BLE001 - provider chain, keep going
                 _note_failure(provider, exc)
                 continue
@@ -251,6 +326,47 @@ async def atranslate(
     finally:
         if owns_client:
             await client.aclose()
+
+
+async def _atranslate_sync_provider(
+    client: httpx.AsyncClient, provider: str, text: str
+) -> Optional[str]:
+    """Async implementation for providers defined only in sync form."""
+    if provider == "mymemory":
+        resp = await client.get(
+            _MYMEMORY,
+            params={"q": text[:_MAX_CHARS], "langpair": f"{guess_source(text)}|zh-CN"},
+        )
+        if resp.status_code != 200:
+            raise RuntimeError(f"HTTP {resp.status_code}")
+        data = resp.json()
+        out = (data.get("responseData") or {}).get("translatedText") or ""
+        if out.strip().upper() == text.strip().upper():
+            return None
+        return out or None
+    if provider == "google_gtx":
+        resp = await client.get(
+            _GOOGLE_GTX,
+            params={
+                "client": "gtx",
+                "sl": "auto",
+                "tl": "zh-CN",
+                "dt": "t",
+                "q": text[:1500],
+            },
+        )
+        if resp.status_code != 200:
+            raise RuntimeError(f"HTTP {resp.status_code}")
+        data = resp.json()
+        return "".join(seg[0] for seg in data[0] if seg and seg[0])
+    resp = await client.get(
+        _GOOGLE_WEB,
+        params={"sl": "auto", "tl": "zh-CN", "q": text[:1500]},
+    )
+    if resp.status_code != 200:
+        raise RuntimeError(f"HTTP {resp.status_code}")
+    match = re.search(r'class="result-container">(.*?)</div>', resp.text, re.S)
+    return match.group(1).strip() if match else None
 
 
 def translation_health() -> str:

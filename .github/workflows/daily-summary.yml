@@ -33,6 +33,9 @@ jobs:
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
           HORIZON_WEBHOOK_URL: ${{ secrets.HORIZON_WEBHOOK_URL }}
+          # 自托管 LibreTranslate(NAS, 经 Cloudflare 隧道): 标题翻译首选, 无限量
+          LIBRETRANSLATE_URL: ${{ secrets.LIBRETRANSLATE_URL }}
+          LIBRETRANSLATE_AUTH: ${{ secrets.LIBRETRANSLATE_AUTH }}
         run: uv run horizon --hours 24
 
       - name: Convert markdown to standalone HTML
@@ -42,10 +45,14 @@ jobs:
 
       # 用共享多 provider 翻译模块(src/ai/translate.py)替换 deep-translator 的
       # Google-only 后端 —— Google 免费接口对 GHA runner(Azure IP)返回 429/302。
-      # TRANSLATE_MAX 限制单次运行的翻译条数,避免超出 MyMemory 匿名日配额。
+      # 首选自托管 LibreTranslate(NAS), 无限量, 故可翻译正文全文;
+      # 未配置时回退 MyMemory, 此时 TRANSLATE_MAX 兜底避免超出匿名日配额。
       - name: Machine translate HTML to Chinese
         env:
-          TRANSLATE_MAX: "150"
+          TRANSLATE_MAX: "2000"
+          TRANSLATE_MAX_LEN: "2000"
+          LIBRETRANSLATE_URL: ${{ secrets.LIBRETRANSLATE_URL }}
+          LIBRETRANSLATE_AUTH: ${{ secrets.LIBRETRANSLATE_AUTH }}
         run: |
           pip install httpx -q
           python .github/workflows/translate_html.py

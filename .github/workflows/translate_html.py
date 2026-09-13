@@ -1,15 +1,17 @@
 """Machine translate generated Horizon HTML/Markdown to Chinese.
 
-Uses the shared multi-provider translator in ``src/ai/translate.py``
-(MyMemory → Google gtx → Google web) instead of ``deep-translator``'s
-Google-only backend, because Google's free endpoint returns HTTP 429 /
-302→google.com/sorry for GitHub Actions runner IPs.
+Uses the shared multi-provider translator in ``src/ai/translate.py``.  When
+``LIBRETRANSLATE_URL`` is configured the **self-hosted LibreTranslate instance
+on the NAS** is tried first — it is unlimited, so full-text (body) translation
+is affordable; otherwise the chain falls back to MyMemory → Google gtx → web.
 
 Phase 1: translate markdown headings / link titles / bold (intermediate .md).
-Phase 2: translate short visible text nodes in the standalone HTML.
+Phase 2: translate visible text nodes in the standalone HTML — now including
+long article bodies (previously skipped above 120 chars).
 
-A global cap (``TRANSLATE_MAX``, default 150 strings) keeps the run inside
-MyMemory's anonymous daily quota.  Strings are translated at most once per run.
+A global cap (``TRANSLATE_MAX``, default 2000 strings) guards against runaway
+costs when only quota-limited public providers are available.  Strings are
+translated at most once per run.
 """
 
 import os
@@ -26,8 +28,9 @@ from src.ai.translate import (  # noqa: E402
     translation_health,
 )
 
-MAX_TRANSLATIONS = int(os.environ.get("TRANSLATE_MAX", "150"))
-MAX_TEXT_LEN = 120  # skip long article bodies — structural labels matter most
+MAX_TRANSLATIONS = int(os.environ.get("TRANSLATE_MAX", "2000"))
+MAX_TEXT_LEN = int(os.environ.get("TRANSLATE_MAX_LEN", "2000"))
+_SELF_HOSTED = bool((os.environ.get("LIBRETRANSLATE_URL") or "").strip())
 
 _stats = {"done": 0, "cached": 0, "skipped": 0}
 _cache: dict[str, str] = {}
@@ -93,7 +96,7 @@ for root, dirs, files in os.walk(summary_dir):
 
 # ─── Phase 2: HTML visible-text translation ───
 class HTMLTranslatorParser(HTMLParser):
-    """Collect text nodes, translate the short ones, rebuild the document."""
+    """Collect text nodes, translate them, rebuild the document."""
 
     def __init__(self):
         super().__init__()
@@ -183,5 +186,6 @@ for root, dirs, files in os.walk(summary_dir):
 
 print(
     f"Done: {_stats['done']} translated, {_stats['cached']} cached, "
-    f"cap={MAX_TRANSLATIONS} | providers: {translation_health()}"
+    f"cap={MAX_TRANSLATIONS}, max_len={MAX_TEXT_LEN}, "
+    f"self_hosted={_SELF_HOSTED} | providers: {translation_health()}"
 )
