@@ -24,9 +24,7 @@ jobs:
         uses: astral-sh/setup-uv@v7
 
       - name: Install dependencies
-        run: |
-          uv sync
-          pip install deep-translator -q
+        run: uv sync
 
       - name: Prepare GitHub Actions config
         run: cp data/config.github.json data/config.json
@@ -42,9 +40,14 @@ jobs:
           pip install markdown -q
           python .github/workflows/build_static.py
 
+      # 用共享多 provider 翻译模块(src/ai/translate.py)替换 deep-translator 的
+      # Google-only 后端 —— Google 免费接口对 GHA runner(Azure IP)返回 429/302。
+      # TRANSLATE_MAX 限制单次运行的翻译条数,避免超出 MyMemory 匿名日配额。
       - name: Machine translate HTML to Chinese
+        env:
+          TRANSLATE_MAX: "150"
         run: |
-          pip install deep-translator -q
+          pip install httpx -q
           python .github/workflows/translate_html.py
 
       - name: Set current date as environment variable

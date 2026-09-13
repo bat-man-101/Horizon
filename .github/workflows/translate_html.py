@@ -1,43 +1,52 @@
-"""Machine translate generated Horizon HTML files to Chinese using Google Translate.
-Translates English, Japanese and other languages to Chinese.
-Phase 1: Translate markdown headings/links/bold (for intermediate .md files)
-Phase 2: Translate all visible text in final HTML files"""
+"""Machine translate generated Horizon HTML/Markdown to Chinese.
+
+Uses the shared multi-provider translator in ``src/ai/translate.py``
+(MyMemory → Google gtx → Google web) instead of ``deep-translator``'s
+Google-only backend, because Google's free endpoint returns HTTP 429 /
+302→google.com/sorry for GitHub Actions runner IPs.
+
+Phase 1: translate markdown headings / link titles / bold (intermediate .md).
+Phase 2: translate short visible text nodes in the standalone HTML.
+
+A global cap (``TRANSLATE_MAX``, default 150 strings) keeps the run inside
+MyMemory's anonymous daily quota.  Strings are translated at most once per run.
+"""
 
 import os
 import re
+import sys
 from html.parser import HTMLParser
-from deep_translator import GoogleTranslator
+from pathlib import Path
 
-translator = GoogleTranslator(source="auto", target="zh-CN")
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
-HAS_CJK = re.compile(r"[\u4e00-\u9fff]")  # Chinese characters
-HAS_KANA = re.compile(r"[\u3040-\u309f\u30a0-\u30ff]")  # Japanese hiragana/katakana
+from src.ai.translate import (  # noqa: E402
+    needs_translation,
+    translate,
+    translation_health,
+)
 
+MAX_TRANSLATIONS = int(os.environ.get("TRANSLATE_MAX", "150"))
+MAX_TEXT_LEN = 120  # skip long article bodies — structural labels matter most
 
-def needs_translate(text):
-    """Return True if text needs translation."""
-    if not text or len(text) < 3:
-        return False
-    has_cjk = bool(HAS_CJK.search(text))
-    has_kana = bool(HAS_KANA.search(text))
-    if has_cjk and not has_kana:
-        return False
-    if has_kana:
-        return True
-    return True
+_stats = {"done": 0, "cached": 0, "skipped": 0}
+_cache: dict[str, str] = {}
 
 
-def translate_text(text):
-    if not needs_translate(text):
+def translate_text(text: str) -> str:
+    """Return a Chinese translation of *text*, or *text* unchanged on failure."""
+    if _stats["done"] + _stats["cached"] >= MAX_TRANSLATIONS:
         return text
-    try:
-        result = translator.translate(text)
-        # 目标 zh-CN：合法译文必含中文。gtx 接口被限流时常返回 "Error 500 (Server Error)!!1500..."
-        # 这类纯英文错误页文本，若直接采用会污染整份日报的标题；不含 CJK 一律视为失败，保留原文。
-        if result and result != text and re.search(r"[\u4e00-\u9fff]", result):
-            return result
-    except Exception:
-        pass
+    if text in _cache:
+        _stats["cached"] += 1
+        return _cache[text]
+    if not needs_translation(text):
+        return text
+    result = translate(text)
+    if result:
+        _cache[text] = result
+        _stats["done"] += 1
+        return result
     return text
 
 
@@ -45,48 +54,46 @@ def translate_text(text):
 summary_dir = "docs"
 for root, dirs, files in os.walk(summary_dir):
     for f in files:
-        if f.endswith(".md"):
-            path = os.path.join(root, f)
-            with open(path, "r", encoding="utf-8", errors="replace") as fh:
-                content = fh.read()
+        if not f.endswith(".md"):
+            continue
+        path = os.path.join(root, f)
+        with open(path, "r", encoding="utf-8", errors="replace") as fh:
+            content = fh.read()
+        original = content
 
-            # Translate markdown headings
-            def trans_heading(m):
-                prefix = m.group(1)
-                orig = m.group(2)
-                t = translate_text(orig)
-                return f"{prefix}{t}" if t != orig else m.group(0)
+        def trans_heading(m):
+            prefix = m.group(1)
+            orig = m.group(2)
+            t = translate_text(orig)
+            return f"{prefix}{t}" if t != orig else m.group(0)
 
-            content = re.sub(
-                r"^(#{1,4}\s+)(.+)$", trans_heading, content, flags=re.MULTILINE
-            )
+        content = re.sub(
+            r"^(#{1,4}\s+)(.+)$", trans_heading, content, flags=re.MULTILINE
+        )
 
-            # Translate markdown links [title](url)
-            def trans_link(m):
-                orig = m.group(1)
-                url = m.group(2)
-                t = translate_text(orig)
-                return f"[{t}]({url})" if t != orig else m.group(0)
+        def trans_link(m):
+            orig = m.group(1)
+            url = m.group(2)
+            t = translate_text(orig)
+            return f"[{t}]({url})" if t != orig else m.group(0)
 
-            content = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", trans_link, content)
+        content = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", trans_link, content)
 
-            # Translate bold text **text**
-            def trans_bold(m):
-                t = translate_text(m.group(1))
-                return f"**{t}**" if t != m.group(1) else m.group(0)
+        def trans_bold(m):
+            t = translate_text(m.group(1))
+            return f"**{t}**" if t != m.group(1) else m.group(0)
 
-            content = re.sub(r"\*\*(.*?)\*\*", trans_bold, content)
+        content = re.sub(r"\*\*(.*?)\*\*", trans_bold, content)
 
+        if content != original:
             with open(path, "w", encoding="utf-8") as fh:
                 fh.write(content)
             print(f"  MD translated: {path}")
 
-# ─── Phase 2: Full HTML text translation ───
-# Strategy: use html.parser to identify text nodes, translate, rebuild.
 
-
+# ─── Phase 2: HTML visible-text translation ───
 class HTMLTranslatorParser(HTMLParser):
-    """HTML Parser that collects text nodes with their translated versions."""
+    """Collect text nodes, translate the short ones, rebuild the document."""
 
     def __init__(self):
         super().__init__()
@@ -94,18 +101,20 @@ class HTMLTranslatorParser(HTMLParser):
         self._skip_tags = {"script", "style", "code", "pre"}
         self._skip_depth = 0
 
-    def handle_starttag(self, tag, attrs):
-        if tag in self._skip_tags:
-            self._skip_depth += 1
-        # Rebuild the tag as-is
+    @staticmethod
+    def _attrs(attrs):
         attr_str = ""
         for k, v in attrs:
             if v is None:
                 attr_str += f" {k}"
             else:
-                v_esc = v.replace('"', "&quot;")
-                attr_str += f' {k}="{v_esc}"'
-        self.result.append(f"<{tag}{attr_str}>")
+                attr_str += f' {k}="{v.replace(chr(34), "&quot;")}"'
+        return attr_str
+
+    def handle_starttag(self, tag, attrs):
+        if tag in self._skip_tags:
+            self._skip_depth += 1
+        self.result.append(f"<{tag}{self._attrs(attrs)}>")
 
     def handle_endtag(self, tag):
         if tag in self._skip_tags:
@@ -113,14 +122,7 @@ class HTMLTranslatorParser(HTMLParser):
         self.result.append(f"</{tag}>")
 
     def handle_startendtag(self, tag, attrs):
-        attr_str = ""
-        for k, v in attrs:
-            if v is None:
-                attr_str += f" {k}"
-            else:
-                v_esc = v.replace('"', "&quot;")
-                attr_str += f' {k}="{v_esc}"'
-        self.result.append(f"<{tag}{attr_str}/>")
+        self.result.append(f"<{tag}{self._attrs(attrs)}/>")
 
     def handle_data(self, data):
         if self._skip_depth > 0:
@@ -129,13 +131,12 @@ class HTMLTranslatorParser(HTMLParser):
         text = data.strip()
         if (
             text
-            and len(text) >= 5
+            and 5 <= len(text) <= MAX_TEXT_LEN
             and re.search(r"[a-zA-Z]", text)
-            and needs_translate(text)
+            and needs_translation(text)
         ):
             translated = translate_text(text)
             if translated and translated != text:
-                # Preserve original whitespace wrapping
                 leading = len(data) - len(data.lstrip())
                 trailing = len(data) - len(data.rstrip())
                 ws = data[:leading] if leading else ""
@@ -180,4 +181,7 @@ for root, dirs, files in os.walk(summary_dir):
         if f.endswith(".html") and not f.endswith("index.html"):
             translate_html_file(os.path.join(root, f))
 
-print("Done: all files translated")
+print(
+    f"Done: {_stats['done']} translated, {_stats['cached']} cached, "
+    f"cap={MAX_TRANSLATIONS} | providers: {translation_health()}"
+)

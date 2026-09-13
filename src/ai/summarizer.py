@@ -4,33 +4,21 @@ import re
 from typing import List, Dict, Optional
 
 from ..models import ContentItem
-
-# Optional machine translation (no-API mode)
-_HAS_KANA = re.compile(r"[\u3040-\u309f\u30a0-\u30ff]")
-_translator = None
+from .translate import needs_translation, translate
 
 
 def _machine_translate(text: str) -> Optional[str]:
-    """Translate English/Japanese text to Chinese using Google Translate (free).
-    Falls back silently if deep-translator is not installed or translation fails."""
-    global _translator
-    if not text or len(text) < 3:
-        return None
-    # Already Chinese (has CJK but no kana) → skip
-    if re.search(r"[\u4e00-\u9fff]", text) and not _HAS_KANA.search(text):
-        return None
-    try:
-        if _translator is None:
-            from deep_translator import GoogleTranslator
+    """Translate text to Chinese via the shared multi-provider translator.
 
-            _translator = GoogleTranslator(source="auto", target="zh-CN")
-        result = _translator.translate(text)
-        # 目标语言为 zh-CN；结果不含 CJK 说明是错误页文本/翻译失败，回退保留原文
-        if result and result != text and re.search(r"[\u4e00-\u9fff]", result):
-            return result
-    except Exception:
-        pass
-    return None
+    Delegates to :mod:`src.ai.translate` (MyMemory → Google gtx → Google web),
+    which is the only way this works from GitHub Actions — Google's free
+    endpoint answers HTTP 429 for Azure runner IPs.  Returns ``None`` when the
+    text is already Chinese or when every provider fails, so the caller keeps
+    the original string instead of writing English into a zh-only field.
+    """
+    if not needs_translation(text):
+        return None
+    return translate(text)
 
 
 _CJK = r"[\u4e00-\u9fff\u3400-\u4dbf]"

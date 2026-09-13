@@ -29,6 +29,7 @@ from .ai.analyzer import ContentAnalyzer
 from .ai.summarizer import DailySummarizer
 from .ai.enricher import ContentEnricher
 from .ai.tokens import get_usage_snapshot
+from .ai.translate import atranslate, needs_translation, translation_health
 
 
 @dataclass
@@ -798,52 +799,43 @@ class HorizonOrchestrator:
         )
 
     async def _translate_titles(self, items: List[ContentItem]) -> None:
-        """Translate English titles to Chinese using Google Translate (free, no API key).
+        """Translate non-Chinese titles to Chinese via the shared translator.
 
-        Sets ``title_zh`` metadata on each item. Falls back silently on failure.
+        Sets ``title_zh`` metadata on each item.  Uses
+        :func:`src.ai.translate.atranslate` (MyMemory → Google gtx → Google web)
+        because Google's free gtx endpoint returns HTTP 429 for GitHub Actions
+        runner IPs — the old single-provider version silently translated zero
+        titles, which left the WeCom push half-English.
+
+        Reports ``translated/attempted`` plus provider health so a broken
+        provider shows up in the Actions log instead of failing silently.
         """
         if not items:
             return
 
         self.console.print("🌐 Translating titles to Chinese...")
         translated = 0
+        attempted = 0
 
-        async with httpx.AsyncClient(timeout=10.0) as client:
+        async with httpx.AsyncClient(timeout=20.0) as client:
             for item in items:
                 if item.metadata.get("title_zh"):
                     continue  # already translated
 
                 title = item.title
-                if not title or len(title) < 3:
+                if not needs_translation(title or ""):
+                    # Already Chinese — record as-is so renderers can rely on it.
+                    if title and len(title.strip()) >= 3:
+                        item.metadata["title_zh"] = title
                     continue
 
-                # Check if already contains CJK characters
-                if any("\u4e00" <= c <= "\u9fff" for c in title):
-                    item.metadata["title_zh"] = title
-                    continue
+                attempted += 1
+                zh_text = await atranslate(title, client)
+                if zh_text:
+                    item.metadata["title_zh"] = zh_text
+                    translated += 1
 
-                try:
-                    url = "https://translate.googleapis.com/translate_a/single"
-                    params = {
-                        "client": "gtx",
-                        "sl": "auto",
-                        "tl": "zh-CN",
-                        "dt": "t",
-                        "q": title,
-                    }
-                    resp = await client.get(url, params=params)
-                    if resp.status_code == 200:
-                        data = resp.json()
-                        zh_text = (
-                            data[0][0][0] if data and data[0] and data[0][0] else ""
-                        )
-                        # Google 免费 gtx 接口被限流时常返回 "Error 500 (Server Error)!!1500..." 错误页
-                        # 文本，会被误当译文写入 title_zh，进而污染整份日报标题。目标语言为 zh-CN，
-                        # 合法译文必含 CJK，不含 CJK 一律视为翻译失败，保持 title_zh 未设置（回退原文）。
-                        if zh_text and any("\u4e00" <= c <= "\u9fff" for c in zh_text):
-                            item.metadata["title_zh"] = zh_text
-                            translated += 1
-                except Exception:
-                    pass  # skip on error
-
-        self.console.print(f"   Translated {translated} titles\n")
+        self.console.print(
+            f"   Translated {translated}/{attempted} titles "
+            f"(provider status: {translation_health()})\n"
+        )
