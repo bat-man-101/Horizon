@@ -1678,3 +1678,61 @@ class TestSkipConsoleOutput:
         assert mock_console.print.call_count >= 1
         printed = " ".join(str(c) for c in mock_console.print.call_args_list)
         assert "not set" in printed.lower() or "empty" in printed.lower()
+
+
+# ── Regression: the *shipped* config template must render clean ──
+
+
+class TestShippedConfigTemplateRenders:
+    """Guard against literal placeholders leaking into the WeCom push.
+
+    Regression for the bug where ``data/config.github.json`` referenced
+    ``#{overview}`` while ``delivery: summary`` never builds an ``overview``
+    variable — ``_render`` leaves unknown keys verbatim, so every push began
+    with a literal ``#{overview}`` line.
+    """
+
+    def _render_body_from_config(self, config_name: str) -> str:
+        import re as _re
+        from pathlib import Path
+
+        cfg_path = Path(__file__).resolve().parents[1] / "data" / config_name
+        raw = json.loads(cfg_path.read_text(encoding="utf-8"))
+        config = WebhookConfig(**raw["webhook"]).model_copy(
+            update={"url_env": _TEST_URL_ENV}
+        )
+        os.environ[_TEST_URL_ENV] = _TEST_URL
+        notifier = WebhookNotifier(config)
+
+        # Keep the test hermetic: stub out the live translation provider so
+        # titles stay verbatim and no network request is made.
+        with patch("src.ai.summarizer.translate", return_value=None):
+            messages = notifier.build_daily_summary_messages(
+                summary="# Horizon 每日速递\n\n> body",
+                important_items=[_make_item()],
+                all_items_count=10,
+                date="2026-09-13",
+                lang="zh",
+                summarizer=DailySummarizer(),
+            )
+
+        assert messages, f"{config_name} produced no webhook message"
+
+        bodies = []
+        for message in messages:
+            _, body, _ = notifier._render_request_components(message)
+            assert body is not None
+            bodies.append(body)
+
+        joined = "\n".join(bodies)
+        leftovers = _re.findall(r"#\{\w+", joined)
+        assert not leftovers, (
+            f"{config_name} leaves unrendered placeholders in the webhook body: "
+            f"{sorted(set(leftovers))}"
+        )
+        return joined
+
+    def test_github_config_body_renders_fully(self):
+        body = self._render_body_from_config("config.github.json")
+        assert "#{overview}" not in body
+        assert "Test Item" in body

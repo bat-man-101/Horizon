@@ -193,10 +193,9 @@ class DailySummarizer:
                 t = str(_t).replace("[", "(").replace("]", ")")
                 if language == "zh":
                     t = _pangu(t)
-                score = item.ai_score or "?"
-                toc_sections.append(
-                    f"  {global_idx}. [{t}](#item-{global_idx}) ⭐️ {score}/10"
-                )
+                # no score badge: AI scoring is off (disable_analysis), so the
+                # value would always render as a meaningless "?/10"
+                toc_sections.append(f"  {global_idx}. [{t}](#item-{global_idx})")
             toc_sections.append("")
         toc = "\n".join(toc_sections) + "---\n\n"
 
@@ -318,8 +317,8 @@ class DailySummarizer:
             )
             if language == "zh":
                 title = _pangu(title)
-            score = item.ai_score or "?"
-            entries.append(f"{i}. [{title}]({item.url}) \u2b50\ufe0f {score}/10")
+            # no score badge — see generate_toc() for why
+            entries.append(f"{i}. [{title}]({item.url})")
 
         return header + "\n".join(entries)
 
@@ -346,7 +345,6 @@ class DailySummarizer:
         _title = item.metadata.get(f"title_{language}") or item.title
         title = str(_title).replace("[", "(").replace("]", ")")
         url = str(item.url)
-        score = item.ai_score or "?"
         meta = item.metadata
 
         summary = (
@@ -404,7 +402,7 @@ class DailySummarizer:
 
         lines = [
             f'<a id="item-{index}"></a>',
-            f"## [{title}]({url}) \u2b50\ufe0f {score}/10",  # ⭐️
+            f"## [{title}]({url})",
             "",
             summary,
             "",

@@ -22,6 +22,8 @@ _PLACEHOLDER_RE = re.compile(r"#\{(\w+)(\?\w+=[^}]+)?\}")
 _SENSITIVE_HEADER_RE = re.compile(
     r"(authorization|token|secret|signature|key|password)", re.IGNORECASE
 )
+#: Placeholder keys already warned about — keeps the log to one line per key.
+_WARNED_MISSING_KEYS: set[str] = set()
 
 
 def _truncate(value: str, limit: int, split: str) -> str:
@@ -85,6 +87,19 @@ def _render(
 
             value = variables.get(key)
             if value is None:
+                # Behaviour is intentionally to leave the placeholder verbatim
+                # (see test_webhook.py::test_render_unknown_placeholder_unchanged).
+                # Warn once per key so a config/template mismatch such as the old
+                # "#{overview} in a delivery=summary body" cannot ship silently.
+                if key not in _WARNED_MISSING_KEYS:
+                    _WARNED_MISSING_KEYS.add(key)
+                    logger.warning(
+                        "Webhook body references #{%s} but no such variable was "
+                        "provided — it will be sent to the user literally. "
+                        "Check webhook.request_body against the variables built in "
+                        "build_daily_summary_messages().",
+                        key,
+                    )
                 return match.group(0)  # leave placeholder unchanged
 
             if not params_str:
@@ -390,8 +405,7 @@ class WebhookNotifier:
 
         for item_index, item in enumerate(important_items, start=1):
             title = str(item.metadata.get(f"title_{lang}") or item.title)
-            score = item.ai_score or "?"
-            panel_title = f"{item_index}. {title} ⭐️ {score}/10"
+            panel_title = f"{item_index}. {title}"
             item_content = summarizer.generate_webhook_item(
                 item,
                 language=lang,
