@@ -48,7 +48,7 @@
 ```
 
 Two core components:
-- **集线器服务器**: Data center + Web frontend, receiving reports, storing statistics, providing APIs and web pages.
+- **Hub Server**: Data center + Web frontend, receiving reports, storing statistics, providing APIs and web pages.
 - **Local Client (horizon-wizard)**: The sole entry point for users to manage information sources; every operation naturally generates data.
 
 ---
@@ -61,7 +61,7 @@ The core interface users see when opening the Hub website.
 
 **Page Structure**:
 
-- **顶部仪表板**: A row of statistics cards.
+- **Top Dashboard**: A row of statistics cards.
   - Total Sources | Field Categories | Contributors | Active Users
 
 - **Source Card Waterfall**: Each source has a card.
@@ -72,7 +72,7 @@ The core interface users see when opening the Hub website.
   - Contributor Avatars
   - Badges: 🔥 Hot / ✨ New / ⚠️ Quality Dropped
 
-- **过滤和排序**:
+- **Filtering and Sorting**:
   - Filter by field / language / type
   - Sort by Popularity (Users) / Quality (AI Avg) / SNR / Latest Added
   - Keyword Search
@@ -81,7 +81,7 @@ The core interface users see when opening the Hub website.
 
 The detail page for each source, showing a complete data-driven profile.
 
-**包含数据**:
+**Included Data**:
 
 | Metric | Description | Data Source |
 |---|---|---|
@@ -96,7 +96,7 @@ The detail page for each source, showing a complete data-driven profile.
 
 ### User Submission (Contribute)
 
-**提交流程**:
+**Submission Process**:
 
 ```
 User (Hub Web or Local Client)
@@ -117,13 +117,13 @@ Hub Server
 
 ### Intelligent Recommendation (Recommend)
 
-**应用场景**:
+**Scenarios**:
 
-1. **新用户冷启动**: Enter interest keywords ("AI", "Linux Kernel") to recommend the best source combination.
-2. **补充推荐**: Analyze existing config to recommend sources with complementary coverage and flag high-overlap sources.
-3. **协同过滤** (post-scale): "Users with similar tastes also read..."
+1. **New User Cold Start**: Enter interest keywords ("AI", "Linux Kernel") to recommend the best source combination.
+2. **Complementary Recommendation**: Analyze existing config to recommend sources with complementary coverage and flag high-overlap sources.
+3. **Collaborative Filtering** (post-scale): "Users with similar tastes also read..."
 
-**Rec 算法的输入**:
+**Input for Rec Algorithm**:
 - Source field tags
 - Content overlap between sources (calculated via deduplication data)
 - Usage patterns of user cohorts
@@ -136,18 +136,18 @@ After users select sources on the Hub website:
 - Download full config file
 - Generate `horizon-wizard` command → One-click import via terminal
 
-### 贡献者系统（社区）
+### Contributor System (Community)
 
-**贡献者排行榜**:
+**Contributor Leaderboard**:
 - Ranked by number of sources contributed.
 - Displays GitHub avatar + link + contribution count.
 
-**贡献者主页**:
+**Contributor Homepage**:
 - Sources I submitted.
 - How many people use my sources in total.
 - Average quality score of my sources.
 
-**徽章系统**:
+**Badge System**:
 
 | Badge | Condition |
 |---|---|
@@ -158,11 +158,11 @@ After users select sources on the Hub website:
 
 ### Source Health Monitoring
 
-**自动衰变检测** (Option A — Passive):
+**Automatic Decay Detection** (Option A — Passive):
 
 Hub server continuously tracks active user trends for each source. If usage drops continuously (e.g., >30% drop within 30 days), auto-mark with a ⚠️ warning.
 
-**用户反馈收集** (Option B — Active):
+**User Feedback Collection** (Option B — Active):
 
 When a user deletes or disables a source via `horizon-wizard`, a popup asks for optional feedback:
 
@@ -179,21 +179,21 @@ Reported to the Hub, integrated with decay data for comprehensive judgment.
 
 ---
 
-## 分布式代理操作系统
+## Distributed Agent Operating System
 
 ### Analogy
 
 If the Horizon ecosystem is viewed as a **Distributed Agent Operating System**.
 
-A single Horizon instance is like a "standalone machine" managing one user's information flow. HorizonHub acts as the **控制平面** that coordinates all users' Agents into a whole, allowing decentralized individual judgments to converge into collective intelligence.
+A single Horizon instance is like a "standalone machine" managing one user's information flow. HorizonHub acts as the **Control Plane** that coordinates all users' Agents into a whole, allowing decentralized individual judgments to converge into collective intelligence.
 
 ### Why "Emergence"?
 
 Each Agent runs independently and is unaware of others, but:
 - **Diversity**: Different users subscribe to sources in different fields, naturally providing diverse perspectives.
-- **独立**: Each Agent's AI scoring is unaffected by other users.
-- **聚合**: The Hub aggregates all scores to form a global quality signal more accurate than any single Agent.
+- **Independence**: Each Agent's AI scoring is unaffected by other users.
+- **Aggregation**: The Hub aggregates all scores to form a global quality signal more accurate than any single Agent.
 
-This is not designed intelligence, but rather consensus **新兴的** from a large number of independent judgments—mathematically aligned with the Condorcet Jury Theorem.
+This is not designed intelligence, but rather consensus **emerging** from a large number of independent judgments—mathematically aligned with the Condorcet Jury Theorem.
 
 ---
