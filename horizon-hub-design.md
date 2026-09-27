@@ -11,7 +11,7 @@
 | RSSHub | Turns websites without RSS into RSS (Pipe) | No quality assessment, no recommendations |
 | Feedly | RSS Reader with discovery features | No AI filtering, no personalized recommendations |
 | HN / Reddit | Community-driven content aggregation | Fixed sources, user cannot customize |
-| **HorizonHub** | **数据驱动的来源推荐和质量评估** | **无内容托管，无读者** |
+| **地平线枢纽** | **数据驱动的来源推荐和质量评估** | **无内容托管，无读者** |
 
 **核心护城河**: The daily operation of every Horizon user generates quality data for information sources (AI scores, signal-to-noise ratio, output frequency). When aggregated in the Hub, this data forms a **动态质量配置文件** that no static recommendation list can provide.
 
