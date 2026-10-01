@@ -37,7 +37,7 @@ Common API key variable names:
 | Doubao | `DOUBAO_API_KEY` |
 | DeepSeek | `DEEPSEEK_API_KEY` |
 
-**人性化的克劳德**:
+**Anthropic Claude**:
 
 ```json
 {
@@ -63,7 +63,7 @@ Common API key variable names:
 }
 ```
 
-**双子座**:
+**Gemini**:
 
 ```json
 {
@@ -76,7 +76,7 @@ Common API key variable names:
 }
 ```
 
-**Azure 开放人工智能**:
+**Azure OpenAI**:
 
 ```json
 {
@@ -308,7 +308,7 @@ Telegram scraping uses the public web preview at `https://t.me/s/<channel>`, so 
 
 ### 推特
 
-Requires an [阿皮菲](https://apify.com) account. Set `APIFY_TOKEN` in your `.env` file. The free tier includes $5/month of credit, enough for roughly 20,000 tweets.
+Requires an [Apify](https://apify.com) account. Set `APIFY_TOKEN` in your `.env` file. The free tier includes $5/month of credit, enough for roughly 20,000 tweets.
 
 ```json
 {
@@ -383,7 +383,7 @@ OpenBB provider credentials are handled by the OpenBB SDK itself, using its own 
 
 ### OSS Insight （热门GitHub Repos ）
 
-Pulls top star-gain repositories from the [操作系统洞察](https://ossinsight.io) public API, which aggregates GitHub WatchEvents. Useful for surfacing repos that are gaining stars right now without needing to scrape GitHub Trending or query BigQuery.
+Pulls top star-gain repositories from the [OSS Insight](https://ossinsight.io) public API, which aggregates GitHub WatchEvents. Useful for surfacing repos that are gaining stars right now without needing to scrape GitHub Trending or query BigQuery.
 
 ```json
 {
